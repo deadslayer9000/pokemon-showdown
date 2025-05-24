@@ -19815,7 +19815,6 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	baseSpecies: "Snivy",
 	forme: "Ultra",
 	types: ["Water"],
-	genderRatio: [M: 0.875, F: 0.125],
 	baseStats: { hp: 45, atk: 45, def: 55, spa: 45, spd: 55, spe: 63 },
 	abilities: { 0: "Torrent", H: "Contrary" },
 	weightkg: 10,
