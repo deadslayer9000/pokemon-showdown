@@ -99826,7 +99826,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			return: ["9M"],
 			round: ["9M"],
 			scald: ["9M"],
-			scaleshot: ["9L25", "9M"]
+			scaleshot: ["9L25", "9M"],
 			secretpower: ["9M"],
 			snore: ["9M"],
 			substitute: ["9M"],
