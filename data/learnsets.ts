@@ -99781,7 +99781,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			aquatail: ["9L28", "9M"],
 			attract: ["9M"],
 			bind: ["9M"],
-			breakingswipe: ["9M"]
+			breakingswipe: ["9M"],
 			brine: ["9L22", "9M"],
 			calmmind: ["9M"],
 			captivate: ["9M", "9E"],
@@ -99844,7 +99844,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			workup: ["9M"],
 			wrap: ["9L1"],
 		}
-	},		
+	}, 			
 	pokestarsmeargle: {
 		eventData: [
 			{generation: 5, level: 60, gender: "M", abilities: ["owntempo"], moves: ["mindreader", "guillotine", "tailwhip", "gastroacid"]},
