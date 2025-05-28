@@ -99923,7 +99923,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			aquatail: ["9L32", "9M"],
 			attract: ["9M"],
 			bind: ["9M"],
-			bizzard: ["9M"],
+			blizzard: ["9M"],
 			breakingswipe: ["9M"],
 			brine: ["9L24", "9M"],
 			calmmind: ["9M"],
