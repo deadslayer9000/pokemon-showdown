@@ -1510,7 +1510,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "UUBL",
 	},
 	sneasler: {
-		tier: "Uber",
+		tier: "OU",
 		doublesTier: "DUU",
 		natDexTier: "OU",
 	},
@@ -4514,7 +4514,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "NFE",
 	},
 	solgaleo: {
-		tier: "Uber",
+		tier: "OU",
 		doublesTier: "DUber",
 		natDexTier: "OU",
 	},
@@ -5552,7 +5552,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "OU",
 	},
 	annihilape: {
-		tier: "Uber",
+		tier: "OU",
 		doublesTier: "DUber",
 		natDexTier: "OU",
 	},
