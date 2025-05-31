@@ -661,6 +661,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "This Pokemon's weight is doubled. This effect is calculated after the effect of Autotomize, and before the effect of Float Stone.",
 		shortDesc: "This Pokemon's weight is doubled.",
 	},
+	helixnebula: {
+		name: "Helix Nebula",
+		desc: "This Pokemon copies the opponent's type on switch in. Additionally, should this Pokemon receive a fatal direct attack from an opponent, it will use Wish before fainting."
+		shortdesc: "Copies opponent's type on switch in. Uses Wish if fainted by a direct attack."
 	honeygather: {
 		name: "Honey Gather",
 		shortDesc: "No competitive use.",

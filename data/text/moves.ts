@@ -1862,6 +1862,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Has a 100% chance to raise the user's Speed by 1 stage and a higher chance for a critical hit.",
 		shortDesc: "100% chance to raise user Speed by 1. High crit.",
 	},
+	etherburst: {
+		name: "Ether Burst",
+		desc: "Ether Burst's type always matches the user's primary type. Ether Burst is Physical when the user's Attack is higher than their Special Attack.",
+		shortdesc: "Type = user's Type, Phys. if Atk > SpA."
 	eternabeam: {
 		name: "Eternabeam",
 		desc: "If this move is successful, the user must recharge on the following turn and cannot select a move.",

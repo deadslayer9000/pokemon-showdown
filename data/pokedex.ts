@@ -19853,4 +19853,15 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	eggGroups: ["Field", "Grass"],
 	prevo: ["Ultra-Servine"],
 	},
+		cosmachi: {
+	num: 2057,
+	name: "Cosmachi",
+	types: ["Psychic"],
+	gender: "N",
+	baseStats: { hp: 136, atk: 84, def: 72, spa: 112, spd: 100, spe: 100 },
+	abilities: { 0: "Helix Nebula"},
+	weightkg: 4,
+	heightm: 0.3,
+	color: "Purple",
+	eggGroups: ["Undiscovered"],
 };

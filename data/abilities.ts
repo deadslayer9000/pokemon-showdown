@@ -1812,6 +1812,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 0,
 		num: 134,
 	},
+	helixnebula: {
+		flags: {},
+		name: "Helix Nebula",
+		rating: 0,
+		num: -1,
+	},
 	honeygather: {
 		flags: {},
 		name: "Honey Gather",
