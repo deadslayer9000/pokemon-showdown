@@ -664,7 +664,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	helixnebula: {
 		name: "Helix Nebula",
 		desc: "This Pokemon copies the opponent's type on switch in. Additionally, should this Pokemon receive a fatal direct attack from an opponent, it will use Wish before fainting.",
-		shortdesc: "Copies opponent's type on switch in. Uses Wish if fainted by a direct attack.",
+		shortDesc: "Copies opponent's type on switch in. Uses Wish if fainted by a direct attack.",
 	},
 	honeygather: {
 		name: "Honey Gather",
