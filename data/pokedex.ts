@@ -9085,6 +9085,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Green",
 		evos: ["Servine"],
 		eggGroups: ["Field", "Grass"],
+		otherFormes: ["Ultra-Snivy"],
 	},
 	servine: {
 		num: 496,
@@ -19821,6 +19822,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	heightm: 0.6,
 	color: "Blue",
 	eggGroups: ["Field", "Grass"],
+	evos: ["Ultra-Servine"],
 	},
 		ultraservine: { 
 	num: -496,
@@ -19834,6 +19836,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	heightm: 0.8,
 	color: "Blue",
 	eggGroups: ["Field", "Grass"],
+	evos: ["Ultra-Serperior"],
+	prevo: ["Ultra-Snivy"],
 	},
 		ultraserperior: { 
 	num: -497,
@@ -19847,5 +19851,6 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	heightm: 3.3,
 	color: "Blue",
 	eggGroups: ["Field", "Grass"],
+	prevo: ["Ultra-Servine"],
 	},
 };
