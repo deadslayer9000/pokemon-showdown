@@ -19811,7 +19811,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		gen: 5,
 	},
 	ultrasnivy: { 
-	num: -495,
+	num: 495,
 	name: "Ultra-Snivy",
 	baseSpecies: "Snivy",
 	forme: "Ultra",
@@ -19825,7 +19825,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	evos: ["Ultra-Servine"],
 	},
 		ultraservine: { 
-	num: -496,
+	num: 496,
 	name: "Ultra-Servine",
 	baseSpecies: "Servine",
 	forme: "Ultra",
@@ -19840,7 +19840,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	prevo: ["Ultra-Snivy"],
 	},
 		ultraserperior: { 
-	num: -497,
+	num: 497,
 	name: "Ultra-Serperior",
 	baseSpecies: "Serperior",
 	forme: "Ultra",
