@@ -100029,7 +100029,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			imprison: ["9M"],
 			irondefense: ["9M"],
 			ironhead: ["9M"],
-			lastresort: ["9L88"]
+			lastresort: ["9L88"],
 			lightscreen: ["9M"],
 			meteorbeam: ["9M"],
 			meteormash: ["9L40"],
