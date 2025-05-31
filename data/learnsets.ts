@@ -99989,7 +99989,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			whirlpool: ["9M"],
 			workup: ["9M"],
 			wrap: ["9L1"],
-		}
+		},
 		cosmachi: {
 			amnesia: ["9M"],
 			aurasphere: ["9M"],

@@ -1866,6 +1866,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Ether Burst",
 		desc: "Ether Burst's type always matches the user's primary type. Ether Burst is Physical when the user's Attack is higher than their Special Attack.",
 		shortdesc: "Type = user's Type, Phys. if Atk > SpA."
+	},
 	eternabeam: {
 		name: "Eternabeam",
 		desc: "If this move is successful, the user must recharge on the following turn and cannot select a move.",
