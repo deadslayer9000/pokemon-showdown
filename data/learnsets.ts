@@ -99989,8 +99989,10 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			whirlpool: ["9M"],
 			workup: ["9M"],
 			wrap: ["9L1"],
-		},
+		}
+	},
 		cosmachi: {
+			learnset: {
 			amnesia: ["9M"],
 			aurasphere: ["9M"],
 			batonpass: ["9M"],
@@ -100070,13 +100072,8 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			waterpulse: ["9M"],
 			wish: ["9M"],
 			zenheadbutt: ["9M"],
-		},
-			
-			
-			
-			
-			
-	}, 			
+			}
+		}, 			
 	pokestarsmeargle: {
 		eventData: [
 			{generation: 5, level: 60, gender: "M", abilities: ["owntempo"], moves: ["mindreader", "guillotine", "tailwhip", "gastroacid"]},
