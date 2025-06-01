@@ -100196,7 +100196,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			irondefense: ["9M", "8M", "7T", "6T", "5T", "4T"],
 			ironhead: ["9M", "8M", "7T", "6T", "5T", "4T"],
 			irontail: ["8M", "8V", "7T", "7V", "6T", "5T", "4M", "3M"],
-			knockoff: ["9M", "7T", "6T", "5T", "4T"],,
+			knockoff: ["9M", "7T", "6T", "5T", "4T"],
 			lashout: ["9M", "8T"],
 			leafstorm: ["9M", "8M"],
 			leechlife: ["9M", "8M", "7M"],
