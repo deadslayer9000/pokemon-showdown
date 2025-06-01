@@ -2932,23 +2932,17 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 			if (!this.effectState.boosts) return;
 			this.boost(this.effectState.boosts, this.effectState.target);
 			delete this.effectState.boosts;
-			target.clearBoosts();
-			this.add('-clearboost', target);
 		},
 		onAnyAfterMove() {
 			if (!this.effectState.boosts) return;
 			this.boost(this.effectState.boosts, this.effectState.target);
 			delete this.effectState.boosts;
-			target.clearBoosts();
-			this.add('-clearboost', target);
 		},
 		onResidualOrder: 29,
 		onResidual(pokemon) {
 			if (!this.effectState.boosts) return;
 			this.boost(this.effectState.boosts, this.effectState.target);
 			delete this.effectState.boosts;
-			target.clearBoosts();
-			this.add('-clearboost', target);
 		},
 		onEnd() {
 			delete this.effectState.boosts;
