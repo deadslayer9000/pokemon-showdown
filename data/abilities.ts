@@ -2917,7 +2917,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		flags: {},
 		name: "Feast or Famine",
 		rating: 5,
-		num: -2,
+		num: -5,
 	},
 	noguard: {
 		onAnyInvulnerabilityPriority: 1,
