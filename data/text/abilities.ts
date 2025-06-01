@@ -468,6 +468,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 
 		start: "  [POKEMON] is radiating a fairy aura!",
 	},
+	feastorfamine: {
+		name: "Feast or Famine",
+		shortDesc: "While this Pokemon is active, any stat boosts applied are immediately stolen.",
+	},
 	filter: {
 		name: "Filter",
 		shortDesc: "This Pokemon receives 3/4 damage from supereffective attacks.",
