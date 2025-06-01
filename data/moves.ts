@@ -13170,7 +13170,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			if (target.hasItem("Ability Shield")) {
 				this.add('-block', target, 'item: Ability Shield')
 				return null;
-			},
+			}
 			const oldAbility = pokemon.setAbility('insomnia');
 			if (oldAbility) {
 				this.add('-ability', pokemon, 'Insomnia', '[from] move: New Moon');
