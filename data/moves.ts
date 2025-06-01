@@ -13166,7 +13166,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		onHit(pokemon) {
 			if (target.getAbility().flags['cantsuppress']) {
 				return null;
-			},
+			}
 			if (target.hasItem("Ability Shield")) {
 				this.add('-block', target, 'item: Ability Shield')
 				return null;
