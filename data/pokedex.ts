@@ -19871,7 +19871,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	types: ["Psychic", "Dark"],
 	gender: "N",
 	baseStats: { hp: 100, atk: 100, def: 80, spa: 120, spd: 88, spe: 112 },
-	abilities: { 0: "Feast or Famine"},
+	abilities: { 0: "Honey Gather"},
 	weightkg: 4,
 	heightm: 0.4,
 	color: "Black",
