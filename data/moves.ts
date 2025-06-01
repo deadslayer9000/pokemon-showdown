@@ -13154,6 +13154,18 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Ghost",
 		contestType: "Cool",
 	},
+	newmoon: {
+		num: -2,
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		pp: 10,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+	},
 	nightdaze: {
 		num: 539,
 		accuracy: 95,

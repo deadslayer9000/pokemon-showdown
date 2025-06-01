@@ -5970,6 +5970,12 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
+	cosmachi: {
+		tier: "UU",
+	},
+	mewrai: {
+		tier: "OU",
+	}
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
