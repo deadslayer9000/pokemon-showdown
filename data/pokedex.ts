@@ -19866,7 +19866,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	eggGroups: ["Undiscovered"],
 },
 		mewrai: {
-	num: 2057,
+	num: 2058,
 	name: "Mewrai",
 	types: ["Psychic", "Dark"],
 	gender: "N",
