@@ -2924,7 +2924,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 					boostPlus[i] = (boostPlus[i] || 0) + boost[i]!;
 				}
 				this.attrLastMove('[still]');
-				this.add('cant', this.effectState.target, 'ability: feastorfamine', effect, `[of] ${target}`);
+				this.add('cant', pokemon, 'ability: feastorfamine', effect, `[of] ${pokemon}`);
 				return false;
 			}
 		},
