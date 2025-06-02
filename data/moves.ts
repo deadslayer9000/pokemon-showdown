@@ -13154,6 +13154,37 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Ghost",
 		contestType: "Cool",
 	},
+	newmoon: {
+		num: -2,
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		name: "New Moon",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		onHit(pokemon) {
+			if (pokemon.getAbility().flags['cantsuppress']) {
+				return null;
+			}
+			if (pokemon.hasItem("Ability Shield")) {
+				this.add('-block', pokemon, 'item: Ability Shield')
+				return null;
+			}
+			const oldAbility = pokemon.setAbility('insomnia');
+			if (oldAbility) {
+				this.add('-ability', pokemon, 'Insomnia', '[from] move: New Moon');
+				if (pokemon.status === 'slp') {
+					pokemon.cureStatus();
+				}
+				return;
+			}
+			return oldAbility as false | null;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+	},
 	nightdaze: {
 		num: 539,
 		accuracy: 95,

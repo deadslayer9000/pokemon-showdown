@@ -4445,6 +4445,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Never-Ending Nightmare",
 		shortDesc: "Power is equal to the base move's Z-Power.",
 	},
+	newmoon: {
+		name: "New Moon",
+		shortDesc: "Changes target's ability to Insomnia.",
+	},
 	nightdaze: {
 		name: "Night Daze",
 		desc: "Has a 40% chance to lower the target's accuracy by 1 stage.",
