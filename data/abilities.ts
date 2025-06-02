@@ -2923,6 +2923,9 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 				if (boost[i]! 	> 0) {
 					boostPlus[i] = (boostPlus[i] || 0) + boost[i]!;
 				}
+				this.attrLastMove('[still]');
+				this.add('cant', this.effectState.target, 'ability: feastorfamine', effect, `[of] ${target}`);
+				return false;
 			}
 		},
 		onAnySwitchInPriority: -3,
