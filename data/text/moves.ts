@@ -544,6 +544,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Has a 10% chance to burn the target and a higher chance for a critical hit.",
 		shortDesc: "High critical hit ratio. 10% chance to burn.",
 	},
+	blazeout: {
+		name: "Blaze Out",
+		shortDesc: "Starts sun, User switches out.",
+	},
 	blazingtorque: {
 		name: "Blazing Torque",
 		desc: "Has a 30% chance to burn the target.",

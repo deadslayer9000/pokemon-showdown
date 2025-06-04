@@ -3618,6 +3618,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 4,
 		num: 272,
 	},
+	pyroclastic: {
+		flags: {},
+		name: "Pyroclastic",
+		rating: 3.5,
+		num: -5,
+	},
 	quarkdrive: {
 		onSwitchInPriority: -2,
 		onStart(pokemon) {

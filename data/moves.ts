@@ -1495,6 +1495,18 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Fire",
 		contestType: "Cool",
 	},
+	blazeout: {
+		num: -3,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Blaze Out",
+		pp: 10,
+		flags: {},
+		target: "All",
+		type: "Fire",
+	},
+		
 	blazingtorque: {
 		num: 896,
 		accuracy: 100,

@@ -19901,4 +19901,17 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	color: "White",
 	eggGroups: ["Undiscovered"],
 		},
+		magoodra: {
+	num: 2061,
+	name: "Magoodra",
+	types: ["Dragon", "Fire"],
+	gender: "N",
+	baseStats: { hp: 68, atk: 104, def: 152, spa: 100, spd: 64, spe: 72 },
+	abilities: { 0: "Magma Armor", 1: "Gooey", H: "Pyroclastic" },
+	weightkg: 288,
+	heightm: 2,
+	color: "Gray",
+	eggGroups: ["Undiscovered"],
+		},
+		
 }
