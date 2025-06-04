@@ -1400,7 +1400,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	pyroclastic: {
 		name: "Pyroclastic",
-		shortDesc: "Pokemon heals 1/3rd, rounded down, of it's health when switching in; Accuracy can't be lowered."
+		shortDesc: "Pokemon heals 1/3rd of it's health when switching in; Accuracy can't be lowered."
 	},
 	quarkdrive: {
 		name: "Quark Drive",
