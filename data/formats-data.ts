@@ -5976,6 +5976,24 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	mewrai: {
 		tier: "OU",
 	},
+	ultrasnivy: {
+		tier: "LC",
+	},
+	ultraservine: {
+		tier: "NFE",
+	},
+	electisaur: {
+		tier: "UU",
+	},
+	archapult: {
+		tier: "UU",
+	},
+	magoodra: {
+		tier: "UU",
+	},
+	clefgar: {
+		tier: "OU",
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

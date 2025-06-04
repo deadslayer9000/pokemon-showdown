@@ -1398,6 +1398,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "This Pokemon cannot become affected by a non-volatile status condition or Yawn. If a Pokemon uses a Ghost-type attack against this Pokemon, that Pokemon's offensive stat is halved when calculating the damage to this Pokemon.",
 		shortDesc: "Ghost damage to this Pokemon dealt with a halved offensive stat; can't be statused.",
 	},
+	pyroclastic: {
+		name: "Pyroclastic",
+		shortDesc: "Pokemon heals 1/3rd of it's health when switching in; Accuracy can't be lowered."
+	},
 	quarkdrive: {
 		name: "Quark Drive",
 		desc: "If Electric Terrain is active or this Pokemon uses a held Booster Energy, this Pokemon's highest stat is multiplied by 1.3, or by 1.5 if the highest stat is Speed. Stat stage changes are considered at the time this Ability activates. If multiple stats are tied, Attack, Defense, Special Attack, Special Defense, and Speed are prioritized in that order. If this effect was started by Electric Terrain, a held Booster Energy will not activate and the effect ends when Electric Terrain is no longer active. If this effect was started by a held Booster Energy, it ends when this Pokemon is no longer active.",
