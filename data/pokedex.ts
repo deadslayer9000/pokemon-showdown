@@ -19889,4 +19889,16 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	color: "Yellow",
 	eggGroups: ["Undiscovered"],
 		},
+		archapult: {
+	num: 2060,
+	name: "Archapult",
+	types: ["Dragon", "Steel"],
+	gender: "N",
+	baseStats: { hp: 72, atk: 108, def: 108, spa: 116, spd: 60, spe: 96 },
+	abilities: { 0: "Stalwart", 1: "Infiltrator", H: "Levitate" },
+	weightkg: 112,
+	heightm: 3,
+	color: "White",
+	eggGroups: ["Undiscovered"],
+		},
 }

@@ -5985,6 +5985,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	electisaur: {
 		tier: "UU",
 	},
+	archapult: {
+		tier: "UU",
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
