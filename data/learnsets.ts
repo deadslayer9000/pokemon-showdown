@@ -100462,6 +100462,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 		}
 	},
 	magoodra: {
+		learnset: {
 		acidspray: ["9L1", "9M"],
 		amnesia: ["9L56"],
 		ancientpower: ["9L32"],
