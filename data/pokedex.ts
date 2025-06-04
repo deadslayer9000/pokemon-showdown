@@ -19919,6 +19919,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	types: ["Ghost", "Fairy"],
 	gender: "N",
 	basestats: { hp: 64, atk: 100, def: 80, spa: 124, spd: 100, spe: 92 },
+	abilities: {0: "Unaware", 1: "Cursed Body", H: "Poison Heal"},
 	weightkg: 40,
 	heighm: 1.6,
 	color: "White",
