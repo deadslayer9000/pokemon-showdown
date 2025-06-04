@@ -5988,6 +5988,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	archapult: {
 		tier: "UU",
 	},
+	magoodra: {
+		tier: "UU",
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

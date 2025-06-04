@@ -19913,5 +19913,15 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	color: "Gray",
 	eggGroups: ["Undiscovered"],
 		},
-		
+		clefgar: {
+	num: 2062,
+	name: "Clefgar",
+	types: ["Ghost", "Fairy"],
+	gender: "N",
+	basestats: { hp: 64, atk: 100, def: 80, spa: 124, spd: 100, spe: 92 },
+	weightkg: 40,
+	heighm: 1.6,
+	color: "White",
+	eggGroups: ["Undiscovered"],
+		},
 }
