@@ -19877,4 +19877,16 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	color: "Black",
 	eggGroups: ["Undiscovered"],
 	},
+		electisaur: {
+	num: 2059,
+	name: "Electisaur",
+	types: ["Grass", "Electric"],
+	gender: "N",
+	baseStats: { hp: 92, atk: 108, def: 88, spa: 112, spd: 80, spe: 80 },
+	abilities: { 0: "Motor Drive", 1: "Chlorophyll", H: "Anger Point" },
+	weightkg: 116,
+	heightm: 2,
+	color: "Yellow",
+	eggGroups: ["Undiscovered"],
+		},
 }
