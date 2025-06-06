@@ -5994,6 +5994,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	clefgar: {
 		tier: "OU",
 	},
+	armaledge: {
+		tier: "UU"
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

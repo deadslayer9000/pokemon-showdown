@@ -476,6 +476,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Filter",
 		shortDesc: "This Pokemon receives 3/4 damage from supereffective attacks.",
 	},
+	finalverdict: {
+		name: "Final Verdict",
+		shortDesc: "STAB on Spc. Psychic and Phys. Ghost moves; Pokemon faint if below 1/10th HP."
+	},
 	flamebody: {
 		name: "Flame Body",
 		shortDesc: "30% chance a Pokemon making contact with this Pokemon will be burned.",

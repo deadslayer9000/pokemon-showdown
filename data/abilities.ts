@@ -1260,6 +1260,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 3,
 		num: 111,
 	},
+	finalverdict: {
+		flags: {},
+		name: "Final Verdict",
+		rating: 3,
+		num: -6,
+	},
 	flamebody: {
 		onDamagingHit(damage, target, source, move) {
 			if (this.checkMoveMakesContact(move, source, target)) {
