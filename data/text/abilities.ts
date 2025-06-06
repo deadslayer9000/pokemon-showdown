@@ -478,7 +478,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	finalverdict: {
 		name: "Final Verdict",
-		shortDesc: "STAB on Spc. Psychic and Phys. Ghost moves; Pokemon faint if below 1/10th HP."
+		shortDesc: "STAB on Spc. Psychic and Phys. Ghost moves; Pokemon faint if below 10% HP."
 	},
 	flamebody: {
 		name: "Flame Body",
