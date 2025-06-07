@@ -100703,7 +100703,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 		crunch: ["9M"],
 		curse: ["9L24", "9M"],
 		darkpulse: ["9M"],
-		double-edge: ["9M"],
+		doubleedge: ["9M"],
 		drainpunch: ["9M"],
 		facade: ["9M"],
 		falseswipe: ["9M"],
@@ -100763,7 +100763,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 		trickroom: ["9M"],
 		uproar: ["9M"],
 		vacuumwave: ["9M"],
-		will-o-wisp: ["9M"],
+		willowisp: ["9M"],
 		zenheadbutt: ["9M"],
 		}
 	},

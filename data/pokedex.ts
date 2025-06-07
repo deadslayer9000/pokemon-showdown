@@ -19942,7 +19942,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		name: "Ursanette",
 		types: ["Normal", "Ghost"],
 		gender: "N",
-		baseStats: {hp: 96, atk: 128, def: 76, spa: 104, spd: 88, spe 68 },
+		baseStats: {hp: 96, atk: 128, def: 76, spa: 104, spd: 88, spe: 68 },
 		abilities: {0: "Mind's Eye", 1: "Prankster", H: "Analytic"},
 		weightkg: 120,
 		heightm: 2.7,
