@@ -19963,7 +19963,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		},
 		gholdaton: {
 		num: 2067,
-		name: "gholdaton",
+		name: "Gholdaton",
 		types: ["Fairy", "Steel"],
 		gender: "N",
 		baseStats: {hp: 92, atk: 84, def: 80, spa: 100, spd: 108, spe: 96 },
