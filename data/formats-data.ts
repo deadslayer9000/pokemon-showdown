@@ -5997,6 +5997,13 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	armaledge: {
 		tier: "UU"
 	},
+	ursanette: {
+		tier: "UU"
+	},
+	liesler: {
+		tier: "UU"
+	},
+	
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
