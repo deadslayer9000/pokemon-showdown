@@ -100778,7 +100778,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			confuseray: ["9M"],
 			crosspoison: ["9L64"],
 			darkpulse: ["9M"],
-			double-edge: ["9M"],
+			doubleedge: ["9M"],
 			endeavor: ["9M"],
 			endure: ["9M"],
 			fakeout: ["9L1"],
@@ -100819,10 +100819,10 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			thief: ["9M"],
 			toxic: ["9M"],
 			trailblaze: ["9M"],
-			u-turn: ["9M"],
+			uturn: ["9M"],
 			vacuumwave: ["9M"],
 			venoshock: ["9M"],
-			x-scissor: ["9M"],
+			xscissor: ["9M"],
 		}
 	},
 		
