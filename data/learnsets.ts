@@ -100767,7 +100767,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 		zenheadbutt: ["9M"],
 		}
 	},
-	sneasler: {
+	liesler: {
 		learnset: {
 			aerialace: ["9M"],
 			agility: ["9L16"],
