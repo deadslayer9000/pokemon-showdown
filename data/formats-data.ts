@@ -6003,7 +6003,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	liesler: {
 		tier: "UU"
 	},
-	
+	gholdaton: {
+		tier: "UU"
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

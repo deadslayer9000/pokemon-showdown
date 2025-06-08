@@ -19961,4 +19961,16 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Black",
 		eggGroups: ["Undiscovered"],
 		},
+		gholdaton: {
+		num: 2067,
+		name: "gholdaton",
+		types: ["Fairy", "Steel"],
+		gender: "N",
+		baseStats: {hp: 92, atk: 84, def: 80, spa: 100, spd: 108, spe: 96 },
+		abilities: {0: "Mold Breaker", 1: "Good as Gold", H: "Surge Surfer" },
+		weightkg: 280,
+		heightm: 0.8,
+		color: "Yellow",
+		eggGroups: ["Undiscovered"],
+		},
 }
