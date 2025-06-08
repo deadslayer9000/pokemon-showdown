@@ -1207,6 +1207,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		start: "  Crafty Shield protected [TEAM]!",
 		block: "  Crafty Shield protected [POKEMON]!",
 	},
+	crescentedge: {
+		name: "Crescent Edge",
+		shortDesc: "Deals damage based on Sp.Def, not Defense."
+	},
 	crosschop: {
 		name: "Cross Chop",
 		desc: "Has a higher chance for a critical hit.",

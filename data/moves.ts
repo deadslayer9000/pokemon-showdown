@@ -3301,6 +3301,21 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		zMove: { boost: { spd: 1 } },
 		contestType: "Clever",
 	},
+	crescentedge: {
+		num: -4,
+		accuracy: 95,
+		basePower: 85,
+		category: "Physical",
+		overrideDefensiveStat: 'spd',
+		name: "Crescent Edge",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		secondary: null,
+		target: "allAdjacentFoes",
+		type: "Steel",
+	},
+		
 	crosschop: {
 		num: 238,
 		accuracy: 80,

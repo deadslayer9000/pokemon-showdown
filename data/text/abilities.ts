@@ -2094,6 +2094,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 
 		changeAbility: "  [POKEMON] traced [SOURCE]'s [ABILITY]!",
 	},
+	transcience: {
+		name: "Transcience",
+		shortDesc: "The user heals 1/4th of the damage dealt to the opponent."
+	},
 	transistor: {
 		name: "Transistor",
 		shortDesc: "This Pokemon's offensive stat is multiplied by 1.3 while using an Electric-type attack.",

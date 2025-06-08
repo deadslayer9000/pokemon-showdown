@@ -19961,6 +19961,18 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Black",
 		eggGroups: ["Undiscovered"],
 		},
+		valianttime: {
+		num: 2066,
+		name: "Valiant Time"
+		types: ["Steel", "Fairy"],
+		gender: "N",
+		baseStats: {hp: 80, atk: 140, def: 68, spa: 104, spd: 100, spe: 108 },
+		abilities: {0: "Transcience" },
+		weightkg: 36,
+		heightm: 1.4,
+		color: "Blue",
+		eggGroups: ["Undiscovered"],
+		},
 		gholdaton: {
 		num: 2067,
 		name: "Gholdaton",

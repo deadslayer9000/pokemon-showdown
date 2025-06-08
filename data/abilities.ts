@@ -5160,6 +5160,15 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 3.5,
 		num: 262,
 	},
+	transcience: {
+		onModifyMove(move): {
+			move.drain = [1, 4];
+		},
+		flags: {},
+		name: "Transcience",
+		rating: 3,
+		num: -7,
+	},
 	triage: {
 		onModifyPriority(priority, pokemon, target, move) {
 			if (move?.flags['heal']) return priority + 3;

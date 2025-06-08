@@ -6006,6 +6006,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	gholdaton: {
 		tier: "UU"
 	},
+	valianttime: {
+		tier: "OU"
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
