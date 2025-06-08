@@ -19963,7 +19963,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		},
 		valianttime: {
 		num: 2066,
-		name: "Valiant Time"
+		name: "Valiant Time",
 		types: ["Steel", "Fairy"],
 		gender: "N",
 		baseStats: {hp: 80, atk: 140, def: 68, spa: 104, spd: 100, spe: 108 },

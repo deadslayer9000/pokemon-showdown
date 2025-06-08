@@ -5161,8 +5161,11 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: 262,
 	},
 	transcience: {
-		onModifyMove(move): {
-			move.drain = [1, 4];
+		onModifyMove(move) {
+			if (move.category === 'Status') return;
+			if (!move.drain) {
+				move.drain = [1, 4];
+			}
 		},
 		flags: {},
 		name: "Transcience",
