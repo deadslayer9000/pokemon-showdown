@@ -19988,7 +19988,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		shaykarp: {
 		num: 2068,
 		name: "Shaykarp",
-		types; ["Water", "Grass"],
+		types: ["Water", "Grass"],
 		gender: "N",
 		baseStats: {hp: 60, atk: 60, def: 60, spa: 60, spd: 60, spe: 144 },
 		abilities: {0: "Fabled"},
