@@ -339,6 +339,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			shortDesc: "On switch-in, this Pokemon's Defense is raised by 1 stage.",
 		},
 	},
+	dawnbreak: {
+		name: "Dawnbreak",
+		shortDesc: "Nullifies items; SpA is 1.5x if a Pokemon with Moonwake is active."
+	},
 	dazzling: {
 		name: "Dazzling",
 		desc: "Priority moves used by opposing Pokemon targeting this Pokemon or its allies are prevented from having an effect.",

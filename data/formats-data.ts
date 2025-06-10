@@ -6027,6 +6027,10 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	zorotales: {
 		tier: "UU"
 	},
+	hatteon: {
+		tier: "UU"
+	},
+	
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

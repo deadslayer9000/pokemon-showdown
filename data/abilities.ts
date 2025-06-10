@@ -885,6 +885,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 3.5,
 		num: 235,
 	},
+	dawnbreak: {
+		flags: {},
+		name: "Dawnbreak",
+		rating: 2,
+		num: -11,
+	},
 	dazzling: {
 		onFoeTryMove(target, source, move) {
 			const targetAllExceptions = ['perishsong', 'flowershield', 'rototiller'];
