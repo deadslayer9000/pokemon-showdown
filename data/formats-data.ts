@@ -6004,7 +6004,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU"
 	},
 	gholdaton: {
-		tier: "UU"
+		tier: "OU"
 	},
 	valianttime: {
 		tier: "OU"
@@ -6019,6 +6019,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU"
 	},
 	molteon: {
+		tier: "UU"
+	},
+	radiantmoon: {
 		tier: "UU"
 	},
 	pokestarsmeargle: {

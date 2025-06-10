@@ -20033,5 +20033,17 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Red",
 		eggGroups: ["Undiscovered"],
 		},
+		radiantmoon: {
+		num: 2072,
+		name: "Radiant Moon",
+		types: ["Dragon", "Ghost"],
+		gender: "N",
+		baseStats: {hp: 84, atk: 100, def: 76, spa: 132, spd: 116, spe: 92 },
+		abilities: {0: "Brilliance"},
+		weightkg: 320,
+		heightm: 1.7,
+		color: "Purple",
+		eggGroups: ["Undiscovered"],
+		},
 		
 }
