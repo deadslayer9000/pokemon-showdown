@@ -6036,6 +6036,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	scizantrum: {
 		tier: "UU"
 	},
+	dragascue: {
+		tier: "UU"
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

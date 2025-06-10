@@ -20093,5 +20093,16 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Red",
 		eggGroups: ["Undiscovered"],
 		},
-		
+		dragascue: {
+		num: 2088,
+		name: "Dragascue",
+		types: ["Dragon", "Ice"],
+		gender: "N",
+		baseStats: {hp: 80, atk: 104, def: 100, spa: 88, spd: 68, spe: 120},
+		abilities: {0: "Clear Body", H: "Aftermath"},
+		weightkg: 60,
+		heightm: 3.0,
+		colo: "White",
+		eggGroups: ["Undiscovered"],
+		},
 }
