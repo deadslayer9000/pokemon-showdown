@@ -3349,6 +3349,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	indigoimpact: {
 		name : "Indigo Impact",
 		shortDesc: "Has a 50% chance to lower the target's Sp. Def.",
+	},
 	infernalparade: {
 		name: "Infernal Parade",
 		desc: "Has a 30% chance to burn the target. Power doubles if the target has a non-volatile status condition.",
