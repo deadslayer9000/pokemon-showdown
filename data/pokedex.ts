@@ -20045,5 +20045,17 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Purple",
 		eggGroups: ["Undiscovered"],
 		},
+		zorotales: {
+		num: 2073,
+		name: "Zorotales",
+		types: ["Normal", "Fairy"],
+		gender: "N",
+		baseStats: {hp: 72, atk: 80, def: 88, spa: 108, spd: 108, spe: 104 },
+		abilities: {0: "Snow Cloak", 1: "Illusion", H: "Marvel"},
+		weightkg: 20,
+		heightm: 1.1,
+		color: "White",
+		eggGroups: ["Undiscovered"],
+		},
 		
 }

@@ -992,6 +992,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			shortDesc: "Prevents Steel-type Pokemon from choosing to switch out, other than this Pokemon.",
 		},
 	},
+	marvel: {
+		name: "Marvel",
+		shortDesc: "This Pokemon will always critically hit on it's first turn sent out."
+	},
 	marvelscale: {
 		name: "Marvel Scale",
 		shortDesc: "If this Pokemon has a non-volatile status condition, its Defense is multiplied by 1.5.",

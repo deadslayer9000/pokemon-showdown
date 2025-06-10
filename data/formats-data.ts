@@ -6024,6 +6024,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	radiantmoon: {
 		tier: "UU"
 	},
+	zorotales: {
+		tier: "UU"
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

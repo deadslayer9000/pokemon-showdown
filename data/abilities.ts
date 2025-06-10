@@ -2529,6 +2529,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 4,
 		num: 42,
 	},
+	marvel: {
+		flags: {},
+		name: "Marvel",
+		rating: 4,
+		num: -10,
+	},
 	marvelscale: {
 		onModifyDefPriority: 6,
 		onModifyDef(def, pokemon) {
