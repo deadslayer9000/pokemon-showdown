@@ -508,7 +508,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Brilliance",
 		rating: 3,
 		num: -9,
-	}
+	},
 	cheekpouch: {
 		onEatItem(item, pokemon) {
 			this.heal(pokemon.baseMaxhp / 3);
