@@ -20117,4 +20117,16 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Orange",
 		eggGroups: ["Undiscovered"],
 		},
+		diancette: {
+		num: 2092,
+		name: "Diancette",
+		types: ["Fairy", "Rock"],
+		gender: "N",
+		baseStats: {hp: 60, atk: 100, def: 96, spa: 120, spd: 124, spe: 100},
+		abilities: {0: "Diamond Grove"},
+		weightkg: 280, 
+		heightm: 1.1,
+		color: "Blue",
+		eggGroups: ["Undiscovered"],
+		},
 }

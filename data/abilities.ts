@@ -997,6 +997,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 4.5,
 		num: 190,
 	},
+	diamondgrove: {
+		flags: {},
+		name: "Diamond Grove",
+		rating: 4,
+		num: -13,
+	},
 	disguise: {
 		onDamagePriority: 1,
 		onDamage(damage, target, source, effect) {

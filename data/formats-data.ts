@@ -6042,6 +6042,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	rotogar: {
 		tier: "RU"
 	},
+	diancette: {
+		tier: "UU"
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
