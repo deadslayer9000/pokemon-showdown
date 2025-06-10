@@ -2734,9 +2734,9 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 5,
 		num: 141,
 	},
-	moonbreak: {
+	moonwake: {
 		flags: {},
-		name: "Moonbreak",
+		name: "Moonwake",
 		rating: 2,
 		num: -12,
 	},
