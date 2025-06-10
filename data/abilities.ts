@@ -1231,6 +1231,21 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 1,
 		num: 194,
 	},
+	fabled: {
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				this.boost({ atk: length,
+							 def: length,
+							 spa: length,
+							 spd: length,
+							 spe: length,}, source);
+			},
+		}
+		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1 },
+		name: "Fabled",
+		rating: 5,
+		num: -8,
+	},		
 	fairyaura: {
 		onStart(pokemon) {
 			if (this.suppressingAbility(pokemon)) return;

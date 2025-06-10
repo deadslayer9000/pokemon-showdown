@@ -100892,8 +100892,8 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			thunderwave: ["9M"],
 		}
 	},
-		valianttime: {
-			learnset: {
+	valianttime: {
+		learnset: {
 				aerialace: ["9M"],
 				agility: ["9M"],
 				ancientpower: ["9L1"],
@@ -100985,8 +100985,23 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 				zenheadbutt: ["9M"],
 			}
 		},
-		
-			
+	shaykarp: {
+		learnset: {
+			doubleedge: ["9M"],
+			flail: ["9L96"],
+			leechseed: ["9L64"],
+			magicalleaf: ["9L32"],
+			raindance: ["9M"],
+			rest: ["9M"],
+			seedflare: ["9L80"],
+			splash: ["9L1"],
+			sunnyday: ["9M"],
+			sweetscent: ["9L48"],
+			tackle: ["9L16"],
+			takedown: ["9M"],
+		}
+	},
+						
 		
 	pokestarsmeargle: {
 		eventData: [

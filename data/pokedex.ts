@@ -19985,4 +19985,16 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Yellow",
 		eggGroups: ["Undiscovered"],
 		},
+		shaykarp: {
+		num: 2068,
+		name: "Shaykarp",
+		types; ["Water", "Grass"],
+		gender: "N",
+		baseStats: {hp: 60, atk: 60, def: 60, spa: 60, spd: 60, spe: 144 },
+		abilities: {0: "Fabled"},
+		weightkg: 16,
+		heightm: 0.9,
+		color: "White",
+		eggGroups: ["Undiscovered"],
+		},
 }

@@ -6009,6 +6009,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	valianttime: {
 		tier: "OU"
 	},
+	shaykarp: {
+		tier: "DoNotUse"
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
