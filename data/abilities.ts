@@ -2728,6 +2728,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 5,
 		num: 141,
 	},
+	moonbreak: {
+		flags: {},
+		name: "Moonbreak",
+		rating: 2,
+		num: -12,
+	},
 	motordrive: {
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Electric') {

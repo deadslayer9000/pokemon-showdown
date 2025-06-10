@@ -1078,6 +1078,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			shortDesc: "Raises a random stat by 2 and lowers another stat by 1 at the end of each turn.",
 		},
 	},
+	moonbreak: {
+		name: "Moonbreak",
+		shortDesc: "Moves ignore abilities; 1.5x SpD if a Pokemon with Dawnbreak is active.",
+	},
 	motordrive: {
 		name: "Motor Drive",
 		desc: "This Pokemon is immune to Electric-type moves and raises its Speed by 1 stage when hit by an Electric-type move.",

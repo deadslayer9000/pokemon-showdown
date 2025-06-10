@@ -20069,4 +20069,17 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Pink",
 		eggGroups: ["Undiscovered"],
 		},
+		grimmeon: {
+		num: 2086, 
+		name: "Grimmeon",
+		types: ["Dark", "Fairy"],
+		gender: "N",
+		baseStats: {hp: 96, atk: 76, def: 112, spa: 68, spd: 132, spe: 76 },
+		abilities: {0: "Synchronize", 1: "Frisk", H: "Moonwake"},
+		weightkg: 24,
+		heightm: 0.9,
+		color: "Black",
+		eggGroups: ["Undiscovered"],
+		},
+		
 }
