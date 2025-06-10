@@ -7631,9 +7631,9 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 				for (const pokemon of source.foes()) {
 					const result = this.random(2);
 					if (result === 0) {
-						pokemon.trySetStatus('par', source);
+						pokemon.trySetStatus('par', source)
 					} else {
-						pokemon.trySetStatus('psn', source);
+						pokemon.trySetStatus('psn', source)
 					}
 				}
 			},

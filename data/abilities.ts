@@ -1238,7 +1238,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 							 def: length,
 							 spa: length,
 							 spd: length,
-				spe: length,} source);
+							spe: length}, source);
 			}
 		};
 		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1 },
