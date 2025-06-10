@@ -20081,5 +20081,17 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Black",
 		eggGroups: ["Undiscovered"],
 		},
+		scizantrum: {
+		num: 2087,
+		name: "Scizantrum",
+		types: ["Bug", "Rock"],
+		gender: "N",
+		baseStats: {hp: 84, atk: 136, def: 132, spa: 76, spd: 60, spe: 72},
+		abilities: {0: "Swarm", 1: "Strong Jaw", H: "Hyper Cutter"},
+		weightkg: 132,
+		heightm: 2.0,
+		color: "Red",
+		eggGroups: ["Undiscovered"],
+		},
 		
 }

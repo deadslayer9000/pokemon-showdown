@@ -859,6 +859,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Lowers the target's Special Attack by 2 stages. The target is unaffected if both the user and the target are the same gender, or if either is genderless. Pokemon with the Oblivious Ability are immune.",
 		shortDesc: "Lowers the foe(s) Sp. Atk by 2 if opposite gender.",
 	},
+	cataclench: {
+		name: "Cataclench",
+		shortDesc: "30% chance to flinch the opposing pokemon.",
+	},
 	catastropika: {
 		name: "Catastropika",
 		shortDesc: "No additional effect.",

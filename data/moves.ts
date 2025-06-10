@@ -2310,6 +2310,22 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		zMove: { boost: { spd: 2 } },
 		contestType: "Cute",
 	},
+	cataclench: {
+		num: -8,
+		accuracy: 90,
+		basePower: 80,
+		category: "Physical",
+		name: "Cataclench",
+		pp: 15,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, bite: 1, metronome: 1 },
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch'
+		},
+		target: "normal",
+		type: "Rock",
+	},		
 	catastropika: {
 		num: 658,
 		accuracy: true,
