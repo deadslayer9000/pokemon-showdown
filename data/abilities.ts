@@ -1240,7 +1240,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 							 spd: length,
 							spe: length}, source);
 			}
-		};
+		},
 		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1 },
 		name: "Fabled",
 		rating: 5,
