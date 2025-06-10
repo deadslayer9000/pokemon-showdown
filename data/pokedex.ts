@@ -20062,7 +20062,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		name: "Hatteon",
 		types: ["Psychic", "Fairy"],
 		gender: "N",
-		baseStats: {hp: 76, atk: 76, def 68, spa: 132, spd: 96, spe: 112 },
+		baseStats: {hp: 76, atk: 76, def: 68, spa: 132, spd: 96, spe: 112 },
 		abilities: {0: "Synchronize", 1: "Healer", H: "Dawnbreak"},
 		weightkg: 24,
 		heightm: 0.9,
