@@ -6010,7 +6010,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "OU"
 	},
 	shaykarp: {
-		tier: "DoNotUse"
+		tier: "NU"
 	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
