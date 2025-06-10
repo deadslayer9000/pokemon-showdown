@@ -5994,6 +5994,57 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	clefgar: {
 		tier: "OU",
 	},
+	armaledge: {
+		tier: "UU"
+	},
+	ursanette: {
+		tier: "UU"
+	},
+	liesler: {
+		tier: "UU"
+	},
+	gholdaton: {
+		tier: "OU"
+	},
+	valianttime: {
+		tier: "OU"
+	},
+	shaykarp: {
+		tier: "NU"
+	},
+	articeon: {
+		tier: "UU"
+	},
+	zapeon: {
+		tier: "UU"
+	},
+	molteon: {
+		tier: "UU"
+	},
+	radiantmoon: {
+		tier: "UU"
+	},
+	zorotales: {
+		tier: "UU"
+	},
+	hatteon: {
+		tier: "UU"
+	},
+	grimmeon: {
+		tier: "UU"
+	},
+	scizantrum: {
+		tier: "UU"
+	},
+	dragascue: {
+		tier: "UU"
+	},
+	rotogar: {
+		tier: "RU"
+	},
+	diancette: {
+		tier: "UU"
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

@@ -489,6 +489,26 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 3,
 		num: 171,
 	},
+	brilliance: {
+		onStart(pokemon) {
+			let activated = false;
+			for (const target of pokemon.adjacentFoes()) {
+				if (!activated) {
+					this.add('-ability', pokemon, 'Intimidate', 'boost');
+					activated = true;
+				}
+				if (target.volatiles['substitute']) {
+					this.add('-immune', target);
+				} else {
+					this.boost({ spa: -1 }, target, pokemon, null, true);
+				}
+			}
+		},
+		flags: {},
+		name: "Brilliance",
+		rating: 3,
+		num: -9,
+	},
 	cheekpouch: {
 		onEatItem(item, pokemon) {
 			this.heal(pokemon.baseMaxhp / 3);
@@ -865,6 +885,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 3.5,
 		num: 235,
 	},
+	dawnbreak: {
+		flags: {},
+		name: "Dawnbreak",
+		rating: 2,
+		num: -11,
+	},
 	dazzling: {
 		onFoeTryMove(target, source, move) {
 			const targetAllExceptions = ['perishsong', 'flowershield', 'rototiller'];
@@ -970,6 +996,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Desolate Land",
 		rating: 4.5,
 		num: 190,
+	},
+	diamondgrove: {
+		flags: {},
+		name: "Diamond Grove",
+		rating: 4,
+		num: -13,
 	},
 	disguise: {
 		onDamagePriority: 1,
@@ -1231,6 +1263,21 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 1,
 		num: 194,
 	},
+	fabled: {
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				this.boost({ atk: length,
+							 def: length,
+							 spa: length,
+							 spd: length,
+							spe: length}, source);
+			}
+		},
+		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1 },
+		name: "Fabled",
+		rating: 5,
+		num: -8,
+	},		
 	fairyaura: {
 		onStart(pokemon) {
 			if (this.suppressingAbility(pokemon)) return;
@@ -1259,6 +1306,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Filter",
 		rating: 3,
 		num: 111,
+	},
+	finalverdict: {
+		flags: {},
+		name: "Final Verdict",
+		rating: 3,
+		num: -6,
 	},
 	flamebody: {
 		onDamagingHit(damage, target, source, move) {
@@ -2488,6 +2541,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 4,
 		num: 42,
 	},
+	marvel: {
+		flags: {},
+		name: "Marvel",
+		rating: 4,
+		num: -10,
+	},
 	marvelscale: {
 		onModifyDefPriority: 6,
 		onModifyDef(def, pokemon) {
@@ -2674,6 +2733,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Moody",
 		rating: 5,
 		num: 141,
+	},
+	moonbreak: {
+		flags: {},
+		name: "Moonbreak",
+		rating: 2,
+		num: -12,
 	},
 	motordrive: {
 		onTryHit(target, source, move) {
@@ -5163,6 +5228,18 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Transistor",
 		rating: 3.5,
 		num: 262,
+	},
+	transcience: {
+		onModifyMove(move) {
+			if (move.category === 'Status') return;
+			if (!move.drain) {
+				move.drain = [1, 4];
+			}
+		},
+		flags: {},
+		name: "Transcience",
+		rating: 3,
+		num: -7,
 	},
 	triage: {
 		onModifyPriority(priority, pokemon, target, move) {

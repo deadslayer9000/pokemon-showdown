@@ -370,6 +370,22 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		zMove: { boost: { spe: 2 } },
 		contestType: "Clever",
 	},
+	amberassault: {
+		num: -6,
+		accuracy: 100,
+		basePower: 85,
+		category: "Physical",
+		name: "Amber Assault",
+		pp: 10,
+		priority: 0,
+		flags: { contact: 1, metronome: 1, mirror: 1, protect: 1},
+		secondary: {
+			chance: 30,
+			status: 'par'
+		},
+		target: "normal",
+		type: "Electric",
+	},
 	amnesia: {
 		num: 133,
 		accuracy: true,
@@ -1502,7 +1518,9 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		category: "Status",
 		name: "Blaze Out",
 		pp: 10,
+		priority: 0,
 		flags: {},
+		secondary: null,
 		target: "All",
 		type: "Fire",
 	},
@@ -2292,6 +2310,22 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		zMove: { boost: { spd: 2 } },
 		contestType: "Cute",
 	},
+	cataclench: {
+		num: -8,
+		accuracy: 90,
+		basePower: 80,
+		category: "Physical",
+		name: "Cataclench",
+		pp: 15,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, bite: 1, metronome: 1 },
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch'
+		},
+		target: "normal",
+		type: "Rock",
+	},		
 	catastropika: {
 		num: 658,
 		accuracy: true,
@@ -3300,6 +3334,36 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Fairy",
 		zMove: { boost: { spd: 1 } },
 		contestType: "Clever",
+	},
+	crescentedge: {
+		num: -4,
+		accuracy: 95,
+		basePower: 85,
+		category: "Physical",
+		overrideDefensiveStat: 'spd',
+		name: "Crescent Edge",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		secondary: null,
+		target: "allAdjacentFoes",
+		type: "Steel",
+	},
+	crimsoncharge: {
+		num: -7,
+		accuracy: 100,
+		basePower: 85,
+		category: "Physical",
+		name: "Crimson Charge",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, metronome: 1, },
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Fire",
 	},
 	crosschop: {
 		num: 238,
@@ -7583,9 +7647,9 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 				for (const pokemon of source.foes()) {
 					const result = this.random(2);
 					if (result === 0) {
-						pokemon.trySetStatus('par', source);
+						pokemon.trySetStatus('par', source)
 					} else {
-						pokemon.trySetStatus('psn', source);
+						pokemon.trySetStatus('psn', source)
 					}
 				}
 			},
@@ -9923,6 +9987,24 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "allAdjacentFoes",
 		type: "Fire",
 		contestType: "Tough",
+	},
+	indigoimpact: {
+		num: -5,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Indigo Impact",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		secondary: {
+			chance: 50,
+			boosts: {
+				spd: -1,
+			},
+		},
+		target: "normal",
+		type: "Water",
 	},
 	infernalparade: {
 		num: 844,

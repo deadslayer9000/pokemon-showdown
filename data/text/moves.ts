@@ -143,6 +143,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Has a 10% chance to raise the user's Attack, Defense, Special Attack, Special Defense, and Speed by 1 stage.",
 		shortDesc: "10% chance to raise all stats by 1 (not acc/eva).",
 	},
+	amberassault: {
+		name: "Amber Assault",
+		shortDesc: "30% chance to paralyze the target.",
+	},
 	appleacid: {
 		name: "Apple Acid",
 		desc: "Has a 100% chance to lower the target's Special Defense by 1 stage.",
@@ -855,6 +859,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Lowers the target's Special Attack by 2 stages. The target is unaffected if both the user and the target are the same gender, or if either is genderless. Pokemon with the Oblivious Ability are immune.",
 		shortDesc: "Lowers the foe(s) Sp. Atk by 2 if opposite gender.",
 	},
+	cataclench: {
+		name: "Cataclench",
+		shortDesc: "30% chance to flinch the opposing pokemon.",
+	},
 	catastropika: {
 		name: "Catastropika",
 		shortDesc: "No additional effect.",
@@ -1206,6 +1214,14 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 
 		start: "  Crafty Shield protected [TEAM]!",
 		block: "  Crafty Shield protected [POKEMON]!",
+	},
+	crescentedge: {
+		name: "Crescent Edge",
+		shortDesc: "Deals damage based on Sp.Def, not Defense."
+	},
+	crimsoncharge: {
+		name: "Crimson Charge",
+		shortDesc: "Has a 30% chance to burn the target."
 	},
 	crosschop: {
 		name: "Cross Chop",
@@ -3333,6 +3349,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		},
 
 		removeItem: "  [POKEMON]'s [ITEM] was burned up!",
+	},
+	indigoimpact: {
+		name : "Indigo Impact",
+		shortDesc: "Has a 50% chance to lower the target's Sp. Def.",
 	},
 	infernalparade: {
 		name: "Infernal Parade",

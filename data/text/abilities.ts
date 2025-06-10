@@ -187,6 +187,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Bulletproof",
 		shortDesc: "This Pokemon is immune to bullet moves.",
 	},
+	brilliance: {
+		name: "Brilliance",
+		shortDesc: "On switch-in, this pokemon lowers the Special Attack of opponents by 1."
+	},
 	cheekpouch: {
 		name: "Cheek Pouch",
 		desc: "If this Pokemon eats a held Berry, it restores 1/3 of its maximum HP, rounded down, in addition to the Berry's effect. This effect can also activate after the effects of Bug Bite, Fling, Pluck, Stuff Cheeks, and Teatime if the eaten Berry had an effect on this Pokemon.",
@@ -335,6 +339,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			shortDesc: "On switch-in, this Pokemon's Defense is raised by 1 stage.",
 		},
 	},
+	dawnbreak: {
+		name: "Dawnbreak",
+		shortDesc: "Nullifies items; SpA is 1.5x if a Pokemon with Moonwake is active."
+	},
 	dazzling: {
 		name: "Dazzling",
 		desc: "Priority moves used by opposing Pokemon targeting this Pokemon or its allies are prevented from having an effect.",
@@ -361,6 +369,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Desolate Land",
 		desc: "On switch-in, the weather becomes Desolate Land, which includes all the effects of Sunny Day and prevents damaging Water-type moves from executing. This weather remains in effect until this Ability is no longer active for any Pokemon, or the weather is changed by the Delta Stream or Primordial Sea Abilities.",
 		shortDesc: "On switch-in, extremely harsh sunlight begins until this Ability is not active in battle.",
+	},
+	diamondgrove: {
+		name: "Diamond Grove",
+		shortDesc: "If Grassy Terrain is active, Super-Effective attacks on this Pokemon become neutral."
 	},
 	disguise: {
 		name: "Disguise",
@@ -461,6 +473,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "When this Pokemon has more than 1/2 its maximum HP and takes damage bringing it to 1/2 or less of its maximum HP, it immediately switches out to a chosen ally. This effect applies after all hits from a multi-hit move. This effect is prevented if the move had a secondary effect removed by the Sheer Force Ability. This effect applies to both direct and indirect damage, except Curse and Substitute on use, Belly Drum, Pain Split, and confusion damage.",
 		shortDesc: "This Pokemon switches out when it reaches 1/2 or less of its maximum HP.",
 	},
+	fabled: {
+		name: "Fabled",
+		shortDesc: "All of this Pokemon's stats are raised when it attacks and KOs a Pokemon."
+	},
 	fairyaura: {
 		name: "Fairy Aura",
 		desc: "While this Pokemon is active, the power of Fairy-type moves used by active Pokemon is multiplied by 1.33.",
@@ -475,6 +491,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	filter: {
 		name: "Filter",
 		shortDesc: "This Pokemon receives 3/4 damage from supereffective attacks.",
+	},
+	finalverdict: {
+		name: "Final Verdict",
+		shortDesc: "STAB on Spc. Psychic and Phys. Ghost moves; Pokemon faint if below 10% HP."
 	},
 	flamebody: {
 		name: "Flame Body",
@@ -980,6 +1000,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			shortDesc: "Prevents Steel-type Pokemon from choosing to switch out, other than this Pokemon.",
 		},
 	},
+	marvel: {
+		name: "Marvel",
+		shortDesc: "This Pokemon will always critically hit on it's first turn sent out."
+	},
 	marvelscale: {
 		name: "Marvel Scale",
 		shortDesc: "If this Pokemon has a non-volatile status condition, its Defense is multiplied by 1.5.",
@@ -1057,6 +1081,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			desc: "This Pokemon has a random stat raised by 2 stages and another stat lowered by 1 stage at the end of each turn.",
 			shortDesc: "Raises a random stat by 2 and lowers another stat by 1 at the end of each turn.",
 		},
+	},
+	moonbreak: {
+		name: "Moonbreak",
+		shortDesc: "Moves ignore abilities; 1.5x SpD if a Pokemon with Dawnbreak is active.",
 	},
 	motordrive: {
 		name: "Motor Drive",
@@ -2089,6 +2117,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		},
 
 		changeAbility: "  [POKEMON] traced [SOURCE]'s [ABILITY]!",
+	},
+	transcience: {
+		name: "Transcience",
+		shortDesc: "The user heals 1/4th of the damage dealt to the opponent."
 	},
 	transistor: {
 		name: "Transistor",
