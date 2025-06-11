@@ -6365,6 +6365,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Fails if there is no terrain active. Ends the effects of Electric Terrain, Grassy Terrain, Misty Terrain, and Psychic Terrain.",
 		shortDesc: "Fails if there is no terrain active. Ends the terrain.",
 	},
+	steelskewer: {
+		name: "Steel Skewer",
+		shortDesc: "Sets G-Max Steelsurge on the opponent's side."
+	},
 	steelwing: {
 		name: "Steel Wing",
 		desc: "Has a 10% chance to raise the user's Defense by 1 stage.",
