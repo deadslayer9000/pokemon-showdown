@@ -18756,6 +18756,26 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "normal",
 		type: "Steel",
 	},
+	steelskewer: {
+		num: -9,
+		accuracy: 90,
+		basePower: 70,
+		category: "Physical",
+		name: "Steel Skewer",
+		pp: 10,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		self: {
+			onHit(source) {
+				for (const side of source.side.foeSidesWithConditions()) {
+					side.addSideCondition('stealthrock');
+				}
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Steel",
+	},
 	steelwing: {
 		num: 211,
 		accuracy: 90,
