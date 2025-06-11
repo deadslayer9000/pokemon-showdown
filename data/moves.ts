@@ -18768,7 +18768,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		self: {
 			onHit(source) {
 				for (const side of source.side.foeSidesWithConditions()) {
-					side.addSideCondition('stealthrock');
+					side.addSideCondition('gmaxsteelsurge');
 				}
 			},
 		},
