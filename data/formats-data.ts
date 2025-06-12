@@ -6045,6 +6045,39 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	diancette: {
 		tier: "UU"
 	},
+<<<<<<< Updated upstream
+=======
+	ultratrapinch: {
+		tier: "LC"
+	},
+	ultravibrava: {
+		tier: "NFE"
+	},
+	ultraflygon: {
+		tier: "OU"
+	},
+	yanfern: {
+		tier: "LC"
+	},
+	yanmelia: {
+		tier: "UU"
+	},
+	deltashuckle: {
+		tier: "NU"
+	},
+	shrookle: {
+		tier: "UU"
+	},
+	deltauxie: {
+		tier: "OU"
+	},
+	deltaazelf: {
+		tier: "UU"
+	},
+	deltamesprit: {
+		tier: "RU"
+	},
+>>>>>>> Stashed changes
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
