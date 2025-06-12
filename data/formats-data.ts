@@ -6045,6 +6045,24 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	diancette: {
 		tier: "UU"
 	},
+	ultraflygon: {
+		tier: "OU"
+	},
+	yanmelia: {
+		tier: "UU"
+	},
+	shrookle: {
+		tier: "UU"
+	},
+	deltauxie: {
+		tier: "OU"
+	},
+	deltaazelf: {
+		tier: "UU"
+	},
+	deltamesprit: {
+		tier: "RU"
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

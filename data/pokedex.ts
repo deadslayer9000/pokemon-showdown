@@ -6044,6 +6044,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Brown",
 		evos: ["Vibrava"],
 		eggGroups: ["Bug", "Dragon"],
+		otherFormes: ["Ultra-Trapinch"],
 	},
 	vibrava: {
 		num: 329,
@@ -6058,6 +6059,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		evoLevel: 35,
 		evos: ["Flygon"],
 		eggGroups: ["Bug", "Dragon"],
+		otherFormes: ["Ultra-Vibrava"],
 	},
 	flygon: {
 		num: 330,
@@ -6071,6 +6073,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		prevo: "Vibrava",
 		evoLevel: 45,
 		eggGroups: ["Bug", "Dragon"],
+		otherFormes: ["Ultra-Flygon"],
 	},
 	cacnea: {
 		num: 331,
@@ -19810,6 +19813,9 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		eggGroups: ["Undiscovered"],
 		gen: 5,
 	},
+	//---------------------------------------------------------//
+	//----------------Delta Pokemon start here!----------------//
+	//---------------------------------------------------------//
 	ultrasnivy: { 
 	num: 495,
 	name: "Ultra-Snivy",
@@ -19937,7 +19943,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	color: "Black",
 	eggGroups: ["Undiscovered"],
 	},
-		ursanette: {
+	ursanette: {
 		num: 2064,
 		name: "Ursanette",
 		types: ["Normal", "Ghost"],
@@ -19949,7 +19955,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Black",
 		eggGroups: ["Undiscovered"],
 	},
-		liesler: {
+	liesler: {
 		num: 2065,
 		name: "Liesler",
 		types: ["Dark", "Poison"],
@@ -19961,7 +19967,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Black",
 		eggGroups: ["Undiscovered"],
 		},
-		valianttime: {
+	valianttime: {
 		num: 2066,
 		name: "Valiant Time",
 		types: ["Steel", "Fairy"],
@@ -19973,7 +19979,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Blue",
 		eggGroups: ["Undiscovered"],
 		},
-		gholdaton: {
+	gholdaton: {
 		num: 2067,
 		name: "Gholdaton",
 		types: ["Fairy", "Steel"],
@@ -19985,7 +19991,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Yellow",
 		eggGroups: ["Undiscovered"],
 		},
-		shaykarp: {
+	shaykarp: {
 		num: 2068,
 		name: "Shaykarp",
 		types: ["Water", "Grass"],
@@ -19997,7 +20003,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 		},
-		articeon: {
+	articeon: {
 		num: 2069,
 		name: "Articeon",
 		types: ["Water", "Psychic"],
@@ -20009,7 +20015,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Purple",
 		eggGroups: ["Undiscovered"],
 		},
-		zapeon: {
+	zapeon: {
 		num: 2070,
 		name: "Zapeon",
 		types: ["Electric", "Fighting"],
@@ -20021,7 +20027,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Yellow",
 		eggGroups: ["Undiscovered"],
 		},
-		molteon: {
+	molteon: {
 		num: 2071,
 		name: "Molteon",
 		types: ["Fire", "Dark"],
@@ -20033,7 +20039,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Red",
 		eggGroups: ["Undiscovered"],
 		},
-		radiantmoon: {
+	radiantmoon: {
 		num: 2072,
 		name: "Radiant Moon",
 		types: ["Dragon", "Ghost"],
@@ -20045,7 +20051,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Purple",
 		eggGroups: ["Undiscovered"],
 		},
-		zorotales: {
+	zorotales: {
 		num: 2073,
 		name: "Zorotales",
 		types: ["Normal", "Fairy"],
@@ -20056,8 +20062,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		heightm: 1.1,
 		color: "White",
 		eggGroups: ["Undiscovered"],
-		},
-		hatteon: {
+	},
+	hatteon: {
 		num: 2085,
 		name: "Hatteon",
 		types: ["Psychic", "Fairy"],
@@ -20069,7 +20075,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Pink",
 		eggGroups: ["Undiscovered"],
 		},
-		grimmeon: {
+	grimmeon: {
 		num: 2086, 
 		name: "Grimmeon",
 		types: ["Dark", "Fairy"],
@@ -20081,7 +20087,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Black",
 		eggGroups: ["Undiscovered"],
 		},
-		scizantrum: {
+	scizantrum: {
 		num: 2087,
 		name: "Scizantrum",
 		types: ["Bug", "Rock"],
@@ -20093,7 +20099,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Red",
 		eggGroups: ["Undiscovered"],
 		},
-		dragascue: {
+	dragascue: {
 		num: 2088,
 		name: "Dragascue",
 		types: ["Dragon", "Ice"],
@@ -20105,7 +20111,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "White",
 		eggGroups: ["Undiscovered"],
 		},
-		rotogar: {
+	rotogar: {
 		num: 2089,
 		name: "Rotogar",
 		types: ["Ghost", "Electric"],
@@ -20117,7 +20123,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Orange",
 		eggGroups: ["Undiscovered"],
 		},
-		diancette: {
+	diancette: {
 		num: 2092,
 		name: "Diancette",
 		types: ["Fairy", "Rock"],
@@ -20129,4 +20135,141 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Blue",
 		eggGroups: ["Undiscovered"],
 		},
+	ultratrapinch: {
+		num: 328,
+		name: "Ultra-Trapinch",
+		baseSpecies: "Trapinch",
+		forme: "Ultra",
+		types: ["Steel"],
+		baseStats: {hp: 45, atk: 110, def: 45, spa: 35, spd: 45, spe: 10},
+		abilities: {0: "Overcoat", 1: "Weak Armor", H: "Strong Jaw"},
+		weightkg: 35,
+		heightm: 0.7,
+		color: "Blue",
+		eggGroups: ["Bug", "Dragon"],
+		evos: ["Ultra-Vibrava"],
+	},
+	ultravibrava: {
+		num: 329,
+		name: "Ultra-Vibrava",
+		baseSpecies: "Vibrava",
+		forme: "Ultra",
+		types: ["Steel", "Dragon"],
+		baseStats: {hp: 50, atk: 65, def: 75, spa: 45, spd: 60, spe: 45},
+		abilities: {0: "Overcoat", 1: "Weak Armor", H: "Tinted Lens"},
+		weightkg: 35,
+		heightm: 1.1,
+		color: "Blue",
+		eggGroups: ["Bug", "Dragon"],
+		evos: ["Ultra-Flygon"],
+		prevo: ["Ultra-Vibrava"],
+	},
+	ultraflygon: {
+		num: 330,
+		name: "Ultra-Flygon",
+		baseSpecies: "Flygon",
+		forme: "Ultra",
+		types: ["Steel", "Dragon"],
+		baseStats: {hp: 80, atk: 90, def: 110, spa: 75, spd: 90, spe: 75},
+		abilities: {0: "Thick Fat", 1: "Weak Armor", H: "Tinted Lens"},
+		weightkg: 170,
+		heightm: 1.9,
+		color: "Blue",
+		eggGroups: ["Bug", "Dragon"],
+		prevo: ["Ultra-Vibrava"],
+	},
+	yanfern: {
+		num: 193,
+		name: "Yanfern",
+		baseSpecies: "Yanma",
+		forme: "Delta",
+		types: ["Grass", "Flying"],
+		baseStats: {hp: 75, atk: 45, def: 35, spa: 65, spd: 75, spe: 105},
+		abilities: {0: "Anticipation"},
+		weightkg: 35,
+		heightm: 1.3,
+		color: "Green",
+		eggGroups: ["Grass", "Flying"],
+		evo: ["Yanmellia"],
+	},
+	yanmelia: {
+		num: 469,
+		name: "Yanmelia",
+		baseSpecies: "Yanmega",
+		forme: "Delta",
+		types: ["Grass", "Flying"],
+		baseStats: {hp:98, atk: 71, def: 61, spa: 80, spd: 100, spe: 105},
+		abilities: {0: "Aeriliate"},
+		weightkg: 45.5,
+		heightm: 2.1,
+		color: "Green",
+		eggGroups: ["Grass", "Flying"],
+		prevo: ["Yanfern"],
+	},
+	deltashuckle: {
+		num: 213,
+		name: "Delta-Shuckle",
+		baseSpecies: "Shuckle",
+		forme: "Delta",
+		types: ["Bug", "Poison"],
+		baseStats: {hp: 20, atk: 10, def: 230, spa: 10, spd: 230, spe: 5},
+		abilities: {0: "Harvest", 1: "Effect Spore", H: "Contrary"},
+		weightkg: 15.5,
+		heightm: 0.6,
+		color: "Green",
+		eggGroups: ["Bug"],
+		evo: ["Shrookle"],
+	},
+	shrookle: {
+		num: 2039,
+		name: "Shrookle",
+		types: ["Bug", "Poison"],
+		baseStats: {hp: 60, atk: 45, def: 160, spa: 80, spd: 160, spe: 35},
+		abilities: {0: "Harvest", 1: "Effect Spore", H: "Contrary"},
+		weightkg: 18,
+		heightm: 0.8,
+		color: "Green",
+		eggGroups: ["Bug"],
+		prevo: ["Delta-Shuckle"],
+	},
+	deltaazelf: {
+		num: 482,
+		name: "Delta-Azelf",
+		BaseSpecies: "Azelf",
+		forme: "Delta",
+		types: ["Poison", "Fairy"],
+		baseStats: {hp: 75, atk: 125, def: 70, spa: 125, spd: 70, spe: 115},
+		abilities: {0: "Toxic Chain", 1: "Levitate", H: "Unaware"},
+		weightkg: 0.3,
+		heightm: 0.3,
+		color: "Black",
+		eggGroups: ["Undiscovered"],
+	},
+	deltauxie: {
+		num: 480,
+		name: "Delta-Uxie",
+		BaseSpecies: "Uxie",
+		forme: "Delta",
+		types: ["Poison", "Dark"],
+		baseStats: {hp: 60, atk: 95, def: 115, spa: 95, spd: 115, spe: 100},
+		abilities: {0: "Toxic Chain", 1: "Levitate", H: "Truant"},
+		weightkg: 0.3, 
+		heightm: 0.3,
+		color: "Black",
+		eggGroups: ["Undiscovered"],
+	},
+	deltamesprit: {
+		num: 481,
+		name: "Delta-Mesprit",
+		BaseSpecies: "Mesprit",
+		forme: "Delta",
+		types: ["Poison", "Fighting"],
+		baseStats: {hp: 80, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
+		abilities: {0: "Toxic Chain", 1: "Levitate", H: "Merciless"},
+		weightkg: 0.3,
+		heightm: 0.3,
+		color: "Black",
+		eggGroups: ["Undiscovered"],
+	},
+		
 }

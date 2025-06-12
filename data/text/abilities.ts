@@ -340,7 +340,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		},
 	},
 	dawnbreak: {
-		name: "Dawnbreak",
+		name: "Dawnbreak (WIP)",
 		shortDesc: "Nullifies items; SpA is 1.5x if a Pokemon with Moonwake is active."
 	},
 	dazzling: {
@@ -371,7 +371,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		shortDesc: "On switch-in, extremely harsh sunlight begins until this Ability is not active in battle.",
 	},
 	diamondgrove: {
-		name: "Diamond Grove",
+		name: "Diamond Grove (WIP)",
 		shortDesc: "If Grassy Terrain is active, Super-Effective attacks on this Pokemon become neutral."
 	},
 	disguise: {
@@ -493,7 +493,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		shortDesc: "This Pokemon receives 3/4 damage from supereffective attacks.",
 	},
 	finalverdict: {
-		name: "Final Verdict",
+		name: "Final Verdict (WIP)",
 		shortDesc: "STAB on Spc. Psychic and Phys. Ghost moves; Pokemon faint if below 10% HP."
 	},
 	flamebody: {
@@ -686,7 +686,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		shortDesc: "This Pokemon's weight is doubled.",
 	},
 	helixnebula: {
-		name: "Helix Nebula",
+		name: "Helix Nebula (WIP)",
 		desc: "This Pokemon copies the opponent's type on switch in. Additionally, should this Pokemon receive a fatal direct attack from an opponent, it will use Wish before fainting.",
 		shortDesc: "Copies opponent's type on switch in. Uses Wish if fainted by a direct attack.",
 	},
@@ -1001,7 +1001,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		},
 	},
 	marvel: {
-		name: "Marvel",
+		name: "Marvel (WIP)",
 		shortDesc: "This Pokemon will always critically hit on it's first turn sent out."
 	},
 	marvelscale: {
@@ -1083,7 +1083,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		},
 	},
 	moonwake: {
-		name: "Moonwake",
+		name: "Moonwake (WIP)",
 		shortDesc: "Moves ignore abilities; 1.5x SpD if a Pokemon with Dawnbreak is active.",
 	},
 	motordrive: {
@@ -1427,7 +1427,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		shortDesc: "Ghost damage to this Pokemon dealt with a halved offensive stat; can't be statused.",
 	},
 	pyroclastic: {
-		name: "Pyroclastic",
+		name: "Pyroclastic (WIP)",
 		shortDesc: "Pokemon heals 1/3rd of it's health when switching in; Accuracy can't be lowered."
 	},
 	quarkdrive: {
