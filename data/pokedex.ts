@@ -20221,7 +20221,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		evo: ["Shrookle"],
 	},
 	shrookle: {
-		num: 2039
+		num: 2039,
 		name: "Shrookle",
 		types: ["Bug", "Poison"],
 		baseStats: {hp: 60, atk: 45, def: 160, spa: 80, spd: 160, spe: 35},
