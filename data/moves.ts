@@ -13412,6 +13412,32 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "self",
 		type: "Fighting",
 	},
+	noxiouspower: {
+		num: -10,
+		accuracy: 90,
+		basePower: 70,
+		category: "Special",
+		name: "Noxious Power",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, metronome: 1, mirror: 1},
+		onBasePower(basePower, pokemon, target) {
+			if (target.status === 'psn' || target.status === 'tox') {
+				return this.chainModify(2);
+			}
+		},
+		secondary: {
+			chance: 50,
+			self: {
+				boosts: {
+					spa: 1,
+				}
+			}
+		},
+		target: "normal",
+		type: "Poison",
+	},
+		
 	noxioustorque: {
 		num: 898,
 		accuracy: 100,

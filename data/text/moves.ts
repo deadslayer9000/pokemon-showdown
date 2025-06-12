@@ -4512,6 +4512,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 
 		start: "  [POKEMON] can no longer escape because it used No Retreat!",
 	},
+	noxiouspower: {
+		name: "Noxious Power",
+		shortDesc: "Power doubles if target is poisoned; 30% chance to raise Sp. Atk by 1."
+	},
 	noxioustorque: {
 		name: "Noxious Torque",
 		desc: "Has a 30% chance to poison the target.",

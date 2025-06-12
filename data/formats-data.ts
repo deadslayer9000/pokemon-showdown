@@ -6054,6 +6054,15 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	shrookle: {
 		tier: "UU"
 	},
+	deltauxie: {
+		tier: "OU"
+	},
+	deltaazelf: {
+		tier: "UU"
+	},
+	deltamesprit: {
+		tier: "RU"
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
