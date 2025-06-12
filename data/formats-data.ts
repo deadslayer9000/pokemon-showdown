@@ -6075,7 +6075,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	deltamesprit: {
 		tier: "RU"
 	},
->>>>>>> Stashed changes
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
