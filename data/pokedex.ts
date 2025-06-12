@@ -20179,7 +20179,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		prevo: ["Ultra-Vibrava"],
 	},
 	yanfern: {
-		num: 193
+		num: 193,
 		name: "Yanfern",
 		baseSpecies: ["Yanma"],
 		forme: "Delta",
