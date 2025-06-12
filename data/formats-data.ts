@@ -1101,7 +1101,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "NFE",
 	},
 	porygonz: {
-		tier: "NU",
+		tier: "NUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "RUBL",
 	},
@@ -1510,9 +1510,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "UUBL",
 	},
 	sneasler: {
-		tier: "Uber",
+		tier: "OU",
 		doublesTier: "DUU",
-		natDexTier: "Uber",
+		natDexTier: "OU",
 	},
 	teddiursa: {
 		tier: "LC",
@@ -4514,9 +4514,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "NFE",
 	},
 	solgaleo: {
-		tier: "Uber",
+		tier: "OU",
 		doublesTier: "DUber",
-		natDexTier: "Uber",
+		natDexTier: "OU",
 	},
 	lunala: {
 		tier: "Uber",
@@ -5552,9 +5552,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "OU",
 	},
 	annihilape: {
-		tier: "Uber",
+		tier: "OU",
 		doublesTier: "DUber",
-		natDexTier: "Uber",
+		natDexTier: "OU",
 	},
 	walkingwake: {
 		tier: "OU",

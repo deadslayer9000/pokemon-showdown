@@ -2734,9 +2734,9 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 5,
 		num: 141,
 	},
-	moonbreak: {
+	moonwake: {
 		flags: {},
-		name: "Moonbreak",
+		name: "Moonwake",
 		rating: 2,
 		num: -12,
 	},
@@ -3104,6 +3104,16 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		},
 		onAnySwitchInPriority: -3,
 		onAnySwitchIn() {
+			if (!this.effectState.boosts) return;
+			this.boost(this.effectState.boosts, this.effectState.target);
+			delete this.effectState.boosts;
+		},
+		onAnyAfterMega() {
+			if (!this.effectState.boosts) return;
+			this.boost(this.effectState.boosts, this.effectState.target);
+			delete this.effectState.boosts;
+		},
+		onAnyAfterTerastallization() {
 			if (!this.effectState.boosts) return;
 			this.boost(this.effectState.boosts, this.effectState.target);
 			delete this.effectState.boosts;

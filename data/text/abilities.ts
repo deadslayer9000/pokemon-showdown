@@ -1082,8 +1082,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			shortDesc: "Raises a random stat by 2 and lowers another stat by 1 at the end of each turn.",
 		},
 	},
-	moonbreak: {
-		name: "Moonbreak (WIP)",
+	moonwake: {
+		name: "Moonwake (WIP)",
 		shortDesc: "Moves ignore abilities; 1.5x SpD if a Pokemon with Dawnbreak is active.",
 	},
 	motordrive: {
