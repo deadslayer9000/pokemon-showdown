@@ -6045,8 +6045,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	diancette: {
 		tier: "UU"
 	},
-<<<<<<< Updated upstream
-=======
 	ultratrapinch: {
 		tier: "LC"
 	},

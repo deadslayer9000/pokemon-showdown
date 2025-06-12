@@ -549,7 +549,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		shortDesc: "High critical hit ratio. 10% chance to burn.",
 	},
 	blazeout: {
-		name: "Blaze Out",
+		name: "Blaze Out (WIP)",
 		shortDesc: "Starts sun, User switches out.",
 	},
 	blazingtorque: {
@@ -1883,7 +1883,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		shortDesc: "100% chance to raise user Speed by 1. High crit.",
 	},
 	etherburst: {
-		name: "Ether Burst",
+		name: "Ether Burst (WIP)",
 		desc: "Ether Burst's type always matches the user's primary type. Ether Burst is Physical when the user's Attack is higher than their Special Attack.",
 		shortDesc: "Type = user's Type, Phys. if Atk > SpA.",
 	},
@@ -4512,6 +4512,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 
 		start: "  [POKEMON] can no longer escape because it used No Retreat!",
 	},
+	noxiouspower: {
+		name: "Noxious Power",
+		shortDesc: "2x Power if Target poisoned; 30% for +1 SpA."
+	},
 	noxioustorque: {
 		name: "Noxious Torque",
 		desc: "Has a 30% chance to poison the target.",
@@ -6364,6 +6368,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Steel Roller",
 		desc: "Fails if there is no terrain active. Ends the effects of Electric Terrain, Grassy Terrain, Misty Terrain, and Psychic Terrain.",
 		shortDesc: "Fails if there is no terrain active. Ends the terrain.",
+	},
+	steelskewer: {
+		name: "Steel Skewer",
+		shortDesc: "Sets G-Max Steelsurge on the opponent's side."
 	},
 	steelwing: {
 		name: "Steel Wing",
