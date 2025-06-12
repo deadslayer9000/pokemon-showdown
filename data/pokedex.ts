@@ -20181,7 +20181,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	yanfern: {
 		num: 193,
 		name: "Yanfern",
-		baseSpecies: ["Yanma"],
+		baseSpecies: "Yanma",
 		forme: "Delta",
 		types: ["Grass", "Flying"],
 		baseStats: {hp: 75, atk: 45, def: 35, spa: 65, spd: 75, spe: 105},
@@ -20195,7 +20195,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	yanmelia: {
 		num: 469,
 		name: "Yanmelia",
-		baseSpecies: ["Yanmega"],
+		baseSpecies: "Yanmega",
 		forme: "Delta",
 		types: ["Grass", "Flying"],
 		baseStats: {hp:98, atk: 71, def: 61, spa: 80, spd: 100, spe: 105},
@@ -20209,7 +20209,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	deltashuckle: {
 		num: 213,
 		name: "Delta-Shuckle",
-		baseSpecies: ["Shuckle"],
+		baseSpecies: "Shuckle",
 		forme: "Delta",
 		types: ["Bug", "Poison"],
 		baseStats: {hp: 20, atk: 10, def: 230, spa: 10, spd: 230, spe: 5},
