@@ -4514,7 +4514,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	noxiouspower: {
 		name: "Noxious Power",
-		shortDesc: "Power doubles if target is poisoned; 30% chance to raise Sp. Atk by 1."
+		shortDesc: "2x Power if Target poisoned; 30% for +1 SpA."
 	},
 	noxioustorque: {
 		name: "Noxious Torque",
