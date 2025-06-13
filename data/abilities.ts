@@ -5541,6 +5541,18 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 1,
 		num: 133,
 	},
+	welkintorch: {
+		onDamage(damage, target, source, effect) {
+			if (effect.effectType !== 'Move') {
+				if (effect.effectType === 'Ability') this.add('-activate', source, 'ability: ' + effect.name);
+				return false;
+			}
+		},
+		flags: {},
+		name: "Welkin Torch",
+		rating: 3,
+		num: -14,
+	},
 	wellbakedbody: {
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Fire') {
