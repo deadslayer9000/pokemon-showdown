@@ -70,7 +70,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	adamantinemolars: {
 		name: "Adamantine Molars",
-		shortDesc: "20% chance to reduce target's efense by 1."
+		shortDesc: "20% chance to reduce target's Defense by 1."
 	},
 	aerialace: {
 		name: "Aerial Ace",
