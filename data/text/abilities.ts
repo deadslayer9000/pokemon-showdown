@@ -2245,6 +2245,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			shortDesc: "If a physical attack hits this Pokemon, Defense is lowered by 1, Speed is raised by 1.",
 		},
 	},
+	welkintorch: {
+		name: "Welkin Torch",
+		shortDesc: "This pokemon is immune to indirect damage."
+	},
 	wellbakedbody: {
 		name: "Well-Baked Body",
 		desc: "This Pokemon is immune to Fire-type moves and raises its Defense by 2 stages when hit by a Fire-type move.",

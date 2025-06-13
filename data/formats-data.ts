@@ -6066,6 +6066,15 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	lucaurus: {
 		tier: "UU",
 	},
+	deltastarly: {
+		tier: "LC",
+	},
+	deltastaravia: {
+		tier: "NFE",
+	},
+	deltastaraptor: {
+		tier: "UU",
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
