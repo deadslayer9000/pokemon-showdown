@@ -103089,7 +103089,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			toxic: ["9M"],
 			twister: ["9M"],
 			uturn: ["9M"],
-			whirlwind: ["9M"],
 			whirlwind: ["9L23","9M"],
 			willowisp: ["9L23","9M"],
 			wingattack: ["9L1","9M"],
