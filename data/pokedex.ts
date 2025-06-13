@@ -20316,7 +20316,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		abilities: {0: "Intimidate", H: "Welkin Torch"},
 		weightkg: 30.5,
 		heightm: 1.2,
-		color: "Red"
+		color: "Red",
 		eggGroups: ["Flying"],
 		prevo: "Delta-Staravia",
 	},
