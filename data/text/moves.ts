@@ -68,6 +68,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			desc: "Raises a random stat by 2 stages as long as the stat is not already at stage 6. The user can choose to use this move on itself or an ally. Fails if no stat stage can be raised or if the user or ally has a substitute.",
 		},
 	},
+	adamantinemolars: {
+		name: "Adamantine Molars",
+		shortDesc: "20% chance to reduce target's efense by 1."
+	},
 	aerialace: {
 		name: "Aerial Ace",
 		shortDesc: "This move does not check accuracy.",

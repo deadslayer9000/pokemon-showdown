@@ -7958,7 +7958,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		heightm: 0.7,
 		weightkg: 20.2,
 		color: "Blue",
-		evos: ["Lucario"],
+		evos: ["Lucario", "Lucaurus"],
 		eggGroups: ["Undiscovered"],
 		canHatch: true,
 	},
@@ -20271,5 +20271,17 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Black",
 		eggGroups: ["Undiscovered"],
 	},
-		
+	lucaurus: {
+		num: 2003,
+		name: "Lucaurus",
+		types: ["Dark", "Steel"],
+		baseStats: {hp: 70, atk: 105, def: 94, spa: 61, spd: 85, spe: 110},
+		abilities: {0: "Strong Jaw", 1: "Anger Point", H: "Unburden"},
+		weightkg: 49,
+		heightm: 1.5,
+		color: "Blue",
+		eggGroups: ["Field", "Human-Like"],
+		prevo: "Riolu",
+	},
+	
 }
