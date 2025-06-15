@@ -1296,6 +1296,32 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		gen: 3,
 		isNonstandard: "Past",
 	},
+	deltalatiasite: {
+		name: "Delta Latiasite",
+		spritenum: 629,
+		megaStone: "Delta-Latias-Mega",
+		megaEvolves: "Delta-Latias",
+		itemUser: ["Delta-Latias"],
+		onTakeItem(item, source) {	
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 9,
+	},
+	deltalatiosite: {
+		name: "Delta Latiosite",
+		spritenum: 630,
+		megaStone: "Delta-Latios-Mega",
+		megaEvolves: "Delta-Latios",
+		itemUser: ["Delta-Latios"],
+		onTakeItem(item, source) {	
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -2,
+		gen: 9,
+	},
 	destinyknot: {
 		name: "Destiny Knot",
 		spritenum: 95,

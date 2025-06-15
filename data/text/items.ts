@@ -365,6 +365,14 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		desc: "If held by a Clamperl, its Sp. Atk is doubled. Evolves Clamperl into Huntail when traded.",
 		shortDesc: "If held by a Clamperl, its Sp. Atk is doubled.",
 	},
+	deltalatiasite: {
+		name: "Delta Latiasite",
+		shortDesc: "If held by Delta-Latias, this item allows it to Mega Evolve in battle."
+	},
+	deltalatiosite: {
+		name: "Delta Latiosite",
+		shortDesc: "If held by Delta-Latios, this item allows it to Mega Evolve in battle."
+	},
 	destinyknot: {
 		name: "Destiny Knot",
 		shortDesc: "If holder becomes infatuated, the other Pokemon also becomes infatuated.",

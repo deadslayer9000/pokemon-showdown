@@ -2224,6 +2224,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "The target restores 1/2 of its maximum HP, rounded half up. If the terrain is Grassy Terrain, the target instead restores 2/3 of its maximum HP, rounded half down.",
 		shortDesc: "Heals the target by 50% of its max HP.",
 	},
+	floridpuff: {
+		name: "Florid Puff",
+		shortDesc: "50% chance to raise Special Defense of user."
+	},
 	flowershield: {
 		name: "Flower Shield",
 		desc: "Raises the Defense of all active Grass-type Pokemon by 1 stage. Fails if there are no active Grass-type Pokemon.",
@@ -7306,6 +7310,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Venoshock",
 		desc: "Power doubles if the target is poisoned.",
 		shortDesc: "Power doubles if the target is poisoned.",
+	},
+	verdantflush: {
+		name: "Verdant Flush",
+		shortDesc: "50% chance to raise Special Attack of user."
 	},
 	victorydance: {
 		name: "Victory Dance",

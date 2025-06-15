@@ -6087,6 +6087,21 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	deltastaraptor: {
 		tier: "UU",
 	},
+	savagescar: {
+		tier: "OU",
+	},
+	deltalatias: {
+		tier: "OU",
+	},
+	deltalatiasmega: {
+		tier: "(OU)",
+	},
+	deltalatios: {
+		tier: "UU"
+	},
+	deltalatiosmega: {
+		tier: "OU"
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
