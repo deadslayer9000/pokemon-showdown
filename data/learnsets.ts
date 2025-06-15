@@ -103165,7 +103165,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			trailblaze: ["9M"],
 		}
 	},
-	latiasdelta: {
+	deltalatias: {
 		learnset: {
 			aerialace: ["9M"],
 			aircutter: ["9M","9M"],
