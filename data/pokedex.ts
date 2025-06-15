@@ -20346,6 +20346,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Blue",
 		eggGroups: ["Undiscovered"],
 		otherFormes: ["Delta-Latias-Mega"],
+		formeOrder: ["Delta-Latias", "Delta-Latias-Mega"],
 	},
 	deltalatiasmega: {
 		num: 380,
@@ -20365,6 +20366,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	deltalatios: {
 		num: 381,
 		name: "Delta-Latios",
+		baseSpecies: "Delta-Latios",
 		forme: "Delta",
 		types: ["Dragon", "Fairy"],
 		gender: "M",
@@ -20374,11 +20376,13 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		heightm: 2,
 		color: "Red",
 		eggGroups: ["Undiscovered"],
-		otherFormes: "Delta-Latios-Mega",
+		otherFormes: ["Delta-Latios-Mega"],
+		formeOrder: ["Delta-Latios", "Delta-Latios-Mega"],
 	},
 	deltalatiosmega: {
 		num: 381,
 		name: "Delta-Latios-Mega",
+		baseSpecies: "Delta-Latios",
 		forme: "Mega",
 		types: ["Dragon", "Fairy"],
 		gender: "M",
