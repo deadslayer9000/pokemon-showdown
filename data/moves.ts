@@ -6168,6 +6168,26 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		zMove: { effect: 'clearnegativeboost' },
 		contestType: "Beautiful",
 	},
+	floridpuff: {
+		num: -12,
+		accuracy: 90,
+		basePower: 80,
+		category: "Special",
+		name: "Florid Puff",
+		pp: 10,
+		priority: 0,
+		flags: {metronome: 1, mirror: 1, protect: 1},
+		secondary: {
+			chance: 50,
+			self: {
+				boosts: {
+					spd: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Fairy",
+	},
 	flowershield: {
 		num: 579,
 		accuracy: true,
@@ -21385,6 +21405,26 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "normal",
 		type: "Poison",
 		contestType: "Beautiful",
+	},
+	verdantflush: {
+		num: -13,
+		accuracy: 90,
+		basePower: 80, 
+		category: "Special",
+		name: "Verdant Flush",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1},
+		secondary: {
+			chance: 50,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Fairy",
 	},
 	victorydance: {
 		num: 837,
