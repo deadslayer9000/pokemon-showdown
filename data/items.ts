@@ -1297,7 +1297,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		isNonstandard: "Past",
 	},
 	deltalatiasite: {
-		name: "Delta-Latiasite",
+		name: "Delta Latiasite",
 		spritenum: 629,
 		megaStone: "Delta-Latias-Mega",
 		megaEvolves: "Delta-Latias",
