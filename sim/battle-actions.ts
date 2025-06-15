@@ -1874,10 +1874,10 @@ export class BattleActions {
 			return altForme.name;
 		}
 		// a hacked-in Megazard X can mega evolve into Megazard Y, but not into Megazard X
-		if (item.megaEvolves === species.baseSpecies && item.megaStone !== species.name) {
+		if (item.megaEvolves === species.name && item.megaStone !== species.name) {
 			return item.megaStone;
 		}
-		return item.megaStone;
+		return null;
 	}
 
 	canUltraBurst(pokemon: Pokemon) {
