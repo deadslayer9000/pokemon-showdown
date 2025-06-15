@@ -6084,10 +6084,10 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	deltalatiasmega: {
 		tier: "(OU)",
 	},
-	latiosdelta: {
+	deltalatios: {
 		tier: "UU"
 	},
-	latiosdeltamega: {
+	deltalatiosmega: {
 		tier: "OU"
 	},
 	pokestarsmeargle: {
