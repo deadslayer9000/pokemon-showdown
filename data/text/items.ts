@@ -366,7 +366,7 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		shortDesc: "If held by a Clamperl, its Sp. Atk is doubled.",
 	},
 	deltalatiasite: {
-		name: "Delta Latiasite",
+		name: "Delta-Latiasite",
 		shortDesc: "If held by Delta-Latias, this item allows it to Mega Evolve in battle."
 	},
 	deltalatiosite: {
