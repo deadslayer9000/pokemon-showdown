@@ -20388,7 +20388,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		heightm: 2.3,
 		color: "Red",
 		eggGroups: ["Undiscovered"],
-		requiredItem: "Delta Latiosite"
+		requiredItem: "Delta Latiosite",
 	},
 }
 		
