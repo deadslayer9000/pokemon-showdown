@@ -6099,6 +6099,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	deltasteelixmega: {
 		tier: "UU"
 	},
+	spectreon: {
+		tier: "UU"
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

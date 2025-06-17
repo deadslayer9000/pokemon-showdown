@@ -7480,6 +7480,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			shortDesc: "No competitive use.",
 		},
 	},
+	whiskaway: {
+		name: "Whisk Away",
+		shortDesc: "1.5x power if foe holds an item; Removes item.",
+	},
 	wickedblow: {
 		name: "Wicked Blow",
 		desc: "This move is always a critical hit unless the target is under the effect of Lucky Chant or has the Battle Armor or Shell Armor Abilities.",

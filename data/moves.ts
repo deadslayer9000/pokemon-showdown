@@ -21841,6 +21841,34 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		zMove: { boost: { spd: 1 } },
 		contestType: "Clever",
 	},
+	whiskaway: {
+		num: -14,
+		accuracy: 100,
+		basePower: 65,
+		category: "Special",
+		name: "Whisk Away",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, metronome: 1},
+		onBasePower(basePower, source, target, move) {
+			const item = target.getItem();
+			if (!this.singleEvent('TakeItem', item, target.itemState, target, target, move, item)) return;
+			if (item.id) {
+				return this.chainModify(1.5);
+			}
+		},
+		onAfterHit(target, source) {
+			if (source.hp) {
+				const item = target.takeItem();
+				if (item) {
+					this.add('-enditem', target, item.name, '[from] move: Knock Off', `[of] ${source}`);
+				}
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ghost",
+	},
 	wickedblow: {
 		num: 817,
 		accuracy: 100,

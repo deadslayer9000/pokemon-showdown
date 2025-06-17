@@ -20438,6 +20438,18 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		eggGroups: ["Mineral"],
 		requiredItem: "Delta Steelixite",
 	},
+	spectreon: {
+		num: 2001,
+		name: "Spectreon",
+		types: ["Ghost"],
+		baseStats: {hp: 95, atk: 60, def: 65, spa: 110, spd: 65, spe: 130},
+		abilities: {0: "Cursed Body", 1: "Speed Boost"},
+		weightkg: 0.1,
+		heightm: 1.1,
+		color: "Black",
+		eggGroups: ["Field"],
+		prevo: "Eevee",
+	},
 	
 }
 		
