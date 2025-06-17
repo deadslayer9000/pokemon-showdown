@@ -1289,6 +1289,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			shortDesc: "This Pokemon's Normal-type moves become Fairy type and have 1.3x power.",
 		},
 	},
+	planarcollapse: {
+		name: "Planar Collapse",
+		shortDesc: "On switch-in, this Pokemon summons Gravity."
+	},
 	plus: {
 		name: "Plus",
 		desc: "If an active ally has this Ability or the Minus Ability, this Pokemon's Special Attack is multiplied by 1.5.",

@@ -1091,6 +1091,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Malicious Armor",
 		shortDesc: "Evolves Charcadet into Ceruledge when used.",
 	},
+	manphite: {
+		name: "Manaphite",
+		sortDesc: "If held by a Manaphy, this item allows it to Mega Evolve in battle.",
+	},
 	manectite: {
 		name: "Manectite",
 		shortDesc: "If held by a Manectric, this item allows it to Mega Evolve in battle.",

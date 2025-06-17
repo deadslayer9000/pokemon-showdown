@@ -1322,6 +1322,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		num: -2,
 		gen: 9,
 	},
+	deltasteelixite: {
+		name: "Delta Steelixite",
+		spritenum: 14,
+		megaStone: "Delta-Steelix-Mega",
+		megaEvolves: "Delta-Steelix",
+		itemUser: ["Delta-Steelix"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -3,
+	},
 	destinyknot: {
 		name: "Destiny Knot",
 		spritenum: 95,

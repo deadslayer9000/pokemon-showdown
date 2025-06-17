@@ -3358,6 +3358,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 4,
 		num: 182,
 	},
+	planarcollapse: {
+		flags: {},
+		name: "Planar Collapse",
+		rating: 4,
+		num: -16
+	},
 	plus: {
 		onModifySpAPriority: 5,
 		onModifySpA(spa, pokemon) {
