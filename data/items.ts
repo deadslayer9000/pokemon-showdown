@@ -3485,6 +3485,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		num: 1861,
 		gen: 9,
 	},
+	manaphite: {
+		name: "Manaphite",
+		spritenum: 0,
+		megaStone: "Manaphy-Mega",
+		megaEvolves: "Manaphy",
+		itemUser: ["Manaphy"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -3,
+	},
 	manectite: {
 		name: "Manectite",
 		spritenum: 596,

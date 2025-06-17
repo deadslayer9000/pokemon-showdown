@@ -1159,6 +1159,9 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		start: "  Neutralizing gas filled the area!",
 		end: "  The effects of the neutralizing gas wore off!",
 	},
+	noblesse: {
+		name: "Noblesse",
+		shortDesc: "This Pokemon's Water type moves do not lose power in the Sun."
 	noguard: {
 		name: "No Guard",
 		shortDesc: "Every move used by or against this Pokemon will always hit.",

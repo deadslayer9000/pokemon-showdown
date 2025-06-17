@@ -6090,6 +6090,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	deltalatiosmega: {
 		tier: "OU"
 	},
+	manaphymega: {
+		tier: "OU"
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

@@ -8726,6 +8726,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Blue",
 		tags: ["Mythical"],
 		eggGroups: ["Water 1", "Fairy"],
+		otherFormes: ["Manaphy-Mega"],
 	},
 	darkrai: {
 		num: 491,
@@ -20393,6 +20394,21 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Red",
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Delta Latiosite",
+	},
+	manaphymega: {
+		num: 490,
+		name: "Manaphy-Mega",
+		baseSpecies: "Manaphy",
+		forme: "Mega",
+		types: ["Water"],
+		gender: "N",
+		baseStats: {hp: 100, atk: 130, def: 120, spa: 130, spd: 120, spe: 100},
+		abilities: {0: "Noblesse"},
+		weightkg: 1.4,
+		heightm: 0.4, 
+		color: "Blue",
+		eggGroups: ["Undiscovered"],
+		requireItem: "Manaphite",
 	},
 }
 		
