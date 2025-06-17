@@ -1162,6 +1162,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	noblesse: {
 		name: "Noblesse",
 		shortDesc: "This Pokemon's Water type moves do not lose power in the Sun."
+	},
 	noguard: {
 		name: "No Guard",
 		shortDesc: "Every move used by or against this Pokemon will always hit.",
