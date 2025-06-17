@@ -375,7 +375,7 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 	},
 	deltasteelixite: {
 		name "Delta Steelixite",
-		shortDesc: "If held by Delta-Steelix, this item allows it to Mega Evolve in battle."
+		shortDesc: "If held by Delta-Steelix, this item allows it to Mega Evolve in battle.",
 	},
 	destinyknot: {
 		name: "Destiny Knot",

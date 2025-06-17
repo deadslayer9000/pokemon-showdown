@@ -20433,7 +20433,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		baseStats: {hp: 85, atk: 65, def: 65, spa: 135, spd: 230, spe: 30},
 		abilities: {0: "Planar Collapse"},
 		weightkg: 350,
-		heightm: 9,2,
+		heightm: 9.2,
 		color: "Gray",
 		eggGroups: ["Mineral"],
 		requiredItem: "Delta Steelixite",
