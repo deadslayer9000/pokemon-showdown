@@ -373,6 +373,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Delta Latiosite",
 		shortDesc: "If held by Delta-Latios, this item allows it to Mega Evolve in battle."
 	},
+	deltasteelixite: {
+		name: "Delta Steelixite",
+		shortDesc: "If held by Delta-Steelix, this item allows it to Mega Evolve in battle.",
+	},
 	destinyknot: {
 		name: "Destiny Knot",
 		shortDesc: "If holder becomes infatuated, the other Pokemon also becomes infatuated.",
@@ -1090,6 +1094,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 	maliciousarmor: {
 		name: "Malicious Armor",
 		shortDesc: "Evolves Charcadet into Ceruledge when used.",
+	},
+	manphite: {
+		name: "Manaphite",
+		sortDesc: "If held by a Manaphy, this item allows it to Mega Evolve in battle.",
 	},
 	manectite: {
 		name: "Manectite",

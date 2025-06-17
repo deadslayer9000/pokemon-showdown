@@ -3019,6 +3019,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 4,
 		num: -99,
 	},
+	noblesse: {
+		flags: {},
+		name: "Noblesse",
+		rating: 2,
+		num: -15,
+	},
 	noguard: {
 		onAnyInvulnerabilityPriority: 1,
 		onAnyInvulnerability(target, source, move) {
@@ -3351,6 +3357,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Pixilate",
 		rating: 4,
 		num: 182,
+	},
+	planarcollapse: {
+		flags: {},
+		name: "Planar Collapse",
+		rating: 4,
+		num: -16
 	},
 	plus: {
 		onModifySpAPriority: 5,

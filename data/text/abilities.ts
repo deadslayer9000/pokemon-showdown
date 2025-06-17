@@ -1159,6 +1159,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		start: "  Neutralizing gas filled the area!",
 		end: "  The effects of the neutralizing gas wore off!",
 	},
+	noblesse: {
+		name: "Noblesse",
+		shortDesc: "This Pokemon's Water type moves do not lose power in the Sun."
+	},
 	noguard: {
 		name: "No Guard",
 		shortDesc: "Every move used by or against this Pokemon will always hit.",
@@ -1284,6 +1288,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			desc: "This Pokemon's Normal-type moves become Fairy-type moves and have their power multiplied by 1.3. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
 			shortDesc: "This Pokemon's Normal-type moves become Fairy type and have 1.3x power.",
 		},
+	},
+	planarcollapse: {
+		name: "Planar Collapse",
+		shortDesc: "On switch-in, this Pokemon summons Gravity."
 	},
 	plus: {
 		name: "Plus",
