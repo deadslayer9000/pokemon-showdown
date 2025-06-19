@@ -1751,13 +1751,13 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 	guarded: {
 			onSetStatus(status, target, source, effect) {
 			if ((effect as Move)?.status) {
-				this.add('-immune', target, '[from] ability: Purifying Salt');
+				this.add('-immune', target, '[from] ability: Guarded');
 			}
 			return false;
 		},
 		onTryAddVolatile(status, target) {
 			if (status.id === 'yawn') {
-				this.add('-immune', target, '[from] ability: Purifying Salt');
+				this.add('-immune', target, '[from] ability: Guarded');
 				return null;
 			}
 			if (status.id === 'flinch') return null;
@@ -3683,7 +3683,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 	prowler: {
 		onSourceAfterFaint(length, target, source, effect) {
 			if (effect && effect.effectType === 'Move') {
-				pokemon.heal(pokemon.baseMaxhp / 3);
+				this.heal(pokemon.baseMaxhp / 3);
 			}
 		},
 		flags: {},
