@@ -1761,7 +1761,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 				return null;
 			}
 			if (status.id === 'flinch') return null;
-		},
+		}
 		},
 		flags: {},
 		name: "Guardian",
