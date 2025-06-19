@@ -1003,6 +1003,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 4,
 		num: -13,
 	},
+	direambush: {
+		flags: {},
+		name: "Dire Ambush",
+		rating: 3,
+		num: -18,
+	},
 	disguise: {
 		onDamagePriority: 1,
 		onDamage(damage, target, source, effect) {
@@ -1742,6 +1748,25 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 2,
 		num: 275,
 	},
+	guarded: {
+			onSetStatus(status, target, source, effect) {
+			if ((effect as Move)?.status) {
+				this.add('-immune', target, '[from] ability: Guarded');
+			}
+			return false;
+		},
+		onTryAddVolatile(status, target) {
+			if (status.id === 'yawn') {
+				this.add('-immune', target, '[from] ability: Guarded');
+				return null;
+			}
+			if (status.id === 'flinch') return null;
+		},
+		flags: {},
+		name: "Guarded",
+		rating: 3,
+		num: -17,
+	},
 	gulpmissile: {
 		onDamagingHit(damage, target, source, move) {
 			if (!source.hp || !source.isActive || target.isSemiInvulnerable()) return;
@@ -2039,6 +2064,26 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Ice Scales",
 		rating: 4,
 		num: 246,
+	},
+	igneous: {
+		onSourceModifyAtkPriority: 6,
+		onSourceModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Water' || move.type === 'Fire') {
+				this.debug('Thick Fat weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		onSourceModifySpAPriority: 5,
+		onSourceModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Water' || move.type === 'Fire') {
+				this.debug('Thick Fat weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		flags: { breakable: 1 },
+		name: "Igneous",
+		rating: 3,
+		num: -19,
 	},
 	illuminate: {
 		onTryBoost(boost, target, source, effect) {
@@ -3634,6 +3679,17 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Protosynthesis",
 		rating: 3,
 		num: 281,
+	},
+	prowler: {
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				this.heal(this.baseMaxhp / 3);
+			}
+		},
+		flags: {},
+		name: "Prowler",
+		rating: 2.5,
+		num: -20,
 	},
 	psychicsurge: {
 		onStart(source) {

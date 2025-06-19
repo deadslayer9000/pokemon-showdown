@@ -374,6 +374,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Diamond Grove (WIP)",
 		shortDesc: "If Grassy Terrain is active, Super-Effective attacks on this Pokemon become neutral."
 	},
+	direambush: {
+		name: "Dire Ambush",
+		shortDesc: "If this Pokemon goes first, the power of it's moves are increased by 30%.",
+	},
 	disguise: {
 		name: "Disguise",
 		desc: "If this Pokemon is a Mimikyu, the first hit it takes in battle deals 0 neutral damage. Its disguise is then broken, it changes to Busted Form, and it loses 1/8 of its max HP. Confusion damage also breaks the disguise.",
@@ -638,6 +642,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "This Pokemon is immune to the effect of the Intimidate Ability and raises its Attack by 1 stage instead. This Pokemon cannot be forced to switch out by another Pokemon's attack or item.",
 		shortDesc: "Immune to Intimidate. Intimidated: +1 Attack. Cannot be forced to switch out.",
 	},
+	guarded: {
+		name: "Guarded",
+		shortDesc: "Immune to status effects and flinch.",
+	},
 	gulpmissile: {
 		name: "Gulp Missile",
 		desc: "If this Pokemon is a Cramorant, it changes forme when it hits a target with Surf or uses the first turn of Dive successfully. It becomes Gulping Form with an Arrokuda in its mouth if it has more than 1/2 of its maximum HP remaining, or Gorging Form with a Pikachu in its mouth if it has 1/2 or less of its maximum HP remaining. If Cramorant gets hit in Gulping or Gorging Form, it spits the Arrokuda or Pikachu at its attacker, even if it has no HP remaining. The projectile deals damage equal to 1/4 of the target's maximum HP, rounded down; this damage is blocked by the Magic Guard Ability but not by a substitute. An Arrokuda also lowers the target's Defense by 1 stage, and a Pikachu paralyzes the target. Cramorant will return to normal if it spits out a projectile, switches out, or Dynamaxes.",
@@ -747,6 +755,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	icescales: {
 		name: "Ice Scales",
 		shortDesc: "This Pokemon receives 1/2 damage from special attacks.",
+	},
+	igneous: {
+		name: "Igneous",
+		shortDesc: "Fire-/Water-type moves used against this pokemon deal 1/2 damage.",
 	},
 	illuminate: {
 		name: "Illuminate",
@@ -1415,6 +1427,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		activateFromItem: "  [POKEMON] used its Booster Energy to activate Protosynthesis!",
 		start: "  [POKEMON]'s [STAT] was heightened!",
 		end: "  The effects of [POKEMON]'s Protosynthesis wore off!",
+	},
+	prowler: {
+		name: "Prowler",
+		shortDesc: "This Pokemon heals 1/3rd of its health when it knocks out a Pokemon."
 	},
 	psychicsurge: {
 		name: "Psychic Surge",

@@ -1227,6 +1227,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Crimson Charge",
 		shortDesc: "Has a 30% chance to burn the target."
 	},
+	crimsonstorm: {
+		name: "Crimson Storm",
+		shortDesc: "Bypasses the effects of protection moves.",
+	},
 	crosschop: {
 		name: "Cross Chop",
 		desc: "Has a higher chance for a critical hit.",

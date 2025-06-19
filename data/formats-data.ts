@@ -6114,6 +6114,33 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	spectreon: {
 		tier: "UU"
 	},
+	veneon: {
+		tier: "UU"
+	},
+	brawleon: {
+		tier: "RU",
+	},
+	draceon: {
+		tier: "NU",
+	},
+	guardeon: {
+		tier: "RU"
+	},
+	manteon: {
+		tier: "NU"
+	},
+	niveon: {
+		tier: "NU"
+	},
+	eeveeon: {
+		tier: "RU"
+	},
+	obsideon: {
+		tier: "NU"
+	},
+	ancieon: {
+		tier: "NU"
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
