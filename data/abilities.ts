@@ -1760,9 +1760,8 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 				this.add('-immune', target, '[from] ability: Purifying Salt');
 				return null;
 			}
-		},
-		onTryAddVolatile(status, pokemon) {
 			if (status.id === 'flinch') return null;
+		},
 		},
 		flags: {},
 		name: "Guardian",

@@ -1408,7 +1408,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	propellertail: {
 		name: "Propeller Tail",
 		shortDesc: "This Pokemon's moves cannot be redirected to a different target by any effect.",
-	},pokemon.heal(pokemon.baseMaxhp / 3)
+	},
 	protean: {
 		name: "Protean",
 		desc: "This Pokemon's type changes to match the type of the move it is about to use. This effect comes after all effects that change a move's type. This effect can only happen once per switch-in, and only if this Pokemon is not Terastallized.",
