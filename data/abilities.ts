@@ -2069,14 +2069,14 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		onSourceModifyAtkPriority: 6,
 		onSourceModifyAtk(atk, attacker, defender, move) {
 			if (move.type === 'Water' || move.type === 'Fire') {
-				this.debug('Igneous weaken');
+				this.debug('Thick Fat weaken');
 				return this.chainModify(0.5);
 			}
 		},
 		onSourceModifySpAPriority: 5,
 		onSourceModifySpA(atk, attacker, defender, move) {
 			if (move.type === 'Water' || move.type === 'Fire') {
-				this.debug('Igneous weaken');
+				this.debug('Thick Fat weaken');
 				return this.chainModify(0.5);
 			}
 		},
