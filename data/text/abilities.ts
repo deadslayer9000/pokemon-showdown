@@ -642,8 +642,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "This Pokemon is immune to the effect of the Intimidate Ability and raises its Attack by 1 stage instead. This Pokemon cannot be forced to switch out by another Pokemon's attack or item.",
 		shortDesc: "Immune to Intimidate. Intimidated: +1 Attack. Cannot be forced to switch out.",
 	},
-	guardian: {
-		name: "Guardian",
+	guarded: {
+		name: "Guarded",
 		shortDesc: "Immune to status effects and flinch.",
 	},
 	gulpmissile: {

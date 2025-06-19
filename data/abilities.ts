@@ -1748,7 +1748,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 2,
 		num: 275,
 	},
-	guardian: {
+	guarded: {
 			onSetStatus(status, target, source, effect) {
 			if ((effect as Move)?.status) {
 				this.add('-immune', target, '[from] ability: Purifying Salt');
@@ -1763,7 +1763,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 			if (status.id === 'flinch') return null;
 		},
 		flags: {},
-		name: "Guardian",
+		name: "Guarded",
 		rating: 3,
 		num: -17,
 	},

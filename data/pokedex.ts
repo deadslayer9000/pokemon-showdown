@@ -20491,7 +20491,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		name: "Guardeon",
 		types: ["Steel"],
 		baseStats: {hp: 110, atk: 65, def: 130, spa: 65, spd: 95, spe: 60},
-		abilities: {0: "Clear Body", H: "Guardian"},
+		abilities: {0: "Clear Body", H: "Guarded"},
 		weightkg: 85,
 		heightm: 0.9,
 		color: "Gray",
