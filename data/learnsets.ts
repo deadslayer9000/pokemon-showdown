@@ -105021,7 +105021,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			mortalspin: ["9L60"],
 			muddywater: ["9M"],
 			naturepower: ["9M"],
-			nature'smadness: ["9L55"],
+			naturesmadness: ["9L55"],
 			octazooka: ["9L45"],
 			painsplit: ["9M"],
 			playrough: ["9M"],
