@@ -367,7 +367,7 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 	},
 	deltagholdiumz: {
 		name: "Delta Gholdium Z",
-		shortDesc: "If held by Delta-Gholdengo with Pearly Parade, allow it to use Ride The Wave.",
+		shortDesc: "If held by Delta-Gholdengo with Pearly Parade, allows it to use Ride The Wave.",
 	},
 	deltalatiasite: {
 		name: "Delta Latiasite",
