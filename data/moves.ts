@@ -2344,7 +2344,28 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		},
 		target: "normal",
 		type: "Rock",
-	},		
+	},
+	cataclysmictyphoon: {
+		num: -17,
+		accuracy: 100,
+		basePower: 210,
+		category: "Special",
+		name: "Cataclysmic Typhoon",
+		pp: 1,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				this.field.setTerrain('electricterrain');
+			},
+		},
+		isZ: "deltatyphlosiumz",
+		secondary: null,
+		target: "normal",
+		type: "Electric",
+		contestType: "Cool",
+	},
+		
 	catastropika: {
 		num: 658,
 		accuracy: true,

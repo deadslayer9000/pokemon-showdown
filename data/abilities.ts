@@ -715,6 +715,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 2.5,
 		num: 212,
 	},
+	corrosivesurge: {
+		flags: {},
+		name: "Corrosive Surge",
+		rating: 3,
+		num: -22,
+	},
 	costar: {
 		onSwitchInPriority: -2,
 		onStart(pokemon) {
@@ -4863,6 +4869,26 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Supreme Overlord",
 		rating: 4,
 		num: 293,
+	},
+	surge: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Electric' && attacker.hp <= attacker.maxhp / 3) {
+				this.debug('Surge boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Electric' && attacker.hp <= attacker.maxhp / 3) {
+				this.debug('Surge boost');
+				return this.chainModify(1.5);
+			}
+		},
+		flags: {},
+		name: "Surge",
+		rating: 2,
+		num: -21,
 	},
 	surgesurfer: {
 		onModifySpe(spe) {

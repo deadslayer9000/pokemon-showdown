@@ -6141,6 +6141,21 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	ancieon: {
 		tier: "NU"
 	},
+	deltamarshadow: {
+		tier: "OU"
+	},
+	deltacyndaquil: {
+		tier: "LC"
+	},
+	deltaquilava: {
+		tier: "NFE"
+	},
+	deltatyphlosion: {
+		tier: "UU"
+	},
+	tapukehe: {
+		tier: "OU"
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

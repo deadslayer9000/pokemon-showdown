@@ -377,6 +377,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Delta Steelixite",
 		shortDesc: "If held by Delta-Steelix, this item allows it to Mega Evolve in battle.",
 	},
+	deltatyphlosiumz: {
+		name: "Delta Typhlosium Z",
+		shortDesc: "If held by a Delta-Typhlosion with Thunder, allows it to use Cataclysmic Typhoon",
+	},
 	destinyknot: {
 		name: "Destiny Knot",
 		shortDesc: "If holder becomes infatuated, the other Pokemon also becomes infatuated.",

@@ -867,6 +867,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Cataclench",
 		shortDesc: "30% chance to flinch the opposing pokemon.",
 	},
+	cataclysmictyphoon: {
+		name: "Cataclysmic Typhoon",
+		shortDesc: "Sets Electric Terrain.",
+	},
 	catastropika: {
 		name: "Catastropika",
 		shortDesc: "No additional effect.",

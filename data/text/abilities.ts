@@ -267,6 +267,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Corrosion",
 		shortDesc: "This Pokemon can poison or badly poison a Pokemon regardless of its typing.",
 	},
+	corrosivesurge: {
+		name: "Corrosive Surge",
+		shortDesc: "On switch-in, this Pokemon summons Corrosive Terrain."
+	},
 	costar: {
 		name: "Costar",
 		shortDesc: "On switch-in, this Pokemon copies all of its ally's stat stage changes.",
@@ -1944,6 +1948,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		shortDesc: "This Pokemon's moves have 10% more power for each fainted ally, up to 5 allies.",
 
 		activate: "  [POKEMON] gained strength from the fallen!",
+	},
+	surge: {
+		name: "Surge",
+		shortDesc: "If this Pokemon has 1/3rd or less HP, Electric-type moves have 1.5x power."
 	},
 	surgesurfer: {
 		name: "Surge Surfer",
