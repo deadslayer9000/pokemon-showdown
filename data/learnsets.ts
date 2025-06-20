@@ -105404,7 +105404,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			vacuumwave: ["9M","9M"],
 			wideguard: ["9M","9M"],
 			workup: ["9M"],
-			worryseed: ["9M"],
 			worryseed: ["9L1","9M"],
 			xscissor: ["9L1","9M"],
 		}
