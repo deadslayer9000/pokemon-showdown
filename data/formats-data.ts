@@ -6132,6 +6132,15 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	marshadowdelta: {
 		tier: "OU"
 	},
+	deltacyndaquil: {
+		tier: "LC"
+	},
+	deltaquilava: {
+		tier: "NFE"
+	},
+	deltatyphlosion: {
+		tier: "UU"
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
