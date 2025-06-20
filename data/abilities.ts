@@ -4995,6 +4995,23 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 2,
 		num: 28,
 	},
+	swordmaster: {
+		onBasePowerPriority: 19,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['slicing']) {
+				this.debug('Sharpness boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpe(spe, pokemon) {
+			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
+				return this.chainModify(2);
+			}
+		},
+		flags: {},
+		name: "Swordmaster",
+		rating: 4,
+		num: -24
 	swordofruin: {
 		onStart(pokemon) {
 			if (this.suppressingAbility(pokemon)) return;

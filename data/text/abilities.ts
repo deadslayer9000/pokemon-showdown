@@ -1066,7 +1066,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	mistysurge: {
 		name: "Misty Surge",
 		shortDesc: "On switch-in, this Pokemon summons Misty Terrain.",
-	},
+	},s
 	monarch: {
 		name: "Monarch",
 		shortDesc: "If this Pokemon has 100% HP, cure its status at the end of the round.",
@@ -1984,6 +1984,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		gen7: {
 			desc: "If Rain Dance is active, this Pokemon's Speed is doubled.",
 		},
+	},
+	swordmaster: {
+		name: "Swordmaster",
+		shortDesc: "Combines the effects of Chlorophyll and Sharpness.",
 	},
 	swordofruin: {
 		name: "Sword of Ruin",

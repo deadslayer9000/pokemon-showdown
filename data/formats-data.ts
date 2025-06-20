@@ -6159,6 +6159,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	goolossal: {
 		tier: "OU"
 	},
+	deltabudew: {
+		tier: "LC"
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
