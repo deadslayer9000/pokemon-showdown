@@ -1066,7 +1066,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	mistysurge: {
 		name: "Misty Surge",
 		shortDesc: "On switch-in, this Pokemon summons Misty Terrain.",
-	},s
+	},
 	monarch: {
 		name: "Monarch",
 		shortDesc: "If this Pokemon has 100% HP, cure its status at the end of the round.",

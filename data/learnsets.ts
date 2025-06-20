@@ -105483,7 +105483,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			swagger: ["9M"],
 			sweetscent: ["9M","9M"],
 			swift: ["9L1"],
-			swordsdance: ["9M"],
 			swordsdance: ["9L1","9M"],
 			synthesis: ["9L1","9M"],
 			takedown: ["9L1","9M"],

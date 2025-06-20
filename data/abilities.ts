@@ -5011,7 +5011,8 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		flags: {},
 		name: "Swordmaster",
 		rating: 4,
-		num: -24
+		num: -24,
+	},
 	swordofruin: {
 		onStart(pokemon) {
 			if (this.suppressingAbility(pokemon)) return;
