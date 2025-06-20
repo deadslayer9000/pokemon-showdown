@@ -1296,6 +1296,14 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		gen: 3,
 		isNonstandard: "Past",
 	},
+	deltagholdiumz: {
+		name: "Delta Gholdium Z",
+		spritenum: 633,
+		onTakeItem: false,
+		zMove: "Ride The Wave",
+		zMoveFrom: "Pearly Parade",
+		num: -5,
+	},
 	deltalatiasite: {
 		name: "Delta Latiasite",
 		spritenum: 629,
@@ -1339,7 +1347,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 634,
 		onTakeItem: false,
 		zMove: "Cataclysmic Typhoon",
-		zMoveFrom: "Thunder",
+		zMoveFrom: "Thunder"	,
 		num: -4,
 	},
 	destinyknot: {

@@ -2751,6 +2751,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 3,
 		num: 104,
 	},
+	monarch: {
+		flags: {},
+		name: "Monarch",
+		rating: 1.5,
+		num: -23,
+	},
 	moody: {
 		onResidualOrder: 28,
 		onResidualSubOrder: 2,
@@ -3768,6 +3774,18 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: 272,
 	},
 	pyroclastic: {
+		onTryBoost(boost, target, source, effect) {
+			if (source && target === source) return;
+			if (boost.accuracy && boost.accuracy < 0) {
+				delete boost.accuracy;
+				if (!(effect as ActiveMove).secondaries) {
+					this.add("-fail", target, "unboost", "accuracy", "[from] ability: Keen Eye", `[of] ${target}`);
+				}
+			}
+		},
+		onSwitchOut(pokemon) {
+			pokemon.heal(pokemon.baseMaxhp / 3);
+		},
 		flags: {},
 		name: "Pyroclastic",
 		rating: 3.5,
@@ -3959,7 +3977,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: 174,
 	},
 	regenerator: {
-		onSwitchOut(pokemon) {
+		onSwitchIn(pokemon) {
 			pokemon.heal(pokemon.baseMaxhp / 3);
 		},
 		flags: {},
@@ -4988,6 +5006,24 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Synchronize",
 		rating: 2,
 		num: 28,
+	},
+	swordmaster: {
+		onBasePowerPriority: 19,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['slicing']) {
+				this.debug('Sharpness boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpe(spe, pokemon) {
+			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
+				return this.chainModify(2);
+			}
+		},
+		flags: {},
+		name: "Swordmaster",
+		rating: 4,
+		num: -24,
 	},
 	swordofruin: {
 		onStart(pokemon) {

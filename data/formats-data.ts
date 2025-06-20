@@ -6156,6 +6156,30 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	tapukehe: {
 		tier: "OU"
 	},
+	deltagimmighoul: {
+		tier: "LC"
+	},
+	deltagimmighoulroaming: {
+		tier: "LC"
+	},
+	deltagholdengo: {
+		tier: "OU"
+	},
+	epsilongoomy: {
+		tier: "LC"
+	},
+	goolossal: {
+		tier: "OU"
+	},
+	deltabudew: {
+		tier: "LC"
+	},
+	deltaroselia: {
+		tier: "NFE"
+	},
+	deltaroserade: {
+		tier: "UU"
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

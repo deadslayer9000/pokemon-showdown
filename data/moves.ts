@@ -1539,7 +1539,20 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		pp: 10,
 		priority: 0,
 		flags: {},
+		priorityChargeCallback(source) {
+			source.addVolatile('chillyreception');
+		},
+		weather: 'sunnyday',
+		selfSwitch: true,
 		secondary: null,
+		condition: {
+			duration: 1,
+			onBeforeMovePriority: 100,
+			onBeforeMove(source, target, move) {
+				if (move.id !== 'chillyreception') return;
+				this.add('-prepare', source, 'Chilly Reception', '[premajor]');
+			},
+		},
 		target: "All",
 		type: "Fire",
 	},
@@ -13946,6 +13959,24 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Normal",
 		contestType: "Clever",
 	},
+	pearlyparade: {
+		num: -18,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Pearly Parade",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, metronome: 1},
+		self: {
+			boosts: {
+				spa: -1,
+			},
+		},
+		secondary: null,
+		target: "allAdjacentFoes",
+		type: "Water",
+	},
 	peck: {
 		num: 64,
 		accuracy: 100,
@@ -15955,6 +15986,29 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		secondary: null,
 		target: "self",
 		type: "Normal",
+	},
+	ridethewave: {
+		num: -19,
+		accuracy: true,
+		basePower: 195,
+		category: "Special",
+		name: "Ride The Wave",
+		pp: 1,
+		priority: 0,
+		onHit(target) {
+			if (target.getTypes().join() === 'Water' || !target.setType('Water')) {
+				// Soak should animate even when it fails.
+				// Returning false would suppress the animation.
+				this.add('-fail', target);
+				return null;
+			}
+			this.add('-start', target, 'typechange', 'Water');
+		},
+		flags: {},
+		secondary: null,
+		target: "normal",
+		isZ: "deltagholdiumz",
+		type: "Water",
 	},
 	risingvoltage: {
 		num: 804,
