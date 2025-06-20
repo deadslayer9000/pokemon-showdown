@@ -3774,7 +3774,16 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: 272,
 	},
 	pyroclastic: {
-		onSwitchIn(pokemon) {
+		onTryBoost(boost, target, source, effect) {
+			if (source && target === source) return;
+			if (boost.accuracy && boost.accuracy < 0) {
+				delete boost.accuracy;
+				if (!(effect as ActiveMove).secondaries) {
+					this.add("-fail", target, "unboost", "accuracy", "[from] ability: Keen Eye", `[of] ${target}`);
+				}
+			}
+		},
+		onSwitchOut(pokemon) {
 			pokemon.heal(pokemon.baseMaxhp / 3);
 		},
 		flags: {},
