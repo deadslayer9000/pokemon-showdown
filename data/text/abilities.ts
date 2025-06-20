@@ -1069,7 +1069,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	monarch: {
 		name: "Monarch",
-		shortDesc: "If this Pokemon has 100% HP, cure its status at the end of the round.",
+		shortDesc: "If this Pokemon has 100% HP, its status is cured at the end of the turn.",
 	},
 	moldbreaker: {
 		name: "Mold Breaker",

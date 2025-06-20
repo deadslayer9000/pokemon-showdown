@@ -3774,6 +3774,9 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: 272,
 	},
 	pyroclastic: {
+		onSwitchIn(pokemon) {
+			pokemon.heal(pokemon.baseMaxhp / 3);
+		},
 		flags: {},
 		name: "Pyroclastic",
 		rating: 3.5,
@@ -3965,7 +3968,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: 174,
 	},
 	regenerator: {
-		onSwitchOut(pokemon) {
+		onSwitchIn(pokemon) {
 			pokemon.heal(pokemon.baseMaxhp / 3);
 		},
 		flags: {},

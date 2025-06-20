@@ -6162,6 +6162,12 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	deltabudew: {
 		tier: "LC"
 	},
+	deltaroselia: {
+		tier: "NFE"
+	},
+	deltaroserade: {
+		tier: "UU"
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

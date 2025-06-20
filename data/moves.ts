@@ -1539,7 +1539,20 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		pp: 10,
 		priority: 0,
 		flags: {},
+		priorityChargeCallback(source) {
+			source.addVolatile('chillyreception');
+		},
+		weather: 'sunnyday',
+		selfSwitch: true,
 		secondary: null,
+		condition: {
+			duration: 1,
+			onBeforeMovePriority: 100,
+			onBeforeMove(source, target, move) {
+				if (move.id !== 'chillyreception') return;
+				this.add('-prepare', source, 'Chilly Reception', '[premajor]');
+			},
+		},
 		target: "All",
 		type: "Fire",
 	},
