@@ -4670,6 +4670,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 
 		activate: "  Coins were scattered everywhere!",
 	},
+	pearlyparade: {
+		name: "Pearly Parade",
+		shortDesc: "Lowers the user's Sp. Atk by 1. Hits foe(s).",
+	},
 	peck: {
 		name: "Peck",
 		shortDesc: "No additional effect.",

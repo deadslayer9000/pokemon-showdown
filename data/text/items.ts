@@ -365,6 +365,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		desc: "If held by a Clamperl, its Sp. Atk is doubled. Evolves Clamperl into Huntail when traded.",
 		shortDesc: "If held by a Clamperl, its Sp. Atk is doubled.",
 	},
+	deltagholdiumz: {
+		name: "Delta Gholdium Z",
+		shortDesc: "If held by Delta-Gholdengo with Pearly Parade, allow it to use Ride The Wave.",
+	},
 	deltalatiasite: {
 		name: "Delta Latiasite",
 		shortDesc: "If held by Delta-Latias, this item allows it to Mega Evolve in battle."
