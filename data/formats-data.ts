@@ -6129,7 +6129,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	ancieon: {
 		tier: "NU"
 	},
-	marshadowdelta: {
+	deltamarshadow: {
 		tier: "OU"
 	},
 	deltacyndaquil: {
