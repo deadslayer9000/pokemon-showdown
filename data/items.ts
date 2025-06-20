@@ -1334,6 +1334,14 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		num: -3,
 	},
+	deltatyphlosiumz: {
+		name: "Delta Typhlosium Z",
+		spritenum: 634,
+		onTakeItem: false,
+		zMove: "Cataclysmic Typhoon",
+		zMoveFrom: "Thunder",
+		num: -4,
+	},
 	destinyknot: {
 		name: "Destiny Knot",
 		spritenum: 95,

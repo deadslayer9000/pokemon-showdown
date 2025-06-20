@@ -1945,6 +1945,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 
 		activate: "  [POKEMON] gained strength from the fallen!",
 	},
+	surge: {
+		name: "Surge",
+		shortDesc: "If this Pokemon has 1/3rd or less HP, Electric-type moves have 1.5x power."
+	},
 	surgesurfer: {
 		name: "Surge Surfer",
 		shortDesc: "If Electric Terrain is active, this Pokemon's Speed is doubled.",
