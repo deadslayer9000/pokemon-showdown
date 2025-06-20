@@ -267,6 +267,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Corrosion",
 		shortDesc: "This Pokemon can poison or badly poison a Pokemon regardless of its typing.",
 	},
+	corrosivesurge: {
+		name: "Corrosive Surge",
+		shortDesc: "On switch-in, this Pokemon summons Corrosive Terrain."
+	},
 	costar: {
 		name: "Costar",
 		shortDesc: "On switch-in, this Pokemon copies all of its ally's stat stage changes.",

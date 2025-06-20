@@ -20614,5 +20614,16 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		eggGroups: ["Field"],
 		prevo: "Delta-Quilava",
 	},
+	tapukehe: {
+		num: 2024,
+		name: "Tapu Kehe",
+		types: ["Poison", "Fairy"],
+		baseStats: {hp: 70, atk: 85, def: 130, spa: 95, spd: 115, spe: 75},
+		abilities: {0: "Corrosive Surge", H: "Telepathy"},
+		weightkg: 25.6,
+		heightm: 1.5, 
+		color: "Green",
+		eggGroups: ["Undiscovered"],
+	},
 }
 		

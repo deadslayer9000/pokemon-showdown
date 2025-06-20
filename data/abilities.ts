@@ -715,6 +715,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 2.5,
 		num: 212,
 	},
+	corrosivesurge: {
+		flags: {},
+		name: "Corrosive Surge",
+		rating: 3,
+		num: -22,
+	},
 	costar: {
 		onSwitchInPriority: -2,
 		onStart(pokemon) {

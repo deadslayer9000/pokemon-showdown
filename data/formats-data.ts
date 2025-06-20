@@ -6141,6 +6141,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	deltatyphlosion: {
 		tier: "UU"
 	},
+	tapukehe: {
+		tier: "OU"
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
