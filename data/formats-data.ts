@@ -6153,6 +6153,12 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	deltagholdengo: {
 		tier: "OU"
 	},
+	epsilongoomy: {
+		tier: "LC"
+	},
+	goolossal: {
+		tier: "OU"
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

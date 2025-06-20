@@ -2751,6 +2751,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 3,
 		num: 104,
 	},
+	monarch: {
+		flags: {},
+		name: "Monarch",
+		rating: 1.5,
+		num: -23,
+	},
 	moody: {
 		onResidualOrder: 28,
 		onResidualSubOrder: 2,
