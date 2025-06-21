@@ -20744,7 +20744,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		eggGroups: ["Undiscovered"],
 	},
 	glimmerix: {
-		num: 2083,79
+		num: 2083,
 		name: "Glimmerix",
 		types: ["Ghost", "Steel"],
 		baseStats: {hp: 53, atk: 103, def: 151, spa: 101, spd: 83, spe: 79},
