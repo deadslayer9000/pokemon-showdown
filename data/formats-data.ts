@@ -6016,7 +6016,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU"
 	},
 	zapeon: {
-		tier: "UU"
+		tier: "OU"
 	},
 	molteon: {
 		tier: "UU"
@@ -6044,6 +6044,12 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	diancette: {
 		tier: "UU"
+	},
+	ultratrapinch: {
+		tier: "LC"
+	},
+	ultravibrava: {
+		tier: "NFE"
 	},
 	ultraflygon: {
 		tier: "OU"
@@ -6082,7 +6088,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "OU",
 	},
 	deltalatiasmega: {
-		tier: "(OU)",
+		tier: "OU",
 	},
 	deltalatios: {
 		tier: "UU"
@@ -6168,6 +6174,21 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	deltaroserade: {
 		tier: "UU"
 	},
+	ironshades: {
+		tier: "UU"
+	},
+	glimmerix: {
+		tier: "OU"
+	},
+	wisphir: {
+		tier: "UU"
+	},
+	florizim: {
+		tier: "UU"
+	},
+	loomingtune: {
+		tier: "UU"
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
@@ -6237,6 +6258,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "Illegal",
 	},
 	ultraserperior: {
-		tier: "OU"
+		tier: "UU"
 	},
 };
