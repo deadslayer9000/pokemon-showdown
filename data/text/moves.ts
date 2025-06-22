@@ -2273,6 +2273,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "This move combines Flying in its type effectiveness against the target. Damage doubles and no accuracy check is done if the target has used Minimize while active.",
 		shortDesc: "Combines Flying in its type effectiveness.",
 	},
+	foamfrenzy: {
+		name: "Foam Frenzy"
+		shortDesc: "Removes hazards, and boosts SpA by +1 if it does."
+	},
 	focusblast: {
 		name: "Focus Blast",
 		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
