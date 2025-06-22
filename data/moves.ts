@@ -6356,6 +6356,40 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		zMove: { basePower: 170 },
 		contestType: "Tough",
 	},
+	foamfrenzy: {
+		num: -23,
+		accuracy: 90,
+		basePower: 95,
+		category: "Special",
+		name: "Foam Frenzy",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1},
+		onAfterHit(target, pokemon, move) {
+			if (!move.hasSheerForce) {
+				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+				for (const condition of sideConditions) {
+					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+						this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Foam Frenzy', `[of] ${pokemon}`);
+						this.boost({ spa: 1 }, pokemon, pokemon, move);
+					}
+				}
+			}
+		},
+		onAfterSubDamage(damage, target, pokemon, move) {
+			if (!move.hasSheerForce) {
+				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+				for (const condition of sideConditions) {
+					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+						this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Foam Frenzy', `[of] ${pokemon}`);
+						this.boost({ spa: 1 }, pokemon, pokemon, move);
+					}
+				}
+			}
+		},
+		target: "allAdjacentFoes",
+		type: "Water",
+	},
 	focusblast: {
 		num: 411,
 		accuracy: 70,

@@ -6201,6 +6201,15 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	ironrunner: {
 		tier: "UU"
 	},
+	ultragastly: {
+		tier: "LC"
+	},
+	ultrahaunter: {
+		tier: "NFE"
+	},
+	ultragengar: {
+		tier: "OU"
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
