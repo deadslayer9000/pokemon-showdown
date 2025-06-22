@@ -12940,6 +12940,27 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		zMove: { effect: 'clearnegativeboost' },
 		contestType: "Beautiful",
 	},
+	moonriftstorm: {
+		num: -21,
+		accuracy: 90,
+		basePower: 100,
+		category: "Special",
+		name: "Sandsear Storm",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1, wind: 1 },
+		onModifyMove(move, pokemon, target) {
+			if (target && ['raindance', 'primordialsea', 'sunnyday', 'snowscape', 'sandstorm', 'hail', 'desolateland'].includes(target.effectiveWeather())) {
+				move.accuracy = 50;
+			}
+		},
+		secondary: {
+			chance: 10,
+			volatileStatus: 'flinch',
+		},
+		target: "allAdjacentFoes",
+		type: "Dark",
+	},
 	morningsun: {
 		num: 234,
 		accuracy: true,

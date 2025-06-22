@@ -6192,6 +6192,12 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	drifblimp: {
 		tier: "UU"
 	},
+	malevorus: {
+		tier: "OU"
+	},
+	malevorustherian: {
+		tier: "OU"
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

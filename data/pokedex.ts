@@ -20799,5 +20799,32 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		eggGroups: ["Amorphous"],
 		prevo: "Drifblim"
 	},
+	malevorus: {
+		num: 2040,
+		name: "Malevorus",
+		gender: "M",
+		types: ["Dark", "Flying"],
+		baseStats: {hp: 89, atk: 100, def: 102, spa: 120, spd: 90, spe: 99},
+		abilities: {0: "Guts", 1: "Vital Spirit"},
+		weightkg: 65,
+		heightm: 1.5,
+		color: "Yellow",
+		eggGroups: ["Undiscovered"],
+		otherFormes: ["Malevorus-Therian"],
+	},
+	malevorustherian: {
+		num: 2040, 
+		name: "Malevorus-Therian",
+		baseSpecies: "Malevorus",
+		gender: "M",
+		types: ["Dark", "Flying"],
+		baseStats: {hp: 89, atk: 105, def: 80, spa: 130, spd: 80, spe: 116},
+		abilities: {0: "Cloud Nine"},
+		weightkg: 65,
+		heightm: 2,
+		color: "Yellow",
+		eggGroups: ["Undiscovered"],
+	},
+		
 }
 		
