@@ -4357,7 +4357,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	moonriftstorm: {
 		name: "Moonrift Storm",
-		shortDesc: "10% chance to flinch, becomes 50% accurate in weather."
+		shortDesc: "10% chance to flinch, inaccurate in weather."
 	},
 	morningsun: {
 		name: "Morning Sun",
@@ -7157,7 +7157,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	tribeam: {
 		name: "Tri Beam",
-		shortDesc: "This move becomes Fire-/Ice-/Electric-Type, whichever is most effective."
+		shortDesc: "Is Fire/Ice/Electric based on effectiveness."
 	},
 	trick: {
 		name: "Trick",
