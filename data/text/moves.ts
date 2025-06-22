@@ -4355,6 +4355,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			desc: "The user restores 1/2 of its maximum HP if no weather conditions are in effect, all of its HP if the weather is Sunny Day, and 1/4 of its maximum HP if the weather is Rain Dance or Sandstorm, all rounded down.",
 		},
 	},
+	moonriftstorm: {
+		name: "Moonrift Storm",
+		shortDesc: "10% chance to flinch, becomes 50% accurate in weather."
+	},
 	morningsun: {
 		name: "Morning Sun",
 		desc: "The user restores 1/2 of its maximum HP if Delta Stream or no weather conditions are in effect or if the user is holding Utility Umbrella, 2/3 of its maximum HP if the weather is Desolate Land or Sunny Day, and 1/4 of its maximum HP if the weather is Primordial Sea, Rain Dance, Sandstorm, or Snow, all rounded half down.",
@@ -7150,6 +7154,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			desc: "No additional effect.",
 			shortDesc: "No additional effect.",
 		},
+	},
+	tribeam: {
+		name: "Tri Beam",
+		shortDesc: "This move becomes Fire-/Ice-/Electric-Type, whichever is most effective."
 	},
 	trick: {
 		name: "Trick",

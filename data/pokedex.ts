@@ -20735,6 +20735,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	ironshades: {
 		num: 2075,
 		name: "Iron Shades",
+		gender: "N",
 		types: ["Dark", "Fighting"],
 		baseStats: {hp: 92, atk: 140, def: 104, spa: 74, spd: 64, spe: 96},
 		abilities: {0: "Quark Drive"},
@@ -20746,6 +20747,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	glimmerix: {
 		num: 2083,
 		name: "Glimmerix",
+		gender: "N",
 		types: ["Ghost", "Steel"],
 		baseStats: {hp: 53, atk: 103, def: 151, spa: 101, spd: 83, spe: 79},
 		abilities: {0: "Beast Boost"},
@@ -20757,6 +20759,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	florizim: {
 		num: 2082,
 		name: "Florizim",
+		gender: "N",
 		types: ["Poison", "Grass"],
 		baseStats: {hp: 79, atk: 83, def: 61, spa: 113, spd: 151, spe: 83},
 		abilities: {0: "Beast Boost"},
@@ -20768,6 +20771,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	wisphir: {
 		num: 2084,
 		name: "Wisphir",
+		gender: "N",
 		types: ["Flying"],
 		baseStats: {hp: 79, atk: 101, def: 41, spa: 108, spd: 83, spe: 157},
 		abilities: {0: "Beast Boost"},
@@ -20779,6 +20783,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	loomingtune: {
 		num: 2079,
 		name: "Looming Tune",
+		gender: "N",
 		types: ["Normal", "Psychic"],
 		baseStats: {hp: 79, atk: 95, def: 75, spa: 123, spd: 127, spe: 71},
 		abilities: {0: "Protosynthesis"},
@@ -20823,6 +20828,18 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		weightkg: 65,
 		heightm: 2,
 		color: "Yellow",
+		eggGroups: ["Undiscovered"],
+	},
+	ironrunner: {
+		num: 2076,
+		name: "Iron Runner",
+		gender: "N",
+		types: ["Normal", "Steel"],
+		baseStats: {hp: 68, atk: 98, def: 94, spa: 96, spd: 80, spe: 134},
+		abilities: {0: "Quark Drive"},
+		weightkg: 88,
+		heightm: 1.8,
+		color: "Pink",
 		eggGroups: ["Undiscovered"],
 	},
 		
