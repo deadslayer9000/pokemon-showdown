@@ -20787,5 +20787,17 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Black",
 		eggGroups: ["Undiscovered"],
 	},
+	drifblimp: {
+		num: 2041,
+		name: "Drifblimp",
+		types: ["Ghost", "Flying"],
+		baseStats: {hp: 200, atk: 58, def: 62, spa: 100, spd: 70, spe: 60},
+		abilities: {0: "Stamina", 1: "Unburden", H: "Flare Boost"},
+		weightkg: 120,
+		heightm: 12,
+		color: "Purple",
+		eggGroups: ["Amorphous"],
+		prevo: "Drifblim"
+	},
 }
 		

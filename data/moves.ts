@@ -14073,6 +14073,27 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Grass",
 		contestType: "Beautiful",
 	},
+	phantasmalvoyage: {
+		num: -20,
+		accuracy: 100,
+		basePower: 70, 
+		category: "Special",
+		name: "Phantasmal Voyage",
+		pp: 5,
+		priority: 0,
+		flags: { mirror: 1, metronome: 1},
+		sideCondition: 'tailwind',
+		onSideStart(side, source) {
+				if (source?.hasAbility('persistent')) {
+					this.add('-sidestart', side, 'move: Tailwind', '[persistent]');
+				} else {
+					this.add('-sidestart', side, 'move: Tailwind');
+				}
+			},
+			secondary: null,
+			target: "allAdjacentFoes",
+			type: "Ghost",
+	},
 	phantomforce: {
 		num: 566,
 		accuracy: 100,
