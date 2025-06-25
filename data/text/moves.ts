@@ -7082,7 +7082,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	timelesstorrent: {
 		name: "Timeless Torrent",
-		shortDesc: "10% for -SpD. On KO, boost depends on terrain/weather.",
+		shortDesc: "10% for -SpD. On KO, effect depends on field.",
 	},
 	topsyturvy: {
 		name: "Topsy-Turvy",
