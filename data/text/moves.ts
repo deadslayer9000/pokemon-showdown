@@ -1884,6 +1884,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			desc: "Causes the target's Ability to become the same as the user's. Fails if the target's Ability is Multitype, Truant, or the same Ability as the user, or if the user's Ability is Flower Gift, Forecast, Illusion, Imposter, Multitype, Trace, or Zen Mode.",
 		},
 	},
+	eonrift: {
+		name: "Eon Rift",
+		shortDesc: "Summons Sun or E. Terrain based on highest stat."
+	},
 	eruption: {
 		name: "Eruption",
 		desc: "Power is equal to (user's current HP * 150 / user's maximum HP), rounded down, but not less than 1.",
@@ -2274,8 +2278,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		shortDesc: "Combines Flying in its type effectiveness.",
 	},
 	foamfrenzy: {
-		name: "Foam Frenzy"
-		shortDesc: "Removes hazards, and boosts SpA by +1 if it does."
+		name: "Foam Frenzy",
+		shortDesc: "Removes hazards, and boosts SpA by +1 if it does.",
 	},
 	focusblast: {
 		name: "Focus Blast",
@@ -7075,6 +7079,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		shortDesc: "User +1 Atk, Spe. Clears all substitutes/hazards.",
 
 		activate: "  Tidying up complete!",
+	},
+	timelesstorrent: {
+		name: "Timeless Torrent",
+		shortDesc: "10% for -SpD. On KO, boost depends on terrain/weather.",
 	},
 	topsyturvy: {
 		name: "Topsy-Turvy",

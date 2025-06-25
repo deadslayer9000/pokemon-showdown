@@ -1184,9 +1184,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "NFE",
 	},
 	dragonite: {
-		tier: "OU",
-		doublesTier: "DOU",
-		natDexTier: "OU",
+		tier: "UU",
 	},
 	mewtwo: {
 		tier: "Uber",
@@ -6208,6 +6206,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "NFE"
 	},
 	ultragengar: {
+		tier: "OU"
+	},
+	tangledtime: {
 		tier: "OU"
 	},
 	pokestarsmeargle: {

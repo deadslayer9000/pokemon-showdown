@@ -20885,5 +20885,17 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		eggGroups: ["Amorphous"],
 		prevo: "Ultra-Haunter",
 	},
+	tangledtime: {
+		num: 2037,
+		name: "Tangled Time",
+		types: ["Psychic", "Dragon"],
+		baseStats: {hp: 100, atk: 95, def: 75, spa: 125, spd: 75, spe: 120},
+		abilities: {0: "Chrono Catalyst"},
+		weightkg: 10,
+		heightm: 0.8,
+		color: "Green",
+		eggGroups: ["Undiscovered"],
+	},
+	
 }
 		

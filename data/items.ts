@@ -1302,6 +1302,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		onTakeItem: false,
 		zMove: "Ride The Wave",
 		zMoveFrom: "Pearly Parade",
+		itemUser: ["Delta-Gholdengo"],
 		num: -5,
 	},
 	deltalatiasite: {
@@ -1347,7 +1348,8 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 634,
 		onTakeItem: false,
 		zMove: "Cataclysmic Typhoon",
-		zMoveFrom: "Thunder"	,
+		zMoveFrom: "Thunder",
+		itemUser: ["Delta-Typlosion"],
 		num: -4,
 	},
 	destinyknot: {
@@ -5878,6 +5880,15 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		onEat() { },
 		num: 194,
 		gen: 4,
+	},
+	tangledtimiumz: {
+		name: "Tangledtimium Z",
+		spritenum: 635,
+		onTakeItem: false,
+		zMove: "Eon Rift",
+		zMoveFrom: "Timeless Torrent",
+		itemUser: ["Tangled Time"],
+		num: -6,
 	},
 	tapuniumz: {
 		name: "Tapunium Z",
