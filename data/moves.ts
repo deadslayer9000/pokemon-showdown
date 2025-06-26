@@ -9972,6 +9972,31 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Ice",
 		contestType: "Tough",
 	},
+	icemace: {
+		num: -26,
+		accuracy: 90,
+		basePower: 140,
+		basePowerCallback(pokemon, target, move) {
+			if (pokemon.species.name === 'Omega-Greninja-Ash' && pokemon.hasAbility('battlebond') &&
+				!pokemon.transformed) {
+				return 100;
+			}
+			else {
+			return move.basePower;
+			const bp = move.basePower * pokemon.hp / pokemon.maxhp;
+			this.debug(`BP: ${bp}`);
+			return bp;
+			}
+		},
+		category: "Physical",
+		name: "Ice Mace",
+		pp: 5,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, punch: 1, metronome: 1 },
+		secondary: null,
+		target: "normal",
+		type: "Ice",
+	},
 	icepunch: {
 		num: 8,
 		accuracy: 100,

@@ -6211,6 +6211,18 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	tangledtime: {
 		tier: "OU"
 	},
+	omegafroakie: {
+		tier: "LC"
+	},
+	omegafrogadier: {
+		tier: "NFE"
+	},
+	omegagreninja: {
+		tier: "UU"
+	},
+	omegagreninjabond: {
+		tier: "OU"
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

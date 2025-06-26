@@ -3304,6 +3304,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Lowers the user's Speed by 1 stage.",
 		shortDesc: "Lowers the user's Speed by 1.",
 	},
+	icemace: {
+		name: "Ice Mace",
+		shortDesc: "Power decreases as HP does.",
+	},
 	icepunch: {
 		name: "Ice Punch",
 		desc: "Has a 10% chance to freeze the target.",
