@@ -1827,6 +1827,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Tanga Berry",
 		shortDesc: "Halves damage taken from a supereffective Bug-type attack. Single use.",
 	},
+	tangledtimiumz: {
+		name: "Tangledtimium Z",
+		shortDesc: "If held by Tangled time with Timeless Torrent, it can use Eon Rift.",
+	},
 	tapuniumz: {
 		name: "Tapunium Z",
 		shortDesc: "If held by a Tapu with Nature's Madness, it can use Guardian of Alola.",

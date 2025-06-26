@@ -5226,6 +5226,20 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		zMove: { boost: { spd: 1 } },
 		contestType: "Cute",
 	},
+	eonrift: {
+		num: -25,
+		accuracy: 95,
+		basePower: 185,
+		category: "Special",
+		name: "Eon Rift",
+		pp: 1,
+		priority: 0,
+		flags: {},
+		secondary: null,
+		target: "normal",
+		type: "Dragon",
+		isZ: 'tangledtimiumz'
+	},
 	eruption: {
 		num: 284,
 		accuracy: 100,
@@ -6355,6 +6369,40 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Fighting",
 		zMove: { basePower: 170 },
 		contestType: "Tough",
+	},
+	foamfrenzy: {
+		num: -23,
+		accuracy: 90,
+		basePower: 95,
+		category: "Special",
+		name: "Foam Frenzy",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1},
+		onAfterHit(target, pokemon, move) {
+			if (!move.hasSheerForce) {
+				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+				for (const condition of sideConditions) {
+					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+						this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Foam Frenzy', `[of] ${pokemon}`);
+						this.boost({ spa: 1 }, pokemon, pokemon, move);
+					}
+				}
+			}
+		},
+		onAfterSubDamage(damage, target, pokemon, move) {
+			if (!move.hasSheerForce) {
+				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+				for (const condition of sideConditions) {
+					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+						this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Foam Frenzy', `[of] ${pokemon}`);
+						this.boost({ spa: 1 }, pokemon, pokemon, move);
+					}
+				}
+			}
+		},
+		target: "allAdjacentFoes",
+		type: "Water",
 	},
 	focusblast: {
 		num: 411,
@@ -9924,6 +9972,30 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Ice",
 		contestType: "Tough",
 	},
+	icemace: {
+		num: -26,
+		accuracy: 90,
+		basePower: 140,
+		basePowerCallback(pokemon, target, move) {
+			const bp = move.basePower * pokemon.hp / pokemon.maxhp;
+			this.debug(`BP: ${bp}`);
+			if (pokemon.species.name === 'Omega-Greninja-Ash' && pokemon.hasAbility('battlebond') &&
+				!pokemon.transformed) {
+				return 100;
+			}
+			else {
+			return bp;
+			}
+		},
+		category: "Physical",
+		name: "Ice Mace",
+		pp: 5,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, punch: 1, metronome: 1 },
+		secondary: null,
+		target: "normal",
+		type: "Ice",
+	},
 	icepunch: {
 		num: 8,
 		accuracy: 100,
@@ -12940,6 +13012,27 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		zMove: { effect: 'clearnegativeboost' },
 		contestType: "Beautiful",
 	},
+	moonriftstorm: {
+		num: -21,
+		accuracy: 90,
+		basePower: 100,
+		category: "Special",
+		name: "Moonrift Storm",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1, wind: 1 },
+		onModifyMove(move, pokemon, target) {
+			if (target && ['raindance', 'primordialsea', 'sunnyday', 'snowscape', 'sandstorm', 'hail', 'desolateland'].includes(target.effectiveWeather())) {
+				move.accuracy = 50;
+			}
+		},
+		secondary: {
+			chance: 10,
+			volatileStatus: 'flinch',
+		},
+		target: "allAdjacentFoes",
+		type: "Dark",
+	},
 	morningsun: {
 		num: 234,
 		accuracy: true,
@@ -14072,6 +14165,27 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "randomNormal",
 		type: "Grass",
 		contestType: "Beautiful",
+	},
+	phantasmalvoyage: {
+		num: -20,
+		accuracy: 100,
+		basePower: 70, 
+		category: "Special",
+		name: "Phantasmal Voyage",
+		pp: 5,
+		priority: 0,
+		flags: { mirror: 1, metronome: 1},
+		sideCondition: 'tailwind',
+		onSideStart(side, source) {
+				if (source?.hasAbility('persistent')) {
+					this.add('-sidestart', side, 'move: Tailwind', '[persistent]');
+				} else {
+					this.add('-sidestart', side, 'move: Tailwind');
+				}
+			},
+			secondary: null,
+			target: "allAdjacentFoes",
+			type: "Ghost",
 	},
 	phantomforce: {
 		num: 566,
@@ -20756,6 +20870,19 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "self",
 		type: "Normal",
 	},
+	timelesstorrent: {
+		num: -24,
+		accuracy: 95,
+		basePower: 100,
+		category: "Special",
+		name: "Timeless Torrent",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Dragon",
+	},
 	topsyturvy: {
 		num: 576,
 		accuracy: true,
@@ -20979,6 +21106,19 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "normal",
 		type: "Normal",
 		contestType: "Beautiful",
+	},
+	tribeam: {
+		num: -22,
+		accuracy: 100,
+		basePower: 70,
+		category: "Special",
+		name: "Tri Beam",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
 	},
 	trick: {
 		num: 271,

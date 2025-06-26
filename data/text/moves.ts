@@ -1884,6 +1884,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			desc: "Causes the target's Ability to become the same as the user's. Fails if the target's Ability is Multitype, Truant, or the same Ability as the user, or if the user's Ability is Flower Gift, Forecast, Illusion, Imposter, Multitype, Trace, or Zen Mode.",
 		},
 	},
+	eonrift: {
+		name: "Eon Rift",
+		shortDesc: "Summons Sun or E. Terrain based on highest stat."
+	},
 	eruption: {
 		name: "Eruption",
 		desc: "Power is equal to (user's current HP * 150 / user's maximum HP), rounded down, but not less than 1.",
@@ -2272,6 +2276,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Flying Press",
 		desc: "This move combines Flying in its type effectiveness against the target. Damage doubles and no accuracy check is done if the target has used Minimize while active.",
 		shortDesc: "Combines Flying in its type effectiveness.",
+	},
+	foamfrenzy: {
+		name: "Foam Frenzy",
+		shortDesc: "Removes hazards, and boosts SpA by +1 if it does.",
 	},
 	focusblast: {
 		name: "Focus Blast",
@@ -3295,6 +3303,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Ice Hammer",
 		desc: "Lowers the user's Speed by 1 stage.",
 		shortDesc: "Lowers the user's Speed by 1.",
+	},
+	icemace: {
+		name: "Ice Mace",
+		shortDesc: "Power decreases as HP does.",
 	},
 	icepunch: {
 		name: "Ice Punch",
@@ -4355,6 +4367,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			desc: "The user restores 1/2 of its maximum HP if no weather conditions are in effect, all of its HP if the weather is Sunny Day, and 1/4 of its maximum HP if the weather is Rain Dance or Sandstorm, all rounded down.",
 		},
 	},
+	moonriftstorm: {
+		name: "Moonrift Storm",
+		shortDesc: "10% chance to flinch, inaccurate in weather."
+	},
 	morningsun: {
 		name: "Morning Sun",
 		desc: "The user restores 1/2 of its maximum HP if Delta Stream or no weather conditions are in effect or if the user is holding Utility Umbrella, 2/3 of its maximum HP if the weather is Desolate Land or Sunny Day, and 1/4 of its maximum HP if the weather is Primordial Sea, Rain Dance, Sandstorm, or Snow, all rounded half down.",
@@ -4711,6 +4727,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			desc: "Whether or not this move is successful, the user spends three or four turns locked into this move and becomes confused immediately after its move on the last turn of the effect, even if it is already confused. If the user is prevented from moving, the effect ends without causing confusion. During the effect, this move's accuracy is overwritten every turn with the current calculated accuracy including stat stage changes, but not to less than 1/256 or more than 255/256.",
 			shortDesc: "Lasts 3-4 turns. Confuses the user afterwards.",
 		},
+	},
+	phantasmalvoyage: {
+		name: "Phantasmal Voyage",
+		shortDesc: "Summons Tailwind for 4 turns.",
 	},
 	phantomforce: {
 		name: "Phantom Force",
@@ -7064,6 +7084,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 
 		activate: "  Tidying up complete!",
 	},
+	timelesstorrent: {
+		name: "Timeless Torrent",
+		shortDesc: "10% for -SpD. On KO, effect depends on field.",
+	},
 	topsyturvy: {
 		name: "Topsy-Turvy",
 		desc: "The target's positive stat stages become negative and vice versa. Fails if all of the target's stat stages are 0.",
@@ -7146,6 +7170,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			desc: "No additional effect.",
 			shortDesc: "No additional effect.",
 		},
+	},
+	tribeam: {
+		name: "Tri Beam",
+		shortDesc: "Is Fire/Ice/Electric based on effectiveness."
 	},
 	trick: {
 		name: "Trick",

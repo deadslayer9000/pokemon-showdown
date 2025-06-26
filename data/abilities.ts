@@ -355,25 +355,29 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: 4,
 	},
 	battlebond: {
-		onSourceAfterFaint(length, target, source, effect) {
-			if (source.bondTriggered) return;
-			if (effect?.effectType !== 'Move') return;
-			if (source.species.id === 'greninjabond' && source.hp && !source.transformed && source.side.foePokemonLeft()) {
-				this.boost({ atk: 1, spa: 1, spe: 1 }, source, source, this.effect);
+        onSourceAfterFaint(length, target, source, effect) {
+            if (effect?.effectType !== 'Move') {
+                return;
+            }
+            if (source.species.id === 'greninjabond' && source.hp && !source.transformed && source.side.foePokemonLeft()) {
+                this.add('-activate', source, 'ability: Battle Bond');
+                source.formeChange('Greninja-Ash', this.effect, true);
+            }
+			if (source.species.id === 'omegagreninjabond' && source.hp && !source.transformed && source.side.foePokemonLeft()) {
 				this.add('-activate', source, 'ability: Battle Bond');
-				source.bondTriggered = true;
-			}
-		},
-		onModifyMovePriority: -1,
-		onModifyMove(move, attacker) {
-			if (move.id === 'watershuriken' && attacker.species.name === 'Greninja-Ash' &&
-				!attacker.transformed) {
-				move.multihit = 3;
-			}
-		},
-		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1 },
+				source.formeChange('Omega-Greninja-Ash', this.effect, true);
+				}
+        },
+        onModifyMovePriority: -1,
+        onModifyMove(move, attacker) {
+            if (move.id === 'watershuriken' && attacker.species.name === 'Greninja-Ash' &&
+                !attacker.transformed) {
+                move.multihit = 3;
+            }
+        },
+		fkags: {},
 		name: "Battle Bond",
-		rating: 3.5,
+        rating: 4,
 		num: 210,
 	},
 	beadsofruin: {
@@ -539,6 +543,80 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Chlorophyll",
 		rating: 3,
 		num: 34,
+	},
+	chronocatalyst: {
+		onSwitchInPriority: -2,
+		onStart(pokemon) {
+			this.singleEvent('WeatherChange', 'TerrainChange', this.effect, this.effectState, pokemon);
+		},
+		onWeatherChange(pokemon) {
+			// Protosynthesis is not affected by Utility Umbrella
+			if (this.field.isWeather('sunnyday')) {
+				pokemon.addVolatile('protosynthesis');
+			} else if (!pokemon.volatiles['protosynthesis']?.fromBooster && !this.field.isWeather('sunnyday')) {
+				pokemon.removeVolatile('protosynthesis');
+			}
+		},
+		onTerrainChange(pokemon) {
+			if (this.field.isTerrain('electricterrain')) {
+				pokemon.addVolatile('protosynthesis');
+			} else if (!pokemon.volatiles['quarkdrive']?.fromBooster) {
+				pokemon.removeVolatile('protosynthesis');
+			}
+		},
+		onEnd(pokemon) {
+			delete pokemon.volatiles['protosynthesis'];
+			this.add('-end', pokemon, 'Protosynthesis', '[silent]');
+		},
+		condition: {
+			noCopy: true,
+			onStart(pokemon, source, effect) {
+				if (effect?.name === 'Booster Energy') {
+					this.effectState.fromBooster = true;
+					this.add('-activate', pokemon, 'ability: Protosynthesis', '[fromitem]');
+				} else {
+					this.add('-activate', pokemon, 'ability: Protosynthesis');
+				}
+				this.effectState.bestStat = pokemon.getBestStat(false, true);
+				this.add('-start', pokemon, 'protosynthesis' + this.effectState.bestStat);
+			},
+			onModifyAtkPriority: 5,
+			onModifyAtk(atk, pokemon) {
+				if (this.effectState.bestStat !== 'atk' || pokemon.ignoringAbility()) return;
+				this.debug('Protosynthesis atk boost');
+				return this.chainModify([5325, 4096]);
+			},
+			onModifyDefPriority: 6,
+			onModifyDef(def, pokemon) {
+				if (this.effectState.bestStat !== 'def' || pokemon.ignoringAbility()) return;
+				this.debug('Protosynthesis def boost');
+				return this.chainModify([5325, 4096]);
+			},
+			onModifySpAPriority: 5,
+			onModifySpA(spa, pokemon) {
+				if (this.effectState.bestStat !== 'spa' || pokemon.ignoringAbility()) return;
+				this.debug('Protosynthesis spa boost');
+				return this.chainModify([5325, 4096]);
+			},
+			onModifySpDPriority: 6,
+			onModifySpD(spd, pokemon) {
+				if (this.effectState.bestStat !== 'spd' || pokemon.ignoringAbility()) return;
+				this.debug('Protosynthesis spd boost');
+				return this.chainModify([5325, 4096]);
+			},
+			onModifySpe(spe, pokemon) {
+				if (this.effectState.bestStat !== 'spe' || pokemon.ignoringAbility()) return;
+				this.debug('Protosynthesis spe boost');
+				return this.chainModify(1.5);
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'Protosynthesis');
+			},
+		},
+		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, notransform: 1 },
+		name: "Chrono Catalyst",
+		rating: 4,
+		num: -25,
 	},
 	clearbody: {
 		onTryBoost(boost, target, source, effect) {
@@ -1478,6 +1556,26 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Fluffy",
 		rating: 3.5,
 		num: 218,
+	},
+	flurry: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Ice' && attacker.hp <= attacker.maxhp / 3) {
+				this.debug('Flurry boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Ice' && attacker.hp <= attacker.maxhp / 3) {
+				this.debug('Flurry boost');
+				return this.chainModify(1.5);
+			}
+		},
+		flags: {},
+		name: "Flurry",
+		rating: 2,
+		num: -26,
 	},
 	forecast: {
 		onSwitchInPriority: -2,
