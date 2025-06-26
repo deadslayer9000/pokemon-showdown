@@ -20295,7 +20295,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		heightm: 0.3,
 		color: "Red",
 		eggGroups: ["Flying"],
-		evos: "Delta-Staravia",
+		evos: ["Delta-Staravia"],
 	},
 	deltastaravia: {
 		num: 397,
@@ -20308,7 +20308,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		heightm: 0.6,
 		color: "Red",
 		eggGroups: ["Flying"],
-		evos: "Delta-Staraptor",
+		evos: ["Delta-Staraptor"],
 		prevo: "Delta-Starly",
 	},
 	deltastaraptor: {
@@ -20586,7 +20586,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		heightm: 0.5,
 		color: "Yellow",
 		eggGroups: ["Field"],
-		evos: "Delta-Quilava",
+		evos: ["Delta-Quilava"],
 	},
 	deltaquilava: {
 		num: 156,
@@ -20601,7 +20601,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Yellow",
 		eggGroups: ["Field"],
 		prevo: "Delta-Cyndaquil",
-		evos: "Delta-Typhlosion",
+		evos: ["Delta-Typhlosion"],
 	},
 	deltatyphlosion: {
 		num: 157,
@@ -20703,7 +20703,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		heightm: 0.2,
 		color: "Purple",
 		eggGroups: ["Undiscovered"],
-		evos: "Delta-Roselia",
+		evos: ["Delta-Roselia"],
 	},
 	deltaroselia: {
 		num: 315,
@@ -20718,7 +20718,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Purple",
 		eggGroups: ["Undiscovered"],
 		prevo: "Delta-Budew",
-		evos: "Delta-Roserade",
+		evos: ["Delta-Roserade"],
 	},
 	deltaroserade: {
 		num: 407,
@@ -20733,7 +20733,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Purple",
 		eggGroups: ["Undiscovered"],
 		prevo: "Delta-Roselia",
-		evos: "Delta-Roserade",
+		evos: ["Delta-Roserade"],
 	},
 	ironshades: {
 		num: 2075,
@@ -20857,7 +20857,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		heightm: 1.2,
 		color: "White",
 		eggGroups: ["Amorphous"],
-		evos: "Ultra-Haunter",
+		evos: ["Ultra-Haunter"],
 	},
 	ultrahaunter: {
 		num: 93,
@@ -20871,7 +20871,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		heightm: 1.6,
 		color: "White",
 		eggGroups: ["Amorphous"],
-		evos: "Ultra-Gengar",
+		evos: ["Ultra-Gengar"],
 		prevo: "Ultra-Gastly",
 	},
 	ultragengar: {
@@ -20911,7 +20911,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		heightm: 0.3,
 		color: "Blue",
 		eggGroups: ["Water 1"],
-		evos: "Omega-Frogadier",
+		evos: ["Omega-Frogadier"],
 	},
 	omegafrogadier: {
 		num: 657,
@@ -20925,8 +20925,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		heightm: 0.6,
 		color: "Blue",
 		eggGroups: ["Water 1"],
-		prevo: "Omega-Froakie",
-		evos: "Omega-Greninja",
+		prevo: ["Omega-Froakie"],
+		evos: ["Omega-Greninja"],
 	},
 	omegagreninja: {
 		num: 658,
@@ -20940,7 +20940,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		heightm: 1.5,
 		color: "Blue",
 		eggGroups: ["Water 1"],
-		prevo: "Omega-Froakie",
+		prevo: ["Omega-Froakie"],
 		otherFormes: ["Omega-Greninja-Ash"],
 	},
 	omegagreninjabond: {

@@ -14177,8 +14177,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			if (!move.hasSheerForce && source.hp) {
 				source.side.addSideCondition('tailwind', source);
 				}
-			}
-		},
+			},
 		secondary: {},
 		target: "allAdjacentFoes",
 		type: "Ghost",
