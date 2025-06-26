@@ -355,7 +355,6 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: 4,
 	},
 	battlebond: {
-        inherit: true,
         onSourceAfterFaint(length, target, source, effect) {
             if (effect?.effectType !== 'Move') {
                 return;
