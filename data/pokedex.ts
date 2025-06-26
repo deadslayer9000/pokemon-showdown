@@ -20200,8 +20200,6 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		forme: "Delta",
 		types: ["Grass", "Flying"],
 		baseStats: { hp: 98, atk: 71, def: 61, spa: 80, spd: 100, spe: 105 },
-		abilities: { 0: "Aeriliate" },
-		baseStats: { hp: 98, atk: 71, def: 61, spa: 80, spd: 100, spe: 105 },
 		abilities: { 0: "Aerilate" },
 		weightkg: 45.5,
 		heightm: 2.1,
