@@ -9977,14 +9977,14 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		accuracy: 90,
 		basePower: 140,
 		basePowerCallback(pokemon, target, move) {
+			return move.basePower;
+			const bp = move.basePower * pokemon.hp / pokemon.maxhp;
+			this.debug(`BP: ${bp}`);
 			if (pokemon.species.name === 'Omega-Greninja-Ash' && pokemon.hasAbility('battlebond') &&
 				!pokemon.transformed) {
 				return 100;
 			}
 			else {
-			return move.basePower;
-			const bp = move.basePower * pokemon.hp / pokemon.maxhp;
-			this.debug(`BP: ${bp}`);
 			return bp;
 			}
 		},
