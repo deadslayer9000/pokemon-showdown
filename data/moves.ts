@@ -9980,11 +9980,6 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			return move.basePower;
 			const bp = move.basePower * pokemon.hp / pokemon.maxhp;
 			this.debug(`BP: ${bp}`);
-			if (pokemon.species.name === 'Omega-Greninja-Ash' && pokemon.hasAbility('battlebond') &&
-				!pokemon.transformed) {
-				return 100;
-			}
-			else {
 			return bp;
 			}
 		},
