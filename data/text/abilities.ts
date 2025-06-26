@@ -189,7 +189,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	brilliance: {
 		name: "Brilliance",
-		shortDesc: "On switch-in, this pokemon lowers the Special Attack of opponents by 1."
+		shortDesc: "On switch-in, this pokemon lowers the Special Attack of opponents by 1.",
 	},
 	cheekpouch: {
 		name: "Cheek Pouch",
@@ -214,7 +214,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	chronocatalyst: {
 		name: "Chrono Catalyst",
-		shortDesc: "If Sunny Day, E. Terrain, or Booster Energy active: highest stat 1.3x, 1.5x if Speed."
+		shortDesc: "If Sunny Day, E. Terrain, or Booster Energy active: highest stat 1.3x, 1.5x if Speed.",
 	},
 	clearbody: {
 		name: "Clear Body",
@@ -273,7 +273,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	corrosivesurge: {
 		name: "Corrosive Surge",
-		shortDesc: "On switch-in, this Pokemon summons Corrosive Terrain."
+		shortDesc: "On switch-in, this Pokemon summons Corrosive Terrain.",
 	},
 	costar: {
 		name: "Costar",
@@ -349,7 +349,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	dawnbreak: {
 		name: "Dawnbreak (WIP)",
-		shortDesc: "Nullifies items; SpA is 1.5x if a Pokemon with Moonwake is active."
+		shortDesc: "Nullifies items; SpA is 1.5x if a Pokemon with Moonwake is active.",
 	},
 	dazzling: {
 		name: "Dazzling",
@@ -380,7 +380,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	diamondgrove: {
 		name: "Diamond Grove (WIP)",
-		shortDesc: "If Grassy Terrain is active, Super-Effective attacks on this Pokemon become neutral."
+		shortDesc: "If Grassy Terrain is active, Super-Effective attacks on this Pokemon become neutral.",
 	},
 	direambush: {
 		name: "Dire Ambush",
@@ -487,7 +487,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	fabled: {
 		name: "Fabled",
-		shortDesc: "All of this Pokemon's stats are raised when it attacks and KOs a Pokemon."
+		shortDesc: "All of this Pokemon's stats are raised when it attacks and KOs a Pokemon.",
 	},
 	fairyaura: {
 		name: "Fairy Aura",
@@ -506,7 +506,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	finalverdict: {
 		name: "Final Verdict (WIP)",
-		shortDesc: "STAB on Spc. Psychic and Phys. Ghost moves; Pokemon faint if below 10% HP."
+		shortDesc: "STAB on Spc. Psychic and Phys. Ghost moves; Pokemon faint if below 10% HP.",
 	},
 	flamebody: {
 		name: "Flame Body",
@@ -1022,7 +1022,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	marvel: {
 		name: "Marvel (WIP)",
-		shortDesc: "This Pokemon will always critically hit on it's first turn sent out."
+		shortDesc: "This Pokemon will always critically hit on it's first turn sent out.",
 	},
 	marvelscale: {
 		name: "Marvel Scale",
@@ -1185,7 +1185,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	noblesse: {
 		name: "Noblesse",
-		shortDesc: "This Pokemon's Water type moves do not lose power in the Sun."
+		shortDesc: "This Pokemon's Water type moves do not lose power in the Sun.",
 	},
 	noguard: {
 		name: "No Guard",
@@ -1315,7 +1315,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	planarcollapse: {
 		name: "Planar Collapse",
-		shortDesc: "On switch-in, this Pokemon summons Gravity."
+		shortDesc: "On switch-in, this Pokemon summons Gravity.",
 	},
 	plus: {
 		name: "Plus",
@@ -1442,7 +1442,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	prowler: {
 		name: "Prowler",
-		shortDesc: "This Pokemon heals 1/3rd of its health when it knocks out a Pokemon."
+		shortDesc: "This Pokemon heals 1/3rd of its health when it knocks out a Pokemon.",
 	},
 	psychicsurge: {
 		name: "Psychic Surge",
@@ -1464,7 +1464,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	pyroclastic: {
 		name: "Pyroclastic (WIP)",
-		shortDesc: "Pokemon heals 1/3rd of it's health when switching in; Accuracy can't be lowered."
+		shortDesc: "Pokemon heals 1/3rd of it's health when switching in; Accuracy can't be lowered.",
 	},
 	quarkdrive: {
 		name: "Quark Drive",
@@ -1959,7 +1959,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	surge: {
 		name: "Surge",
-		shortDesc: "If this Pokemon has 1/3rd or less HP, Electric-type moves have 1.5x power."
+		shortDesc: "If this Pokemon has 1/3rd or less HP, Electric-type moves have 1.5x power.",
 	},
 	surgesurfer: {
 		name: "Surge Surfer",
@@ -2164,7 +2164,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	transcience: {
 		name: "Transcience",
-		shortDesc: "The user heals 1/4th of the damage dealt to the opponent."
+		shortDesc: "The user heals 1/4th of the damage dealt to the opponent.",
 	},
 	transistor: {
 		name: "Transistor",
@@ -2291,7 +2291,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	welkintorch: {
 		name: "Welkin Torch",
-		shortDesc: "This pokemon is immune to indirect damage."
+		shortDesc: "This pokemon is immune to indirect damage.",
 	},
 	wellbakedbody: {
 		name: "Well-Baked Body",

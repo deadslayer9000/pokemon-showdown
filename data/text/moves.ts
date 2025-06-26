@@ -70,7 +70,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	adamantinemolars: {
 		name: "Adamantine Molars",
-		shortDesc: "20% chance to reduce target's Defense by 1."
+		shortDesc: "20% chance to reduce target's Defense by 1.",
 	},
 	aerialace: {
 		name: "Aerial Ace",
@@ -1225,11 +1225,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	crescentedge: {
 		name: "Crescent Edge",
-		shortDesc: "Deals damage based on Sp.Def, not Defense."
+		shortDesc: "Deals damage based on Sp.Def, not Defense.",
 	},
 	crimsoncharge: {
 		name: "Crimson Charge",
-		shortDesc: "Has a 30% chance to burn the target."
+		shortDesc: "Has a 30% chance to burn the target.",
 	},
 	crimsonstorm: {
 		name: "Crimson Storm",
@@ -1886,7 +1886,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	eonrift: {
 		name: "Eon Rift",
-		shortDesc: "Summons Sun or E. Terrain based on highest stat."
+		shortDesc: "Summons Sun or E. Terrain based on highest stat.",
 	},
 	eruption: {
 		name: "Eruption",
@@ -2238,7 +2238,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	floridpuff: {
 		name: "Florid Puff",
-		shortDesc: "50% chance to raise Special Defense of user."
+		shortDesc: "50% chance to raise Special Defense of user.",
 	},
 	flowershield: {
 		name: "Flower Shield",
@@ -3379,7 +3379,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		removeItem: "  [POKEMON]'s [ITEM] was burned up!",
 	},
 	indigoimpact: {
-		name : "Indigo Impact",
+		name: "Indigo Impact",
 		shortDesc: "Has a 50% chance to lower the target's Sp. Def.",
 	},
 	infernalparade: {
@@ -4369,7 +4369,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	moonriftstorm: {
 		name: "Moonrift Storm",
-		shortDesc: "10% chance to flinch, inaccurate in weather."
+		shortDesc: "10% chance to flinch, inaccurate in weather.",
 	},
 	morningsun: {
 		name: "Morning Sun",
@@ -4546,7 +4546,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	noxiouspower: {
 		name: "Noxious Power",
-		shortDesc: "2x Power if Target poisoned; 30% for +1 SpA."
+		shortDesc: "2x Power if Target poisoned; 30% for +1 SpA.",
 	},
 	noxioustorque: {
 		name: "Noxious Torque",
@@ -6411,7 +6411,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	steelskewer: {
 		name: "Steel Skewer",
-		shortDesc: "Sets G-Max Steelsurge on the opponent's side."
+		shortDesc: "Sets G-Max Steelsurge on the opponent's side.",
 	},
 	steelwing: {
 		name: "Steel Wing",
@@ -7173,7 +7173,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	tribeam: {
 		name: "Tri Beam",
-		shortDesc: "Is Fire/Ice/Electric based on effectiveness."
+		shortDesc: "Is Fire/Ice/Electric based on effectiveness.",
 	},
 	trick: {
 		name: "Trick",
@@ -7353,7 +7353,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	verdantflush: {
 		name: "Verdant Flush",
-		shortDesc: "50% chance to raise Special Attack of user."
+		shortDesc: "50% chance to raise Special Attack of user.",
 	},
 	victorydance: {
 		name: "Victory Dance",

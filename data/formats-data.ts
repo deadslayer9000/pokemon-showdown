@@ -2444,7 +2444,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	deoxysdefense: {
 		tier: "NUBL",
 		doublesTier: "(DUU)",
-		natDexTier: "UU",	
+		natDexTier: "UU",
 	},
 	deoxysspeed: {
 		tier: "UU",
@@ -3716,7 +3716,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "UU",
 	},
 	greninjabond: {
-		tier: "OU"
+		tier: "OU",
 	},
 	greninjaash: {
 		isNonstandard: "Past",
@@ -5996,79 +5996,79 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "OU",
 	},
 	armaledge: {
-		tier: "UU"
+		tier: "UU",
 	},
 	ursanette: {
-		tier: "UU"
+		tier: "UU",
 	},
 	liesler: {
-		tier: "UU"
+		tier: "UU",
 	},
 	gholdaton: {
-		tier: "OU"
+		tier: "OU",
 	},
 	valianttime: {
-		tier: "OU"
+		tier: "OU",
 	},
 	shaykarp: {
-		tier: "NU"
+		tier: "NU",
 	},
 	articeon: {
-		tier: "UU"
+		tier: "UU",
 	},
 	zapeon: {
-		tier: "OU"
+		tier: "OU",
 	},
 	molteon: {
-		tier: "UU"
+		tier: "UU",
 	},
 	radiantmoon: {
-		tier: "UU"
+		tier: "UU",
 	},
 	zorotales: {
-		tier: "UU"
+		tier: "UU",
 	},
 	hatteon: {
-		tier: "UU"
+		tier: "UU",
 	},
 	grimmeon: {
-		tier: "UU"
+		tier: "UU",
 	},
 	scizantrum: {
-		tier: "UU"
+		tier: "UU",
 	},
 	dragascue: {
-		tier: "UU"
+		tier: "UU",
 	},
 	rotogar: {
-		tier: "RU"
+		tier: "RU",
 	},
 	diancette: {
-		tier: "UU"
+		tier: "UU",
 	},
 	ultratrapinch: {
-		tier: "LC"
+		tier: "LC",
 	},
 	ultravibrava: {
-		tier: "NFE"
+		tier: "NFE",
 	},
 	ultraflygon: {
-		tier: "OU"
+		tier: "OU",
 	},
 	yanmelia: {
-		tier: "UU"
+		tier: "UU",
 	},
 	shrookle: {
-		tier: "UU"
+		tier: "UU",
 	},
 	deltauxie: {
-		tier: "OU"
+		tier: "OU",
 	},
 	deltaazelf: {
-		tier: "UU"
+		tier: "UU",
 	},
 	deltamesprit: {
-		tier: "RU"
+		tier: "RU",
 	},
 	lucaurus: {
 		tier: "UU",
@@ -6092,25 +6092,25 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "OU",
 	},
 	deltalatios: {
-		tier: "UU"
+		tier: "UU",
 	},
 	deltalatiosmega: {
-		tier: "OU"
+		tier: "OU",
 	},
 	manaphymega: {
-		tier: "OU"
+		tier: "OU",
 	},
 	deltasteelix: {
-		tier: "UU"
+		tier: "UU",
 	},
 	deltasteelixmega: {
-		tier: "UU"
+		tier: "UU",
 	},
 	spectreon: {
-		tier: "UU"
+		tier: "UU",
 	},
 	veneon: {
-		tier: "UU"
+		tier: "UU",
 	},
 	brawleon: {
 		tier: "RU",
@@ -6119,112 +6119,112 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "NU",
 	},
 	guardeon: {
-		tier: "RU"
+		tier: "RU",
 	},
 	manteon: {
-		tier: "NU"
+		tier: "NU",
 	},
 	niveon: {
-		tier: "NU"
+		tier: "NU",
 	},
 	eeveeon: {
-		tier: "RU"
+		tier: "RU",
 	},
 	obsideon: {
-		tier: "NU"
+		tier: "NU",
 	},
 	ancieon: {
-		tier: "NU"
+		tier: "NU",
 	},
 	deltamarshadow: {
-		tier: "OU"
+		tier: "OU",
 	},
 	deltacyndaquil: {
-		tier: "LC"
+		tier: "LC",
 	},
 	deltaquilava: {
-		tier: "NFE"
+		tier: "NFE",
 	},
 	deltatyphlosion: {
-		tier: "UU"
+		tier: "UU",
 	},
 	tapukehe: {
-		tier: "OU"
+		tier: "OU",
 	},
 	deltagimmighoul: {
-		tier: "LC"
+		tier: "LC",
 	},
 	deltagimmighoulroaming: {
-		tier: "LC"
+		tier: "LC",
 	},
 	deltagholdengo: {
-		tier: "OU"
+		tier: "OU",
 	},
 	epsilongoomy: {
-		tier: "LC"
+		tier: "LC",
 	},
 	goolossal: {
-		tier: "OU"
+		tier: "OU",
 	},
 	deltabudew: {
-		tier: "LC"
+		tier: "LC",
 	},
 	deltaroselia: {
-		tier: "NFE"
+		tier: "NFE",
 	},
 	deltaroserade: {
-		tier: "UU"
+		tier: "UU",
 	},
 	ironshades: {
-		tier: "UU"
+		tier: "UU",
 	},
 	glimmerix: {
-		tier: "OU"
+		tier: "OU",
 	},
 	wisphir: {
-		tier: "UU"
+		tier: "UU",
 	},
 	florizim: {
-		tier: "UU"
+		tier: "UU",
 	},
 	loomingtune: {
-		tier: "UU"
+		tier: "UU",
 	},
 	drifblimp: {
-		tier: "UU"
+		tier: "UU",
 	},
 	malevorus: {
-		tier: "OU"
+		tier: "OU",
 	},
 	malevorustherian: {
-		tier: "OU"
+		tier: "OU",
 	},
 	ironrunner: {
-		tier: "UU"
+		tier: "UU",
 	},
 	ultragastly: {
-		tier: "LC"
+		tier: "LC",
 	},
 	ultrahaunter: {
-		tier: "NFE"
+		tier: "NFE",
 	},
 	ultragengar: {
-		tier: "OU"
+		tier: "OU",
 	},
 	tangledtime: {
-		tier: "OU"
+		tier: "OU",
 	},
 	omegafroakie: {
-		tier: "LC"
+		tier: "LC",
 	},
 	omegafrogadier: {
-		tier: "NFE"
+		tier: "NFE",
 	},
 	omegagreninja: {
-		tier: "UU"
+		tier: "UU",
 	},
 	omegagreninjabond: {
-		tier: "OU"
+		tier: "OU",
 	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
@@ -6295,6 +6295,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "Illegal",
 	},
 	ultraserperior: {
-		tier: "UU"
+		tier: "UU",
 	},
 };

@@ -355,29 +355,29 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: 4,
 	},
 	battlebond: {
-        onSourceAfterFaint(length, target, source, effect) {
-            if (effect?.effectType !== 'Move') {
-                return;
-            }
-            if (source.species.id === 'greninjabond' && source.hp && !source.transformed && source.side.foePokemonLeft()) {
-                this.add('-activate', source, 'ability: Battle Bond');
-                source.formeChange('Greninja-Ash', this.effect, true);
-            }
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect?.effectType !== 'Move') {
+				return;
+			}
+			if (source.species.id === 'greninjabond' && source.hp && !source.transformed && source.side.foePokemonLeft()) {
+				this.add('-activate', source, 'ability: Battle Bond');
+				source.formeChange('Greninja-Ash', this.effect, true);
+			}
 			if (source.species.id === 'omegagreninjabond' && source.hp && !source.transformed && source.side.foePokemonLeft()) {
 				this.add('-activate', source, 'ability: Battle Bond');
 				source.formeChange('Omega-Greninja-Ash', this.effect, true);
-				}
-        },
-        onModifyMovePriority: -1,
-        onModifyMove(move, attacker) {
-            if (move.id === 'watershuriken' && attacker.species.name === 'Greninja-Ash' &&
-                !attacker.transformed) {
-                move.multihit = 3;
-            }
-        },
+			}
+		},
+		onModifyMovePriority: -1,
+		onModifyMove(move, attacker) {
+			if (move.id === 'watershuriken' && attacker.species.name === 'Greninja-Ash' &&
+				!attacker.transformed) {
+				move.multihit = 3;
+			}
+		},
 		fkags: {},
 		name: "Battle Bond",
-        rating: 4,
+		rating: 4,
 		num: 210,
 	},
 	beadsofruin: {
@@ -1357,17 +1357,17 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		onSourceAfterFaint(length, target, source, effect) {
 			if (effect && effect.effectType === 'Move') {
 				this.boost({ atk: length,
-							 def: length,
-							 spa: length,
-							 spd: length,
-							spe: length}, source);
+					def: length,
+					spa: length,
+					spd: length,
+					spe: length }, source);
 			}
 		},
 		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1 },
 		name: "Fabled",
 		rating: 5,
 		num: -8,
-	},		
+	},
 	fairyaura: {
 		onStart(pokemon) {
 			if (this.suppressingAbility(pokemon)) return;
@@ -1853,7 +1853,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: 275,
 	},
 	guarded: {
-			onSetStatus(status, target, source, effect) {
+		onSetStatus(status, target, source, effect) {
 			if ((effect as Move)?.status) {
 				this.add('-immune', target, '[from] ability: Guarded');
 			}
@@ -3140,7 +3140,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 			const boostPlus = this.effectState.boosts;
 			let i: BoostID;
 			for (i in boost) {
-				if (boost[i]! 	> 0) {
+				if (boost[i]! > 0) {
 					boostPlus[i] = (boostPlus[i] || 0) + boost[i]!;
 				}
 				const feaster = this.effectState.target;
@@ -3517,7 +3517,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		flags: {},
 		name: "Planar Collapse",
 		rating: 4,
-		num: -16
+		num: -16,
 	},
 	plus: {
 		onModifySpAPriority: 5,
