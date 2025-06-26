@@ -9981,7 +9981,6 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			const bp = move.basePower * pokemon.hp / pokemon.maxhp;
 			this.debug(`BP: ${bp}`);
 			return bp;
-			}
 		},
 		category: "Physical",
 		name: "Ice Mace",
