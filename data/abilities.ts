@@ -1553,6 +1553,26 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 3.5,
 		num: 218,
 	},
+	flurry: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Ice' && attacker.hp <= attacker.maxhp / 3) {
+				this.debug('Flurry boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Ice' && attacker.hp <= attacker.maxhp / 3) {
+				this.debug('Flurry boost');
+				return this.chainModify(1.5);
+			}
+		},
+		flags: {},
+		name: "Flurry",
+		rating: 2,
+		num: -26,
+	},
 	forecast: {
 		onSwitchInPriority: -2,
 		onStart(pokemon) {
