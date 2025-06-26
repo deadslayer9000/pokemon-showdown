@@ -20199,8 +20199,13 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		baseSpecies: "Yanmega",
 		forme: "Delta",
 		types: ["Grass", "Flying"],
+<<<<<<< test
 		baseStats: { hp: 98, atk: 71, def: 61, spa: 80, spd: 100, spe: 105 },
 		abilities: { 0: "Aeriliate" },
+=======
+		baseStats: {hp:98, atk: 71, def: 61, spa: 80, spd: 100, spe: 105},
+		abilities: {0: "Aerilate"},
+>>>>>>> master
 		weightkg: 45.5,
 		heightm: 2.1,
 		color: "Green",
@@ -20287,6 +20292,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	deltastarly: {
 		num: 396,
 		name: "Delta-Starly",
+		baseSpecies: "Starly",
 		types: ["Normal", "Flying"],
 		baseStats: { hp: 40, atk: 55, def: 30, spa: 30, spd: 30, spe: 60 },
 		abilities: { 0: "Keen Eye", H: "Pressure" },
@@ -20299,6 +20305,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	deltastaravia: {
 		num: 397,
 		name: "Delta-Staravia",
+		baseSpecies: "Staravia",
 		types: ["Normal", "Flying"],
 		baseStats: { hp: 55, atk: 75, def: 50, spa: 40, spd: 40, spe: 80 },
 		abilities: { 0: "Intimidate", H: "Pressure" },
@@ -20312,6 +20319,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	deltastaraptor: {
 		num: 398,
 		name: "Delta-Staraptor",
+		baseSpecies: "Staraptor",
 		types: ["Fire", "Flying"],
 		baseStats: { hp: 85, atk: 100, def: 80, spa: 60, spd: 60, spe: 100 },
 		abilities: { 0: "Intimidate", H: "Welkin Torch" },
@@ -20367,7 +20375,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	deltalatios: {
 		num: 381,
 		name: "Delta-Latios",
-		baseSpecies: "Delta-Latios",
+		baseSpecies: "Latios",
 		forme: "Delta",
 		types: ["Dragon", "Fairy"],
 		gender: "M",

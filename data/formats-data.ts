@@ -6055,8 +6055,14 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	ultraflygon: {
 		tier: "OU",
 	},
+	yanfern: {
+		tier: "LC"
+	},
 	yanmelia: {
 		tier: "UU",
+	},
+	deltashuckle: {
+		tier: "NU"
 	},
 	shrookle: {
 		tier: "UU",
