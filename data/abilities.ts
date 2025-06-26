@@ -375,7 +375,8 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
                 move.multihit = 3;
             }
         },
-        isNonstandard: null,
+		fkags: {},
+		name: "Battle Bond",
         rating: 4,
 		num: 210,
 	},
