@@ -20199,13 +20199,10 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		baseSpecies: "Yanmega",
 		forme: "Delta",
 		types: ["Grass", "Flying"],
-<<<<<<< test
 		baseStats: { hp: 98, atk: 71, def: 61, spa: 80, spd: 100, spe: 105 },
 		abilities: { 0: "Aeriliate" },
-=======
 		baseStats: {hp:98, atk: 71, def: 61, spa: 80, spd: 100, spe: 105},
 		abilities: {0: "Aerilate"},
->>>>>>> master
 		weightkg: 45.5,
 		heightm: 2.1,
 		color: "Green",
