@@ -13032,6 +13032,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			move.accuracy = 50;
 			break;
 			}
+		},
 		secondary: {
 			chance: 10,
 			volatileStatus: 'flinch',
