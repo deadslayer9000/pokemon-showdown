@@ -9979,7 +9979,13 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		basePowerCallback(pokemon, target, move) {
 			const bp = move.basePower * pokemon.hp / pokemon.maxhp;
 			this.debug(`BP: ${bp}`);
+			if (pokemon.species.name === 'Omega-Greninja-Ash' && pokemon.hasAbility('battlebond') &&
+				!pokemon.transformed) {
+				return 100;
+			}
+			else {
 			return bp;
+			}
 		},
 		category: "Physical",
 		name: "Ice Mace",
