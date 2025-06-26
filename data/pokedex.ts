@@ -20925,7 +20925,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		heightm: 0.6,
 		color: "Blue",
 		eggGroups: ["Water 1"],
-		prevo: ["Omega-Froakie"],
+		prevo: "Omega-Froakie",
 		evos: ["Omega-Greninja"],
 	},
 	omegagreninja: {
@@ -20940,7 +20940,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		heightm: 1.5,
 		color: "Blue",
 		eggGroups: ["Water 1"],
-		prevo: ["Omega-Froakie"],
+		prevo: "Omega-Froakie",
 		otherFormes: ["Omega-Greninja-Ash"],
 	},
 	omegagreninjabond: {
