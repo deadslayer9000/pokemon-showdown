@@ -13028,9 +13028,9 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			case 'desolateland':
 			case 'snowscape':
 			case 'hail':
-			case  'sandstorm':
-			move.accuracy = 50;
-			break;
+			case 'sandstorm':
+				move.accuracy = 50;
+				break;
 			}
 		},
 		secondary: {
