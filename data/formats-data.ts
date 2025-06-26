@@ -6056,13 +6056,13 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "OU",
 	},
 	yanfern: {
-		tier: "LC"
+		tier: "LC",
 	},
 	yanmelia: {
 		tier: "UU",
 	},
 	deltashuckle: {
-		tier: "NU"
+		tier: "NU",
 	},
 	shrookle: {
 		tier: "UU",
