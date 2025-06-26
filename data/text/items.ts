@@ -371,11 +371,11 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 	},
 	deltalatiasite: {
 		name: "Delta Latiasite",
-		shortDesc: "If held by Delta-Latias, this item allows it to Mega Evolve in battle."
+		shortDesc: "If held by Delta-Latias, this item allows it to Mega Evolve in battle.",
 	},
 	deltalatiosite: {
 		name: "Delta Latiosite",
-		shortDesc: "If held by Delta-Latios, this item allows it to Mega Evolve in battle."
+		shortDesc: "If held by Delta-Latios, this item allows it to Mega Evolve in battle.",
 	},
 	deltasteelixite: {
 		name: "Delta Steelixite",

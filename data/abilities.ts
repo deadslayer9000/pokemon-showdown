@@ -355,29 +355,29 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: 4,
 	},
 	battlebond: {
-        onSourceAfterFaint(length, target, source, effect) {
-            if (effect?.effectType !== 'Move') {
-                return;
-            }
-            if (source.species.id === 'greninjabond' && source.hp && !source.transformed && source.side.foePokemonLeft()) {
-                this.add('-activate', source, 'ability: Battle Bond');
-                source.formeChange('Greninja-Ash', this.effect, true);
-            }
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect?.effectType !== 'Move') {
+				return;
+			}
+			if (source.species.id === 'greninjabond' && source.hp && !source.transformed && source.side.foePokemonLeft()) {
+				this.add('-activate', source, 'ability: Battle Bond');
+				source.formeChange('Greninja-Ash', this.effect, true);
+			}
 			if (source.species.id === 'omegagreninjabond' && source.hp && !source.transformed && source.side.foePokemonLeft()) {
 				this.add('-activate', source, 'ability: Battle Bond');
 				source.formeChange('Omega-Greninja-Ash', this.effect, true);
-				}
-        },
-        onModifyMovePriority: -1,
-        onModifyMove(move, attacker) {
-            if (move.id === 'watershuriken' && attacker.species.name === 'Greninja-Ash' &&
-                !attacker.transformed) {
-                move.multihit = 3;
-            }
-        },
-		fkags: {},
+			}
+		},
+		onModifyMovePriority: -1,
+		onModifyMove(move, attacker) {
+			if (move.id === 'watershuriken' && attacker.species.name === 'Greninja-Ash' &&
+				!attacker.transformed) {
+				move.multihit = 3;
+			}
+		},
+		flags: {},
 		name: "Battle Bond",
-        rating: 4,
+		rating: 4,
 		num: 210,
 	},
 	beadsofruin: {
@@ -545,74 +545,6 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: 34,
 	},
 	chronocatalyst: {
-		onSwitchInPriority: -2,
-		onStart(pokemon) {
-			this.singleEvent('WeatherChange', 'TerrainChange', this.effect, this.effectState, pokemon);
-		},
-		onWeatherChange(pokemon) {
-			// Protosynthesis is not affected by Utility Umbrella
-			if (this.field.isWeather('sunnyday')) {
-				pokemon.addVolatile('protosynthesis');
-			} else if (!pokemon.volatiles['protosynthesis']?.fromBooster && !this.field.isWeather('sunnyday')) {
-				pokemon.removeVolatile('protosynthesis');
-			}
-		},
-		onTerrainChange(pokemon) {
-			if (this.field.isTerrain('electricterrain')) {
-				pokemon.addVolatile('protosynthesis');
-			} else if (!pokemon.volatiles['quarkdrive']?.fromBooster) {
-				pokemon.removeVolatile('protosynthesis');
-			}
-		},
-		onEnd(pokemon) {
-			delete pokemon.volatiles['protosynthesis'];
-			this.add('-end', pokemon, 'Protosynthesis', '[silent]');
-		},
-		condition: {
-			noCopy: true,
-			onStart(pokemon, source, effect) {
-				if (effect?.name === 'Booster Energy') {
-					this.effectState.fromBooster = true;
-					this.add('-activate', pokemon, 'ability: Protosynthesis', '[fromitem]');
-				} else {
-					this.add('-activate', pokemon, 'ability: Protosynthesis');
-				}
-				this.effectState.bestStat = pokemon.getBestStat(false, true);
-				this.add('-start', pokemon, 'protosynthesis' + this.effectState.bestStat);
-			},
-			onModifyAtkPriority: 5,
-			onModifyAtk(atk, pokemon) {
-				if (this.effectState.bestStat !== 'atk' || pokemon.ignoringAbility()) return;
-				this.debug('Protosynthesis atk boost');
-				return this.chainModify([5325, 4096]);
-			},
-			onModifyDefPriority: 6,
-			onModifyDef(def, pokemon) {
-				if (this.effectState.bestStat !== 'def' || pokemon.ignoringAbility()) return;
-				this.debug('Protosynthesis def boost');
-				return this.chainModify([5325, 4096]);
-			},
-			onModifySpAPriority: 5,
-			onModifySpA(spa, pokemon) {
-				if (this.effectState.bestStat !== 'spa' || pokemon.ignoringAbility()) return;
-				this.debug('Protosynthesis spa boost');
-				return this.chainModify([5325, 4096]);
-			},
-			onModifySpDPriority: 6,
-			onModifySpD(spd, pokemon) {
-				if (this.effectState.bestStat !== 'spd' || pokemon.ignoringAbility()) return;
-				this.debug('Protosynthesis spd boost');
-				return this.chainModify([5325, 4096]);
-			},
-			onModifySpe(spe, pokemon) {
-				if (this.effectState.bestStat !== 'spe' || pokemon.ignoringAbility()) return;
-				this.debug('Protosynthesis spe boost');
-				return this.chainModify(1.5);
-			},
-			onEnd(pokemon) {
-				this.add('-end', pokemon, 'Protosynthesis');
-			},
-		},
 		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, notransform: 1 },
 		name: "Chrono Catalyst",
 		rating: 4,
@@ -1357,17 +1289,17 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		onSourceAfterFaint(length, target, source, effect) {
 			if (effect && effect.effectType === 'Move') {
 				this.boost({ atk: length,
-							 def: length,
-							 spa: length,
-							 spd: length,
-							spe: length}, source);
+					def: length,
+					spa: length,
+					spd: length,
+					spe: length }, source);
 			}
 		},
 		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1 },
 		name: "Fabled",
 		rating: 5,
 		num: -8,
-	},		
+	},
 	fairyaura: {
 		onStart(pokemon) {
 			if (this.suppressingAbility(pokemon)) return;
@@ -1853,7 +1785,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: 275,
 	},
 	guarded: {
-			onSetStatus(status, target, source, effect) {
+		onSetStatus(status, target, source, effect) {
 			if ((effect as Move)?.status) {
 				this.add('-immune', target, '[from] ability: Guarded');
 			}
@@ -3140,7 +3072,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 			const boostPlus = this.effectState.boosts;
 			let i: BoostID;
 			for (i in boost) {
-				if (boost[i]! 	> 0) {
+				if (boost[i]! > 0) {
 					boostPlus[i] = (boostPlus[i] || 0) + boost[i]!;
 				}
 				const feaster = this.effectState.target;
@@ -3517,7 +3449,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		flags: {},
 		name: "Planar Collapse",
 		rating: 4,
-		num: -16
+		num: -16,
 	},
 	plus: {
 		onModifySpAPriority: 5,

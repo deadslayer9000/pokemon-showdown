@@ -1311,7 +1311,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		megaStone: "Delta-Latias-Mega",
 		megaEvolves: "Delta-Latias",
 		itemUser: ["Delta-Latias"],
-		onTakeItem(item, source) {	
+		onTakeItem(item, source) {
 			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
 			return true;
 		},
@@ -1324,7 +1324,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		megaStone: "Delta-Latios-Mega",
 		megaEvolves: "Delta-Latios",
 		itemUser: ["Delta-Latios"],
-		onTakeItem(item, source) {	
+		onTakeItem(item, source) {
 			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
 			return true;
 		},
