@@ -176,6 +176,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		num: -11,
 		accuracy: 100,
 		basePower: 75,
+		category: "Physical",
 		name: "Adamantine Molars",
 		pp: 15,
 		priority: 0,
@@ -1552,7 +1553,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 				this.add('-prepare', source, 'Chilly Reception', '[premajor]');
 			},
 		},
-		target: "All",
+		target: "all",
 		type: "Fire",
 	},
 
@@ -3438,7 +3439,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		name: "Crimson Storm",
 		pp: 5,
 		priority: 0,
-		flags: { contact: 1, protect: 0, mirror: 1, metronome: 1 },
+		flags: { contact: 1, mirror: 1, metronome: 1 },
 		secondary: null,
 		target: "normal",
 		type: "Dragon",
@@ -13020,8 +13021,16 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1, wind: 1 },
 		onModifyMove(move, pokemon, target) {
-			if (target && includes(target.effectiveWeather())) {
+			switch (pokemon.effectiveWeather()) {
+			case 'raindance':
+			case 'primordialsea':
+			case 'sunnyday':
+			case 'desolateland':
+			case 'snowscape':
+			case 'hail':
+			case 'sandstorm':
 				move.accuracy = 50;
+				break;
 			}
 		},
 		secondary: {
