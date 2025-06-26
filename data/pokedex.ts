@@ -20733,7 +20733,6 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Purple",
 		eggGroups: ["Undiscovered"],
 		prevo: "Delta-Roselia",
-		evos: ["Delta-Roserade"],
 	},
 	ironshades: {
 		num: 2075,
