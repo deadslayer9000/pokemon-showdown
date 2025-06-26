@@ -14173,15 +14173,13 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		pp: 5,
 		priority: 0,
 		flags: { mirror: 1, metronome: 1 },
-		sideCondition: 'tailwind',
-		onSideStart(side, source) {
-			if (source?.hasAbility('persistent')) {
-				this.add('-sidestart', side, 'move: Tailwind', '[persistent]');
-			} else {
-				this.add('-sidestart', side, 'move: Tailwind');
+		onAfterHit(target, source, move) {
+			if (!move.hasSheerForce && source.hp) {
+				source.side.addSideCondition('tailwind', source);
+				}
 			}
 		},
-		secondary: null,
+		secondary: {},
 		target: "allAdjacentFoes",
 		type: "Ghost",
 	},
