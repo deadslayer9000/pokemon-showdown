@@ -6232,6 +6232,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	omegagreninjabond: {
 		tier: "OU",
 	},
+	omegagreninjaash: {
+		tier: "Illegal",
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
