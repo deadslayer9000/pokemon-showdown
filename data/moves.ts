@@ -2812,6 +2812,28 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		zMove: { effect: 'clearnegativeboost' },
 		contestType: "Tough",
 	},
+	colddeparture: {
+		num: -27,
+		accuracy: 90,
+		basePower: 0,
+		category: "Status",
+		name: "Cold Departure",
+		pp: 20,
+		priority: 0,
+		flags: { protect: 1, reflectable: 1, mirror: 1, sound: 1, bypasssub: 1, metronome: 1 },
+		onHit(target, source, move) {
+			const success = this.boost({ def: -1, spd: -1, spe: -1 }, target, source);
+			if (!success && !target.hasAbility('mirrorarmor')) {
+				delete move.selfSwitch;
+			}
+		},
+		selfSwitch: true,
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+		zMove: { effect: 'healreplacement' },
+		contestType: "Cool",
+	},
 	collisioncourse: {
 		num: 878,
 		accuracy: 100,

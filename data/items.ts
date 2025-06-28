@@ -1331,6 +1331,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		num: -2,
 		gen: 9,
 	},
+	deltalopunnite: {
+		name: "Delta Lopunnite",
+		spritenum: 10,
+		megaStone: "Delta-Lopunny-Mega",
+		megaEvolves: "Delta-Lopunny",
+		itemUser: ["Delta-Lopunny"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -7,
+	},
 	deltasteelixite: {
 		name: "Delta Steelixite",
 		spritenum: 14,
@@ -7727,46 +7739,5 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		num: 151,
 		gen: 2,
 		isNonstandard: "Past",
-	},
-
-	// CAP items
-
-	crucibellite: {
-		name: "Crucibellite",
-		spritenum: 577,
-		megaStone: "Crucibelle-Mega",
-		megaEvolves: "Crucibelle",
-		itemUser: ["Crucibelle"],
-		onTakeItem(item, source) {
-			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-			return true;
-		},
-		num: -1,
-		gen: 6,
-		isNonstandard: "CAP",
-	},
-	vilevial: {
-		name: "Vile Vial",
-		spritenum: 752,
-		fling: {
-			basePower: 60,
-		},
-		onBasePowerPriority: 15,
-		onBasePower(basePower, user, target, move) {
-			if (user.baseSpecies.num === -66 && ['Poison', 'Flying'].includes(move.type)) {
-				return this.chainModify([4915, 4096]);
-			}
-		},
-		onTakeItem(item, pokemon, source) {
-			if (source?.baseSpecies.num === -66 || pokemon.baseSpecies.num === -66) {
-				return false;
-			}
-			return true;
-		},
-		forcedForme: "Venomicon-Epilogue",
-		itemUser: ["Venomicon-Epilogue"],
-		num: -2,
-		gen: 8,
-		isNonstandard: "CAP",
 	},
 };

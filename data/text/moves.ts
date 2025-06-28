@@ -1013,6 +1013,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Raises the user's Attack, Defense, and accuracy by 1 stage.",
 		shortDesc: "Raises user's Attack, Defense, accuracy by 1.",
 	},
+	colddeparture: {
+		name: "Cold Departure",
+		shortDesc: "Lowers foe's Def, Spd, and Spe by 1. Switches out."
+	},
 	collisioncourse: {
 		name: "Collision Course",
 		desc: "Damage is multiplied by 1.3333 if this move is super effective against the target.",

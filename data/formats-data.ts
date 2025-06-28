@@ -6235,6 +6235,12 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	omegagreninjaash: {
 		tier: "Illegal",
 	},
+	deltalopunny: {
+		tier: "UU",
+	},
+	deltalopunnymega: {
+		tier: "OU",
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

@@ -496,6 +496,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 
 		start: "  [POKEMON] is radiating a fairy aura!",
 	},
+	fatalize: {
+		name: "Fatalize",
+		shortDesc: "Normal-type moves become Dark-type and gain 1.2x power."
+	},
 	feastorfamine: {
 		name: "Feast or Famine",
 		shortDesc: "While this Pokemon is active, any stat boosts applied are immediately stolen.",
