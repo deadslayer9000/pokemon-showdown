@@ -1616,6 +1616,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Hits twice. If the first hit breaks the target's substitute, it will take damage for the second hit. In Double Battles, this move attempts to hit the targeted Pokemon and its ally once each. If hitting one of these Pokemon would be prevented by immunity, protection, semi-invulnerability, an Ability, or accuracy, it attempts to hit the other Pokemon twice instead. If this move is redirected, it hits that target twice.",
 		shortDesc: "Hits twice. Doubles: Tries to hit each foe once.",
 	},
+	dragondrive: {
+		name: "Dragon Drive",
+		shortDesc: "Raises the user's Special Attack and Speed by 1.",
+	},
 	dragonenergy: {
 		name: "Dragon Energy",
 		desc: "Power is equal to (user's current HP * 150 / user's maximum HP), rounded down, but not less than 1.",

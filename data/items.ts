@@ -1333,7 +1333,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	},
 	deltalopunnite: {
 		name: "Delta Lopunnite",
-		spritenum: 10,
+		spritenum: 9,
 		megaStone: "Delta-Lopunny-Mega",
 		megaEvolves: "Delta-Lopunny",
 		itemUser: ["Delta-Lopunny"],

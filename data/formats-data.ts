@@ -6241,6 +6241,12 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	deltalopunnymega: {
 		tier: "OU",
 	},
+	ultradunsparce: {
+		tier: "LC",
+	},
+	dunsparath: {
+		tier: "UU"
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
