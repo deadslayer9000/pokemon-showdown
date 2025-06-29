@@ -2818,9 +2818,9 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 			}
 		},
 		flags: {},
-		name: "Monarchs Pole",
+		name: "Monarch's Pole",
 		rating: 2,
-		num: -29,
+		num: -28,
 	},
 	moody: {
 		onResidualOrder: 28,

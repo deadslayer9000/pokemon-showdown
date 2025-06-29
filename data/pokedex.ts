@@ -21073,7 +21073,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		forme: "Mega",
 		types: ["Electric", "Fighting"],
 		baseStats: { hp: 73, atk: 125, def: 114, spa: 107, spd: 104, spe: 111 },
-		ablities: { 0: "Monarchs Pole" },
+		ablities: { 0: "Monarch's Pole" },
 		weightkg: 65,
 		heightm: 1.2,
 		color: "Yellow",
