@@ -2808,6 +2808,20 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 1.5,
 		num: -23,
 	},
+	monarchspole: {
+		onModifyMove(move) {
+			delete move.flags['contact'];
+		},
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				this.boost({ spe: length }, source);
+			}
+		},
+		flags: {},
+		name: "Monarch's Pole",
+		rating: 2,
+		num: -29,
+	},
 	moody: {
 		onResidualOrder: 28,
 		onResidualSubOrder: 2,

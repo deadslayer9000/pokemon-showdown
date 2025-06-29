@@ -5823,6 +5823,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Raises the user's Speed by 2 stages and its Attack by 1 stage.",
 		shortDesc: "Raises the user's Speed by 2 and Attack by 1.",
 	},
+	shockingblow: {
+		name: "Shocking Blow",
+		shortDesc: "This move has an increased critical hit ratio.",
+	},
 	shockwave: {
 		name: "Shock Wave",
 		shortDesc: "This move does not check accuracy.",

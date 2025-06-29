@@ -1305,6 +1305,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		itemUser: ["Delta-Gholdengo"],
 		num: -5,
 	},
+	deltainfernapeite: {
+		name: "Delta Infernapeite",
+		spritenum: 11,
+		megaStone: "Delta-Infernape-Mega",
+		megaEvolves: "Delta-Infernape",
+		itemUser: ["Delta-Infernape"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},  
+		num: -8,
+	},
 	deltalatiasite: {
 		name: "Delta Latiasite",
 		spritenum: 629,

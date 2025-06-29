@@ -6245,7 +6245,19 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "LC",
 	},
 	dunsparath: {
-		tier: "UU"
+		tier: "UU",
+	},
+	deltachimchar: {
+		tier: "LC",
+	},
+	deltamonferno: {
+		tier: "NFE",
+	},
+	deltainfernape: {
+		tier: "RU",
+	},
+	deltainfernapemega: {
+		tier: "OU",
 	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
