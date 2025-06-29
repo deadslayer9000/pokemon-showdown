@@ -107251,7 +107251,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			spark: ["9M","9M"],
 			stealthrock: ["9L1"],
 			stompingtantrum: ["9M"],
-			stompingtantrum: ["9M","9M"],
 			submission: ["9M","9M"],
 			substitute: ["9M"],
 			sunnyday: ["9M"],
