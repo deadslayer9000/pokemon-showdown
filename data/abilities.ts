@@ -2818,7 +2818,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 			}
 		},
 		flags: {},
-		name: "Monarch's Pole",
+		name: "Monarchs Pole",
 		rating: 2,
 		num: -29,
 	},
