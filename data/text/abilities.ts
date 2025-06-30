@@ -1083,7 +1083,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Monarch",
 		shortDesc: "If this Pokemon has 100% HP, its status is cured at the end of the turn.",
 	},
-	monimpole: {
+	monarchspole: {
 		name: "Monarch's Pole",
 		shortDesc: "+1 Speed when KOing a Pokemon. Moves no longer make contact.",
 	},
