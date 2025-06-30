@@ -16766,6 +16766,40 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		zMove: { boost: { spe: 1 } },
 		contestType: "Tough",
 	},
+	sandstormfury: {
+		num: -30,
+		accuracy: true,
+		basePower: 100,
+		category: "SpeciaL",
+		name: "Sandstorm Fury",
+		pp: 5,
+		flags: {bypasssub: 1},
+		breaksProtect: true,
+		onTry(source, target, move) {
+			if (source.species.name === 'Delta-Hoopa-Unbound' || move.hasBounced) {
+				return;
+			}
+			this.add('-fail', source, 'move: Dark Void');
+			this.hint("Only a Pokemon whose form is Darkrai can use this move.");
+			return null;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ground",
+	},
+	sandstormsphere: {
+		num: -31,
+		accuracy: true,
+		basePower: 80,
+		category: "Physical",
+		name: "Sandstorm Sphere",
+		pp: 5,
+		flags: {bypasssub: 1, contact: 1},
+		breaksProtect: true,
+		secondary: null,
+		target: "normal",
+		type: "Rock",
+	},
 	sandtomb: {
 		num: 328,
 		accuracy: 85,

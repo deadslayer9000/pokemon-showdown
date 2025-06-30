@@ -6259,6 +6259,12 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	deltainfernapemega: {
 		tier: "OU",
 	},
+	deltahoopa: {
+		tier: "UU",
+	},
+	deltahoopaunbound: {
+		tier: "OU",
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

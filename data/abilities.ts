@@ -2758,6 +2758,25 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 0,
 		num: 58,
 	},
+	mirage: {
+		onWeather(target, source, effect) {
+		if (this.field.isWeather('sandstorm')) {
+			if (pokemon.mirage) return;
+			if (source.hp <= source.maxhp / 4 || source.maxhp === 1) {
+				this.add('-fail', source, 'ability: Mirage', '[weak]');
+				return this.NOT_FAIL;
+			}
+			pokemon.mirage = true;
+			this.add('-ability', pokemon, 'Mirage');
+			this.addVolatile('substitute');
+			this.damage(target.baseMaxhp / 4, target, target);
+		}
+		},
+		flags: {},
+		name: "Mirage",
+		rating: 3,
+		num: -39,
+	},
 	mirrorarmor: {
 		onTryBoost(boost, target, source, effect) {
 			// Don't bounce self stat changes, or boosts that have already bounced
