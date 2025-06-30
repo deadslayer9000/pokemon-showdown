@@ -2926,7 +2926,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		heightm: 0.3,
 		weightkg: 6.5,
 		color: "Brown",
-		evos: ["Vaporeon", "Jolteon", "Flareon", "Espeon", "Umbreon", "Leafeon", "Glaceon", "Sylveon"],
+		evos: ["Vaporeon", "Jolteon", "Flareon", "Espeon", "Umbreon", "Leafeon", "Glaceon", "Sylveon", "Spectreon", "Guardeon", "Brawleon", "Veneon", "Niveon", "Draceon", "Obsideon", "Manteon", "Ancieon"],
 		eggGroups: ["Field"],
 		otherFormes: ["Eevee-Starter"],
 		formeOrder: ["Eevee", "Eevee-Starter"],
