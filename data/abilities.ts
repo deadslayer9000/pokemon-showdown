@@ -2775,7 +2775,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		flags: {},
 		name: "Mirage",
 		rating: 3,
-		num: -39,
+		num: -29,
 	},
 	mirrorarmor: {
 		onTryBoost(boost, target, source, effect) {
