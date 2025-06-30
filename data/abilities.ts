@@ -2761,12 +2761,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 	mirage: {
 		onWeather(target, source, effect) {
 		if (this.field.isWeather('sandstorm')) {
-			if (pokemon.mirage) return;
+			if (target.mirage) return;
 			if (source.hp <= source.maxhp / 4 || source.maxhp === 1) {
 				this.add('-fail', source, 'ability: Mirage', '[weak]');
 				return this.NOT_FAIL;
 			}
-			pokemon.mirage = true;
+			target.mirage = true;
 			this.add('-ability', pokemon, 'Mirage');
 			this.addVolatile('substitute');
 			this.damage(target.baseMaxhp / 4, target, target);
