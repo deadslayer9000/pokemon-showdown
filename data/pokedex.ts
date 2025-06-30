@@ -2180,7 +2180,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		heightm: 8.8,
 		weightkg: 210,
 		color: "Gray",
-		evos: ["Steelix"],
+		evos: ["Steelix", "Delta-Steelix"],
 		eggGroups: ["Mineral"],
 	},
 	drowzee: {
@@ -19814,7 +19814,6 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		eggGroups: ["Undiscovered"],
 		gen: 5,
 	},
-	/*
 	// ---------------------------------------------------------//
 	// ----------------Delta Pokemon start here!----------------//
 	// ---------------------------------------------------------//
@@ -20164,7 +20163,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Blue",
 		eggGroups: ["Bug", "Dragon"],
 		evos: ["Ultra-Flygon"],
-		prevo: "Ultra-Vibrava",
+		prevo: "Ultra-Trapinch",
 	},
 	ultraflygon: {
 		num: 330,
@@ -20925,7 +20924,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		heightm: 0.6,
 		color: "Blue",
 		eggGroups: ["Water 1"],
-		prevo: "Omega-Froakie",
+		prevo: "Omega-Frogadier",
 		evos: ["Omega-Greninja"],
 	},
 	omegagreninja: {
@@ -21081,5 +21080,4 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		eggGroups: ["Field", "Human-Like"],
 		requiredItem: "Delta Infernapeite",
 	},
-	*/
 };
