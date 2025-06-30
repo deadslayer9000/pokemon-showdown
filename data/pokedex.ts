@@ -7653,6 +7653,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		weightkg: 15,
 		color: "Purple",
 		prevo: "Drifloon",
+		evos: ["Drifblimp"],
 		evoLevel: 28,
 		eggGroups: ["Amorphous"],
 	},
@@ -7665,7 +7666,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		heightm: 0.4,
 		weightkg: 5.5,
 		color: "Brown",
-		evos: ["Lopunny"],
+		evos: ["Lopunny", "Delta-Lopunny"],
 		eggGroups: ["Field", "Human-Like"],
 	},
 	lopunny: {
@@ -20939,7 +20940,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		heightm: 1.5,
 		color: "Blue",
 		eggGroups: ["Water 1"],
-		prevo: "Omega-Froakie",
+		prevo: "Omega-Frogadier",
 		otherFormes: ["Omega-Greninja-Ash"],
 	},
 	omegagreninjabond: {
