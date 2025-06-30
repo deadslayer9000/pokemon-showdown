@@ -19817,7 +19817,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	// ---------------------------------------------------------//
 	// ----------------Delta Pokemon start here!----------------//
 	// ---------------------------------------------------------//
-	/*ultrasnivy: {
+	ultrasnivy: {
 		num: 495,
 		name: "Ultra-Snivy",
 		baseSpecies: "Snivy",
@@ -21080,5 +21080,4 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		eggGroups: ["Field", "Human-Like"],
 		requiredItem: "Delta Infernapeite",
 	},
-	*/
 };
