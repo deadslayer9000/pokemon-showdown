@@ -1013,6 +1013,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Raises the user's Attack, Defense, and accuracy by 1 stage.",
 		shortDesc: "Raises user's Attack, Defense, accuracy by 1.",
 	},
+	colddeparture: {
+		name: "Cold Departure",
+		shortDesc: "Lowers foe's Def, Spd, and Spe by 1. Switches out."
+	},
 	collisioncourse: {
 		name: "Collision Course",
 		desc: "Damage is multiplied by 1.3333 if this move is super effective against the target.",
@@ -1611,6 +1615,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Dragon Darts",
 		desc: "Hits twice. If the first hit breaks the target's substitute, it will take damage for the second hit. In Double Battles, this move attempts to hit the targeted Pokemon and its ally once each. If hitting one of these Pokemon would be prevented by immunity, protection, semi-invulnerability, an Ability, or accuracy, it attempts to hit the other Pokemon twice instead. If this move is redirected, it hits that target twice.",
 		shortDesc: "Hits twice. Doubles: Tries to hit each foe once.",
+	},
+	dragondrive: {
+		name: "Dragon Drive",
+		shortDesc: "Raises the user's Special Attack and Speed by 1.",
 	},
 	dragonenergy: {
 		name: "Dragon Energy",
@@ -5584,6 +5592,14 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			desc: "For 5 turns, the weather becomes Sandstorm. At the end of each turn except the last, all active Pokemon lose 1/8 of their maximum HP, rounded down, unless they are a Ground, Rock, or Steel type. Fails if the current weather is Sandstorm.",
 		},
 	},
+	sandstormfury: {
+		name: "Sandstorm Fury",
+		shortDesc: "Bypasses Substitute and breaks Protect.",
+	},
+	sandstormsphere: {
+		name: "Sandstorm Sphere",
+		shortDesc: "Bypasses Substitute and breaks Protect.",
+	},	
 	sandtomb: {
 		name: "Sand Tomb",
 		desc: "Prevents the target from switching for four or five turns (seven turns if the user is holding Grip Claw). Causes damage to the target equal to 1/8 of its maximum HP (1/6 if the user is holding Binding Band), rounded down, at the end of each turn during effect. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Shed Tail, Teleport, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field, or if the target uses Mortal Spin, Rapid Spin, or Substitute successfully. This effect is not stackable or reset by using this or another binding move.",
@@ -5814,6 +5830,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Shift Gear",
 		desc: "Raises the user's Speed by 2 stages and its Attack by 1 stage.",
 		shortDesc: "Raises the user's Speed by 2 and Attack by 1.",
+	},
+	shockingblow: {
+		name: "Shocking Blow",
+		shortDesc: "This move has an increased critical hit ratio.",
 	},
 	shockwave: {
 		name: "Shock Wave",

@@ -1317,6 +1317,27 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 3,
 		num: 187,
 	},
+	fatalize: {
+		onModifyTypePriority: -1,
+		onModifyType(move, pokemon) {
+			const noModifyType = [
+				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+			];
+			if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
+				!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+				move.type = 'Dark';
+				move.typeChangerBoosted = this.effect;
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
+		},
+		flags: {},
+		name: "Fatalize",
+		rating: 4,
+		num: -27,
+	},
 	filter: {
 		onSourceModifyDamage(damage, source, target, move) {
 			if (target.getMoveHitData(move).typeMod > 0) {
@@ -2737,6 +2758,25 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 0,
 		num: 58,
 	},
+	mirage: {
+		onSwitchIn(pokemon) {
+		if (this.field.isWeather('sandstorm')) {
+			if (pokemon.mirage) return;
+			if (pokemon.hp <= pokemon.maxhp / 4 || pokemon.maxhp === 1) {
+				this.add('-fail', pokemon, 'ability: Mirage', '[weak]');
+				return this.NOT_FAIL;
+			}
+			pokemon.mirage = true;
+			this.add('-ability', pokemon, 'Mirage');
+			pokemon.addVolatile('substitute');
+			this.damage(pokemon.baseMaxhp / 4);
+		}
+		},
+		flags: {},
+		name: "Mirage",
+		rating: 3,
+		num: -29,
+	},
 	mirrorarmor: {
 		onTryBoost(boost, target, source, effect) {
 			// Don't bounce self stat changes, or boosts that have already bounced
@@ -2786,6 +2826,20 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Monarch",
 		rating: 1.5,
 		num: -23,
+	},
+	monarchspole: {
+		onModifyMove(move) {
+			delete move.flags['contact'];
+		},
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				this.boost({ spe: length }, source);
+			}
+		},
+		flags: {},
+		name: "Monarch's Pole",
+		rating: 2,
+		num: -28,
 	},
 	moody: {
 		onResidualOrder: 28,

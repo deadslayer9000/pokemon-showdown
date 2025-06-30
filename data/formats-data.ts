@@ -6232,6 +6232,39 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	omegagreninjabond: {
 		tier: "OU",
 	},
+	omegagreninjaash: {
+		tier: "Illegal",
+	},
+	deltalopunny: {
+		tier: "UU",
+	},
+	deltalopunnymega: {
+		tier: "OU",
+	},
+	ultradunsparce: {
+		tier: "LC",
+	},
+	dunsparath: {
+		tier: "UU",
+	},
+	deltachimchar: {
+		tier: "LC",
+	},
+	deltamonferno: {
+		tier: "NFE",
+	},
+	deltainfernape: {
+		tier: "RU",
+	},
+	deltainfernapemega: {
+		tier: "OU",
+	},
+	deltahoopa: {
+		tier: "UU",
+	},
+	deltahoopaunbound: {
+		tier: "OU",
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

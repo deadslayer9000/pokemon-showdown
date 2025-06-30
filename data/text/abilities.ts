@@ -496,6 +496,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 
 		start: "  [POKEMON] is radiating a fairy aura!",
 	},
+	fatalize: {
+		name: "Fatalize",
+		shortDesc: "Normal-type moves become Dark-type and gain 1.2x power."
+	},
 	feastorfamine: {
 		name: "Feast or Famine",
 		shortDesc: "While this Pokemon is active, any stat boosts applied are immediately stolen.",
@@ -560,6 +564,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Fluffy",
 		desc: "This Pokemon receives 1/2 damage from contact moves, but double damage from Fire moves.",
 		shortDesc: "This Pokemon takes 1/2 damage from contact moves, 2x damage from Fire moves.",
+	},
+	flurry: {
+		name: "Flurry",
+		shortDesc: "At 1/3 or less of its max HP, this Pokemon's offensive stat is 1.5x with Ice attacks.",
 	},
 	forecast: {
 		name: "Forecast",
@@ -1062,6 +1070,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			shortDesc: "If an active Pokemon has the Plus Ability, this Pokemon's Sp. Atk is 1.5x.",
 		},
 	},
+	mirage: {
+		name: "Mirage",
+		shortDesc: "On switch-in; If Sandstorm is active, this Pokemon puts in a Substitute.",
+	},
 	mirrorarmor: {
 		name: "Mirror Armor",
 		desc: "When one of this Pokemon's stat stages would be lowered by another Pokemon, that Pokemon's stat stage is lowered instead. This effect does not happen if this Pokemon's stat stage was already -6. If the other Pokemon has a substitute, neither Pokemon has its stat stage lowered.",
@@ -1074,6 +1086,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	monarch: {
 		name: "Monarch",
 		shortDesc: "If this Pokemon has 100% HP, its status is cured at the end of the turn.",
+	},
+	monarchspole: {
+		name: "Monarch's Pole",
+		shortDesc: "+1 Speed when KOing a Pokemon. Moves no longer make contact.",
 	},
 	moldbreaker: {
 		name: "Mold Breaker",

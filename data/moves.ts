@@ -2812,6 +2812,28 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		zMove: { effect: 'clearnegativeboost' },
 		contestType: "Tough",
 	},
+	colddeparture: {
+		num: -27,
+		accuracy: 90,
+		basePower: 0,
+		category: "Status",
+		name: "Cold Departure",
+		pp: 20,
+		priority: 0,
+		flags: { protect: 1, reflectable: 1, mirror: 1, sound: 1, bypasssub: 1, metronome: 1 },
+		onHit(target, source, move) {
+			const success = this.boost({ def: -1, spd: -1, spe: -1 }, target, source);
+			if (!success && !target.hasAbility('mirrorarmor')) {
+				delete move.selfSwitch;
+			}
+		},
+		selfSwitch: true,
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+		zMove: { effect: 'healreplacement' },
+		contestType: "Cool",
+	},
 	collisioncourse: {
 		num: 878,
 		accuracy: 100,
@@ -4441,6 +4463,24 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "normal",
 		type: "Dragon",
 		maxMove: { basePower: 130 },
+	},
+	dragondrive: {
+		num: -28,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Dragon Drive",
+		pp: 20,
+		priority: 0,
+		flags: { snatch: 1, dance: 1, metronome: 1 },
+		boosts: {
+			spa: 1,
+			spe: 1,
+		},
+		secondary: null,
+		target: "self",
+		type: "Electric",
+		zMove: { effect: 'clearnegativeboost' },
 	},
 	dragonenergy: {
 		num: 820,
@@ -16726,6 +16766,40 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		zMove: { boost: { spe: 1 } },
 		contestType: "Tough",
 	},
+	sandstormfury: {
+		num: -30,
+		accuracy: true,
+		basePower: 100,
+		category: "SpeciaL",
+		name: "Sandstorm Fury",
+		pp: 5,
+		flags: {bypasssub: 1},
+		breaksProtect: true,
+		onTry(source, target, move) {
+			if (source.species.name === 'Delta-Hoopa-Unbound' || move.hasBounced) {
+				return;
+			}
+			this.add('-fail', source, 'move: Dark Void');
+			this.hint("Only a Pokemon whose form is Darkrai can use this move.");
+			return null;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ground",
+	},
+	sandstormsphere: {
+		num: -31,
+		accuracy: true,
+		basePower: 80,
+		category: "Physical",
+		name: "Sandstorm Sphere",
+		pp: 5,
+		flags: {bypasssub: 1, contact: 1},
+		breaksProtect: true,
+		secondary: null,
+		target: "normal",
+		type: "Rock",
+	},
 	sandtomb: {
 		num: 328,
 		accuracy: 85,
@@ -17383,6 +17457,20 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Steel",
 		zMove: { effect: 'clearnegativeboost' },
 		contestType: "Clever",
+	},
+	shockingblow: {
+		num: -29,
+		accuracy: 100,
+		basePower: 85,
+		category: "Physical",
+		name: "Shocking Blow",
+		pp: 15,
+		priority: 0,
+		critRatio: 2,
+		flags: { protect: 1, mirror: 1, metronome: 1, contact: 1 },
+		secondary: null,
+		target: "normal",
+		type: "Electric",
 	},
 	shockwave: {
 		num: 351,

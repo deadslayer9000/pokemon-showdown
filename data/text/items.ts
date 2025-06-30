@@ -371,11 +371,15 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 	},
 	deltalatiasite: {
 		name: "Delta Latiasite",
-		shortDesc: "If held by Delta-Latias, this item allows it to Mega Evolve in battle.",
+		shortDesc: "If held by Delta-Latias, this item allows her to Mega Evolve in battle.",
 	},
 	deltalatiosite: {
 		name: "Delta Latiosite",
-		shortDesc: "If held by Delta-Latios, this item allows it to Mega Evolve in battle.",
+		shortDesc: "If held by Delta-Latios, this item allows him to Mega Evolve in battle.",
+	},
+	deltalopunnite: {
+		name: "Delta Lopunnite",
+		shortDesc: "If held by Delta-Lopunny, this item allows it to Mega Evolve in battle.",
 	},
 	deltasteelixite: {
 		name: "Delta Steelixite",
@@ -938,11 +942,11 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 	},
 	latiasite: {
 		name: "Latiasite",
-		shortDesc: "If held by a Latias, this item allows it to Mega Evolve in battle.",
+		shortDesc: "If held by a Latias, this item allows her to Mega Evolve in battle.",
 	},
 	latiosite: {
 		name: "Latiosite",
-		shortDesc: "If held by a Latios, this item allows it to Mega Evolve in battle.",
+		shortDesc: "If held by a Latios, this item allows him to Mega Evolve in battle.",
 	},
 	laxincense: {
 		name: "Lax Incense",
