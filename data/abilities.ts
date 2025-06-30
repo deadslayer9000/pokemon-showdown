@@ -2768,7 +2768,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 			}
 			target.mirage = true;
 			this.add('-ability', target, 'Mirage');
-			this.addVolatile('substitute');
+			target.addVolatile('substitute');
 			this.damage(target.baseMaxhp / 4, target, target);
 		}
 		},
