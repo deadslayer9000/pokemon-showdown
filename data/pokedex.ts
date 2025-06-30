@@ -19814,6 +19814,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		eggGroups: ["Undiscovered"],
 		gen: 5,
 	},
+	/*
 	// ---------------------------------------------------------//
 	// ----------------Delta Pokemon start here!----------------//
 	// ---------------------------------------------------------//
@@ -21080,4 +21081,5 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		eggGroups: ["Field", "Human-Like"],
 		requiredItem: "Delta Infernapeite",
 	},
+	*/
 };
