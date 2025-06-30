@@ -21080,5 +21080,4 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		eggGroups: ["Field", "Human-Like"],
 		requiredItem: "Delta Infernapeite",
 	},
-		
 };

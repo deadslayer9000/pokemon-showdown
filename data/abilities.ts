@@ -2808,7 +2808,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 1.5,
 		num: -23,
 	},
-	monarchspole: {
+	monimpole: {
 		onModifyMove(move) {
 			delete move.flags['contact'];
 		},
