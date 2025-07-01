@@ -616,6 +616,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Flower Sweet",
 		shortDesc: "Evolves Milcery into Alcremie when held and spun around.",
 	},
+	flygonite: {
+		name: "Flygonite",
+		shortDesc: "If held by a Flygon, this item allows it to Mega Evolve in battle."
+	},		
 	flyinggem: {
 		name: "Flying Gem",
 		shortDesc: "Holder's first successful Flying-type attack will have 1.3x power. Single use.",

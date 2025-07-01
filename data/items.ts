@@ -2086,6 +2086,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		num: 1113,
 		gen: 8,
 	},
+	flygonite: {
+		name: "Flygonite",
+		spritenum: 3,
+		megaStone: "Flygon-Mega",
+		megaEvolves: "Flygon",
+		itemUser: ["Flygon"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -9
+	},
 	flyinggem: {
 		name: "Flying Gem",
 		spritenum: 149,
