@@ -6269,7 +6269,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "LC",
 	},
 	omegatinkatuff: {
-		tier: "NFE",
+		tier: "RU",
 	},
 	omegatinkaton: {
 		tier: "UU",
