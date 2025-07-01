@@ -6283,6 +6283,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	eruptois: {
 		tier: "OU",
 	},
+	flygonmega: {
+		tier: "UU",
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

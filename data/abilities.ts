@@ -989,6 +989,32 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 4,
 		num: 191,
 	},
+	desertspirit: {
+		onModifyMove(move) {
+			if (this.field.isWeather('sandstorm'){
+				if (move.category === 'Status') return;
+				if (!move.flags['sound'] {
+					add move.flags['sound'];
+				}
+			}
+		},
+		onBasePowerPriority: 7,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['sound']) {
+				this.debug('Desert spirit boost');
+				return this.chainModify([5325, 4096]);
+			}
+		},
+		onSourceModifyDamage(damage, source, target, move) {
+			if (move.flags['sound']) {
+				this.debug('Desert spirit weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		flags: {},
+		name: "Desert Spirit",
+		rating: 4,
+		num: -31
 	desolateland: {
 		onStart(source) {
 			this.field.setWeather('desolateland');

@@ -21190,4 +21190,19 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		eggGroups: ["Field"],
 		prevo: "Delta-Torkoal",
 	},
+	flygonmega: {
+		num: 330,
+		name: "Flygon-Mega",
+		baseSpecies: "Flygon",
+		forme: "Mega",
+		types: ["Ground", "Dragon"],
+		baseStats: { hp: 80, atk: 115, def: 80, spa: 115, spd: 80, spe: 50 },
+		abilities: { 0: "Desert Spirit", },
+		weightkg: 50,
+		heightm: 2,
+		color: "Green",
+		eggGroups: ["Bug", "Dragon"],
+		requiredItem: "Flygonite",
+	},
+		
 };
