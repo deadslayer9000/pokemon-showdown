@@ -7681,6 +7681,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		start: "  [POKEMON] was wrapped by [SOURCE]!",
 		move: "[POKEMON]'s attack continues!", // gen 1 only
 	},
+	wretchedstab: {
+		name: "Wretched Stab",
+		shortDesc: "+5 Power per Pokemon on your side fainted.",
+	},
 	wringout: {
 		name: "Wring Out",
 		desc: "Power is equal to 120 * (target's current HP / target's maximum HP), rounded half down, but not less than 1.",

@@ -6274,6 +6274,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	omegatinkaton: {
 		tier: "UU",
 	},
+	ectarachnid: {
+		tier: "NU",
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

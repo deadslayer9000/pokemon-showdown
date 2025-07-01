@@ -3560,6 +3560,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		prevo: "Spinarak",
 		evoLevel: 22,
 		eggGroups: ["Bug"],
+		prevo: "Spinarak",
+		evos: ["Ectarachnid"],
 	},
 	crobat: {
 		num: 169,
@@ -21150,5 +21152,17 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Green",
 		eggGroups: ["Fairy"],
 		prevo: "Omega-Tinkatuff",
+	},
+	ectarachnid: {
+		num: 2009,
+		name: "Ectarachnid",
+		types: ["Bug", "Ghost"],
+		baseStats: { hp: 90, atk: 120, def: 100, spa: 70, spd: 80, spe: 65 },
+		abilities: { 0: "Swarm", 1: "Merciless" H: "Sniper" },
+		weightkg: 40.5,
+		heightm: 1.4,
+		color: "White",
+		eggGroups: ["Bug"],
+		prevo: "Ariados",
 	},
 };
