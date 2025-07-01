@@ -3560,7 +3560,6 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		prevo: "Spinarak",
 		evoLevel: 22,
 		eggGroups: ["Bug"],
-		prevo: "Spinarak",
 		evos: ["Ectarachnid"],
 	},
 	crobat: {
