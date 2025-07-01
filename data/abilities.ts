@@ -991,10 +991,10 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 	},
 	desertspirit: {
 		onModifyMove(move) {
-			if (this.field.isWeather('sandstorm'){
+			if (this.field.isWeather('sandstorm')){
 				if (move.category === 'Status') return;
-				if (!move.flags['sound'] {
-					add move.flags['sound'];
+				if (!move.flags['sound']) {
+					move.flags['sound'];
 				}
 			}
 		},
@@ -1015,6 +1015,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Desert Spirit",
 		rating: 4,
 		num: -31
+	},
 	desolateland: {
 		onStart(source) {
 			this.field.setWeather('desolateland');
