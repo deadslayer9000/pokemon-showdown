@@ -994,7 +994,8 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 			if (this.field.isWeather('sandstorm')){
 				if (move.category === 'Status') return;
 				if (!move.flags['sound']) {
-					move.flags['sound'];
+					move.flags['sound'] = 1;
+					move.flags['bypasssub'] = 1;
 				}
 			}
 		},

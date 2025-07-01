@@ -21196,7 +21196,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		baseSpecies: "Flygon",
 		forme: "Mega",
 		types: ["Ground", "Dragon"],
-		baseStats: { hp: 80, atk: 115, def: 80, spa: 115, spd: 80, spe: 50 },
+		baseStats: { hp: 80, atk: 115, def: 80, spa: 115, spd: 80, spe: 150 },
 		abilities: { 0: "Desert Spirit", },
 		weightkg: 50,
 		heightm: 2,
