@@ -21150,6 +21150,5 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Green",
 		eggGroups: ["Fairy"],
 		prevo: "Omega-Tinkatuff",
-		evos: "Omega-Tinkaton",
 	},
 };
