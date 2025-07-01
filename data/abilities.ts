@@ -1681,7 +1681,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 	geyser: {
 		onModifyMove(move) {
 			if (move.secondaries) {
-				this.debug('doubling secondary chance');
+				this.debug('doubling burn chance');
 				for (const secondary of move.secondaries) {
 					if (secondary.status === 'brn') {
 					if (secondary.chance) secondary.chance *= 2;
@@ -1692,9 +1692,9 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Water') {
 					this.add('-immune', target, '[from] ability: Geyser');
-				}
 				return null;
-			},
+			}
+		},
 		flags: {},
 		name: "Geyser",
 		rating: 3,

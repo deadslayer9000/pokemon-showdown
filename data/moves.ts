@@ -9127,13 +9127,12 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		priority: 0,
 		flags: {mirror: 1},
 		onHit(target, source) {
-			if ([!'brn'].includes(pokemon.status)) return false;
-			pokemon.cureStatus();
-			const atk = target.getStat('atk', false, true);
-			const success = this.boost({ atk: -1 }, target, source, null, false, true);
-			return !!(this.heal(atk, source, target) || success);
+			if ([!'brn'].includes(target.status)) return false;
+			target.cureStatus();
 			target.clearBoosts();
 			this.add('-clearboost', target);
+			const atk = target.getStat('atk', false, true);
+			return !!(this.heal(atk, source, target));
 		},
 		target: "normal",
 		type: "Fire",

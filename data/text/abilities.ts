@@ -624,7 +624,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	geyser: {
 		name: "Geyser",
-		shortDesc: "Secondary effects that burn have a2x chance to activate. Immune to Water-type moves.",
+		shortDesc: "Secondary effects that burn have a 2x chance to activate. Immune to Water-type moves.",
 	},
 	gluttony: {
 		name: "Gluttony",
