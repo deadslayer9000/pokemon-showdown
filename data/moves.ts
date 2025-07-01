@@ -9117,6 +9117,27 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		maxMove: { basePower: 130 },
 		contestType: "Tough",
 	},
+	heatsiphon: {
+		num: -34,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Heat Siphon",
+		pp: 10,
+		priority: 0,
+		flags: {mirror: 1},
+		onHit(target, source) {
+			if ([!'brn'].includes(pokemon.status)) return false;
+			pokemon.cureStatus();
+			const atk = target.getStat('atk', false, true);
+			const success = this.boost({ atk: -1 }, target, source, null, false, true);
+			return !!(this.heal(atk, source, target) || success);
+			target.clearBoosts();
+			this.add('-clearboost', target);
+		},
+		target: "normal",
+		type: "Fire",
+	},
 	heatwave: {
 		num: 257,
 		accuracy: 90,
@@ -22562,7 +22583,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		contestType: "Tough",
 	},
 	wretchedstab: {
-		num: -31,
+		num: -33,
 		accuracy: 100,
 		basePower: 20,
 		basePowerCallback(pokemon, target, move) {

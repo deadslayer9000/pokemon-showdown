@@ -3052,6 +3052,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			desc: "The power of this move depends on (user's weight / target's weight), rounded down. Power is equal to 120 if the result is 5 or more, 100 if 4, 80 if 3, 60 if 2, and 40 if 1 or less.",
 		},
 	},
+	heatsiphon: {
+		name: "Heat Siphon",
+		shortDesc: "Cure status, boosts. Heals user. Fails if foe not burned.",
+	},
 	heatwave: {
 		name: "Heat Wave",
 		desc: "Has a 10% chance to burn the target.",

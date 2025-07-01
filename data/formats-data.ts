@@ -6277,6 +6277,12 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	ectarachnid: {
 		tier: "NU",
 	},
+	deltatorkoal: {
+		tier: "RU",
+	},
+	eruptois: {
+		tier: "OU",
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

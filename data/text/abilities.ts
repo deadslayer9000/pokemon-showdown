@@ -622,6 +622,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "This Pokemon's Normal-type moves become Electric-type moves and have their power multiplied by 1.2. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
 		shortDesc: "This Pokemon's Normal-type moves become Electric type and have 1.2x power.",
 	},
+	geyser: {
+		name: "Geyser",
+		shortDesc: "Secondary effects that burn have a2x chance to activate. Immune to Water-type moves.",
+	},
 	gluttony: {
 		name: "Gluttony",
 		desc: "When this Pokemon is holding a Berry that usually activates with 1/4 or less of its maximum HP, it is eaten at 1/2 or less of its maximum HP instead.",
