@@ -1694,13 +1694,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 					this.add('-immune', target, '[from] ability: Geyser');
 				}
 				return null;
-			}
-		},
+			},
 		flags: {},
 		name: "Geyser",
 		rating: 3,
 		num: -30,
-},
+	},
 	gluttony: {
 		onStart(pokemon) {
 			pokemon.abilityState.gluttony = true;
