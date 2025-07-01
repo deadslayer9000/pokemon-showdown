@@ -1696,6 +1696,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Hits twice. If the first hit breaks the target's substitute, it will take damage for the second hit.",
 		shortDesc: "Hits 2 times in one turn.",
 	},
+	dualdivide: {
+		name: "Dual Divide",
+		shortDesc: "Hits 2 times, Super-effective vs. Steel.",
+	},
 	dualwingbeat: {
 		name: "Dual Wingbeat",
 		desc: "Hits twice. If the first hit breaks the target's substitute, it will take damage for the second hit.",

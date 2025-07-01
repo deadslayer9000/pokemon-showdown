@@ -4687,6 +4687,23 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		maxMove: { basePower: 130 },
 		contestType: "Tough",
 	},
+	dualdivide: {
+		num: -32,
+		accuracy: 95,
+		basePower: 40,
+		category: "Physical",
+		name: "Dual Divide",
+		pp: 10,
+		priority: 0,
+		flags: { contact: 1, protect: 1, slicing: 1 },
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Steel') return 1;
+		},
+		multihit: 2,
+		secondary: null,
+		target: "normal",
+		type: "Bug",
+	},
 	dualwingbeat: {
 		num: 814,
 		accuracy: 90,
