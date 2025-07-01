@@ -21158,7 +21158,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		name: "Ectarachnid",
 		types: ["Bug", "Ghost"],
 		baseStats: { hp: 90, atk: 120, def: 100, spa: 70, spd: 80, spe: 65 },
-		abilities: { 0: "Swarm", 1: "Merciless" H: "Sniper" },
+		abilities: { 0: "Swarm", 1: "Merciless", H: "Sniper" },
 		weightkg: 40.5,
 		heightm: 1.4,
 		color: "White",
