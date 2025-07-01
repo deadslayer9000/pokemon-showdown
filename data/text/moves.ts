@@ -1696,6 +1696,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Hits twice. If the first hit breaks the target's substitute, it will take damage for the second hit.",
 		shortDesc: "Hits 2 times in one turn.",
 	},
+	dualdivide: {
+		name: "Dual Divide",
+		shortDesc: "Hits 2 times, Super-effective vs. Steel.",
+	},
 	dualwingbeat: {
 		name: "Dual Wingbeat",
 		desc: "Hits twice. If the first hit breaks the target's substitute, it will take damage for the second hit.",
@@ -3047,6 +3051,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		gen5: {
 			desc: "The power of this move depends on (user's weight / target's weight), rounded down. Power is equal to 120 if the result is 5 or more, 100 if 4, 80 if 3, 60 if 2, and 40 if 1 or less.",
 		},
+	},
+	heatsiphon: {
+		name: "Heat Siphon",
+		shortDesc: "Cure status, boosts. Heals user. Fails if foe unburned.",
 	},
 	heatwave: {
 		name: "Heat Wave",
@@ -7676,6 +7684,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 
 		start: "  [POKEMON] was wrapped by [SOURCE]!",
 		move: "[POKEMON]'s attack continues!", // gen 1 only
+	},
+	wretchedstab: {
+		name: "Wretched Stab",
+		shortDesc: "+5 Power per Pokemon on your side fainted.",
 	},
 	wringout: {
 		name: "Wring Out",

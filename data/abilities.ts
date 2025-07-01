@@ -1678,6 +1678,28 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 4,
 		num: 206,
 	},
+	geyser: {
+		onModifyMove(move) {
+			if (move.secondaries) {
+				this.debug('doubling burn chance');
+				for (const secondary of move.secondaries) {
+					if (secondary.status === 'brn') {
+					if (secondary.chance) secondary.chance *= 2;
+					}
+				}
+			}
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Water') {
+					this.add('-immune', target, '[from] ability: Geyser');
+				return null;
+			}
+		},
+		flags: {},
+		name: "Geyser",
+		rating: 3,
+		num: -30,
+	},
 	gluttony: {
 		onStart(pokemon) {
 			pokemon.abilityState.gluttony = true;

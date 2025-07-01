@@ -6265,6 +6265,24 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	deltahoopaunbound: {
 		tier: "OU",
 	},
+	omegatinkatink: {
+		tier: "LC",
+	},
+	omegatinkatuff: {
+		tier: "RU",
+	},
+	omegatinkaton: {
+		tier: "UU",
+	},
+	ectarachnid: {
+		tier: "NU",
+	},
+	deltatorkoal: {
+		tier: "RU",
+	},
+	eruptois: {
+		tier: "OU",
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

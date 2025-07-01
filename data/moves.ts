@@ -4687,6 +4687,23 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		maxMove: { basePower: 130 },
 		contestType: "Tough",
 	},
+	dualdivide: {
+		num: -32,
+		accuracy: 95,
+		basePower: 40,
+		category: "Physical",
+		name: "Dual Divide",
+		pp: 10,
+		priority: 0,
+		flags: { contact: 1, protect: 1, slicing: 1, mirror: 1 },
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Steel') return 1;
+		},
+		multihit: 2,
+		secondary: null,
+		target: "normal",
+		type: "Bug",
+	},
 	dualwingbeat: {
 		num: 814,
 		accuracy: 90,
@@ -9099,6 +9116,26 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		zMove: { basePower: 160 },
 		maxMove: { basePower: 130 },
 		contestType: "Tough",
+	},
+	heatsiphon: {
+		num: -34,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Heat Siphon",
+		pp: 10,
+		priority: 0,
+		flags: {mirror: 1},
+		onHit(target, source) {
+			if ([!'brn'].includes(target.status)) return false;
+			target.cureStatus();
+			target.clearBoosts();
+			this.add('-clearboost', target);
+			const atk = target.getStat('atk', false, true);
+			return !!(this.heal(atk, source, target));
+		},
+		target: "normal",
+		type: "Fire",
 	},
 	heatwave: {
 		num: 257,
@@ -22543,6 +22580,22 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "normal",
 		type: "Normal",
 		contestType: "Tough",
+	},
+	wretchedstab: {
+		num: -33,
+		accuracy: 100,
+		basePower: 20,
+		basePowerCallback(pokemon, target, move) {
+			return 20 + 5 * pokemon.side.totalFainted;
+		},
+		category: "Physical",
+		name: "Wretched Stab",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1 },
+		secondary: null,
+		target: "normal",
+		type: "Ghost",
 	},
 	wringout: {
 		num: 378,
