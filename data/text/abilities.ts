@@ -2249,6 +2249,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Unseen Fist",
 		shortDesc: "This Pokemon's contact moves ignore the target's protection, except Max Guard.",
 	},
+	usurped: {
+		name: "Usurped",
+		shortDesc: "Immune to Poison. Taunts for 3 turns on switch-in if at full HP.",
+	},
 	vesselofruin: {
 		name: "Vessel of Ruin",
 		shortDesc: "Active Pokemon without this Ability have their Special Attack multiplied by 0.75.",

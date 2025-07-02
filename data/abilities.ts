@@ -5613,6 +5613,23 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 2,
 		num: 260,
 	},
+	usurped: {
+		flags: {},
+		name: "Usurped",
+		rating: 2.5,
+		num: -32,
+	},
+	usurper: {
+		onDamagingHit(damage, target, source, move) {
+			if (this.checkMoveMakesContact(move, source, target)) {
+					source.addVolatile('confusion', target);
+			}
+		},
+		flags: {},
+		name: "Usurper",
+		rating: 2,
+		num: -33,
+	},
 	vesselofruin: {
 		onStart(pokemon) {
 			if (this.suppressingAbility(pokemon)) return;

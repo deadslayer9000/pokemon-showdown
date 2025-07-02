@@ -423,6 +423,22 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		zMove: { effect: 'clearnegativeboost' },
 		contestType: "Cute",
 	},
+	ampserum: {
+		num: -35,
+		accuracy: 95,
+		basePower: 80,
+		category: "Special",
+		name: "Amp Serum",
+		pp: 15,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		secondary: {
+			chance: 100,
+			volatileStatus: 'taunt',
+		},
+		target: "normal",
+		type: "Electric",
+	},
 	anchorshot: {
 		num: 677,
 		accuracy: 100,

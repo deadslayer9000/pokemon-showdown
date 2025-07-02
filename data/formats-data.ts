@@ -6286,6 +6286,15 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	flygonmega: {
 		tier: "UU",
 	},
+	deltaslowpoke: {
+		tier: "LC",
+	},
+	slowhost: {
+		tier: "UU",
+	},
+	deltatentacool: {
+		tier: "LC",
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
