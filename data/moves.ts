@@ -2583,12 +2583,14 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		onTry(source, target, move) {
 			if (source.activeMoveActions > 1) {
 				this.hint("Chilling Silence doesn't flinch and loses priority after the first turn.");
-				move.priority = 0;
+				move.priority = -1;	
 			}
 		},
 		onModifyMove(move, source) {
 			if (source.activeMoveActions > 1) {
-			move.secondaries = [];
+			for (const secondary of move.secondaries) {
+				if (secondary.chance) secondary.chance *= 0;
+				}
 			}
 		},
 		secondary: {
