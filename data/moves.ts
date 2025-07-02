@@ -9143,7 +9143,10 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		priority: 0,
 		flags: {mirror: 1},
 		onHit(target, source) {
-			if ([!'brn'].includes(target.status)) return false;
+			if ([!'brn'].includes(target.status)) {
+				this.hint("Heat Siphon only works if the targeted Pokemon is burned.");
+				return false;
+			}
 			target.cureStatus();
 			target.clearBoosts();
 			this.add('-clearboost', target);
