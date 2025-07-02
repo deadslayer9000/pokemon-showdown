@@ -2571,6 +2571,29 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Flying",
 		contestType: "Cute",
 	},
+	chillingsilence: {
+		num: -36,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Chilling Silence",
+		pp: 10,
+		priority: 3,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		secondary: {
+			chance: 100,
+			volatileStatus: 'flinch',
+		},
+		onTry(source) {
+			if (source.activeMoveActions > 1) {
+				this.hint("Chilling Silence doesn't flinch and loses priority after the first turn.");
+				move.priority = 0;
+				move.secondary.chance = 0;
+			}
+		},
+		target: "normal",
+		type: "Ghost",
+	},
 	chillingwater: {
 		num: 886,
 		accuracy: 100,

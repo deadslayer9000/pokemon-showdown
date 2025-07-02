@@ -928,6 +928,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			shortDesc: "For Chatot, 31% chance to confuse the target.",
 		},
 	},
+	chillingsilence: {
+		name: "Chilling Silence",
+		shortDesc: "Hits first. First turn out only. 100% flinch chance.",
+	},
 	chillingwater: {
 		name: "Chilling Water",
 		desc: "Has a 100% chance to lower the target's Attack by 1 stage.",

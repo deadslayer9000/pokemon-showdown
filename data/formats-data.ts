@@ -6307,6 +6307,12 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	shayminlake: {
 		tier: "UU"
 	},
+	annetrem: {
+		tier: "NFE"
+	},
+	bansherene: {
+		tier: "UU"
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

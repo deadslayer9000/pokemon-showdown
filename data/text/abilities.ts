@@ -358,6 +358,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 
 		block: "#damp",
 	},
+	deathdefiance: {
+		name: "Death Defiance",
+		shortDesc: "Once per battle, this Pokemon survives a lethal hit.",
+	},
 	defeatist: {
 		name: "Defeatist",
 		desc: "While this Pokemon has 1/2 or less of its maximum HP, its Attack and Special Attack are halved.",
