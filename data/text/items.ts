@@ -1802,6 +1802,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Stone Plate",
 		shortDesc: "Holder's Rock-type attacks have 1.2x power. Judgment is Rock type.",
 	},
+	stormpeakmask: {
+		name: "Stormpeak Mask",
+		shortDesc: "Ogerpon-Stormpeak: Attacks has 1.2x power; Terrastalize to gain Embody Aspect."
+	},
 	strangeball: {
 		name: "Strange Ball",
 		shortDesc: "Placeholder if caught in Poke Ball not in current game.",

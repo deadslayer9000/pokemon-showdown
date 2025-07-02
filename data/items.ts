@@ -5825,7 +5825,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	},
 	stormpeakmask: {
 		name: "Stormpeak Mask",
-		spritenum: 757,
+		spritenum: 758,
 		num: -10,
 		fling: {
 			basePower: 60,
