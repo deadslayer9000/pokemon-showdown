@@ -493,6 +493,20 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 3,
 		num: 171,
 	},
+	breach: {
+		onSwitchIn(target, pokemon) {
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+			for (const condition of sideConditions) {
+				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Foam Frenzy', `[of] ${pokemon}`);
+				}
+			}
+		},
+		flags: {},
+		name: "Breach",
+		rating: 4,
+		num: -36,
+	},
 	brilliance: {
 		onStart(pokemon) {
 			let activated = false;
@@ -927,6 +941,15 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: 219,
 	},
 	deathdefiance: {
+		/*onDamagePriority: -30,
+		onDamage(pokemon, damage, target, source, effect) {
+			if (target.hp === target.hp && damage >= target.hp && effect && effect.effectType === 'Move') {
+				if (pokemon.deathdefiance) return;
+				pokemon.deathdefiance = true;
+				this.add('-ability', target, 'Death Defiance');
+				return target.hp - 1;
+			}
+		},*/
 		flags: { breakable: 1 },
 		name: "Death Defiance",
 		rating: 3,
@@ -1331,6 +1354,17 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Emergency Exit",
 		rating: 1,
 		num: 194,
+	},
+	exalt: {
+		onSwitchIn(target) {
+		if (target.hasType('Dragon')) return false;
+		if (!target.addType('Dragon')) return false;
+		this.add('-start', target, 'typeadd', 'Dragon', 'ability: Exalt');
+		},
+		flags: {},
+		name: "Exalt",
+		rating: 3,
+		num: -35,
 	},
 	fabled: {
 		onSourceAfterFaint(length, target, source, effect) {

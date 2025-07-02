@@ -6305,13 +6305,22 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU"
 	},
 	shayminlake: {
-		tier: "UU"
+		tier: "UU",
 	},
 	annetrem: {
-		tier: "NFE"
+		tier: "NFE",
 	},
 	bansherene: {
-		tier: "UU"
+		tier: "UU",
+	},
+	deltaclamperl: {
+		tier: "LC",
+	},
+	deltagorebyss: {
+		tier: "RU",
+	},
+	deltahuntail: {
+		tier: "UU",
 	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",

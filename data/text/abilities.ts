@@ -187,6 +187,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Bulletproof",
 		shortDesc: "This Pokemon is immune to bullet moves.",
 	},
+	breach: {
+		name: "Breach",
+		shortDesc: "On switch in, this pokemon clears hazards."
+	},
 	brilliance: {
 		name: "Brilliance",
 		shortDesc: "On switch-in, this pokemon lowers the Special Attack of opponents by 1.",
@@ -488,6 +492,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Emergency Exit",
 		desc: "When this Pokemon has more than 1/2 its maximum HP and takes damage bringing it to 1/2 or less of its maximum HP, it immediately switches out to a chosen ally. This effect applies after all hits from a multi-hit move. This effect is prevented if the move had a secondary effect removed by the Sheer Force Ability. This effect applies to both direct and indirect damage, except Curse and Substitute on use, Belly Drum, Pain Split, and confusion damage.",
 		shortDesc: "This Pokemon switches out when it reaches 1/2 or less of its maximum HP.",
+	},
+	exalt: {
+		name: "Exalt",
+		shortDesc: "On switch-in, the opposing Pokemon gains the Dragon type.",
 	},
 	fabled: {
 		name: "Fabled",
