@@ -9142,7 +9142,6 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		pp: 10,
 		priority: 0,
 		flags: {mirror: 1},
-		//'', 'slp', 'frz', 'par', 'psn', 'tox'
 		onHit(target, source) {
 			if (['', 'slp', 'frz', 'par', 'psn', 'tox'].includes(target.status)) {
 				this.hint("Heat Siphon only works if the targeted Pokemon is burned.");
