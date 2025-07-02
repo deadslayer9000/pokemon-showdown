@@ -6304,6 +6304,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	ogerponstormpeak: {
 		tier: "UU"
 	},
+	shayminlake: {
+		tier: "UU"
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

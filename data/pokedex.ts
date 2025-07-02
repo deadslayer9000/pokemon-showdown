@@ -8756,8 +8756,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 		tags: ["Mythical"],
-		otherFormes: ["Shaymin-Sky"],
-		formeOrder: ["Shaymin", "Shaymin-Sky"],
+		otherFormes: ["Shaymin-Sky", "Shaymin-Lake"],
+		formeOrder: ["Shaymin", "Shaymin-Sky", "Shaymin-Lake"]
 	},
 	shayminsky: {
 		num: 492,
@@ -21321,5 +21321,19 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		requiredItem: "Stormpeak Mask",
 		changesFrom: "Ogerpon",
 		requiredTeraType: "Electric",
+	},
+	shayminlake: {
+		num: 492,
+		name: "Shaymin-Lake",
+		baseSpecies: "Shaymin",
+		forme: "Lake",
+		types: ["Grass", "Water"],
+		baseStats: { hp: 100, atk: 120, def: 75, spa: 127, spd: 75, spe: 103 },
+		abilities: { 0: "Sap Sipper" },
+		weightkg: 5.2,
+		heightm: 0.4,
+		color: "Green",
+		eggGroups: ["Undiscovered"],
+		changesFrom: "Shaymin"
 	},
 };
