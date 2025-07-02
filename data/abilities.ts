@@ -1271,6 +1271,19 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 3.5,
 		num: 303,
 	},
+	embodyaspectstormpeak: {
+		onStart(pokemon) {
+			if (pokemon.baseSpecies.name === 'Ogerpon-Stormpeak-Tera' && pokemon.terastallized &&
+				this.effectState.embodied !== pokemon.previouslySwitchedIn) {
+				this.effectState.embodied = pokemon.previouslySwitchedIn;
+				this.boost({ spe: 1 }, pokemon);
+			}
+		},
+		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, notransform: 1 },
+		name: "Embody Aspect (Stormpeak)",
+		rating: 3.5,
+		num: 303,
+	},
 	embodyaspectteal: {
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.name === 'Ogerpon-Teal-Tera' && pokemon.terastallized &&

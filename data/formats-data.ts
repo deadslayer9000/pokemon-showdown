@@ -6301,6 +6301,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	rotomradio: {
 		tier: "NU"
 	},
+	ogerponstormpeak: {
+		tier: "UU"
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

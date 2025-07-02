@@ -10516,6 +10516,9 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			case 'Ogerpon-Cornerstone': case 'Ogerpon-Cornerstone-Tera':
 				move.type = 'Rock';
 				break;
+			case 'Ogerpon-Stormpeak': case 'Ogerpon-Stormpeak-Tera':
+				move.type = 'Electric';
+				break;
 			}
 		},
 		secondary: null,
