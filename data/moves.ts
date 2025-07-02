@@ -9144,17 +9144,15 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		flags: {mirror: 1},
 		//'', 'slp', 'frz', 'par', 'psn', 'tox'
 		onHit(target, source) {
-			if ([!'brn'].includes(target.status)) {
+			if (['', 'slp', 'frz', 'par', 'psn', 'tox'].includes(target.status)) {
 				this.hint("Heat Siphon only works if the targeted Pokemon is burned.");
 				return false;
 			}
-			else {
 			target.cureStatus();
 			target.clearBoosts();
 			this.add('-clearboost', target);
 			const atk = target.getStat('atk', false, true);
 			return !!(this.heal(atk, source, target));
-			}
 		},
 		target: "normal",
 		type: "Fire",
