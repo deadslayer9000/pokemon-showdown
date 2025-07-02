@@ -494,14 +494,14 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: 171,
 	},
 	breach: {
-		onSwitchIn(target, pokemon) {
+		/*onSwitchIn(target, pokemon, move) {
 			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
 			for (const condition of sideConditions) {
-				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+				if (pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Foam Frenzy', `[of] ${pokemon}`);
 				}
 			}
-		},
+		},*/
 		flags: {},
 		name: "Breach",
 		rating: 4,
@@ -1356,11 +1356,11 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: 194,
 	},
 	exalt: {
-		onSwitchIn(target) {
+	/*	onStart(target) {
 		if (target.hasType('Dragon')) return false;
 		if (!target.addType('Dragon')) return false;
-		this.add('-start', target, 'typeadd', 'Dragon', 'ability: Exalt');
-		},
+		target.add('-start', target, 'typeadd', 'Dragon', 'ability: Exalt');
+		}, */
 		flags: {},
 		name: "Exalt",
 		rating: 3,
