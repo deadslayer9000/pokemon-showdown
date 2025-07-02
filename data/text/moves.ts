@@ -134,6 +134,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			shortDesc: "Raises the user's Special by 2.",
 		},
 	},
+	ampserum: {
+		name: "Amp Serum",
+		shortDesc: "Taunts the foe for 3 turns on hit.",
+	},
 	anchorshot: {
 		name: "Anchor Shot",
 		desc: "Prevents the target from switching out. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field.",

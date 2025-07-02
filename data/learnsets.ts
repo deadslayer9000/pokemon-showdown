@@ -108320,6 +108320,16 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			wringout: ["9L1"],
 		}
 	},
+	rotomdowse: {
+		learnset: {
+			boomburst: ["9R"],
+		},
+	},
+	rotomradio: {
+		learnset: {
+			psychic: ["9R"],
+		},
+	},
 	pokestarsmeargle: {
 		eventData: [
 			{generation: 5, level: 60, gender: "M", abilities: ["owntempo"], moves: ["mindreader", "guillotine", "tailwhip", "gastroacid"]},

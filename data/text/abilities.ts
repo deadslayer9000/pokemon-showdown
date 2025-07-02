@@ -2253,6 +2253,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Usurped",
 		shortDesc: "Immune to Poison. Taunts for 3 turns on switch-in if at full HP.",
 	},
+	usurper: {
+		name: "Usurper",
+		shortDesc: "Confuses Pokemon that make contact with this Pokemon.",
+	},
 	vesselofruin: {
 		name: "Vessel of Ruin",
 		shortDesc: "Active Pokemon without this Ability have their Special Attack multiplied by 0.75.",

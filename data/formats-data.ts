@@ -6295,6 +6295,12 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	deltatentacool: {
 		tier: "LC",
 	},
+	rotomdowse: {
+		tier: "UU"
+	},
+	rotomradio: {
+		tier: "NU"
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
