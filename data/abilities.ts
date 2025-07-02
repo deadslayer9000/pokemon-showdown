@@ -927,14 +927,6 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: 219,
 	},
 	deathdefiance: {
-		onDamagePriority: -30,
-		onDamage(damage, target, source, effect) {
-			if (target.hp === target.maxhp && damage >= target.hp && effect && effect.effectType === 'Move' && pokemon.deathdefiance != 1) {
-				pokemon.deathdefiance = 1;
-				this.add('-ability', target, 'Death Defiance');
-				return target.hp - 1;
-			}
-		},
 		flags: { breakable: 1 },
 		name: "Death Defiance",
 		rating: 3,

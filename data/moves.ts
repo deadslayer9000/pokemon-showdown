@@ -2580,16 +2580,15 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		pp: 10,
 		priority: 3,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
+		onTry(source, move) {
+			if (source.activeMoveActions > 1) {
+				this.hint("Chilling Silence doesn't flinch and loses priority after the first turn.");
+				return false;
+			}
+		},
 		secondary: {
 			chance: 100,
 			volatileStatus: 'flinch',
-		},
-		onTry(source) {
-			if (source.activeMoveActions > 1) {
-				this.hint("Chilling Silence doesn't flinch and loses priority after the first turn.");
-				move.priority = 0;
-				move.secondary.chance = 0;
-			}
 		},
 		target: "normal",
 		type: "Ghost",
