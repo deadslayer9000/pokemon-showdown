@@ -2680,7 +2680,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	garchompmega: {
 		isNonstandard: "Past",
-		tier: "Illegal",
+		tier: "Illegal",	
 		natDexTier: "(OU)",
 	},
 	riolu: {
@@ -3365,9 +3365,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "LC",
 	},
 	amoonguss: {
-		tier: "NU",
+		tier: "UU",
 		doublesTier: "DOU",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	frillish: {
 		isNonstandard: "Past",
@@ -6035,7 +6035,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 	},
 	scizantrum: {
-		tier: "UU",
+		tier: "OU",
 	},
 	dragascue: {
 		tier: "UU",
@@ -6077,7 +6077,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "RU",
 	},
 	lucaurus: {
-		tier: "UU",
+		tier: "OU",
 	},
 	deltastarly: {
 		tier: "LC",
@@ -6101,7 +6101,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 	},
 	deltalatiosmega: {
-		tier: "OU",
+		tier: "UU",
 	},
 	manaphymega: {
 		tier: "OU",
@@ -6179,7 +6179,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "NFE",
 	},
 	deltaroserade: {
-		tier: "UU",
+		tier: "OU",
 	},
 	ironshades: {
 		tier: "UU",
@@ -6263,7 +6263,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 	},
 	deltahoopaunbound: {
-		tier: "OU",
+		tier: "UU",
 	},
 	omegatinkatink: {
 		tier: "LC",
