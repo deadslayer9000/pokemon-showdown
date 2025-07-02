@@ -5823,6 +5823,26 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		num: 309,
 		gen: 4,
 	},
+	stormpeakmask: {
+		name: "Stormpeak Mask",
+		spritenum: 757,
+		num: -10,
+		fling: {
+			basePower: 60,
+		},
+		onBasePowerPriority: 15,
+		onBasePower(basePower, user, target, move) {
+			if (user.baseSpecies.name.startsWith('Ogerpon-Stormpeak')) {
+				return this.chainModify([4915, 4096]);
+			}
+		},
+		onTakeItem(item, source) {
+			if (source.baseSpecies.baseSpecies === 'Ogerpon') return false;
+			return true;
+		},
+		forcedForme: "Ogerpon-Stormpeak",
+		itemUser: ["Ogerpon-Stormpeak"],
+	},
 	strangeball: {
 		name: "Strange Ball",
 		spritenum: 308,
