@@ -2261,6 +2261,13 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Unseen Fist",
 		shortDesc: "This Pokemon's contact moves ignore the target's protection, except Max Guard.",
 	},
+	unrelentingstampede: {
+		name: "Unrelenting Stampede",
+		desc: "This Pokemon's moves have their power multiplied by 1+(X*0.1), where X is the total number of times any Pokemon has fainted on the user's side when this Ability became active, and X cannot be greater than 5.",
+		shortDesc: "This Pokemon's moves have 10% more power for each fainted opposing Pokemon, up to 5.",
+
+		activate: "  [POKEMON] gained strength from the fallen!",
+	},
 	usurped: {
 		name: "Usurped",
 		shortDesc: "Immune to Poison. Taunts for 3 turns on switch-in if at full HP.",
@@ -2291,6 +2298,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			desc: "This Pokemon is immune to damaging Electric-type moves and restores 1/4 of its maximum HP, rounded down, when hit by one.",
 			shortDesc: "This Pokemon heals 1/4 its max HP when hit by a damaging Electric move; immunity.",
 		},
+	},
+	vorpal: {
+		name: "Vorpal",
+		shortDesc: "If this Pokemon is statused, its Speed is 1.5x; ignores burn halving physical damage.",
 	},
 	wanderingspirit: {
 		name: "Wandering Spirit",

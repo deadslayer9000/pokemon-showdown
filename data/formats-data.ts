@@ -6322,6 +6322,24 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	deltahuntail: {
 		tier: "UU",
 	},
+	gorochu: {
+		tier: "UU",
+	},
+	deltashellos: {
+		tier: "LC",
+	},
+	deltagastrodon: {
+		tier: "UU",
+	},
+	deltatandemaus: {
+		tier: "LC",
+	},
+	necromauser: {
+		tier: "UU",
+	},
+	slaughtermaus: {
+		tier: "UU",
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

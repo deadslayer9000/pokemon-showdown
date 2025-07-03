@@ -5666,6 +5666,31 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 2,
 		num: 260,
 	},
+	unrelentingstampede: {
+		/*onStart(pokemon) {
+			if (pokemon.side.totalFainted) {
+				this.add('-activate', pokemon, 'ability: Supreme Overlord');
+				const fallen = Math.min(pokemon.side.totalFainted, 5);
+				this.add('-start', pokemon, `fallen${fallen}`, '[silent]');
+				this.effectState.fallen = fallen;
+			}
+		},
+		onEnd(pokemon) {
+			this.add('-end', pokemon, `fallen${this.effectState.fallen}`, '[silent]');
+		},
+		onBasePowerPriority: 21,
+		onBasePower(basePower, attacker, defender, move) {
+			if (this.effectState.fallen) {
+				const powMod = [4096, 4506, 4915, 5325, 5734, 6144];
+				this.debug(`Supreme Overlord boost: ${powMod[this.effectState.fallen]}/4096`);
+				return this.chainModify([powMod[this.effectState.fallen], 4096]);
+			}
+		},*/
+		flags: {},
+		name: "Unrelenting Stampede",
+		rating: 4,
+		num: -37,
+	},
 	usurped: {
 		flags: {},
 		name: "Usurped",
@@ -5751,6 +5776,18 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Volt Absorb",
 		rating: 3.5,
 		num: 10,
+	},
+	vorpal: {
+		onModifySpePriority: 5,
+		onModifySpe(spe, pokemon) {
+			if (pokemon.status) {
+				return this.chainModify(1.5);
+			}
+		},
+		flags: {},
+		name: "Vorpal",
+		rating: 3,
+		num: -38,
 	},
 	wanderingspirit: {
 		onDamagingHit(damage, target, source, move) {

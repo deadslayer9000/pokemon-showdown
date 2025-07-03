@@ -361,6 +361,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			desc: "The user is protected from most attacks made by other Pokemon during this turn, and Pokemon making contact with the user become poisoned. This move has a 1/X chance of being successful, where X starts at 1 and triples each time this move is successfully used. X resets to 1 if this move fails, if the user's last move used is not Baneful Bunker, Detect, Endure, King's Shield, Protect, Quick Guard, Spiky Shield, or Wide Guard, or if it was one of those moves and the user's protection was broken. Fails if the user moves last this turn.",
 		},
 	},
+	barbaricincision: {
+		name: "Barbaric Incision",
+		shortDesc: "Power doubles if user is statused.",
+	},
 	barbbarrage: {
 		name: "Barb Barrage",
 		desc: "Has a 50% chance to poison the target. Power doubles if the target is already poisoned.",
@@ -1323,6 +1327,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Dazzling Gleam",
 		desc: "No additional effect.",
 		shortDesc: "No additional effect. Hits adjacent foes.",
+	},
+	decisivebolt: {
+		name: "Decisive Bolt",
+		shortDesc: "Almost always goes first.",
 	},
 	decorate: {
 		name: "Decorate",
@@ -5122,6 +5130,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		},
 
 		activate: "  ([TARGET] is being withdrawn...)",
+	},
+	putridgrasp: {
+		name: "Putrid Grasp",
+		shortDesc: "The user recovers 50% of the damage dealt.",
 	},
 	pyroball: {
 		name: "Pyro Ball",

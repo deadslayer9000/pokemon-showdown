@@ -1124,6 +1124,24 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		zMove: { boost: { def: 1 } },
 		contestType: "Tough",
 	},
+	barbaricincision: {
+		num: -39,
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		name: "Barbaric Incision",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, contact: 1 },
+		onBasePower(basePower, pokemon) {
+			if (pokemon.status && pokemon.status !== 'slp') {
+				return this.chainModify(2);
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+	},
 	barbbarrage: {
 		num: 839,
 		accuracy: 100,
@@ -3734,6 +3752,19 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "allAdjacentFoes",
 		type: "Fairy",
 		contestType: "Beautiful",
+	},
+	decisivebolt: {
+		num: -37,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Decisive Bolt",
+		pp: 15,
+		priority: 2,
+		flags: {},
+		secondary: null,
+		target: "normal",
+		type: "Electric",
 	},
 	decorate: {
 		num: 777,
@@ -15494,6 +15525,20 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "normal",
 		type: "Dark",
 		contestType: "Clever",
+	},
+	putridgrasp: {
+		num: -38,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Putrid Grasp",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, contact: 1 },
+		secondary: null,
+		drain: [1, 2],
+		target: "normal",
+		type: "Poison",
 	},
 	pyroball: {
 		num: 780,
