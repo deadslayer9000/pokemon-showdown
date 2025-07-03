@@ -21484,4 +21484,15 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		eggGroups: ["Field", "Fairy"],
 		prevo: "Delta-Tandemaus",
 	},
+	ironcoil: {
+		num: 2081,
+		name: "Iron Coil",
+		types: ["Steel", "Electric"],
+		baseStats: { hp: 78, atk: 56, def: 124, spa: 168, spd: 108, spe: 36 },
+		abilities: { 0: "Quark Drive" },
+		weightkg: 99,
+		heightm: 1.2,
+		color: "Gray",
+		eggGroups: ["Undiscovered"],
+	},
 };

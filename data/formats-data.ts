@@ -6340,6 +6340,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	slaughtermaus: {
 		tier: "UU",
 	},
+	ironcoil: {
+		tier: "RU",
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

@@ -1814,8 +1814,8 @@ export class BattleActions {
 
 		if (isCrit && !suppressMessages) this.battle.add('-crit', target);
 
-		if (pokemon.status === 'brn' && move.category === 'Physical' && !pokemon.hasAbility('guts')) {
-			if (this.battle.gen < 6 || move.id !== 'facade') {
+		if (pokemon.status === 'brn' && move.category === 'Physical' && (!pokemon.hasAbility('guts') && !pokemon.hasAbility('vorpal'))) {
+			if (this.battle.gen < 6 || (move.id !== 'facade' || move.id !== 'barbaricincision')) {
 				baseDamage = this.battle.modify(baseDamage, 0.5);
 			}
 		}
