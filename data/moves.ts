@@ -17805,6 +17805,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		num: -40,
 		accuracy: true,
 		basePower: 0,
+		name: "Simulate",
 		category: "Status",
 		pp: 20,
 		priority: 0,
