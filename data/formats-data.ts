@@ -6352,6 +6352,12 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	deltaambipom: {
 		tier: "UU"
 	},
+	ultraaipom: {
+		tier: "LC"
+	},
+	ultraambipom: {
+		tier: "UU"
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
