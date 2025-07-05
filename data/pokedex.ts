@@ -21586,13 +21586,14 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	},
 	zoroarkhisuimega: {
 		num: 571,
-		name: "Hisui-Zoroark-Mega",
+		name: "Zoroark-Hisui-Mega",
 		baseSpecies: "Zoroark-Hisui",
 		types: ["Normal", "Ghost"],
 		forme: "Mega",
 		baseStats: { hp: 55, atk: 130, def: 70, spa: 155, spd: 70, spe: 130 },
 		abilities: { 0: "Shapeshift" },
 		weightkg: 90.5,
+		heightm: 1.6,
 		color: "White",
 		eggGroups: ["Field"],
 		requiredItem: "Hisuianzoroarkite"

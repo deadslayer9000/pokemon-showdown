@@ -4803,6 +4803,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			desc: "Hits two to five times. Has a 3/8 chance to hit two or three times, and a 1/8 chance to hit four or five times. Damage is calculated once for the first hit and used for every hit. If one of the hits breaks the target's substitute, the move ends.",
 		},
 	},
+	planetdemolition: {
+		name: "Planet Demolition",
+		shortDesc: "Lowers the user's Attack and Defense by 1.",
+	},
 	plasmafists: {
 		name: "Plasma Fists",
 		desc: "If this move is successful, causes Normal-type moves to become Electric type this turn.",
