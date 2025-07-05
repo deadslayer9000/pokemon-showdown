@@ -6364,6 +6364,25 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	hoverpollen: {
 		tier: "UU",
 	},
+	zoroarkhisuimega: {
+		tier: "UU",
+	},
+	deltagolurk: {
+		tier: "UU",
+	},
+	ultraglimmet: {
+		tier: "LC",
+	},
+	ultraglimmora: {
+		tier: "NU"
+	},
+	deltaglimmet: {
+		tier: "LC",
+	},
+	deltaglimmora: {
+		tier: "UU"
+	},
+	
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

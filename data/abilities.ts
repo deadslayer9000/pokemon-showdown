@@ -789,6 +789,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 2,
 		num: 238,
 	},
+	covenant: {
+		flags: {},
+		name: "Covenant",
+		rating: 0,
+		num: -41,
+	},
 	cudchew: {
 		onEatItem(item, pokemon) {
 			if (item.isBerry && pokemon.addVolatile('cudchew')) {
@@ -4498,6 +4504,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Shadow Tag",
 		rating: 5,
 		num: 23,
+	},
+	shapeshift: {
+		flags: {},
+		name: "Shapeshift",
+		rating: 0,
+		num: -40
 	},
 	sharpness: {
 		onBasePowerPriority: 19,

@@ -14434,6 +14434,25 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		maxMove: { basePower: 130 },
 		contestType: "Cool",
 	},
+	planetdemolition: {
+		num: -42,
+		accuracy: 100,
+		basePower: 120, 
+		category: "Physical",
+		name: "Planet Demolition",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, bullet: 1 },
+		self: {
+			boosts: {
+				atk: -1,
+				def: -1,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Rock",
+	},
 	plasmafists: {
 		num: 721,
 		accuracy: 100,
@@ -14651,7 +14670,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		name: "Pollen Puff",
 		pp: 15,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, allyanim: 1, metronome: 1, bullet: 1 },
+		flags: { protect: 1, mirror: 1, allyanim: 1, metronome: 1, },
 		onTryHit(target, source, move) {
 			if (source.isAlly(target)) {
 				move.basePower = 0;
@@ -22376,6 +22395,19 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		secondary: null,
 		target: "normal",
 		type: "Ghost",
+	},
+	whiteout: {
+		num: -43,
+		accuracy: 100,
+		basePower: 1.20,
+		category: "Special",
+		name: "Whiteout",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1 },
+		secondary: null,
+		target: "normal",
+		type: "Ice",
 	},
 	wickedblow: {
 		num: 817,

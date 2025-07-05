@@ -828,6 +828,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Heracronite",
 		shortDesc: "If held by a Heracross, this item allows it to Mega Evolve in battle.",
 	},
+	hisuizoroarkite: {
+		name: "Hisuizoroarkite",
+		shortDesc: "If held by a Zoroark-Hisui, this item allows it to Mega Evolve in battle.",
+	},
 	hondewberry: {
 		name: "Hondew Berry",
 		shortDesc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",

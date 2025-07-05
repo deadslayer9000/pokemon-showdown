@@ -4869,6 +4869,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Has a 10% chance to poison the target and a higher chance for a critical hit.",
 		shortDesc: "High critical hit ratio. 10% chance to poison.",
 	},
+	pollenbloom: {
+		name: "Pollen Bloom",
+		shortDesc: "+1 SpA turn 1. Hits turn 2. No charge in sunlight.",
+	},
 	pollenpuff: {
 		name: "Pollen Puff",
 		desc: "If the target is an ally, this move restores 1/2 of its maximum HP, rounded down, instead of dealing damage.",
@@ -7576,6 +7580,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	whiskaway: {
 		name: "Whisk Away",
 		shortDesc: "1.5x power if foe holds an item; Removes item.",
+	},
+	whiteout: {
+		name: "Whiteout",
+		shortDesc: "Charge move. No charge in weather and sets snow.",
 	},
 	wickedblow: {
 		name: "Wicked Blow",

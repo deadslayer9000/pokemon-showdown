@@ -288,6 +288,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "When this Pokemon is hit by an attack, the Speed of all other Pokemon on the field is lowered by 1 stage.",
 		shortDesc: "If this Pokemon is hit, it lowers the Speed of all other Pokemon on the field 1 stage.",
 	},
+	covenant: {
+		name: "Covenant",
+		shortDesc: "Atk and Spe are halved. This ability becomes Huge Power when under 50% HP."
+	},
 	cudchew: {
 		name: "Cud Chew",
 		shortDesc: "If this Pokemon eats a Berry, it will eat that Berry again at the end of the next turn.",
@@ -1709,6 +1713,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			desc: "Prevents opposing Pokemon from choosing to switch out.",
 			shortDesc: "Prevents opposing Pokemon from choosing to switch out.",
 		},
+	},
+	shapeshift: {
+		name: "Shapeshift",
+		shortDesc: "This Pokemon transforms into the opposing pokemon when using Bitter Malice.",
 	},
 	sharpness: {
 		name: "Sharpness",
