@@ -6350,16 +6350,19 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "LC",
 	},
 	deltaambipom: {
-		tier: "UU"
+		tier: "UU",
 	},
 	ultraaipom: {
-		tier: "LC"
+		tier: "LC",
 	},
 	ultraambipom: {
-		tier: "UU"
+		tier: "UU",
 	},
 	ironworld: {
-		tier: "UU"
+		tier: "UU",
+	},
+	hoverpollen: {
+		tier: "UU",
 	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
