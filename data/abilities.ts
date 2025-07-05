@@ -4721,6 +4721,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 4,
 		num: 117,
 	},
+	spectreonslaught: {
+		flags: {},
+		name: "Spectre Onslaught",
+		rating: 3,
+		num: -39,
+	},
 	solarpower: {
 		onModifySpAPriority: 5,
 		onModifySpA(spa, pokemon) {

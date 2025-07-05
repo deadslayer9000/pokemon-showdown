@@ -6343,6 +6343,15 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	ironcoil: {
 		tier: "RU",
 	},
+	spiritombunbound: {
+		tier: "UU",
+	},
+	deltaaipom: {
+		tier: "LC",
+	},
+	deltaambipom: {
+		tier: "UU"
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
