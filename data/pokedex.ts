@@ -21506,7 +21506,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		weightkg: 108,
 		color: "Purple",
 		eggGroups: ["Amorphous"],
-	},
+	},/*
 	deltaaipom: {
 		num: 190,
 		name: "Delta-Aipom",
@@ -21561,7 +21561,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Red",
 		eggGroups: ["Field"],
 		prevo: "Ultra-Aipom",
-	},
+	}, */
 	ironworld: {
 		num: 2077,
 		name: "Iron World",
