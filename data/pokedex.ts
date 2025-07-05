@@ -21562,5 +21562,26 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		eggGroups: ["Field"],
 		prevo: "Ultra-Aipom",
 	},
-		
+	ironworld: {
+		num: 2077,
+		name: "Iron World",
+		types: ["Grass", "Electric"],
+		baseStats: { hp: 64, atk: 132, def: 150, spa: 64, spd: 128, spe: 32 },
+		abilities: { 0: "Quark Drive" },
+		weightkg: 512,
+		heightm: 1.2,
+		color: "Green",
+		eggGroups: ["Undiscovered"],
+	},
+	hoverpollen: {
+		num: 2048,
+		name: "Hover Pollen",
+		types: ["Grass", "Dragon"],
+		baseStats: { hp: 83, atk: 55, def: 123, spa: 111, spd: 133, spe: 65 },
+		abilities: { 0: "Protosynthesis" },
+		weightkg: 135, 
+		heightm: 2,
+		color: "Green",
+		eggGroups: ["Undiscovered"],
+	},
 };

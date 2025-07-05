@@ -14613,6 +14613,36 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Poison",
 		contestType: "Clever",
 	},
+	pollenbloom: {
+		num: -41,
+		accuracy: 100,
+		basePower: 130,
+		category: "Special",
+		name: "Pollen Bloom",
+		pp: 10,
+		priority: 0,
+		flags: { charge: 1, protect: 1, mirror: 1, metronome: 1 },
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			this.boost({ spa: 1 }, attacker, attacker, move);
+			if (['sunnyday', 'desolateland'].includes(attacker.effectiveWeather())) {
+				this.attrLastMove('[still]');
+				this.addMove('-anim', attacker, move.name, defender);
+				return;
+			}
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Grass",
+	},
 	pollenpuff: {
 		num: 676,
 		accuracy: 100,
@@ -17770,6 +17800,18 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Normal",
 		zMove: { boost: { spa: 1 } },
 		contestType: "Cute",
+	},
+	simulate: {
+		num: -40,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		pp: 20,
+		priority: 0,
+		flags: { protect: 1, bypasssub: 1, allyanim: 1, failencore: 1, nosleeptalk: 1, noassist: 1, failcopycat: 1, failmimic: 1, failinstruct: 1 },
+		secondary: null,
+		target: "all",
+		type: "Normal",
 	},
 	sing: {
 		num: 47,

@@ -5905,6 +5905,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			desc: "Causes the target's Ability to become Simple. Fails if the target's Ability is Multitype, Simple, or Truant.",
 		},
 	},
+	simulate: {
+		name: "Simulate",
+		shortDesc: "Copies last move; cure party and sets E.Terrain.",
+	},
 	sing: {
 		name: "Sing",
 		shortDesc: "Causes the target to fall asleep.",
