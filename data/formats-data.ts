@@ -6382,6 +6382,12 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	deltaglimmora: {
 		tier: "UU"
 	},
+	deltarattata: {
+		tier: "LC"
+	},
+	deltaraticate: {
+		tier: "NU"
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
