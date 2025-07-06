@@ -281,7 +281,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	costar: {
 		name: "Costar",
-		shortDesc: "On switch-in, this Pokemon copies all of its ally's stat stage changes.",
+		shortDesc: "On switch-in, this Pokemon copies all of its ally's stat stage changes",
 	},
 	cottondown: {
 		name: "Cotton Down",
