@@ -21034,7 +21034,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		forme: "Delta",
 		types: ["Electric"],
 		baseStats: { hp: 44, atk: 58, def: 44, spa: 58, spd: 44, spe: 61 },
-		ablities: { 0: "Surge", H: "Vital Spirit" },
+		abilities: { 0: "Surge", H: "Vital Spirit" },
 		weightkg: 6.5,
 		heightm: 0.5,
 		color: "Yellow",
