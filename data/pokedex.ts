@@ -2181,7 +2181,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		heightm: 8.8,
 		weightkg: 210,
 		color: "Gray",
-		evos: ["Steelix", "Delta-Steelix"],
+		evos: ["Steelix", "Steelix-Delta"],
 		eggGroups: ["Mineral"],
 	},
 	drowzee: {
@@ -6046,7 +6046,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Brown",
 		evos: ["Vibrava"],
 		eggGroups: ["Bug", "Dragon"],
-		otherFormes: ["Ultra-Trapinch"],
+		otherFormes: ["Trapinch-Ultra"],
 	},
 	vibrava: {
 		num: 329,
@@ -6061,7 +6061,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		evoLevel: 35,
 		evos: ["Flygon"],
 		eggGroups: ["Bug", "Dragon"],
-		otherFormes: ["Ultra-Vibrava"],
+		otherFormes: ["Vibrava-Ultra"],
 	},
 	flygon: {
 		num: 330,
@@ -6075,7 +6075,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		prevo: "Vibrava",
 		evoLevel: 45,
 		eggGroups: ["Bug", "Dragon"],
-		otherFormes: ["Ultra-Flygon"],
+		otherFormes: ["Flygon-Ultra"],
 	},
 	cacnea: {
 		num: 331,
@@ -7668,7 +7668,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		heightm: 0.4,
 		weightkg: 5.5,
 		color: "Brown",
-		evos: ["Lopunny", "Delta-Lopunny"],
+		evos: ["Lopunny", "Lopunny-Delta"],
 		eggGroups: ["Field", "Human-Like"],
 	},
 	lopunny: {
@@ -9092,7 +9092,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Green",
 		evos: ["Servine"],
 		eggGroups: ["Field", "Grass"],
-		otherFormes: ["Ultra-Snivy"],
+		otherFormes: ["Snivy-Ultra"],
 	},
 	servine: {
 		num: 496,
@@ -10973,7 +10973,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		heightm: 1,
 		weightkg: 92,
 		color: "Green",
-		evos: ["Golurk", "Delta-Golurk"],
+		evos: ["Golurk", "Golurk-Delta"],
 		eggGroups: ["Mineral"],
 	},
 	golurk: {
@@ -16864,7 +16864,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		weightkg: 1.8,
 		color: "White",
 		evos: ["Maushold", "Maushold-Four"],
-		otherFormes: ["Delta-Tandemaus"],
+		otherFormes: ["Tandemaus-Delta"],
 		eggGroups: ["Field", "Fairy"],
 	},
 	maushold: {
@@ -20235,7 +20235,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		heightm: 0.8,
 		color: "Green",
 		eggGroups: ["Bug"],
-		prevo: "Delta-Shuckle",
+		prevo: "Shuckle-Delta",
 	},
 	deltaazelf: {
 		num: 482,
@@ -20590,7 +20590,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		heightm: 0.5,
 		color: "Yellow",
 		eggGroups: ["Field"],
-		evos: ["Delta-Quilava"],
+		evos: ["Quilava-Delta"],
 	},
 	deltaquilava: {
 		num: 156,
@@ -20604,8 +20604,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		heightm: 0.9,
 		color: "Yellow",
 		eggGroups: ["Field"],
-		prevo: "Delta-Cyndaquil",
-		evos: ["Delta-Typhlosion"],
+		prevo: "Cyndaquil-Delta",
+		evos: ["Typhlosion-Delta"],
 	},
 	deltatyphlosion: {
 		num: 157,
@@ -20619,7 +20619,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		heightm: 1.7,
 		color: "Yellow",
 		eggGroups: ["Field"],
-		prevo: "Delta-Quilava",
+		prevo: "Quilava-Delta",
 	},
 	tapukehe: {
 		num: 2024,
@@ -20879,7 +20879,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	},
 	ultragengar: {
 		num: 94,
-		name: "Ultra-Gengar",
+		name: "Gengar-Ultra",
 		baseSpecies: "Gengar",
 		forme: "Ultra",
 		types: ["Ghost", "Water"],
@@ -21025,7 +21025,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		heightm: 3,
 		color: "Green",
 		eggGroups: ["Field"],
-		prevo: "Ultra-Dunsparce",
+		prevo: "Dunsparce-Ultra",
 	},	
 	deltachimchar: {
 		num: 390,
