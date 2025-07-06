@@ -134,6 +134,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			shortDesc: "Raises the user's Special by 2.",
 		},
 	},
+	ampserum: {
+		name: "Amp Serum",
+		shortDesc: "Taunts the foe for 3 turns on hit.",
+	},
 	anchorshot: {
 		name: "Anchor Shot",
 		desc: "Prevents the target from switching out. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field.",
@@ -356,6 +360,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		gen7: {
 			desc: "The user is protected from most attacks made by other Pokemon during this turn, and Pokemon making contact with the user become poisoned. This move has a 1/X chance of being successful, where X starts at 1 and triples each time this move is successfully used. X resets to 1 if this move fails, if the user's last move used is not Baneful Bunker, Detect, Endure, King's Shield, Protect, Quick Guard, Spiky Shield, or Wide Guard, or if it was one of those moves and the user's protection was broken. Fails if the user moves last this turn.",
 		},
+	},
+	barbaricincision: {
+		name: "Barbaric Incision",
+		shortDesc: "Power doubles if user is statused.",
 	},
 	barbbarrage: {
 		name: "Barb Barrage",
@@ -924,6 +932,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			shortDesc: "For Chatot, 31% chance to confuse the target.",
 		},
 	},
+	chillingsilence: {
+		name: "Chilling Silence",
+		shortDesc: "Hits first. First turn out only. 100% flinch chance.",
+	},
 	chillingwater: {
 		name: "Chilling Water",
 		desc: "Has a 100% chance to lower the target's Attack by 1 stage.",
@@ -1315,6 +1327,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Dazzling Gleam",
 		desc: "No additional effect.",
 		shortDesc: "No additional effect. Hits adjacent foes.",
+	},
+	decisivebolt: {
+		name: "Decisive Bolt",
+		shortDesc: "Almost always goes first.",
 	},
 	decorate: {
 		name: "Decorate",
@@ -3054,7 +3070,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	heatsiphon: {
 		name: "Heat Siphon",
-		shortDesc: "Cure status, boosts. Heals user. Fails if foe unburned.",
+		desc: "Cures the foe's status and clears their boosts. Heals the user based on the foe's attack stat. Fails if the target pokemon isn't burned.",
+		shortDesc: "Clears foe status and boosts. Heals the user.",
 	},
 	heatwave: {
 		name: "Heat Wave",
@@ -4786,6 +4803,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			desc: "Hits two to five times. Has a 3/8 chance to hit two or three times, and a 1/8 chance to hit four or five times. Damage is calculated once for the first hit and used for every hit. If one of the hits breaks the target's substitute, the move ends.",
 		},
 	},
+	planetdemolition: {
+		name: "Planet Demolition",
+		shortDesc: "Lowers the user's Attack and Defense by 1.",
+	},
 	plasmafists: {
 		name: "Plasma Fists",
 		desc: "If this move is successful, causes Normal-type moves to become Electric type this turn.",
@@ -4851,6 +4872,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Poison Tail",
 		desc: "Has a 10% chance to poison the target and a higher chance for a critical hit.",
 		shortDesc: "High critical hit ratio. 10% chance to poison.",
+	},
+	pollenbloom: {
+		name: "Pollen Bloom",
+		shortDesc: "+1 SpA turn 1. Hits turn 2. No charge in sunlight.",
 	},
 	pollenpuff: {
 		name: "Pollen Puff",
@@ -5113,6 +5138,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		},
 
 		activate: "  ([TARGET] is being withdrawn...)",
+	},
+	putridgrasp: {
+		name: "Putrid Grasp",
+		shortDesc: "The user recovers 50% of the damage dealt.",
 	},
 	pyroball: {
 		name: "Pyro Ball",
@@ -5883,6 +5912,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		gen5: {
 			desc: "Causes the target's Ability to become Simple. Fails if the target's Ability is Multitype, Simple, or Truant.",
 		},
+	},
+	simulate: {
+		name: "Simulate",
+		shortDesc: "Copies last move; cure party and sets E.Terrain.",
 	},
 	sing: {
 		name: "Sing",
@@ -7551,6 +7584,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	whiskaway: {
 		name: "Whisk Away",
 		shortDesc: "1.5x power if foe holds an item; Removes item.",
+	},
+	whiteout: {
+		name: "Whiteout",
+		shortDesc: "Charge move. No charge in weather and sets snow.",
 	},
 	wickedblow: {
 		name: "Wicked Blow",

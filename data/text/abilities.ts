@@ -187,6 +187,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Bulletproof",
 		shortDesc: "This Pokemon is immune to bullet moves.",
 	},
+	breach: {
+		name: "Breach",
+		shortDesc: "On switch in, this pokemon clears hazards."
+	},
 	brilliance: {
 		name: "Brilliance",
 		shortDesc: "On switch-in, this pokemon lowers the Special Attack of opponents by 1.",
@@ -284,6 +288,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "When this Pokemon is hit by an attack, the Speed of all other Pokemon on the field is lowered by 1 stage.",
 		shortDesc: "If this Pokemon is hit, it lowers the Speed of all other Pokemon on the field 1 stage.",
 	},
+	covenant: {
+		name: "Covenant",
+		shortDesc: "Atk and Spe are halved. This ability becomes Huge Power when under 50% HP."
+	},
 	cudchew: {
 		name: "Cud Chew",
 		shortDesc: "If this Pokemon eats a Berry, it will eat that Berry again at the end of the next turn.",
@@ -357,6 +365,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		shortDesc: "This Pokemon and its allies are protected from opposing priority moves.",
 
 		block: "#damp",
+	},
+	deathdefiance: {
+		name: "Death Defiance",
+		shortDesc: "Once per battle, this Pokemon survives a lethal hit.",
 	},
 	defeatist: {
 		name: "Defeatist",
@@ -484,6 +496,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Emergency Exit",
 		desc: "When this Pokemon has more than 1/2 its maximum HP and takes damage bringing it to 1/2 or less of its maximum HP, it immediately switches out to a chosen ally. This effect applies after all hits from a multi-hit move. This effect is prevented if the move had a secondary effect removed by the Sheer Force Ability. This effect applies to both direct and indirect damage, except Curse and Substitute on use, Belly Drum, Pain Split, and confusion damage.",
 		shortDesc: "This Pokemon switches out when it reaches 1/2 or less of its maximum HP.",
+	},
+	exalt: {
+		name: "Exalt",
+		shortDesc: "On switch-in, the opposing Pokemon gains the Dragon type.",
 	},
 	fabled: {
 		name: "Fabled",
@@ -1698,6 +1714,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			shortDesc: "Prevents opposing Pokemon from choosing to switch out.",
 		},
 	},
+	shapeshift: {
+		name: "Shapeshift",
+		shortDesc: "This Pokemon transforms into the opposing pokemon when using Bitter Malice.",
+	},
 	sharpness: {
 		name: "Sharpness",
 		shortDesc: "This Pokemon's slicing moves have their power multiplied by 1.5.",
@@ -2249,6 +2269,21 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Unseen Fist",
 		shortDesc: "This Pokemon's contact moves ignore the target's protection, except Max Guard.",
 	},
+	unrelentingstampede: {
+		name: "Unrelenting Stampede",
+		desc: "This Pokemon's moves have their power multiplied by 1+(X*0.1), where X is the total number of times any Pokemon has fainted on the user's side when this Ability became active, and X cannot be greater than 5.",
+		shortDesc: "This Pokemon's moves have 10% more power for each fainted opposing Pokemon, up to 5.",
+
+		activate: "  [POKEMON] gained strength from the fallen!",
+	},
+	usurped: {
+		name: "Usurped",
+		shortDesc: "Immune to Poison. Taunts for 3 turns on switch-in if at full HP.",
+	},
+	usurper: {
+		name: "Usurper",
+		shortDesc: "Confuses Pokemon that make contact with this Pokemon.",
+	},
 	vesselofruin: {
 		name: "Vessel of Ruin",
 		shortDesc: "Active Pokemon without this Ability have their Special Attack multiplied by 0.75.",
@@ -2271,6 +2306,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			desc: "This Pokemon is immune to damaging Electric-type moves and restores 1/4 of its maximum HP, rounded down, when hit by one.",
 			shortDesc: "This Pokemon heals 1/4 its max HP when hit by a damaging Electric move; immunity.",
 		},
+	},
+	vorpal: {
+		name: "Vorpal",
+		shortDesc: "If this Pokemon is statused, its Speed is 1.5x; ignores burn halving physical damage.",
 	},
 	wanderingspirit: {
 		name: "Wandering Spirit",

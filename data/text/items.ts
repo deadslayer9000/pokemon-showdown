@@ -616,6 +616,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Flower Sweet",
 		shortDesc: "Evolves Milcery into Alcremie when held and spun around.",
 	},
+	flygonite: {
+		name: "Flygonite",
+		shortDesc: "If held by a Flygon, this item allows it to Mega Evolve in battle."
+	},		
 	flyinggem: {
 		name: "Flying Gem",
 		shortDesc: "Holder's first successful Flying-type attack will have 1.3x power. Single use.",
@@ -823,6 +827,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 	heracronite: {
 		name: "Heracronite",
 		shortDesc: "If held by a Heracross, this item allows it to Mega Evolve in battle.",
+	},
+	hisuizoroarkite: {
+		name: "Hisuizoroarkite",
+		shortDesc: "If held by a Zoroark-Hisui, this item allows it to Mega Evolve in battle.",
 	},
 	hondewberry: {
 		name: "Hondew Berry",
@@ -1797,6 +1805,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 	stoneplate: {
 		name: "Stone Plate",
 		shortDesc: "Holder's Rock-type attacks have 1.2x power. Judgment is Rock type.",
+	},
+	stormpeakmask: {
+		name: "Stormpeak Mask",
+		shortDesc: "Ogerpon-Stormpeak: Attacks has 1.2x power; Terrastalize to gain Embody Aspect."
 	},
 	strangeball: {
 		name: "Strange Ball",

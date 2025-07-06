@@ -2086,6 +2086,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		num: 1113,
 		gen: 8,
 	},
+	flygonite: {
+		name: "Flygonite",
+		spritenum: 3,
+		megaStone: "Flygon-Mega",
+		megaEvolves: "Flygon",
+		itemUser: ["Flygon"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -9
+	},
 	flyinggem: {
 		name: "Flying Gem",
 		spritenum: 149,
@@ -2680,6 +2692,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		num: 680,
 		gen: 6,
 		isNonstandard: "Past",
+	},
+	hisuizoroarkite: {
+		name: "Hisuizoroarkite",
+		spritenum: 7,
+		megaStone: "Hisui-Zoroark-Mega",
+		megaEvolves: "Zoroark-Hisui",
+		itemUser: ["Zoroark-Hisui"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -11,
 	},
 	hondewberry: {
 		name: "Hondew Berry",
@@ -5810,6 +5834,26 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		forcedForme: "Arceus-Rock",
 		num: 309,
 		gen: 4,
+	},
+	stormpeakmask: {
+		name: "Stormpeak Mask",
+		spritenum: 758,
+		num: -10,
+		fling: {
+			basePower: 60,
+		},
+		onBasePowerPriority: 15,
+		onBasePower(basePower, user, target, move) {
+			if (user.baseSpecies.name.startsWith('Ogerpon-Stormpeak')) {
+				return this.chainModify([4915, 4096]);
+			}
+		},
+		onTakeItem(item, source) {
+			if (source.baseSpecies.baseSpecies === 'Ogerpon') return false;
+			return true;
+		},
+		forcedForme: "Ogerpon-Stormpeak",
+		itemUser: ["Ogerpon-Stormpeak"],
 	},
 	strangeball: {
 		name: "Strange Ball",

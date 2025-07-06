@@ -3365,9 +3365,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "LC",
 	},
 	amoonguss: {
-		tier: "NU",
+		tier: "UU",
 		doublesTier: "DOU",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	frillish: {
 		isNonstandard: "Past",
@@ -6035,7 +6035,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 	},
 	scizantrum: {
-		tier: "UU",
+		tier: "OU",
 	},
 	dragascue: {
 		tier: "UU",
@@ -6077,7 +6077,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "RU",
 	},
 	lucaurus: {
-		tier: "UU",
+		tier: "OU",
 	},
 	deltastarly: {
 		tier: "LC",
@@ -6101,7 +6101,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 	},
 	deltalatiosmega: {
-		tier: "OU",
+		tier: "UU",
 	},
 	manaphymega: {
 		tier: "OU",
@@ -6179,7 +6179,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "NFE",
 	},
 	deltaroserade: {
-		tier: "UU",
+		tier: "OU",
 	},
 	ironshades: {
 		tier: "UU",
@@ -6263,7 +6263,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 	},
 	deltahoopaunbound: {
-		tier: "OU",
+		tier: "UU",
 	},
 	omegatinkatink: {
 		tier: "LC",
@@ -6282,6 +6282,111 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	eruptois: {
 		tier: "OU",
+	},
+	flygonmega: {
+		tier: "UU",
+	},
+	deltaslowpoke: {
+		tier: "LC",
+	},
+	slowhost: {
+		tier: "UU",
+	},
+	deltatentacool: {
+		tier: "LC",
+	},
+	rotomdowse: {
+		tier: "UU"
+	},
+	rotomradio: {
+		tier: "NU"
+	},
+	ogerponstormpeak: {
+		tier: "UU"
+	},
+	shayminlake: {
+		tier: "UU",
+	},
+	annetrem: {
+		tier: "NFE",
+	},
+	bansherene: {
+		tier: "UU",
+	},
+	deltaclamperl: {
+		tier: "LC",
+	},
+	deltagorebyss: {
+		tier: "RU",
+	},
+	deltahuntail: {
+		tier: "UU",
+	},
+	gorochu: {
+		tier: "UU",
+	},
+	deltashellos: {
+		tier: "LC",
+	},
+	deltagastrodon: {
+		tier: "UU",
+	},
+	deltatandemaus: {
+		tier: "LC",
+	},
+	necromauser: {
+		tier: "UU",
+	},
+	slaughtermaus: {
+		tier: "UU",
+	},
+	ironcoil: {
+		tier: "RU",
+	},
+	spiritombunbound: {
+		tier: "UU",
+	},
+	deltaaipom: {
+		tier: "LC",
+	},
+	deltaambipom: {
+		tier: "UU",
+	},
+	ultraaipom: {
+		tier: "LC",
+	},
+	ultraambipom: {
+		tier: "UU",
+	},
+	ironworld: {
+		tier: "UU",
+	},
+	hoverpollen: {
+		tier: "UU",
+	},
+	zoroarkhisuimega: {
+		tier: "UU",
+	},
+	deltagolurk: {
+		tier: "UU",
+	},
+	ultraglimmet: {
+		tier: "LC",
+	},
+	ultraglimmora: {
+		tier: "NU"
+	},
+	deltaglimmet: {
+		tier: "LC",
+	},
+	deltaglimmora: {
+		tier: "UU"
+	},
+	deltarattata: {
+		tier: "LC"
+	},
+	deltaraticate: {
+		tier: "NU"
 	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",

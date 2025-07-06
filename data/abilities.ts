@@ -493,6 +493,20 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 3,
 		num: 171,
 	},
+	breach: {
+		/*onSwitchIn(target, pokemon, move) {
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+			for (const condition of sideConditions) {
+				if (pokemon.side.removeSideCondition(condition)) {
+					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Foam Frenzy', `[of] ${pokemon}`);
+				}
+			}
+		},*/
+		flags: {},
+		name: "Breach",
+		rating: 4,
+		num: -36,
+	},
 	brilliance: {
 		onStart(pokemon) {
 			let activated = false;
@@ -775,6 +789,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 2,
 		num: 238,
 	},
+	covenant: {
+		flags: {},
+		name: "Covenant",
+		rating: 0,
+		num: -41,
+	},
 	cudchew: {
 		onEatItem(item, pokemon) {
 			if (item.isBerry && pokemon.addVolatile('cudchew')) {
@@ -926,6 +946,21 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 2.5,
 		num: 219,
 	},
+	deathdefiance: {
+		/*onDamagePriority: -30,
+		onDamage(pokemon, damage, target, source, effect) {
+			if (target.hp === target.hp && damage >= target.hp && effect && effect.effectType === 'Move') {
+				if (pokemon.deathdefiance) return;
+				pokemon.deathdefiance = true;
+				this.add('-ability', target, 'Death Defiance');
+				return target.hp - 1;
+			}
+		},*/
+		flags: { breakable: 1 },
+		name: "Death Defiance",
+		rating: 3,
+		num: -34,
+	},
 	defeatist: {
 		onModifyAtkPriority: 5,
 		onModifyAtk(atk, pokemon) {
@@ -988,6 +1023,34 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Delta Stream",
 		rating: 4,
 		num: 191,
+	},
+	desertspirit: {
+		onModifyMove(move) {
+			if (this.field.isWeather('sandstorm')){
+				if (move.category === 'Status') return;
+				if (!move.flags['sound']) {
+					move.flags['sound'] = 1;
+					move.flags['bypasssub'] = 1;
+				}
+			}
+		},
+		onBasePowerPriority: 7,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['sound']) {
+				this.debug('Desert spirit boost');
+				return this.chainModify([5325, 4096]);
+			}
+		},
+		onSourceModifyDamage(damage, source, target, move) {
+			if (move.flags['sound']) {
+				this.debug('Desert spirit weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		flags: {},
+		name: "Desert Spirit",
+		rating: 4,
+		num: -31
 	},
 	desolateland: {
 		onStart(source) {
@@ -1243,6 +1306,19 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 3.5,
 		num: 303,
 	},
+	embodyaspectstormpeak: {
+		onStart(pokemon) {
+			if (pokemon.baseSpecies.name === 'Ogerpon-Stormpeak-Tera' && pokemon.terastallized &&
+				this.effectState.embodied !== pokemon.previouslySwitchedIn) {
+				this.effectState.embodied = pokemon.previouslySwitchedIn;
+				this.boost({ spe: 1 }, pokemon);
+			}
+		},
+		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, notransform: 1 },
+		name: "Embody Aspect (Stormpeak)",
+		rating: 3.5,
+		num: 303,
+	},
 	embodyaspectteal: {
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.name === 'Ogerpon-Teal-Tera' && pokemon.terastallized &&
@@ -1284,6 +1360,17 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Emergency Exit",
 		rating: 1,
 		num: 194,
+	},
+	exalt: {
+	/*	onStart(target) {
+		if (target.hasType('Dragon')) return false;
+		if (!target.addType('Dragon')) return false;
+		target.add('-start', target, 'typeadd', 'Dragon', 'ability: Exalt');
+		}, */
+		flags: {},
+		name: "Exalt",
+		rating: 3,
+		num: -35,
 	},
 	fabled: {
 		onSourceAfterFaint(length, target, source, effect) {
@@ -4418,6 +4505,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 5,
 		num: 23,
 	},
+	shapeshift: {
+		flags: {},
+		name: "Shapeshift",
+		rating: 0,
+		num: -40
+	},
 	sharpness: {
 		onBasePowerPriority: 19,
 		onBasePower(basePower, attacker, defender, move) {
@@ -4639,6 +4732,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Snow Warning",
 		rating: 4,
 		num: 117,
+	},
+	spectreonslaught: {
+		flags: {},
+		name: "Spectre Onslaught",
+		rating: 3,
+		num: -39,
 	},
 	solarpower: {
 		onModifySpAPriority: 5,
@@ -5585,6 +5684,48 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 2,
 		num: 260,
 	},
+	unrelentingstampede: {
+		/*onStart(pokemon) {
+			if (pokemon.side.totalFainted) {
+				this.add('-activate', pokemon, 'ability: Supreme Overlord');
+				const fallen = Math.min(pokemon.side.totalFainted, 5);
+				this.add('-start', pokemon, `fallen${fallen}`, '[silent]');
+				this.effectState.fallen = fallen;
+			}
+		},
+		onEnd(pokemon) {
+			this.add('-end', pokemon, `fallen${this.effectState.fallen}`, '[silent]');
+		},
+		onBasePowerPriority: 21,
+		onBasePower(basePower, attacker, defender, move) {
+			if (this.effectState.fallen) {
+				const powMod = [4096, 4506, 4915, 5325, 5734, 6144];
+				this.debug(`Supreme Overlord boost: ${powMod[this.effectState.fallen]}/4096`);
+				return this.chainModify([powMod[this.effectState.fallen], 4096]);
+			}
+		},*/
+		flags: {},
+		name: "Unrelenting Stampede",
+		rating: 4,
+		num: -37,
+	},
+	usurped: {
+		flags: {},
+		name: "Usurped",
+		rating: 2.5,
+		num: -32,
+	},
+	usurper: {
+		onDamagingHit(damage, target, source, move) {
+			if (this.checkMoveMakesContact(move, source, target)) {
+					source.addVolatile('confusion', target);
+			}
+		},
+		flags: {},
+		name: "Usurper",
+		rating: 2,
+		num: -33,
+	},
 	vesselofruin: {
 		onStart(pokemon) {
 			if (this.suppressingAbility(pokemon)) return;
@@ -5653,6 +5794,18 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Volt Absorb",
 		rating: 3.5,
 		num: 10,
+	},
+	vorpal: {
+		onModifySpePriority: 5,
+		onModifySpe(spe, pokemon) {
+			if (pokemon.status) {
+				return this.chainModify(1.5);
+			}
+		},
+		flags: {},
+		name: "Vorpal",
+		rating: 3,
+		num: -38,
 	},
 	wanderingspirit: {
 		onDamagingHit(damage, target, source, move) {

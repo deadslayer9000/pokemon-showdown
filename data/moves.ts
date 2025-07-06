@@ -423,6 +423,22 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		zMove: { effect: 'clearnegativeboost' },
 		contestType: "Cute",
 	},
+	ampserum: {
+		num: -35,
+		accuracy: 95,
+		basePower: 80,
+		category: "Special",
+		name: "Amp Serum",
+		pp: 15,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		secondary: {
+			chance: 100,
+			volatileStatus: 'taunt',
+		},
+		target: "normal",
+		type: "Electric",
+	},
 	anchorshot: {
 		num: 677,
 		accuracy: 100,
@@ -1107,6 +1123,24 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Poison",
 		zMove: { boost: { def: 1 } },
 		contestType: "Tough",
+	},
+	barbaricincision: {
+		num: -39,
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		name: "Barbaric Incision",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, contact: 1 },
+		onBasePower(basePower, pokemon) {
+			if (pokemon.status && pokemon.status !== 'slp') {
+				return this.chainModify(2);
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
 	},
 	barbbarrage: {
 		num: 839,
@@ -2555,6 +2589,34 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Flying",
 		contestType: "Cute",
 	},
+	chillingsilence: {
+		num: -36,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Chilling Silence",
+		pp: 10,
+		priority: 3,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		onModifyPriority(priority, source, target, move) {
+			if (source.activeMoveActions > 0) {
+				return priority = 0;
+			}
+		},
+		onModifyMove(move, source) {
+			if (source.activeMoveActions > 1) {
+			for (const secondary of move.secondaries) {
+				if (secondary.chance) secondary.chance *= 0;
+				}
+			}
+		},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Ghost",
+	},
 	chillingwater: {
 		num: 886,
 		accuracy: 100,
@@ -3690,6 +3752,19 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "allAdjacentFoes",
 		type: "Fairy",
 		contestType: "Beautiful",
+	},
+	decisivebolt: {
+		num: -37,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Decisive Bolt",
+		pp: 15,
+		priority: 2,
+		flags: {},
+		secondary: null,
+		target: "normal",
+		type: "Electric",
 	},
 	decorate: {
 		num: 777,
@@ -9127,7 +9202,10 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		priority: 0,
 		flags: {mirror: 1},
 		onHit(target, source) {
-			if ([!'brn'].includes(target.status)) return false;
+			if (['', 'slp', 'frz', 'par', 'psn', 'tox'].includes(target.status)) {
+				this.hint("Heat Siphon only works if the targeted Pokemon is burned.");
+				return false;
+			}
 			target.cureStatus();
 			target.clearBoosts();
 			this.add('-clearboost', target);
@@ -10499,6 +10577,9 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 				break;
 			case 'Ogerpon-Cornerstone': case 'Ogerpon-Cornerstone-Tera':
 				move.type = 'Rock';
+				break;
+			case 'Ogerpon-Stormpeak': case 'Ogerpon-Stormpeak-Tera':
+				move.type = 'Electric';
 				break;
 			}
 		},
@@ -14353,6 +14434,25 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		maxMove: { basePower: 130 },
 		contestType: "Cool",
 	},
+	planetdemolition: {
+		num: -42,
+		accuracy: 100,
+		basePower: 120, 
+		category: "Physical",
+		name: "Planet Demolition",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, bullet: 1 },
+		self: {
+			boosts: {
+				atk: -1,
+				def: -1,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Rock",
+	},
 	plasmafists: {
 		num: 721,
 		accuracy: 100,
@@ -14532,6 +14632,36 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Poison",
 		contestType: "Clever",
 	},
+	pollenbloom: {
+		num: -41,
+		accuracy: 100,
+		basePower: 130,
+		category: "Special",
+		name: "Pollen Bloom",
+		pp: 10,
+		priority: 0,
+		flags: { charge: 1, protect: 1, mirror: 1, metronome: 1 },
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			this.boost({ spa: 1 }, attacker, attacker, move);
+			if (['sunnyday', 'desolateland'].includes(attacker.effectiveWeather())) {
+				this.attrLastMove('[still]');
+				this.addMove('-anim', attacker, move.name, defender);
+				return;
+			}
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Grass",
+	},
 	pollenpuff: {
 		num: 676,
 		accuracy: 100,
@@ -14540,7 +14670,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		name: "Pollen Puff",
 		pp: 15,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, allyanim: 1, metronome: 1, bullet: 1 },
+		flags: { protect: 1, mirror: 1, allyanim: 1, metronome: 1, },
 		onTryHit(target, source, move) {
 			if (source.isAlly(target)) {
 				move.basePower = 0;
@@ -15444,6 +15574,20 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "normal",
 		type: "Dark",
 		contestType: "Clever",
+	},
+	putridgrasp: {
+		num: -38,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Putrid Grasp",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, contact: 1 },
+		secondary: null,
+		drain: [1, 2],
+		target: "normal",
+		type: "Poison",
 	},
 	pyroball: {
 		num: 780,
@@ -17675,6 +17819,19 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Normal",
 		zMove: { boost: { spa: 1 } },
 		contestType: "Cute",
+	},
+	simulate: {
+		num: -40,
+		accuracy: true,
+		basePower: 0,
+		name: "Simulate",
+		category: "Status",
+		pp: 20,
+		priority: 0,
+		flags: { protect: 1, bypasssub: 1, allyanim: 1, failencore: 1, nosleeptalk: 1, noassist: 1, failcopycat: 1, failmimic: 1, failinstruct: 1 },
+		secondary: null,
+		target: "all",
+		type: "Normal",
 	},
 	sing: {
 		num: 47,
@@ -22238,6 +22395,19 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		secondary: null,
 		target: "normal",
 		type: "Ghost",
+	},
+	whiteout: {
+		num: -43,
+		accuracy: 100,
+		basePower: 1.20,
+		category: "Special",
+		name: "Whiteout",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1 },
+		secondary: null,
+		target: "normal",
+		type: "Ice",
 	},
 	wickedblow: {
 		num: 817,
