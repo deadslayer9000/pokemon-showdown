@@ -6375,7 +6375,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	ultraglimmora: {
 		tier: "NU",
-	}
+	},
 	deltaglimmet: {
 		tier: "LC",
 	},

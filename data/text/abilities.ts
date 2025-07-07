@@ -1551,7 +1551,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	ragnarok: {
 		name: "Ragnarok",
-		shortDesc: "Multi-hit moves always hit at least 3 times. Physical moves have a 10% chance to burn.".
+		shortDesc: "Multi-hit moves always hit at least 3 times. Physical moves have a 10% chance to burn.",
 	},
 	raindish: {
 		name: "Rain Dish",
