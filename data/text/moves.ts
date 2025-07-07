@@ -2546,7 +2546,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	gigatonanchor: {
 		name: "Gigaton Anchor",
-		shortDesc: "Cannot be used twice in a row. Super-effective against Water.",
+		shortDesc: "Super-effective against Water. One turn cooldown.",
 	},
 	gigatonhammer: {
 		name: "Gigaton Hammer",
