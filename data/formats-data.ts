@@ -6374,19 +6374,79 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "LC",
 	},
 	ultraglimmora: {
-		tier: "NU"
+		tier: "NU",
 	},
 	deltaglimmet: {
 		tier: "LC",
 	},
 	deltaglimmora: {
-		tier: "UU"
+		tier: "UU",
 	},
 	deltarattata: {
-		tier: "LC"
+		tier: "LC",
 	},
 	deltaraticate: {
-		tier: "NU"
+		tier: "NU",
+	},
+	lochtrier: {
+		tier: "UU",
+	},
+	deltasprigatito: {
+		tier: "LC",
+	},
+	deltafloragato: {
+		tier: "NFE",
+	},
+	deltameowscarada: {
+		tier: "OU",
+	},
+	gammatinkatink: {
+		tier: "LC",
+	},
+	gammatinkatuff: {
+		tier: "NFE",
+	},
+	gammatinkaton: {
+		tier: "OU",
+	},
+	deltatinkatink: {
+		tier: "LC",
+	},
+	deltatinkatuff: {
+		tier: "NFE",
+	},
+	deltatinkaton: {
+		tier: "UU",
+	},
+	ultratinkatink: {
+		tier: "LC",
+	},
+	ultratinkatuff: {
+		tier: "NFE",
+	},
+	ultratinkaton: {
+		tier: "NU",
+	},
+	deltaaxew: {
+		tier: "LC",
+	},
+	deltafraxure: {
+		tier: "NFE",
+	},
+	deltahaxorus: {
+		tier: "UU",
+	},
+	deltahaxorusmega: {
+		tier: "OU",
+	},
+	magirigus: {
+		tier: "UU",
+	},
+	deltayamask: {
+		tier: "LC",
+	},
+	ironpilot: {
+		tier: "UU",
 	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",

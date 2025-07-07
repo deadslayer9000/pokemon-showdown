@@ -7195,6 +7195,22 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Normal",
 		contestType: "Tough",
 	},
+	gigatonanchor: {
+		num: -45,
+		accuracy: 100,
+		basePower: 160,
+		category: "Physical",
+		name: "Gigaton Anchor",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1, cantusetwice: 1 },
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Water') return 1;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Steel",
+	},
 	gigatonhammer: {
 		num: 893,
 		accuracy: 100,
@@ -8957,7 +8973,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		condition: {
 			duration: 5,
 			durationCallback(target, source, effect) {
-				if (effect?.name === "Psychic Noise") {
+				if (effect?.name === "Psychic Noise" || effect?.name === "Wild Wire") {
 					return 2;
 				}
 				if (source?.hasAbility('persistent')) {
@@ -11125,6 +11141,28 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		secondary: null,
 		target: "allies",
 		type: "Water",
+	},
+	liftoff: {
+		num: -48,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Lift Off",
+		pp: 15,
+		priority: 0,
+		flags: {},
+		volatileStatus: "Magnet Rise",
+		boosts: {
+			spe: 2,
+		},
+		secondary: {
+			chance: 100,
+			self: {
+				volatileStatus: "Magnet Rise"
+			},
+		},
+		target: "self",
+		type: "Electric",
 	},
 	lightofruin: {
 		num: 617,
@@ -13614,6 +13652,13 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		pp: 10,
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
+		onTryImmunity(target) {
+			// Truant and Insomnia have special treatment; they fail before
+			// checking accuracy and will double Stomping Tantrum's BP
+			if (target.ability === 'truant' || target.ability === 'insomnia') {
+				return false;
+			}
+		},
 		onHit(pokemon) {
 			if (pokemon.getAbility().flags['cantsuppress']) {
 				return null;
@@ -20544,6 +20589,19 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "all",
 		type: "Normal",
 	},
+	technobeam: {
+		num: -49,
+		accuracy: 100,
+		basePower: 120,
+		category: "Special",
+		name: "Techno Beam",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1 },
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+	},
 	technoblast: {
 		num: 546,
 		accuracy: 100,
@@ -21169,6 +21227,20 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "normal",
 		type: "Dragon",
 	},
+	tomahawkvolley: {
+		num: -47,
+		accuracy: 85,
+		basePower: 25,
+		category: "Physical",
+		name: "Tomahawk Volley",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		multihit: [2, 5],
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+	},
 	topsyturvy: {
 		num: 576,
 		accuracy: true,
@@ -21752,6 +21824,39 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "normal",
 		type: "Bug",
 		contestType: "Cute",
+	},
+	updraft: { 
+		num: -44,
+		accuracy: 95,
+		basePower: 100,
+		name: "Updraft",
+		category: "Special",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		onTryImmunity(target) {
+			if (target.ability === 'truant' || target.ability === 'levitate') {
+				return false;
+			}
+		},
+		onHit(pokemon) {
+			if (pokemon.getAbility().flags['cantsuppress']) {
+				return null;
+			}
+			if (pokemon.hasItem("Ability Shield")) {
+				this.add('-block', pokemon, 'item: Ability Shield');
+				return null;
+			}
+			const oldAbility = pokemon.setAbility('levitate');
+			if (oldAbility) {
+				this.add('-ability', pokemon, 'Levitate', '[from] move: Updraft');
+				return;
+			}
+			return oldAbility as false | null;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Flying",
 	},
 	upperhand: {
 		num: 918,
@@ -22527,6 +22632,22 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "normal",
 		type: "Electric",
 		contestType: "Tough",
+	},
+	wildwire: {
+		num: -46,
+		accuracy: 100,
+		basePower: 75,
+		category: "Special",
+		name: "Wild Wire",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		secondary: {
+			chance: 100,
+			volatileStatus: 'healblock',
+		},
+		target: "normal",
+		type: "Electric",
 	},
 	willowisp: {
 		num: 261,
