@@ -111170,6 +111170,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			thunderbolt: ["9L35","9M"],
 			voltswitch: ["9M"],
 			wildcharge: ["9M"],
+			wildwire: ["9L1"],
 			zapcannon: ["9L52"],
 		}
 	},

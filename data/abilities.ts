@@ -4139,7 +4139,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		onModifyMovePriority: -1,
 		onModifyMove(move) {
 			if (move.multihit && Array.isArray(move.multihit) && move.multihit.length) {
-				move.multihit = move.multihit[3];
+				move.multihit = [3, 5];
 			}
 			if (move.multiaccuracy) {
 				delete move.multiaccuracy;
