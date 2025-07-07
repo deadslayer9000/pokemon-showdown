@@ -40,6 +40,17 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 0.1,
 		num: 0,
 	},
+	abyssalneigh: {
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				this.boost({ spd: length }, source);
+			}
+		},
+		flags: {},
+		name: "Abyssal Neigh",
+		rating: 3,
+		num: -42,
+	},
 	adaptability: {
 		onModifySTAB(stab, source, target, move) {
 			if (move.forceSTAB || source.hasType(move.type)) {
@@ -2062,6 +2073,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 0,
 		num: -1,
 	},
+	hocuspocus: {
+		flags: {},
+		name: "Hocus Pocus",
+		rating: 5,
+		num: -47,
+	},
 	honeygather: {
 		flags: {},
 		name: "Honey Gather",
@@ -3475,6 +3492,30 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 1.5,
 		num: 20,
 	},
+	parasolprayer: {
+		onStart(source) {
+			this.field.setWeather('deltastream');
+		},
+		onAnySetWeather(target, source, weather) {
+			const strongWeathers = ['desolateland', 'primordialsea', 'deltastream'];
+			if (this.field.getWeather().id === 'deltastream' && !strongWeathers.includes(weather.id)) return false;
+		},
+		onEnd(pokemon) {
+			if (this.field.weatherState.source !== pokemon) return;
+			for (const target of this.getAllActive()) {
+				if (target === pokemon) continue;
+				if (target.hasAbility('parasolprayer')) {
+					this.field.weatherState.source = target;
+					return;
+				}
+			}
+			this.field.clearWeather();
+		},
+		flags: {},
+		name: "Parasol Prayer",
+		rating: 4,
+		num: -45,
+	},
 	parentalbond: {
 		onPrepareHit(source, target, move) {
 			if (move.category === 'Status' || move.multihit || move.flags['noparentalbond'] || move.flags['charge'] ||
@@ -3961,6 +4002,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 4,
 		num: 272,
 	},
+	purranormal: {
+		flags: {},
+		name: "Purranormal",
+		rating: 4,
+		num: -44,
+	},
 	pyroclastic: {
 		onTryBoost(boost, target, source, effect) {
 			if (source && target === source) return;
@@ -4087,6 +4134,31 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Quick Feet",
 		rating: 2.5,
 		num: 95,
+	},
+	ragnarok: {
+		onModifyMovePriority: -1,
+		onModifyMove(move) {
+			if (move.multihit && Array.isArray(move.multihit) && move.multihit.length) {
+				move.multihit = move.multihit[3];
+			}
+			if (move.multiaccuracy) {
+				delete move.multiaccuracy;
+			}
+			if (move.category === "Physical") {
+				if (!move.secondaries) move.secondaries = [];
+				for (const secondary of move.secondaries) {
+					if (secondary.status === 'brn') return;
+				}
+				move.secondaries.push({
+					chance: 10,
+					status: 'brn',
+				});
+			}
+		},
+		flags: {},
+		name: "Ragnarok",
+		rating: 3,
+		num: -46,
 	},
 	raindish: {
 		onWeather(target, source, effect) {
@@ -5612,6 +5684,26 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Turboblaze",
 		rating: 3,
 		num: 163,
+	},
+	twinkle: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Fairy' && attacker.hp <= attacker.maxhp / 3) {
+				this.debug('Twinkle boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Fairy' && attacker.hp <= attacker.maxhp / 3) {
+				this.debug('Twinkle boost');
+				return this.chainModify(1.5);
+			}
+		},
+		flags: {},
+		name: "Twinkle",
+		rating: 2,
+		num: -43,
 	},
 	unaware: {
 		onAnyModifyBoost(boosts, pokemon) {

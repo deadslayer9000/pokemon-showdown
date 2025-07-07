@@ -1305,6 +1305,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		itemUser: ["Delta-Gholdengo"],
 		num: -5,
 	},
+	deltahaxorusite: {
+		name: "Delta Haxorusite",
+		spritenum: 1,
+		megastone: "Delta-Haxorus-Mega",
+		megaEvolves: "Delta-Haxorus",
+		itemUser: ["Delta-Haxorus"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},  
+		num: -12,
+	},
 	deltainfernapeite: {
 		name: "Delta Infernapeite",
 		spritenum: 11,
@@ -1523,6 +1535,11 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		num: 790,
 		gen: 7,
 		isNonstandard: "Past",
+	},
+	dreaddrive: {
+		name: "Dread Drive",
+		spritenum: 110,
+		num: -14,
 	},
 	dreadplate: {
 		name: "Dread Plate",
@@ -2837,6 +2854,12 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		num: 282,
 		gen: 4,
 	},
+	illusorysword: {
+		name: "Illusory Sword",
+		spritenum: 698,
+		itemUser: ["Magirigus"],
+		num: -13,
+	},
 	inciniumz: {
 		name: "Incinium Z",
 		spritenum: 651,
@@ -3899,6 +3922,11 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		isNonstandard: "Past",
 		gen: 7,
 	},
+	minddrive: {
+		name: "Mind Drive",
+		spritenum: 291,
+		num: -17,
+	},
 	mindplate: {
 		name: "Mind Plate",
 		spritenum: 291,
@@ -4403,6 +4431,11 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		num: 671,
 		gen: 6,
 		isNonstandard: "Past",
+	},
+	pixiedrive: {
+		name: "Pixie Drive",
+		spritenum: 610,
+		num: -16,
 	},
 	pixieplate: {
 		name: "Pixie Plate",
@@ -6003,6 +6036,11 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		num: 258,
 		gen: 2,
 		isNonstandard: "Past",
+	},
+	thrashdrive: {
+		name: "Thrash Drive",
+		spritenum: 143,
+		num: -18
 	},
 	throatspray: {
 		name: "Throat Spray",

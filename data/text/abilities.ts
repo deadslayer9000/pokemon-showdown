@@ -3,6 +3,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "No Ability",
 		shortDesc: "Does nothing.",
 	},
+	abyssalneigh: {
+		name: "Abyssal Neigh",
+		shortDesc: "This Pokemon's Sp. Def is raised by 1 stage if it attacks and KOes another Pokemon.",
+	},
 	adaptability: {
 		name: "Adaptability",
 		desc: "This Pokemon's moves that match one of its types have a same-type attack bonus (STAB) of 2 instead of 1.5.",
@@ -281,7 +285,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	costar: {
 		name: "Costar",
-		shortDesc: "On switch-in, this Pokemon copies all of its ally's stat stage changes",
+		shortDesc: "On switch-in, this Pokemon copies all of its ally's stat stage changes.",
 	},
 	cottondown: {
 		name: "Cotton Down",
@@ -733,6 +737,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Helix Nebula (WIP)",
 		desc: "This Pokemon copies the opponent's type on switch in. Additionally, should this Pokemon receive a fatal direct attack from an opponent, it will use Wish before fainting.",
 		shortDesc: "Copies opponent's type on switch in. Uses Wish if fainted by a direct attack.",
+	},
+	hocuspocus: {
+		name: "Hocus Pocus",
+		shortDesc: "Sets Trick Room on switch-in if holding Illusory Sword. Status moves go last in TR."
 	},
 	honeygather: {
 		name: "Honey Gather",
@@ -1294,6 +1302,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			shortDesc: "This Pokemon cannot be confused.",
 		},
 	},
+	parasolprayer: {
+		name: "Parasol Prayer",
+		shortDesc: "On switch-in, strong winds begin until this Ability is not active in battle.",
+	},
 	parentalbond: {
 		name: "Parental Bond",
 		desc: "This Pokemon's damaging moves become multi-hit moves that hit twice. The second hit has its damage quartered. Does not affect Doom Desire, Dragon Darts, Dynamax Cannon, Endeavor, Explosion, Final Gambit, Fling, Future Sight, Ice Ball, Rollout, Self-Destruct, any multi-hit move, any move that has multiple targets, or any two-turn move.",
@@ -1498,6 +1510,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "This Pokemon cannot become affected by a non-volatile status condition or Yawn. If a Pokemon uses a Ghost-type attack against this Pokemon, that Pokemon's offensive stat is halved when calculating the damage to this Pokemon.",
 		shortDesc: "Ghost damage to this Pokemon dealt with a halved offensive stat; can't be statused.",
 	},
+	purranormal: {
+		name: "Purranormal",
+		shortDesc: "Effect changes based on team composition. Inactive below 50% HP.",
+	},
 	pyroclastic: {
 		name: "Pyroclastic (WIP)",
 		shortDesc: "Pokemon heals 1/3rd of it's health when switching in; Accuracy can't be lowered.",
@@ -1532,6 +1548,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		gen6: {
 			desc: "If this Pokemon has a non-volatile status condition, its Speed is multiplied by 1.5. This Pokemon ignores the paralysis effect of quartering Speed.",
 		},
+	},
+	ragnarok: {
+		name: "Ragnarok",
+		shortDesc: "Multi-hit moves always hit at least 3 times. Physical moves have a 10% chance to burn.".
 	},
 	raindish: {
 		name: "Rain Dish",
@@ -2247,6 +2267,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		},
 
 		start: "  [POKEMON] is radiating a blazing aura!",
+	},
+	twinkle: {
+		name: "Twinkle",
+		shortDesc: "At 1/3 or less of its max HP, this Pokemon's offensive stat is 1.5x with Fairy attacks.",
 	},
 	unaware: {
 		name: "Unaware",

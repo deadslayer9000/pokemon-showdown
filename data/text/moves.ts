@@ -2544,6 +2544,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "If this move is successful, the user must recharge on the following turn and cannot select a move.",
 		shortDesc: "User cannot move next turn.",
 	},
+	gigatonanchor: {
+		name: "Gigaton Anchor",
+		shortDesc: "Cannot be used twice in a row. Super-effective against Water.",
+	},
 	gigatonhammer: {
 		name: "Gigaton Hammer",
 		shortDesc: "Cannot be selected the turn after it's used.",
@@ -3702,6 +3706,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Life Dew",
 		desc: "Each Pokemon on the user's side restores 1/4 of its maximum HP, rounded half up.",
 		shortDesc: "Heals the user and its allies by 1/4 their max HP.",
+	},
+	liftoff: {
+		name: "Lift Off",
+		shortDesc: "+2 Speed, gain Magnet Rise for 5 turns.",
 	},
 	lightofruin: {
 		name: "Light of Ruin",
@@ -6946,6 +6954,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		activate: "  It's teatime! Everyone dug in to their Berries!",
 		fail: "  But nothing happened!",
 	},
+	technobeam: {
+		name: "Techno Beam",
+		shortDesc: "Type varies based on the held Drive.",
+	},
 	technoblast: {
 		name: "Techno Blast",
 		desc: "This move's type depends on the user's held Drive.",
@@ -7149,6 +7161,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Timeless Torrent",
 		shortDesc: "10% for -SpD. On KO, effect depends on field.",
 	},
+	tomahawkvolley: {
+		name: "Tomahawk Volley",
+		shortDesc: "Hits 2-5 times in one turn.",
+	},	
 	topsyturvy: {
 		name: "Topsy-Turvy",
 		desc: "The target's positive stat stages become negative and vice versa. Fails if all of the target's stat stages are 0.",
@@ -7364,6 +7380,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Upper Hand",
 		desc: "Has a 100% chance to make the target flinch. Fails if the target did not select a priority move for use this turn, or if the target moves before the user.",
 		shortDesc: "100% flinch. Fails unless target using priority.",
+	},
+	updraft: {
+		name: "Updraft",
+		shortDesc: "Changes target's ability to Levitate.",
 	},
 	uproar: {
 		name: "Uproar",
@@ -7629,6 +7649,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Wild Charge",
 		desc: "If the target lost HP, the user takes recoil damage equal to 1/4 the HP lost by the target, rounded half up, but not less than 1 HP.",
 		shortDesc: "Has 1/4 recoil.",
+	},
+	wildwire: {
+		name: "Wild Wire",
+		shortDesc: "Applies Heal Block for 2 turns.",
 	},
 	willowisp: {
 		name: "Will-O-Wisp",

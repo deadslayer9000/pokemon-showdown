@@ -369,6 +369,14 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Delta Gholdium Z",
 		shortDesc: "If held by Delta-Gholdengo with Pearly Parade, allows it to use Ride The Wave.",
 	},
+	deltahaxorusite: {
+		name: "Delta Haxorusite",
+		shortDesc: "If held by Delta-Haxorus, this item allows it to Mega Evolve in battle.",
+	},
+	deltainfernapeite: {
+		name: "Delta Infernapeite",
+		shortDesc: "If held by Delta-Infernape, this item allows it to Mega Evolve in battle.",
+	},
 	deltalatiasite: {
 		name: "Delta Latiasite",
 		shortDesc: "If held by Delta-Latias, this item allows her to Mega Evolve in battle.",
@@ -444,6 +452,9 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 	dragoniumz: {
 		name: "Dragonium Z",
 		shortDesc: "If holder has a Dragon move, this item allows it to use a Dragon Z-Move.",
+	},
+	dreaddrive: {
+		shortDesc: "Holder's Techno Beam is Dark type."
 	},
 	dreadplate: {
 		name: "Dread Plate",
@@ -884,6 +895,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 			shortDesc: "Holder's use of Hail lasts 8 turns instead of 5.",
 		},
 	},
+	illusorysword: {
+		name: "Illusory Sword",
+		shortDesc: "If held by a Magirigus, it gains 1.3x Attack and Defense in Trick Room.",
+	},
 	inciniumz: {
 		name: "Incinium Z",
 		shortDesc: "If held by an Incineroar with Darkest Lariat, it can use Malicious Moonsault.",
@@ -1209,6 +1224,9 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Mimikium Z",
 		shortDesc: "If held by a Mimikyu with Play Rough, it can use Let's Snuggle Forever.",
 	},
+	minddrive: {
+		shortDesc: "Holder's Techno Beam is Psychic type."
+	},
 	mindplate: {
 		name: "Mind Plate",
 		shortDesc: "Holder's Psychic-type attacks have 1.2x power. Judgment is Psychic type.",
@@ -1351,6 +1369,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 	pinsirite: {
 		name: "Pinsirite",
 		shortDesc: "If held by a Pinsir, this item allows it to Mega Evolve in battle.",
+	},
+	pixiedrive: {
+		name: "Pixie Drive",
+		shortDesc: "Holder's Techo Beam is Fairy type.",
 	},
 	pixieplate: {
 		name: "Pixie Plate",
@@ -1862,6 +1884,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 	thickclub: {
 		name: "Thick Club",
 		shortDesc: "If held by a Cubone or a Marowak, its Attack is doubled.",
+	},
+	thrashdrive: {
+		name: "Thrash Drive",
+		shortDesc: "Holder's Techno Beam is Fighting type.",
 	},
 	throatspray: {
 		name: "Throat Spray",
