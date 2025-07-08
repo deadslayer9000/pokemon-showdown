@@ -3960,6 +3960,17 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 3.5,
 		num: 244,
 	},
+	pureguise: {
+		onModifyDamage(atk, attacker, defender, move){
+			if(attacker.hp >= attacker.maxhp){
+				this.debug('Pure Guise boost');
+				return this.chainModify(1.5);
+			}
+		},
+		name: "Pure Guise",
+		rating: 3,
+		num: -48,
+	},
 	purepower: {
 		onModifyAtkPriority: 5,
 		onModifyAtk(atk) {
