@@ -6448,6 +6448,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	ironpilot: {
 		tier: "UU",
 	},
+	dragetsu: {
+		tier: "OU",
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

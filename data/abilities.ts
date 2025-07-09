@@ -569,11 +569,23 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 3,
 		num: 34,
 	},
+	chromaticscales: {
+		flags: {},
+		name: "Chromatic Scales",
+		rating: 4,
+		num: -49,
+	},
 	chronocatalyst: {
 		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, notransform: 1 },
 		name: "Chrono Catalyst",
 		rating: 4,
 		num: -25,
+	},
+	chronostasis: {
+		flags: {},
+		name: "Chronostasis",
+		rating: 4,
+		num: -50,
 	},
 	clearbody: {
 		onTryBoost(boost, target, source, effect) {
@@ -3859,6 +3871,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 4,
 		num: 168,
 	},
+	prospect: {
+		flags: {},
+		name: "Prospect",
+		rating: 2,
+		num: -52,
+	},
 	protosynthesis: {
 		onSwitchInPriority: -2,
 		onStart(pokemon) {
@@ -3961,8 +3979,8 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: 244,
 	},
 	pureguise: {
-		onModifyDamage(atk, attacker, defender, move){
-			if(attacker.hp >= attacker.maxhp){
+		onModifyDamage(damage, pokemon, target, move){
+			if(pokemon.hp >= pokemon.maxhp){
 				this.debug('Pure Guise boost');
 				return this.chainModify(1.5);
 			}
@@ -5828,6 +5846,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Usurper",
 		rating: 2,
 		num: -33,
+	},
+	valorheart: {
+		flags: {},
+		name: "Valor Heart",
+		rating: 3,
+		num: -51,
 	},
 	vesselofruin: {
 		onStart(pokemon) {
