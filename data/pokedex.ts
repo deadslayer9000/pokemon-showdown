@@ -22389,7 +22389,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Gray",
 		eggGroups: ["Undiscovered"],
 	},
-	/*deltagarchomp: {
+	deltagarchomp: {
 		num: 445,
 		name: "Delta-Garchomp",
 		types: ["Dragon", "Ice"],
@@ -22620,5 +22620,4 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		prevo: "Dragonair",
 		eggGroups: ["Water 1", "Dragon"],
 	},
-	*/
 };
