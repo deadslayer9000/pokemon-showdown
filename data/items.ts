@@ -1329,6 +1329,15 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},  
 		num: -8,
 	},
+	deltaklinklangiumz: {
+		name: "Delta Klinklangium Z",
+		spritenum: 636,
+		onTakeItem: false,
+		zMove: "Absolute Zero",
+		zMoveFrom: "Flux Emission",
+		itemUser: "Delta-Klinklang",
+		num: -15,
+	},
 	deltalatiasite: {
 		name: "Delta Latiasite",
 		spritenum: 629,

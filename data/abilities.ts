@@ -582,6 +582,18 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: -25,
 	},
 	chronostasis: {
+		onStart(pokemon) {
+			if (this.suppressingAbility(pokemon)) return;
+			this.add('-ability', pokemon, 'Chronostasis');
+		},
+		onAnyModifySpe(spe, target, source, move) {
+			const abilityHolder = this.effectState.target;
+			if (target.hasAbility('Chronostasis')) return;
+			if (!move.ruinedSpe?.hasAbility('Chronostasis')) move.ruinedSpe = abilityHolder;
+			if (move.ruinedSpe !== abilityHolder) return;
+			this.debug('Chronostasis Spe drop');
+			return this.chainModify(0.75);
+		},
 		flags: {},
 		name: "Chronostasis",
 		rating: 4,
@@ -3872,6 +3884,21 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: 168,
 	},
 	prospect: {
+		onResidualOrder: 5,
+		onResidualSubOrder: 3,
+		onResidual(pokemon) {
+			if (pokemon.hp && pokemon.status && this.randomChance(50, 100)) {
+				this.debug('prospect);
+				this.add('-activate', pokemon, 'ability: Prospect');
+				pokemon.cureStatus();
+			}
+		},
+		onModifyAccuracyPriority: -1,
+		onModifyAccuracy(accuracy, target) {
+			if (typeof accuracy !== 'number') return;
+				this.debug('Prospect - Sure hit');
+				return true
+		},
 		flags: {},
 		name: "Prospect",
 		rating: 2,
@@ -5848,6 +5875,13 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: -33,
 	},
 	valorheart: {
+		onAnyBasePowerPriority: -1,
+		onAnyBasePower(basePower, target, source) {
+			if (source.isAlly(this.effectState.target) && basePower === 'number') {
+				return this.chainModify([4915, 4096]);
+			}
+		},
+	},
 		flags: {},
 		name: "Valor Heart",
 		rating: 3,
