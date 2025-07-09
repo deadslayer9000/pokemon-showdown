@@ -5881,7 +5881,6 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 				return this.chainModify([4915, 4096]);
 			}
 		},
-	},
 		flags: {},
 		name: "Valor Heart",
 		rating: 3,
