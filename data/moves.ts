@@ -42,7 +42,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		pp: 1,
 		priority: 0,
 		flags: {},
-		isZ, "deltaklinklangiumz",
+		isZ: "deltaklinklangiumz",
 		onTryImmunity(target) {
 			// Fails if user does not have Chronostasis
 			if (!target.ability === 'chronostasis') {
