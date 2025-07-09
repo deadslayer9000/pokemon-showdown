@@ -569,11 +569,33 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 3,
 		num: 34,
 	},
+	chromaticscales: {
+		flags: {},
+		name: "Chromatic Scales",
+		rating: 4,
+		num: -49,
+	},
 	chronocatalyst: {
 		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, notransform: 1 },
 		name: "Chrono Catalyst",
 		rating: 4,
-		num: -25,
+		num: -25, 
+	},
+	chronostasis: {
+		onStart(pokemon) {
+			if (this.suppressingAbility(pokemon)) return;
+			this.add('-ability', pokemon, 'Chronostasis');
+		},
+		onAnyModifySpe(spe, pokemon) {
+			const abilityHolder = this.effectState.target;
+			if (pokemon.hasAbility('Chronostasis')) return;
+			this.debug('Chronostasis Spe drop');
+			return this.chainModify(0.75);
+		},
+		flags: {},
+		name: "Chronostasis",
+		rating: 4,
+		num: -50,
 	},
 	clearbody: {
 		onTryBoost(boost, target, source, effect) {
@@ -3859,6 +3881,27 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 4,
 		num: 168,
 	},
+	prospect: {
+		onResidualOrder: 5,
+		onResidualSubOrder: 3,
+		onResidual(pokemon) {
+			if (pokemon.hp && pokemon.status && this.randomChance(50, 100)) {
+				this.debug('prospect');
+				this.add('-activate', pokemon, 'ability: Prospect');
+				pokemon.cureStatus();
+			}
+		},
+		onModifyAccuracyPriority: -1,
+		onModifyAccuracy(accuracy, target) {
+			if (typeof accuracy !== 'number') return;
+				this.debug('Prospect - Sure hit');
+				return true
+		},
+		flags: {},
+		name: "Prospect",
+		rating: 2,
+		num: -52,
+	},
 	protosynthesis: {
 		onSwitchInPriority: -2,
 		onStart(pokemon) {
@@ -3961,8 +4004,8 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: 244,
 	},
 	pureguise: {
-		onModifyDamage(atk, attacker, defender, move){
-			if(attacker.hp >= attacker.maxhp){
+		onModifyDamage(damage, pokemon, target, move){
+			if(pokemon.hp >= pokemon.maxhp){
 				this.debug('Pure Guise boost');
 				return this.chainModify(1.5);
 			}
@@ -5828,6 +5871,18 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Usurper",
 		rating: 2,
 		num: -33,
+	},
+	valorheart: {
+		onAnyBasePowerPriority: -1,
+		onAnyBasePower(basePower, target, source) {
+			if (source.isAlly(this.effectState.target) && basePower === 'number') {
+				return this.chainModify([4915, 4096]);
+			}
+		},
+		flags: {},
+		name: "Valor Heart",
+		rating: 3,
+		num: -51,
 	},
 	vesselofruin: {
 		onStart(pokemon) {

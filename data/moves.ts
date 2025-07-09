@@ -33,6 +33,45 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Grass",
 		contestType: "Clever",
 	},
+	absolutezero: {
+		num: -51,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Absolute Zero",
+		pp: 1,
+		priority: 0,
+		flags: {},
+		isZ: "deltaklinklangiumz",
+		onTryImmunity(target) {
+			// Fails if user does not have Chronostasis
+			if (!target.ability === 'chronostasis') {
+				return false;
+			}
+		},
+		onTryHit(target) {
+			if (target.getAbility().flags['cantsuppress']) {
+				return false;
+			}
+		},
+		onHit(pokemon) {
+			const oldAbility = pokemon.setAbility('speedboost');
+			if (oldAbility) {
+				this.add('-ability', pokemon, 'Speed Boost', '[from] move: Flux Emission');
+				
+				return;
+			}
+			return oldAbility as false | null;
+		},
+		boosts: {
+			spa: 1,
+			spd: 1,
+			def: 1,
+		},
+		secondary: null,
+		target: "self",
+		type: "Ice",
+	},
 	accelerock: {
 		num: 709,
 		accuracy: 100,
@@ -4187,6 +4226,50 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Water",
 		contestType: "Beautiful",
 	},
+	divination: {
+		num: -54,
+		accuracy: 100,
+		basePower: 120,
+		category: "Special",
+		name: "Divination",
+		pp: 10,
+		priority: 0,
+		flags: { allyanim: 1, metronome: 1, futuremove: 1 },
+		ignoreImmunity: true,
+		onTry(source, target) {
+			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
+			Object.assign(target.side.slotConditions[target.position]['futuremove'], {
+				move: 'divination',
+				source,
+				moveData: {
+					id: 'divination',
+					name: "Divination",
+					accuracy: 100,
+					basePower: 120,
+					category: "Special",
+					priority: 0,
+					flags: { allyanim: 1, metronome: 1, futuremove: 1 },
+					onTryHit(target, source, move) {
+						if (!source.status) return false;
+							move.status = source.status;
+							},
+					self: {
+						onHit(pokemon) {
+						pokemon.cureStatus();
+						},
+					},
+					ignoreImmunity: false,
+					effectType: 'Move',
+					type: 'Dark',
+				},
+			});
+			this.add('-start', source, 'move: Divination');
+			return this.NOT_FAIL;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+	},
 	dizzypunch: {
 		num: 146,
 		accuracy: 100,
@@ -6441,6 +6524,42 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		secondary: null,
 		target: "normal",
 		type: "Grass",
+	},
+	fluxemission: {
+		num: -50,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Flux Emission",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		onTryImmunity(target) {
+			// Fails if user does not have Chronostasis
+			if (!target.ability === 'chronostasis') {
+				return false;
+			}
+		},
+		onTryHit(target) {
+			if (target.getAbility().flags['cantsuppress']) {
+				return false;
+			}
+		},
+		onHit(pokemon) {
+			const oldAbility = pokemon.setAbility('speedboost');
+			if (oldAbility) {
+				this.add('-ability', pokemon, 'Speed Boost', '[from] move: Flux Emission');
+				
+				return;
+			}
+			return oldAbility as false | null;
+		},
+		boosts: {
+			spa: 1,
+		},
+		secondary: null,
+		target: "self",
+		type: "Ice",
 	},
 	fly: {
 		num: 19,
@@ -20040,6 +20159,22 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Water",
 		contestType: "Beautiful",
 	},
+	surgingshot: {
+		num: -53,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Surging Shot",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, bullet: 1 },
+		secondary: {
+			chance: 30,
+			status: 'par',
+		},
+		target: "normal",
+		type: "Electric",
+	},
 	surgingstrikes: {
 		num: 818,
 		accuracy: 100,
@@ -21953,6 +22088,26 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "normal",
 		type: "Fighting",
 		contestType: "Cool",
+	},
+	vascend: {
+		num: -52,
+		accuracy:  100,
+		basePower: 150,
+		category: "Physical",
+		name: "V-ascend",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1 },
+		self: {
+			boosts: {
+				spe: -1,
+				def: -1,
+				spd: -1,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Electric",
 	},
 	vcreate: {
 		num: 557,

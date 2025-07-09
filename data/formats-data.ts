@@ -6448,6 +6448,57 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	ironpilot: {
 		tier: "UU",
 	},
+	dragetsu: {
+		tier: "OU",
+	},
+	deltagible: {
+		tier: "LC",
+	},
+	deltagabite: {
+		tier: "NFE",
+	},
+	deltagarchomp: {
+		tier: "UU",
+	},
+	deltashinx: {
+		tier: "LC",
+	},
+	deltaluxio: {
+		tier: "NFE",
+	},
+	deltaluxray: {
+		tier: "UU",
+	},
+	deltatrapinch: {
+		tier: "LC",
+	},
+	deltavibrava: {
+		tier: "NFE",
+	},
+	deltaflygon: {
+		tier: "UU",
+	},
+	deltaklink: {
+		tier: "LC",
+	},
+	deltaklang: {
+		tier: "NFE",
+	},
+	deltaklinklang: {
+		tier: "UU",
+	},
+	deltavictini: {
+		tier: "UU",
+	},
+	deltahoothoot: {
+		tier: "LC",
+	},
+	deltanoctowl: {
+		tier: "NFE",
+	},
+	klocktowl: {
+		tier: "UU",
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

@@ -3298,7 +3298,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Blue",
 		prevo: "Dratini",
 		evoLevel: 30,
-		evos: ["Dragonite"],
+		evos: ["Dragonite", "Dragetsu"],
 		eggGroups: ["Water 1", "Dragon"],
 	},
 	dragonite: {
@@ -22425,7 +22425,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Blue",
 		eggGroups: ["Dragon", "Monster"],
 		evos: ["Delta-Gabite"],
-	},
+	}, 
 	deltaluxray: {
 		num: 405,
 		name: "Delta-Luxray",
@@ -22435,7 +22435,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		heightm: 1.6,
 		weightkg: 56.5,
 		color: "Red",
-		prevo: "Delta-Luxray",
+		prevo: "Delta-Luxio",
 		eggGroups: ["Field"],
 		forme: "Delta",
 		baseSpecies: "Luxray",
@@ -22449,7 +22449,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		heightm: 0.9,
 		weightkg: 34.5,
 		color: "Red",
-		prevo: "Delta-Luxio",
+		prevo: "Delta-Shinx",
 		evos: ["Delta-Luxray"],
 		eggGroups: ["Field"],
 		forme: "Delta",
@@ -22468,7 +22468,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		eggGroups: ["Field"],
 		forme: "Delta",
 		baseSpecies: "Shinx",
-	},
+	}, 
 	deltaflygon: {
 		num: 330,
 		name: "Delta-Flygon",
@@ -22577,7 +22577,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		heightm: 1.7,
 		weightkg: 70,
 		color: "Black",
-		prevo: "Noctowl-Delta",
+		prevo: "Delta-Noctowl",
 		eggGroups: ["Flying"],
 	},
 	deltanoctowl: {
