@@ -579,18 +579,16 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, notransform: 1 },
 		name: "Chrono Catalyst",
 		rating: 4,
-		num: -25,
+		num: -25, 
 	},
 	chronostasis: {
 		onStart(pokemon) {
 			if (this.suppressingAbility(pokemon)) return;
 			this.add('-ability', pokemon, 'Chronostasis');
 		},
-		onAnyModifySpe(spe, target, source, move) {
+		onAnyModifySpe(spe, pokemon) {
 			const abilityHolder = this.effectState.target;
-			if (target.hasAbility('Chronostasis')) return;
-			if (!move.ruinedSpe?.hasAbility('Chronostasis')) move.ruinedSpe = abilityHolder;
-			if (move.ruinedSpe !== abilityHolder) return;
+			if (pokemon.hasAbility('Chronostasis')) return;
 			this.debug('Chronostasis Spe drop');
 			return this.chainModify(0.75);
 		},

@@ -220,6 +220,12 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			desc: "If Sunny Day is active, this Pokemon's Speed is doubled.",
 		},
 	},
+	chronostasis: {
+		name: "Chronostasis",
+		shortDesc: "Active Pokemon without this Ability have their Speed multiplied by 0.75.",
+
+		start: "  [POKEMON]'s Chronostasis slowed time down to a crawl!",
+	},
 	chronocatalyst: {
 		name: "Chrono Catalyst",
 		shortDesc: "If Sunny Day, E. Terrain, or Booster Energy active: highest stat 1.3x, 1.5x if Speed.",
