@@ -22389,7 +22389,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Gray",
 		eggGroups: ["Undiscovered"],
 	},
-	deltagarchomp: {
+	/*deltagarchomp: {
 		num: 445,
 		name: "Delta-Garchomp",
 		types: ["Dragon", "Ice"],
@@ -22425,7 +22425,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Blue",
 		eggGroups: ["Dragon", "Monster"],
 		evos: ["Delta-Gabite"],
-	},
+	}, 
 	deltaluxray: {
 		num: 405,
 		name: "Delta-Luxray",
@@ -22468,7 +22468,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		eggGroups: ["Field"],
 		forme: "Delta",
 		baseSpecies: "Shinx",
-	},
+	}, 
 	deltaflygon: {
 		num: 330,
 		name: "Delta-Flygon",
@@ -22620,4 +22620,5 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		prevo: "Dragonair",
 		eggGroups: ["Water 1", "Dragon"],
 	},
+	*/
 };
