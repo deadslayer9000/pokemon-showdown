@@ -3888,7 +3888,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		onResidualSubOrder: 3,
 		onResidual(pokemon) {
 			if (pokemon.hp && pokemon.status && this.randomChance(50, 100)) {
-				this.debug('prospect);
+				this.debug('prospect');
 				this.add('-activate', pokemon, 'ability: Prospect');
 				pokemon.cureStatus();
 			}
