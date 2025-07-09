@@ -4,6 +4,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Has a very high chance for a critical hit.",
 		shortDesc: "Very high critical hit ratio.",
 	},
+	absolutezero: {
+		name: "Absolute Zero",
+		shortDesc: "+1 SpA, Def, SpD. Ability becomes Speed Boost.",
+	},
 	absorb: {
 		name: "Absorb",
 		desc: "The user recovers 1/2 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
@@ -1500,6 +1504,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 
 		prepare: "[POKEMON] hid underwater!",
 	},
+	divination: {
+		name: "Divination",
+		shortDesc: "Hits two turns later. Transfers status.",
+	},
 	dizzypunch: {
 		name: "Dizzy Punch",
 		desc: "Has a 20% chance to confuse the target.",
@@ -2277,6 +2285,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Flower Trick",
 		desc: "This move is always a critical hit unless the target is under the effect of Lucky Chant or has the Battle Armor or Shell Armor Abilities. This move does not check accuracy.",
 		shortDesc: "Always results in a critical hit; no accuracy check.",
+	},
+	fluxemission: {
+		name: "Flux Emission",
+		shortDesc: "If Ability Chronostasis: +1 SpA, becomes Speed Boost.",
 	},
 	fly: {
 		name: "Fly",
@@ -6738,6 +6750,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			shortDesc: "Hits foes. Power doubles against Dive.",
 		},
 	},
+	surgingshot: {
+		name: "Surging Shot",
+		shortDesc: "30% chance to paralyze.",
+	},
 	surgingstrikes: {
 		name: "Surging Strikes",
 		desc: "Hits three times. This move is always a critical hit unless the target is under the effect of Lucky Chant or has the Battle Armor or Shell Armor Abilities.",
@@ -7411,6 +7427,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Vacuum Wave",
 		desc: "No additional effect.",
 		shortDesc: "Usually goes first.",
+	},
+	vascend: {
+		name: "V-ascend",
+		shortDesc: "Lowers the user's Defense, Sp. Def, Speed by 1.",
 	},
 	vcreate: {
 		name: "V-create",

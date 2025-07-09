@@ -801,10 +801,10 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 			const speciesTable = new Set<number>();
 			for (const set of team) {
 				const species = this.dex.species.get(set.species);
-				if (speciesTable.has(species.num)) {
-					return [`You are limited to one of each Pokémon by Species Clause.`, `(You have more than one ${species.baseSpecies})`];
+				if (speciesTable.has(species.name)) {
+					return [`You are limited to one of each Pokémon by Species Clause.`, `(You have more than one ${species.name})`];
 				}
-				speciesTable.add(species.num);
+				speciesTable.add(species.name);
 			}
 		},
 	},
