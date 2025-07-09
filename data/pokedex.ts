@@ -22577,7 +22577,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		heightm: 1.7,
 		weightkg: 70,
 		color: "Black",
-		prevo: "Noctowl-Delta",
+		prevo: "Delta-Noctowl",
 		eggGroups: ["Flying"],
 	},
 	deltanoctowl: {
