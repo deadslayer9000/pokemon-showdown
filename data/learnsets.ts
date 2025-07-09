@@ -111854,6 +111854,11 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M","9M"],
 		}
 	},
+	energeist: {
+		learnset: {
+			aerialace: ["9M"],
+		},
+	},
 	deltagible: {
 		learnset: {
 			aerialace: ["9M"],
