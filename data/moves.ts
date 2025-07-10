@@ -10633,6 +10633,62 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		zMove: { boost: { spa: 1 } },
 		contestType: "Beautiful",
 	},
+	ironcladguard: {
+		num: -56,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Ironclad Guard",
+		pp: 10,
+		priority: 4,
+		flags: { noassist: 1, failcopycat: 1, failinstruct: 1 },
+		stallingMove: true,
+		volatileStatus: 'ironcladguard',
+		onPrepareHit(pokemon) {
+			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+		},
+		onHit(pokemon) {
+			pokemon.addVolatile('stall');
+		},
+		condition: {
+			duration: 1,
+			onStart(target) {
+				this.add('-singleturn', target, 'Protect');
+			},
+			onTryHitPriority: 3,
+			onTryHit(target, source, move) {
+				if (!move.flags['protect'] || move.category === 'Status') {
+					if (['gmaxoneblow', 'gmaxrapidflow'].includes(move.id)) return;
+					if (move.isZ || move.isMax) target.getMoveHitData(move).zBrokeProtect = true;
+					return;
+				}
+				if (move.smartTarget) {
+					move.smartTarget = false;
+				} else {
+					this.add('-activate', target, 'move: Protect');
+				}
+				const lockedmove = source.getVolatile('lockedmove');
+				if (lockedmove) {
+					// Outrage counter is reset
+					if (source.volatiles['lockedmove'].duration === 2) {
+						delete source.volatiles['lockedmove'];
+					}
+				}
+				if (this.checkMoveMakesContact(move, source, target)) {
+					this.boost({ def: -1, spe: -1 }, source, target, this.dex.getActiveMove("Ironclad Guard"));
+				}
+				return this.NOT_FAIL;
+			},
+			onHit(target, source, move) {
+				if (move.isZOrMaxPowered && this.checkMoveMakesContact(move, source, target)) {
+					this.boost({ def: -1, spe: -1 }, source, target, this.dex.getActiveMove("Ironclad Guard"));
+				}
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Steel",
+	},
 	irondefense: {
 		num: 334,
 		accuracy: true,
@@ -17462,6 +17518,22 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "allAdjacent",
 		type: "Normal",
 		contestType: "Beautiful",
+	},
+	septicwave: {
+		num: -57,
+		accuracy: 90,
+		basePower: 0,
+		damageCallback(pokemon, target) {
+			return this.clampIntRange(Math.floor(target.getUndynamaxedHP() / 2), 1);
+		},
+		category: "Special",
+		name: "Septic Wave",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1 },
+		secondary: null,
+		target: "normal",
+		type: "Poison",
 	},
 	shadowball: {
 		num: 247,

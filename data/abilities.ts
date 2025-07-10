@@ -5132,6 +5132,16 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 3.5,
 		num: 173,
 	},
+	strongpsyche: {
+		onModifySpAPriority: 5,
+		onModifySpA(spa) {
+			return this.chainModify(2);
+		},
+		flags: {},
+		name: "Strong Psyche",
+		rating: 4,
+		num: -53,
+	},
 	sturdy: {
 		onTryHit(pokemon, target, move) {
 			if (move.ohko) {
