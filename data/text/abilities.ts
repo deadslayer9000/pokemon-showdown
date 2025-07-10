@@ -1993,6 +1993,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "This Pokemon's bite-based attacks have their power multiplied by 1.5.",
 		shortDesc: "This Pokemon's bite-based attacks have 1.5x power. Bug Bite is not boosted.",
 	},
+	strongpsyche: {
+		name: "Strong Psyche",
+		shortDesc: "This Pokemon's Special Attack is doubled.",
+	},
 	sturdy: {
 		name: "Sturdy",
 		desc: "If this Pokemon is at full HP, it survives one hit with at least 1 HP. OHKO moves fail when used against this Pokemon.",

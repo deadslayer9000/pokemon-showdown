@@ -3500,6 +3500,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 
 		activate: "  A deluge of ions showers the battlefield!",
 	},
+	ironcladguard: {
+		name: "Ironclad Guard",
+		shortDesc: "Protects from damaging attacks. Contact -1 Def, Spe.",
+	},
 	irondefense: {
 		name: "Iron Defense",
 		desc: "Raises the user's Defense by 2 stages.",
@@ -5788,6 +5792,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		gen1: {
 			desc: "The user faints after using this move, unless the target's substitute was broken by the damage. The target's Defense is halved during damage calculation.",
 		},
+	},
+	septicwave: {
+		name: "Septic Wave",
+		shortDesc: "Does damage equal to 1/2 target's current HP.",
 	},
 	shadowball: {
 		name: "Shadow Ball",

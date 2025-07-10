@@ -6559,6 +6559,21 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	klocktowl: {
 		tier: "UU",
 	},
+	deltawooper: {
+		tier: "LC",
+	},
+	quaxolotl: {
+		tier: "UU",
+	},
+	omegawooper: {
+		tier: "LC",
+	},
+	labsire: {
+		tier: "NU",
+	},
+	secretarmor: {
+		tier: "UU",
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
