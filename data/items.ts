@@ -1335,7 +1335,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		onTakeItem: false,
 		zMove: "Absolute Zero",
 		zMoveFrom: "Flux Emission",
-		itemUser: "Delta-Klinklang",
+		itemUser: ["Delta-Klinklang"],
 		num: -15,
 	},
 	deltalatiasite: {
