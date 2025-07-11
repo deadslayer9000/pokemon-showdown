@@ -6451,6 +6451,66 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	dragetsu: {
 		tier: "OU",
 	},
+	energeist: {
+		tier: "UU",
+	},
+	sinisurge: {
+		tier: "LC",
+	},
+	rogueprince: {
+		tier: "UU",
+	},
+	deltacharmander: {
+		tier: "LC",
+	},
+	deltacharmeleon: {
+		tier: "NFE",
+	},
+	deltacharizard: {
+		tier: "NU",
+	},
+	deltacharizardmega: {
+		tier: "UU",
+	},
+	deltavolcarona: {
+		tier: "UU",
+	},
+	deltalarvesta: {
+		tier: "LC",
+	},
+	deltaarcanine: {
+		tier: "UU",
+	},
+	deltagrowlithe: {
+		tier: "LC",
+	},
+	brewloom: {
+		tier: "UU",
+	},
+	broomish: {
+		tier: "LC",
+	},
+	ancientgene: {
+		tier: "UU",
+	},
+	curesola: {
+		tier: "UU",
+	},
+	deltameloettaallegro: {
+		tier: "UU",
+	},
+	deltameloettalento: {
+		tier: "UU",
+	},
+	perrception: {
+		tier: "UU",
+	},
+	deltameowth: {
+		tier: "LC",
+	},
+	deltagreninja: {
+		tier: "UU",
+	},
 	deltagible: {
 		tier: "LC",
 	},
