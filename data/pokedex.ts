@@ -23212,6 +23212,8 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Brown",
 		prevo: "Sinisfee",
 		eggGroups: ["Mineral", "Amorphous"],
+		formeOrder: ["Polfeegeist", "Polfeegeist-Slumber"],
+		otherFormes: ["Polfeegeist-Slumber"],
 	},
 	polfeegeistslumber: {
 		num: 2032,
@@ -23228,6 +23230,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		baseSpecies: "Polfeegeist",
 		requiredAbility: "Sheltered Slumber",
 		battleOnly: "Polfeegeist",
+		forme: "Slumber",
 	},
 	deltaaegislash: {
 		num: 681,
@@ -23257,7 +23260,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Red",
 		eggGroups: ["Mineral"],
 		requiredAbility: "Blazing Swap",
-		battleOnly: "Aegislash",
+		battleOnly: "Delta-Aegislash",
 	},
 	deltahonedge: {
 		num: 679,
