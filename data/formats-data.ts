@@ -6574,6 +6574,69 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	secretarmor: {
 		tier: "UU",
 	},
+	deltamunchlax : {
+		tier: "LC",
+	},
+	deltasnorlaxcherry: {
+		tier: "RU",
+	},
+	deltasnorlaxautumn: {
+		tier: "NU",
+	},
+	deltasnorlaxspring: {
+		tier: "NU",
+	},
+	deltasnorlaxsummer: {
+		tier: "NU",
+	},
+	deltasnorlaxwinter: {
+		tier: "NU",
+	},
+	deltachatot: {
+		tier: "LC",
+	},
+	operettot: {
+		tier: "RU",
+	},
+	maestrot: {
+		tier: "RU",
+	},
+	deltashellder: {
+		tier: "LC",
+	},
+	deltacloyster: {
+		tier: "RU",
+	},
+	deltabeldum: {
+		tier: "LC",
+	},
+	deltametang: {
+		tier: "NFE",
+	},
+	deltametagross: {
+		tier: "RU",
+	},
+	sinisfee: {
+		tier: "LC",
+	},
+	polfeegeist: {
+		tier: "RU",
+	},
+	deltahonedge: {
+		tier: "LC",
+	},
+	deltadoublade: {
+		tier: "NFE",
+	},
+	deltaaegislash: {
+		tier: "RU",
+	},
+	deltaaegislashblade: {
+		tier: "Illegal",
+	},
+	polfeegeistslumber: {
+		tier: "Illegal",
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
