@@ -6631,6 +6631,12 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	deltaaegislash: {
 		tier: "RU",
 	},
+	deltaaegislashblade: {
+		tier: "Illegal",
+	},
+	polfeegeistslumber: {
+		tier: "Illegal",
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
