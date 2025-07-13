@@ -16619,14 +16619,20 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			status: 'slp',
 		},
 		onHit(target, pokemon, move) {
-			if (pokemon.baseSpecies.baseSpecies === 'Meloetta' && !pokemon.transformed) {
+			if (pokemon.species.id === 'meloetta' || pokemon.species.id === 'meloettapirouette' && !pokemon.transformed) {
 				move.willChangeForme = true;
+			}
+			if (pokemon.species.id === 'deltameloettalento' || pokemon.species.id === 'deltameloettaallegro' && !pokemon.transformed) {
+				move.WillChangeForme = true;
 			}
 		},
 		onAfterMoveSecondarySelf(pokemon, target, move) {
-			if (move.willChangeForme) {
+			if (move.willChangeForme && pokemon.species.id === 'meloetta' || pokemon.species.id === 'meloettapirouette') {
 				const meloettaForme = pokemon.species.id === 'meloettapirouette' ? '' : '-Pirouette';
 				pokemon.formeChange('Meloetta' + meloettaForme, this.effect, false, '0', '[msg]');
+			} else {
+				const deltaMeloettaForme = pokemon.species.id === 'deltameloettaallegro' ? '' : '-Allegro';
+				pokemon.formeChange('Delta-Meloetta' + deltaMeloettaForme, this.effect, false, '0', '[msg]');
 			}
 		},
 		target: "allAdjacentFoes",

@@ -22701,9 +22701,9 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		forme: "Delta",
 		baseSpecies: "Meowth",
 	},
-	deltameloettalento: {
+	deltameloetta: {
 		num: 648,
-		name: "Delta-Meloetta-Lento",
+		name: "Delta-Meloetta",
 		types: ["Normal", "Water"],
 		gender: "N",
 		baseStats: { hp: 100, atk: 77, def: 90, spa: 128, spd: 128, spe: 77 },
@@ -22715,7 +22715,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		forme: "Delta",
 		baseSpecies: "Meloetta",
 		otherFormes: ["Delta-Meloetta-Allegro"],
-		formeOrder: ["Delta-Meloetta-Lento", "Delta-Meloetta-Allegro"],
+		formeOrder: ["Delta-Meloetta", "Delta-Meloetta-Allegro"],
 	},
 	deltameloettaallegro: {
 		num: 648,
@@ -22730,8 +22730,8 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		eggGroups: ["Undiscovered"],
 		forme: "Delta",
 		baseSpecies: "Meloetta",
-		otherFormes: ["Delta-Meloetta-Lento"],
-		formeOrder: ["Delta-Meloetta-Lento", "Delta-Meloetta-Allegro"],
+		otherFormes: ["Delta-Meloetta"],
+		formeOrder: ["Delta-Meloetta", "Delta-Meloetta-Allegro"],
 	},
 	curesola: {
 		num: 2018,

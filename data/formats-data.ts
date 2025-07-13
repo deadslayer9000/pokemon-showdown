@@ -6499,11 +6499,8 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	curesola: {
 		tier: "UU",
 	},
-	deltameloettaallegro: {
+	deltameloetta: {
 		tier: "UU",
-	},
-	deltameloettalento: {
-		tier: "Illegal",
 	},
 	perrception: {
 		tier: "UU",
