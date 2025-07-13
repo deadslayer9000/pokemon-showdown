@@ -2943,10 +2943,10 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		},
 		onHit(target, source, move) {
 			if (target.status === 'slp') {
-				target.cureStatus;
+				target.cureStatus();
 			}
 			if (source.status === 'slp') {
-				source.cureStatus;
+				source.cureStatus();
 			}
 		},
 		secondary: {
@@ -3975,17 +3975,19 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		pp: 10,
 		priority: 0,
 		flags: {},
-		onTryMove (attacker, source, pokemon) {
+		onTryMove (attacker, source,) {
 			if (['sunnyday', 'desolateland'].includes(attacker.effectiveWeather())) {
 				const bestStat = source.getBestStat(true, true);
 				this.boost({ [bestStat]: 3 }, source);
-				const oldAbility = pokemon.setAbility('drizzle');
+				const oldAbility = source.setAbility('drizzle');
 				if (oldAbility) {
-					this.add('-ability', pokemon, 'Drizzle', '[from] move: Depth Decree');
+					this.add('-ability', source, 'Drizzle', '[from] move: Depth Decree');
 					return;
 				}
 				return oldAbility as false | null;
 			}
+			this.hint("This move fails if the weather isn't Sunny Day");
+			return null;
 		},
 		secondary: null,
 		target: "self",
@@ -10673,7 +10675,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		priority: 4,
 		flags: { noassist: 1, failcopycat: 1, failinstruct: 1 },
 		stallingMove: true,
-		volatileStatus: 'kingsshield',
+		volatileStatus: 'infernalshield',
 		onPrepareHit(pokemon) {
 			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
 		},
@@ -10705,13 +10707,13 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 					}
 				}
 				if (this.checkMoveMakesContact(move, source, target)) {
-					this.status( 'brn', source, target, this.dex.getActiveMove("Infernal Shield"));
+					source.trySetStatus('brn', target);
 				}
 				return this.NOT_FAIL;
 			},
 			onHit(target, source, move) {
 				if (move.isZOrMaxPowered && this.checkMoveMakesContact(move, source, target)) {
-					this.status( 'brn', source, target, this.dex.getActiveMove("Infernal Shield"));
+					source.trySetStatus('brn', target);
 				}
 			},
 		},
@@ -16456,31 +16458,16 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		accuracy: 100,
 		basePower: 185,
 		category: "Special",
-		name: "Revival Blessing",
+		name: "Rebirth",
 		pp: 1,
 		priority: 0,
 		isZ: "Ancientgenium Z",
 		flags: { heal: 1, nosketch: 1 },
-		onTryHit(source) {
-			if (!source.side.pokemon.filter(ally => ally.fainted).length) {
-				return false;
-			}
-		},
-		
-		slotCondition: 'revivalblessing',
-		// No this not a real switchout move
-		// This is needed to trigger a switch protocol to choose a fainted party member
-		// Feel free to refactor
-		selfSwitch: true,
-		condition: {
-			duration: 1,
-			// reviving implemented in side.ts, kind of
-		},
 		onHit(pokemon) {
-			const type = this.dex.moves.get(pokemon.moveSlots[0].id).type;
-			const type2 = this.dex.moves.get(pokemon.moveSlots[1].id).type;
-			this.add('-start', pokemon, 'typechange', type, type2);
+		//	this.actions.useMove('revivalblessing');
+			this.hint("This move is not fully implemented yet");
 		},
+		//callsMove: true,
 		secondary: null,
 		target: "normal",
 		type: "Psychic",

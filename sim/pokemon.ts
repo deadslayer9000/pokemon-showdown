@@ -1636,7 +1636,7 @@ export class Pokemon {
 		source: Pokemon | null = null,
 		sourceEffect: Effect | null = null,
 		ignoreImmunities = false,
-		moveid: string | null = null,
+		move: Move
 	) {
 		if (!this.hp) return false;
 		status = this.battle.dex.conditions.get(status);
@@ -1657,7 +1657,7 @@ export class Pokemon {
 		}
 
 		if (
-			!ignoreImmunities && status.id && !(source?.hasAbility('corrosion') && !(moveid === 'chillingvenom') && ['tox', 'psn'].includes(status.id))
+			!ignoreImmunities && status.id && !(source?.hasAbility('corrosion') && !(move.moveid === 'chillingvenom') && ['tox', 'psn'].includes(status.id))
 		) {
 			// the game currently never ignores immunities
 			if (!this.runStatusImmunity(status.id === 'tox' ? 'psn' : status.id)) {

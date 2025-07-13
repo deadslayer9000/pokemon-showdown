@@ -773,13 +773,13 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		},
 		onTryHit(target, source, move) {
 			if (target !== source && move.flags['sound']) {
-				this.add('-immune', target, '[from] ability: Soundproof');
+				this.add('-immune', target, '[from] ability: Conductor');
 				return null;
 			}
 		},
 		onAllyTryHitSide(target, source, move) {
 			if (move.flags['sound']) {
-				this.add('-immune', this.effectState.target, '[from] ability: Soundproof');
+				this.add('-immune', this.effectState.target, '[from] ability: Conductor');
 			}
 		},
 		flags: {},
@@ -3677,13 +3677,13 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		},
 		onTryHit(target, source, move) {
 			if (target !== source && move.flags['sound']) {
-				this.add('-immune', target, '[from] ability: Soundproof');
+				this.add('-immune', target, '[from] ability: Performer');
 				return null;
 			}
 		},
 		onAllyTryHitSide(target, source, move) {
 			if (move.flags['sound']) {
-				this.add('-immune', this.effectState.target, '[from] ability: Soundproof');
+				this.add('-immune', this.effectState.target, '[from] ability: Performer');
 			}
 		},
 		flags: {},
@@ -4299,10 +4299,9 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: 95,
 	},
 	quickwit: {
-		onModifyPriority(basePower, priority, source, target, move) {
-			const basePowerAfterMultiplier = this.modify(basePower, this.event.modifier);
-			this.debug(`Base Power: ${basePowerAfterMultiplier}`);
-			if (basePowerAfterMultiplier <= 60) {
+		onModifyPriorityPriority: 30,
+		onModifyPriority(priority, source, target, move) {
+			if (move.basePower <= 60) {
 				this.debug('Quick Wit boost');
 				return priority + 1;
 			}
@@ -5441,9 +5440,10 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		onTryHit(target, source, move) {
 			if (this.field.isTerrain('electricterrain')) {
 				if (target !== source && move.type === 'Ground') {
+					this.add('-immune', target, '[from] ability: Surge Deluge');
 					return null;
 				}
-				this.add('-immune', target, '[from] ability: Surge Deluge');
+				
 			}
 		},
 		flags: {},

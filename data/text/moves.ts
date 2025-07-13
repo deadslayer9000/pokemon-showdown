@@ -550,6 +550,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Has a 100% chance to lower the target's Attack by 1 stage.",
 		shortDesc: "100% chance to lower the target's Attack by 1.",
 	},
+	bizzareelixir: {
+		name: "Bizzare Elixir",
+		shortDesc: "Effect depends on held item.",
+	},
 	blackholeeclipse: {
 		name: "Black Hole Eclipse",
 		shortDesc: "Power is equal to the base move's Z-Power.",
@@ -945,6 +949,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Has a 100% chance to lower the target's Attack by 1 stage.",
 		shortDesc: "100% chance to lower the target's Attack by 1.",
 	},
+	chillingvenom: {
+		name: "Chilling Venom",
+		shortDesc: "30% chance to poison, even if the target is immune.",
+	},
 	chillyreception: {
 		name: "Chilly Reception",
 		desc: "For 5 turns, the weather becomes Snow. The user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members.",
@@ -1023,6 +1031,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Coaching",
 		desc: "Raises the target's Attack and Defense by 1 stage. Fails if there is no ally adjacent to the user.",
 		shortDesc: "Raises an ally's Attack and Defense by 1.",
+	},
+	coffeesplatter: {
+		name: "Coffee Splatter",
+		shortDesc: "Usable while asleep, wakes up user and target.",
 	},
 	coil: {
 		name: "Coil",
@@ -1373,6 +1385,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			shortDesc: "-1 evasion; clears target side's hazards/screens.",
 		},
 	},
+	depthdecree: {
+		name: "Depth Decree",
+		shortDesc: "In Sun: Ability becomes Drizzle and boosts SpA by +3.",
+	},
 	destinybond: {
 		name: "Destiny Bond",
 		desc: "Until the user's next move, if an opposing Pokemon's attack knocks the user out, that Pokemon faints as well, unless the attack was Doom Desire or Future Sight. Fails if the user used this move successfully as its last move, disregarding moves used through the Dancer Ability.",
@@ -1629,6 +1645,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	dragonclaw: {
 		name: "Dragon Claw",
 		shortDesc: "No additional effect.",
+	},
+	dragonclutch: {
+		name: "Dragon Clutch",
+		shortDesc: "30% chance to reduce Defense by 1.",
 	},
 	dragondance: {
 		name: "Dragon Dance",
@@ -1903,6 +1923,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
 		shortDesc: "10% chance to lower the target's Sp. Def by 1.",
 	},
+	enflame: {
+		name: "Enflame",
+		shortDesc: "Effect changes based on forme.",
+		desc: "While in Shield forme, heals the user for 25% health. While in Blade forme, has 100 Base Power and 100% accuracy. This move becomes a special move if the user's Special Attack is higher than its Attack, and vice versa.",
+	},
 	entrainment: {
 		name: "Entrainment",
 		desc: "Causes the target's Ability to become the same as the user's. Fails if the target's Ability is As One, Battle Bond, Comatose, Disguise, Gulp Missile, Ice Face, Multitype, Power Construct, RKS System, Schooling, Shields Down, Stance Change, Tera Shift, Truant, Zen Mode, or Zero to Hero, or the same Ability as the user, or if the user's Ability is As One, Battle Bond, Comatose, Commander, Disguise, Embody Aspect, Flower Gift, Forecast, Hunger Switch, Ice Face, Illusion, Imposter, Multitype, Neutralizing Gas, Poison Puppeteer, Power Construct, Power of Alchemy, Protosynthesis, Quark Drive, Receiver, RKS System, Schooling, Shields Down, Stance Change, Tera Shell, Tera Shift, Teraform Zero, Trace, Wonder Guard, Zen Mode, or Zero to Hero.",
@@ -1943,6 +1968,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Eternabeam",
 		desc: "If this move is successful, the user must recharge on the following turn and cannot select a move.",
 		shortDesc: "User cannot move next turn.",
+	},
+	exaltedpotion: {
+		name: "Exalted Potion",
+		shortDesc: "Boosts all stats by 1 and removes foe's item.",
 	},
 	expandingforce: {
 		name: "Expanding Force",
@@ -3320,6 +3349,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Hypnosis",
 		shortDesc: "Causes the target to fall asleep.",
 	},
+	iaislash: {
+		name: "Iai Slash",
+		shortDesc: "Usually goes first. Fails if target is not attacking.",
+	},
 	iceball: {
 		name: "Ice Ball",
 		desc: "If this move is successful, the user is locked into this move and cannot make another move until it misses, 5 turns have passed, or the attack cannot be used. Power doubles with each successful hit of this move and doubles again if Defense Curl was used previously by the user. If this move is called by Sleep Talk, the move is used for one turn.",
@@ -3435,6 +3468,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Infernal Parade",
 		desc: "Has a 30% chance to burn the target. Power doubles if the target has a non-volatile status condition.",
 		shortDesc: "30% burn. 2x power if target is already statused.",
+	},
+	infernalshield: {
+		name: "Infernal Shield",
+		shortDesc: "Protects from damaging attacks. Contact: burn.",
 	},
 	inferno: {
 		name: "Inferno",
@@ -5004,6 +5041,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			desc: "If this move is successful, it deals damage or heals the target. 102/256 chance for 40 power, 76/256 chance for 80 power, 26/256 chance for 120 power, or 52/256 chance to heal the target by 1/4 of its maximum HP, rounded down. If this move deals damage, it uses an abnormal version of the damage formula by substituting certain values. The user's Attack stat is replaced with 10 times the effectiveness of this move against the target, the target's Defense stat is replaced with the index number of the user's secondary type, and the user's level is replaced with the index number of the target's secondary type. If a Pokemon does not have a secondary type, its primary type is used. The index numbers for each type are Normal: 0, Fighting: 1, Flying: 2, Poison: 3, Ground: 4, Rock: 5, Bug: 7, Ghost: 8, Steel: 9, Fire: 20, Water: 21, Grass: 22, Electric: 23, Psychic: 24, Ice: 25, Dragon: 26, Dark: 27. If at any point a division by 0 would happen in the damage formula, it divides by 1 instead.",
 		},
 	},
+	primedcurrent: {
+		name: "Primed Current",
+		shortDesc: "Heals for 50% of damage dealt. 20% paralyze chance.",
+	},
 	prismaticlaser: {
 		name: "Prismatic Laser",
 		desc: "If this move is successful, the user must recharge on the following turn and cannot select a move.",
@@ -5313,6 +5354,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		},
 
 		prepare: "  [POKEMON] whipped up a whirlwind!",
+	},
+	rebirth: {
+		name: "Rebirth",
+		shortDesc: "Revives a fallen ally on use.",
 	},
 	recover: {
 		name: "Recover",

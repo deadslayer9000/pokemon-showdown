@@ -23235,6 +23235,8 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	deltaaegislash: {
 		num: 681,
 		name: "Delta-Aegislash",
+		baseSpecies: "Aegislash",
+		forme: "Delta",
 		baseForme: "Shield",
 		types: ["Steel", "Fire"],
 		baseStats: { hp: 85, atk: 45, def: 130, spa: 45, spd: 130, spe: 65 },
@@ -23244,8 +23246,8 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Red",
 		prevo: "Delta-Doublade",
 		eggGroups: ["Mineral"],
-		otherFormes: ["Aegislash-Blade"],
-		formeOrder: ["Aegislash", "Aegislash-Blade"],
+		otherFormes: ["Delta-Aegislash-Blade"],
+		formeOrder: ["Delta-Aegislash", "Delta-Aegislash-Blade"],
 	},
 	deltaaegislashblade: {
 		num: 681,

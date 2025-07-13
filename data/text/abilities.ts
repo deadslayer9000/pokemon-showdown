@@ -187,6 +187,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			shortDesc: "At 1/3 or less of its max HP, this Pokemon's Fire-type attacks have 1.5x power.",
 		},
 	},
+	blazingswap: {
+		name: "Blazing Swap",
+		shortDesc: "If Aegislash, changes Forme to Blade before attacks and Shield before King's Shield.",
+	},
 	bulletproof: {
 		name: "Bulletproof",
 		shortDesc: "This Pokemon is immune to bullet moves.",
@@ -271,6 +275,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Compound Eyes",
 		shortDesc: "This Pokemon's moves have their accuracy multiplied by 1.3.",
 	},
+	conductor: {
+		name: "Conductor",
+		shortDesc: "Encore, Instruct, and Tailwind gain +1 priority.",
+	},
 	contrary: {
 		name: "Contrary",
 		shortDesc: "If this Pokemon has a stat stage raised it is lowered instead, and vice versa.",
@@ -300,7 +308,11 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	covenant: {
 		name: "Covenant",
-		shortDesc: "Atk and Spe are halved. This ability becomes Huge Power when under 50% HP."
+		shortDesc: "Atk and Spe are halved. This ability becomes Huge Power when under 50% HP.",
+	},
+	crescentform: {
+		name: "Crescent Form",
+		shortDesc: "Takes 50% less from, and deals 30% more damage with Beam, Pulse, and Light moves.",
 	},
 	cudchew: {
 		name: "Cud Chew",
@@ -424,6 +436,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Download",
 		desc: "On switch-in, this Pokemon's Attack or Special Attack is raised by 1 stage based on the weaker combined defensive stat of all opposing Pokemon. Attack is raised if their Defense is lower, and Special Attack is raised if their Special Defense is the same or lower.",
 		shortDesc: "On switch-in, Attack or Sp. Atk is raised 1 stage based on the foes' weaker Defense.",
+	},
+	draconic: {
+		name: "Draconic",
+		shortDesc: "At 1/3 or less of its max HP, this Pokemon's offensive stat is 1.5x with Dragon attacks.",
 	},
 	dragonsmaw: {
 		name: "Dragon's Maw",
@@ -1332,6 +1348,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "This Pokemon and its allies cannot be poisoned. Gaining this Ability while this Pokemon or its ally is poisoned cures them. If this Ability is being ignored during an effect that causes poison, this Pokemon is cured immediately but its ally is not.",
 		shortDesc: "This Pokemon and its allies cannot be poisoned. On switch-in, cures poisoned allies.",
 	},
+	performer: {
+		name: "Performer",
+		shortDesc: "Dance moves used by this pokemon gain +1 priority.",
+	},
 	perishbody: {
 		name: "Perish Body",
 		desc: "Making contact with this Pokemon starts the Perish Song effect for it and the attacker. This effect does not happen for this Pokemon if the attacker already has a perish count.",
@@ -1444,6 +1464,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			desc: "This Pokemon's non-damaging moves have their priority increased by 1.",
 			shortDesc: "This Pokemon's non-damaging moves have their priority increased by 1.",
 		},
+	},
+	precedence: {
+		name: "Precedence",
+		shortDesc: "Priority moves used by this pokemon deal 30% more damage.",
 	},
 	pressure: {
 		name: "Pressure",
@@ -1558,6 +1582,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		gen6: {
 			desc: "If this Pokemon has a non-volatile status condition, its Speed is multiplied by 1.5. This Pokemon ignores the paralysis effect of quartering Speed.",
 		},
+	},
+	quickwit: {
+		name: "Quick Wit",
+		shortDesc: "Moves with less than 60 Base Power gain +1 priority.",
 	},
 	ragnarok: {
 		name: "Ragnarok",
@@ -1775,6 +1803,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Shell Armor",
 		shortDesc: "This Pokemon cannot be struck by a critical hit.",
 	},
+	shelteredslumber: {
+		name: "Sheltered Slumber",
+		shortDesc: "When Polfeegeist is asleep, it becomes Polfeegeist-Slumber.",
+	},
 	shielddust: {
 		name: "Shield Dust",
 		desc: "This Pokemon is not affected by the secondary effect of another Pokemon's attack. Attacks with secondary effects that are prevented include those with a chance (even 100%) to paralyze, sleep, freeze, burn, poison, confuse, cause this Pokemon to flinch, cause this Pokemon's stat stages to be lowered, as well as Anchor Shot, Eerie Spell, Fling, Psychic Noise, Salt Cure, Spirit Shackle, Syrup Bomb, and Throat Chop. The effect of Sparkling Aria is prevented if this Pokemon is the only target. Secondary effects added by King's Rock, Razor Fang, and the Poison Touch, Stench, and Toxic Chain Abilities are also prevented against this Pokemon.",
@@ -1977,6 +2009,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 
 		block: "  [POKEMON]'s item cannot be removed!",
 	},
+	stoneheart: {
+		name: "Stoneheart",
+		shortDesc: "This Pokemon's Rock-type moves deal 1.5x damage.",
+	},
 	stormdrain: {
 		name: "Storm Drain",
 		desc: "This Pokemon is immune to Water-type moves and raises its Special Attack by 1 stage when hit by a Water-type move. If this Pokemon is not the target of a single-target Water-type move used by another Pokemon, this Pokemon redirects that move to itself if it is within the range of that move. If multiple Pokemon could redirect with this Ability, it goes to the one with the highest Speed, or in the case of a tie to the one that has had this Ability active longer.",
@@ -2034,6 +2070,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	surge: {
 		name: "Surge",
 		shortDesc: "If this Pokemon has 1/3rd or less HP, Electric-type moves have 1.5x power.",
+	},
+	surgedeluge: {
+		name: "Surge Deluge",
+		shortDesc: "In Electric Terrain: Gain +1 Def, Charge status, and gain ground immunity.",
 	},
 	surgesurfer: {
 		name: "Surge Surfer",
