@@ -3975,7 +3975,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		pp: 10,
 		priority: 0,
 		flags: {},
-		onTryMove (attacker, source, target, move) {
+		onTryMove (attacker, source, pokemon) {
 			if (['sunnyday', 'desolateland'].includes(attacker.effectiveWeather())) {
 				const bestStat = source.getBestStat(true, true);
 				this.boost({ [bestStat]: 3 }, source);
@@ -3986,7 +3986,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 				}
 				return oldAbility as false | null;
 			}
-		}
+		},
 		secondary: null,
 		target: "self",
 		type: "Water",
@@ -5665,8 +5665,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		name: "Exalted Potion",
 		pp: 1,
 		priority: 0,
-		isZ: "Brewlium Z"
-
+		isZ: "Brewlium Z",
 		flags: {},
 		onTry(source) {
 		this.hint("This move isn't fully implemented yet");
@@ -19172,7 +19171,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		name: "Solar Blade",
 		pp: 10,
 		priority: 0,
-		flags: { contact: 1, charge: 1, protect: 1, mirror: 1, metronome: 1, nosleeptalk: 1, failinstruct: 1, slicing: , crescent: 1 },
+		flags: { contact: 1, charge: 1, protect: 1, mirror: 1, metronome: 1, nosleeptalk: 1, failinstruct: 1, slicing: 1, crescent: 1 },
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
 				return;

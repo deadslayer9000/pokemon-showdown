@@ -5444,7 +5444,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 					return null;
 				}
 			}
-		}
+		},
 		flags: {},
 		name: "Surge Deluge",
 		rating: 4,
