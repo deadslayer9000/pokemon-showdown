@@ -5443,6 +5443,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 				if (target !== source && move.type === 'Ground') {
 					return null;
 				}
+				this.add('-immune', target, '[from] ability: Surge Deluge');
 			}
 		},
 		flags: {},
