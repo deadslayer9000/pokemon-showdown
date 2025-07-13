@@ -247,6 +247,15 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		gen: 6,
 		isNonstandard: "Past",
 	},
+	ancientgeniumz: {
+		name: "Ancientgenium Z",
+		spritenum: 641,
+		onTakeItem: false,
+		zMove: "Rebirth",
+		zMoveFrom: "Psystrike",
+		itemUser: ["Ancient Gene"],
+		num: -21,
+	},
 	ampharosite: {
 		name: "Ampharosite",
 		spritenum: 580,
@@ -643,6 +652,15 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		num: 795,
 		gen: 7,
+	},
+	brewliumz: {
+		name: "Brewlium Z",
+		spritenum: 648,
+		onTakeItem: false,
+		zMove: "Exalted Potion",
+		zMoveFrom: "Bizzare Elixir",
+		itemUser: ["Brewloom"],
+		num: -20,
 	},
 	brightpowder: {
 		name: "Bright Powder",
@@ -1295,6 +1313,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		num: 226,
 		gen: 3,
 		isNonstandard: "Past",
+	},
+	deltacharizardite: {
+		name: "Delta Charizardite",
+		spritenum: 8,
+		megaStone: "Delta-Charizard-Mega",
+		megaEvolves: "Delta-Charizard",
+		itemUser: ["Delta-Charizard"],
+		onTakeItem(item, soruce) {
+			if(item.megaEvolves === soruce.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -19,
 	},
 	deltagholdiumz: {
 		name: "Delta Gholdium Z",

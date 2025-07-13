@@ -492,6 +492,19 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 2,
 		num: 66,
 	},
+	blazingswap: {
+		onModifyMovePriority: 1,
+		onModifyMove(move, attacker, defender) {
+			if (attacker.species.name !== 'Delta-Aegislash' || attacker.transformed) return;
+			if (move.category === 'Status' && move.id !== 'infernalshield') return;
+			const targetForme = (move.id === 'infernalshield' ? 'Delta-Aegislash' : 'Delta-Aegislash-Blade');
+			if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
+		},
+		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1 },
+		name: "Blazing Swap",
+		rating: 4,
+		num: -63,
+	},
 	bulletproof: {
 		onTryHit(pokemon, target, move) {
 			if (move.flags['bullet']) {
@@ -752,6 +765,28 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 3,
 		num: 14,
 	},
+	conductor: {
+		onModifyPriority(priority, pokemon, target, move) {
+			if (move.id === 'instruct' || move.id === 'encore' || move.id === 'tailwind') {
+				return priority + 1;
+			}
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.flags['sound']) {
+				this.add('-immune', target, '[from] ability: Conductor');
+				return null;
+			}
+		},
+		onAllyTryHitSide(target, source, move) {
+			if (move.flags['sound']) {
+				this.add('-immune', this.effectState.target, '[from] ability: Conductor');
+			}
+		},
+		flags: {},
+		name: "Conductor",
+		rating: 3.5,
+		num: -61,
+	},
 	contrary: {
 		onChangeBoost(boost, target, source, effect) {
 			if (effect && effect.id === 'zpower') return;
@@ -827,6 +862,25 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Covenant",
 		rating: 0,
 		num: -41,
+	},
+	crescentform: {
+		onBasePowerPriority: 7,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['crescent']) {
+				this.debug('Crescent form boost');
+				return this.chainModify([5325, 4096]);
+			}
+		},
+		onSourceModifyDamage(damage, source, target, move) {
+			if (move.flags['crescent']) {
+				this.debug('Crescent form weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		flags: {},
+		name: "Crescent Form",
+		rating: 3,
+		num: -57,
 	},
 	cudchew: {
 		onEatItem(item, pokemon) {
@@ -1186,6 +1240,26 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Download",
 		rating: 3.5,
 		num: 88,
+	},
+	draconic: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Dragon' && attacker.hp <= attacker.maxhp / 3) {
+				this.debug('Draconic boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Dragon' && attacker.hp <= attacker.maxhp / 3) {
+				this.debug('Draconic boost');
+				return this.chainModify(1.5);
+			}
+		},
+		flags: {},
+		name: "Draconic",
+		rating: 2,
+		num: -55,
 	},
 	dragonsmaw: {
 		onModifyAtkPriority: 5,
@@ -3595,6 +3669,28 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 2,
 		num: 257,
 	},
+	performer: {
+		onModifyPriority(priority, pokemon, target, move) {
+			if (move.flags['dance']) {
+				return priority + 1;
+			}
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.flags['sound']) {
+				this.add('-immune', target, '[from] ability: Performer');
+				return null;
+			}
+		},
+		onAllyTryHitSide(target, source, move) {
+			if (move.flags['sound']) {
+				this.add('-immune', this.effectState.target, '[from] ability: Performer');
+			}
+		},
+		flags: {},
+		name: "Performer",
+		rating: 2.5,
+		num: -60,
+	},
 	perishbody: {
 		onDamagingHit(damage, target, source, move) {
 			if (!this.checkMoveMakesContact(move, source, target) || source.volatiles['perishsong']) return;
@@ -3804,6 +3900,19 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Prankster",
 		rating: 4,
 		num: 158,
+	},
+	precedence: {
+		onBasePowerPriority: 7,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.priority > 0.1) {
+				this.debug('Precedence boost');
+				return this.chainModify([5325, 4096]);
+			}
+		},
+		flags: {},
+		name: "Precedence",
+		rating: 2.5,
+		num: -59,
 	},
 	pressure: {
 		onStart(pokemon) {
@@ -4188,6 +4297,19 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Quick Feet",
 		rating: 2.5,
 		num: 95,
+	},
+	quickwit: {
+		onModifyPriorityPriority: 30,
+		onModifyPriority(priority, source, target, move) {
+			if (move.basePower <= 60) {
+				this.debug('Quick Wit boost');
+				return priority + 1;
+			}
+		},
+		flags: {},
+		name: "Quick Wit",
+		rating: 3,
+		num: -58,
 	},
 	ragnarok: {
 		onModifyMovePriority: -1,
@@ -4692,6 +4814,44 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 1,
 		num: 75,
 	},
+	shelteredslumber: {
+		onSwitchInPriority: -1,
+		onStart(pokemon) {
+			if (pokemon.baseSpecies.baseSpecies !== 'Polfeegeist' || pokemon.transformed) return;
+			if (pokemon.status === 'slp') {
+				if (pokemon.species.forme !== 'Slumber') {
+					pokemon.formeChange('Polfeegeist-Slumber');
+				}
+			} else {
+				if (pokemon.species.forme === 'Slumber') {
+					pokemon.formeChange(pokemon.set.species);
+				}
+			}
+		},
+		onResidualOrder: 29,
+		onResidual(pokemon) {
+			if (pokemon.baseSpecies.baseSpecies !== 'Polfeegeist' || pokemon.transformed) return;
+			if (pokemon.status === 'slp') {
+				if (pokemon.species.forme !== 'Slumber') {
+					pokemon.formeChange('Polfeegeist-Slumber');
+				}
+			} else {
+				if (pokemon.species.forme === 'Slumber') {
+					pokemon.formeChange(pokemon.set.species);
+				}
+			}
+		},
+		onModifyDefPriority: 5,
+		onModifyDef(def, pokemon) {
+			if (pokemon.status === 'slp') {
+				return this.chainModify(1.5);
+			}
+		},
+		flags: {},
+		name: "Sheltered Slumber",
+		rating: 3,
+		num: -62,
+	},
 	shielddust: {
 		onModifySecondaries(secondaries) {
 			this.debug('Shield Dust prevent secondary');
@@ -5095,6 +5255,26 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 1.5,
 		num: 60,
 	},
+	stoneheart: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Rock') {
+				this.debug('Stoneheart boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Rock') {
+				this.debug('Stoneheart boost');
+				return this.chainModify(1.5);
+			}
+		},
+		flags: {},
+		name: "Stoneheart",
+		rating: 4,
+		num: -56,
+	},
 	stormdrain: {
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Water') {
@@ -5243,6 +5423,33 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Surge",
 		rating: 2,
 		num: -21,
+	},
+	surgedeluge: {
+		onStart(pokemon) {
+			if (this.field.isTerrain('electricterrain')) {
+				this.boost({def: 1}, pokemon);
+				pokemon.addVolatile('charge')
+			}
+		},
+		onTerrainChange(pokemon) {
+			if (this.field.isTerrain('electricterrain')) {
+				this.boost({def: 1}, pokemon);
+				pokemon.addVolatile('charge');
+			}
+		},
+		onTryHit(target, source, move) {
+			if (this.field.isTerrain('electricterrain')) {
+				if (target !== source && move.type === 'Ground') {
+					this.add('-immune', target, '[from] ability: Surge Deluge');
+					return null;
+				}
+				
+			}
+		},
+		flags: {},
+		name: "Surge Deluge",
+		rating: 4,
+		num: -54,
 	},
 	surgesurfer: {
 		onModifySpe(spe) {
