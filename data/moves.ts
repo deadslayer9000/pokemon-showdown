@@ -1567,7 +1567,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		secondary: null,
 		target: "self",
 		type: "Psychic",
-	}
+	},
 	blackholeeclipse: {
 		num: 654,
 		accuracy: true,

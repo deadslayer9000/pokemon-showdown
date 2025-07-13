@@ -4305,7 +4305,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 			if (basePowerAfterMultiplier <= 60) {
 				this.debug('Quick Wit boost');
 				return priority + 1;
-			},
+			}
 		},
 		flags: {},
 		name: "Quick Wit",
