@@ -1657,7 +1657,7 @@ export class Pokemon {
 		}
 
 		if (
-			!ignoreImmunities && status.id && !(source?.hasAbility('corrosion') && !(move.moveid === 'chillingvenom') && ['tox', 'psn'].includes(status.id))
+			!ignoreImmunities && !(source?.hasAbility('corrosion') && !(move.id === 'chillingvenom') && ['tox', 'psn'].includes(status.id))
 		) {
 			// the game currently never ignores immunities
 			if (!this.runStatusImmunity(status.id === 'tox' ? 'psn' : status.id)) {
