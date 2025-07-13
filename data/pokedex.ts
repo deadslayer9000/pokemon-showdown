@@ -22714,7 +22714,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		eggGroups: ["Undiscovered"],
 		forme: "Delta",
 		baseSpecies: "Meloetta",
-		otherFormes: ["Meloetta-Allegro"],
+		otherFormes: ["Delta-Meloetta-Allegro"],
 		formeOrder: ["Delta-Meloetta-Lento", "Delta-Meloetta-Allegro"],
 	},
 	deltameloettaallegro: {
@@ -22730,7 +22730,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		eggGroups: ["Undiscovered"],
 		forme: "Delta",
 		baseSpecies: "Meloetta",
-		otherFormes: ["Meloetta-Allegro"],
+		otherFormes: ["Delta-Meloetta-Lento"],
 		formeOrder: ["Delta-Meloetta-Lento", "Delta-Meloetta-Allegro"],
 	},
 	curesola: {

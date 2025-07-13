@@ -6493,6 +6493,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	ancientgene: {
 		tier: "UU",
 	},
+	deltacorsola: {
+		tier: "LC",
+	},
 	curesola: {
 		tier: "UU",
 	},
@@ -6500,7 +6503,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 	},
 	deltameloettalento: {
-		tier: "UU",
+		tier: "Illegal",
 	},
 	perrception: {
 		tier: "UU",
