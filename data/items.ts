@@ -1319,7 +1319,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		spritenum: 8,
 		megaStone: "Delta-Charizard-Mega",
 		megaEvolves: "Delta-Charizard",
-		itemUSer: ["Delta-Charizard"],
+		itemUser: ["Delta-Charizard"],
 		onTakeItem(item, soruce) {
 			if(item.megaEvolves === soruce.baseSpecies.baseSpecies) return false;
 			return true;

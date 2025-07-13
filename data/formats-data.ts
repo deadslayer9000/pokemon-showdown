@@ -6637,6 +6637,128 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	polfeegeistslumber: {
 		tier: "Illegal",
 	},
+	deltasableye: {
+		tier: "NU",
+	},
+	turnizone: {
+		tier: "NU",
+	},
+	turniton: {
+		tier: "NFE",
+	},
+	turnmite: {
+		tier: "LC",
+	},
+	deltagrimmsnarl: {
+		tier: "NU",
+	},
+	deltamorgrem: {
+		tier: "NFE",
+	},
+	deltaimpidimp: {
+		tier: "LC",
+	},
+	deltafurret: {
+		tier: "NU",
+	},
+	deltapalossand: {
+		tier: "NU",
+	},
+	deltasandygast: {
+		tier: "LC",
+	},
+	deltagogoat: {
+		tier: "NU",
+	},
+	deltaskiddo: {
+		tier: "LC",
+	},
+	perrgatory: {
+		tier: "NU",
+	},
+	omegameowth: {
+		tier: "LC",
+	},
+	deltaazumarill: {
+		tier: "NU",
+	},
+	deltamarill: {
+		tier: "NFE",
+	},
+	deltaazurill: {
+		tier: "LC",
+	},
+	deltafalinks: {
+		tier: "NU",
+	},
+	deltaemolga: {
+		tier: "NU",
+	},
+	ultradragapult: {
+		tier: "OU",
+	},
+	ultradrakloak: {
+		tier: "NFE",
+	},
+	ultradreepy: {
+		tier: "LC",
+	},
+	ultraheliolisk: {
+		tier: "NU",
+	},
+	ultrahelioptile: {
+		tier: "LC",
+	},
+	ironrevival: {
+		tier: "Uber",
+	},
+	ironstorm: {
+		tier: "Uber",
+	},
+	risingphoenix: {
+		tier: "Uber",
+	},
+	whirlingabyss: {
+		tier: "Uber",
+	},
+	mewthree: {
+		tier: "Uber",
+	},
+	kyuremoriginal: {
+		tier: "Uber",
+	},
+	hattirage: {
+		tier: "NU",
+	},
+	deltahattrem: {
+		tier: "NFE",
+	},
+	deltahatenna: {
+		tier: "LC",
+	},
+	/*
+	etherion: {
+		tier: "",
+	},
+	grimorgon: {
+		tier: "",
+	},
+	deltadruddigon: {
+		tier: "",
+	},
+	deltaheatran: {
+		tier: "",
+	},
+	deltazeraora: {
+		tier: "",
+	},
+	deltajirachi: {
+		tier: "",
+	},
+	deltacresselia: {
+		tier: "",
+	},
+	*/
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
