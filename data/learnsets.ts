@@ -119447,6 +119447,11 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M","9M"],
 		}
 	},
+	deltazeraora: {
+		learnset: {
+			flashpointfists: ["9L84"],
+		}
+	},
 	pokestarsmeargle: {
 		eventData: [
 			{generation: 5, level: 60, gender: "M", abilities: ["owntempo"], moves: ["mindreader", "guillotine", "tailwhip", "gastroacid"]},
