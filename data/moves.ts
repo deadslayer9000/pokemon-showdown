@@ -7182,56 +7182,49 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		contestType: "Beautiful",
 	},
 	flashpointfists: {
-		num: -79,
-		accuracy: 100,
-		basePower: 80,
-		/*
-		basePowerCallback(pokemon, target, move) {
-			let bp = move.basePower;
-			if (this.field.pseudoWeather.echoedvoice) {
-				const multiplier = this.field.pseudoWeather.echoedvoice.multiplier;
-				bp = Math.min(move.basePower + 10 * multiplier, 120);
-			}
-			this.debug(`BP: ${bp}`);
-			return bp;
-		},
-		*/
-		onBasePower(basePower, pokemon, target, move) {
-			if (this.field.pseudoWeather.echoedvoice) {
-				const multiplier = this.field.pseudoWeather.echoedvoice.multiplier;
-				const modifiedBP = Math.min(basePower + 10 * multiplier, 120);
-				return this.chainModify(modifiedBP / basePower);
-			}
-		},
+	num: -79,
+	accuracy: 100,
+	basePower: 80,
+	category: "Physical",
+	name: "Flashpoint Fists",
+	pp: 15,
+	priority: 0,
+	flags: { contact: 1, punch: 1, protect: 1, mirror: 1, metronome: 1 },
 
-		category: "Physical",
-		name: "Flashpoint Fists",
-		pp: 15,
-		priority: 0,
-		flags: { contact: 1, punch: 1, protect: 1, mirror: 1, metronome: 1 },
-		onTry() {
-			this.field.addPseudoWeather("echoedvoice");
-		},
-		condition: {
-			duration: 2,
-			onFieldStart() {
-				this.effectState.multiplier = 0;
-			},
-			onFieldRestart() {
-				if (this.effectState.duration !== 2) {
-					
-					if (this.effectState.multiplier < 4) {
-						this.effectState.multiplier++;
-					}
-				}
-				this.effectState.duration = 2;
-			},
-		},
-		secondary: null,
-		target: "normal",
-		type: "Fire",
-		contestType: "Beautiful",
+	
+	onTry() {
+		this.field.addPseudoWeather("flashpointfistsboost");
 	},
+
+	
+	onBasePower(basePower, pokemon, target, move) {
+		if (this.field.pseudoWeather.flashpointfistsboost) {
+			const multiplier = this.field.pseudoWeather.flashpointfistsboost.multiplier;
+			const modifiedBP = Math.min(80 + 10 * multiplier, 120);
+			this.debug(`Modified BP: ${modifiedBP}`);
+			return this.chainModify(modifiedBP / basePower);
+		}
+	},
+
+	condition: {
+		duration: 2,
+		onFieldStart() {
+			this.effectState.multiplier = 0;
+		},
+		onFieldRestart() {
+			if (this.effectState.multiplier < 4) {
+				this.effectState.multiplier++;
+			}
+			this.effectState.duration = 2; 
+		},
+	},
+
+	secondary: null,
+	target: "normal",
+	type: "Fire",
+	contestType: "Beautiful",
+},
+
 	flatter: {
 		num: 260,
 		accuracy: 100,
