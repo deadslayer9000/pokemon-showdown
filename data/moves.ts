@@ -1520,6 +1520,42 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Dark",
 		contestType: "Tough",
 	},
+	biteofwinter: {
+		num: -68,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Bite of Winter",
+		pp: 5,
+		priority: 0,
+		flags: { snatch: 1, heal: 1, metronome: 1 },
+		onHit(pokemon) {
+			let factor = 0.5;
+			switch (pokemon.effectiveWeather()) {
+			case 'snowscape':
+			case 'hail':
+				factor = 0.667;
+				break;
+			case 'sunnyday':
+			case 'desolateland':
+			case 'raindance':
+			case 'primordialsea':
+			case 'sandstorm':
+				factor = 0.25;
+				break;
+			}
+			const success = !!this.heal(this.modify(pokemon.maxhp, factor));
+			if (!success) {
+				this.add('-fail', pokemon, 'heal');
+				return this.NOT_FAIL;
+			}
+			return success;
+		},
+		secondary: null,
+		target: "self",
+		type: "Ice",
+		zMove: { effect: 'clearnegativeboost' },
+	},
 	bitterblade: {
 		num: 891,
 		accuracy: 100,
@@ -1908,6 +1944,37 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "allAdjacent",
 		type: "Normal",
 		contestType: "Tough",
+	},
+	botanize: {
+		num: -72,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Botanize",
+		pp: 20,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, allyanim: 1, metronome: 1 },
+		volatileStatus: 'botanize',
+		onTryHit(target) {
+			if (!this.queue.willMove(target) && target.activeTurns) return false;
+		},
+		condition: {
+			duration: 1,
+			onStart(target) {
+				this.add('-singleturn', target, 'move: Botanize);
+			},
+			onModifyTypePriority: -2,
+			onModifyType(move) {
+				if (move.id !== 'struggle') {
+					this.debug('Electrify making move type electric');
+					move.type = 'Grass';
+				}
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Grass",
+		zMove: { boost: { spa: 1 } },
 	},
 	bounce: {
 		num: 340,
@@ -5678,7 +5745,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			spa: 1,
 			spd: 1,
 			spe: 1,
-		},
+		}, //still needs to remove the opponent's item
 		secondary: null,
 		target: "self",
 		type: "Psychic",
@@ -7246,6 +7313,25 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "normal",
 		type: "Electric",
 		contestType: "Cool",
+	},
+	fusionfinale: {
+		num: -78,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Fusion Finale",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		onBasePower(basePower, pokemon) {
+			if (this.lastSuccessfulMoveThisTurn === 'fusionbolt' || this.lastSuccesfulMoveThisTurn === 'fusionflare') {
+				this.debug('double power');
+				return this.chainModify(2);
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Dragon",
 	},
 	fusionflare: {
 		num: 558,
@@ -10534,6 +10620,19 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "normal",
 		type: "Ice",
 		contestType: "Beautiful",
+	},
+	icicleflail: {
+		num: -70,
+		accuracy: 90,
+		basePower: 60,
+		category: "Physical",
+		name: "Icicle Flail",
+		pp: 5,
+		priority: 0, 
+		flags: { protect: 1, mirror: 1, metronome: 1, contact: 1 }, //missing the increased bp on multiple target hits 
+		secondary: null,
+		target: "normal",
+		type: "Ice",
 	},
 	iciclespear: {
 		num: 333,
@@ -14705,6 +14804,31 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Flying",
 		contestType: "Cool",
 	},
+	peculiarcandy: {
+		num: -69,
+		accuracy: 100,
+		basePower: 90,	
+		category: "Special",
+		name: "Peculiar Candy",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		secondary: {
+			chance: 20,
+			onHit(target, source) {
+				const result = this.random(3);
+				if (result === 0) {
+					target.trySetStatus('brn', source);
+				} else if (result === 1) {
+					target.trySetStatus('par', source);
+				} else {
+					target.trySetStatus('psn', source);
+				}
+			},
+		},
+		target: "normal",
+		type: "Fairy",
+	},
 	perishsong: {
 		num: 195,
 		accuracy: true,
@@ -16585,6 +16709,24 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		zMove: { boost: { spa: 1 } },
 		contestType: "Clever",
 	},
+	refractionreactor: {
+		num: -73,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Refraction Reactor",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		self: {
+			onHit(source) {
+				this.field.setTerrain('electricterrain');
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Electric",
+	},
 	refresh: {
 		num: 287,
 		accuracy: true,
@@ -16638,6 +16780,20 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "allAdjacentFoes",
 		type: "Normal",
 		contestType: "Beautiful",
+	},
+	retribution: {
+		num: -77,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		overrideDefensiveStat: 'def',
+		name: "Retribution",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
 	},
 	rest: {
 		num: 156,
@@ -19209,6 +19365,36 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Normal",
 		contestType: "Cool",
 	},
+	soulsap: {
+		num: -71,
+		accuracy: 90,
+		basePower: 145,
+		category: "Physical",
+		name: "Soul Sap",
+		pp: 2,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, metronome: 1, cantusetwice: 1 },
+		onTryHit(pokemon) {
+			this.hint("This move isn't fully implemented");
+		},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('spa', false, true) > pokemon.getStat('atk', false, true)) {
+				move.category = 'Special';
+			}
+		}, 
+		onHit(target) {
+			let move: Move | ActiveMove | null = target.lastMove;
+			if (!move || move.isZ) return false;
+			if (move.isMax && move.baseMove) move = this.dex.moves.get(move.baseMove);
+
+			const ppDeducted = target.deductPP(move.id, 2);
+			if (!ppDeducted) return false;
+			this.add("-activate", target, 'move: Spite', move.name, ppDeducted);
+		}, //still need to restore 
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+	},
 	soulstealing7starstrike: {
 		num: 699,
 		accuracy: true,
@@ -19331,6 +19517,24 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "normal",
 		type: "Ghost",
 		contestType: "Cool",
+	},
+	spectrumscorch: {
+		num: -75,
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Spectrum Scorch",
+		pp: 5,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		self: {
+			onHit(source) {
+				this.field.setWeather('sunnyday');
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fire",
 	},
 	speedswap: {
 		num: 683,
@@ -21676,6 +21880,20 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		zMove: { boost: { def: 1 } },
 		contestType: "Cute",
 	},
+	tidaltrance: {
+		num: -76,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Tidal Trance",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		volatileStatus: 'partiallytrapped',
+		secondary: null,
+		target: "normal",
+		type: "Water",
+	},
 	tidyup: {
 		num: 882,
 		accuracy: true,
@@ -21722,6 +21940,20 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		secondary: null,
 		target: "normal",
 		type: "Dragon",
+	},
+	titaniumtempest: {
+		num: -74,
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Titanium Tempest",
+		pp: 5,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		volatileStatus: 'partiallytrapped',
+		secondary: null,
+		target: "normal",
+		type: "Steel",
 	},
 	tomahawkvolley: {
 		num: -47,

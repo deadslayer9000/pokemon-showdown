@@ -505,6 +505,18 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 4,
 		num: -63,
 	},
+	boundless: {
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'Boundless');
+		},
+		onModifyMove(move) {
+			move.ignoreAbility = true;
+		},
+		flags: {},
+		name: "Boundless",
+		rating: 3,
+		num: -69,
+	},
 	bulletproof: {
 		onTryHit(pokemon, target, move) {
 			if (move.flags['bullet']) {
@@ -997,6 +1009,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 3,
 		num: 186,
 	},
+	darkdecree: {
+		flags: {},
+		name: "Dark Decree",
+		rating: 4,
+		num: -68, //implement later
+	},
 	dauntlessshield: {
 		onStart(pokemon) {
 			if (pokemon.shieldBoost) return;
@@ -1468,6 +1486,18 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 1,
 		num: 194,
 	},
+	evilsbane: {
+		onTryHit(target, source, move) {
+			if(target !== source && move.type === 'Dark' || move.pranksterBoosted) {
+				this.add('-immune', target, '[from] ability: Evils Bane' );
+				return null;
+			}
+		},
+		flags: {breakable: 1},
+		name: "Evil's Bane",
+		rating: 3,
+		num: -67,
+	},
 	exalt: {
 	/*	onStart(target) {
 		if (target.hasType('Dragon')) return false;
@@ -1723,6 +1753,18 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Flurry",
 		rating: 2,
 		num: -26,
+	},
+	forbiddentreat: {
+		onDamagingHit(damage, target, source, move) {
+			if(move.flags['bite'] || move.drain){
+				source.addVolatile( 'curse', target );
+				source.addVolatile( 'trapped', target );
+			}
+		},
+		flags: {},
+		name: "Forbidden Treat",
+		rating: 2.5,
+		num: -66,
 	},
 	forecast: {
 		onSwitchInPriority: -2,
@@ -5630,6 +5672,24 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 2,
 		num: 221,
 	},
+	taproot: {
+		onTryHealPriority: 1,
+		onTryHeal(damage, target, source, effect) {
+			const heals = ['drain', 'leechseed', 'ingrain', 'aquaring', 'strengthsap'];
+			if (heals.includes(effect.id)) {
+				return this.chainModify([5324, 4096]);
+			}
+		},
+		onResidualOrder: 5,
+		onResidualSubOrder: 4,
+		onResidual(pokemon) {
+			this.heal(pokemon.baseMaxhp / 16);
+		},
+		flags: {},
+		name: "Tap Root",
+		rating: 3,
+		num: -64,
+	},
 	technician: {
 		onBasePowerPriority: 30,
 		onBasePower(basePower, attacker, defender, move) {
@@ -6405,6 +6465,18 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 3.5,
 		// We do not want Brambleghast to get Infiltrator in Randbats
 		num: 274,
+	},
+	winterarbiter: {
+		onStart(pokemon) {
+			if (this.field.isWeather('snowscape')) {
+				this.boost({ atk: 1}, pokemon);
+				this.add('ability', pokemon, '[from] ability: Winter Arbiter');
+			}
+		},
+		flags: {},
+		name: "Winter Arbiter",
+		rating: 2,
+		num: -65,
 	},
 	wonderguard: {
 		onTryHit(target, source, move) {
