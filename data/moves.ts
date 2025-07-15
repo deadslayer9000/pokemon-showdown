@@ -6535,13 +6535,12 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		basePower: 80,
 		basePowerCallback(pokemon, target, move) {
 			let bp = move.basePower;
-			
-			bp = move.basePower + (10 * this.field.pseudoWeather.echoedvoice.multiplier) - 10;
-			
-			
+			if (this.field.pseudoWeather.echoedvoice) {
+				bp = move.basePower + (10 * this.field.pseudoWeather.echoedvoice.multiplier) - 10;
+				return bp;
+			}
 			this.debug(`BP: ${bp}`);
 			return bp;
-			
 		},
 		category: "Physical",
 		name: "Flashpoint Fists",
