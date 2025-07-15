@@ -6536,8 +6536,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		basePowerCallback(pokemon, target, move) {
 			let bp = move.basePower;
 			if (this.field.pseudoWeather.echoedvoice) {
-				const multiplier = this.field.pseudoWeather.echoedvoice?.multiplier ?? 0;
-				bp = move.basePower + (10 * multiplier);
+				bp = move.basePower + (10 * this.field.pseudoWeather.echoedvoice.multiplier) - 10;
 			}
 			this.debug(`BP: ${bp}`);
 			return bp;
