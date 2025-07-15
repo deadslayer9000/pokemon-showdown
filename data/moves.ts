@@ -1961,7 +1961,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		condition: {
 			duration: 1,
 			onStart(target) {
-				this.add('-singleturn', target, 'move: Botanize);
+				this.add('-singleturn', target, 'move: Botanize');
 			},
 			onModifyTypePriority: -2,
 			onModifyType(move) {
