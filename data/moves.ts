@@ -6538,7 +6538,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			if (this.field.pseudoWeather.echoedvoice) {
 				bp = Math.min(move.basePower + (10 * this.field.pseudoWeather.echoedvoice.multiplier), 120);
 			}
-			this.debug(`BP: ${bp}`);
+			this.debug(`BP: ${move.basePower}`);
 			return bp;
 		},
 		category: "Physical",
@@ -6552,7 +6552,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		condition: {
 			duration: 2,
 			onFieldStart() {
-				this.effectState.multiplier = 1;
+				this.effectState.multiplier = 0;
 			},
 			onFieldRestart() {
 				if (this.effectState.duration !== 2) {
