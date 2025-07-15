@@ -5708,7 +5708,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		onModifyType(move, pokemon, target) {
 			move.type = pokemon.types[0];
 			this.debug(`type: ${move.type}`);
-			this.hint(`type: ${move.type}`);
+			this.hint(`Ether Burst changed its type to: ${move.type} to match ${pokemon.name}'s primary typing`);
 		},
 		onModifyMove(move, pokemon) {
 			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
