@@ -5708,6 +5708,15 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		secondary: null,
 		target: "normal",
 		type: "Psychic",
+		onModifyType(move, pokemon, target) {
+			move.type = pokemon.types[0];
+			this.debug(`type: ${move.type}`);
+		},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
+				move.category = 'Physical';
+			}
+		},
 	},
 	eternabeam: {
 		num: 795,
