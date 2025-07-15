@@ -119131,7 +119131,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			shadowclaw: ["9M"],
 			sleeptalk: ["9M"],
 			solarbeam: ["9M"],
-			sprectrumscorch: ["9L56"],
+			specctrumscorch: ["9L56"],
 			stealthrock: ["9M"],
 			stoneedge: ["9M"],
 			substitute: ["9M"],
