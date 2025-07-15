@@ -6536,9 +6536,10 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		basePowerCallback(pokemon, target, move) {
 			let bp = move.basePower;
 			if (this.field.pseudoWeather.echoedvoice) {
-				bp = move.basePower + (10 * this.field.pseudoWeather.echoedvoice.multiplier);
+				const multiplier = this.field.pseudoWeather.echoedvoice?.multiplier ?? 0;
+				bp = move.basePower + (10 * multiplier);
 			}
-			this.debug(`BP: ${move.basePower}`);
+			this.debug(`BP: ${bp}`);
 			return bp;
 		},
 		category: "Physical",
@@ -6552,7 +6553,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		condition: {
 			duration: 2,
 			onFieldStart() {
-				this.effectState.multiplier = 1;
+				this.effectState.multiplier = 0;
 			},
 			onFieldRestart() {
 				if (this.effectState.duration !== 2) {
