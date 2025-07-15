@@ -7185,6 +7185,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		num: -79,
 		accuracy: 100,
 		basePower: 80,
+		/*
 		basePowerCallback(pokemon, target, move) {
 			let bp = move.basePower;
 			if (this.field.pseudoWeather.echoedvoice) {
@@ -7194,6 +7195,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			this.debug(`BP: ${bp}`);
 			return bp;
 		},
+		*/
 		onBasePower(basePower, pokemon, target, move) {
 			if (this.field.pseudoWeather.echoedvoice) {
 				const multiplier = this.field.pseudoWeather.echoedvoice.multiplier;
@@ -7217,11 +7219,12 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			},
 			onFieldRestart() {
 				if (this.effectState.duration !== 2) {
-					this.effectState.duration = 2;
+					
 					if (this.effectState.multiplier < 4) {
 						this.effectState.multiplier++;
 					}
 				}
+				this.effectState.duration = 2;
 			},
 		},
 		secondary: null,
