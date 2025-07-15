@@ -5686,7 +5686,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 			this.heal(pokemon.baseMaxhp / 16);
 		},
 		flags: {},
-		name: "Tap Root",
+		name: "Taproot",
 		rating: 3,
 		num: -64,
 	},
