@@ -119231,7 +119231,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 		}
 	},
 	mewthree: {
-		learnsets: {
+		learnset: {
 			aerialace: ["9M"],
 			ancientpower: ["9L8","9M"],
 			assurance: ["9M"],
