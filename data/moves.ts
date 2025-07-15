@@ -5702,15 +5702,13 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		pp: 15,
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
-		onTry(source) {
-		this.hint("This move isn't fully implemented yet");
-		},
 		secondary: null,
 		target: "normal",
 		type: "Dark",
 		onModifyType(move, pokemon, target) {
 			move.type = pokemon.types[0];
 			this.debug(`type: ${move.type}`);
+			this.hint(`type: ${move.type}`);
 		},
 		onModifyMove(move, pokemon) {
 			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
