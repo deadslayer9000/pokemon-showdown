@@ -5707,7 +5707,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		},
 		secondary: null,
 		target: "normal",
-		type: "Psychic",
+		type: "Dark",
 		onModifyType(move, pokemon, target) {
 			move.type = pokemon.types[0];
 			this.debug(`type: ${move.type}`);
