@@ -1593,6 +1593,20 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 2,
 		num: 49,
 	},
+	steamforged: {
+		onDamagingHit(damage, target, source, move) {
+			if (this.checkMoveMakesContact(move, source, target)) {
+				if (this.randomChance(3, 10)) {
+					source.trySetStatus('brn', target);
+				}
+			}
+		},
+		flags: {},
+		name: "Steamforged",
+		rating: 2,
+		num: -70,
+	},
+
 	flareboost: {
 		onBasePowerPriority: 19,
 		onBasePower(basePower, attacker, defender, move) {
@@ -3084,12 +3098,6 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Mold Breaker",
 		rating: 3,
 		num: 104,
-	},
-	monarch: {
-		flags: {},
-		name: "Monarch",
-		rating: 1.5,
-		num: -23,
 	},
 	monarchspole: {
 		onModifyMove(move) {
@@ -4828,6 +4836,21 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Shed Skin",
 		rating: 3,
 		num: 61,
+	},
+	monarch: {
+		onResidualOrder: 5,
+		onResidualSubOrder: 3,
+		onResidual(pokemon) {
+			if ((pokemon.hp >= pokemon.maxhp) && pokemon.status) {
+				this.debug('monarch');
+				this.add('-activate', pokemon, 'ability: Monarch');
+				pokemon.cureStatus();
+			}
+		},
+		flags: {},
+		name: "Monarch",
+		rating: 1.5,
+		num: -23,
 	},
 	sheerforce: {
 		onModifyMove(move, pokemon) {
