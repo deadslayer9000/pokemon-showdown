@@ -6540,7 +6540,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 				return bp;
 			}
 			this.debug(`BP: ${bp}`);
-			
+			return bp;
 		},
 		category: "Physical",
 		name: "Flashpoint Fists",
