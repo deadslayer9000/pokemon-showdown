@@ -6529,6 +6529,45 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Steel",
 		contestType: "Beautiful",
 	},
+	flashpointfists: {
+		num: -79,
+		accuracy: 100,
+		basePower: 80,
+		basePowerCallback(pokemon, target, move) {
+			let bp = move.basePower;
+			if (this.field.pseudoWeather.echoedvoice) {
+				bp = Math.min(move.basePower + (10 * this.field.pseudoWeather.echoedvoice.multiplier), 120);
+			}
+			this.debug(`BP: ${bp}`);
+			return bp;
+		},
+		category: "Physical",
+		name: "Flashpoint Fists",
+		pp: 15,
+		priority: 0,
+		flags: { contact: 1, punch:1, protect: 1, mirror: 1, metronome: 1 },
+		onTry() {
+			this.field.addPseudoWeather('echoedvoice');
+		},
+		condition: {
+			duration: 2,
+			onFieldStart() {
+				this.effectState.multiplier = 1;
+			},
+			onFieldRestart() {
+				if (this.effectState.duration !== 2) {
+					this.effectState.duration = 2;
+					if (this.effectState.multiplier < 4) {
+						this.effectState.multiplier++;
+					}
+				}
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+		contestType: "Beautiful",
+	},
 	flatter: {
 		num: 260,
 		accuracy: 100,
