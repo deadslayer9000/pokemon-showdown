@@ -127,7 +127,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 				return null;
 			}
 		},
-		flags: {},
+		flags: {breakable: 1},
 		name: "Altruistic",
 		rating: 3,
 		num: -70,

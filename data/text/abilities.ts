@@ -422,6 +422,11 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "On switch-in, the weather becomes Delta Stream, which removes the weaknesses of the Flying type from Flying-type Pokemon. This weather remains in effect until this Ability is no longer active for any Pokemon, or the weather is changed by the Desolate Land or Primordial Sea Abilities.",
 		shortDesc: "On switch-in, strong winds begin until this Ability is not active in battle.",
 	},
+	desertspirit: {
+		name: "Desert Spirit",
+		desc: "This Pokemon's sound moves deal 1.3x damage and this Pokemon takes 0.5x damage from sound moves. All moves used by this Pokemon become Sound moves if the weather is Sandstorm.",
+		shortDesc: "Take 50% less and deal 30% more with sound moves. All attacks become sound moves in sand.",
+	},
 	desolateland: {
 		name: "Desolate Land",
 		desc: "On switch-in, the weather becomes Desolate Land, which includes all the effects of Sunny Day and prevents damaging Water-type moves from executing. This weather remains in effect until this Ability is no longer active for any Pokemon, or the weather is changed by the Delta Stream or Primordial Sea Abilities.",
@@ -1147,6 +1152,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	mirage: {
 		name: "Mirage",
+		desc: "When this Pokemon switches in, if Sandstorm is the current weather, this Pokemon sets up a Substitute and loses 1/4 HP. This ability only activates once per battle.",
 		shortDesc: "On switch-in; If Sandstorm is active, this Pokemon puts in a Substitute.",
 	},
 	mirrorarmor: {
