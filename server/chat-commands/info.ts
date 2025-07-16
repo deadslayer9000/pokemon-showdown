@@ -1848,7 +1848,7 @@ export const commands: Chat.ChatCommands = {
 		}
 		this.sendReplyBox(
 			`Pok&eacute;mon Showdown! damage calculator. (Courtesy of Honko, Austin, dhelmise, &amp; jetou)<br />` +
-			`- <a href="https://calc.pokemonshowdown.com/index.html?gen=${dex.gen}">Damage Calculator</a>`
+			`- <a href="https://deltadamagecalc.netlify.app">Delta Damage Calculator</a>`
 		);
 	},
 	calchelp: [
