@@ -2778,6 +2778,11 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		name: "Helix Nebula",
 		rating: 0,
 		num: -1,
+		onFaint(pokemon) {
+			this.add("-wish", pokemon, "[from] ability: Helix Nebula");
+			pokemon.side.addSlotCondition(pokemon, "wish");
+		},
+
 		onStart(pokemon) {
 			const possibleTargets = pokemon.adjacentFoes();
 			if (!possibleTargets.length) return;
@@ -2790,8 +2795,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 					pokemon,
 					"typechange",
 					types.join("/"),
-					"[from] ability: Helix Nebula",
-					`[of] ${target}`
+					"[from] ability: Helix Nebula"
 				);
 
 				this.add(
