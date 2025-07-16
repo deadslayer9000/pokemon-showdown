@@ -119575,6 +119575,8 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			tripleaxel: ["9L91"],
 			wish: ["9L37"],
 			zenheadbutt: ["9M"],
+		},
+	},
 	deltazeraora: {
 		learnset: {
 			flashpointfists: ["9L84"],
