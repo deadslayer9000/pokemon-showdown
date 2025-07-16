@@ -19268,6 +19268,24 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Normal",
 		contestType: "Cute",
 	},
+	snowflare: {
+		num: -79,
+		accuracy: 85,
+		basePower: 120,
+		category: "Special",
+		name: "Snow Flare",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		secondary: {
+			chance: 40,
+			boosts: {
+				spd: -2,
+			},
+		},
+		target: "normal",
+		type: "Ice",
+	},
 	snowscape: {
 		num: 883,
 		accuracy: true,

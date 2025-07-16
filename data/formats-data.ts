@@ -6691,6 +6691,12 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	deltafalinks: {
 		tier: "NU",
 	},
+	deltashaymin: {
+		tier: "NU",
+	},
+	deltashayminsky: {
+		tier: "Uber",
+	},
 	deltaemolga: {
 		tier: "NU",
 	},

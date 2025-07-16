@@ -34,6 +34,11 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 
 		start: "  The effects of the weather disappeared.",
 	},
+	altruistic: {
+		name: "Altruistic",
+		desc: "This Pokemon is immune to Fighting-type attacks, and additionally heals 25% HP when hit by one. If the user's ally has no item, the user gives its item to its ally.",
+		shortDesc: "Heals 25% HP from Fighting moves; Fighting immmunity. Gives its item to itemless ally.",
+	},
 	analytic: {
 		name: "Analytic",
 		desc: "The power of this Pokemon's move is multiplied by 1.3 if it is the last to move in a turn. Does not affect Doom Desire and Future Sight.",
@@ -416,6 +421,11 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Delta Stream",
 		desc: "On switch-in, the weather becomes Delta Stream, which removes the weaknesses of the Flying type from Flying-type Pokemon. This weather remains in effect until this Ability is no longer active for any Pokemon, or the weather is changed by the Desolate Land or Primordial Sea Abilities.",
 		shortDesc: "On switch-in, strong winds begin until this Ability is not active in battle.",
+	},
+	desertspirit: {
+		name: "Desert Spirit",
+		desc: "This Pokemon's sound moves deal 1.3x damage and this Pokemon takes 0.5x damage from sound moves. All moves used by this Pokemon become Sound moves if the weather is Sandstorm.",
+		shortDesc: "Take 50% less and deal 30% more with sound moves. All attacks become sound moves in sand.",
 	},
 	desolateland: {
 		name: "Desolate Land",
@@ -1142,6 +1152,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	mirage: {
 		name: "Mirage",
+		desc: "When this Pokemon switches in, if Sandstorm is the current weather, this Pokemon sets up a Substitute and loses 1/4 HP. This ability only activates once per battle.",
 		shortDesc: "On switch-in; If Sandstorm is active, this Pokemon puts in a Substitute.",
 	},
 	mirrorarmor: {

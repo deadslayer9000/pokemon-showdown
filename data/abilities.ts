@@ -135,6 +135,20 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 1.5,
 		num: 76,
 	},
+	altruistic: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Fighting') {
+				if (!this.heal(target.baseMaxhp / 4)) {
+					this.add('-immune', target, '[from] ability: Altruistic');
+				}
+				return null;
+			}
+		},
+		flags: {breakable: 1},
+		name: "Altruistic",
+		rating: 3,
+		num: -70,
+	},
 	analytic: {
 		onBasePowerPriority: 21,
 		onBasePower(basePower, pokemon) {
