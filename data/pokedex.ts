@@ -23316,7 +23316,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		heightm: 1.1,
 		weightkg: 120,
 		color: "Purple",
-		prevo: "Turnitone",
+		prevo: "Turniton",
 		eggGroups: ["Grass", "Field"],
 		baseSpecies: "Magnezone",
 	},

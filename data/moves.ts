@@ -22006,7 +22006,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		flags: { protect: 1, mirror: 1, metronome: 1 },
 		multihit: [2, 5],
 		secondary: null,
-		target: "normal",
+		target: "normal", 		 
 		type: "Fire",
 	},
 	topsyturvy: {

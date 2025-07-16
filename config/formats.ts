@@ -27,7 +27,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		section: "Cobblemon Delta Tiers",
 	},
 	{
-		name: "[Gen 9] Cobblemon Delta OU",
+		name: "[Gen 9] National Dex",
 		mod: 'gen9',
 		ruleset: ['Standard NatDex', 'Terastal Clause'],
 		banlist: [
@@ -2211,7 +2211,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		name: "[Gen 9] National Dex UU",
 		mod: 'gen9',
-		ruleset: ['[Gen 9] Cobblemon Delta OU'],
+		ruleset: ['[Gen 9] National Dex'],
 		banlist: ['ND OU', 'ND UUBL', 'Drizzle', 'Drought', 'Light Clay'],
 	},
 	{
