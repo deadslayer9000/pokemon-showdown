@@ -1924,6 +1924,18 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		if (!target.addType('Dragon')) return false;
 		target.add('-start', target, 'typeadd', 'Dragon', 'ability: Exalt');
 		}, */
+		onStart(target) {
+			if (!target.hasType("Dragon")){
+				if(!target.addType("Dragon")) return;
+				this.add(
+                    "-start",
+                    target,
+                    "typechange",
+                    target.getTypes().join("/"),
+                    "[from] ability: Exalt"
+                );
+			}
+		},
 		flags: {},
 		name: "Exalt",
 		rating: 3,
