@@ -2787,7 +2787,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			if (pokemon.setType(types)) {
 				if (types.length === 2) {
 					this.add(
-						"-types",
+						"-start",
 						pokemon,
 						types[0],
 						types[1],
@@ -2796,7 +2796,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 					);
 				} else {
 					this.add(
-						"-type",
+						"-start",
 						pokemon,
 						types[0],
 						"[from] ability: Helix Nebula",
