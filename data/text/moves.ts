@@ -540,6 +540,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			shortDesc: "10% chance to make the target flinch.",
 		},
 	},
+	biteofwinter: {
+		name: "Bite of Winter",
+		shortDesc: "Heals the user by a weather-dependant amount.",
+		desc: "Heals the user by 1/2 HP in no weather or Strong Winds. Heals for 2/3 HP instead in Snow, and 1/3 HP in any other weather.",
+	},
 	bitterblade: {
 		name: "Bitter Blade",
 		desc: "The user recovers 1/2 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
@@ -688,6 +693,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Boomburst",
 		desc: "No additional effect.",
 		shortDesc: "No additional effect. Hits adjacent Pokemon.",
+	},
+	botanize: {
+		name: "Botanize",
+		shortDesc: "Changes the target's move to Grass.",
+		desc: "Changes the target's move to Grass. Among effects that changes a target's move type, this one moves last. Fails if the target already used a move.",
 	},
 	bounce: {
 		name: "Bounce",
@@ -1972,6 +1982,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	exaltedpotion: {
 		name: "Exalted Potion",
 		shortDesc: "Boosts all stats by 1 and removes foe's item.",
+		desc: "Boosts all stats (except for evasion and accuracy) by one stage, then consumes the foe's item. You do not gain any effects from consuming items such as berries.",
 	},
 	expandingforce: {
 		name: "Expanding Force",
@@ -2511,6 +2522,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Fusion Bolt",
 		desc: "Power doubles if the last move used by any Pokemon this turn was Fusion Flare.",
 		shortDesc: "Power doubles if used after Fusion Flare this turn.",
+	},
+	fusionfinale: {
+		name: "Fusion Flare",
+		shortDesc: "Power doubles if used after another fusion move.",
+		desc: "Power doubles if the last move used by any Pokemon this turn was Fusion Bolt or Fusion Flare.",
 	},
 	fusionflare: {
 		name: "Fusion Flare",
@@ -3409,6 +3425,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Icicle Crash",
 		desc: "Has a 30% chance to make the target flinch.",
 		shortDesc: "30% chance to make the target flinch.",
+	},
+	icicleflail: {
+		name: "Icicle Flail",
+		desc: "Power increases by 60 for every Pokemon this targets.",
+		shortDesc: "Power increases for each targeted Pokemon.",
 	},
 	iciclespear: {
 		name: "Icicle Spear",
@@ -4782,11 +4803,17 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	pearlyparade: {
 		name: "Pearly Parade",
+		desc: "Lowers the user's Special Attack by 1 stage. Hits all foes.",
 		shortDesc: "Lowers the user's Sp. Atk by 1. Hits foe(s).",
 	},
 	peck: {
 		name: "Peck",
 		shortDesc: "No additional effect.",
+	},
+	peculiarcandy: {
+		name: "Peculiar Candy",
+		desc: "This move has a 20% chance to apply either Burn, Freeze, or Paralysis on hit.",
+		shortDesc: "20% chance to burn, freeze, or paralyze.",
 	},
 	perishsong: {
 		name: "Perish Song",
@@ -5422,6 +5449,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 
 		typeChange: "  [POKEMON]'s type became the same as [SOURCE]'s type!",
 	},
+	refractionreactor: {
+		name: "Refraction Reactor",
+		desc: "When this move hits, it sets Electric Terrain.",
+		shortDesc: "Sets Electric Terrain.",
+	},
 	refresh: {
 		name: "Refresh",
 		desc: "The user cures its burn, poison, or paralysis. Fails if the user is not burned, poisoned, or paralyzed.",
@@ -5431,6 +5463,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Relic Song",
 		desc: "Has a 10% chance to cause the target to fall asleep. If this move is successful on at least one target and the user is a Meloetta, it changes to Pirouette Forme if it is currently in Aria Forme, or changes to Aria Forme if it is currently in Pirouette Forme. This forme change does not happen if the Meloetta has the Sheer Force Ability. The Pirouette Forme reverts to Aria Forme when Meloetta is not active.",
 		shortDesc: "10% chance to sleep foe(s). Meloetta transforms.",
+	},
+	retribution: {
+		name: "Retribution",
+		desc: "Deals damage to the target based on its Defense instead of its Special Defense.",
+		shortDesc: "Deals damage based on Def. instead of SpD.",
 	},
 	rest: {
 		name: "Rest",
@@ -6315,6 +6352,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			desc: "Deals 20 HP of damage to the target. This move ignores type immunity.",
 		},
 	},
+	soulsap: {
+		name: "Soul Sap",
+		desc: "If this move hits, the user recovers 1 PP, and the opponent loses 2 PP on their most recently used move. This move is Physical or Special based on the user's highest attacking stat.",
+		shortDesc: "Steals PP on hit. If SpA > Atk, move is Special.",
+	},
 	soulstealing7starstrike: {
 		name: "Soul-Stealing 7-Star Strike",
 		shortDesc: "No additional effect.",
@@ -6345,6 +6387,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		shortDesc: "Steals target's boosts before dealing damage.",
 
 		clearBoost: "  [SOURCE] stole the target's boosted stats!",
+	},
+	spectrumscorch: {
+		name: "Spectrum Scorch",
+		desc: "If this move hits, Sunny Day is set on the field.",
+		shortDesc: "Sets Sunny Day on hit.",
 	},
 	speedswap: {
 		name: "Speed Swap",
@@ -7219,6 +7266,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Lowers the target's Attack and Defense by 1 stage.",
 		shortDesc: "Lowers the target's Attack and Defense by 1.",
 	},
+	titaniumtempest: {
+		name: "Titanium Tempest",
+		desc: "Prevents the target from switching for four or five turns (seven turns if the user is holding Grip Claw). Causes damage to the target equal to 1/8 of its maximum HP (1/6 if the user is holding Binding Band), rounded down, at the end of each turn during effect. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Shed Tail, Teleport, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field, or if the target uses Mortal Spin, Rapid Spin, or Substitute successfully. This effect is not stackable or reset by using this or another binding move.",
+		shortDesc: "Traps the target for 4-5 turns.",
+	},
 	tidyup: {
 		name: "Tidy Up",
 		desc: "Raises the user's Attack and Speed by 1 stage. Removes substitutes from all active Pokemon and ends the effects of Spikes, Stealth Rock, Sticky Web, and Toxic Spikes for both sides.",
@@ -7229,6 +7281,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	timelesstorrent: {
 		name: "Timeless Torrent",
 		shortDesc: "10% for -SpD. On KO, effect depends on field.",
+	},
+	tidaltrance: {
+		name: "Tidal Trance",
+		desc: "Prevents the target from switching for four or five turns (seven turns if the user is holding Grip Claw). Causes damage to the target equal to 1/8 of its maximum HP (1/6 if the user is holding Binding Band), rounded down, at the end of each turn during effect. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Shed Tail, Teleport, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field, or if the target uses Mortal Spin, Rapid Spin, or Substitute successfully. This effect is not stackable or reset by using this or another binding move.",
+		shortDesc: "Traps the target for 4-5 turns.",
 	},
 	tomahawkvolley: {
 		name: "Tomahawk Volley",

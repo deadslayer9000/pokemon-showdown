@@ -191,6 +191,11 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Blazing Swap",
 		shortDesc: "If Aegislash, changes Forme to Blade before attacks and Shield before King's Shield.",
 	},
+	boundless: {
+		name: "Boundless",
+		shortDesc: "When using a Fire/Ice/Electric-type move, this pokemon changes it's secondary type to match it.",
+		desc: "When using a Fire/Ice/Electric-type move, this pokemon becomes Dragon/Fire, Dragon/Ice, or Dragon/Electric respectively.",
+	},
 	bulletproof: {
 		name: "Bulletproof",
 		shortDesc: "This Pokemon is immune to bullet moves.",
@@ -370,6 +375,11 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 
 		start: "  [POKEMON] is radiating a dark aura!",
 	},
+	darkdecree: {
+		name: "Dark Decree",
+		desc: "This ability changes based on how many fallen allies your team has. It starts as Pressure, then becomes Defiant (1), Mold Breaker (2), Sheer Force (3), Dark Aura (4), and finally Soul-Heart (5).",
+		shortDesc: "This ability changes based on how many fallen allies you have.",
+	},
 	dauntlessshield: {
 		name: "Dauntless Shield",
 		shortDesc: "On switch-in, this Pokemon's Defense is raised by 1 stage. Once per battle.",
@@ -523,6 +533,11 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "When this Pokemon has more than 1/2 its maximum HP and takes damage bringing it to 1/2 or less of its maximum HP, it immediately switches out to a chosen ally. This effect applies after all hits from a multi-hit move. This effect is prevented if the move had a secondary effect removed by the Sheer Force Ability. This effect applies to both direct and indirect damage, except Curse and Substitute on use, Belly Drum, Pain Split, and confusion damage.",
 		shortDesc: "This Pokemon switches out when it reaches 1/2 or less of its maximum HP.",
 	},
+	evilsbane: {
+		name: "Evil's Bane",
+		shortDesc: "This Pokemon is immune to Dark-type moves and Prankster moves.",
+		desc: "This Pokemon is immune to Dark-type moves and status moves that receive boosted priority from Prankster.",
+	},
 	exalt: {
 		name: "Exalt",
 		shortDesc: "On switch-in, the opposing Pokemon gains the Dragon type.",
@@ -610,6 +625,11 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	flurry: {
 		name: "Flurry",
 		shortDesc: "At 1/3 or less of its max HP, this Pokemon's offensive stat is 1.5x with Ice attacks.",
+	},
+	forbiddentreat: {
+		name: "Forbidden Treat",
+		shortDesc: "When hit by a biting or draining move, apply Curse and Partial Trapping",
+		desc: "When this Pokemon is hit by a biting or draining move, this Pokemon applies Curse and Partial Trapping to the attacker.",
 	},
 	forecast: {
 		name: "Forecast",
@@ -2148,6 +2168,11 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Tangling Hair",
 		shortDesc: "Pokemon making contact with this Pokemon have their Speed lowered by 1 stage.",
 	},
+	taproot: {
+		name: "Taproot",
+		shortDesc: "Heal 1/16th of your health at the end of every turn. Drain moves heal 30% more.",
+		desc: "This Pokemon heals 1/16th of it's health at the end of the turn. Moves that drain HP from the target heal 30% more, similar to Big Root.",
+	},
 	technician: {
 		name: "Technician",
 		desc: "This Pokemon's moves of 60 power or less have their power multiplied by 1.5, including Struggle. This effect comes after a move's effect changes its own power.",
@@ -2459,6 +2484,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Wind Rider",
 		desc: "This Pokemon is immune to wind moves and raises its Attack by 1 stage when hit by a wind move or when Tailwind begins on this Pokemon's side.",
 		shortDesc: "Attack raised by 1 if hit by a wind move or Tailwind begins. Wind move immunity.",
+	},
+	winterarbiter: {
+		name: "Winter Arbiter",
+		shortDesc: "This Pokemon gains +1 Attack in Snow.",
 	},
 	wonderguard: {
 		name: "Wonder Guard",
