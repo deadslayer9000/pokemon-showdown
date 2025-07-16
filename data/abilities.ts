@@ -2784,13 +2784,13 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 
 			const target = this.sample(possibleTargets);
 			const types = target.getTypes();
+
 			if (pokemon.setType(types)) {
 				this.add(
-					"-start",
+					"-formechange",
 					pokemon,
-					"typechange",
-					"[from] ability: Helix Nebula",
-					`[of] ${target}`
+					pokemon.species.name,
+					"[from] ability: Helix Nebula"
 				);
 				this.add(
 					"-message",
