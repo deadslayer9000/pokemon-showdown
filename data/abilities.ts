@@ -2785,24 +2785,19 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			const target = this.sample(possibleTargets);
 			const types = target.getTypes();
 			if (pokemon.setType(types)) {
-				if (types.length === 2) {
-					this.add(
-						"-start",
-						pokemon,
-						types[0],
-						types[1],
-						"[from] ability: Helix Nebula",
-						`[of] ${target}`
-					);
-				} else {
-					this.add(
-						"-start",
-						pokemon,
-						types[0],
-						"[from] ability: Helix Nebula",
-						`[of] ${target}`
-					);
-				}
+				this.add(
+					"-start",
+					pokemon,
+					"typechange",
+					"[from] ability: Helix Nebula",
+					`[of] ${target}`
+				);
+				this.add(
+					"-message",
+					`${pokemon.name}'s type changed to ${types.join(
+						"/"
+					)} due to Helix Nebula!`
+				);
 			}
 		},
 	},
