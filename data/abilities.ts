@@ -137,14 +137,14 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	altruistic: {
 		onTryHit(target, source, move) {
-			if (target !== source && move.type === 'Fighting') {
+			if (target !== source && move.type === "Fighting") {
 				if (!this.heal(target.baseMaxhp / 4)) {
-					this.add('-immune', target, '[from] ability: Altruistic');
+					this.add("-immune", target, "[from] ability: Altruistic");
 				}
 				return null;
 			}
 		},
-		flags: {breakable: 1},
+		flags: { breakable: 1 },
 		name: "Altruistic",
 		rating: 3,
 		num: -70,
@@ -676,6 +676,34 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		},
 		onModifyMove(move) {
 			move.ignoreAbility = true;
+		},
+		onPrepareHit(source, target, move) {
+			if (
+				move.hasBounced ||
+				move.flags["futuremove"] ||
+				move.sourceEffect === "snatch" ||
+				move.callsMove
+			)
+				return;
+			if (
+				move.type === "Ice" ||
+				move.type === "Dragon" ||
+				move.type === "Fire" ||
+				move.type === "Electric"
+			) {
+				const type = move.type;
+				if (type) {
+					if (!source.setType(type)) return;
+					this.effectState.libero = source.previouslySwitchedIn;
+					this.add(
+						"-start",
+						source,
+						"typechange",
+						type,
+						"[from] ability: Boundless"
+					);
+				}
+			}
 		},
 		flags: {},
 		name: "Boundless",
@@ -2793,7 +2821,10 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 0,
 		num: -1,
 		onFaint(pokemon) {
-			this.add('-message', `${pokemon.name}'s Helix Nebula left a wish behind!`);
+			this.add(
+				"-message",
+				`${pokemon.name}'s Helix Nebula left a wish behind!`
+			);
 			pokemon.side.addSlotCondition(pokemon, "wish");
 		},
 
