@@ -6742,6 +6742,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	deltahatenna: {
 		tier: "LC",
 	},
+	deltazeraora: {
+		tier: "OU",
+	},
 	/*
 	etherion: {
 		tier: "",
@@ -6755,9 +6758,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	deltaheatran: {
 		tier: "",
 	},
-	deltazeraora: {
-		tier: "",
-	},
+	
 	deltajirachi: {
 		tier: "",
 	},

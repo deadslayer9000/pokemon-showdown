@@ -5702,12 +5702,19 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		pp: 15,
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
-		onTry(source) {
-		this.hint("This move isn't fully implemented yet");
-		},
 		secondary: null,
 		target: "normal",
 		type: "Psychic",
+		onModifyType(move, pokemon, target) {
+			move.type = pokemon.types[0];
+			this.debug(`type: ${move.type}`);
+			this.hint(`Ether Burst changed its type to: ${move.type} to match ${pokemon.name}'s primary typing`);
+		},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
+				move.category = 'Physical';
+			}
+		},
 	},
 	eternabeam: {
 		num: 795,
@@ -6527,6 +6534,46 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		},
 		target: "normal",
 		type: "Steel",
+		contestType: "Beautiful",
+	},
+	flashpointfists: {
+		num: -79,
+		accuracy: 100,
+		basePower: 80,
+		basePowerCallback(pokemon, target, move) {
+			let bp = move.basePower;
+			if (this.field.pseudoWeather.echoedvoice) {
+				bp = move.basePower + (10 * this.field.pseudoWeather.echoedvoice.multiplier) - 10;
+				return bp + ((10*this.field.pseudoWeather.echoedvoice.multiplier)-10);
+			}
+			this.debug(`BP: ${bp}`);
+			return bp;
+		},
+		category: "Physical",
+		name: "Flashpoint Fists",
+		pp: 15,
+		priority: 0,
+		flags: { contact: 1, punch:1, protect: 1, mirror: 1, metronome: 1 },
+		onTry() {
+			this.field.addPseudoWeather('echoedvoice');
+		},
+		condition: {
+			duration: 2,
+			onFieldStart() {
+				this.effectState.multiplier = 0;
+			},
+			onFieldRestart() {
+				if (this.effectState.duration !== 2) {
+					this.effectState.duration = 2;
+					if (this.effectState.multiplier < 4) {
+						this.effectState.multiplier++;
+					}
+				}
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fire",
 		contestType: "Beautiful",
 	},
 	flatter: {

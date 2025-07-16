@@ -2012,6 +2012,11 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "This Pokemon's Speed is raised by 6 stages after it is damaged by a Fire- or Water-type move.",
 		shortDesc: "This Pokemon's Speed is raised by 6 stages after it is damaged by Fire/Water moves.",
 	},
+	steamforged: {
+		name: "Steamforged",
+		desc: "30% chance a Pokemon making contact with this Pokemon will be burned.",
+		shortDesc: "30% chance a Pokemon making contact with this Pokemon will be burned.",
+	},
 	steelworker: {
 		name: "Steelworker",
 		shortDesc: "This Pokemon's offensive stat is multiplied by 1.5 while using a Steel-type attack.",

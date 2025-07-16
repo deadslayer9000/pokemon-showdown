@@ -2275,6 +2275,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
 		shortDesc: "10% chance to lower the target's Sp. Def by 1.",
 	},
+	flashpointfists: {
+		name: "Flashpoint Fists",
+		desc: "Every consecutive turn this move is used, its base power increases by 10. This can stack up to 4 times (120 base power).",
+		shortDesc: "Consecutive hits raise the move's base power by 10."
+	},
 	flatter: {
 		name: "Flatter",
 		desc: "Raises the target's Special Attack by 1 stage and confuses it.",
