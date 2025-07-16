@@ -2784,14 +2784,16 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 
 			const target = this.sample(possibleTargets);
 			const types = target.getTypes();
-
 			if (pokemon.setType(types)) {
 				this.add(
-					"-formechange",
+					"-start",
 					pokemon,
-					pokemon.species.name,
-					"[from] ability: Helix Nebula"
+					"typechange",
+					types.join("/"),
+					"[from] ability: Helix Nebula",
+					`[of] ${target}`
 				);
+
 				this.add(
 					"-message",
 					`${pokemon.name}'s type changed to ${types.join(
