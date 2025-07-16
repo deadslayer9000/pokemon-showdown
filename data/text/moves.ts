@@ -6272,6 +6272,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Has a 30% chance to make the target flinch. Fails if the user is not asleep.",
 		shortDesc: "User must be asleep. 30% chance to flinch target.",
 	},
+	snowflare: {
+		name: "Snow Flare",
+		desc: "Has a 40% chance to lower the target's Special Defense by 2 stages.",
+		shortDesc: "40% chance to lower the target's Sp. Def by 2.",
+	},
 	snowscape: {
 		name: "Snowscape",
 		desc: "For 5 turns, the weather becomes Snow. During the effect, the Defense of Ice-type Pokemon is multiplied by 1.5 when taking damage from a physical attack. Lasts for 8 turns if the user is holding Icy Rock. Fails if the current weather is Snow.",

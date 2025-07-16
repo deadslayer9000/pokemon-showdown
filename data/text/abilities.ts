@@ -34,6 +34,11 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 
 		start: "  The effects of the weather disappeared.",
 	},
+	altruistic: {
+		name: "Altruistic",
+		desc: "This Pokemon is immune to Fighting-type attacks, and additionally heals 25% HP when hit by one. If the user's ally has no item, the user gives its item to its ally.",
+		shortDesc: "Heals 25% HP from Fighting moves; Fighting immmunity. Gives its item to itemless ally.",
+	},
 	analytic: {
 		name: "Analytic",
 		desc: "The power of this Pokemon's move is multiplied by 1.3 if it is the last to move in a turn. Does not affect Doom Desire and Future Sight.",
