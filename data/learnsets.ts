@@ -119448,7 +119448,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 		}
 	},
 	deltashaymin: {
-		learnet: {
+		learnset: {
 			aircutter: ["9M"],
 			airslash: ["9M"],
 			auroraveil: ["9L28","9M"],
