@@ -2779,7 +2779,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 0,
 		num: -1,
 		onFaint(pokemon) {
-			this.add("-wish", pokemon, "[from] ability: Helix Nebula");
+			this.add('-message', `${pokemon.name}'s Helix Nebula left a wish behind!`);
 			pokemon.side.addSlotCondition(pokemon, "wish");
 		},
 
