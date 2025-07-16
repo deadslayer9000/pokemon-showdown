@@ -2224,6 +2224,17 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Helix Nebula",
 		rating: 0,
 		num: -1,
+		onUpdate(pokemon) {
+
+			const possibleTargets = pokemon.adjacentFoes();
+			if (!possibleTargets.length) return;
+
+			const target = this.sample(possibleTargets);
+			const ability = target.getAbility();
+			if (pokemon.setAbility(ability)) {
+				this.add('-ability', pokemon, ability, '[from] ability: Trace', `[of] ${target}`);
+			}
+		},
 	},
 	hocuspocus: {
 		flags: {},
