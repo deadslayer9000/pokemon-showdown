@@ -692,14 +692,13 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				move.type === "Electric"
 			) {
 				const type = move.type;
-				if (type) {
-					if (!source.setType(type)) return;
-					this.effectState.libero = source.previouslySwitchedIn;
+				if (type && !source.hasType(type)) {
+					if (!source.addType(type)) return;
 					this.add(
 						"-start",
 						source,
 						"typechange",
-						type,
+						source.getTypes().join("/"),
 						"[from] ability: Boundless"
 					);
 				}
