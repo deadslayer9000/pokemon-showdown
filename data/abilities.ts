@@ -4361,6 +4361,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -99,
 	},
 	noblesse: {
+		onBasePowerPriority: 7,
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.type === "Water" && this.field.weather === "sunnyday") {
 				this.add("-activate", attacker, "ability: Noblesse");
