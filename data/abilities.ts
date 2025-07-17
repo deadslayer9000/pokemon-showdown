@@ -1308,6 +1308,42 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 186,
 	},
 	darkdecree: {
+		onStart(pokemon) {
+			if (pokemon.side.totalFainted) {
+				this.add("-activate", pokemon, "ability: Retribution");
+				const fallen = Math.min(pokemon.side.totalFainted, 5);
+				this.add("-start", pokemon, `fallen${fallen}`, "[silent]");
+				this.effectState.fallen = fallen;
+				switch (fallen) {
+					case 1:
+						pokemon.setAbility("Defiant");
+						break;
+					case 2:
+						pokemon.setAbility("Mold Breaker");
+						break;
+					case 3:
+						pokemon.setAbility("Sheer Force");
+						break;
+					case 4:
+						pokemon.setAbility("Dark Aura");
+						break;
+					case 5:
+						pokemon.setAbility("Soul-Heart");
+						break;
+					default:
+						pokemon.setAbility("Pressure");
+						break;
+				}
+			}
+		},
+		onEnd(pokemon) {
+			this.add(
+				"-end",
+				pokemon,
+				`fallen${this.effectState.fallen}`,
+				"[silent]"
+			);
+		},
 		flags: {},
 		name: "Dark Decree",
 		rating: 4,
@@ -8283,47 +8319,5 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		name: "Persistent",
 		rating: 3,
 		num: -4,
-	},
-	retribution: {
-		onStart(pokemon) {
-			if (pokemon.side.totalFainted) {
-				this.add("-activate", pokemon, "ability: Retribution");
-				const fallen = Math.min(pokemon.side.totalFainted, 5);
-				this.add("-start", pokemon, `fallen${fallen}`, "[silent]");
-				this.effectState.fallen = fallen;
-				switch (fallen) {
-					case 1:
-						pokemon.setAbility("Defiant");
-						break;
-					case 2:
-						pokemon.setAbility("Mold Breaker");
-						break;
-					case 3:
-						pokemon.setAbility("Sheer Force");
-						break;
-					case 4:
-						pokemon.setAbility("Dark Aura");
-						break;
-					case 5:
-						pokemon.setAbility("Soul-Heart");
-						break;
-					default:
-						pokemon.setAbility("Pressure");
-						break;
-				}
-			}
-		},
-		onEnd(pokemon) {
-			this.add(
-				"-end",
-				pokemon,
-				`fallen${this.effectState.fallen}`,
-				"[silent]"
-			);
-		},
-		flags: {},
-		name: "Retribution",
-		rating: 4,
-		num: -71,
 	},
 };
