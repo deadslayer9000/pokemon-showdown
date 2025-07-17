@@ -1919,7 +1919,6 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -67,
 	},
 	exalt: {
-		
 		onStart(pokemon) {
 			for (const foe of pokemon.foes()) {
 				if (!foe.hasType("Dragon")) {
@@ -7641,7 +7640,10 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	valorheart: {
 		onAnyBasePowerPriority: -1,
 		onAnyBasePower(basePower, target, source) {
-			if (source === this.effectState.target && typeof basePower === "number") {
+			if (
+				source === this.effectState.target &&
+				typeof basePower === "number"
+			) {
 				return this.chainModify([4915, 4096]);
 			}
 		},
