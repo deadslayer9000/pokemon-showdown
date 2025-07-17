@@ -1309,7 +1309,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	darkdecree: {
 		onStart(pokemon) {
-			if (pokemon.side.totalFainted) {
+			
 				this.add("-activate", pokemon, "ability: Dark Decree");
 				const fallen = Math.min(pokemon.side.totalFainted, 5);
 				this.add("-start", pokemon, `fallen${fallen}`, "[silent]");
@@ -1318,6 +1318,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				switch (fallen) {
 					case 0:
 						newability = "Pressure";
+						break;
 					case 1:
 						newability = "Defiant";
 						break;
@@ -1339,7 +1340,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				}
 				pokemon.setAbility(newability);
 				this.add("-ability", pokemon, newability);
-			}
+			
 		},
 		onEnd(pokemon) {
 			this.add(
