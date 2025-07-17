@@ -7639,13 +7639,16 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	valorheart: {
 		onBasePowerPriority: 21,
-		onBasePower(basePower, pokemon, target, move) {
+		onBasePower(basePower, source, target, move) {
 			if (
-				pokemon === this.effectState.target &&
-				typeof basePower === "number"
+				(source === this.effectState.target &&
+				typeof basePower === "number") || 
+				(source.isAlly(this.effectState.target) &&
+				 typeof basePower === "number")
 			) {
 				return this.chainModify([4915, 4096]);
 			}
+			
 		},
 		flags: {},
 		name: "Valor Heart",
