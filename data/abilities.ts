@@ -137,14 +137,14 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	altruistic: {
 		onTryHit(target, source, move) {
-			if (target !== source && move.type === 'Fighting') {
+			if (target !== source && move.type === "Fighting") {
 				if (!this.heal(target.baseMaxhp / 4)) {
-					this.add('-immune', target, '[from] ability: Altruistic');
+					this.add("-immune", target, "[from] ability: Altruistic");
 				}
 				return null;
 			}
 		},
-		flags: {breakable: 1},
+		flags: { breakable: 1 },
 		name: "Altruistic",
 		rating: 3,
 		num: -70,
@@ -676,6 +676,33 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		},
 		onModifyMove(move) {
 			move.ignoreAbility = true;
+		},
+		onPrepareHit(source, target, move) {
+			if (
+				move.hasBounced ||
+				move.flags["futuremove"] ||
+				move.sourceEffect === "snatch" ||
+				move.callsMove
+			)
+				return;
+			if (
+				move.type === "Ice" ||
+				move.type === "Dragon" ||
+				move.type === "Fire" ||
+				move.type === "Electric"
+			) {
+				const type = move.type;
+				if (type && !source.hasType(type)) {
+					if (!source.addType(type)) return;
+					this.add(
+						"-start",
+						source,
+						"typechange",
+						source.getTypes().join("/"),
+						"[from] ability: Boundless"
+					);
+				}
+			}
 		},
 		flags: {},
 		name: "Boundless",
@@ -1896,11 +1923,21 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -67,
 	},
 	exalt: {
-		/*	onStart(target) {
-		if (target.hasType('Dragon')) return false;
-		if (!target.addType('Dragon')) return false;
-		target.add('-start', target, 'typeadd', 'Dragon', 'ability: Exalt');
-		}, */
+		onStart(pokemon) {
+			for (const foe of pokemon.foes()) {
+				if (!foe.hasType("Dragon")) {
+					if (!foe.addType("Dragon")) continue;
+					this.add(
+						"-start",
+						foe,
+						"typechange",
+						foe.getTypes().join("/"),
+						"[from] ability: Exalt",
+						"[of] " + pokemon
+					);
+				}
+			}
+		},
 		flags: {},
 		name: "Exalt",
 		rating: 3,
@@ -2797,7 +2834,10 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 0,
 		num: -1,
 		onFaint(pokemon) {
-			this.add('-message', `${pokemon.name}'s Helix Nebula left a wish behind!`);
+			this.add(
+				"-message",
+				`${pokemon.name}'s Helix Nebula left a wish behind!`
+			);
 			pokemon.side.addSlotCondition(pokemon, "wish");
 		},
 
@@ -3702,6 +3742,14 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 42,
 	},
 	marvel: {
+		onModifyMove(move, pokemon) {
+			if (!pokemon.abilityState.marvelUsed) {
+				move.willCrit = true;
+				this.add("-activate", pokemon, "ability: Marvel");
+				pokemon.abilityState.marvelUsed = true;
+			}
+			
+		},
 		flags: {},
 		name: "Marvel",
 		rating: 4,
@@ -7601,6 +7649,22 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -37,
 	},
 	usurped: {
+		onStart(pokemon) {
+			if (pokemon.hp >= pokemon.maxhp) {
+				for (const target of pokemon.adjacentFoes()) {
+					if (!target.volatiles["taunt"]) {
+						target.addVolatile("taunt", pokemon);
+						this.add(
+							"-activate",
+							target,
+							"ability: Usurped",
+							"[from] ability: Usurped",
+							"[of] " + pokemon
+						);
+					}
+				}
+			}
+		},
 		flags: {},
 		name: "Usurped",
 		rating: 2.5,
@@ -7618,9 +7682,14 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -33,
 	},
 	valorheart: {
-		onAnyBasePowerPriority: -1,
-		onAnyBasePower(basePower, target, source) {
-			if (source.isAlly(this.effectState.target) && basePower === "number") {
+		onBasePowerPriority: 21,
+		onBasePower(basePower, source, target, move) {
+			if (
+				(source === this.effectState.target &&
+					typeof basePower === "number") ||
+				(source.isAlly(this.effectState.target) &&
+					typeof basePower === "number")
+			) {
 				return this.chainModify([4915, 4096]);
 			}
 		},

@@ -113688,7 +113688,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			substitute: ["9M"],
 			supercellslam: ["9M"],
 			terablast: ["9M"],
-			terablast: ["9M"],
 			thunder: ["9M"],
 			thunderwave: ["9M"],
 			thunderbolt: ["9L42","9M"],
