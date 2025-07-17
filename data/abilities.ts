@@ -1366,15 +1366,19 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 219,
 	},
 	deathdefiance: {
-		/*onDamagePriority: -30,
-		onDamage(pokemon, damage, target, source, effect) {
-			if (target.hp === target.hp && damage >= target.hp && effect && effect.effectType === 'Move') {
-				if (pokemon.deathdefiance) return;
-				pokemon.deathdefiance = true;
-				this.add('-ability', target, 'Death Defiance');
+		onDamagePriority: -41, ///snipes focus sash priority so this goes after it
+		onDamage(damage, target, source, effect) {
+			if (
+				damage >= target.hp &&
+				effect &&
+				effect.effectType === "Move"
+			) {
+				if (target.deathdefiance) return;
+				target.deathdefiance = true;
+				this.add("-ability", target, "Death Defiance");
 				return target.hp - 1;
 			}
-		},*/
+		},
 		flags: { breakable: 1 },
 		name: "Death Defiance",
 		rating: 3,
@@ -2862,6 +2866,19 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		},
 	},
 	hocuspocus: {
+		onFractionalPriorityPriority: -1,
+		onFractionalPriority(priority, pokemon, target, move) {
+			if (move.category === "Status") {
+				return -9;
+			}
+		},
+		/*onStart(pokemon) {
+				if (pokemon.volatiles['boosterenergy']) {
+					this.hint("hello! :D");
+					this.add("-activate", pokemon, "ability: Hocus Pocus", "[fromitem]");
+					this.field.addPseudoWeather('gravity');
+				}
+			},*/
 		flags: {},
 		name: "Hocus Pocus",
 		rating: 5,
@@ -4865,6 +4882,9 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 182,
 	},
 	planarcollapse: {
+		onStart(source) {
+			this.field.addPseudoWeather("gravity");
+		},
 		flags: {},
 		name: "Planar Collapse",
 		rating: 4,

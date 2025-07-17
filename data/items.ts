@@ -2894,6 +2894,23 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		gen: 4,
 	},
 	illusorysword: {
+		onSwitchInPriority: -2,
+		onStart(pokemon) {
+			if (pokemon.hasAbility('Hocus Pocus')) {
+				pokemon.addVolatile('illusorysword');
+				pokemon.setItem('');
+			}
+		},
+		condition: {
+			onStart(pokemon) {
+				this.add('-activate', pokemon, 'ability: Hocus Pocus', '[consumed]');
+				this.field.addPseudoWeather('trickroom');
+			}
+		},
+		onTakeItem(item, source) {
+			if (source.baseSpecies.name === 'Magirigus') return false;
+			return true;
+		},
 		name: "Illusory Sword",
 		spritenum: 698,
 		itemUser: ["Magirigus"],
