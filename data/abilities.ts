@@ -4056,7 +4056,8 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		onModifySpDPriority: 6,
 		onModifySpD(spd, pokemon) {
 			for (const ally of pokemon.adjacentAllies()) {
-				if (ally) {
+				
+				if (ally.hasAbility("Dawnbreak")) {
 					this.add(-"ability", pokemon, "Moonwake");
 					return this.chainModify(1.5);
 				}
