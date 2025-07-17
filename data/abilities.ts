@@ -7638,10 +7638,10 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -33,
 	},
 	valorheart: {
-		onAnyBasePowerPriority: -1,
-		onAnyBasePower(basePower, target, source) {
+		onBasePowerPriority: 21,
+		onBasePower(basePower, pokemon, target, move) {
 			if (
-				source === this.effectState.target &&
+				pokemon === this.effectState.target &&
 				typeof basePower === "number"
 			) {
 				return this.chainModify([4915, 4096]);
