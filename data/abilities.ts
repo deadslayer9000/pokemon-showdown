@@ -1309,38 +1309,36 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	darkdecree: {
 		onStart(pokemon) {
-			
-				this.add("-activate", pokemon, "ability: Dark Decree");
-				const fallen = Math.min(pokemon.side.totalFainted, 5);
-				this.add("-start", pokemon, `fallen${fallen}`, "[silent]");
-				this.effectState.fallen = fallen;
-				let newability: string;
-				switch (fallen) {
-					case 0:
-						newability = "Pressure";
-						break;
-					case 1:
-						newability = "Defiant";
-						break;
-					case 2:
-						newability = "Mold Breaker";
-						break;
-					case 3:
-						newability = "Sheer Force";
-						break;
-					case 4:
-						newability = "Dark Aura";
-						break;
-					case 5:
-						newability = "Soul-Heart";
-						break;
-					default:
-						newability = "Pressure";
-						break;
-				}
-				pokemon.setAbility(newability);
-				this.add("-ability", pokemon, newability);
-			
+			this.add("-activate", pokemon, "ability: Dark Decree");
+			const fallen = Math.min(pokemon.side.totalFainted, 5);
+			this.add("-start", pokemon, `fallen${fallen}`, "[silent]");
+			this.effectState.fallen = fallen;
+			let newability: string;
+			switch (fallen) {
+				case 0:
+					newability = "Pressure";
+					break;
+				case 1:
+					newability = "Defiant";
+					break;
+				case 2:
+					newability = "Mold Breaker";
+					break;
+				case 3:
+					newability = "Sheer Force";
+					break;
+				case 4:
+					newability = "Dark Aura";
+					break;
+				case 5:
+					newability = "Soul-Heart";
+					break;
+				default:
+					newability = "Pressure";
+					break;
+			}
+			pokemon.setAbility(newability);
+			this.add("-ability", pokemon, newability);
 		},
 		onEnd(pokemon) {
 			this.add(
@@ -4049,6 +4047,21 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 141,
 	},
 	moonwake: {
+		onStart(pokemon) {
+			this.add("-ability", pokemon, "Moonwake");
+		},
+		onModifyMove(move) {
+			move.ignoreAbility = true;
+		},
+		onModifySpDPriority: 6,
+		onModifySpD(spd, pokemon) {
+			for (const ally of pokemon.adjacentAllies()) {
+				if (ally) {
+					this.add(-"ability", pokemon, "Moonwake");
+					return this.chainModify(1.5);
+				}
+			}
+		},
 		flags: {},
 		name: "Moonwake",
 		rating: 2,
