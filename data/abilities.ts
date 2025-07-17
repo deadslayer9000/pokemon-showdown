@@ -5315,7 +5315,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	prowler: {
 		onSourceAfterFaint(length, target, source, effect) {
 			if (effect && effect.effectType === "Move") {
-				this.heal(source.baseMaxhp * 0.33);
+				this.heal(source.maxhp * 0.33);
 				this.add("-ability", source, "Prowler");
 			}
 		},
