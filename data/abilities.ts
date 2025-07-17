@@ -3747,6 +3747,9 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				}
 			}
 		},
+		onSwitchIn(pokemon) {
+			pokemon.abilityState.marvelUsed = false;
+		},
 
 		flags: {},
 		name: "Marvel",
