@@ -1366,7 +1366,8 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	dawnbreak: {
 		onStart(source) {
-			this.field.addPseudoWeather("magicroom", source);
+			this.field.addPseudoWeather({ duration: 0 }, "magicroom", source);
+			this.add("-ability", source, "Dawnbreak");
 		},
 		onEnd(source) {
 			this.field.removePseudoWeather("magicroom", source);
