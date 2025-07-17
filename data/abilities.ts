@@ -4821,6 +4821,9 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 182,
 	},
 	planarcollapse: {
+		onStart(source) {
+			this.field.addPseudoWeather("gravity");
+		},
 		flags: {},
 		name: "Planar Collapse",
 		rating: 4,
