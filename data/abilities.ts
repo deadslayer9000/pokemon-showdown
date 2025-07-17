@@ -5316,7 +5316,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		
 		onSourceAfterFaint(pokemon, target, source, effect) {
 			if (effect && effect.effectType === "Move") {
-				pokemon.heal(Math.round(pokemon.baseMaxhp / 3));
+				this.heal(Math.round(source.baseMaxhp / 3)), source;
 				this.add("-ability", source, "Prowler");
 				
 			}
