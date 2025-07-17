@@ -2826,6 +2826,19 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		},
 	},
 	hocuspocus: {
+		onFractionalPriorityPriority: -1,
+		onFractionalPriority(priority, pokemon, target, move) {
+			if (move.category === "Status") {
+				return -9;
+			}
+		},
+		/*onStart(pokemon) {
+				if (pokemon.volatiles['boosterenergy']) {
+					this.hint("hello! :D");
+					this.add("-activate", pokemon, "ability: Hocus Pocus", "[fromitem]");
+					this.field.addPseudoWeather('gravity');
+				}
+			},*/
 		flags: {},
 		name: "Hocus Pocus",
 		rating: 5,
