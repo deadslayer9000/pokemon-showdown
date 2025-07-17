@@ -1368,11 +1368,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	deathdefiance: {
 		onDamagePriority: -41, ///snipes focus sash priority so this goes after it
 		onDamage(damage, target, source, effect) {
-			if (
-				damage >= target.hp &&
-				effect &&
-				effect.effectType === "Move"
-			) {
+			if (damage >= target.hp && effect && effect.effectType === "Move") {
 				if (target.deathdefiance) return;
 				target.deathdefiance = true;
 				this.add("-ability", target, "Death Defiance");
@@ -3744,12 +3740,14 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	marvel: {
 		onModifyMove(move, pokemon) {
 			if (!pokemon.abilityState.marvelUsed) {
-				move.willCrit = true;
-				this.add("-activate", pokemon, "ability: Marvel");
-				pokemon.abilityState.marvelUsed = true;
+				if (move.category === "Special") {
+					move.willCrit = true;
+					this.add("-activate", pokemon, "ability: Marvel");
+					pokemon.abilityState.marvelUsed = true;
+				}
 			}
-			
 		},
+
 		flags: {},
 		name: "Marvel",
 		rating: 4,
@@ -4364,7 +4362,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	noblesse: {
 		onBasePower(basePower, attacker, defender, move) {
-			if ( move.type === "Water" && this.field.weather === "SunnyDay" ) {
+			if (move.type === "Water" && this.field.weather === "sunnyday") {
 				this.add("-activate", attacker, "ability: Noblesse");
 				return this.chainModify(1.5);
 			}
@@ -4374,7 +4372,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 2,
 		num: -15,
 	},
-	
+
 	noguard: {
 		onAnyInvulnerabilityPriority: 1,
 		onAnyInvulnerability(target, source, move) {
