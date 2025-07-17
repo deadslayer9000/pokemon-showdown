@@ -7641,7 +7641,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	valorheart: {
 		onAnyBasePowerPriority: -1,
 		onAnyBasePower(basePower, target, source) {
-			if (source.isAlly(this.effectState.target) && basePower === "number") {
+			if (source.isAlly(this.effectState.target) && typeof basePower === "number") {
 				return this.chainModify([4915, 4096]);
 			}
 		},
