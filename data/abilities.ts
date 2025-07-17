@@ -1365,6 +1365,21 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 235,
 	},
 	dawnbreak: {
+		onStart(source) {
+			this.field.addPseudoWeather("magicroom", source);
+		},
+		onEnd(source) {
+			this.field.removePseudoWeather("magicroom", source);
+		},
+		onModifySpAPriority: 6,
+		onModifySpA(SpA, pokemon) {
+			for (const ally of pokemon.adjacentAllies()) {
+				if (ally.hasAbility("Moonwake")) {
+					this.add("-ability", pokemon, "Moonwake", "boost");
+					return this.chainModify(1.5);
+				}
+			}
+		},
 		flags: {},
 		name: "Dawnbreak",
 		rating: 2,
@@ -4056,7 +4071,6 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		onModifySpDPriority: 6,
 		onModifySpD(spd, pokemon) {
 			for (const ally of pokemon.adjacentAllies()) {
-				
 				if (ally.hasAbility("Dawnbreak")) {
 					this.add("-ability", pokemon, "Moonwake", "boost");
 					return this.chainModify(1.5);
