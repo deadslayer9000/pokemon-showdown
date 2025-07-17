@@ -4363,11 +4363,18 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -99,
 	},
 	noblesse: {
+		onBasePower(basePower, attacker, defender, move) {
+			if ( move.type === "Water" && this.field.weather === "SunnyDay" ) {
+				this.add("-activate", attacker, "ability: Noblesse");
+				return this.chainModify(1.5);
+			}
+		},
 		flags: {},
 		name: "Noblesse",
 		rating: 2,
 		num: -15,
 	},
+	
 	noguard: {
 		onAnyInvulnerabilityPriority: 1,
 		onAnyInvulnerability(target, source, move) {
