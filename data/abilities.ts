@@ -1316,6 +1316,8 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				this.effectState.fallen = fallen;
 				let newability: string;
 				switch (fallen) {
+					case 0:
+						newability = "Pressure";
 					case 1:
 						newability = "Defiant";
 						break;
