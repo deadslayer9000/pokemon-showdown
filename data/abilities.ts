@@ -1341,7 +1341,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	deathdefiance: {
 		onDamagePriority: -30,
 		onDamage(pokemon, damage, target, source, effect) {
-			if (target.hp === target.hp && damage >= target.hp && effect && effect.effectType === 'Move') {
+			if (target.hp >= 0 && damage >= target.hp && effect && effect.effectType === 'Move') {
 				if (pokemon.defied) return;
 				pokemon.defied = true;
 				this.add('-ability', target, 'Death Defiance');

@@ -532,7 +532,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	embodyaspectstormpeak: {
 		name: "Embody Aspect (Stormpeak)",
-		shortDesc: "On switch-in, this Pokemon's Attack is raised by 1 stage.",
+		shortDesc: "On switch-in, this Pokemon's Speed is raised by 1 stage.",
 
 		boost: " The Stormpeak Mask worn by [POKEMON] shone brilliantly, and [POKEMON]'s Attack rose!",
 	},
