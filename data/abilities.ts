@@ -1339,12 +1339,16 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 219,
 	},
 	deathdefiance: {
-		onDamagePriority: -30,
-		onDamage(pokemon, damage, target, source, effect) {
-			if (target.hp >= 0 && damage >= target.hp && effect && effect.effectType === 'Move') {
-				if (pokemon.defied) return;
-				pokemon.defied = true;
-				this.add('-ability', target, 'Death Defiance');
+		onDamagePriority: -41, ///snipes focus sash priority so this goes after it
+		onDamage(damage, target, source, effect) {
+			if (
+				damage >= target.hp &&
+				effect &&
+				effect.effectType === "Move"
+			) {
+				if (target.deathdefiance) return;
+				target.deathdefiance = true;
+				this.add("-ability", target, "Death Defiance");
 				return target.hp - 1;
 			}
 		},
