@@ -198,7 +198,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	boundless: {
 		name: "Boundless",
-		shortDesc: "When using a Fire/Ice/Electric-type move, this pokemon changes it's secondary type to match it.",
+		shortDesc: "Secondary type changes when using a Fire/Ice/Electric-type move + Mold Breaker.",
 		desc: "When using a Fire/Ice/Electric-type move, this pokemon becomes Dragon/Fire, Dragon/Ice, or Dragon/Electric respectively.",
 	},
 	bulletproof: {
@@ -239,6 +239,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		shortDesc: "Active Pokemon without this Ability have their Speed multiplied by 0.75.",
 
 		start: "  [POKEMON]'s Chronostasis slowed time down to a crawl!",
+	},
+	chromaticscales: {
+		name: "Chromatic Scales",
+		shortDesc: "This Pokemon copies the types of its first two moveslots. Disabled below 50% HP.",
 	},
 	chronocatalyst: {
 		name: "Chrono Catalyst",
@@ -425,7 +429,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	desertspirit: {
 		name: "Desert Spirit",
 		desc: "This Pokemon's sound moves deal 1.3x damage and this Pokemon takes 0.5x damage from sound moves. All moves used by this Pokemon become Sound moves if the weather is Sandstorm.",
-		shortDesc: "Take 50% less and deal 30% more with sound moves. All attacks become sound moves in sand.",
+		shortDesc: "Sound Moves: 1.3x dealt, 0.5x taken damage. In Sandstorm: Attacks become sound.",
 	},
 	desolateland: {
 		name: "Desolate Land",
@@ -525,6 +529,12 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		shortDesc: "On switch-in, this Pokemon's Attack is raised by 1 stage.",
 
 		boost: "  The Hearthflame Mask worn by [POKEMON] shone brilliantly, and [POKEMON]'s Attack rose!",
+	},
+	embodyaspectstormpeak: {
+		name: "Embody Aspect (Stormpeak)",
+		shortDesc: "On switch-in, this Pokemon's Attack is raised by 1 stage.",
+
+		boost: " The Stormpeak Mask worn by [POKEMON] shone brilliantly, and [POKEMON]'s Attack rose!",
 	},
 	embodyaspectteal: {
 		name: "Embody Aspect (Teal)",
@@ -1566,6 +1576,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "This Pokemon's sound-based moves have their power multiplied by 1.3. This Pokemon takes halved damage from sound-based moves.",
 		shortDesc: "This Pokemon receives 1/2 damage from sound moves. Its own have 1.3x power.",
 	},
+	pureguise: {
+		name: "Pure Guise",
+		shortDesc: "This Pokemon deals 1.3x damage while at full HP.",
+	},
 	purepower: {
 		name: "Pure Power",
 		shortDesc: "This Pokemon's Attack is doubled.",
@@ -1959,6 +1973,11 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		gen4: {
 			shortDesc: "This Pokemon is immune to sound-based moves, including Heal Bell.",
 		},
+	},
+	spectreonslaught: {
+		name: "Spectre Onslaught",
+		shortDesc: "Damaging moves strike 4 times. The three strikes after the first do 10% damage.",
+		desc: "This Pokemon's Damaging moves strike 4 times, the three subsequent strikes dealing 10% of the original hit's damage. Secondary effects do not apply, and Night Shade does not activate this ability.",
 	},
 	speedboost: {
 		name: "Speed Boost",
