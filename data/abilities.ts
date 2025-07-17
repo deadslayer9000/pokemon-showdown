@@ -1919,11 +1919,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -67,
 	},
 	exalt: {
-		/*	onStart(target) {
-		if (target.hasType('Dragon')) return false;
-		if (!target.addType('Dragon')) return false;
-		target.add('-start', target, 'typeadd', 'Dragon', 'ability: Exalt');
-		}, */
+		
 		onStart(pokemon) {
 			for (const foe of pokemon.foes()) {
 				if (!foe.hasType("Dragon")) {
