@@ -7621,6 +7621,22 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -37,
 	},
 	usurped: {
+		onStart(pokemon) {
+			if (pokemon.hp >= pokemon.maxhp) {
+				for (const target of pokemon.adjacentFoes()) {
+					if (!target.volatiles["taunt"]) {
+						target.addVolatile("taunt", pokemon);
+						this.add(
+							"-activate",
+							target,
+							"ability: Usurped",
+							"[from] ability: Usurped",
+							"[of] " + pokemon
+						);
+					}
+				}
+			}
+		},
 		flags: {},
 		name: "Usurped",
 		rating: 2.5,
@@ -7642,13 +7658,12 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		onBasePower(basePower, source, target, move) {
 			if (
 				(source === this.effectState.target &&
-				typeof basePower === "number") || 
+					typeof basePower === "number") ||
 				(source.isAlly(this.effectState.target) &&
-				 typeof basePower === "number")
+					typeof basePower === "number")
 			) {
 				return this.chainModify([4915, 4096]);
 			}
-			
 		},
 		flags: {},
 		name: "Valor Heart",
