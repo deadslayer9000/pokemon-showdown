@@ -1310,30 +1310,33 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	darkdecree: {
 		onStart(pokemon) {
 			if (pokemon.side.totalFainted) {
-				this.add("-activate", pokemon, "ability: Retribution");
+				this.add("-activate", pokemon, "ability: Dark Decree");
 				const fallen = Math.min(pokemon.side.totalFainted, 5);
 				this.add("-start", pokemon, `fallen${fallen}`, "[silent]");
 				this.effectState.fallen = fallen;
+				let newability: string;
 				switch (fallen) {
 					case 1:
-						pokemon.setAbility("Defiant");
+						newability = "Defiant";
 						break;
 					case 2:
-						pokemon.setAbility("Mold Breaker");
+						newability = "Mold Breaker";
 						break;
 					case 3:
-						pokemon.setAbility("Sheer Force");
+						newability = "Sheer Force";
 						break;
 					case 4:
-						pokemon.setAbility("Dark Aura");
+						newability = "Dark Aura";
 						break;
 					case 5:
-						pokemon.setAbility("Soul-Heart");
+						newability = "Soul-Heart";
 						break;
 					default:
-						pokemon.setAbility("Pressure");
+						newability = "Pressure";
 						break;
 				}
+				pokemon.setAbility(newability);
+				this.add("-ability", pokemon, newability);
 			}
 		},
 		onEnd(pokemon) {
