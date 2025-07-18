@@ -862,7 +862,7 @@ export class Pokemon {
 
 	ignoringItem() {
 		for (const pokemon of this.battle.getAllActive()) {
-			if (pokemon.ability === ('dawnbreak' as ID) && !pokemon.volatiles['embargo'] && !this.hasAbility('klutz') 
+			if (pokemon.ability === ('dawnbreak' as ID) && !pokemon.volatiles['embargo'] && !this.hasAbility('dawnbreak') 
 				&& !this.battle.field.pseudoWeather['magicroom'] && !this.getItem().isPrimalOrb )
 			return true;
 		}
@@ -2151,6 +2151,11 @@ export class Pokemon {
 			this.battle.add('-activate', this, 'ability: Tera Shell');
 			this.abilityState.resisted = true;
 			return -1;
+		}
+		if (this.hasAbility('Diamond Grove') && !this.battle.suppressingAbility(this)) {
+			if (this.battle.field.isTerrain('grassyterrain')) {
+				if (totalTypeMod > 0) return 0;
+			}
 		}
 		return totalTypeMod;
 	}

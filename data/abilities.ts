@@ -1366,11 +1366,10 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	dawnbreak: {
 		onStart(source) {
-			this.field.addPseudoWeather("magicroom", source);
 			this.add("-ability", source, "Dawnbreak");
 		},
 		onEnd(source) {
-			this.field.removePseudoWeather("magicroom", source);
+			this.add("-end", source, "Dawnbreak");
 		},
 		onModifySpAPriority: 6,
 		onModifySpA(SpA, pokemon) {
@@ -1568,6 +1567,16 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 190,
 	},
 	diamondgrove: {
+		onStart(pokemon) {
+			if(this.field.isTerrain('grassyterrain')) {
+				this.add( '-ability', pokemon, 'ability: Diamond Grove' )
+			}
+		},
+		onTerrainChange(pokemon) {
+			if(this.field.isTerrain('grassyterrain')) {
+				this.add('-ability-', pokemon, 'ability: Diamond Grove' )
+			}
+		},
 		flags: {},
 		name: "Diamond Grove",
 		rating: 4,

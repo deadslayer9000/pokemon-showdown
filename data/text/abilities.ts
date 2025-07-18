@@ -437,8 +437,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		shortDesc: "On switch-in, extremely harsh sunlight begins until this Ability is not active in battle.",
 	},
 	diamondgrove: {
-		name: "Diamond Grove (WIP)",
-		shortDesc: "If Grassy Terrain is active, Super-Effective attacks on this Pokemon become neutral.",
+		name: "Diamond Grove",
+		shortDesc: "If Grassy Terrain is active, Super-effective attacks on this Pokemon become neutral.",
+
+		activate: " [POKEMON]'s weaknesses were patched up by the grassy terrain!",
 	},
 	direambush: {
 		name: "Dire Ambush",
