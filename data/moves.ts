@@ -5644,8 +5644,14 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		name: "Eon Rift",
 		pp: 1,
 		priority: 0,
-		onTry(source) {
-		this.hint("This move isn't fully implemented yet");
+		onAfterMoveSecondarySelf(pokemon, target, move) {
+			if (!target || target.fainted || target.hp <= 0){
+				if (pokemon.getStat('spe', false, true) > pokemon.getStat('spa', false, true)) {
+					this.boost({ spe: 1 }, pokemon, pokemon, move);
+				} else if (pokemon.getStat('spe', false, true) <= pokemon.getStat('spa', false, true)) {
+					this.boost({ spa: 1 }, pokemon, pokemon, move);
+				}
+			}
 		},
 		flags: {},
 		secondary: null,
