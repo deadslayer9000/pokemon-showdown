@@ -1569,12 +1569,12 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	diamondgrove: {
 		onStart(pokemon) {
 			if(this.field.isTerrain('grassyterrain')) {
-				this.add( '-ability', pokemon, 'ability: Diamond Grove' )
+				this.add('-activate', pokemon, 'ability: Diamond Grove' )
 			}
 		},
 		onTerrainChange(pokemon) {
 			if(this.field.isTerrain('grassyterrain')) {
-				this.add('-ability-', pokemon, 'ability: Diamond Grove' )
+				this.add('-activate', pokemon, 'ability: Diamond Grove' )
 			}
 		},
 		flags: {},

@@ -2898,7 +2898,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		onStart(pokemon) {
 			if (pokemon.hasAbility('Hocus Pocus')) {
 				pokemon.addVolatile('illusorysword');
-				pokemon.setItem('');
+				pokemon.eatItem();
 			}
 		},
 		condition: {

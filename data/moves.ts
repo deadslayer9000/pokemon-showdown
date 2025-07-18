@@ -1597,8 +1597,88 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		pp: 10,
 		priority: 0,
 		flags: {},
-		onTry(source) {
-		this.hint("This move isn't fully implemented yet");
+		onTry(pokemon, move) {
+			if(!pokemon.hasItem) return;
+			const item = pokemon.getItem();
+			const chance = Math.random(); //if there's a better way to do this let me know i beg
+			pokemon.eatItem();
+			switch (item.name) {
+				case (''):
+					this.hint('But there was nothing to brew!');
+					break;
+				case ('Leftovers'):
+					this.heal(pokemon.baseMaxhp / 2, move);
+					break;
+				case ('Choice Scarf'):
+					this.boost({spe: 1}, move);
+					break;
+				case ('Choice Band'):
+					this.boost({atk: 1}, move);
+					break;
+				case ('Choice Specs'):
+					this.boost({spa: 1}, move);
+					break;
+				case ('Life Orb'):
+					this.boost({atk: 2, spa: 2}, move);
+					this.damage(pokemon.baseMaxhp / 2, move);
+					break;
+				case ('Air Balloon'):
+					pokemon.setAbility('Levitate');
+					this.add('-ability', pokemon, 'Levitate', '[from] move: Bizzare Elixir');
+					break;
+				case ('Focus Sash'):
+					pokemon.setAbility('Sturdy');
+					this.add('-ability', pokemon, 'Sturdy', '[from] move: Bizzare Elixir');
+					break;
+				case ('Heavy Duty Boots'):
+					pokemon.setAbility('Magic Guard');
+					this.add('-ability', pokemon, 'Magic Guard', '[from] move: Bizzare Elixir');
+					break;
+				case ('Rocky Helmet'):
+					pokemon.setAbility('Rough Skin');
+					this.add('-ability', pokemon, 'Rough Skin', '[from] move: Bizzare Elixir');
+					break;
+				case ('Toxic Orb'):
+					pokemon.setAbility('Poison Heal');
+					this.add('-ability', pokemon, 'Poison Heal', '[from] move: Bizzare Elixir');
+					break;
+				case ('Black Sludge'):
+					this.damage(pokemon.baseMaxhp / 4, move);
+					break;
+				case ("King's Rock"):
+					pokemon.setAbility('Monarch');
+					this.add('-ability', pokemon, 'Monarch', '[from] move: Bizzare Elixir');
+					break;
+				case ('Flame Orb'):
+					pokemon.setAbility('Guts');
+					this.add('-ability', pokemon, 'Guts', '[from] move: Bizzare Elixir');
+					break;
+				case ('Weakness Policy'):
+					pokemon.setAbility('Filter');
+					this.add('-ability', pokemon, 'Filter', '[from] move; Bizzare Elixi');
+					break;
+				case ('Eviolite'):
+					if(pokemon.getStat('def') > pokemon.getStat('spd')) {
+						this.boost({def: 1}, move);
+					} else {
+						this.boost({spd: 1}, move);
+					}
+					break;
+				case ('Booster Energy'):
+					if(chance >= 0.5) {
+						this.field.setWeather('sunnyday');
+					} else {
+						this.field.setTerrain('electricterrain');
+					}
+					break;
+				default:
+					if(chance >= 0.5) {
+						pokemon.addVolatile('confusion');
+					} else {
+						this.boost({atk: 1, spa: 1}, move);
+					}
+					break;
+			}
 		},
 		secondary: null,
 		target: "self",
@@ -5743,18 +5823,21 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		priority: 0,
 		isZ: "Brewlium Z",
 		flags: {},
-		onTry(source) {
-		this.hint("This move isn't fully implemented yet");
-		},
 		boosts: {
 			atk: 1,
 			def: 1,
 			spa: 1,
 			spd: 1,
 			spe: 1,
-		}, //still needs to remove the opponent's item
-		secondary: null,
-		target: "self",
+		}, 
+		onHit(target) {
+		const item = target.takeItem();
+		if(item) {
+			this.add('-enditem', target, item.name, '[from] move: Bizzare Elixir');
+			target.takeItem();
+			}
+		},
+		target: "normal",
 		type: "Psychic",
 	},
 	expandingforce: {
