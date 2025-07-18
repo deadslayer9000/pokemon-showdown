@@ -22002,7 +22002,23 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		onTry(source) {
 		this.hint("This move isn't fully implemented yet");
 		},
-		secondary: null,
+		onAfterMoveSecondarySelf(pokemon, target, move) {
+			if (!target || target.fainted || target.hp <= 0){
+				if ( this.field.isWeather("sunnyday")){
+					this.boost({ spa: 1 }, pokemon, pokemon, move);
+				} else if ( this.field.isTerrain("electricterrain")){
+					this.boost({ spe: 1 }, pokemon, pokemon, move);
+				} else {
+					this.heal(pokemon.baseMaxhp / 10, pokemon, pokemon, move);
+				}
+			}
+		},
+		secondary: {
+			chance: 10,
+			boosts: {
+				spd: -1,
+			},
+		},
 		target: "normal",
 		type: "Dragon",
 	},
