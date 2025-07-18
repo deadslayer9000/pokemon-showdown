@@ -5648,7 +5648,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			if (!target || target.fainted || target.hp <= 0){
 				if (pokemon.getStat('spe', false, true) > pokemon.getStat('spa', false, true)) {
 					this.field.setTerrain('electricterrain');
-					this.add('-terrain', 'ElectricTerrain', '[from] move: Eon Rift');
+					this.add('-fieldactivate', 'ElectricTerrain', '[from] move: Eon Rift');
 				} else if (pokemon.getStat('spe', false, true) <= pokemon.getStat('spa', false, true)) {
 					this.field.setWeather('sunnyday');
 					this.add('-weather', 'SunnyDay', '[from] move: Eon Rift');
