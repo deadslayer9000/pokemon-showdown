@@ -823,7 +823,6 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				!this.field.isTerrain("electricterrain")
 			) {
 				pokemon.removeVolatile("chronocatalyst");
-				this.add("-end", pokemon, "Chrono Catalyst");
 			}
 		},
 		onTerrainChange(pokemon) {
@@ -838,7 +837,6 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				!this.field.isTerrain("electricterrain")
 			) {
 				pokemon.removeVolatile("chronocatalyst");
-				this.add("-end", pokemon, "Chrono Catalyst");
 			}
 		},
 		onEnd(pokemon) {
@@ -860,9 +858,12 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 					this.add("-activate", pokemon, "ability: Chrono Catalyst");
 				}
 				this.effectState.bestStat = pokemon.getBestStat(false, true);
-				this.add("-start", pokemon, "Chrono Catalyst");
+				this.add(
+					"-start",
+					pokemon,
+					"chronocatalyst" + this.effectState.bestStat
+				);
 			},
-
 			onModifyAtkPriority: 5,
 			onModifyAtk(atk, pokemon) {
 				if (
