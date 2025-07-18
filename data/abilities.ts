@@ -811,7 +811,6 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			);
 		},
 		onWeatherChange(pokemon) {
-			// Protosynthesis is not affected by Utility Umbrella
 			if (
 				this.field.isWeather("sunnyday") ||
 				this.field.isTerrain("electricterrain")
@@ -841,7 +840,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		},
 		onEnd(pokemon) {
 			delete pokemon.volatiles["chronocatalyst"];
-			this.add("-end", pokemon, "Chrono Catalyst", "[silent]");
+			this.add("-end", pokemon, "Chrono Catalyst");
 		},
 		condition: {
 			noCopy: true,
