@@ -5648,10 +5648,10 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			if (!target || target.fainted || target.hp <= 0){
 				if (pokemon.getStat('spe', false, true) > pokemon.getStat('spa', false, true)) {
 					this.field.setTerrain('electricterrain');
-					this.hint("Eon Rift's speed summoned Electric Terrain");
+					this.hint("Eon Rift made electric current flow through the battlefield");
 				} else if (pokemon.getStat('spe', false, true) <= pokemon.getStat('spa', false, true)) {
 					this.field.setWeather('sunnyday');
-					this.hint("Eon Rift's speed summoned Electric Terrain");
+					this.hint("Eon Rift turned the sunlight harsh");
 				}
 			}
 		},
