@@ -823,6 +823,8 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				!this.field.isTerrain("electricterrain")
 			) {
 				pokemon.removeVolatile("chronocatalyst");
+				this.add("-end", pokemon, "Chrono Catalyst");
+
 			}
 		},
 		onTerrainChange(pokemon) {
@@ -837,6 +839,8 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				!this.field.isTerrain("electricterrain")
 			) {
 				pokemon.removeVolatile("chronocatalyst");
+				this.add("-end", pokemon, "Chrono Catalyst");
+
 			}
 		},
 		onEnd(pokemon) {
