@@ -795,6 +795,128 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -49,
 	},
 	chronocatalyst: {
+		onSwitchInPriority: -2,
+		onStart(pokemon) {
+			this.singleEvent(
+				"WeatherChange",
+				this.effect,
+				this.effectState,
+				pokemon
+			);
+			this.singleEvent(
+				"TerrainChange",
+				this.effect,
+				this.effectState,
+				pokemon
+			);
+		},
+		onWeatherChange(pokemon) {
+			// Protosynthesis is not affected by Utility Umbrella
+			if (
+				this.field.isWeather("sunnyday") ||
+				this.field.isTerrain("electricterrain")
+			) {
+				pokemon.addVolatile("chronocatalyst");
+			} else if (
+				!pokemon.volatiles["chronocatalyst"]?.fromBooster &&
+				!this.field.isWeather("sunnyday") &&
+				!this.field.isTerrain("electricterrain")
+			) {
+				pokemon.removeVolatile("chronocatalyst");
+			}
+		},
+		onTerrainChange(pokemon) {
+			if (
+				this.field.isWeather("sunnyday") ||
+				this.field.isTerrain("electricterrain")
+			) {
+				pokemon.addVolatile("chronocatalyst");
+			} else if (
+				!pokemon.volatiles["chronocatalyst"]?.fromBooster &&
+				!this.field.isWeather("sunnyday") &&
+				!this.field.isTerrain("electricterrain")
+			) {
+				pokemon.removeVolatile("chronocatalyst");
+			}
+		},
+		onEnd(pokemon) {
+			delete pokemon.volatiles["chronocatalyst"];
+			this.add("-end", pokemon, "Chrono Catalyst", "[silent]");
+		},
+		condition: {
+			noCopy: true,
+			onStart(pokemon, source, effect) {
+				if (effect?.name === "Booster Energy") {
+					this.effectState.fromBooster = true;
+					this.add(
+						"-activate",
+						pokemon,
+						"ability: Chrono Catalyst",
+						"[fromitem]"
+					);
+				} else {
+					this.add("-activate", pokemon, "ability: Chrono Catalyst");
+				}
+				this.effectState.bestStat = pokemon.getBestStat(false, true);
+				this.add(
+					"-start",
+					pokemon,
+					"chronocatalyst" + this.effectState.bestStat
+				);
+			},
+			onModifyAtkPriority: 5,
+			onModifyAtk(atk, pokemon) {
+				if (
+					this.effectState.bestStat !== "atk" ||
+					pokemon.ignoringAbility()
+				)
+					return;
+				this.debug("Chrono Catalyst atk boost");
+				return this.chainModify([5325, 4096]);
+			},
+			onModifyDefPriority: 6,
+			onModifyDef(def, pokemon) {
+				if (
+					this.effectState.bestStat !== "def" ||
+					pokemon.ignoringAbility()
+				)
+					return;
+				this.debug("Chrono Catalyst def boost");
+				return this.chainModify([5325, 4096]);
+			},
+			onModifySpAPriority: 5,
+			onModifySpA(spa, pokemon) {
+				if (
+					this.effectState.bestStat !== "spa" ||
+					pokemon.ignoringAbility()
+				)
+					return;
+				this.debug("Chrono Catalyst spa boost");
+				return this.chainModify([5325, 4096]);
+			},
+			onModifySpDPriority: 6,
+			onModifySpD(spd, pokemon) {
+				if (
+					this.effectState.bestStat !== "spd" ||
+					pokemon.ignoringAbility()
+				)
+					return;
+				this.debug("Chrono Catalyst spd boost");
+				return this.chainModify([5325, 4096]);
+			},
+			onModifySpe(spe, pokemon) {
+				if (
+					this.effectState.bestStat !== "spe" ||
+					pokemon.ignoringAbility()
+				)
+					return;
+				this.debug("Chrono Catalyst spe boost");
+				return this.chainModify(1.5);
+			},
+			onEnd(pokemon) {
+				this.add("-end", pokemon, "Chrono Catalyst");
+			},
+		},
 		flags: {
 			failroleplay: 1,
 			noreceiver: 1,
@@ -1568,13 +1690,13 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	diamondgrove: {
 		onStart(pokemon) {
-			if(this.field.isTerrain('grassyterrain')) {
-				this.add( '-ability', pokemon, 'ability: Diamond Grove' )
+			if (this.field.isTerrain("grassyterrain")) {
+				this.add("-ability", pokemon, "ability: Diamond Grove");
 			}
 		},
 		onTerrainChange(pokemon) {
-			if(this.field.isTerrain('grassyterrain')) {
-				this.add('-ability-', pokemon, 'ability: Diamond Grove' )
+			if (this.field.isTerrain("grassyterrain")) {
+				this.add("-ability-", pokemon, "ability: Diamond Grove");
 			}
 		},
 		flags: {},
