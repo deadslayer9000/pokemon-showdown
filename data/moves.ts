@@ -22003,19 +22003,20 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			if (!target || target.fainted || target.hp <= 0){
 				if ( this.field.isWeather("sunnyday") && this.field.isTerrain("electricterrain")){
 					this.boost({ spa: 1, spe: 1 }, pokemon, pokemon, move);
-					this.add('-activate', pokemon, 'move: Timeless Torrent', "[inSunandElectric]");
-					//this.hint(`Timeless Torrent absorbed the power and speed of the opposing ${target.name}`);
+					//this.add('-activate', pokemon, 'move: Timeless Torrent', "[inSunandElectric]");
+					this.hint("Timeless Torrent absorbed the Power and Speed of its fallen target!");
 				} else if ( this.field.isWeather("sunnyday")){
 					this.boost({ spa: 1 }, pokemon, pokemon, move);
-					this.add('-activate', pokemon, 'move: Timeless Torrent', "[inSun]");
-					//this.hint(`Timeless Torrent absorbed the power and speed of the opposing ${target.name}`);
+					//this.add('-activate', pokemon, 'move: Timeless Torrent', "[inSun]");
+					this.hint("Timeless Torrent absorbed the Power of its fallen target");
 				} else if ( this.field.isTerrain("electricterrain")){
 					this.boost({ spe: 1 }, pokemon, pokemon, move);
-					this.add('-activate', pokemon, 'move: Timeless Torrent', "[inElectricterrain]");
-					//this.hint(`Timeless Torrent absorbed the power and speed of the opposing ${target.name}`);
+					//this.add('-activate', pokemon, 'move: Timeless Torrent', "[inElectricterrain]");
+					this.hint("Timeless Torrent absorbed the Speed of its fallen target");
 				} else {
 					this.heal(pokemon.baseMaxhp / 10, pokemon, pokemon, move);
-					this.add('-activate', pokemon, 'move: Timeless Torrent');
+					this.hint('Timeless Torrent absorbed the Health of its fallen target!');
+					//this.add('-activate', pokemon, 'move: Timeless Torrent');
 				}
 			}
 		},
