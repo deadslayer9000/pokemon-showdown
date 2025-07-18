@@ -636,6 +636,9 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			if (pokemon.hasAbility('quarkdrive') && !this.field.isTerrain('electricterrain') && pokemon.useItem()) {
 				pokemon.addVolatile('quarkdrive');
 			}
+			if (pokemon.hasAbility('chronocatalyst') && !(this.field.isTerrain('electricterrain') || this.field.isWeather('sunnyday')) && pokemon.useItem()) {
+				pokemon.addVolatile('chronocatalyst');
+			}
 		},
 		onTakeItem(item, source) {
 			if (source.baseSpecies.tags.includes("Paradox")) return false;
