@@ -247,6 +247,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	chronocatalyst: {
 		name: "Chrono Catalyst",
 		shortDesc: "If Sunny Day, E. Terrain, or Booster Energy active: highest stat 1.3x, 1.5x if Speed.",
+		activate: "  The battlefield conditions activated [POKEMON]'s Chrono Catalyst!",
+		activateFromItem: "  [POKEMON] used its Booster Energy to activate Chrono Catalyst!",
+		start: "  [POKEMON]'s [STAT] was heightened!",
+		end: "  The effects of [POKEMON]'s Chrono Catalyst wore off!",
 	},
 	clearbody: {
 		name: "Clear Body",
@@ -437,8 +441,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		shortDesc: "On switch-in, extremely harsh sunlight begins until this Ability is not active in battle.",
 	},
 	diamondgrove: {
-		name: "Diamond Grove (WIP)",
-		shortDesc: "If Grassy Terrain is active, Super-Effective attacks on this Pokemon become neutral.",
+		name: "Diamond Grove",
+		shortDesc: "If Grassy Terrain is active, Super-effective attacks on this Pokemon become neutral.",
+
+		activate: " [POKEMON]'s weaknesses were patched up by the grassy terrain!",
 	},
 	direambush: {
 		name: "Dire Ambush",
