@@ -1308,6 +1308,46 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 186,
 	},
 	darkdecree: {
+		onStart(pokemon) {
+			this.add("-activate", pokemon, "ability: Dark Decree");
+			const fallen = Math.min(pokemon.side.totalFainted, 5);
+			this.add("-start", pokemon, `fallen${fallen}`, "[silent]");
+			this.effectState.fallen = fallen;
+			let newability: string;
+			switch (fallen) {
+				case 0:
+					newability = "Pressure";
+					break;
+				case 1:
+					newability = "Defiant";
+					break;
+				case 2:
+					newability = "Mold Breaker";
+					break;
+				case 3:
+					newability = "Sheer Force";
+					break;
+				case 4:
+					newability = "Dark Aura";
+					break;
+				case 5:
+					newability = "Soul-Heart";
+					break;
+				default:
+					newability = "Pressure";
+					break;
+			}
+			pokemon.setAbility(newability);
+			this.add("-ability", pokemon, newability);
+		},
+		onEnd(pokemon) {
+			this.add(
+				"-end",
+				pokemon,
+				`fallen${this.effectState.fallen}`,
+				"[silent]"
+			);
+		},
 		flags: {},
 		name: "Dark Decree",
 		rating: 4,
@@ -1325,6 +1365,22 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 235,
 	},
 	dawnbreak: {
+		onStart(source) {
+			this.field.addPseudoWeather("magicroom", source);
+			this.add("-ability", source, "Dawnbreak");
+		},
+		onEnd(source) {
+			this.field.removePseudoWeather("magicroom", source);
+		},
+		onModifySpAPriority: 6,
+		onModifySpA(SpA, pokemon) {
+			for (const ally of pokemon.adjacentAllies()) {
+				if (ally.hasAbility("Moonwake")) {
+					this.add("-ability", pokemon, "Moonwake", "boost");
+					return this.chainModify(1.5);
+				}
+			}
+		},
 		flags: {},
 		name: "Dawnbreak",
 		rating: 2,
@@ -1368,11 +1424,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	deathdefiance: {
 		onDamagePriority: -41, ///snipes focus sash priority so this goes after it
 		onDamage(damage, target, source, effect) {
-			if (
-				damage >= target.hp &&
-				effect &&
-				effect.effectType === "Move"
-			) {
+			if (damage >= target.hp && effect && effect.effectType === "Move") {
 				if (target.deathdefiance) return;
 				target.deathdefiance = true;
 				this.add("-ability", target, "Death Defiance");
@@ -3744,12 +3796,17 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	marvel: {
 		onModifyMove(move, pokemon) {
 			if (!pokemon.abilityState.marvelUsed) {
-				move.willCrit = true;
-				this.add("-activate", pokemon, "ability: Marvel");
-				pokemon.abilityState.marvelUsed = true;
+				if (move.category === "Special") {
+					move.willCrit = true;
+					this.add("-activate", pokemon, "ability: Marvel");
+					pokemon.abilityState.marvelUsed = true;
+				}
 			}
-			
 		},
+		onSwitchIn(pokemon) {
+			pokemon.abilityState.marvelUsed = false;
+		},
+
 		flags: {},
 		name: "Marvel",
 		rating: 4,
@@ -4006,6 +4063,21 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 141,
 	},
 	moonwake: {
+		onStart(pokemon) {
+			this.add("-ability", pokemon, "Moonwake");
+		},
+		onModifyMove(move) {
+			move.ignoreAbility = true;
+		},
+		onModifySpDPriority: 6,
+		onModifySpD(spd, pokemon) {
+			for (const ally of pokemon.adjacentAllies()) {
+				if (ally.hasAbility("Dawnbreak")) {
+					this.add("-ability", pokemon, "Moonwake", "boost");
+					return this.chainModify(1.5);
+				}
+			}
+		},
 		flags: {},
 		name: "Moonwake",
 		rating: 2,
@@ -4363,11 +4435,19 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -99,
 	},
 	noblesse: {
+		onBasePowerPriority: 7,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.type === "Water" && this.field.weather === "sunnyday") {
+				this.add("-activate", attacker, "ability: Noblesse");
+				return this.chainModify(8192, 4096);
+			}
+		},
 		flags: {},
 		name: "Noblesse",
 		rating: 2,
 		num: -15,
 	},
+
 	noguard: {
 		onAnyInvulnerabilityPriority: 1,
 		onAnyInvulnerability(target, source, move) {
@@ -5304,6 +5384,11 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 281,
 	},
 	prowler: {
+		onSourceAfterFaint(pokemon, target, source, effect) {
+			if (effect && effect.effectType === "Move") {
+				this.heal(Math.round(source.baseMaxhp / 3), source);
+			}
+		},
 		flags: {},
 		name: "Prowler",
 		rating: 2.5,
