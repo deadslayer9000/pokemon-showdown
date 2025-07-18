@@ -22004,7 +22004,9 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		},
 		onAfterMoveSecondarySelf(pokemon, target, move) {
 			if (!target || target.fainted || target.hp <= 0){
-				if ( this.field.isWeather("sunnyday")){
+				if ( this.field.isWeather("sunnyday") && this.field.isTerrain("electricterrain")){
+					this.boost({ spa: 1, spe: 1 }, pokemon, pokemon, move);
+				} else if ( this.field.isWeather("sunnyday")){
 					this.boost({ spa: 1 }, pokemon, pokemon, move);
 				} else if ( this.field.isTerrain("electricterrain")){
 					this.boost({ spe: 1 }, pokemon, pokemon, move);
