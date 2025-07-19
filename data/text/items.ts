@@ -859,8 +859,8 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Heracronite",
 		shortDesc: "If held by a Heracross, this item allows it to Mega Evolve in battle.",
 	},
-	hisuizoroarkite: {
-		name: "Hisuizoroarkite",
+	hisuianzoroarkanite: {
+		name: "Hisuian Zoroarkanite",
 		shortDesc: "If held by a Zoroark-Hisui, this item allows it to Mega Evolve in battle.",
 	},
 	hondewberry: {
