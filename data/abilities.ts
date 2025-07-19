@@ -1264,6 +1264,27 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 238,
 	},
 	covenant: {
+		onStart(pokemon) {
+		if (pokemon.hp > pokemon.maxhp / 2) {
+			this.add("-ability", pokemon, "Covenant");
+		}
+		},
+		onModifyAtk(atk, pokemon) {
+		if (pokemon.hp > pokemon.maxhp / 2) {
+			return this.chainModify(0.5);
+		}
+		},
+		onModifySpe(spe, pokemon) {
+		if (pokemon.hp > pokemon.maxhp / 2) {
+			return this.chainModify(0.5);
+		}
+		},
+		onResidual(pokemon) {
+		if (pokemon.hp <= pokemon.maxhp / 2 && pokemon.getAbility().id === 'covenant') {
+			this.add("-ability", pokemon, "Huge Power");
+			pokemon.setAbility("hugepower");
+		}
+	},
 		flags: {},
 		name: "Covenant",
 		rating: 0,
@@ -2223,6 +2244,26 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 111,
 	},
 	finalverdict: {
+		onModifyDamage(damage, pokemon, target, move) {
+			if (move.category === "Special" && move.type === "Psychic") {
+				this.add("-activate", pokemon, "ability: Final Verdict");
+				return this.chainModify(1.5);
+			} else if (move.category === "Physical" && move.type === "Ghost") {
+				this.add("-activate", pokemon, "ability: Final Verdict");
+				return this.chainModify(1.5);
+			}
+		},
+		onResidual(pokemon, source, effect) {
+			const possibleTargets = pokemon.adjacentFoes();
+			if (!possibleTargets.length) return;
+
+			const target = this.sample(possibleTargets);
+			if (target.hp < target.maxhp / 10) {
+				target.faint();
+				this.add("-ability", pokemon, "Final Verdict");
+			}
+		},
+		
 		flags: {},
 		name: "Final Verdict",
 		rating: 3,
@@ -6341,6 +6382,18 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 23,
 	},
 	shapeshift: {
+		onAfterMove(source, target, move) {
+			if (move.id === "bittermalice" && target && !target.fainted && !source.transformed) {
+				source.transformInto(target);
+				this.add("-activate", source, "ability: Shapeshift");
+				this.add('-message', `${source.name} transformed into ${target.name} thanks to Shapeshift!`);
+
+				const targetsability = target.getAbility().name;
+				this.add("-ability", source, targetsability);
+			} else {
+				this.add("-message", `${source.name} failed to shapeshift into ${target.name}.`);
+			}
+		},
 		flags: {},
 		name: "Shapeshift",
 		rating: 0,

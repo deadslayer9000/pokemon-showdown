@@ -7296,6 +7296,12 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	timelesstorrent: {
 		name: "Timeless Torrent",
 		shortDesc: "10% for -SpD. On KO, effect depends on field.",
+		/*
+		activate: " Timeless Torrent absorbed the Health of its fallen target!",
+		activateInSun: " Timeless Torrent absorbed the Power of its fallen target",
+		activateInElectricterrain: " Timeless Torrent absorbed the Speed of its fallen target",
+		activateInSunandElectricterrain: " Timeless Torrent absorbed the Power and Speed of its fallen target",
+		*/
 	},
 	tidaltrance: {
 		name: "Tidal Trance",
@@ -7391,7 +7397,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	tribeam: {
 		name: "Tri Beam",
-		shortDesc: "Is Fire/Ice/Electric based on effectiveness.",
+		shortDesc: "This move will change its type between Fire, Ice, and Electric to maximize the damage.",
 	},
 	trick: {
 		name: "Trick",
