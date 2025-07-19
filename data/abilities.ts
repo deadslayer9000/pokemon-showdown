@@ -2220,6 +2220,15 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 111,
 	},
 	finalverdict: {
+		onModifyDamage(damage, pokemon, target, move) {
+			if (move.category === "Special" && move.type === "Psychic") {
+				this.add("-activate", pokemon, "ability: Final Verdict");
+				return this.chainModify(1.5);
+			} else if (move.category === "Physical" && move.type === "Ghost") {
+				this.add("-activate", pokemon, "ability: Final Verdict");
+				return this.chainModify(1.5);
+			}
+		},
 		flags: {},
 		name: "Final Verdict",
 		rating: 3,

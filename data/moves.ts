@@ -22016,11 +22016,11 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 				} else if ( this.field.isWeather("sunnyday")){
 					this.boost({ spa: 1 }, pokemon, pokemon, move);
 					//this.add('-activate', pokemon, 'move: Timeless Torrent', "[inSun]");
-					this.hint("Timeless Torrent absorbed the Power of its fallen target");
+					this.hint("Timeless Torrent absorbed the Power of its fallen target!");
 				} else if ( this.field.isTerrain("electricterrain")){
 					this.boost({ spe: 1 }, pokemon, pokemon, move);
 					//this.add('-activate', pokemon, 'move: Timeless Torrent', "[inElectricterrain]");
-					this.hint("Timeless Torrent absorbed the Speed of its fallen target");
+					this.hint("Timeless Torrent absorbed the Speed of its fallen target!");
 				} else {
 					this.heal(pokemon.baseMaxhp / 10, pokemon, pokemon, move);
 					this.hint('Timeless Torrent absorbed the Health of its fallen target!');
