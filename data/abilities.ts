@@ -6378,7 +6378,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 23,
 	},
 	shapeshift: {
-		onTryHit(source, target, move) {
+		onAfterMove(source, target, move) {
 			if (move.id === "bittermalice") {
 				source.transformInto(target);
 				this.add("-activate", source, "ability: Shapeshift");
