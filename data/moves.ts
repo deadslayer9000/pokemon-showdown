@@ -23557,15 +23557,32 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 	whiteout: {
 		num: -43,
 		accuracy: 100,
-		basePower: 1.20,
+		basePower: 120,
 		category: "Special",
 		name: "Whiteout",
 		pp: 10,
 		priority: 0,
-		onTry(source) {
-		this.hint("This move isn't fully implemented yet and has been nerfed to prevent abuse");
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (this.field.weather !== "" && this.field.weather !== 'snowscape'){
+				this.field.setWeather('snowscape');
+				this.add('-weather', 'Snowscape', '[from] move: Whiteout');
+				this.attrLastMove('[still]');
+				this.addMove('-anim', attacker, move.name, defender);
+				return;
+			}
+				
+			
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: { charge: 1, protect: 1, mirror: 1 },
 		secondary: null,
 		target: "normal",
 		type: "Ice",
