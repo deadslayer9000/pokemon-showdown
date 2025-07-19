@@ -6382,7 +6382,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			if (move.id === "bittermalice") {
 				source.transformInto(target);
 				this.add("-activate", source, "ability: Shapeshift");
-				let targetsability = target.ability;
+				let targetsability = target.getAbility().name;
 				this.add("-ability", target, targetsability);
 			}
 		},
