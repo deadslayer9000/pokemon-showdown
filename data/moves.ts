@@ -5877,24 +5877,25 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		priority: 0,
 		isZ: "Brewlium Z",
 		flags: {},
+		self: {
 		boosts: {
 			atk: 1,
 			def: 1,
 			spa: 1,
 			spd: 1,
 			spe: 1,
-		}, 
+			}, 
+		},
 		onHit(pokemon) {
 			pokemon.eatItem();
 		},
-		/*onAfterHit(pokemon, source, move) {
-			this.effectState.seek = true;
+		onAfterHit(pokemon, source, move) {
 			const item = pokemon.takeItem();
 			if (item) {
-				this.add('-enditem', , item.name, '[from] move: Knock Off', `[of] ${source}`);
+				this.add('-enditem', item.name, '[from] move: Knock Off', `[of] ${source}`);
 			}
-		},*/
-		target: "self",
+		},
+		target: "normal",
 		type: "Psychic",
 	},
 	expandingforce: {
