@@ -1281,7 +1281,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		},
 		onResidual(pokemon) {
 		if (pokemon.hp <= pokemon.maxhp / 2 && pokemon.getAbility().id === 'covenant') {
-			this.add("-activate", pokemon, "ability: Covenant", "[transformed into Huge Power]");
+			this.add("-ability", pokemon, "Huge Power");
 			pokemon.setAbility("hugepower");
 		}
 	},
