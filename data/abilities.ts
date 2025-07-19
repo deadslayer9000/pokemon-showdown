@@ -1201,6 +1201,9 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 212,
 	},
 	corrosivesurge: {
+		onStart(source) {
+			this.field.setTerrain("corrosiveterrain")
+		},
 		flags: {},
 		name: "Corrosive Surge",
 		rating: 3,

@@ -3512,13 +3512,16 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 					&& pokemon.isGrounded() 
 					&& type != 'Poison' 
 					&& type != 'Steel' 
-					&& !pokemon.isSemiInvulnerable()
-					&& !pokemon.hasAbility('toxicboost')
-					&& !pokemon.hasAbility('magicguard')
-					&& !pokemon.hasAbility('poisonheal')
-					&& !pokemon.hasAbility('immunity')
-					&& !pokemon.hasAbility('pastelveil')
-					&& !pokemon.hasAbility('wonderguard')) {
+					&& !pokemon.isSemiInvulnerable()) {
+						if(pokemon.hasAbility('toxicboost') ||
+							pokemon.hasAbility('poisonheal') ||
+						  	pokemon.hasAbility('magicguard') ||
+						   pokemon.hasAbility('immunity') ||
+						   pokemon.hasAbility('pastelveil') ||
+						   pokemon.hasAbility('wonderguard')) {
+							this.debug(`Pokemon semi-invuln, immune, or not grounded; Corrosive Terrain skipped`);
+							return;
+						}
 					this.damage(pokemon.baseMaxhp / 16, pokemon, pokemon);
 				} else {
 					this.debug(`Pokemon semi-invuln, immune, or not grounded; Corrosive Terrain skipped`);
