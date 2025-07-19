@@ -1597,8 +1597,88 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		pp: 10,
 		priority: 0,
 		flags: {},
-		onTry(source) {
-		this.hint("This move isn't fully implemented yet");
+		onTry(pokemon, move) {
+			if(!pokemon.hasItem) return;
+			const item = pokemon.getItem();
+			const chance = Math.random(); //if there's a better way to do this let me know i beg
+			pokemon.eatItem();
+			switch (item.name) {
+				case (''):
+					this.hint('But there was nothing to brew!');
+					break;
+				case ('Leftovers'):
+					this.heal(pokemon.baseMaxhp / 2, move);
+					break;
+				case ('Choice Scarf'):
+					this.boost({spe: 1}, move);
+					break;
+				case ('Choice Band'):
+					this.boost({atk: 1}, move);
+					break;
+				case ('Choice Specs'):
+					this.boost({spa: 1}, move);
+					break;
+				case ('Life Orb'):
+					this.boost({atk: 2, spa: 2}, move);
+					this.damage(pokemon.baseMaxhp / 2, move);
+					break;
+				case ('Air Balloon'):
+					pokemon.setAbility('Levitate');
+					this.add('-ability', pokemon, 'Levitate', '[from] move: Bizzare Elixir');
+					break;
+				case ('Focus Sash'):
+					pokemon.setAbility('Sturdy');
+					this.add('-ability', pokemon, 'Sturdy', '[from] move: Bizzare Elixir');
+					break;
+				case ('Heavy Duty Boots'):
+					pokemon.setAbility('Magic Guard');
+					this.add('-ability', pokemon, 'Magic Guard', '[from] move: Bizzare Elixir');
+					break;
+				case ('Rocky Helmet'):
+					pokemon.setAbility('Rough Skin');
+					this.add('-ability', pokemon, 'Rough Skin', '[from] move: Bizzare Elixir');
+					break;
+				case ('Toxic Orb'):
+					pokemon.setAbility('Poison Heal');
+					this.add('-ability', pokemon, 'Poison Heal', '[from] move: Bizzare Elixir');
+					break;
+				case ('Black Sludge'):
+					this.damage(pokemon.baseMaxhp / 4, move);
+					break;
+				case ("King's Rock"):
+					pokemon.setAbility('Monarch');
+					this.add('-ability', pokemon, 'Monarch', '[from] move: Bizzare Elixir');
+					break;
+				case ('Flame Orb'):
+					pokemon.setAbility('Guts');
+					this.add('-ability', pokemon, 'Guts', '[from] move: Bizzare Elixir');
+					break;
+				case ('Weakness Policy'):
+					pokemon.setAbility('Filter');
+					this.add('-ability', pokemon, 'Filter', '[from] move; Bizzare Elixi');
+					break;
+				case ('Eviolite'):
+					if(pokemon.getStat('def') > pokemon.getStat('spd')) {
+						this.boost({def: 1}, move);
+					} else {
+						this.boost({spd: 1}, move);
+					}
+					break;
+				case ('Booster Energy'):
+					if(chance >= 0.5) {
+						this.field.setWeather('sunnyday');
+					} else {
+						this.field.setTerrain('electricterrain');
+					}
+					break;
+				default:
+					if(chance >= 0.5) {
+						pokemon.addVolatile('confusion');
+					} else {
+						this.boost({atk: 1, spa: 1}, move);
+					}
+					break;
+			}
 		},
 		secondary: null,
 		target: "self",
@@ -2465,6 +2545,8 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 				newType = 'Fairy';
 			} else if (this.field.isTerrain('psychicterrain')) {
 				newType = 'Psychic';
+			} else if (this.field.isTerrain('corrosiveterrain')) {
+				newType = 'Poison';
 			}
 
 			if (target.getTypes().join() === newType || !target.setType(newType)) return false;
@@ -3395,10 +3477,62 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		name: "Corrosive Terrain",
 		pp: 10,
 		priority: 0,
-		onTry(source) {
-		this.hint("This terrain isn't fully implemented yet");
-		},
 		flags: { nonsky: 1, metronome: 1 },
+		terrain: 'corrosiveterrain',
+		condition: {
+			effectType: 'Terrain',
+			duration: 5,
+			durationCallback(source, effect) {
+				if (source?.hasItem('terrainextender')) {
+					return 8;
+				}
+				return 5;
+			},
+			onBasePowerPriority: 6,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Steel' && defender.isGrounded() && !defender.isSemiInvulnerable()) {
+					this.debug('corrosive terrain weaken');
+					return this.chainModify(0.5);
+				}
+			},
+			onFieldStart(field, source, effect) {
+				if (effect?.effectType === 'Ability') {
+					this.add('-fieldstart', 'move: Corrosive Terrain', '[from] ability: ' + effect.name, `[of] ${source}`);
+				} else {
+					this.add('-fieldstart', 'move: Corrosive Terrain');
+				}
+			},
+			onResidualOrder: 5,
+			onResidualSubOrder: 2,
+			onResidual(pokemon) {
+				const types = pokemon.getTypes();
+				let type = types[0];
+				if (pokemon.status 
+					|| pokemon.hasAbility('comatose')
+					&& pokemon.isGrounded() 
+					&& type != 'Poison' 
+					&& type != 'Steel' 
+					&& !pokemon.isSemiInvulnerable()) {
+						if(pokemon.hasAbility('toxicboost') ||
+							pokemon.hasAbility('poisonheal') ||
+						  	pokemon.hasAbility('magicguard') ||
+						   pokemon.hasAbility('immunity') ||
+						   pokemon.hasAbility('pastelveil') ||
+						   pokemon.hasAbility('wonderguard')) {
+							this.debug(`Pokemon semi-invuln, immune, or not grounded; Corrosive Terrain skipped`);
+							return;
+						}
+					this.damage(pokemon.baseMaxhp / 16, pokemon, pokemon);
+				} else {
+					this.debug(`Pokemon semi-invuln, immune, or not grounded; Corrosive Terrain skipped`);
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 7,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Corrosive Terrain');
+			},
+		},
 		secondary: null,
 		target: "all",
 		type: "Poison",
@@ -5751,18 +5885,28 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		priority: 0,
 		isZ: "Brewlium Z",
 		flags: {},
-		onTry(source) {
-		this.hint("This move isn't fully implemented yet");
+		onHit(target, source) {
+			if (source.hp) {
+				const item = target.takeItem();
+				if (item) {
+					this.add('-enditem', target, item.name, '[from] move: Exalted Potion', `[of] ${source}`);
+				}
+			}
 		},
+		self: {
+			onHit(pokemon) {
+				pokemon.setItem('');
+				this.hint('Brewlium Z consumed.');
+			},
 		boosts: {
 			atk: 1,
 			def: 1,
 			spa: 1,
 			spd: 1,
 			spe: 1,
-		}, //still needs to remove the opponent's item
-		secondary: null,
-		target: "self",
+			}, 
+		},
+		target: "normal",
 		type: "Psychic",
 	},
 	expandingforce: {
@@ -10940,7 +11084,11 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			},
 			onResidualOrder: 7,
 			onResidual(pokemon) {
+				if(this.field.isTerrain('corrosiveterrain')){
+					this.damage(pokemon.baseMaxhp / 16);
+				} else {
 				this.heal(pokemon.baseMaxhp / 16);
+				}
 			},
 			onTrapPokemon(pokemon) {
 				pokemon.tryTrap();
@@ -14146,6 +14294,8 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 				move = 'moonblast';
 			} else if (this.field.isTerrain('psychicterrain')) {
 				move = 'psychic';
+			} else if (this.field.isTerrain('corrosiveterrain')) {
+				move = 'sludgewave';
 			}
 			this.actions.useMove(move, pokemon, { target });
 			return null;
@@ -17921,6 +18071,11 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 						spe: -1,
 					},
 				});
+			} else if (this.field.isTerrain('corrosiveterrain')) {
+				move.secondaries.push({
+					chance: 30,
+					status: 'psn',
+				});
 			}
 		},
 		secondary: {
@@ -21364,8 +21519,9 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		name: "Techno Beam",
 		pp: 5,
 		priority: 0,
-		onTry(source) {
-		this.hint("This move isn't fully implemented yet");
+		onModifyType(move, pokemon) {
+			if (pokemon.ignoringItem() || pokemon.hasItem('burndrive', 'dowsedrive', 'chilldrive', 'shockdrive')) return;
+			move.type = this.runEvent('Drive', pokemon, null, move, 'Normal');
 		},
 		flags: { protect: 1, mirror: 1 },
 		secondary: null,
@@ -21383,7 +21539,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		priority: 0,
 		flags: { protect: 1, mirror: 1 },
 		onModifyType(move, pokemon) {
-			if (pokemon.ignoringItem()) return;
+			if (pokemon.ignoringItem() || pokemon.hasItem('dreaddrive', 'pixiedrive', 'minddrive', 'thrashdrive')) return;
 			move.type = this.runEvent('Drive', pokemon, null, move, 'Normal');
 		},
 		secondary: null,
@@ -21602,6 +21758,9 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 				break;
 			case 'psychicterrain':
 				move.type = 'Psychic';
+				break;
+			case 'corrosiveterrain':
+				move.type = 'Poison';
 				break;
 			}
 		},
@@ -22896,7 +23055,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
 		onBasePower(basePower, pokemon, target) {
-			if (target.status === 'psn' || target.status === 'tox') {
+			if (target.status === 'psn' || target.status === 'tox' || this.field.isTerrain('corrosiveterrain')) {
 				return this.chainModify(2);
 			}
 		},
@@ -23360,7 +23519,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			if (source.hp) {
 				const item = target.takeItem();
 				if (item) {
-					this.add('-enditem', target, item.name, '[from] move: Knock Off', `[of] ${source}`);
+					this.add('-enditem', target, item.name, '[from] move: Whisk Away', `[of] ${source}`);
 				}
 			}
 		},
