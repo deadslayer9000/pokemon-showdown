@@ -18722,7 +18722,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			this.actions.useMove(move.id, target);
 			this.add('-activate', target, 'move: Simulate', move.name);
 			this.field.setTerrain('electricterrain', target); 
-			let success = false;
+			//let success = false;
 			const allies = [...target.side.pokemon, ...target.side.allySide?.pokemon || []];
 			for (const ally of allies) {
 				if (ally !== source && !this.suppressingAbility(ally)) {
@@ -18732,9 +18732,11 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 					}
 					if (ally.volatiles['substitute'] && !move.infiltrates) continue;
 				}
-				if (ally.cureStatus()) success = true;
+				//if (
+					ally.cureStatus()
+				//) success = true;
 			}
-			return success;
+			//return success;
 		},
 		callsMove: true,
 		target: "normal",
