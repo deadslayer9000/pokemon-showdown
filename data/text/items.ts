@@ -318,8 +318,8 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 	},
 	corrosiveseed: {
 		name: "Corrosive Seed:",
-		shortDesc: "If the Terrain is Corrosive Terrain"
-	}
+		shortDesc: "If the Terrain is Corrosive Terrain",
+	},
 	coverfossil: {
 		name: "Cover Fossil",
 		shortDesc: "Can be revived into Tirtouga.",
@@ -859,8 +859,8 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Heracronite",
 		shortDesc: "If held by a Heracross, this item allows it to Mega Evolve in battle.",
 	},
-	hisuizoroarkite: {
-		name: "Hisuizoroarkite",
+	hisuianzoroarkanite: {
+		name: "Hisuian Zoroarkanite",
 		shortDesc: "If held by a Zoroark-Hisui, this item allows it to Mega Evolve in battle.",
 	},
 	hondewberry: {
