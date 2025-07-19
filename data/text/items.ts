@@ -70,6 +70,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Ampharosite",
 		shortDesc: "If held by an Ampharos, this item allows it to Mega Evolve in battle.",
 	},
+	ancientgeniumz: {
+		name: "Ancientgenium Z",
+		shortDesc: "If held by an Ancient Gene with Psystrike, it can use Rebirth.",
+	},
 	apicotberry: {
 		name: "Apicot Berry",
 		shortDesc: "Raises holder's Sp. Def by 1 stage when at 1/4 max HP or less. Single use.",
@@ -184,6 +188,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 	bottlecap: {
 		name: "Bottle Cap",
 		shortDesc: "Used for Hyper Training. One of a Pokemon's stats is calculated with an IV of 31.",
+	},
+	brewliumz: {
+		name: "Brewlium Z",
+		shortDesc: "If held by a Brewloom with Bizzare Elixir, it can use Exalted Potion.",
 	},
 	brightpowder: {
 		name: "Bright Powder",
@@ -308,6 +316,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Cornn Berry",
 		shortDesc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",
 	},
+	corrosiveseed: {
+		name: "Corrosive Seed:",
+		shortDesc: "If the Terrain is Corrosive Terrain"
+	}
 	coverfossil: {
 		name: "Cover Fossil",
 		shortDesc: "Can be revived into Tirtouga.",
@@ -354,6 +366,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 	decidiumz: {
 		name: "Decidium Z",
 		shortDesc: "If held by a Decidueye with Spirit Shackle, it can use Sinister Arrow Raid.",
+	},
+	deltacharizardite: {
+		name: "Delta Charizardite",
+		shortDesc: "If held by a Delta-Charizard, this item allows it to Mega Evolve in battle.",
 	},
 	deepseascale: {
 		name: "Deep Sea Scale",

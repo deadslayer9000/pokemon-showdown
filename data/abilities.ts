@@ -1201,6 +1201,9 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 212,
 	},
 	corrosivesurge: {
+		onStart(source) {
+			this.field.setTerrain("corrosiveterrain")
+		},
 		flags: {},
 		name: "Corrosive Surge",
 		rating: 3,
@@ -1689,13 +1692,13 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	diamondgrove: {
 		onStart(pokemon) {
-			if (this.field.isTerrain("grassyterrain")) {
-				this.add("-ability", pokemon, "ability: Diamond Grove");
+			if(this.field.isTerrain('grassyterrain')) {
+				this.add('-activate', pokemon, 'ability: Diamond Grove' )
 			}
 		},
 		onTerrainChange(pokemon) {
-			if (this.field.isTerrain("grassyterrain")) {
-				this.add("-ability-", pokemon, "ability: Diamond Grove");
+			if(this.field.isTerrain('grassyterrain')) {
+				this.add('-activate', pokemon, 'ability: Diamond Grove' )
 			}
 		},
 		flags: {},
@@ -3054,13 +3057,6 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				return -9;
 			}
 		},
-		/*onStart(pokemon) {
-				if (pokemon.volatiles['boosterenergy']) {
-					this.hint("hello! :D");
-					this.add("-activate", pokemon, "ability: Hocus Pocus", "[fromitem]");
-					this.field.addPseudoWeather('gravity');
-				}
-			},*/
 		flags: {},
 		name: "Hocus Pocus",
 		rating: 5,
@@ -3968,7 +3964,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	merciless: {
 		onModifyCritRatio(critRatio, source, target) {
-			if (target && ["psn", "tox"].includes(target.status)) return 5;
+			if (target && ["psn", "tox"].includes(target.status) || this.field.isTerrain('corrosiveterrain')) return 5;
 		},
 		flags: {},
 		name: "Merciless",
@@ -3999,6 +3995,9 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 					break;
 				case "psychicterrain":
 					types = ["Psychic"];
+					break;
+				case "corrosiveterrain":
+					types = ["Poison"];
 					break;
 				default:
 					types = pokemon.baseSpecies.types;
@@ -5122,6 +5121,11 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				return false;
 			}
 		},
+		onResidual(pokemon) {
+			if (this.field.isTerrain('corrosiveterrain')) {
+				this.heal(pokemon.baseMaxhp / 6);
+			}
+		},
 		flags: {},
 		name: "Poison Heal",
 		rating: 4,
@@ -5170,7 +5174,9 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			if (target.hasAbility("shielddust") || target.hasItem("covertcloak"))
 				return;
 			if (this.checkMoveMakesContact(move, target, source)) {
-				if (this.randomChance(3, 10)) {
+				if (this.field.isTerrain('corrosiveterrain') && this.randomChance(6, 10)) {
+						target.trySetStatus("psn", source);
+					} else if (this.randomChance(3, 10)) {
 					target.trySetStatus("psn", source);
 				}
 			}
@@ -5432,12 +5438,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			onStart(pokemon, source, effect) {
 				if (effect?.name === "Booster Energy") {
 					this.effectState.fromBooster = true;
-					this.add(
-						"-activate",
-						pokemon,
-						"ability: Protosynthesis",
-						"[fromitem]"
-					);
+					this.add("-activate", pokemon, "ability: Protosynthesis", "[fromitem]");
 				} else {
 					this.add("-activate", pokemon, "ability: Protosynthesis");
 				}
@@ -7570,7 +7571,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		onBasePowerPriority: 19,
 		onBasePower(basePower, attacker, defender, move) {
 			if (
-				(attacker.status === "psn" || attacker.status === "tox") &&
+				(attacker.status === "psn" || attacker.status === "tox" || this.field.isTerrain('corrosiveterrain')) &&
 				move.category === "Physical"
 			) {
 				return this.chainModify(1.5);
@@ -7586,8 +7587,10 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			// Despite not being a secondary, Shield Dust / Covert Cloak block Toxic Chain's effect
 			if (target.hasAbility("shielddust") || target.hasItem("covertcloak"))
 				return;
-
-			if (this.randomChance(3, 10)) {
+			if (this.field.isTerrain('corrosiveterrain') && this.randomChance(6, 10)) {
+				target.trySetStatus("tox", source);
+			}
+			else if (this.randomChance(3, 10)) {
 				target.trySetStatus("tox", source);
 			}
 		},
@@ -7619,9 +7622,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			// n.b. only affects Hackmons
 			// interaction with No Ability is complicated: https://www.smogon.com/forums/threads/pokemon-sun-moon-battle-mechanics-research.3586701/page-76#post-7790209
 			if (
-				pokemon
-					.adjacentFoes()
-					.some((foeActive) => foeActive.ability === "noability")
+				pokemon.adjacentFoes().some((foeActive) => foeActive.ability === "noability")
 			) {
 				this.effectState.seek = false;
 			}
