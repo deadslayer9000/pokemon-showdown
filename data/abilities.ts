@@ -2236,7 +2236,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			const target = this.sample(possibleTargets);
 			if (target.hp < target.maxhp / 10) {
 				target.faint();
-				this.add("-ability", pokemon, "Final Verdict", "[silent]");
+				this.add("-ability", pokemon, "Final Verdict");
 			}
 		},
 		
