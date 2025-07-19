@@ -18710,12 +18710,37 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		category: "Status",
 		pp: 20,
 		priority: 0,
-		onTry(source) {
-		this.hint("This move isn't fully implemented yet");
+		
+		onHit(source, target, pokemon) {
+			let move: Move | ActiveMove | null = this.lastMove;
+			if (!move) return;
+
+			if (move.isMax && move.baseMove) move = this.dex.moves.get(move.baseMove);
+			if (move.flags['failcopycat'] || move.isZ || move.isMax) {
+				return false;
+			}
+			this.actions.useMove(move.id, target);
+			this.add('-activate', pokemon, 'move: Simulate', move.name);
+			this.field.setTerrain('electricterrain', target); 
+			let success = false;
+			const allies = [...target.side.pokemon, ...target.side.allySide?.pokemon || []];
+			for (const ally of allies) {
+				if (ally !== source && !this.suppressingAbility(ally)) {
+					if (ally.hasAbility('goodasgold')) {
+						this.add('-immune', ally, '[from] ability: Good as Gold');
+						continue;
+					}
+					if (ally.volatiles['substitute'] && !move.infiltrates) continue;
+				}
+				if (ally.cureStatus()) success = true;
+			}
+			return success;
 		},
+		callsMove: true,
+		target: "self",
 		flags: { protect: 1, bypasssub: 1, allyanim: 1, failencore: 1, nosleeptalk: 1, noassist: 1, failcopycat: 1, failmimic: 1, failinstruct: 1 },
 		secondary: null,
-		target: "all",
+		//target: "all",
 		type: "Normal",
 	},
 	sing: {
