@@ -2785,7 +2785,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	hisuianzoroarkanite: {
 		name: "Hisuianzoroarkanite",
 		spritenum: 7,
-		megaStone: "Hisui-Zoroark-Mega",
+		megaStone: "Zoroark-Hisui-Mega",
 		megaEvolves: "Zoroark-Hisui",
 		itemUser: ["Zoroark-Hisui"],
 		onTakeItem(item, source) {
