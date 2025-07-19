@@ -22317,6 +22317,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 					move.type = 'Ice';
 				}
 			}
+			this.hint(`Tri Beam changed its type to: ${move.type} to maximize damage against ${target.name}.`);
 			
 		},
 		
