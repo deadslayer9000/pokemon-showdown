@@ -2120,7 +2120,13 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				move.pranksterBoosted
 			) {
 				this.add("-immune", target, "[from] ability: Evils Bane");
+				source.abilityState.evilsbane = true;
 				return null;
+			}
+		},
+		onBasePower(basePower, attacker, defender, move) {
+			if ( move.name === "Reckoning" && attacker.abilityState.evilsbane === true) {
+				this.chainModify([8192, 4096]);
 			}
 		},
 		flags: { breakable: 1 },
