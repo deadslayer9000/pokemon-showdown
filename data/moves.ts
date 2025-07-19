@@ -18739,7 +18739,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			//return success;
 		},
 		callsMove: true,
-		target: "normal",
+		target: "self",
 		flags: { protect: 1, bypasssub: 1, allyanim: 1, failencore: 1, nosleeptalk: 1, noassist: 1, failcopycat: 1, failmimic: 1, failinstruct: 1 },
 		secondary: null,
 		//target: "all",
