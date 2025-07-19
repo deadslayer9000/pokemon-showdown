@@ -6706,6 +6706,21 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 117,
 	},
 	spectreonslaught: {
+		onPrepareHit(source, target, move) {
+			if (
+				move.category === "Status" ||
+				move.multihit ||
+				move.flags["noparentalbond"] ||
+				move.flags["charge"] ||
+				move.flags["futuremove"] ||
+				move.spreadHit ||
+				move.isZ ||
+				move.isMax
+			)
+				return;
+			move.multihit = 2;
+			move.multihitType = "parentalbond";
+		},
 		flags: {},
 		name: "Spectre Onslaught",
 		rating: 3,
