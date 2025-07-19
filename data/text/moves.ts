@@ -7392,7 +7392,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	tribeam: {
 		name: "Tri Beam",
-		shortDesc: "Is Fire/Ice/Electric based on effectiveness.",
+		shortDesc: "This move will change its type between Fire, Ice, and Electric to maximize the damage.",
 	},
 	trick: {
 		name: "Trick",
