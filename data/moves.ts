@@ -5778,8 +5778,16 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		name: "Eon Rift",
 		pp: 1,
 		priority: 0,
-		onTry(source) {
-		this.hint("This move isn't fully implemented yet");
+		onAfterMoveSecondarySelf(pokemon, target, move) {
+			if (!target || target.fainted || target.hp <= 0){
+				if (pokemon.getStat('spe', false, true) > pokemon.getStat('spa', false, true)) {
+					this.hint("Eon Rift made electric current flow through the battlefield!");
+					this.field.setTerrain('electricterrain');
+				} else if (pokemon.getStat('spe', false, true) <= pokemon.getStat('spa', false, true)) {
+					this.hint("Eon Rift turned the sunlight harsh!");
+					this.field.setWeather('sunnyday');
+				}
+			}
 		},
 		flags: {},
 		secondary: null,
@@ -18702,12 +18710,39 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		category: "Status",
 		pp: 20,
 		priority: 0,
-		onTry(source) {
-		this.hint("This move isn't fully implemented yet");
+		
+		onHit(source, target) {
+			let move: Move | ActiveMove | null = this.lastMove;
+			if (!move) return;
+
+			if (move.isMax && move.baseMove) move = this.dex.moves.get(move.baseMove);
+			if (move.flags['failcopycat'] || move.isZ || move.isMax) {
+				return false;
+			}
+			this.actions.useMove(move.id, target);
+			this.add('-activate', target, 'move: Simulate', move.name);
+			this.field.setTerrain('electricterrain', target); 
+			//let success = false;
+			const allies = [...target.side.pokemon, ...target.side.allySide?.pokemon || []];
+			for (const ally of allies) {
+				if (ally !== source && !this.suppressingAbility(ally)) {
+					if (ally.hasAbility('goodasgold')) {
+						this.add('-immune', ally, '[from] ability: Good as Gold');
+						continue;
+					}
+					if (ally.volatiles['substitute'] && !move.infiltrates) continue;
+				}
+				//if (
+					ally.cureStatus()
+				//) success = true;
+			}
+			//return success;
 		},
+		callsMove: true,
+		target: "self",
 		flags: { protect: 1, bypasssub: 1, allyanim: 1, failencore: 1, nosleeptalk: 1, noassist: 1, failcopycat: 1, failmimic: 1, failinstruct: 1 },
 		secondary: null,
-		target: "all",
+		//target: "all",
 		type: "Normal",
 	},
 	sing: {
@@ -22158,17 +22193,24 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		pp: 10,
 		priority: 0,
 		flags: { protect: 1, mirror: 1 },
-		onTry(source) {
-		this.hint("This move isn't fully implemented yet");
-		},
 		onAfterMoveSecondarySelf(pokemon, target, move) {
 			if (!target || target.fainted || target.hp <= 0){
-				if ( this.field.isWeather("sunnyday")){
+				if ( this.field.isWeather("sunnyday") && this.field.isTerrain("electricterrain")){
+					this.boost({ spa: 1, spe: 1 }, pokemon, pokemon, move);
+					//this.add('-activate', pokemon, 'move: Timeless Torrent', "[inSunandElectric]");
+					this.hint("Timeless Torrent absorbed the Power and Speed of its fallen target!");
+				} else if ( this.field.isWeather("sunnyday")){
 					this.boost({ spa: 1 }, pokemon, pokemon, move);
+					//this.add('-activate', pokemon, 'move: Timeless Torrent', "[inSun]");
+					this.hint("Timeless Torrent absorbed the Power of its fallen target!");
 				} else if ( this.field.isTerrain("electricterrain")){
 					this.boost({ spe: 1 }, pokemon, pokemon, move);
+					//this.add('-activate', pokemon, 'move: Timeless Torrent', "[inElectricterrain]");
+					this.hint("Timeless Torrent absorbed the Speed of its fallen target!");
 				} else {
 					this.heal(pokemon.baseMaxhp / 10, pokemon, pokemon, move);
+					this.hint('Timeless Torrent absorbed the Health of its fallen target!');
+					//this.add('-activate', pokemon, 'move: Timeless Torrent');
 				}
 			}
 		},
@@ -22442,6 +22484,28 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		pp: 10,
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
+		onPrepareHit(target, source, move) {
+			const vsElectric = Dex.getEffectiveness('Electric', target);
+			const vsFire = Dex.getEffectiveness('Fire', target);
+			const vsIce = Dex.getEffectiveness('Ice', target);
+			if ( vsElectric > vsFire && vsElectric > vsIce) {
+				move.type = 'Electric';
+			} else if (vsFire > vsIce && vsFire > vsElectric) {
+				move.type = 'Fire';
+			} else if (vsIce > vsElectric && vsIce > vsFire) {
+				move.type = 'Ice';
+			} else {
+				if (this.field.isWeather('sunnyday') || this.field.isWeather('desolateland')) {
+					move.type = 'Fire';
+				} else if (this.field.isTerrain('electricterrain')) {
+					move.type = 'Electric';
+				} else {
+					move.type = 'Ice';
+				}
+			}
+			this.hint(`Tri Beam changed its type to: ${move.type} to maximize damage against ${target.name}.`);
+			
+		},
 		
 		secondary: null,
 		target: "normal",
@@ -23493,15 +23557,36 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 	whiteout: {
 		num: -43,
 		accuracy: 100,
-		basePower: 1.20,
+		basePower: 120,
 		category: "Special",
 		name: "Whiteout",
 		pp: 10,
 		priority: 0,
-		onTry(source) {
-		this.hint("This move isn't fully implemented yet and has been nerfed to prevent abuse");
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			//this.add('-prepare', attacker, move.name);
+			if (this.field.weather !== "" && this.field.weather !== 'snowscape'){
+				this.hint(`${attacker.name}'s Whiteout made snow fall on the battlefield!`);
+				this.field.setWeather('snowscape');
+				this.add('-weather', 'Snowscape', '[from] move: Whiteout');
+				this.attrLastMove('[still]');
+				this.addMove('-anim', attacker, move.name, defender);
+				return;
+			}
+			
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			if (this.field.isWeather('snowscape')) {
+				this.attrLastMove('[still]');
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: { charge: 1, protect: 1, mirror: 1 },
 		secondary: null,
 		target: "normal",
 		type: "Ice",
