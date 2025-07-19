@@ -1581,6 +1581,14 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	dreaddrive: {
 		name: "Dread Drive",
 		spritenum: 110,
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.num === 649) || pokemon.baseSpecies.num === 649) {
+				return false;
+			}
+			return true;
+		},
+		onDrive: 'Dark',
+		itemUser: ["Iron Pilot"],
 		num: -14,
 	},
 	dreadplate: {
@@ -3984,6 +3992,14 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	minddrive: {
 		name: "Mind Drive",
 		spritenum: 291,
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.num === 649) || pokemon.baseSpecies.num === 649) {
+				return false;
+			}
+			return true;
+		},
+		onDrive: 'Psychic',
+		itemUser: ['Iron Pilot'],
 		num: -17,
 	},
 	mindplate: {
@@ -4494,6 +4510,14 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	pixiedrive: {
 		name: "Pixie Drive",
 		spritenum: 610,
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.num === 649) || pokemon.baseSpecies.num === 649) {
+				return false;
+			}
+			return true;
+		},
+		onDrive: 'Fairy',
+		itemUser: ["Iron Pilot"],
 		num: -16,
 	},
 	pixieplate: {
@@ -6099,7 +6123,15 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	thrashdrive: {
 		name: "Thrash Drive",
 		spritenum: 143,
-		num: -18
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.num === 649) || pokemon.baseSpecies.num === 649) {
+				return false;
+			}
+			return true;
+		},
+		onDrive: 'Fighting',
+		itemUser: ["Iron Pilot"],
+		num: -18,
 	},
 	throatspray: {
 		name: "Throat Spray",

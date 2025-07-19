@@ -3054,13 +3054,6 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				return -9;
 			}
 		},
-		/*onStart(pokemon) {
-				if (pokemon.volatiles['boosterenergy']) {
-					this.hint("hello! :D");
-					this.add("-activate", pokemon, "ability: Hocus Pocus", "[fromitem]");
-					this.field.addPseudoWeather('gravity');
-				}
-			},*/
 		flags: {},
 		name: "Hocus Pocus",
 		rating: 5,
@@ -5432,12 +5425,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			onStart(pokemon, source, effect) {
 				if (effect?.name === "Booster Energy") {
 					this.effectState.fromBooster = true;
-					this.add(
-						"-activate",
-						pokemon,
-						"ability: Protosynthesis",
-						"[fromitem]"
-					);
+					this.add("-activate", pokemon, "ability: Protosynthesis", "[fromitem]");
 				} else {
 					this.add("-activate", pokemon, "ability: Protosynthesis");
 				}
@@ -7619,9 +7607,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			// n.b. only affects Hackmons
 			// interaction with No Ability is complicated: https://www.smogon.com/forums/threads/pokemon-sun-moon-battle-mechanics-research.3586701/page-76#post-7790209
 			if (
-				pokemon
-					.adjacentFoes()
-					.some((foeActive) => foeActive.ability === "noability")
+				pokemon.adjacentFoes().some((foeActive) => foeActive.ability === "noability")
 			) {
 				this.effectState.seek = false;
 			}
