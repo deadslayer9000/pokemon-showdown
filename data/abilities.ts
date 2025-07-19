@@ -2229,7 +2229,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				return this.chainModify(1.5);
 			}
 		},
-		onEnd(pokemon) {
+		onResidual(pokemon, source, effect) {
 			const possibleTargets = pokemon.adjacentFoes();
 			if (!possibleTargets.length) return;
 
