@@ -1194,9 +1194,9 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	corrosiveterrain: {
 		name: "Corrosive Terrain",
-		desc: "For 5 turns, the terrain becomes Corrosive Terrain. During the terrain, Steel-type moves have halved power, and  "
+		desc: "For 5 turns, the terrain becomes Corrosive Terrain. During the terrain, Steel-type moves have halved power, and  ",
 		shortDesc: "5 turns. Grounded: -Steel power, +status damage.",
-	}
+	},
 	cosmicpower: {
 		name: "Cosmic Power",
 		desc: "Raises the user's Defense and Special Defense by 1 stage.",
