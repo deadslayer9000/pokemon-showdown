@@ -23566,7 +23566,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			if (attacker.removeVolatile(move.id)) {
 				return;
 			}
-			this.add('-prepare', attacker, move.name);
+			//this.add('-prepare', attacker, move.name);
 			if (this.field.weather !== "" && this.field.weather !== 'snowscape'){
 				this.field.setWeather('snowscape');
 				this.add('-weather', 'Snowscape', '[from] move: Whiteout');
