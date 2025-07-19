@@ -2229,6 +2229,17 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				return this.chainModify(1.5);
 			}
 		},
+		onEnd(pokemon) {
+			const possibleTargets = pokemon.adjacentFoes();
+			if (!possibleTargets.length) return;
+
+			const target = this.sample(possibleTargets);
+			if (target.hp < target.maxhp / 10) {
+				target.faint();
+				this.add("-ability", pokemon, "Final Verdict", "[silent]");
+			}
+		},
+		
 		flags: {},
 		name: "Final Verdict",
 		rating: 3,
