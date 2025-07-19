@@ -2120,7 +2120,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				move.pranksterBoosted
 			) {
 				this.add("-immune", target, "[from] ability: Evils Bane");
-				source.abilityState.evilsbane = true;
+				target.abilityState.evilsbane = true;
 				return null;
 			}
 		},
