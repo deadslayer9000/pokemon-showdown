@@ -1264,22 +1264,27 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 238,
 	},
 	covenant: {
+		onStart(pokemon) {
+		if (pokemon.hp > pokemon.maxhp / 2) {
+			this.add("-ability", pokemon, "Covenant");
+		}
+		},
+		onModifyAtk(atk, pokemon) {
+		if (pokemon.hp > pokemon.maxhp / 2) {
+			return this.chainModify(0.5);
+		}
+		},
 		onModifySpe(spe, pokemon) {
-			spe = spe * 0.5;
-			if ( pokemon.hp <= pokemon.maxhp / 2 ) {
-				spe = spe * 2;
-			}
+		if (pokemon.hp > pokemon.maxhp / 2) {
+			return this.chainModify(0.5);
+		}
 		},
-		onModifyAtk(atk) {
-			atk = atk * 0.5;
-		},
-		onResidual(pokemon, source, effect) {
-			if ( pokemon.hp <= pokemon.maxhp / 2 ) {
-				this.add("-activate", pokemon, "ability: Dark Decree");
-				pokemon.setAbility("hugepower");
-				this.add("-ability", pokemon, "Huge Power");
-			}
-		},
+		onResidual(pokemon) {
+		if (pokemon.hp <= pokemon.maxhp / 2 && pokemon.getAbility().id === 'covenant') {
+			this.add("-activate", pokemon, "ability: Covenant", "[transformed into Huge Power]");
+			pokemon.setAbility("hugepower");
+		}
+	},
 		flags: {},
 		name: "Covenant",
 		rating: 0,
