@@ -23493,7 +23493,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 	whiteout: {
 		num: -43,
 		accuracy: 100,
-		basePower: 1.20,
+		basePower: 120,
 		category: "Special",
 		name: "Whiteout",
 		pp: 10,
