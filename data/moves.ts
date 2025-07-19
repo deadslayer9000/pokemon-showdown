@@ -5877,7 +5877,19 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		priority: 0,
 		isZ: "Brewlium Z",
 		flags: {},
+		onHit(target, source) {
+			if (source.hp) {
+				const item = target.takeItem();
+				if (item) {
+					this.add('-enditem', target, item.name, '[from] move: Exalted Potion', `[of] ${source}`);
+				}
+			}
+		},
 		self: {
+			onHit(pokemon) {
+				pokemon.setItem('');
+				this.hint('Brewlium Z consumed.');
+			},
 		boosts: {
 			atk: 1,
 			def: 1,
@@ -5885,15 +5897,6 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			spd: 1,
 			spe: 1,
 			}, 
-		},
-		onHit(pokemon) {
-			pokemon.eatItem();
-		},
-		onAfterHit(pokemon, source, move) {
-			const item = pokemon.takeItem();
-			if (item) {
-				this.add('-enditem', item.name, '[from] move: Knock Off', `[of] ${source}`);
-			}
 		},
 		target: "normal",
 		type: "Psychic",
@@ -23479,7 +23482,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			if (source.hp) {
 				const item = target.takeItem();
 				if (item) {
-					this.add('-enditem', target, item.name, '[from] move: Knock Off', `[of] ${source}`);
+					this.add('-enditem', target, item.name, '[from] move: Whisk Away', `[of] ${source}`);
 				}
 			}
 		},
