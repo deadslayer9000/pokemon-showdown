@@ -22298,6 +22298,27 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		pp: 10,
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
+		onPrepareHit(target, source, move) {
+			const vsElectric = Dex.getEffectiveness('Electric', target);
+			const vsFire = Dex.getEffectiveness('Fire', target);
+			const vsIce = Dex.getEffectiveness('Ice', target);
+			if ( vsElectric > vsFire && vsElectric > vsIce) {
+				move.type = 'Electric';
+			} else if (vsFire > vsIce && vsFire > vsElectric) {
+				move.type = 'Fire';
+			} else if (vsIce > vsElectric && vsIce > vsFire) {
+				move.type = 'Ice';
+			} else {
+				if (this.field.isWeather('sunnyday') || this.field.isWeather('desolateland')) {
+					move.type = 'Fire';
+				} else if (this.field.isTerrain('electricterrain')) {
+					move.type = 'Electric';
+				} else {
+					move.type = 'Ice';
+				}
+			}
+			
+		},
 		
 		secondary: null,
 		target: "normal",
