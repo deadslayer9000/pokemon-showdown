@@ -2125,7 +2125,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			}
 		},
 		onBasePower(basePower, attacker, defender, move) {
-			if ( move.name === "Reckoning" ) {
+			if ( move.name === "Reckoning" && attacker.abilityState.evilsbane=== true) {
 				this.chainModify([8192, 4096]);
 			}
 		},
