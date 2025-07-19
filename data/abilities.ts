@@ -2121,6 +2121,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			) {
 				this.add("-immune", target, "[from] ability: Evils Bane");
 				target.abilityState.evilsbane = true;
+				this.hint("Reckoning's power has been doubled!");
 				return null;
 			}
 		},
