@@ -18711,7 +18711,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		pp: 20,
 		priority: 0,
 		
-		onHit(source, target, pokemon) {
+		onHit(source, target) {
 			let move: Move | ActiveMove | null = this.lastMove;
 			if (!move) return;
 
@@ -18720,7 +18720,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 				return false;
 			}
 			this.actions.useMove(move.id, target);
-			this.add('-activate', pokemon, 'move: Simulate', move.name);
+			this.add('-activate', target, 'move: Simulate', move.name);
 			this.field.setTerrain('electricterrain', target); 
 			let success = false;
 			const allies = [...target.side.pokemon, ...target.side.allySide?.pokemon || []];
