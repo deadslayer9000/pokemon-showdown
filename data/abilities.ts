@@ -5607,6 +5607,10 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 272,
 	},
 	purranormal: {
+		onStart(pokemon) {
+		const types = pokemon.side.getTypes();
+		this.hint(types);
+		},
 		flags: {},
 		name: "Purranormal",
 		rating: 4,
@@ -7050,7 +7054,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				this.add("-start", pokemon, `fallen${fallen}`, "[silent]");
 				this.effectState.fallen = fallen;
 			}
-		},
+		}, 
 		onEnd(pokemon) {
 			this.add(
 				"-end",

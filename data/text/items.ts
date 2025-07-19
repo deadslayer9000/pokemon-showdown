@@ -319,7 +319,7 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 	corrosiveseed: {
 		name: "Corrosive Seed:",
 		shortDesc: "If the Terrain is Corrosive Terrain"
-	}
+	},
 	coverfossil: {
 		name: "Cover Fossil",
 		shortDesc: "Can be revived into Tirtouga.",
