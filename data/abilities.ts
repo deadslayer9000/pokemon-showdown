@@ -6383,9 +6383,9 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				source.transformInto(target);
 				this.add("-activate", source, "ability: Shapeshift");
 				this.add('-message', `${source.name} transformed into ${target.name} thanks to Shapeshift!`);
-				
+
 				const targetsability = target.getAbility().name;
-				this.add("-ability", target, targetsability);
+				this.add("-ability", source, targetsability);
 			} else {
 				this.add("-message", `${source.name} failed to shapeshift into ${target.name}.`);
 			}
