@@ -23568,15 +23568,19 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			}
 			//this.add('-prepare', attacker, move.name);
 			if (this.field.weather !== "" && this.field.weather !== 'snowscape'){
+				this.hint(`${attacker.name}'s Whiteout made snow fall on the battlefield!`);
 				this.field.setWeather('snowscape');
 				this.add('-weather', 'Snowscape', '[from] move: Whiteout');
 				this.attrLastMove('[still]');
 				this.addMove('-anim', attacker, move.name, defender);
 				return;
 			}
-				
 			
 			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			if (this.field.isWeather('snowscape')) {
+				this.attrLastMove('[still]');
 				return;
 			}
 			attacker.addVolatile('twoturnmove', defender);
