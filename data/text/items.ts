@@ -316,6 +316,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Cornn Berry",
 		shortDesc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",
 	},
+	corrosiveseed: {
+		name: "Corrosive Seed:",
+		shortDesc: "If the Terrain is Corrosive Terrain"
+	}
 	coverfossil: {
 		name: "Cover Fossil",
 		shortDesc: "Can be revived into Tirtouga.",
