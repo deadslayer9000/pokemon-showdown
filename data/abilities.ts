@@ -6379,11 +6379,15 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	shapeshift: {
 		onAfterMove(source, target, move) {
-			if (move.id === "bittermalice") {
+			if (move.id === "bittermalice" && target && !target.fainted && !source.transformed) {
 				source.transformInto(target);
 				this.add("-activate", source, "ability: Shapeshift");
-				let targetsability = target.getAbility().name;
+				this.add('-message', `${source.name} transformed into ${target.name} thanks to Shapeshift!`);
+				
+				const targetsability = target.getAbility().name;
 				this.add("-ability", target, targetsability);
+			} else {
+				this.add("-message", `${source.name} failed to shapeshift into ${target.name}.`);
 			}
 		},
 		flags: {},
