@@ -2545,6 +2545,8 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 				newType = 'Fairy';
 			} else if (this.field.isTerrain('psychicterrain')) {
 				newType = 'Psychic';
+			} else if (this.field.isTerrain('corrosiveterrain')) {
+				newType = 'Poison';
 			}
 
 			if (target.getTypes().join() === newType || !target.setType(newType)) return false;
@@ -3503,10 +3505,23 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			onResidualOrder: 5,
 			onResidualSubOrder: 2,
 			onResidual(pokemon) {
-				if (pokemon.status && pokemon.isGrounded() && !pokemon.type(['Poison'], ['Steel'])  && !pokemon.isSemiInvulnerable()) {
+				const types = pokemon.getTypes();
+				let type = types[0];
+				if (pokemon.status 
+					|| pokemon.hasAbility('comatose')
+					&& pokemon.isGrounded() 
+					&& type != 'Poison' 
+					&& type != 'Steel' 
+					&& !pokemon.isSemiInvulnerable()
+					&& !pokemon.hasAbility('toxicboost')
+					&& !pokemon.hasAbility('magicguard')
+					&& !pokemon.hasAbility('poisonheal')
+					&& !pokemon.hasAbility('immunity')
+					&& !pokemon.hasAbility('pastelveil')
+					&& !pokemon.hasAbility('wonderguard')) {
 					this.damage(pokemon.baseMaxhp / 16, pokemon, pokemon);
 				} else {
-					this.debug(`Pokemon semi-invuln or not grounded; Corrosive Terrain skipped`);
+					this.debug(`Pokemon semi-invuln, immune, or not grounded; Corrosive Terrain skipped`);
 				}
 			},
 			onFieldResidualOrder: 27,
@@ -11054,7 +11069,11 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			},
 			onResidualOrder: 7,
 			onResidual(pokemon) {
+				if(this.field.isTerrain('corrosiveterrain')){
+					this.damage(pokemon.baseMaxhp / 16);
+				} else {
 				this.heal(pokemon.baseMaxhp / 16);
+				}
 			},
 			onTrapPokemon(pokemon) {
 				pokemon.tryTrap();
@@ -14260,6 +14279,8 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 				move = 'moonblast';
 			} else if (this.field.isTerrain('psychicterrain')) {
 				move = 'psychic';
+			} else if (this.field.isTerrain('corrosiveterrain')) {
+				move = 'sludgewave';
 			}
 			this.actions.useMove(move, pokemon, { target });
 			return null;
@@ -18035,6 +18056,11 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 						spe: -1,
 					},
 				});
+			} else if (this.field.isTerrain('corrosiveterrain')) {
+				move.secondaries.push({
+					chance: 30,
+					status: 'psn',
+				});
 			}
 		},
 		secondary: {
@@ -21718,6 +21744,9 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			case 'psychicterrain':
 				move.type = 'Psychic';
 				break;
+			case 'corrosiveterrain':
+				move.type = 'Poison';
+				break;
 			}
 		},
 		onModifyMove(move, pokemon) {
@@ -22982,7 +23011,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
 		onBasePower(basePower, pokemon, target) {
-			if (target.status === 'psn' || target.status === 'tox') {
+			if (target.status === 'psn' || target.status === 'tox' || this.field.isTerrain('corrosiveterrain')) {
 				return this.chainModify(2);
 			}
 		},
