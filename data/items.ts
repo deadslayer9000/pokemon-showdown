@@ -1155,6 +1155,28 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		gen: 3,
 		isNonstandard: "Past",
 	},
+	corrosiveseed: {
+		name: "Corrosive Seed",
+		spritenum: 665,
+		fling: {
+			basePower: 10,
+		},
+		onSwitchInPriority: -1,
+		onStart(pokemon) {
+			if (!pokemon.ignoringItem() && this.field.isTerrain('corrosiveterrain')) {
+				pokemon.useItem();
+			}
+		},
+		onTerrainChange(pokemon) {
+			if (this.field.isTerrain('corrosiveterrain')) {
+				pokemon.useItem();
+			}
+		},
+		boosts: {
+			spd: 1,
+		},
+		num: -22,
+	},
 	coverfossil: {
 		name: "Cover Fossil",
 		spritenum: 85,
