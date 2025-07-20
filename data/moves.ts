@@ -5334,6 +5334,28 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "normal",
 		type: "Psychic",
 	},
+	effigybreak: {
+		num: -81,
+		accuracy: 100,
+		basePower: 40,
+		category: "Physical",
+		name: "Effigy Break",
+		pp: 10,
+		priority: 3,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		onTry(source) {
+			if (source.activeMoveActions > 1) {
+				this.hint("Effigy Break only works on your first turn out.");
+				return false;
+			}
+		},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Rock",
+	},
 	eggbomb: {
 		num: 121,
 		accuracy: 75,
@@ -9399,6 +9421,26 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		secondary: null,
 		target: "normal",
 		type: "Steel",
+	},
+	hattrick: {
+		num: -80,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Hat Trick",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		onBasePower(basePower, pokemon) {
+			if (this.randomChance(3, 10)) {
+				this.attrLastMove('[anim] Fickle Beam All Out');
+				this.add('-activate', pokemon, 'move: Hat Trick');
+				return this.chainModify(2);
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fire",
 	},
 	haze: {
 		num: 114,
