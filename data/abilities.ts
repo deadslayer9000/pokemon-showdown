@@ -727,8 +727,9 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			for (const condition of sideConditions) {
 				if (pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] ability: Breach', `[of] ${pokemon}`);
+					this.hint(`${pokemon}'s Breach removed ${this.dex.conditions.get(condition).name} from the battlefield.`);
 				}
-			}
+			} //hazard immunity in moves.ts
 		},
 		flags: {},
 		name: "Breach",
