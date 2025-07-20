@@ -6708,6 +6708,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	spectreonslaught: {
 		onPrepareHit(source, target, move) {
 			if (
+				move.name === "Night Shade" ||
 				move.category === "Status" ||
 				move.multihit ||
 				move.flags["noparentalbond"] ||
@@ -7928,6 +7929,13 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				this.add('-end', pokemon, `fallen${this.effectState.fallen}`, '[silent]');
 			}
 			
+		},
+		onResidual(pokemon) {
+			const fallen = Math.min(pokemon.side.foe.pokemon.filter(p => p.fainted).length, 5);
+			if (fallen > 0) {
+				this.add("-start", pokemon, `fallen${fallen}`, "[silent]");
+				this.effectState.fallen = fallen;
+			}
 		},
 		onBasePowerPriority: 21,
 		onBasePower(basePower, attacker, defender, move) {
