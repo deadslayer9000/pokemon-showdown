@@ -7933,6 +7933,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		onResidual(pokemon) {
 			const fallen = Math.min(pokemon.side.foe.pokemon.filter(p => p.fainted).length, 5);
 			if (fallen > 0) {
+				this.add('-end', pokemon, `fallen${this.effectState.fallen}`, '[silent]');
 				this.add("-start", pokemon, `fallen${fallen}`, "[silent]");
 				this.effectState.fallen = fallen;
 			}
