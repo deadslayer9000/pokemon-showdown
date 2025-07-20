@@ -7915,16 +7915,19 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 260,
 	},
 	unrelentingstampede: {
-		/*onStart(pokemon) {
-			if (pokemon.side.totalFainted) {
-				this.add('-activate', pokemon, 'ability: Supreme Overlord');
-				const fallen = Math.min(pokemon.side.totalFainted, 5);
-				this.add('-start', pokemon, `fallen${fallen}`, '[silent]');
+		onStart(pokemon) {
+			
+			const fallen = Math.min(pokemon.side.foe.pokemon.filter(p => p.fainted).length, 5);
+			if (fallen > 0) {
+				this.add("-start", pokemon, `fallen${fallen}`, "[silent]");
 				this.effectState.fallen = fallen;
 			}
 		},
 		onEnd(pokemon) {
-			this.add('-end', pokemon, `fallen${this.effectState.fallen}`, '[silent]');
+			if (this.effectState.fallen) {
+				this.add('-end', pokemon, `fallen${this.effectState.fallen}`, '[silent]');
+			}
+			
 		},
 		onBasePowerPriority: 21,
 		onBasePower(basePower, attacker, defender, move) {
@@ -7933,7 +7936,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				this.debug(`Supreme Overlord boost: ${powMod[this.effectState.fallen]}/4096`);
 				return this.chainModify([powMod[this.effectState.fallen], 4096]);
 			}
-		},*/
+		},
 		flags: {},
 		name: "Unrelenting Stampede",
 		rating: 4,
