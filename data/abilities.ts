@@ -644,17 +644,17 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	blazingswap: {
 		onModifyMovePriority: 1,
-		onModifyMove(move, attacker, defender) {
+		onModifyMove(move, pokemon, defender) {
 			if (
-				attacker.species.baseSpecies !== "Delta-Aegislash" ||
-				attacker.transformed
-			)
-				return;
-			if (move.category === "Status" && move.name !== "Infernal Shield") return;
-			const targetForme =
-				move.name === "Infernal Shield" ? "Delta-Aegislash" : "Delta-Aegislash-Blade";
-			if (attacker.species.name !== targetForme)
-				attacker.formeChange(targetForme);
+				pokemon.species.baseSpecies !== "Delta-Aegislash" ||
+				pokemon.transformed
+			) return;
+			if (move.name === "Infernal Shield" && pokemon.species.name === "Delta-Aegislash-Blade") {
+				pokemon.formeChange("Delta-Aegislash", this.effect, true);
+			} else if (pokemon.species.name === "Delta-Aegislash") {
+				pokemon.formeChange("Delta-Aegislash-Blade", this.effect, true);
+			}
+
 		},
 		flags: {
 			failroleplay: 1,
