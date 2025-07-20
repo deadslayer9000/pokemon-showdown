@@ -5754,7 +5754,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			if (pokemon.species.name === "Delta-Aegislash-Blade") {
 				move.basePower = 100;
 				move.target = "normal";
-				move.flags = {protect: 1, mirror: 1, };
+				move.flags = {protect: 1, mirror: 1, contact: 1};
 				if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
 					move.category = 'Physical';
 				} else {
