@@ -6757,7 +6757,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	deltaheatran: {
 		tier: "",
 	},
-	
 	deltajirachi: {
 		tier: "",
 	},

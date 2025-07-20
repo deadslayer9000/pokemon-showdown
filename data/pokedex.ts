@@ -22012,7 +22012,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		heightm: 1.6,
 		color: "White",
 		eggGroups: ["Field"],
-		requiredItem: "Hisuizoroarkite",
+		requiredItem: "Hisuianzoroarkanite",
 	},
 	deltagolurk: {
 		num: 623,
