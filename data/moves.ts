@@ -5750,10 +5750,20 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		pp: 5,
 		priority: 0,
 		flags: { snatch: 1, heal: 1, metronome: 1},
-		onTry(source) {
-		this.hint("This move isn't fully implemented yet");
+		onModifyMove(move, pokemon, target,) {
+			if (pokemon.name === "Delta-Aegislash-Blade") {
+				move.basePower = 100;
+				move.target = "normal";
+				move.flags = {protect: 1, mirror: 1, };
+				if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
+					move.category = 'Physical';
+				} else {
+					move.category = 'Special';
+				}
+			} else if (pokemon.name === "Delta-Aegislash"){
+				move.heal = [1, 4];
+			}
 		},
-		heal: [1, 4],
 		secondary: null,
 		target: "self",
 		type: "Fire",
