@@ -7935,6 +7935,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			if (fallen > 0) {
 				this.add('-end', pokemon, `fallen${this.effectState.fallen}`, '[silent]');
 				this.add("-start", pokemon, `fallen${fallen}`, "[silent]");
+				this.add(-"activate", pokemon, "ability: Unrelenting Stampede");
 				this.effectState.fallen = fallen;
 			}
 		},
