@@ -5663,10 +5663,12 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 272,
 	},
 	purranormal: {
-	//	onStart(pokemon) {
-		//const types = pokemon.side.getTypes();
-		//this.hint(types);
-	//	},
+		onStart(pokemon) {
+			const allies = pokemon.side.pokemon
+				for (const ally of allies) {
+				this.debug(`${ally.name}: ${ally.types.join('/')}`);
+				}
+		},
 		flags: {},
 		name: "Purranormal",
 		rating: 4,
