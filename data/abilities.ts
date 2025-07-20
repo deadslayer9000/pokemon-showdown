@@ -655,7 +655,8 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		onModifyMove(move, pokemon, defender) {
 			if (
 				pokemon.species.baseSpecies !== "Delta-Aegislash" ||
-				pokemon.transformed
+				pokemon.transformed ||
+				move.name === "Enflame"
 			) return;
 			if (move.name === "Infernal Shield" && pokemon.species.name === "Delta-Aegislash-Blade") {
 				pokemon.formeChange("Delta-Aegislash", this.effect, true);

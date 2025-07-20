@@ -5751,7 +5751,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		priority: 0,
 		flags: { snatch: 1, heal: 1, metronome: 1},
 		onModifyMove(move, pokemon, target,) {
-			if (pokemon.name === "Delta-Aegislash-Blade") {
+			if (pokemon.species.name === "Delta-Aegislash-Blade") {
 				move.basePower = 100;
 				move.target = "normal";
 				move.flags = {protect: 1, mirror: 1, };
@@ -5760,7 +5760,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 				} else {
 					move.category = 'Special';
 				}
-			} else if (pokemon.name === "Delta-Aegislash"){
+			} else if (pokemon.species.name === "Delta-Aegislash"){
 				move.heal = [1, 4];
 			}
 		},
