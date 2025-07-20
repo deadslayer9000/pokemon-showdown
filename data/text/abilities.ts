@@ -2526,6 +2526,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "This Pokemon is immune to wind moves and raises its Attack by 1 stage when hit by a wind move or when Tailwind begins on this Pokemon's side.",
 		shortDesc: "Attack raised by 1 if hit by a wind move or Tailwind begins. Wind move immunity.",
 	},
+	wishreaper: {
+		name: "Wish Reaper",
+		desc: "This Pokemon lower's opponent's Special Attack by 1 stage when it switches out.",
+	},
 	winterarbiter: {
 		name: "Winter Arbiter",
 		shortDesc: "This Pokemon gains +1 Attack in Snow.",

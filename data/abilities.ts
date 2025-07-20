@@ -2301,7 +2301,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		flags: {},
 		name: "Steamforged",
 		rating: 2,
-		num: -70,
+		num: -71,
 	},
 
 	flareboost: {
@@ -8362,6 +8362,26 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		name: "Winter Arbiter",
 		rating: 2,
 		num: -65,
+	},
+	wishreaper: {
+		onEnd(pokemon) {
+			let activated = false;
+			for (const target of pokemon.adjacentFoes()) {
+				if (!activated) {
+					this.add("-ability", pokemon, "Intimidate", "boost");
+					activated = true;
+				}
+				if (target.volatiles["substitute"]) {
+					this.add("-immune", target);
+				} else {
+					this.boost({ spa: -1 }, target, pokemon, null, true);
+				}
+			}
+		},
+		num: -72,
+		name: "Wish Reaper",
+		rating: 3,
+		flags: {},
 	},
 	wonderguard: {
 		onTryHit(target, source, move) {
