@@ -646,15 +646,13 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		onModifyMovePriority: 1,
 		onModifyMove(move, attacker, defender) {
 			if (
-				attacker.species.name !== "Delta-Aegislash" ||
+				attacker.species.baseSpecies !== "Delta-Aegislash" ||
 				attacker.transformed
 			)
 				return;
 			if (move.category === "Status" && move.id !== "infernalshield") return;
 			const targetForme =
-				move.id === "infernalshield"
-					? "Delta-Aegislash"
-					: "Delta-Aegislash-Blade";
+				move.id === "infernalshield" ? "Delta-Aegislash" : "Delta-Aegislash-Blade";
 			if (attacker.species.name !== targetForme)
 				attacker.formeChange(targetForme);
 		},
