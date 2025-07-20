@@ -643,6 +643,14 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 66,
 	},
 	blazingswap: {
+		onTryHit(target, source, move) {
+			if (
+				(target !== source && move.type === "Fire")
+			) {
+				this.add("-immune", target, "[from] ability: Evils Bane");
+				return null;
+			}
+		},
 		onModifyMovePriority: 1,
 		onModifyMove(move, pokemon, defender) {
 			if (
