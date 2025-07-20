@@ -650,9 +650,9 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				attacker.transformed
 			)
 				return;
-			if (move.category === "Status" && move.id !== "infernalshield") return;
+			if (move.category === "Status" && move.name !== "Infernal Shield") return;
 			const targetForme =
-				move.id === "infernalshield" ? "Delta-Aegislash" : "Delta-Aegislash-Blade";
+				move.name === "Infernal Shield" ? "Delta-Aegislash" : "Delta-Aegislash-Blade";
 			if (attacker.species.name !== targetForme)
 				attacker.formeChange(targetForme);
 		},
