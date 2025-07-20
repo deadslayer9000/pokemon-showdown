@@ -647,7 +647,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			if (
 				(target !== source && move.type === "Fire")
 			) {
-				this.add("-immune", target, "[from] ability: Evils Bane");
+				this.add("-immune", target, "[from] ability: Blazing Swap");
 				return null;
 			}
 		},
