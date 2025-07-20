@@ -6718,7 +6718,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				move.isMax
 			)
 				return;
-			move.multihit = 2;
+			move.multihit = 4;
 			move.multihitType = "parentalbond";
 		},
 		flags: {},
