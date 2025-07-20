@@ -1814,6 +1814,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 
 		activate: "#spite",
 	},
+	effigybreak: {
+		name: "Effigy Break",
+		desc: "Has a 100% chance to make the target flinch. Fails unless it is the user's first turn on the field.",
+		shortDesc: "Hits first. First turn out only. 100% flinch chance.",
+	},
 	eggbomb: {
 		name: "Egg Bomb",
 		shortDesc: "No additional effect.",
@@ -3017,6 +3022,12 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Hard Press",
 		desc: "Power is equal to 100 * (target's current HP / target's maximum HP), rounded half down, but not less than 1.",
 		shortDesc: "More power the more HP the target has left.",
+	},
+	hattrick: {
+		name: "Hat Trick",
+		shortDesc: "Has a 30% chance this move's power is doubled.",
+
+		activate: "  [POKEMON] pulled off a hat trick!",
 	},
 	haze: {
 		name: "Haze",
