@@ -1194,7 +1194,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	corrosiveterrain: {
 		name: "Corrosive Terrain",
-		desc: "For 5 turns, the terrain becomes Corrosive Terrain. During the terrain, Steel-type moves have halved power, and  ",
+		desc: "For 5 turns, the terrain becomes Corrosive Terrain. During the terrain, Steel-type moves have halved power, and statused pokemon take 1/16 HP damage at the end of every turn. Pokemon with the ability Toxic Boost, Magic Guard, Poison Heal, Immunity, Pastel Veil, or Wonder Guard are immune to Corrosive Terrain damage. Poison Touch and Toxic Chain's activation chance are doubled in this terrain. Merciless and Toxic Boost are always active in this terrain. Poison Heal restores and additional 1/6 of the user's HP. Venoshock's base power is doubled in this terrain. Ingrain damages the user for 1/16 HP instead of healing.",
 		shortDesc: "5 turns. Grounded: -Steel power, +status damage.",
 	},
 	cosmicpower: {
@@ -1813,6 +1813,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		shortDesc: "Removes 3 PP from the target's last move.",
 
 		activate: "#spite",
+	},
+	effigybreak: {
+		name: "Effigy Break",
+		desc: "Has a 100% chance to make the target flinch. Fails unless it is the user's first turn on the field.",
+		shortDesc: "Hits first. First turn out only. 100% flinch chance.",
 	},
 	eggbomb: {
 		name: "Egg Bomb",
@@ -3017,6 +3022,12 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Hard Press",
 		desc: "Power is equal to 100 * (target's current HP / target's maximum HP), rounded half down, but not less than 1.",
 		shortDesc: "More power the more HP the target has left.",
+	},
+	hattrick: {
+		name: "Hat Trick",
+		shortDesc: "Has a 30% chance this move's power is doubled.",
+
+		activate: "  [POKEMON] pulled off a hat trick!",
 	},
 	haze: {
 		name: "Haze",

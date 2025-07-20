@@ -23810,7 +23810,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		types: ["Rock", "Dragon"],
 		baseStats: { hp: 87, atk: 134, def: 136, spa: 55, spd: 60, spe: 53 },
 		abilities: { 0: "Rough Skin", 1: "Sturdy", H: "Intimidate" },
-		// height
+		heightm: 1.8,
 		weightkg: 287,
 		color: "Black",
 		prevo: "Delta-Druddigon",
@@ -23822,7 +23822,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		types: ["Rock", "Dragon"],
 		baseStats: { hp: 77, atk: 109, def: 123, spa: 65, spd: 60, spe: 51 },
 		abilities: { 0: "Rough Skin", 1: "Sheer Force", H: "Intimidate" },
-		//height
+		heightm: 1.6,
 		weightkg: 164,
 		color: "Black",
 		evos: ["Grimorgon"],

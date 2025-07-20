@@ -317,8 +317,8 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		shortDesc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",
 	},
 	corrosiveseed: {
-		name: "Corrosive Seed:",
-		shortDesc: "If the Terrain is Corrosive Terrain",
+		name: "Corrosive Seed",
+		shortDesc: "If the Terrain is Corrosive Terrain, raises holder' Sp. Def by 1 stage. Single use.",
 	},
 	coverfossil: {
 		name: "Cover Fossil",

@@ -6745,12 +6745,11 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	deltazeraora: {
 		tier: "OU",
 	},
-	/*
 	etherion: {
 		tier: "",
 	},
 	grimorgon: {
-		tier: "",
+		tier: "UU",
 	},
 	deltadruddigon: {
 		tier: "",
@@ -6758,14 +6757,12 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	deltaheatran: {
 		tier: "",
 	},
-	
 	deltajirachi: {
 		tier: "",
 	},
 	deltacresselia: {
 		tier: "",
 	},
-	*/
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
