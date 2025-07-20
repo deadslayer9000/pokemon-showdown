@@ -6749,7 +6749,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "",
 	},
 	grimorgon: {
-		tier: "",
+		tier: "UU",
 	},
 	deltadruddigon: {
 		tier: "",
