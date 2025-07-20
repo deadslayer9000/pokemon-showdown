@@ -722,14 +722,14 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 171,
 	},
 	breach: {
-		/*onSwitchIn(target, pokemon, move) {
+		onSwitchIn(pokemon) {
 			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
 			for (const condition of sideConditions) {
 				if (pokemon.side.removeSideCondition(condition)) {
-					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Foam Frenzy', `[of] ${pokemon}`);
+					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] ability: Breach', `[of] ${pokemon}`);
 				}
 			}
-		},*/
+		},
 		flags: {},
 		name: "Breach",
 		rating: 4,
