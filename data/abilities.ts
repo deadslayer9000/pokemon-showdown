@@ -722,14 +722,15 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 171,
 	},
 	breach: {
-		/*onSwitchIn(target, pokemon, move) {
+		onSwitchIn(pokemon) {
 			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
 			for (const condition of sideConditions) {
 				if (pokemon.side.removeSideCondition(condition)) {
-					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Foam Frenzy', `[of] ${pokemon}`);
+					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] ability: Breach', `[of] ${pokemon}`);
+					this.hint(`${pokemon.name}'s Breach removed ${this.dex.conditions.get(condition).name} from the battlefield.`);
 				}
-			}
-		},*/
+			} //hazard immunity in moves.ts
+		},
 		flags: {},
 		name: "Breach",
 		rating: 4,
@@ -740,7 +741,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			let activated = false;
 			for (const target of pokemon.adjacentFoes()) {
 				if (!activated) {
-					this.add("-ability", pokemon, "Intimidate", "boost");
+					this.add("-activate", pokemon, "ability: Brilliance");
 					activated = true;
 				}
 				if (target.volatiles["substitute"]) {
@@ -2120,7 +2121,14 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				move.pranksterBoosted
 			) {
 				this.add("-immune", target, "[from] ability: Evils Bane");
+				target.abilityState.evilsbane = true;
+				this.hint("Reckoning's power has been doubled!");
 				return null;
+			}
+		},
+		onBasePower(basePower, attacker, defender, move) {
+			if ( move.name === "Reckoning" && attacker.abilityState.evilsbane=== true) {
+				this.chainModify([8192, 4096]);
 			}
 		},
 		flags: { breakable: 1 },
@@ -2293,7 +2301,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		flags: {},
 		name: "Steamforged",
 		rating: 2,
-		num: -70,
+		num: -71,
 	},
 
 	flareboost: {
@@ -6703,6 +6711,22 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 117,
 	},
 	spectreonslaught: {
+		onPrepareHit(source, target, move) {
+			if (
+				move.name === "Night Shade" ||
+				move.category === "Status" ||
+				move.multihit ||
+				move.flags["noparentalbond"] ||
+				move.flags["charge"] ||
+				move.flags["futuremove"] ||
+				move.spreadHit ||
+				move.isZ ||
+				move.isMax
+			)
+				return;
+			move.multihit = 4;
+			move.multihitType = "parentalbond";
+		},
 		flags: {},
 		name: "Spectre Onslaught",
 		rating: 3,
@@ -7897,16 +7921,28 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 260,
 	},
 	unrelentingstampede: {
-		/*onStart(pokemon) {
-			if (pokemon.side.totalFainted) {
-				this.add('-activate', pokemon, 'ability: Supreme Overlord');
-				const fallen = Math.min(pokemon.side.totalFainted, 5);
-				this.add('-start', pokemon, `fallen${fallen}`, '[silent]');
+		onStart(pokemon) {
+			
+			const fallen = Math.min(pokemon.side.foe.pokemon.filter(p => p.fainted).length, 5);
+			if (fallen > 0) {
+				this.add("-start", pokemon, `fallen${fallen}`, "[silent]");
 				this.effectState.fallen = fallen;
 			}
 		},
 		onEnd(pokemon) {
-			this.add('-end', pokemon, `fallen${this.effectState.fallen}`, '[silent]');
+			if (this.effectState.fallen) {
+				this.add('-end', pokemon, `fallen${this.effectState.fallen}`, '[silent]');
+			}
+			
+		},
+		onResidual(pokemon) {
+			const fallen = Math.min(pokemon.side.foe.pokemon.filter(p => p.fainted).length, 5);
+			if (fallen > 0) {
+				this.add('-end', pokemon, `fallen${this.effectState.fallen}`, '[silent]');
+				this.add("-start", pokemon, `fallen${fallen}`, "[silent]");
+				this.add("-activate", pokemon, "ability: Unrelenting Stampede");
+				this.effectState.fallen = fallen;
+			}
 		},
 		onBasePowerPriority: 21,
 		onBasePower(basePower, attacker, defender, move) {
@@ -7915,7 +7951,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				this.debug(`Supreme Overlord boost: ${powMod[this.effectState.fallen]}/4096`);
 				return this.chainModify([powMod[this.effectState.fallen], 4096]);
 			}
-		},*/
+		},
 		flags: {},
 		name: "Unrelenting Stampede",
 		rating: 4,
@@ -8330,6 +8366,26 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		name: "Winter Arbiter",
 		rating: 2,
 		num: -65,
+	},
+	wishreaper: {
+		onEnd(pokemon) {
+			let activated = false;
+			for (const target of pokemon.adjacentFoes()) {
+				if (!activated) {
+					this.add("-activate", pokemon, "ability: Wish Reaper");
+					activated = true;
+				}
+				if (target.volatiles["substitute"]) {
+					this.add("-immune", target);
+				} else {
+					this.boost({ spa: -1 }, target, pokemon, null, true);
+				}
+			}
+		},
+		num: -72,
+		name: "Wish Reaper",
+		rating: 3,
+		flags: {},
 	},
 	wonderguard: {
 		onTryHit(target, source, move) {

@@ -5407,6 +5407,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Rebirth",
 		shortDesc: "Revives a fallen ally on use.",
 	},
+	reckoning: {
+		name: "Reckoning",
+		desc: "After the user is hit by a dark type attack, this move's power is doubled.",
+		shortDesc: "Power doubles after being hit by a Dark-type move.",
+	},
 	recover: {
 		name: "Recover",
 		desc: "The user restores 1/2 of its maximum HP, rounded half up.",
