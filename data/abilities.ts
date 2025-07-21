@@ -5721,7 +5721,10 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 					});
 			const monoCounterResult = Math.max(...Object.values(monoCounter));
 					this.debug(`monocounter: ${monoCounterResult}`)
-			//this.debug(`all types test ${allTypes}`)
+			if (monoCounterResult === 6){
+				pokemon.abilityState.monotype = true;
+			}
+
 			const alliesWithoutUser = pokemon.side.pokemon.filter((p) => p !== pokemon);
 			const uniqueTypes: string[] = [];
 			for (const ally of alliesWithoutUser) {
@@ -5746,7 +5749,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			}
 		},
 		onModifyDamage(damage, source, target, move) {
-			if (source.getStat("spa") >= source.getStat("spe")) {
+			if ((source.getStat("spa") >= source.getStat("spe")) || source.abilityState.monotype === true) {
 				const typeCount = source.abilityState?.typeCount;
 
 				switch (typeCount) {
@@ -5776,7 +5779,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			}
 		},
 		onModifySpe(spe, pokemon) {
-			if (pokemon.speed > pokemon.getStat("spa")) {
+			if ((pokemon.speed > pokemon.getStat("spa") || pokemon.abilityState.monotype === true)) {
 				const typeCount = pokemon.abilityState?.typeCount;
 				switch (typeCount) {
 					case 1:
