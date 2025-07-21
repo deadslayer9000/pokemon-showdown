@@ -646,9 +646,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	blazingswap: {
 		onTryHit(target, source, move) {
-			if (
-				(target !== source && move.type === "Fire")
-			) {
+			if (target !== source && move.type === "Fire") {
 				this.add("-immune", target, "[from] ability: Blazing Swap");
 				return null;
 			}
@@ -659,13 +657,16 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				pokemon.species.baseSpecies !== "Delta-Aegislash" ||
 				pokemon.transformed ||
 				move.name === "Enflame"
-			) return;
-			if (move.name === "Infernal Shield" && pokemon.species.name === "Delta-Aegislash-Blade") {
+			)
+				return;
+			if (
+				move.name === "Infernal Shield" &&
+				pokemon.species.name === "Delta-Aegislash-Blade"
+			) {
 				pokemon.formeChange("Delta-Aegislash", this.effect, true);
 			} else if (pokemon.species.name === "Delta-Aegislash") {
 				pokemon.formeChange("Delta-Aegislash-Blade", this.effect, true);
 			}
-
 		},
 		flags: {
 			failroleplay: 1,
@@ -732,11 +733,27 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	breach: {
 		onSwitchIn(pokemon) {
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+			const sideConditions = [
+				"spikes",
+				"toxicspikes",
+				"stealthrock",
+				"stickyweb",
+				"gmaxsteelsurge",
+			];
 			for (const condition of sideConditions) {
 				if (pokemon.side.removeSideCondition(condition)) {
-					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] ability: Breach', `[of] ${pokemon}`);
-					this.hint(`${pokemon.name}'s Breach removed ${this.dex.conditions.get(condition).name} from the battlefield.`);
+					this.add(
+						"-sideend",
+						pokemon.side,
+						this.dex.conditions.get(condition).name,
+						"[from] ability: Breach",
+						`[of] ${pokemon}`
+					);
+					this.hint(
+						`${pokemon.name}'s Breach removed ${
+							this.dex.conditions.get(condition).name
+						} from the battlefield.`
+					);
 				}
 			} //hazard immunity in moves.ts
 		},
@@ -1212,7 +1229,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	corrosivesurge: {
 		onStart(source) {
-			this.field.setTerrain("corrosiveterrain")
+			this.field.setTerrain("corrosiveterrain");
 		},
 		flags: {},
 		name: "Corrosive Surge",
@@ -1275,26 +1292,29 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	covenant: {
 		onStart(pokemon) {
-		if (pokemon.hp > pokemon.maxhp / 2) {
-			this.add("-ability", pokemon, "Covenant");
-		}
+			if (pokemon.hp > pokemon.maxhp / 2) {
+				this.add("-ability", pokemon, "Covenant");
+			}
 		},
 		onModifyAtk(atk, pokemon) {
-		if (pokemon.hp > pokemon.maxhp / 2) {
-			return this.chainModify(0.5);
-		}
+			if (pokemon.hp > pokemon.maxhp / 2) {
+				return this.chainModify(0.5);
+			}
 		},
 		onModifySpe(spe, pokemon) {
-		if (pokemon.hp > pokemon.maxhp / 2) {
-			return this.chainModify(0.5);
-		}
+			if (pokemon.hp > pokemon.maxhp / 2) {
+				return this.chainModify(0.5);
+			}
 		},
 		onResidual(pokemon) {
-		if (pokemon.hp <= pokemon.maxhp / 2 && pokemon.getAbility().id === 'covenant') {
-			this.add("-ability", pokemon, "Huge Power");
-			pokemon.setAbility("hugepower");
-		}
-	},
+			if (
+				pokemon.hp <= pokemon.maxhp / 2 &&
+				pokemon.getAbility().id === "covenant"
+			) {
+				this.add("-ability", pokemon, "Huge Power");
+				pokemon.setAbility("hugepower");
+			}
+		},
 		flags: {},
 		name: "Covenant",
 		rating: 0,
@@ -1723,13 +1743,13 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	diamondgrove: {
 		onStart(pokemon) {
-			if(this.field.isTerrain('grassyterrain')) {
-				this.add('-activate', pokemon, 'ability: Diamond Grove' )
+			if (this.field.isTerrain("grassyterrain")) {
+				this.add("-activate", pokemon, "ability: Diamond Grove");
 			}
 		},
 		onTerrainChange(pokemon) {
-			if(this.field.isTerrain('grassyterrain')) {
-				this.add('-activate', pokemon, 'ability: Diamond Grove' )
+			if (this.field.isTerrain("grassyterrain")) {
+				this.add("-activate", pokemon, "ability: Diamond Grove");
 			}
 		},
 		flags: {},
@@ -2136,7 +2156,10 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			}
 		},
 		onBasePower(basePower, attacker, defender, move) {
-			if ( move.name === "Reckoning" && attacker.abilityState.evilsbane=== true) {
+			if (
+				move.name === "Reckoning" &&
+				attacker.abilityState.evilsbane === true
+			) {
 				this.chainModify([8192, 4096]);
 			}
 		},
@@ -2280,7 +2303,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				this.add("-ability", pokemon, "Final Verdict");
 			}
 		},
-		
+
 		flags: {},
 		name: "Final Verdict",
 		rating: 3,
@@ -4022,7 +4045,11 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	merciless: {
 		onModifyCritRatio(critRatio, source, target) {
-			if (target && ["psn", "tox"].includes(target.status) || this.field.isTerrain('corrosiveterrain')) return 5;
+			if (
+				(target && ["psn", "tox"].includes(target.status)) ||
+				this.field.isTerrain("corrosiveterrain")
+			)
+				return 5;
 		},
 		flags: {},
 		name: "Merciless",
@@ -5180,7 +5207,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			}
 		},
 		onResidual(pokemon) {
-			if (this.field.isTerrain('corrosiveterrain')) {
+			if (this.field.isTerrain("corrosiveterrain")) {
 				this.heal(pokemon.baseMaxhp / 6);
 			}
 		},
@@ -5232,9 +5259,12 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			if (target.hasAbility("shielddust") || target.hasItem("covertcloak"))
 				return;
 			if (this.checkMoveMakesContact(move, target, source)) {
-				if (this.field.isTerrain('corrosiveterrain') && this.randomChance(6, 10)) {
-						target.trySetStatus("psn", source);
-					} else if (this.randomChance(3, 10)) {
+				if (
+					this.field.isTerrain("corrosiveterrain") &&
+					this.randomChance(6, 10)
+				) {
+					target.trySetStatus("psn", source);
+				} else if (this.randomChance(3, 10)) {
 					target.trySetStatus("psn", source);
 				}
 			}
@@ -5496,7 +5526,12 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			onStart(pokemon, source, effect) {
 				if (effect?.name === "Booster Energy") {
 					this.effectState.fromBooster = true;
-					this.add("-activate", pokemon, "ability: Protosynthesis", "[fromitem]");
+					this.add(
+						"-activate",
+						pokemon,
+						"ability: Protosynthesis",
+						"[fromitem]"
+					);
 				} else {
 					this.add("-activate", pokemon, "ability: Protosynthesis");
 				}
@@ -5666,30 +5701,51 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	purranormal: {
 		onStart(pokemon) {
-			const allies = pokemon.side.pokemon
+			const allies = pokemon.side.pokemon.filter((p) => p !== pokemon);
 			const uniqueTypes: string[] = [];
-				for (const ally of allies) {
-				this.debug(`${ally.name}: ${ally.types.join('/')}`);
+			for (const ally of allies) {
+				this.debug(`${ally.name}: ${ally.types.join("/")}`);
 				for (const type of ally.types) {
 					if (!uniqueTypes.includes(type)) {
 						uniqueTypes.push(type);
 					}
-				
 				}
 			}
 			const typeCount = uniqueTypes.length;
-			this.debug(uniqueTypes.join('/'));
+			this.debug(uniqueTypes.join("/"));
 			this.debug(`${typeCount} unique types`);
 			pokemon.abilityState.typeCount = typeCount;
 		},
-		onResidual(pokemon, source, effect) {
-			const typeCount = pokemon.abilityState.typeCount;
-			this.debug(`${typeCount} unique types residual`);
-		},
 		onModifyDamage(damage, source, target, move) {
-			const typeCount = source.abilityState?.typeCount;
-			this.debug(`${typeCount} unique types modify damage`);
-			
+			if (source.getStat("spa") >= source.getStat("spe")) {
+				const typeCount = source.abilityState?.typeCount;
+				this.hint(`${source.name}'s Purranormal boosted its Special Attack`)
+				switch (typeCount) {
+					case 1:
+						return this.chainModify([4300, 4096]);
+					case 2:
+						return this.chainModify([4507, 4096]);
+					case 3:
+						return this.chainModify([4713, 4096]);
+					case 4:
+						return this.chainModify([4919, 4096]);
+					case 5:
+						return this.chainModify([5125, 4096]);
+					case 6:
+						return this.chainModify([5331, 4096]);
+					case 7:
+						return this.chainModify([5538, 4096]);
+					case 8:
+						return this.chainModify([5744, 4096]);
+					case 9:
+						return this.chainModify([5951, 4096]);
+					case 10:
+						return this.chainModify([6157, 4096]);
+					default:
+						return this.chainModify([6157, 4096]);
+				}
+				
+			}
 		},
 		flags: {},
 		name: "Purranormal",
@@ -6422,15 +6478,26 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	shapeshift: {
 		onAfterMove(source, target, move) {
-			if (move.id === "bittermalice" && target && !target.fainted && !source.transformed) {
+			if (
+				move.id === "bittermalice" &&
+				target &&
+				!target.fainted &&
+				!source.transformed
+			) {
 				source.transformInto(target);
 				this.add("-activate", source, "ability: Shapeshift");
-				this.add('-message', `${source.name} transformed into ${target.name} thanks to Shapeshift!`);
+				this.add(
+					"-message",
+					`${source.name} transformed into ${target.name} thanks to Shapeshift!`
+				);
 
 				const targetsability = target.getAbility().name;
 				this.add("-ability", source, targetsability);
 			} else {
-				this.add("-message", `${source.name} failed to shapeshift into ${target.name}.`);
+				this.add(
+					"-message",
+					`${source.name} failed to shapeshift into ${target.name}.`
+				);
 			}
 		},
 		flags: {},
@@ -7162,7 +7229,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				this.add("-start", pokemon, `fallen${fallen}`, "[silent]");
 				this.effectState.fallen = fallen;
 			}
-		}, 
+		},
 		onEnd(pokemon) {
 			this.add(
 				"-end",
@@ -7683,7 +7750,9 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		onBasePowerPriority: 19,
 		onBasePower(basePower, attacker, defender, move) {
 			if (
-				(attacker.status === "psn" || attacker.status === "tox" || this.field.isTerrain('corrosiveterrain')) &&
+				(attacker.status === "psn" ||
+					attacker.status === "tox" ||
+					this.field.isTerrain("corrosiveterrain")) &&
 				move.category === "Physical"
 			) {
 				return this.chainModify(1.5);
@@ -7699,10 +7768,12 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			// Despite not being a secondary, Shield Dust / Covert Cloak block Toxic Chain's effect
 			if (target.hasAbility("shielddust") || target.hasItem("covertcloak"))
 				return;
-			if (this.field.isTerrain('corrosiveterrain') && this.randomChance(6, 10)) {
+			if (
+				this.field.isTerrain("corrosiveterrain") &&
+				this.randomChance(6, 10)
+			) {
 				target.trySetStatus("tox", source);
-			}
-			else if (this.randomChance(3, 10)) {
+			} else if (this.randomChance(3, 10)) {
 				target.trySetStatus("tox", source);
 			}
 		},
@@ -7734,7 +7805,9 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			// n.b. only affects Hackmons
 			// interaction with No Ability is complicated: https://www.smogon.com/forums/threads/pokemon-sun-moon-battle-mechanics-research.3586701/page-76#post-7790209
 			if (
-				pokemon.adjacentFoes().some((foeActive) => foeActive.ability === "noability")
+				pokemon
+					.adjacentFoes()
+					.some((foeActive) => foeActive.ability === "noability")
 			) {
 				this.effectState.seek = false;
 			}
@@ -7953,8 +8026,10 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	unrelentingstampede: {
 		onStart(pokemon) {
-			
-			const fallen = Math.min(pokemon.side.foe.pokemon.filter(p => p.fainted).length, 5);
+			const fallen = Math.min(
+				pokemon.side.foe.pokemon.filter((p) => p.fainted).length,
+				5
+			);
 			if (fallen > 0) {
 				this.add("-start", pokemon, `fallen${fallen}`, "[silent]");
 				this.effectState.fallen = fallen;
@@ -7962,14 +8037,26 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		},
 		onEnd(pokemon) {
 			if (this.effectState.fallen) {
-				this.add('-end', pokemon, `fallen${this.effectState.fallen}`, '[silent]');
+				this.add(
+					"-end",
+					pokemon,
+					`fallen${this.effectState.fallen}`,
+					"[silent]"
+				);
 			}
-			
 		},
 		onResidual(pokemon) {
-			const fallen = Math.min(pokemon.side.foe.pokemon.filter(p => p.fainted).length, 5);
+			const fallen = Math.min(
+				pokemon.side.foe.pokemon.filter((p) => p.fainted).length,
+				5
+			);
 			if (fallen > 0) {
-				this.add('-end', pokemon, `fallen${this.effectState.fallen}`, '[silent]');
+				this.add(
+					"-end",
+					pokemon,
+					`fallen${this.effectState.fallen}`,
+					"[silent]"
+				);
 				this.add("-start", pokemon, `fallen${fallen}`, "[silent]");
 				this.add("-activate", pokemon, "ability: Unrelenting Stampede");
 				this.effectState.fallen = fallen;
@@ -7979,7 +8066,9 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		onBasePower(basePower, attacker, defender, move) {
 			if (this.effectState.fallen) {
 				const powMod = [4096, 4506, 4915, 5325, 5734, 6144];
-				this.debug(`Supreme Overlord boost: ${powMod[this.effectState.fallen]}/4096`);
+				this.debug(
+					`Supreme Overlord boost: ${powMod[this.effectState.fallen]}/4096`
+				);
 				return this.chainModify([powMod[this.effectState.fallen], 4096]);
 			}
 		},
