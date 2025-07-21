@@ -5751,6 +5751,10 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		onModifyDamage(damage, source, target, move) {
 			if ((source.getStat("spa") >= source.getStat("spe")) || source.abilityState.monotype === true) {
 				const typeCount = source.abilityState?.typeCount;
+				if (source.abilityState.monotype === true){
+					this.debug("MONOTYPE SPECIAL ATTACK");
+					return this.chainModify([5336, 4096]);
+				}
 
 				switch (typeCount) {
 					case 1:
@@ -5781,6 +5785,10 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		onModifySpe(spe, pokemon) {
 			if ((pokemon.speed > pokemon.getStat("spa") || pokemon.abilityState.monotype === true)) {
 				const typeCount = pokemon.abilityState?.typeCount;
+				if (pokemon.abilityState.monotype === true){
+					this.debug("MONOTYPE SPEED");
+					return this.chainModify([6157, 4096]);
+				}
 				switch (typeCount) {
 					case 1:
 						return this.chainModify([4300, 4096]);
@@ -5805,6 +5813,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 					default:
 						return this.chainModify([6157, 4096]);
 				}
+				
 			}
 		},
 		flags: {},
