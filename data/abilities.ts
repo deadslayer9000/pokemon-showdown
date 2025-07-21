@@ -5703,9 +5703,11 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		onStart(pokemon) {
 			const alliesWithUser = pokemon.side.pokemon;
 			for ( const ally of alliesWithUser) {
-				for (const type of ally.types) {
-					this.debug(`mono: ${type}`)
-				}
+				const monoCounter = {};
+					ally.types.forEach(type => {
+						this.debug(`type debug: ${type}`)
+					});
+				
 			}
 			const alliesWithoutUser = pokemon.side.pokemon.filter((p) => p !== pokemon);
 			const uniqueTypes: string[] = [];
