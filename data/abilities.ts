@@ -32,6 +32,8 @@ Ratings and how they work:
 
 */
 
+import { join } from "node:path";
+
 export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	noability: {
 		isNonstandard: "Past",
@@ -5665,9 +5667,19 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	purranormal: {
 		onStart(pokemon) {
 			const allies = pokemon.side.pokemon
+			const uniqueTypes: string[] = [];
 				for (const ally of allies) {
 				this.debug(`${ally.name}: ${ally.types.join('/')}`);
+				for (const type of ally.types) {
+					if (!uniqueTypes.includes(type)) {
+						uniqueTypes.push(type);
+					}
+				
 				}
+			}
+			const typeCount = uniqueTypes.length;
+			this.debug(uniqueTypes.join('/'));
+			this.debug(`${typeCount} unique types`);
 		},
 		flags: {},
 		name: "Purranormal",
