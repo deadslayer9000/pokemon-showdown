@@ -5715,13 +5715,18 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			this.debug(uniqueTypes.join("/"));
 			this.debug(`${typeCount} unique types`);
 			pokemon.abilityState.typeCount = typeCount;
+			if (pokemon.getStat("spa") >= pokemon.getStat("spe")) {
+				this.hint(
+					`${pokemon.name}'s Purranormal boosted its Special Attack`
+				);
+			} else {
+				this.hint(`${pokemon.name}'s Purranormal boosted its Speed`);
+			}
 		},
 		onModifyDamage(damage, source, target, move) {
 			if (source.getStat("spa") >= source.getStat("spe")) {
 				const typeCount = source.abilityState?.typeCount;
-				this.hint(
-					`${source.name}'s Purranormal boosted its Special Attack`
-				);
+
 				switch (typeCount) {
 					case 1:
 						return this.chainModify([4219, 4096]);
@@ -5751,9 +5756,6 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		onModifySpe(spe, pokemon) {
 			if (pokemon.speed > pokemon.getStat("spa")) {
 				const typeCount = pokemon.abilityState?.typeCount;
-				this.hint(
-					`${pokemon.name}'s Purranormal boosted its Speed`
-				);
 				switch (typeCount) {
 					case 1:
 						return this.chainModify([4300, 4096]);
