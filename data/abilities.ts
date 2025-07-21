@@ -5703,14 +5703,29 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		onStart(pokemon) {
 			const alliesWithUser = pokemon.side.pokemon;
 			const allTypes: string[] = [];
-			const monoCounter = {};
+			const monoCounter: { [key: string]: number } = {};
 			for ( const ally of alliesWithUser) {
 				for (const type of ally.types){
 					allTypes.push(type)
+					
+					
 				}
 				
 			}
-			this.debug(`all types test ${allTypes}`)
+			allTypes.forEach(occurance => {
+						if (monoCounter[occurance]){
+							monoCounter[occurance] += 1;
+						} else {
+							monoCounter[occurance] = 1;
+						}
+					});
+			const monoCounterResult = Object.keys(monoCounter).map(occurance => {
+				return {
+					matches: monoCounter[occurance]
+				}
+			})
+					this.debug(`monocounter: ${monoCounterResult}`)
+			//this.debug(`all types test ${allTypes}`)
 			const alliesWithoutUser = pokemon.side.pokemon.filter((p) => p !== pokemon);
 			const uniqueTypes: string[] = [];
 			for (const ally of alliesWithoutUser) {
