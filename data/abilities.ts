@@ -5701,6 +5701,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	purranormal: {
 		onStart(pokemon) {
+			this.add("-activate", pokemon, "ability: Quark Drive");
 			const alliesWithUser = pokemon.side.pokemon;
 			const allTypes: string[] = [];
 			const monoCounter: { [key: string]: number } = {};
@@ -5739,6 +5740,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 //			this.debug(`${typeCount} unique types`);
 			pokemon.abilityState.typeCount = typeCount;
 			if (pokemon.abilityState.monotype === true) {
+				
 				this.hint(
 					`${pokemon.name}'s Monotype boosted Purranormal increased its Special Attack and Speed!`
 				);
