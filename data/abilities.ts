@@ -5680,6 +5680,11 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			const typeCount = uniqueTypes.length;
 			this.debug(uniqueTypes.join('/'));
 			this.debug(`${typeCount} unique types`);
+			pokemon.abilityState.typeCount = typeCount;
+		},
+		onResidual(pokemon, source, effect) {
+			const typeCount = pokemon.abilityState.typeCount;
+			this.debug(`${typeCount} unique types residual`);
 		},
 		flags: {},
 		name: "Purranormal",
