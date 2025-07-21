@@ -5749,7 +5749,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			}
 		},
 		onModifySpe(spe, pokemon) {
-			if (pokemon.getStat("spe") > pokemon.getStat("spa")) {
+			if (pokemon.speed > pokemon.getStat("spa")) {
 				const typeCount = pokemon.abilityState?.typeCount;
 				this.hint(
 					`${pokemon.name}'s Purranormal boosted its Speed`
