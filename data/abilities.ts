@@ -5701,7 +5701,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	purranormal: {
 		onStart(pokemon) {
-			this.add("-activate", pokemon, "ability: Quark Drive");
+			this.add("-activate", pokemon, "ability: Purranormal");
 			const alliesWithUser = pokemon.side.pokemon;
 			const allTypes: string[] = [];
 			const monoCounter: { [key: string]: number } = {};
