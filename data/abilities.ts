@@ -5727,7 +5727,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			);
 			const uniqueTypes: string[] = [];
 			for (const ally of alliesWithoutUser) {
-				this.debug(`${ally.name}: ${ally.types.join("/")}`);
+//				this.debug(`${ally.name}: ${ally.types.join("/")}`);
 				for (const type of ally.types) {
 					if (!uniqueTypes.includes(type)) {
 						uniqueTypes.push(type);
@@ -5735,19 +5735,19 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				}
 			}
 			const typeCount = uniqueTypes.length;
-			this.debug(uniqueTypes.join("/"));
-			this.debug(`${typeCount} unique types`);
+//			this.debug(uniqueTypes.join("/"));
+//			this.debug(`${typeCount} unique types`);
 			pokemon.abilityState.typeCount = typeCount;
 			if (pokemon.abilityState.monotype === true) {
 				this.hint(
-					`${pokemon.name}'s Purranormal channeled the power of its allies to boost its Special Attack and Speed!`
+					`${pokemon.name}'s Monotype boosted Purranormal increased its Special Attack and Speed!`
 				);
 			} else if (pokemon.getStat("spa") >= pokemon.getStat("spe")) {
 				this.hint(
-					`${pokemon.name}'s Purranormal boosted its Special Attack`
+					`${pokemon.name}'s Purranormal increased its Special Attack`
 				);
 			} else {
-				this.hint(`${pokemon.name}'s Purranormal boosted its Speed`);
+				this.hint(`${pokemon.name}'s Purranormal increased its Speed`);
 			}
 		},
 		onModifyDamage(damage, source, target, move) {
