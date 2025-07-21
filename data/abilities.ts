@@ -5702,13 +5702,15 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	purranormal: {
 		onStart(pokemon) {
 			const alliesWithUser = pokemon.side.pokemon;
+			const allTypes: string[] = [];
+			const monoCounter = {};
 			for ( const ally of alliesWithUser) {
-				const monoCounter = {};
-					ally.types.forEach(type => {
-						this.debug(`type debug: ${type}`)
-					});
+				for (const type of ally.types){
+					allTypes.push(type)
+				}
 				
 			}
+			this.debug(`all types test ${allTypes}`)
 			const alliesWithoutUser = pokemon.side.pokemon.filter((p) => p !== pokemon);
 			const uniqueTypes: string[] = [];
 			for (const ally of alliesWithoutUser) {
