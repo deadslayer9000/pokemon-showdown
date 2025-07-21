@@ -5704,28 +5704,27 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			const alliesWithUser = pokemon.side.pokemon;
 			const allTypes: string[] = [];
 			const monoCounter: { [key: string]: number } = {};
-			for ( const ally of alliesWithUser) {
-				for (const type of ally.types){
-					allTypes.push(type)
-					
-					
+			for (const ally of alliesWithUser) {
+				for (const type of ally.types) {
+					allTypes.push(type);
 				}
-				
 			}
-			allTypes.forEach(occurance => {
-						if (monoCounter[occurance]){
-							monoCounter[occurance] += 1;
-						} else {
-							monoCounter[occurance] = 1;
-						}
-					});
+			allTypes.forEach((occurance) => {
+				if (monoCounter[occurance]) {
+					monoCounter[occurance] += 1;
+				} else {
+					monoCounter[occurance] = 1;
+				}
+			});
 			const monoCounterResult = Math.max(...Object.values(monoCounter));
-					this.debug(`monocounter: ${monoCounterResult}`)
-			if (monoCounterResult === 6){
+			this.debug(`monocounter: ${monoCounterResult}`);
+			if (monoCounterResult === 6) {
 				pokemon.abilityState.monotype = true;
 			}
 
-			const alliesWithoutUser = pokemon.side.pokemon.filter((p) => p !== pokemon);
+			const alliesWithoutUser = pokemon.side.pokemon.filter(
+				(p) => p !== pokemon
+			);
 			const uniqueTypes: string[] = [];
 			for (const ally of alliesWithoutUser) {
 				this.debug(`${ally.name}: ${ally.types.join("/")}`);
@@ -5739,8 +5738,11 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			this.debug(uniqueTypes.join("/"));
 			this.debug(`${typeCount} unique types`);
 			pokemon.abilityState.typeCount = typeCount;
-			
-			if (pokemon.getStat("spa") >= pokemon.getStat("spe")) {
+			if (pokemon.abilityState.monotype === true) {
+				this.hint(
+					`${pokemon.name}'s Purranormal channeled the power of its allies to boost its Special Attack and Speed!`
+				);
+			} else if (pokemon.getStat("spa") >= pokemon.getStat("spe")) {
 				this.hint(
 					`${pokemon.name}'s Purranormal boosted its Special Attack`
 				);
@@ -5749,9 +5751,12 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			}
 		},
 		onModifyDamage(damage, source, target, move) {
-			if ((source.getStat("spa") >= source.getStat("spe")) || source.abilityState.monotype === true) {
+			if (
+				source.getStat("spa") >= source.getStat("spe") ||
+				source.abilityState.monotype === true
+			) {
 				const typeCount = source.abilityState?.typeCount;
-				if (source.abilityState.monotype === true){
+				if (source.abilityState.monotype === true) {
 					this.debug("MONOTYPE SPECIAL ATTACK");
 					return this.chainModify([5336, 4096]);
 				}
@@ -5783,9 +5788,12 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			}
 		},
 		onModifySpe(spe, pokemon) {
-			if ((pokemon.speed > pokemon.getStat("spa") || pokemon.abilityState.monotype === true)) {
+			if (
+				pokemon.speed > pokemon.getStat("spa") ||
+				pokemon.abilityState.monotype === true
+			) {
 				const typeCount = pokemon.abilityState?.typeCount;
-				if (pokemon.abilityState.monotype === true){
+				if (pokemon.abilityState.monotype === true) {
 					this.debug("MONOTYPE SPEED");
 					return this.chainModify([6157, 4096]);
 				}
@@ -5813,7 +5821,6 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 					default:
 						return this.chainModify([6157, 4096]);
 				}
-				
 			}
 		},
 		flags: {},
