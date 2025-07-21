@@ -5701,9 +5701,15 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	purranormal: {
 		onStart(pokemon) {
-			const allies = pokemon.side.pokemon.filter((p) => p !== pokemon);
+			const alliesWithUser = pokemon.side.pokemon;
+			for ( const ally of alliesWithUser) {
+				for (const type of ally.types) {
+					this.debug(`mono: ${type}`)
+				}
+			}
+			const alliesWithoutUser = pokemon.side.pokemon.filter((p) => p !== pokemon);
 			const uniqueTypes: string[] = [];
-			for (const ally of allies) {
+			for (const ally of alliesWithoutUser) {
 				this.debug(`${ally.name}: ${ally.types.join("/")}`);
 				for (const type of ally.types) {
 					if (!uniqueTypes.includes(type)) {
@@ -5715,6 +5721,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			this.debug(uniqueTypes.join("/"));
 			this.debug(`${typeCount} unique types`);
 			pokemon.abilityState.typeCount = typeCount;
+			
 			if (pokemon.getStat("spa") >= pokemon.getStat("spe")) {
 				this.hint(
 					`${pokemon.name}'s Purranormal boosted its Special Attack`
