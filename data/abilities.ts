@@ -817,8 +817,10 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	chromaticscales: {//TODO
 		onStart(pokemon){
-			//const move1 = pokemon.moves[0];
-			//move1
+			const move1name = pokemon.moves[0];
+			const move1 = this.dex.moves.get(move1name);
+			const move1type = move1.type;
+			this.debug(move1type);
 			this.debug("this ability doesnt work yet");
 		},
 		flags: {},
