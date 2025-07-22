@@ -56,6 +56,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		name: "[Gen 9] Unrated Random Battle",
 		mod: 'gen9',
 		team: 'random',
+		searchShow: false,
 		challengeShow: false,
 		rated: false,
 		ruleset: ['Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Illusion Level Mod'],
