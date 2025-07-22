@@ -815,7 +815,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 3,
 		num: 34,
 	},
-	chromaticscales: {
+	chromaticscales: {//TODO
 		flags: {},
 		name: "Chromatic Scales",
 		rating: 4,
