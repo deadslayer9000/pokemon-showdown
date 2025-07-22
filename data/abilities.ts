@@ -816,6 +816,10 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 34,
 	},
 	chromaticscales: {//TODO
+		onStart(pokemon){
+			const move1 = pokemon.moves[0];
+			this.debug(move1);
+		},
 		flags: {},
 		name: "Chromatic Scales",
 		rating: 4,
