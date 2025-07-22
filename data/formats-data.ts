@@ -3,7 +3,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "LC",
 	},
 	ivysaur: {
-		tier: "OU",
+		tier: "NFE",
 	},
 	venusaur: {
 		tier: "PU",
