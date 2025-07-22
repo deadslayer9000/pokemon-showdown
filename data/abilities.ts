@@ -815,7 +815,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 3,
 		num: 34,
 	},
-	chromaticscales: {
+	chromaticscales: {//TODO
 		flags: {},
 		name: "Chromatic Scales",
 		rating: 4,
@@ -5701,10 +5701,34 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	purranormal: {
 		onStart(pokemon) {
-			const allies = pokemon.side.pokemon.filter((p) => p !== pokemon);
+			this.add("-activate", pokemon, "ability: Purranormal");
+			const alliesWithUser = pokemon.side.pokemon;
+			const allTypes: string[] = [];
+			const monoCounter: { [key: string]: number } = {};
+			for (const ally of alliesWithUser) {
+				for (const type of ally.types) {
+					allTypes.push(type);
+				}
+			}
+			allTypes.forEach((occurance) => {
+				if (monoCounter[occurance]) {
+					monoCounter[occurance] += 1;
+				} else {
+					monoCounter[occurance] = 1;
+				}
+			});
+			const monoCounterResult = Math.max(...Object.values(monoCounter));
+			this.debug(`monocounter: ${monoCounterResult}`);
+			if (monoCounterResult === 6) {
+				pokemon.abilityState.monotype = true;
+			}
+
+			const alliesWithoutUser = pokemon.side.pokemon.filter(
+				(p) => p !== pokemon
+			);
 			const uniqueTypes: string[] = [];
-			for (const ally of allies) {
-				this.debug(`${ally.name}: ${ally.types.join("/")}`);
+			for (const ally of alliesWithoutUser) {
+//				this.debug(`${ally.name}: ${ally.types.join("/")}`);
 				for (const type of ally.types) {
 					if (!uniqueTypes.includes(type)) {
 						uniqueTypes.push(type);
@@ -5712,20 +5736,32 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				}
 			}
 			const typeCount = uniqueTypes.length;
-			this.debug(uniqueTypes.join("/"));
-			this.debug(`${typeCount} unique types`);
+//			this.debug(uniqueTypes.join("/"));
+//			this.debug(`${typeCount} unique types`);
 			pokemon.abilityState.typeCount = typeCount;
-			if (pokemon.getStat("spa") >= pokemon.getStat("spe")) {
+			if (pokemon.abilityState.monotype === true) {
+				
 				this.hint(
-					`${pokemon.name}'s Purranormal boosted its Special Attack`
+					`${pokemon.name}'s Monotype boosted Purranormal increased its Special Attack and Speed!`
+				);
+			} else if (pokemon.getStat("spa") >= pokemon.getStat("spe")) {
+				this.hint(
+					`${pokemon.name}'s Purranormal increased its Special Attack`
 				);
 			} else {
-				this.hint(`${pokemon.name}'s Purranormal boosted its Speed`);
+				this.hint(`${pokemon.name}'s Purranormal increased its Speed`);
 			}
 		},
 		onModifyDamage(damage, source, target, move) {
-			if (source.getStat("spa") >= source.getStat("spe")) {
+			if (
+				source.getStat("spa") >= source.getStat("spe") ||
+				source.abilityState.monotype === true
+			) {
 				const typeCount = source.abilityState?.typeCount;
+				if (source.abilityState.monotype === true) {
+					this.debug("MONOTYPE SPECIAL ATTACK");
+					return this.chainModify([5336, 4096]);
+				}
 
 				switch (typeCount) {
 					case 1:
@@ -5754,8 +5790,15 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			}
 		},
 		onModifySpe(spe, pokemon) {
-			if (pokemon.speed > pokemon.getStat("spa")) {
+			if (
+				pokemon.speed > pokemon.getStat("spa") ||
+				pokemon.abilityState.monotype === true
+			) {
 				const typeCount = pokemon.abilityState?.typeCount;
+				if (pokemon.abilityState.monotype === true) {
+					this.debug("MONOTYPE SPEED");
+					return this.chainModify([6157, 4096]);
+				}
 				switch (typeCount) {
 					case 1:
 						return this.chainModify([4300, 4096]);
