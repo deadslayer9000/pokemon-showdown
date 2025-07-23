@@ -26875,4 +26875,26 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		target: "normal",
 		type: "Ghost",
 	},
+	pressurize: {
+		num: -81,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		pp: 5,
+		priority: 0,
+		name: "Pressurize",
+		flags: { snatch: 1, heal: 1, metronome: 1 },
+		secondary: null,
+		target: "self",
+		type: "Water",
+		zMove: { effect: "clearnegativeboost" },
+		onModifyMove(move, pokemon){
+			if (pokemon.status === "brn"){
+				move.heal = [1, 2];
+			} else {
+				this.hint(`${pokemon.name}'s Pressurize failed because it isn't burned.`)
+				return;
+			}
+		}
+	}
 };
