@@ -102300,7 +102300,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			xscissor: ["9M"],
 		}
 	},
-	deltashuckle: {
+	shuckledelta: {
 		learnset: {
 			acid: ["9M"],
 			acidspray: ["9L5","9M"],

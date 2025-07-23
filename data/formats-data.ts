@@ -6061,7 +6061,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	yanmelia: {
 		tier: "UU",
 	},
-	deltashuckle: {
+	shuckledelta: {
 		tier: "NU",
 	},
 	shrookle: {
