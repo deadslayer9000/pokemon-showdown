@@ -483,7 +483,9 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				return;
 			}
 			if (
-				(source.species.id === "greninjabond" || (source.species.id === "greninja" && source.ability === "battlebond" )) &&
+				(source.species.id === "greninjabond" ||
+					(source.species.id === "greninja" &&
+						source.ability === "battlebond")) &&
 				source.hp &&
 				!source.transformed &&
 				source.side.foePokemonLeft()
@@ -492,7 +494,9 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				source.formeChange("Greninja-Ash", this.effect, true);
 			}
 			if (
-				(source.species.id === "omegagreninjabond" || (source.species.id === "omegagreninja" && source.ability === "battlebond" )) &&
+				(source.species.id === "omegagreninjabond" ||
+					(source.species.id === "omegagreninja" &&
+						source.ability === "battlebond")) &&
 				source.hp &&
 				!source.transformed &&
 				source.side.foePokemonLeft()
@@ -815,56 +819,58 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 3,
 		num: 34,
 	},
-	chromaticscales: {//TODO
-		onStart(pokemon){
-			if (pokemon.hp >= pokemon.maxhp / 2){
-			const regulartype = pokemon.types;
-			pokemon.abilityState.regulartype = regulartype;
-			const move1name = pokemon.moves[0];
-			const move1type = this.dex.moves.get(move1name).type;
-			const move2name = pokemon.moves[1];
-			const move2type = this.dex.moves.get(move2name).type;
-			this.debug(move1type);
-			this.debug(move2type);
-			const newtype = [move1type, move2type];
-			if (pokemon.setType(newtype)) {
-				this.add(
-					"-start",
-					pokemon,
-					"typechange",
-					newtype.join("/"),
-					"[from] ability: Chromatic Scales"
-				);
+	chromaticscales: {
+		//TODO
+		onStart(pokemon) {
+			if (pokemon.hp >= pokemon.maxhp / 2) {
+				const regulartype = pokemon.types;
+				pokemon.abilityState.regulartype = regulartype;
+				const move1name = pokemon.moves[0];
+				const move1type = this.dex.moves.get(move1name).type;
+				const move2name = pokemon.moves[1];
+				const move2type = this.dex.moves.get(move2name).type;
+				this.debug(move1type);
+				this.debug(move2type);
+				const newtype = [move1type, move2type];
+				if (pokemon.setType(newtype)) {
+					this.add(
+						"-start",
+						pokemon,
+						"typechange",
+						newtype.join("/"),
+						"[from] ability: Chromatic Scales"
+					);
 
-				this.add(
-					"-message",
-					`${pokemon.name}'s type changed to ${newtype.join(
-						"/"
-					)} due to its Chromatic Scales!`
-				);
+					this.add(
+						"-message",
+						`${pokemon.name}'s type changed to ${newtype.join(
+							"/"
+						)} due to its Chromatic Scales!`
+					);
+				}
 			}
-		}
-
 		},
 		onResidual(pokemon) {
-			if (pokemon.hp < pokemon.maxhp / 2){
+			if (pokemon.hp < pokemon.maxhp / 2) {
 				const regulartype = pokemon.abilityState.regulartype;
 				if (pokemon.setType(regulartype)) {
-				this.add(
-					"-start",
-					pokemon,
-					"typechange",
-					regulartype.join("/"),
-					"[from] ability: Chromatic Scales"
-				);
+					this.add(
+						"-start",
+						pokemon,
+						"typechange",
+						regulartype.join("/"),
+						"[from] ability: Chromatic Scales"
+					);
 
-				this.add(
-					"-message",
-					`${pokemon.name}'s Chromatic Scales fell and changed its type back to ${regulartype.join(
-						"/"
-					)}`
-				);
-			}
+					this.add(
+						"-message",
+						`${
+							pokemon.name
+						}'s Chromatic Scales fell and changed its type back to ${regulartype.join(
+							"/"
+						)}`
+					);
+				}
 			}
 		},
 		flags: {},
@@ -3186,7 +3192,10 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	hocuspocus: {
 		onFractionalPriorityPriority: -1,
 		onFractionalPriority(priority, pokemon, target, move) {
-			if (this.field.getPseudoWeather('trickroom') && move.category === "Status") {
+			if (
+				this.field.getPseudoWeather("trickroom") &&
+				move.category === "Status"
+			) {
 				return -9;
 			}
 		},
@@ -5780,7 +5789,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			);
 			const uniqueTypes: string[] = [];
 			for (const ally of alliesWithoutUser) {
-//				this.debug(`${ally.name}: ${ally.types.join("/")}`);
+				//				this.debug(`${ally.name}: ${ally.types.join("/")}`);
 				for (const type of ally.types) {
 					if (!uniqueTypes.includes(type)) {
 						uniqueTypes.push(type);
@@ -5788,11 +5797,10 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				}
 			}
 			const typeCount = uniqueTypes.length;
-//			this.debug(uniqueTypes.join("/"));
-//			this.debug(`${typeCount} unique types`);
+			//			this.debug(uniqueTypes.join("/"));
+			//			this.debug(`${typeCount} unique types`);
 			pokemon.abilityState.typeCount = typeCount;
 			if (pokemon.abilityState.monotype === true) {
-				
 				this.hint(
 					`${pokemon.name}'s Monotype boosted Purranormal increased its Special Attack and Speed!`
 				);
@@ -6953,8 +6961,16 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			)
 				return;
 			move.multihit = 4;
-			move.multihitType = "parentalbond";
+			move.multihitType = "spectreonslaught";
 		},
+		onSourceModifySecondaries(secondaries, target, source, move) {
+			if (move.multihitType === "spectreonslaught" && move.hit > 1) {
+				return secondaries.filter(
+					(effect) => effect.volatileStatus !== "flinch"
+				);
+			}
+		},
+
 		flags: {},
 		name: "Spectre Onslaught",
 		rating: 3,

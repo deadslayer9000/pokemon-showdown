@@ -1745,7 +1745,7 @@ export class BattleActions {
 			const spectreModifier = 0.1; 
 			this.battle.debug(`Spectre Onslaught modifier: ${spectreModifier}`);
 			baseDamage = this.battle.modify(baseDamage, spectreModifier);
-}
+		}
 
 		// weather modifier
 		baseDamage = this.battle.runEvent('WeatherModifyDamage', pokemon, target, move, baseDamage);
