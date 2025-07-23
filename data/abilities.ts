@@ -820,8 +820,13 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			const move1name = pokemon.moves[0];
 			const move1 = this.dex.moves.get(move1name);
 			const move1type = move1.type;
+			const move2name = pokemon.moves[0];
+			const move2 = this.dex.moves.get(move2name);
+			const move2type = move2.type;
 			this.debug(move1type);
-			this.debug("this ability doesnt work yet");
+			this.debug(move2type);
+
+
 		},
 		flags: {},
 		name: "Chromatic Scales",
@@ -3136,6 +3141,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 					)} due to Helix Nebula!`
 				);
 			}
+			this.debug(`${types}`);
 		},
 	},
 	hocuspocus: {
