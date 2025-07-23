@@ -114932,7 +114932,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			terablast: ["9M"],
 			toxic: ["9M"],
 			trailblaze: ["9M"],
-			trickroom: ["9M"],
 			uproar: ["9M"],
 			wish: ["9L35"],
 			worryseed: ["9M"],
