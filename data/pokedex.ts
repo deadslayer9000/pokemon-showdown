@@ -21195,7 +21195,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		name: "Wisphir",
 		gender: "N",
 		types: ["Flying"],
-		baseStats: { hp: 79, atk: 101, def: 41, spa: 108, spd: 83, spe: 157 },
+		baseStats: { hp: 79, atk: 101, def: 41, spa: 109, spd: 83, spe: 157 },
 		abilities: { 0: "Beast Boost" },
 		weightkg: 5,
 		heightm: 3.4,
