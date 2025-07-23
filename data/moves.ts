@@ -15871,15 +15871,11 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		pp: 10,
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
-		onTryImmunity(target) {
-			// Truant and Insomnia have special treatment; they fail before
-			// checking accuracy and will double Stomping Tantrum's BP
-			if (target.ability === "truant" || target.ability === "insomnia") {
-				return false;
-			}
-		},
 		onHit(pokemon) {
-			if (pokemon.getAbility().flags["cantsuppress"]) {
+			if (pokemon.ability === 'truant' || pokemon.ability === 'insomnia') {
+				return null;
+			}
+			if (pokemon.getAbility().flags['cantsuppress']) {
 				return null;
 			}
 			if (pokemon.hasItem("Ability Shield")) {
@@ -25450,13 +25446,11 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		pp: 5,
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
-		onTryImmunity(target) {
-			if (target.ability === "truant" || target.ability === "levitate") {
-				return false;
-			}
-		},
 		onHit(pokemon) {
-			if (pokemon.getAbility().flags["cantsuppress"]) {
+			if (pokemon.ability === 'truant' || pokemon.ability === 'levitate') {
+				return null;
+			}
+			if (pokemon.getAbility().flags['cantsuppress']) {
 				return null;
 			}
 			if (pokemon.hasItem("Ability Shield")) {
