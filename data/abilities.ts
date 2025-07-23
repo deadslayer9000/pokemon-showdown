@@ -824,7 +824,22 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			this.debug(move1type);
 			this.debug(move2type);
 			const newtype = [move1type, move2type];
-			pokemon.setType(newtype);
+			if (pokemon.setType(newtype)) {
+				this.add(
+					"-start",
+					pokemon,
+					"typechange",
+					newtype.join("/"),
+					"[from] ability: Chromatic Scales"
+				);
+
+				this.add(
+					"-message",
+					`${pokemon.name}'s type changed to ${newtype.join(
+						"/"
+					)} due to Chromatic Scales!`
+				);
+			}
 
 
 		},
