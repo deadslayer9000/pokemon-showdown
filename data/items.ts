@@ -1367,7 +1367,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		megaEvolves: "Haxorus-Delta",
 		itemUser: ["Haxorus-Delta"],
 		onTakeItem(item, source) {
-			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			if (item.megaEvolves === source.species.name || source.baseSpecies.baseSpecies) return false;
 			return true;
 		},  
 		num: -12,
@@ -1379,7 +1379,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		megaEvolves: "Infernape-Delta",
 		itemUser: ["Infernape-Delta"],
 		onTakeItem(item, source) {
-			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			if (item.megaEvolves === source.species.name || source.baseSpecies.baseSpecies) return false;
 			return true;
 		},  
 		num: -8,
@@ -1400,7 +1400,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		megaEvolves: "Latias-Delta",
 		itemUser: ["Latias-Delta"],
 		onTakeItem(item, source) {
-			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			if (item.megaEvolves === source.species.name || source.baseSpecies.baseSpecies) return false;
 			return true;
 		},
 		num: -1,
@@ -1413,7 +1413,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		megaEvolves: "Latios-Delta",
 		itemUser: ["Latios-Delta"],
 		onTakeItem(item, source) {
-			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			if (item.megaEvolves === source.species.name || source.baseSpecies.baseSpecies) return false;
 			return true;
 		},
 		num: -2,
@@ -1426,7 +1426,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		megaEvolves: "Lopunny-Delta",
 		itemUser: ["Lopunny-Delta"],
 		onTakeItem(item, source) {
-			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			if (item.megaEvolves === source.species.name || source.baseSpecies.baseSpecies) return false;
 			return true;
 		},
 		num: -7,
@@ -1449,7 +1449,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		onTakeItem: false,
 		zMove: "Cataclysmic Typhoon",
 		zMoveFrom: "Thunder",
-		itemUser: ["Delta-Typhlosion"],
+		itemUser: ["Typhlosion-Delta"],
 		num: -4,
 	},
 	destinyknot: {

@@ -20759,7 +20759,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	latiasdelta: {
 		num: 380,
 		name: "Latias-Delta",
-		baseSpecies: "Latias-Delta",
+		baseSpecies: "Latias",
 		forme: "Delta",
 		types: ["Dragon", "Fairy"],
 		gender: "F",
@@ -20790,7 +20790,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	latiosdelta: {
 		num: 381,
 		name: "Latios-Delta",
-		baseSpecies: "Latios-Delta",
+		baseSpecies: "Latios",
 		forme: "Delta",
 		types: ["Dragon", "Fairy"],
 		gender: "M",
@@ -21392,7 +21392,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	lopunnydelta: {
 		num: 428,
 		name: "Lopunny-Delta",
-		baseSpecies: "Lopunny-Delta",
+		baseSpecies: "Lopunny",
 		forme: "Delta",
 		types: ["Dark", "Fairy"],
 		baseStats: { hp: 75, atk: 85, def: 76, spa: 60, spd: 92, spe: 92 },
@@ -21475,7 +21475,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	infernapedelta: {
 		num: 392,
 		name: "Infernape-Delta",
-		baseSpecies: "Infernape-Delta",
+		baseSpecies: "Infernape",
 		forme: "Delta",
 		types: ["Electric", "Fighting"],
 		baseStats: { hp: 73, atk: 112, def: 75, spa: 97, spd: 75, spe: 102 },
@@ -22310,7 +22310,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	haxorusdelta: {
 		num: 612,
 		name: "Haxorus-Delta",
-		baseSpecies: "Haxorus-Delta",
+		baseSpecies: "Haxorus",
 		forme: "Delta",
 		types: ["Dragon", "Fire"],
 		baseStats: { hp: 76, atk: 124, def: 105, spa: 63, spd: 73, spe: 99 },
@@ -22865,7 +22865,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		prevo: "Charmeleon-Delta",
 		eggGroups: ["Monster", "Dragon"],
 		forme: "Delta",
-		baseSpecies: "Charizard-Delta",
+		baseSpecies: "Charizard",
 	},
 	charizarddeltamega: {
 		num: 6,
