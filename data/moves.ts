@@ -18517,19 +18517,19 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		priority: 0,
 		isZ: "Ancientgenium Z",
 		flags: { heal: 1, nosketch: 1 },
-		onHit(pokemon) {
+		onHit(target, source) {
 			//	this.actions.useMove('revivalblessing');
-			const move1name = pokemon.moves[0];
+			const move1name = source.moves[0];
 			const move1type = this.dex.moves.get(move1name).type;
-			const move2name = pokemon.moves[1];
+			const move2name = source.moves[1];
 			const move2type = this.dex.moves.get(move2name).type;
 			this.debug(move1type);
 			this.debug(move2type);
 			const newtype = [move1type, move2type];
-			if (pokemon.setType(newtype)) {
+			if (source.setType(newtype)) {
 				this.add(
 					"-start",
-					pokemon,
+					source,
 					"typechange",
 					newtype.join("/"),
 					"[from] move: Rebirth"
@@ -18537,7 +18537,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 
 				this.add(
 					"-message",
-					`${pokemon.name} recreated itself into a ${newtype.join(
+					`${source.name} recreated itself into a ${newtype.join(
 						"/"
 					)} type!`
 				);
