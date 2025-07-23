@@ -492,7 +492,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				source.formeChange("Greninja-Ash", this.effect, true);
 			}
 			if (
-				source.species.id === "omegagreninjabond" &&
+				(source.species.id === "omegagreninjabond" || (source.species.id === "omegagreninja" && source.ability === "battlebond" )) &&
 				source.hp &&
 				!source.transformed &&
 				source.side.foePokemonLeft()
