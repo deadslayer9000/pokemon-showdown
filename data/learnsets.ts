@@ -16845,7 +16845,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			tailwhip: ["9L4", "8L4", "8V", "7L5", "7V", "6L5", "5L5", "4L5", "3L5", "3S1"],
 			takedown: ["9M", "9L24", "8L24", "8V", "7L27", "7V", "6L27", "5L27"],
 			telekinesis: ["7T"],
-			teleport: ["8V", "7V"],
+			teleport: ["8V", "7V", "9M"],
 			terablast: ["9M"],
 			thief: ["9M"],
 			thunder: ["9M", "8M", "8V", "7M", "7V", "6M", "5M", "4M", "3M"],
@@ -16859,7 +16859,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			watergun: ["7V"],
 			waterpulse: ["9M", "7T", "6T", "4M", "3M"],
 			wildcharge: ["9M", "8M", "7M", "6M", "5M"],
-			wish: ["3S0"],
+			wish: ["3S0", "9M"],
 			workup: ["8M", "7M", "5M"],
 			zapcannon: ["7V"],
 			zenheadbutt: ["9M", "8M", "7T", "6T", "5T", "4T"],
@@ -68493,7 +68493,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 		eventData: [
 			{generation: 7, level: 36, ivs: {hp: 20, atk: 31, def: 20, spa: 31, spd: 20, spe: 31}, moves: ["watershuriken", "aerialace", "doubleteam", "nightslash"], pokeball: "pokeball"},
 		],
-		eventOnly: true,
+		eventOnly: false,
 	},
 	bunnelby: {
 		learnset: {
@@ -102300,7 +102300,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			xscissor: ["9M"],
 		}
 	},
-	deltashuckle: {
+	shuckledelta: {
 		learnset: {
 			acid: ["9M"],
 			acidspray: ["9L5","9M"],
@@ -104586,7 +104586,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			yawn: ["9M"],
 		}
 	},
-	deltamarshadow: {
+	marshadowdelta: {
 		learnset: {
 			aerialace: ["9M"],
 			ancientpower: ["9L1"],
@@ -114932,7 +114932,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			terablast: ["9M"],
 			toxic: ["9M"],
 			trailblaze: ["9M"],
-			trickroom: ["9M"],
 			uproar: ["9M"],
 			wish: ["9L35"],
 			worryseed: ["9M"],
@@ -119578,6 +119577,17 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 	deltazeraora: {
 		learnset: {
 			flashpointfists: ["9L84"],
+		}
+	},
+	deltacresselia: {
+		learnset: {
+			solardance: ["9L84"],
+			solarblessing: ["9L82"],
+		}
+	},
+	deltaheatran: {
+		learnset: {
+			pressurize: ["9L84"],
 		}
 	},
 	deltahatenna: {

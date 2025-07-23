@@ -3442,7 +3442,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	},
 	colddeparture: {
 		num: -27,
-		accuracy: 90,
+		accuracy: 100,
 		basePower: 0,
 		category: "Status",
 		name: "Cold Departure",
@@ -7896,8 +7896,14 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 							"[from] move: Foam Frenzy",
 							`[of] ${pokemon}`
 						);
-						this.boost({ spa: 1 }, pokemon, pokemon, move);
+						pokemon.abilityState.foamfrenzy = true;
+						
 					}
+				}
+				if (pokemon.abilityState.foamfrenzy = true){
+					this.boost({ spa: 1 }, pokemon, pokemon, move);
+					this.hint(`Foam Frenzy boosted ${pokemon.name}'s Special Attack!`)
+					pokemon.abilityState.foamfrenzy = false;
 				}
 			}
 		},
@@ -26869,4 +26875,74 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		target: "normal",
 		type: "Ghost",
 	},
+	pressurize: {
+		num: -81,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		pp: 5,
+		priority: 0,
+		name: "Pressurize",
+		flags: { snatch: 1, heal: 1, metronome: 1 },
+		secondary: null,
+		target: "self",
+		type: "Water",
+		zMove: { effect: "clearnegativeboost" },
+		onModifyMove(move, pokemon){
+			if (pokemon.status === "brn"){
+				move.heal = [1, 2];
+			} else {
+				this.hint(`${pokemon.name}'s Pressurize failed because it isn't burned.`)
+				return;
+			}
+		}
+	},
+	solardance: {
+		num: -82,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Solar Dance",
+		pp: 10,
+		priority: 0,
+		type: "Fire",
+		secondary: null,
+		target: "self",
+		zMove: { effect: "heal" },
+		contestType: "Cute",
+		flags: { snatch: 1, metronome: 1 },
+		onHit(target) {
+			if (
+				target.hp <= target.maxhp / 2 ||
+				target.boosts.spa >= 6 ||
+				target.maxhp === 1
+			) {
+				// Shedinja clause
+				return false;
+			}
+			this.directDamage(target.maxhp / 2);
+			this.boost({ spa: 12 }, target);
+		},
+	},
+	solarblessing: {
+		num: -83,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Solar Blessing",
+		pp: 10,
+		priority: 0,
+		flags: { snatch: 1, heal: 1, bypasssub: 1 },
+		heal: [1, 4],
+		secondary: {
+			chance: 100,
+			boosts: {
+				spa: 1,
+				atk: 1,
+			},
+		},
+		target: "allies",
+		type: "Fire",
+	}
+	
 };

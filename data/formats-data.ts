@@ -6061,7 +6061,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	yanmelia: {
 		tier: "UU",
 	},
-	deltashuckle: {
+	shuckledelta: {
 		tier: "NU",
 	},
 	shrookle: {
@@ -6142,7 +6142,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	ancieon: {
 		tier: "NU",
 	},
-	deltamarshadow: {
+	marshadowdelta: {
 		tier: "OU",
 	},
 	deltacyndaquil: {

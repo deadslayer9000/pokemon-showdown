@@ -483,7 +483,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				return;
 			}
 			if (
-				source.species.id === "greninjabond" &&
+				(source.species.id === "greninjabond" || (source.species.id === "greninja" && source.ability === "battlebond" )) &&
 				source.hp &&
 				!source.transformed &&
 				source.side.foePokemonLeft()
@@ -492,7 +492,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				source.formeChange("Greninja-Ash", this.effect, true);
 			}
 			if (
-				source.species.id === "omegagreninjabond" &&
+				(source.species.id === "omegagreninjabond" || (source.species.id === "omegagreninja" && source.ability === "battlebond" )) &&
 				source.hp &&
 				!source.transformed &&
 				source.side.foePokemonLeft()
@@ -7406,7 +7406,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	surgedeluge: {
 		onStart(pokemon) {
 			if (this.field.isTerrain("electricterrain")) {
-				this.boost({ def: 1 }, pokemon);
+				this.boost({ spd: 1 }, pokemon);
 				pokemon.addVolatile("charge");
 			}
 		},
