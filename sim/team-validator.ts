@@ -960,7 +960,7 @@ export class TeamValidator {
 			}
 			if (!legal && species.gen <= 2 && dex.gen >= 7 && !this.validateSource(set, '7V', setSources, species)) {
 				legal = true;
-			}
+			}/*
 			if (!legal) {
 				if (!pokemonGoProblems || (pokemonGoProblems?.length)) {
 					if (eventData.length === 1) {
@@ -988,7 +988,7 @@ export class TeamValidator {
 				} else {
 					setSources.isFromPokemonGo = true;
 				}
-			}
+			}*/
 		}
 
 		// Hardcoded forced validation for Pokemon GO

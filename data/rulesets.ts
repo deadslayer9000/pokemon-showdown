@@ -1940,7 +1940,7 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 				}
 			}
 		},
-	},/*
+	},
 	eventmovesclause: {
 		effectType: 'ValidatorRule',
 		name: 'Event Moves Clause',
@@ -1970,7 +1970,7 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 			if (problems.length) problems.push(`(Event-only moves are banned.)`);
 			return problems;
 		},
-	},*/
+	},
 	pickedteamsize: {
 		effectType: 'Rule',
 		name: 'Picked Team Size',
