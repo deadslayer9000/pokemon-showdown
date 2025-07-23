@@ -2154,8 +2154,10 @@ export class Pokemon {
 		}
 		if (this.hasAbility('Diamond Grove') && !this.battle.suppressingAbility(this)) {
 			if (this.battle.field.isTerrain('grassyterrain')) {
+				if (move.category !== 'Status' && move.id !== 'struggle' && this.runImmunity(move.type)) {
 				if (totalTypeMod > 0) return 0;
 			}
+		}
 		}
 		return totalTypeMod;
 	}
