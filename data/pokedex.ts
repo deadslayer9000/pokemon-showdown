@@ -11873,7 +11873,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		weightkg: 40,
 		color: "Blue",
 		eggGroups: ["Undiscovered"],
-		gen: 7,
+		//gen: 7,
 	},
 	greninjaash: {
 		num: 658,
@@ -11890,7 +11890,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		eggGroups: ["Undiscovered"],
 		requiredAbility: "Battle Bond",
 		battleOnly: "Greninja-Bond",
-		gen: 7,
+		//gen: 7,
 	},
 	bunnelby: {
 		num: 659,
