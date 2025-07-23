@@ -6209,7 +6209,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 174,
 	},
 	regenerator: {
-		onSwitchIn(pokemon) {
+		onSwitchOut(pokemon) {
 			pokemon.heal(pokemon.baseMaxhp / 3);
 		},
 		flags: {},
