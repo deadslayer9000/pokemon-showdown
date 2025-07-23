@@ -5977,10 +5977,10 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	mewrai: {
 		tier: "OU",
 	},
-	ultrasnivy: {
+	snivyultra: {
 		tier: "LC",
 	},
-	ultraservine: {
+	servineultra: {
 		tier: "NFE",
 	},
 	electisaur: {
@@ -6046,13 +6046,13 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	diancette: {
 		tier: "UU",
 	},
-	ultratrapinch: {
+	trapinchultra: {
 		tier: "LC",
 	},
-	ultravibrava: {
+	vibravaultra: {
 		tier: "NFE",
 	},
-	ultraflygon: {
+	flygonultra: {
 		tier: "OU",
 	},
 	yanfern: {
@@ -6067,49 +6067,49 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	shrookle: {
 		tier: "UU",
 	},
-	deltauxie: {
+	uxiedelta: {
 		tier: "OU",
 	},
-	deltaazelf: {
+	azelfdelta: {
 		tier: "UU",
 	},
-	deltamesprit: {
+	mespritdelta: {
 		tier: "RU",
 	},
 	lucaurus: {
 		tier: "OU",
 	},
-	deltastarly: {
+	starlydelta: {
 		tier: "LC",
 	},
-	deltastaravia: {
+	staraviadelta: {
 		tier: "NFE",
 	},
-	deltastaraptor: {
+	staraptordelta: {
 		tier: "UU",
 	},
 	savagescar: {
 		tier: "OU",
 	},
-	deltalatias: {
+	latiasdelta: {
 		tier: "OU",
 	},
-	deltalatiasmega: {
+	latiasdeltamega: {
 		tier: "OU",
 	},
-	deltalatios: {
+	latiosdelta: {
 		tier: "UU",
 	},
-	deltalatiosmega: {
+	latiosdeltamega: {
 		tier: "UU",
 	},
 	manaphymega: {
 		tier: "OU",
 	},
-	deltasteelix: {
+	steelixdelta: {
 		tier: "UU",
 	},
-	deltasteelixmega: {
+	steelixdeltamega: {
 		tier: "UU",
 	},
 	spectreon: {
@@ -6145,40 +6145,40 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	marshadowdelta: {
 		tier: "OU",
 	},
-	deltacyndaquil: {
+	cyndaquildelta: {
 		tier: "LC",
 	},
-	deltaquilava: {
+	quilavadelta: {
 		tier: "NFE",
 	},
-	deltatyphlosion: {
+	typhlosiondelta: {
 		tier: "UU",
 	},
 	tapukehe: {
 		tier: "OU",
 	},
-	deltagimmighoul: {
+	gimmighouldelta: {
 		tier: "LC",
 	},
-	deltagimmighoulroaming: {
+	gimmighouldeltaroaming: {
 		tier: "LC",
 	},
-	deltagholdengo: {
+	gholdengodelta: {
 		tier: "OU",
 	},
-	epsilongoomy: {
+	goomyepsilon: {
 		tier: "LC",
 	},
 	goolossal: {
 		tier: "OU",
 	},
-	deltabudew: {
+	budewdelta: {
 		tier: "LC",
 	},
-	deltaroselia: {
+	roseliadelta: {
 		tier: "NFE",
 	},
-	deltaroserade: {
+	roseradedelta: {
 		tier: "OU",
 	},
 	ironshades: {
@@ -6208,76 +6208,76 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	ironrunner: {
 		tier: "UU",
 	},
-	ultragastly: {
+	gastlyultra: {
 		tier: "LC",
 	},
-	ultrahaunter: {
+	haunterultra: {
 		tier: "NFE",
 	},
-	ultragengar: {
+	gengarultra: {
 		tier: "OU",
 	},
 	tangledtime: {
 		tier: "OU",
 	},
-	omegafroakie: {
+	froakieomega: {
 		tier: "LC",
 	},
-	omegafrogadier: {
+	frogadieromega: {
 		tier: "NFE",
 	},
-	omegagreninja: {
+	greninjaomega: {
 		tier: "UU",
 	},
-	omegagreninjabond: {
+	greninjaomegabond: {
 		tier: "OU",
 	},
-	omegagreninjaash: {
+	greninjaomegaash: {
 		tier: "Illegal",
 	},
-	deltalopunny: {
+	lopunnydelta: {
 		tier: "UU",
 	},
-	deltalopunnymega: {
+	lopunnydeltamega: {
 		tier: "OU",
 	},
-	ultradunsparce: {
+	dunsparceultra: {
 		tier: "LC",
 	},
 	dunsparath: {
 		tier: "UU",
 	},
-	deltachimchar: {
+	chimchardelta: {
 		tier: "LC",
 	},
-	deltamonferno: {
+	monfernodelta: {
 		tier: "NFE",
 	},
-	deltainfernape: {
+	infernapedelta: {
 		tier: "RU",
 	},
-	deltainfernapemega: {
+	infernapedeltamega: {
 		tier: "OU",
 	},
-	deltahoopa: {
+	hoopadelta: {
 		tier: "UU",
 	},
-	deltahoopaunbound: {
+	hoopadeltaunbound: {
 		tier: "UU",
 	},
-	omegatinkatink: {
+	tinkatinkomega: {
 		tier: "LC",
 	},
-	omegatinkatuff: {
+	tinkatuffomega: {
 		tier: "RU",
 	},
-	omegatinkaton: {
+	tinkatonomega: {
 		tier: "UU",
 	},
 	ectarachnid: {
 		tier: "NU",
 	},
-	deltatorkoal: {
+	torkoaldelta: {
 		tier: "RU",
 	},
 	eruptois: {
@@ -6286,13 +6286,13 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	flygonmega: {
 		tier: "UU",
 	},
-	deltaslowpoke: {
+	slowpokedelta: {
 		tier: "LC",
 	},
 	slowhost: {
 		tier: "UU",
 	},
-	deltatentacool: {
+	tentacooldelta: {
 		tier: "LC",
 	},
 	rotomdowse: {
@@ -6313,25 +6313,25 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	bansherene: {
 		tier: "UU",
 	},
-	deltaclamperl: {
+	clamperldelta: {
 		tier: "LC",
 	},
-	deltagorebyss: {
+	gorebyssdelta: {
 		tier: "RU",
 	},
-	deltahuntail: {
+	huntaildelta: {
 		tier: "UU",
 	},
 	gorochu: {
 		tier: "UU",
 	},
-	deltashellos: {
+	shellosdelta: {
 		tier: "LC",
 	},
-	deltagastrodon: {
+	gastrodondelta: {
 		tier: "UU",
 	},
-	deltatandemaus: {
+	tandemausdelta: {
 		tier: "LC",
 	},
 	necromauser: {
@@ -6346,16 +6346,16 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	spiritombunbound: {
 		tier: "UU",
 	},
-	deltaaipom: {
+	aipomdelta: {
 		tier: "LC",
 	},
-	deltaambipom: {
+	ambipomdelta: {
 		tier: "UU",
 	},
-	ultraaipom: {
+	aipomultra: {
 		tier: "LC",
 	},
-	ultraambipom: {
+	ambipomultra: {
 		tier: "UU",
 	},
 	ironworld: {
@@ -6367,82 +6367,82 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	zoroarkhisuimega: {
 		tier: "UU",
 	},
-	deltagolurk: {
+	golurkdelta: {
 		tier: "UU",
 	},
-	ultraglimmet: {
+	glimmetultra: {
 		tier: "LC",
 	},
-	ultraglimmora: {
+	glimmoraultra: {
 		tier: "NU",
 	},
-	deltaglimmet: {
+	glimmetdelta: {
 		tier: "LC",
 	},
-	deltaglimmora: {
+	glimmoradelta: {
 		tier: "UU",
 	},
-	deltarattata: {
+	rattatadelta: {
 		tier: "LC",
 	},
-	deltaraticate: {
+	raticatedelta: {
 		tier: "NU",
 	},
 	lochtrier: {
 		tier: "UU",
 	},
-	deltasprigatito: {
+	sprigatitodelta: {
 		tier: "LC",
 	},
-	deltafloragato: {
+	floragatodelta: {
 		tier: "NFE",
 	},
-	deltameowscarada: {
+	meowscaradadelta: {
 		tier: "OU",
 	},
-	gammatinkatink: {
+	tinkatinkgamma: {
 		tier: "LC",
 	},
-	gammatinkatuff: {
+	tinkatuffgamma: {
 		tier: "NFE",
 	},
-	gammatinkaton: {
+	tinkatongamma: {
 		tier: "OU",
 	},
-	deltatinkatink: {
+	tinkatinkdelta: {
 		tier: "LC",
 	},
-	deltatinkatuff: {
+	tinkatuffdelta: {
 		tier: "NFE",
 	},
-	deltatinkaton: {
+	tinkatondelta: {
 		tier: "UU",
 	},
-	ultratinkatink: {
+	tinkatinkultra: {
 		tier: "LC",
 	},
-	ultratinkatuff: {
+	tinkatuffultra: {
 		tier: "NFE",
 	},
-	ultratinkaton: {
+	tinkatonultra: {
 		tier: "NU",
 	},
-	deltaaxew: {
+	axewdelta: {
 		tier: "LC",
 	},
-	deltafraxure: {
+	fraxuredelta: {
 		tier: "NFE",
 	},
-	deltahaxorus: {
+	haxorusdelta: {
 		tier: "UU",
 	},
-	deltahaxorusmega: {
+	haxorusdeltamega: {
 		tier: "OU",
 	},
 	magirigus: {
 		tier: "UU",
 	},
-	deltayamask: {
+	yamaskdelta: {
 		tier: "LC",
 	},
 	ironpilot: {
@@ -6460,28 +6460,28 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	rogueprince: {
 		tier: "UU",
 	},
-	deltacharmander: {
+	charmanderdelta: {
 		tier: "LC",
 	},
-	deltacharmeleon: {
+	charmeleondelta: {
 		tier: "NFE",
 	},
-	deltacharizard: {
+	charizarddelta: {
 		tier: "NU",
 	},
-	deltacharizardmega: {
+	charizarddeltamega: {
 		tier: "UU",
 	},
-	deltavolcarona: {
+	volcaronadelta: {
 		tier: "UU",
 	},
-	deltalarvesta: {
+	larvestadelta: {
 		tier: "LC",
 	},
-	deltaarcanine: {
+	arcaninedelta: {
 		tier: "UU",
 	},
-	deltagrowlithe: {
+	growlithedelta: {
 		tier: "LC",
 	},
 	brewloom: {
@@ -6493,79 +6493,79 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	ancientgene: {
 		tier: "UU",
 	},
-	deltacorsola: {
+	corsoladelta: {
 		tier: "LC",
 	},
 	curesola: {
 		tier: "UU",
 	},
-	deltameloetta: {
+	meloettadelta: {
 		tier: "UU",
 	},
 	perrception: {
 		tier: "UU",
 	},
-	deltameowth: {
+	meowthdelta: {
 		tier: "LC",
 	},
-	deltagreninja: {
+	greninjadelta: {
 		tier: "UU",
 	},
-	deltagible: {
+	gibledelta: {
 		tier: "LC",
 	},
-	deltagabite: {
+	gabitedelta: {
 		tier: "NFE",
 	},
-	deltagarchomp: {
+	garchompdelta: {
 		tier: "UU",
 	},
-	deltashinx: {
+	shinxdelta: {
 		tier: "LC",
 	},
-	deltaluxio: {
+	luxiodelta: {
 		tier: "NFE",
 	},
-	deltaluxray: {
+	luxraydelta: {
 		tier: "UU",
 	},
-	deltatrapinch: {
+	trapinchdelta: {
 		tier: "LC",
 	},
-	deltavibrava: {
+	vibravadelta: {
 		tier: "NFE",
 	},
-	deltaflygon: {
+	flygondelta: {
 		tier: "UU",
 	},
-	deltaklink: {
+	klinkdelta: {
 		tier: "LC",
 	},
-	deltaklang: {
+	klangdelta: {
 		tier: "NFE",
 	},
-	deltaklinklang: {
+	klinklangdelta: {
 		tier: "UU",
 	},
-	deltavictini: {
+	victinidelta: {
 		tier: "UU",
 	},
-	deltahoothoot: {
+	hoothootdelta: {
 		tier: "LC",
 	},
-	deltanoctowl: {
+	noctowldelta: {
 		tier: "NFE",
 	},
 	klocktowl: {
 		tier: "UU",
 	},
-	deltawooper: {
+	wooperdelta: {
 		tier: "LC",
 	},
 	quaxolotl: {
 		tier: "UU",
 	},
-	omegawooper: {
+	wooperomega: {
 		tier: "LC",
 	},
 	labsire: {
@@ -6574,25 +6574,25 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	secretarmor: {
 		tier: "UU",
 	},
-	deltamunchlax : {
+	munchlaxdelta : {
 		tier: "LC",
 	},
-	deltasnorlaxcherry: {
+	snorlaxdeltacherry: {
 		tier: "RU",
 	},
-	deltasnorlaxautumn: {
+	snorlaxdeltaautumn: {
 		tier: "NU",
 	},
-	deltasnorlaxspring: {
+	snorlaxdeltaspring: {
 		tier: "NU",
 	},
-	deltasnorlaxsummer: {
+	snorlaxdeltasummer: {
 		tier: "NU",
 	},
-	deltasnorlaxwinter: {
+	snorlaxdeltawinter: {
 		tier: "NU",
 	},
-	deltachatot: {
+	chatotdelta: {
 		tier: "LC",
 	},
 	operettot: {
@@ -6601,19 +6601,19 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	maestrot: {
 		tier: "RU",
 	},
-	deltashellder: {
+	shellderdelta: {
 		tier: "LC",
 	},
-	deltacloyster: {
+	cloysterdelta: {
 		tier: "RU",
 	},
-	deltabeldum: {
+	beldumdelta: {
 		tier: "LC",
 	},
-	deltametang: {
+	metangdelta: {
 		tier: "NFE",
 	},
-	deltametagross: {
+	metagrossdelta: {
 		tier: "RU",
 	},
 	sinisfee: {
@@ -6622,24 +6622,24 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	polfeegeist: {
 		tier: "RU",
 	},
-	deltahonedge: {
+	honedgedelta: {
 		tier: "LC",
 	},
-	deltadoublade: {
+	doubladedelta: {
 		tier: "NFE",
 	},
-	deltaaegislash: {
+	aegislashdelta: {
 		isNonstandard: "Past",
 		tier: "RU",
 	},
-	deltaaegislashblade: {
+	aegislashdeltablade: {
 		isNonstandard: "Past",
 		tier: "Illegal",
 	},
 	polfeegeistslumber: {
 		tier: "Illegal",
 	},
-	deltasableye: {
+	sableyedelta: {
 		tier: "NU",
 	},
 	turnizone: {
@@ -6651,70 +6651,70 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	turnmite: {
 		tier: "LC",
 	},
-	deltagrimmsnarl: {
+	grimmsnarldelta: {
 		tier: "NU",
 	},
-	deltamorgrem: {
+	morgremdelta: {
 		tier: "NFE",
 	},
-	deltaimpidimp: {
+	impidimpdelta: {
 		tier: "LC",
 	},
-	deltafurret: {
+	furretdelta: {
 		tier: "NU",
 	},
-	deltapalossand: {
+	palossanddelta: {
 		tier: "NU",
 	},
-	deltasandygast: {
+	sandygastdelta: {
 		tier: "LC",
 	},
-	deltagogoat: {
+	gogoatdelta: {
 		tier: "NU",
 	},
-	deltaskiddo: {
+	skiddodelta: {
 		tier: "LC",
 	},
 	perrgatory: {
 		tier: "NU",
 	},
-	omegameowth: {
+	meowthomega: {
 		tier: "LC",
 	},
-	deltaazumarill: {
+	azumarilldelta: {
 		tier: "NU",
 	},
-	deltamarill: {
+	marilldelta: {
 		tier: "NFE",
 	},
-	deltaazurill: {
+	azurilldelta: {
 		tier: "LC",
 	},
-	deltafalinks: {
+	falinksdelta: {
 		tier: "NU",
 	},
-	deltashaymin: {
+	shaymindelta: {
 		tier: "NU",
 	},
-	deltashayminsky: {
+	shaymindeltasky: {
 		tier: "Uber",
 	},
-	deltaemolga: {
+	emolgadelta: {
 		tier: "NU",
 	},
-	ultradragapult: {
+	dragapultultra: {
 		tier: "OU",
 	},
-	ultradrakloak: {
+	drakloakultra: {
 		tier: "NFE",
 	},
-	ultradreepy: {
+	dreepyultra: {
 		tier: "LC",
 	},
-	ultraheliolisk: {
+	helioliskultra: {
 		tier: "NU",
 	},
-	ultrahelioptile: {
+	helioptileultra: {
 		tier: "LC",
 	},
 	ironrevival: {
@@ -6738,13 +6738,13 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	hattirage: {
 		tier: "NU",
 	},
-	deltahattrem: {
+	hattremdelta: {
 		tier: "NFE",
 	},
-	deltahatenna: {
+	hatennadelta: {
 		tier: "LC",
 	},
-	deltazeraora: {
+	zeraoradelta: {
 		tier: "OU",
 	},
 	etherion: {
@@ -6753,16 +6753,16 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	grimorgon: {
 		tier: "UU",
 	},
-	deltadruddigon: {
+	druddigondelta: {
 		tier: "",
 	},
-	deltaheatran: {
+	heatrandelta: {
 		tier: "",
 	},
-	deltajirachi: {
+	jirachidelta: {
 		tier: "",
 	},
-	deltacresselia: {
+	cresseliadelta: {
 		tier: "",
 	},
 	pokestarsmeargle: {
@@ -6833,7 +6833,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		isNonstandard: "Custom",
 		tier: "Illegal",
 	},
-	ultraserperior: {
+	serperiorultra: {
 		tier: "UU",
 	},
 };
