@@ -3,7 +3,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "LC",
 	},
 	ivysaur: {
-		tier: "OU",
+		tier: "NFE",
 	},
 	venusaur: {
 		tier: "PU",
@@ -6629,9 +6629,11 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "NFE",
 	},
 	deltaaegislash: {
+		isNonstandard: "Past",
 		tier: "RU",
 	},
 	deltaaegislashblade: {
+		isNonstandard: "Past",
 		tier: "Illegal",
 	},
 	polfeegeistslumber: {
