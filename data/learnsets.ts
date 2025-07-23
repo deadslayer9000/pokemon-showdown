@@ -99774,7 +99774,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M"],
 		},
 	},
-	ultrasnivy: {
+	snivyultra: {
 		learnset: {
 			aquajet: ["9L16"],
 			aquaring: ["9L19"],
@@ -99845,7 +99845,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			wrap: ["9L1"],
 		}
 	}, 			
-		ultraservine: {
+		servineultra: {
 		learnset: {
 			aquajet: ["9L16"],
 			aquaring: ["9L20"],
@@ -99916,7 +99916,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			wrap: ["9L1"],
 		}
 	}, 			
-		ultraserperior: {
+		serperiorultra: {
 		learnset: {
 			aquajet: ["9L16"],
 			aquaring: ["9L20"],
@@ -101799,7 +101799,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			wish: ["9L32"],
 		}
 	},
-	ultratrapinch: {
+	trapinchultra: {
 		learnset: {
 			astonish: ["9L1"],
 			attract: ["9M"],
@@ -101887,7 +101887,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M"],
 		}
 	},
-	ultravibrava: {
+	vibravaultra: {
 		learnset: {
 			aerialace: ["9M"],
 			astonish: ["9L1"],
@@ -101989,7 +101989,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M"],
 		}
 	},
-	ultraflygon: {
+	flygonultra: {
 		learnset: {
 			aerialace: ["9M"],
 			aquatail: ["9M"],
@@ -102482,7 +102482,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			wrap: ["9L1"],
 		}
 	},
-	deltauxie: {
+	uxiedelta: {
 		learnset: {
 			acid: ["9L1"],
 			acidarmor: ["9L1"],
@@ -102568,7 +102568,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			waterpulse: ["9M"],
 		}
 	},
-	deltaazelf: {
+	azelfdelta: {
 		learnset: {
 			acid: ["9L1"],
 			acidarmor: ["9L1"],
@@ -102660,7 +102660,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			workup: ["9M"],
 		}
 	},
-	deltamesprit: {
+	mespritdelta: {
 		learnset: {
 			acid: ["9L1"],
 			acidarmor: ["9L1"],
@@ -102882,7 +102882,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M"],
 		}
 	},
-	deltastarly: {
+	starlydelta: {
 		learnset: {
 			acrobatics: ["9M"],
 			aerialace: ["9L25","9M"],
@@ -102946,7 +102946,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			wingattack: ["9L9"],
 		}
 	},
-	deltastaravia: {
+	staraviadelta: {
 		learnset: {
 			acrobatics: ["9M"],
 			aerialace: ["9L28","9M"],
@@ -103016,7 +103016,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			wingattack: ["9L9"],
 		}
 	},
-	deltastaraptor: {
+	staraptordelta: {
 		learnset: {
 			acrobatics: ["9M"],
 			aerialace: ["9L28","9M"],
@@ -103166,7 +103166,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			trailblaze: ["9M"],
 		}
 	},
-	deltalatias: {
+	latiasdelta: {
 		learnset: {
 			aerialace: ["9M"],
 			aircutter: ["9M","9M"],
@@ -103276,7 +103276,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			wonderroom: ["9M","9M"],
 		}
 	},
-	deltalatios: {
+	latiosdelta: {
 		learnset: {
 			aerialace: ["9M"],
 			aircutter: ["9M","9M"],
@@ -103382,7 +103382,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			weatherball: ["9M"],
 		}
 	},
-	deltasteelix: {
+	steelixdelta: {
 		learnset: {
 			allyswitch: ["9M","9M"],
 			amnesia: ["9M"],
@@ -104660,7 +104660,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			workup: ["9M"],
 		}
 	},
-	deltacyndaquil: {
+	cyndaquildelta: {
 		learnset: {
 			aerialace: ["9M"],
 			aircutter: ["9M"],
@@ -104759,7 +104759,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zapcannon: ["9L53"],
 		}
 	},
-	deltaquilava: {
+	quilavadelta: {
 		learnset: {
 			aerialace: ["9M"],
 			aircutter: ["9M"],
@@ -104863,7 +104863,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M"],
 		}
 	},
-	deltatyphlosion: {
+	typhlosiondelta: {
 		learnset: {
 			aerialace: ["9M"],
 			aircutter: ["9M"],
@@ -105060,7 +105060,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			wrap: ["9L25"],
 		}
 	},
-	deltagimmighoul: {
+	gimmighouldelta: {
 		learnset: {
 			chillingwater: ["9M"],
 			clamp: ["9L1"],
@@ -105082,7 +105082,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			waterpulse: ["9M"],
 		}
 	},
-	deltagimmighoulroaming: {
+	gimmighouldeltaroaming: {
 		learnset: {
 			chillingwater: ["9M"],
 			clamp: ["9L1"],
@@ -105104,7 +105104,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			waterpulse: ["9M"],
 		}
 	},
-	deltagholdengo: {
+	gholdengodelta: {
 		learnset: {
 			agility: ["9M"],
 			aurasphere: ["9M"],
@@ -105152,7 +105152,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			whirlpool: ["9M"],
 		}
 	},
-	epsilongoomy: {
+	goomyepsilon: {
 		learnset: {
 			absorb: ["9L1"],
 			acidspray: ["9M"],
@@ -105269,7 +105269,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			wish: ["9L1"],
 		}
 	},
-	deltabudew: {
+	budewdelta: {
 		learnset: {
 			absorb: ["9L1"],
 			agility: ["9M"],
@@ -105329,7 +105329,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			worryseed: ["9L1","9M"],
 		}
 	},
-	deltaroselia: {
+	roseliadelta: {
 		learnset: {
 			absorb: ["9L1"],
 			aerialace: ["9M"],
@@ -105407,7 +105407,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			xscissor: ["9L1","9M"],
 		}
 	},
-	deltaroserade: {
+	roseradedelta: {
 		learnset: {
 			absorb: ["9L1"],
 			acrobatics: ["9M"],
@@ -106071,7 +106071,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			hardpress: ["9M"],
 		},
 	},
-	ultragastly: {
+	gastlyultra: {
 		learnset: {
 			acidarmor: ["9M"],
 			agility: ["9M"],
@@ -106171,7 +106171,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			willowisp: ["9M"],
 		}
 	},
-	ultrahaunter: {
+	haunterultra: {
 		learnset: {
 			acidarmor: ["9M"],
 			agility: ["9M"],
@@ -106278,7 +106278,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			willowisp: ["9M"],
 		}
 	},
-	ultragengar: {
+	gengarultra: {
 		learnset: {
 			acidarmor: ["9M"],
 			agility: ["9M"],
@@ -106478,7 +106478,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M"],
 		}
 	},
-	omegafroakie: {
+	froakieomega: {
 		learnset: {
 			acrobatics: ["9M"],
 			aerialace: ["9L29","9M"],
@@ -106552,7 +106552,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			workup: ["9M"],
 		}
 	},
-	omegafrogadier: {
+	frogadieromega: {
 		learnset: {
 			acrobatics: ["9M"],
 			aerialace: ["9L33","9M"],
@@ -106637,7 +106637,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			xscissor: ["9M"],
 		}
 	},
-	omegagreninja: {
+	greninjaomega: {
 		learnset: {
 			acrobatics: ["9M"],
 			aerialace: ["9L33","9M"],
@@ -106730,7 +106730,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			xscissor: ["9M"],
 		}
 	},
-	omegagreninjabond: {
+	greninjaomegabond: {
 		learnset: {
 			acrobatics: ["9M"],
 			aerialace: ["9L33","9M"],
@@ -106823,7 +106823,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			xscissor: ["9M"],
 		}
 	},
-	deltalopunny: {
+	lopunnydelta: {
 		learnset: {
 			afteryou: ["9L12","9M"],
 			agility: ["9M"],
@@ -106940,7 +106940,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			workup: ["9M"],
 		}
 	},
-	ultradunsparce: {
+	dunsparceultra: {
 		learnset: {
 			agility: ["9M"],
 			aircutter: ["9M"],
@@ -107093,7 +107093,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M"],
 		}
 	},
-	deltachimchar: {
+	chimchardelta: {
 		learnset: {
 			acrobatics: ["9L39"],
 			aerialace: ["9M"],
@@ -107176,7 +107176,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			workup: ["9M"],
 		}
 	},
-	deltamonferno: {
+	monfernodelta: {
 		learnset: {
 			acrobatics: ["9L46"],
 			aerialace: ["9M"],
@@ -107276,7 +107276,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			workup: ["9M"],
 		}
 	},
-	deltainfernape: {
+	infernapedelta: {
 		learnset: {
 			acrobatics: ["9L52"],
 			aerialace: ["9M"],
@@ -107391,7 +107391,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M","9M"],
 		}
 	},
-	deltahoopa: {
+	hoopadelta: {
 		learnset: {
 			assurance: ["9L19"],
 			astonish: ["9L6"],
@@ -107479,7 +107479,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			workup: ["9M"],
 		}
 	},
-	deltahoopaunbound: {
+	hoopadeltaunbound: {
 		learnset: {
 			assurance: ["9L19"],
 			astonish: ["9L6"],
@@ -107563,7 +107563,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			workup: ["9M"],
 		}
 	},
-	omegatinkatink: {
+	tinkatinkomega: {
 		learnset: {
 			astonish: ["9L1"],
 			babydolleyes: ["9L5"],
@@ -107615,7 +107615,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			xscissor: ["9L47","9M"],
 		}
 	},
-	omegatinkatuff: {
+	tinkatuffomega: {
 		learnset: {
 			astonish: ["9L1"],
 			babydolleyes: ["9L5"],
@@ -107667,7 +107667,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			xscissor: ["9L47","9M"],
 		}
 	},
-	omegatinkaton: {
+	tinkatonomega: {
 		learnset: {
 			astonish: ["9L1"],
 			babydolleyes: ["9L5"],
@@ -107814,7 +107814,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			xscissor: ["9M"],
 		}
 	},
-	deltatorkoal: {
+	torkoaldelta: {
 		learnset: {
 			amnesia: ["9L52"],
 			ancientpower: ["9M","9M"],
@@ -108007,7 +108007,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M"],
 		}
 	},
-	deltaslowpoke: {
+	slowpokedelta: {
 		learnset: {
 			acid: ["9L1"],
 			belch: ["9M"],
@@ -108158,7 +108158,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			yawn: ["9L9"],
 		}
 	},
-	deltatentacool: {
+	tentacooldelta: {
 		learnset: {
 			acid: ["9L1"],
 			acidarmor: ["9L32"],
@@ -108236,7 +108236,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			wringout: ["9M"],
 		}
 	},
-	deltatentacruel: {
+	tentacrueldelta: {
 		learnset: {
 			acid: ["9L1"],
 			acidarmor: ["9L34"],
@@ -108509,7 +108509,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			willowisp: ["9L25","9M"],
 		}
 	},
-	deltaclamperl: {
+	clamperldelta: {
 		learnset: {
 			astonish: ["9M"],
 			attract: ["9M"],
@@ -108556,7 +108556,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			whirlpool: ["9M"],
 		}
 	},
-	deltagorebyss: {
+	gorebyssdelta: {
 		learnset: {
 			agility: ["9L9"],
 			amnesia: ["9L16"],
@@ -108648,7 +108648,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M"],
 		}
 	},
-	deltahuntail: {
+	huntaildelta: {
 		learnset: {
 			ancientpower: ["9M"],
 			aquatail: ["9M"],
@@ -108822,7 +108822,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			wish: ["9M"],
 		}
 	},
-	deltashellos: {
+	shellosdelta: {
 		learnset: {
 			acidarmor: ["9M"],
 			acidspray: ["9M"],
@@ -108903,7 +108903,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			yawn: ["9M"],
 		}
 	},
-	deltagastrodon: {
+	gastrodondelta: {
 		learnset: {
 			acidarmor: ["9M"],
 			acidspray: ["9M"],
@@ -108995,7 +108995,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			yawn: ["9M"],
 		}
 	},
-	deltatandemaus: {
+	tandemausdelta: {
 		learnset: {
 			acidspray: ["9M"],
 			aerialace: ["9M"],
@@ -109259,7 +109259,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zapcannon: ["9L91"],
 		}
 	},
-	deltaaipom: {
+	aipomdelta: {
 		learnset: {
 			acrobatics: ["9M"],
 			aerialace: ["9M"],
@@ -109377,7 +109377,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			workup: ["9M"],
 		}
 	},
-	deltaambipom: {
+	ambipomdelta: {
 		learnset: {
 			acrobatics: ["9M"],
 			aerialace: ["9M"],
@@ -109501,7 +109501,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			workup: ["9M","9M"],
 		}
 	},
-	ultraaipom: {
+	aipomultra: {
 		learnset: {
 			aerialace: ["9M"],
 			agility: ["9L29","9M"],
@@ -109600,7 +109600,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M","9M"],
 		}
 	},
-	ultraambipom: {
+	ambipomultra: {
 		learnset: {
 			aerialace: ["9M"],
 			agility: ["9L29","9M"],
@@ -109864,7 +109864,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			weatherball: ["9M"],
 		}
 	},
-	deltagolurk: {
+	golurkdelta: {
 		learnset: {
 			amnesia: ["9M"],
 			astonish: ["9L1"],
@@ -109956,7 +109956,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M","9M"],
 		}
 	},
-	ultraglimmet: {
+	glimmetultra: {
 		learnset: {
 			agility: ["9L15","9M"],
 			allyswitch: ["9L1"],
@@ -110008,7 +110008,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M"],
 		}
 	},
-	ultraglimmora: {
+	glimmoraultra: {
 		learnset: {
 			agility: ["9L15","9M"],
 			allyswitch: ["9L1"],
@@ -110065,7 +110065,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M"],
 		}
 	},
-	deltaglimmet: {
+	glimmetdelta: {
 		learnset: {
 			ancientpower: ["9L11"],
 			batonpass: ["9M"],
@@ -110114,7 +110114,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			terablast: ["9M"],
 		}
 	},
-	deltaglimmora: {
+	glimmoradelta: {
 		learnset: {
 			ancientpower: ["9L11"],
 			auroraveil: ["9L1"],
@@ -110169,7 +110169,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			whiteout: ["9L1"],
 		}
 	},
-	deltarattata: {
+	rattatadelta: {
 		learnset: {
 			aerialace: ["9M"],
 			aquatail: ["9M"],
@@ -110267,7 +110267,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			worryseed: ["9M"],
 		}
 	},
-	deltaraticate: {
+	raticatedelta: {
 		learnset: {
 			acrobatics: ["9M"],
 			aerialace: ["9M"],
@@ -110449,7 +110449,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			whirlpool: ["9M"],
 		}
 	},
-	deltasprigatito: {
+	sprigatitodelta: {
 		learnset: {
 			agility: ["9M"],
 			alluringvoice: ["9M"],
@@ -110509,7 +110509,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			uturn: ["9L21","9M"],
 		}
 	},
-	deltafloragato: {
+	floragatodelta: {
 		learnset: {
 			agility: ["9M"],
 			alluringvoice: ["9M"],
@@ -110576,7 +110576,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M"],
 		}
 	},
-	deltameowscarada: {
+	meowscaradadelta: {
 		learnset: {
 			agility: ["9M"],
 			alluringvoice: ["9M"],
@@ -110649,7 +110649,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M"],
 		}
 	},
-	gammatinkatink: {
+	tinkatinkgamma: {
 		learnset: {
 			acrobatics: ["9M"],
 			aerialace: ["9M"],
@@ -110700,7 +110700,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			trick: ["9M"],
 		}
 	},
-	gammatinkatuff: {
+	tinkatuffgamma: {
 		learnset: {
 			acrobatics: ["9M"],
 			aerialace: ["9M"],
@@ -110751,7 +110751,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			trick: ["9M"],
 		}
 	},
-	gammatinkaton: {
+	tinkatongamma: {
 		learnset: {
 			acrobatics: ["9M"],
 			aerialace: ["9M"],
@@ -110806,7 +110806,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			updraft: ["9L1"],
 		}
 	},
-	deltatinkatink: {
+	tinkatinkdelta: {
 		learnset: {
 			astonish: ["9L1"],
 			babydolleyes: ["9L5"],
@@ -110862,7 +110862,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			waterfall: ["9M"],
 		}
 	},
-	deltatinkatuff: {
+	tinkatuffdelta: {
 		learnset: {
 			astonish: ["9L1"],
 			babydolleyes: ["9L5"],
@@ -110918,7 +110918,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			waterfall: ["9M"],
 		}
 	},
-	deltatinkaton: {
+	tinkatondelta: {
 		learnset: {
 			anchorshot: ["9L39"],
 			astonish: ["9L1"],
@@ -110979,7 +110979,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			waterfall: ["9M"],
 		}
 	},
-	ultratinkatink: {
+	tinkatinkultra: {
 		learnset: {
 			hypnosis: ["9L1"],
 			fairywind: ["9L1"],
@@ -111041,7 +111041,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			quash: ["9M"],
 		}
 	},
-	ultratinkatuff: {
+	tinkatuffultra: {
 		learnset: {
 			hypnosis: ["9L1"],
 			fairywind: ["9L1"],
@@ -111103,7 +111103,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			quash: ["9M"],
 		}
 	},
-	ultratinkaton: {
+	tinkatonultra: {
 		learnset: {
 			alluringvoice: ["9M","9M"],
 			babydolleyes: ["9L5"],
@@ -111171,7 +111171,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zapcannon: ["9L52"],
 		}
 	},
-	deltaaxew: {
+	axewdelta: {
 		learnset: {
 			assurance: ["9M"],
 			bite: ["9L3"],
@@ -111254,7 +111254,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			workup: ["9M"],
 		}
 	},
-	deltafraxure: {
+	fraxuredelta: {
 		learnset: {
 			assurance: ["9M"],
 			bite: ["9L1"],
@@ -111348,7 +111348,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M"],
 		}
 	},
-	deltahaxorus: {
+	haxorusdelta: {
 		learnset: {
 			airslash: ["9M"],
 			assurance: ["9M"],
@@ -111560,7 +111560,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M","9M"],
 		}
 	},
-	deltayamask: {
+	yamaskdelta: {
 		learnset: {
 			afteryou: ["9M"],
 			airslash: ["9M"],
@@ -111851,7 +111851,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M","9M"],
 		}
 	},
-	deltagible: {
+	gibledelta: {
 		learnset: {
 			aerialace: ["9M"],
 			attract: ["9M"],
@@ -111927,7 +111927,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			waterfall: ["9M","9M"],
 		}
 	},
-	deltagabite: {
+	gabitedelta: {
 		learnset: {
 			aerialace: ["9M"],
 			aquatail: ["9M"],
@@ -112019,7 +112019,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			whirlpool: ["9M"],
 		}
 	},
-	deltagarchomp: {
+	garchompdelta: {
 		learnset: {
 			aerialace: ["9M"],
 			aquatail: ["9M"],
@@ -112112,7 +112112,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			whirlpool: ["9M"],
 		}
 	},
-	deltashinx: {
+	shinxdelta: {
 		learnset: {
 			aerialace: ["9M"],
 			agility: ["9M"],
@@ -112204,7 +112204,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			workup: ["9M"],
 		}
 	},
-	deltaluxio: {
+	luxiodelta: {
 		learnset: {
 			aerialace: ["9M"],
 			agility: ["9M"],
@@ -112300,7 +112300,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			workup: ["9M"],
 		}
 	},
-	deltaluxray: {
+	luxraydelta: {
 		learnset: {
 			acrobatics: ["9M"],
 			aerialace: ["9M"],
@@ -112406,7 +112406,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			workup: ["9M"],
 		}
 	},
-	deltatrapinch: {
+	trapinchdelta: {
 		learnset: {
 			astonish: ["9L1"],
 			attract: ["9M"],
@@ -112467,7 +112467,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			xscissor: ["9L40","9M"],
 		}
 	},
-	deltavibrava: {
+	vibravadelta: {
 		learnset: {
 			acrobatics: ["9M"],
 			aerialace: ["9M"],
@@ -112572,7 +112572,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			xscissor: ["9L44","9M"],
 		}
 	},
-	deltaflygon: {
+	flygondelta: {
 		learnset: {
 			acrobatics: ["9M"],
 			aerialace: ["9M"],
@@ -112701,7 +112701,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			xscissor: ["9L44","9M"],
 		}
 	},
-	deltaklink: {
+	klinkdelta: {
 		learnset: {
 			agility: ["9M"],
 			autotomize: ["9L20"],
@@ -112762,7 +112762,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			workup: ["9M"],
 		}
 	},
-	deltaklang: {
+	klangdelta: {
 		learnset: {
 			agility: ["9M"],
 			autotomize: ["9L20"],
@@ -112825,7 +112825,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			workup: ["9M"],
 		}
 	},
-	deltaklinklang: {
+	klinklangdelta: {
 		learnset: {
 			agility: ["9M"],
 			allyswitch: ["9M"],
@@ -112896,7 +112896,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			workup: ["9M"],
 		}
 	},
-	deltavictini: {
+	victinidelta: {
 		learnset: {
 			batonpass: ["9M"],
 			bounce: ["9M","9M"],
@@ -112985,7 +112985,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zingzap: ["9L49"],
 		}
 	},
-	deltahoothoot: {
+	hoothootdelta: {
 		learnset: {
 			acrobatics: ["9M"],
 			aerialace: ["9M"],
@@ -113068,7 +113068,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			workup: ["9M"],
 		}
 	},
-	deltanoctowl: {
+	noctowldelta: {
 		learnset: {
 			acrobatics: ["9M"],
 			aerialace: ["9M"],
@@ -113262,7 +113262,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			workup: ["9M"],
 		}
 	},
-	deltawooper: {
+	wooperdelta: {
 		learnset: {
 			afteryou: ["9M","9M"],
 			ancientpower: ["9M"],
@@ -113449,7 +113449,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M"],
 		}
 	},
-	omegawooper: {
+	wooperomega: {
 		learnset: {
 			acidarmor: ["9M"],
 			acidspray: ["9M"],
@@ -113761,7 +113761,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			wrap: ["9L1"],
 		}
 	},
-	deltacharmander: {
+	charmanderdelta: {
 		learnset: {
 		ancientpower: ["9M","9M"],
 		aquatail: ["9M"],
@@ -113859,7 +113859,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 		workup: ["9M"],
 		}
 	},
-	deltacharmeleon: {
+	charmeleondelta: {
 		learnset: {
 			ancientpower: ["9M","9M"],
 			aquatail: ["9M"],
@@ -113957,7 +113957,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			workup: ["9M"],
 		}
 	},
-	deltacharizard: {
+	charizarddelta: {
 		learnset: {
 			ancientpower: ["9M","9M"],
 			aquatail: ["9M"],
@@ -114056,7 +114056,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			workup: ["9M"],
 		}
 	},
-	deltalarvesta: {
+	larvestadelta: {
 		learnset: {
 			absorb: ["9L10","9M"],
 			allyswitch: ["9M"],
@@ -114132,7 +114132,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9L100","9M"],
 		}
 	},
-	deltavolcarona: {
+	volcaronadelta: {
 		learnset: {
 			absorb: ["9L1","9M"],
 			acrobatics: ["9M"],
@@ -114230,7 +114230,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9L1","9M"],
 		}
 	},
-	deltagrowlithe: {
+	growlithedelta: {
 		learnset: {
 			aerialace: ["9M"],
 			agility: ["9L20"],
@@ -114320,7 +114320,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			whirlpool: ["9M"],
 		}
 	},
-	deltaarcanine: {
+	arcaninedelta: {
 		learnset: {
 			aerialace: ["9M"],
 			agility: ["9L1"],
@@ -114831,7 +114831,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			refresh: ["9L42"],
 		}
 	},
-	deltacorsola: {
+	corsoladelta: {
 		learnset: {
 			allyswitch: ["9M"],
 			amnesia: ["9M"],
@@ -115043,7 +115043,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M"],
 		}
 	},	
-	deltameloettalento: {
+	meloettadeltalento: {
 		learnset: {
 			alluringvoice: ["9M"],
 			burningjealousy: ["9M","9M"],
@@ -115195,7 +115195,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M"],
 		}
 	},
-	deltameowth: {
+	meowthdelta: {
 		learnset: {
 			assist: ["9M"],
 			attract: ["9M"],
@@ -115258,7 +115258,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			yawn: ["9M"],
 		}
 	},
-	deltagreninja: {
+	greninjadelta: {
 		learnset: {
 			acrobatics: ["9M"],
 			aerialace: ["9L33","9M"],
@@ -115373,7 +115373,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M"],
 		}
 	},
-	deltamunchlax: {
+	munchlaxdelta: {
 		learnset: {
 			afteryou: ["9M","9M"],
 			amnesia: ["9L36","9M"],
@@ -115513,7 +115513,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M","9M"],
 		}
 	},
-	deltasnorlaxcherry: {
+	snorlaxdeltacherry: {
 		learnset: {
 			afteryou: ["9M","9M"],
 			amnesia: ["9L36","9M"],
@@ -115654,7 +115654,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M","9M"],
 		}
 	},
-	deltasnorlaxwinter: {
+	snorlaxdeltawinter: {
 		learnset: {
 			afteryou: ["9M","9M"],
 			amnesia: ["9L36","9M"],
@@ -115795,7 +115795,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M","9M"],
 		}
 	},
-	deltasnorlaxsummer: {
+	snorlaxdeltasummer: {
 		learnset: {
 			afteryou: ["9M","9M"],
 			amnesia: ["9L36","9M"],
@@ -115936,7 +115936,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M","9M"],
 		}
 	},
-	deltasnorlaxautumn: {
+	snorlaxdeltaautumn: {
 		learnset: {
 			afteryou: ["9M","9M"],
 			amnesia: ["9L36","9M"],
@@ -116077,7 +116077,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M","9M"],
 		}
 	},
-	deltasnorlaxspring: {
+	snorlaxdeltaspring: {
 		learnset: {
 			afteryou: ["9M","9M"],
 			amnesia: ["9L36","9M"],
@@ -116218,7 +116218,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M","9M"],
 		}
 	},
-	deltachatot: {
+	chatotdelta: {
 		learnset: {
 			acrobatics: ["9M"],
 			aerialace: ["9M"],
@@ -116466,7 +116466,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			workup: ["9M"],
 		}
 	},
-	deltashellder: {
+	shellderdelta: {
 		learnset: {
 			acidarmor: ["9M"],
 			acidspray: ["9M"],
@@ -116545,7 +116545,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			workup: ["9M","9M"],
 		}
 	},
-	deltacloyster: {
+	cloysterdelta: {
 		learnset: {
 			acidarmor: ["9M"],
 			acidspray: ["9M"],
@@ -116644,7 +116644,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			workup: ["9M"],
 		}
 	},
-	deltabeldum: {
+	beldumdelta: {
 		learnset: {
 			ancientpower: ["9M"],
 			energyball: ["9M"],
@@ -116653,7 +116653,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			tackle: ["9L1"],
 		}
 	},
-	deltametang: {
+	metangdelta: {
 		learnset: {
 			ancientpower: ["9L1","9M"],
 			batonpass: ["9M"],
@@ -116738,7 +116738,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M"],
 		}
 	},
-	deltametagross: {
+	metagrossdelta: {
 		learnset: {
 			ancientpower: ["9L1","9M"],
 			batonpass: ["9M"],
@@ -116934,7 +116934,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			withdraw: ["9L1"],
 		}
 	},
-	deltahonedge: {
+	honedgedelta: {
 		learnset: {
 			aerialace: ["9L12","9M"],
 			afteryou: ["9M"],
@@ -117006,7 +117006,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			willowisp: ["9M"],
 		}
 	},
-	deltadoublade: {
+	doubladedelta: {
 		learnset: {
 			aerialace: ["9L12","9M"],
 			afteryou: ["9M"],
@@ -117090,7 +117090,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			xscissor: ["9M"],
 		}
 	},
-	deltaaegislash: {
+	aegislashdelta: {
 		learnset: {
 			aerialace: ["9L1","9M"],
 			afteryou: ["9M"],
@@ -117179,7 +117179,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			xscissor: ["9M"],
 		}
 	},
-	deltasableye: {
+	sableyedelta: {
 		learnset: {
 			ancientpower: ["9L3","9M"],
 			block: ["9M","9M"],
@@ -117527,7 +117527,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			worryseed: ["9M"],
 		}
 	},
-	deltaimpidimp: {
+	impidimpdelta: {
 		learnset: {
 			assurance: ["9M"],
 			attract: ["9M"],
@@ -117587,7 +117587,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			workup: ["9M"],
 		}
 	},
-	deltamorgrem: {
+	morgremdelta: {
 		learnset: {
 			assurance: ["9M"],
 			attract: ["9M"],
@@ -117651,7 +117651,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			workup: ["9M"],
 		}
 	},
-	deltagrimmsnarl: {
+	grimmsnarldelta: {
 		learnset: {
 			assurance: ["9M"],
 			attract: ["9M"],
@@ -117727,7 +117727,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			workup: ["9M"],
 		}
 	},
-	deltafurret: {
+	furretdelta: {
 		learnset:{
 			aerialace: ["9M"],
 			amnesia: ["9L42","9M"],
@@ -117819,7 +117819,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			workup: ["9M"],
 		}
 	},
-	deltasandygast: {
+	sandygastdelta: {
 		learnset: {
 			absorb: ["9L1"],
 			acidarmor: ["9L40"],
@@ -117883,7 +117883,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			willowisp: ["9M"],
 		}
 	},
-	deltapalossand: {
+	palossanddelta: {
 		learnset: {
 			absorb: ["9L1"],
 			acidarmor: ["9L40"],
@@ -117955,7 +117955,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			willowisp: ["9M"],
 		}
 	},
-	deltaskiddo: {
+	skiddodelta: {
 		learnset: {
 			aerialace: ["9M"],
 			agility: ["9M"],
@@ -118031,7 +118031,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M","9M"],
 		}
 	},
-	deltagogoat: {
+	gogoatdelta: {
 		learnset: {
 			aerialace: ["9L1","9M"],
 			agility: ["9M"],
@@ -118114,7 +118114,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M","9M"],
 		}
 	},
-	omegameowth: {
+	meowthomega: {
 		learnset: {
 			agility: ["9M"],
 			amnesia: ["9M"],
@@ -118263,7 +118263,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			yawn: ["9M"],
 		}
 	},
-	deltaazurill: {
+	azurilldelta: {
 		learnset: {
 			alluringvoice: ["9M"],
 			attract: ["9M"],
@@ -118316,7 +118316,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			toxic: ["9M"],
 		}
 	},
-	deltamarill: {
+	marilldelta: {
 		learnset: {
 			alluringvoice: ["9M"],
 			amnesia: ["9M"],
@@ -118386,7 +118386,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			workup: ["9M"],
 		}
 	},
-	deltaazumarill: {
+	azumarilldelta: {
 		learnset: {
 			alluringvoice: ["9M"],
 			amnesia: ["9M"],
@@ -118473,7 +118473,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			workup: ["9M"],
 		}
 	},
-	deltafalinks: {
+	falinksdelta: {
 		learnset: {
 			agility: ["9M"],
 			assurance: ["9M"],
@@ -118537,7 +118537,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M"],
 		}
 	},
-	deltaemolga: {
+	emolgadelta: {
 		learnset: {
 			acrobatics: ["9L25","9M"],
 			aerialace: ["9M"],
@@ -118617,7 +118617,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			uturn: ["9M"],
 		}
 	},
-	ultradreepy: {
+	dreepyultra: {
 		learnset: {
 			batonpass: ["9M"],
 			bite: ["9L1"],
@@ -118642,7 +118642,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			willowisp: ["9M"], 
 		}
 	},
-	ultradrakloak: {
+	drakloakultra: {
 		learnset: {
 			acrobatics: ["9M"],
 			agility: ["9L24","9M"],
@@ -118699,7 +118699,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			willowisp: ["9M"],
 		}
 	},
-	ultradragapult: {
+	dragapultultra: {
 		learnset: {
 			acrobatics: ["9M"],
 			agility: ["9L24","9M"],
@@ -118762,7 +118762,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			willowisp: ["9M"],
 		}
 	},
-	ultrahelioptile: {
+	helioptileultra: {
 		learnset: {
 			absorb: ["9L8"],
 			acidspray: ["9L20"],
@@ -118831,7 +118831,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			worryseed: ["9L16","9M"],
 		}
 	},
-	ultraheliolisk: {
+	helioliskultra: {
 		learnset: {
 			absorb: ["9L1"],
 			acidspray: ["9L1"],
@@ -119443,7 +119443,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M","9M"],
 		}
 	},
-	deltashaymin: {
+	shaymindelta: {
 		learnset: {
 			aircutter: ["9M"],
 			airslash: ["9M"],
@@ -119507,7 +119507,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M"],
 		}
 	},
-	deltashayminsky: {
+	shaymindeltasky: {
 		learnset: {
 			aircutter: ["9M"],
 			airslash: ["9L64","9M"],
@@ -119572,23 +119572,23 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M"],
 		},
 	},
-	deltazeraora: {
+	zeraoradelta: {
 		learnset: {
 			flashpointfists: ["9L84"],
 		}
 	},
-	deltacresselia: {
+	cresseliadelta: {
 		learnset: {
 			solardance: ["9L84"],
 			solarblessing: ["9L82"],
 		}
 	},
-	deltaheatran: {
+	heatrandelta: {
 		learnset: {
 			pressurize: ["9L84"],
 		}
 	},
-	deltahatenna: {
+	hatennadelta: {
 		learnset: {
 			afteryou: ["9M"],
 			alluringvoice: ["9M"],
@@ -119638,7 +119638,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			willowisp: ["9M"],
 		}
 	},
-	deltahattrem: {
+	hattremdelta: {
 		learnset: {
 			afteryou: ["9M"],
 			aromaticmist: ["9L15"],
@@ -119741,7 +119741,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			willowisp: ["9M"],
 		}
 	},
-	deltadruddigon: {
+	druddigondelta: {
 		learnset: {
 			aerialace: ["9M"],
 			aquatail: ["9M"],
