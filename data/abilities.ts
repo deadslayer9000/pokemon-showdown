@@ -825,6 +825,8 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			const move2type = move2.type;
 			this.debug(move1type);
 			this.debug(move2type);
+			const newtype = `${move1},${move2}`;
+			pokemon.setType(newtype);
 
 
 		},
