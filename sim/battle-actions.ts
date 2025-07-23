@@ -1741,7 +1741,11 @@ export class BattleActions {
 			const bondModifier = this.battle.gen > 6 ? 0.25 : 0.5;
 			this.battle.debug(`Parental Bond modifier: ${bondModifier}`);
 			baseDamage = this.battle.modify(baseDamage, bondModifier);
-		}
+		} else if (move.multihitType === 'spectreonslaught' && move.hit > 1) {
+			const spectreModifier = 0.1; 
+			this.battle.debug(`Spectre Onslaught modifier: ${spectreModifier}`);
+			baseDamage = this.battle.modify(baseDamage, spectreModifier);
+}
 
 		// weather modifier
 		baseDamage = this.battle.runEvent('WeatherModifyDamage', pokemon, target, move, baseDamage);
