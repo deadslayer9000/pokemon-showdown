@@ -6953,7 +6953,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			)
 				return;
 			move.multihit = 4;
-			move.multihitType = "spectreonslaught";
+			move.multihitType = "parentalbond";
 		},
 		flags: {},
 		name: "Spectre Onslaught",
