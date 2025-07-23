@@ -817,6 +817,9 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	chromaticscales: {//TODO
 		onStart(pokemon){
+			if (pokemon.hp >= pokemon.maxhp / 2){
+			const regulartype = pokemon.types;
+			pokemon.abilityState.regulartype = regulartype;
 			const move1name = pokemon.moves[0];
 			const move1type = this.dex.moves.get(move1name).type;
 			const move2name = pokemon.moves[1];
@@ -837,11 +840,32 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 					"-message",
 					`${pokemon.name}'s type changed to ${newtype.join(
 						"/"
-					)} due to Chromatic Scales!`
+					)} due to its Chromatic Scales!`
 				);
 			}
+		}
 
+		},
+		onResidual(target, source, effect) {
+			if (source.hp <= source.maxhp / 2){
+				const regulartype = source.abilityState.regulartype;
+				if (source.setType(regulartype)) {
+				this.add(
+					"-start",
+					source,
+					"typechange",
+					regulartype.join("/"),
+					"[from] ability: Chromatic Scales"
+				);
 
+				this.add(
+					"-message",
+					`${source.name}'s Chromatic Scales fell and changed its type back to ${regulartype.join(
+						"/"
+					)}`
+				);
+			}
+			}
 		},
 		flags: {},
 		name: "Chromatic Scales",
