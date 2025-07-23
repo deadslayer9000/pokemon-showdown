@@ -20836,7 +20836,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	deltasteelix: {
 		num: 208,
 		name: "Delta-Steelix",
-		baseSpecies: "Steelix",
+		baseSpecies: "Delta-Steelix",
 		forme: "Delta",
 		types: ["Ground", "Psychic"],
 		baseStats: { hp: 85, atk: 55, def: 65, spa: 75, spd: 200, spe: 30 },
