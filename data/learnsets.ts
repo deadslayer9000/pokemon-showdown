@@ -104586,7 +104586,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			yawn: ["9M"],
 		}
 	},
-	deltamarshadow: {
+	marshadowdelta: {
 		learnset: {
 			aerialace: ["9M"],
 			ancientpower: ["9L1"],

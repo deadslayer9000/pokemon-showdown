@@ -20981,9 +20981,9 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		eggGroups: ["Field"],
 		prevo: "Eevee",
 	},
-	deltamarshadow: {
+	marshadowdelta: {
 		num: 802,
-		name: "Delta-Marshadow",
+		name: "Marshadow-Delta",
 		baseSpecies: "Marshadow",
 		forme: "Delta",
 		types: ["Fire", "Ghost"],
