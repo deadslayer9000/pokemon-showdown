@@ -3186,7 +3186,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	hocuspocus: {
 		onFractionalPriorityPriority: -1,
 		onFractionalPriority(priority, pokemon, target, move) {
-			if (move.category === "Status") {
+			if (this.field.getPseudoWeather('trickroom') && move.category === "Status") {
 				return -9;
 			}
 		},

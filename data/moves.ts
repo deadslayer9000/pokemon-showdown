@@ -5075,24 +5075,24 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		flags: { allyanim: 1, metronome: 1, futuremove: 1 },
 		ignoreImmunity: true,
 		onTry(source, target) {
-			if (!target.side.addSlotCondition(target, "futuremove")) return false;
-			Object.assign(
-				target.side.slotConditions[target.position]["futuremove"],
-				{
-					move: "divination",
-					source,
-					moveData: {
-						id: "divination",
-						name: "Divination",
-						accuracy: 100,
-						basePower: 120,
-						category: "Special",
-						priority: 0,
-						flags: { allyanim: 1, metronome: 1, futuremove: 1 },
-						onTryHit(target, source, move) {
-							if (!source.status) return false;
-							move.status = source.status;
-						},
+			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
+			Object.assign(target.side.slotConditions[target.position]['futuremove'], {
+				move: 'divination',
+				source,
+				moveData: {
+					id: 'divination',
+					name: "Divination",
+					accuracy: 100,
+					basePower: 120,
+					category: "Special",
+					priority: 0,
+					flags: { allyanim: 1, metronome: 1, futuremove: 1 },
+					onTryHit(target, source) {
+						let divstatus = source.status;
+						if (divstatus != '') {
+							target.trySetStatus(divstatus);
+						}
+					},
 						self: {
 							onHit(pokemon) {
 								pokemon.cureStatus();
@@ -17489,10 +17489,8 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		flags: { protect: 1, mirror: 1, metronome: 1, heal: 1 },
 		drain: [1, 2],
 		secondary: {
-			status: {
 				chance: 20,
-				status: "par",
-			},
+				status: 'par',
 		},
 		target: "allAdjacent",
 		type: "Electric",

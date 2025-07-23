@@ -1538,6 +1538,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	divination: {
 		name: "Divination",
 		shortDesc: "Hits two turns later. Transfers status.",
+
+		start: " [POKEMON] saw a horrible fate!",
+		activate: " [TARGET] took the Divination attack!",
+
 	},
 	dizzypunch: {
 		name: "Dizzy Punch",

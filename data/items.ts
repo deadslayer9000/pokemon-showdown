@@ -2929,9 +2929,19 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	illusorysword: {
 		onSwitchInPriority: -2,
 		onStart(pokemon) {
-			if (pokemon.hasAbility('Hocus Pocus')) {
+			if (pokemon.hasAbility('Hocus Pocus') && !pokemon.illusionarysword) {
 				pokemon.addVolatile('illusorysword');
-				pokemon.eatItem();
+				pokemon.illusionarysword = true;
+			}
+		},
+		onModifyAtk(pokemon) {
+			if (this.field.getPseudoWeather('trickroom')) {
+				return this.chainModify([5324, 4096]);
+			}
+		},
+		onModifyDef(pokemon) {
+			if (this.field.getPseudoWeather('trickroom')) {
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		condition: {
