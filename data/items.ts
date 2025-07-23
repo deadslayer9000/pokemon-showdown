@@ -1438,7 +1438,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		megaEvolves: "Delta-Steelix",
 		itemUser: ["Delta-Steelix"],
 		onTakeItem(item, source) {
-			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			if (item.megaEvolves === source.species.name) return false;
 			return true;
 		},
 		num: -3,
@@ -1449,7 +1449,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		onTakeItem: false,
 		zMove: "Cataclysmic Typhoon",
 		zMoveFrom: "Thunder",
-		itemUser: ["Delta-Typlosion"],
+		itemUser: ["Delta-Typhlosion"],
 		num: -4,
 	},
 	destinyknot: {

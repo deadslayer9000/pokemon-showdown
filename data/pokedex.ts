@@ -22221,7 +22221,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		types: ["Fairy", "Water"],
 		gender: "F",
 		baseStats: { hp: 85, atk: 90, def: 95, spa: 65, spd: 77, spe: 94 },
-		abilities: { 0: "Suction Cups", 1: "Pickpocket", H: "Immunity" },
+		abilities: { 0: "Suction Cups", 1: "Steelworker", H: "Immunity" },
 		weightkg: 218.5,
 		heightm: 0.7,
 		color: "Blue",
