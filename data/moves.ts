@@ -4544,7 +4544,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 					priority: 0,
 					flags: { allyanim: 1, metronome: 1, futuremove: 1 },
 					onTryHit(target, source, move) {
-						if (!source.status) return false;
+						if (!source.status) return null;
 							move.status = source.status;
 							},
 					self: {
@@ -15892,10 +15892,8 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		flags: {protect: 1, mirror: 1, metronome: 1, heal: 1},
 		drain: [1, 2],
 		secondary: {
-			status: {
 				chance: 20,
 				status: 'par',
-			}
 		},
 		target: "allAdjacent",
 		type: "Electric",
