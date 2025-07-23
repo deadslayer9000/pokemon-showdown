@@ -846,7 +846,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		}
 
 		},
-		onResidual(target, pokemon, effect) {
+		onResidual(pokemon) {
 			if (pokemon.hp < pokemon.maxhp / 2){
 				const regulartype = pokemon.abilityState.regulartype;
 				if (pokemon.setType(regulartype)) {
