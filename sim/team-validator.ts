@@ -2843,6 +2843,7 @@ export class TeamValidator {
 		const backupSources = setSources.sources;
 		const backupSourcesBefore = setSources.sourcesBefore;
 		setSources.intersectWith(moveSources);
+		/*
 		if (!setSources.size()) {
 			// pretend this pokemon didn't have this move:
 			// prevents a crash if OMs override `checkCanLearn` to keep validating after an error
@@ -2854,6 +2855,7 @@ export class TeamValidator {
 
 		if (babyOnly) setSources.babyOnly = babyOnly;
 		return null;
+		*/
 	}
 
 	static fillStats(stats: SparseStatsTable | null, fillNum = 0): StatsTable {
