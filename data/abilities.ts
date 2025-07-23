@@ -818,14 +818,12 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	chromaticscales: {//TODO
 		onStart(pokemon){
 			const move1name = pokemon.moves[0];
-			const move1 = this.dex.moves.get(move1name);
-			const move1type = move1.type;
+			const move1type = this.dex.moves.get(move1name).type;
 			const move2name = pokemon.moves[1];
-			const move2 = this.dex.moves.get(move2name);
-			const move2type = move2.type;
+			const move2type = this.dex.moves.get(move2name).type;
 			this.debug(move1type);
 			this.debug(move2type);
-			const newtype = `${move1},${move2}`;
+			const newtype = [move1type, move2type];
 			pokemon.setType(newtype);
 
 
