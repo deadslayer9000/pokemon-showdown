@@ -3442,7 +3442,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	},
 	colddeparture: {
 		num: -27,
-		accuracy: 90,
+		accuracy: 100,
 		basePower: 0,
 		category: "Status",
 		name: "Cold Departure",
