@@ -845,14 +845,14 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			}
 		}
 
-		},/*
-		onResidual(target, source, effect) {
-			if (source.hp < source.maxhp / 2){
-				const regulartype = source.abilityState.regulartype;
-				if (source.setType(regulartype)) {
+		},
+		onResidual(target, pokemon, effect) {
+			if (pokemon.hp < pokemon.maxhp / 2){
+				const regulartype = pokemon.abilityState.regulartype;
+				if (pokemon.setType(regulartype)) {
 				this.add(
 					"-start",
-					source,
+					pokemon,
 					"typechange",
 					regulartype.join("/"),
 					"[from] ability: Chromatic Scales"
@@ -860,13 +860,13 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 
 				this.add(
 					"-message",
-					`${source.name}'s Chromatic Scales fell and changed its type back to ${regulartype.join(
+					`${pokemon.name}'s Chromatic Scales fell and changed its type back to ${regulartype.join(
 						"/"
 					)}`
 				);
 			}
 			}
-		},*/
+		},
 		flags: {},
 		name: "Chromatic Scales",
 		rating: 4,
