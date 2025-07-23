@@ -6384,6 +6384,13 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 
 		prepare: "#solarbeam",
 	},
+	solardance: {
+		name: "Solar Dance",
+		desc: "Raises the user's Special Attack by 12 stages in exchange for the user losing 1/2 of its maximum HP, rounded down. Fails if the user would faint or if its Attack stat stage is 6.",
+		shortDesc: "User loses 50% max HP. Maximizes Special Attack.",
+
+		boost: "  [POKEMON] cut its own HP and maximized its Special Attack!",
+	},
 	sonicboom: {
 		name: "Sonic Boom",
 		desc: "Deals 20 HP of damage to the target.",

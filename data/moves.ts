@@ -26877,7 +26877,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	},
 	pressurize: {
 		num: -81,
-		accuracy: 100,
+		accuracy: true,
 		basePower: 0,
 		category: "Status",
 		pp: 5,
@@ -26896,5 +26896,53 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				return;
 			}
 		}
+	},
+	solardance: {
+		num: -82,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Solar Dance",
+		pp: 10,
+		priority: 0,
+		type: "Fire",
+		secondary: null,
+		target: "self",
+		zMove: { effect: "heal" },
+		contestType: "Cute",
+		flags: { snatch: 1, metronome: 1 },
+		onHit(target) {
+			if (
+				target.hp <= target.maxhp / 2 ||
+				target.boosts.spa >= 6 ||
+				target.maxhp === 1
+			) {
+				// Shedinja clause
+				return false;
+			}
+			this.directDamage(target.maxhp / 2);
+			this.boost({ spa: 12 }, target);
+		},
+	},
+	solarblessing: {
+		num: -83,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Solar Blessing",
+		pp: 10,
+		priority: 0,
+		flags: { snatch: 1, heal: 1, bypasssub: 1 },
+		heal: [1, 4],
+		secondary: {
+			chance: 100,
+			boosts: {
+				spa: 1,
+				atk: 1,
+			},
+		},
+		target: "allies",
+		type: "Fire",
 	}
+	
 };

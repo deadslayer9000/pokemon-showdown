@@ -119579,6 +119579,17 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			flashpointfists: ["9L84"],
 		}
 	},
+	deltacresselia: {
+		learnset: {
+			solardance: ["9L84"],
+			solarblessing: ["9L82"],
+		}
+	},
+	deltaheatran: {
+		learnset: {
+			pressurize: ["9L84"],
+		}
+	},
 	deltahatenna: {
 		learnset: {
 			afteryou: ["9M"],
