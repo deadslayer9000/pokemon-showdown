@@ -4837,8 +4837,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	peculiarcandy: {
 		name: "Peculiar Candy",
-		desc: "This move has a 20% chance to apply either Burn, Freeze, or Paralysis on hit.",
-		shortDesc: "20% chance to burn, freeze, or paralyze.",
+		desc: "This move has a 20% chance to apply either Burn, Poison, or Paralysis on hit.",
+		shortDesc: "20% chance to burn, poison, or paralyze.",
 	},
 	perishsong: {
 		name: "Perish Song",

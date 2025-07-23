@@ -7406,7 +7406,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	surgedeluge: {
 		onStart(pokemon) {
 			if (this.field.isTerrain("electricterrain")) {
-				this.boost({ def: 1 }, pokemon);
+				this.boost({ spd: 1 }, pokemon);
 				pokemon.addVolatile("charge");
 			}
 		},

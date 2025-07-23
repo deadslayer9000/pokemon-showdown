@@ -20627,9 +20627,9 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		eggGroups: ["Grass", "Flying"],
 		prevo: "Yanfern",
 	},
-	deltashuckle: {
+	shuckledelta: {
 		num: 213,
-		name: "Delta-Shuckle",
+		name: "Shuckle-Delta",
 		baseSpecies: "Shuckle",
 		forme: "Delta",
 		types: ["Bug", "Poison"],
