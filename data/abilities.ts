@@ -845,9 +845,9 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			}
 		}
 
-		},
+		},/*
 		onResidual(target, source, effect) {
-			if (source.hp <= source.maxhp / 2){
+			if (source.hp < source.maxhp / 2){
 				const regulartype = source.abilityState.regulartype;
 				if (source.setType(regulartype)) {
 				this.add(
@@ -866,7 +866,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				);
 			}
 			}
-		},
+		},*/
 		flags: {},
 		name: "Chromatic Scales",
 		rating: 4,
