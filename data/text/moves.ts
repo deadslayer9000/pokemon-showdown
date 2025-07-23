@@ -6391,6 +6391,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 
 		boost: "  [POKEMON] cut its own HP and maximized its Special Attack!",
 	},
+	solarblessing: {
+		name: "Solar Blessing",
+		desc: "The user heals itself and its ally for 25% of their max HPs and raises their Attack and Special Attack by one stage",
+	},
 	sonicboom: {
 		name: "Sonic Boom",
 		desc: "Deals 20 HP of damage to the target.",
