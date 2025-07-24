@@ -1104,6 +1104,8 @@ export const Aliases: import('../sim/dex').AliasesTable = {
 	doopau: "Hoopa-Delta-Unbound",
 	datios: "Latios-Delta",
 	shake: "Shaymin-Lake",
+	dirachi: "Jirachi-Delta",
+	dictini: "Victini-Delta",
 	
 
 
