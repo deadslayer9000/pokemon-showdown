@@ -118255,6 +118255,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			terablast: ["9M"],
 			toxic: ["9M"],
 			uproar: ["9M"],
+			uturn: ["9M"],
 			willowisp: ["9M"],
 			workup: ["9M"],
 			yawn: ["9M"],
