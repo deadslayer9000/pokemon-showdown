@@ -5075,24 +5075,26 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		flags: { allyanim: 1, metronome: 1, futuremove: 1 },
 		ignoreImmunity: true,
 		onTry(source, target) {
-			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
-			Object.assign(target.side.slotConditions[target.position]['futuremove'], {
-				move: 'divination',
-				source,
-				moveData: {
-					id: 'divination',
-					name: "Divination",
-					accuracy: 100,
-					basePower: 120,
-					category: "Special",
-					priority: 0,
-					flags: { allyanim: 1, metronome: 1, futuremove: 1 },
-					onTryHit(target, source) {
-						let divstatus = source.status;
-						if (divstatus != '') {
-							target.trySetStatus(divstatus);
-						}
-					},
+			if (!target.side.addSlotCondition(target, "futuremove")) return false;
+			Object.assign(
+				target.side.slotConditions[target.position]["futuremove"],
+				{
+					move: "divination",
+					source,
+					moveData: {
+						id: "divination",
+						name: "Divination",
+						accuracy: 100,
+						basePower: 120,
+						category: "Special",
+						priority: 0,
+						flags: { allyanim: 1, metronome: 1, futuremove: 1 },
+						onTryHit(target, source) {
+							let divstatus = source.status;
+							if (divstatus != "") {
+								target.trySetStatus(divstatus);
+							}
+						},
 						self: {
 							onHit(pokemon) {
 								pokemon.cureStatus();
@@ -7896,10 +7898,15 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 							"[from] move: Foam Frenzy",
 							`[of] ${pokemon}`
 						);
-						this.boost({ spa: 1 }, pokemon, pokemon, move);
-						this.hint(`Foam Frenzy boosted ${pokemon.name}'s Special Attack!`)
-						
+						pokemon.abilityState.foamfrenzy = true;
 					}
+				}
+				if ((pokemon.abilityState.foamfrenzy = true)) {
+					this.boost({ spa: 1 }, pokemon, pokemon, move);
+					this.hint(
+						`Foam Frenzy boosted ${pokemon.name}'s Special Attack!`
+					);
+					pokemon.abilityState.foamfrenzy = false;
 				}
 			}
 		},
@@ -7921,7 +7928,13 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 							"[from] move: Foam Frenzy",
 							`[of] ${pokemon}`
 						);
-						this.boost({ spa: 1 }, pokemon, pokemon, move);
+						if ((pokemon.abilityState.foamfrenzy = true)) {
+							this.boost({ spa: 1 }, pokemon, pokemon, move);
+							this.hint(
+								`Foam Frenzy boosted ${pokemon.name}'s Special Attack!`
+							);
+							pokemon.abilityState.foamfrenzy = false;
+						}
 					}
 				}
 			}
@@ -15874,10 +15887,10 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
 		onHit(pokemon) {
-			if (pokemon.ability === 'truant' || pokemon.ability === 'insomnia') {
+			if (pokemon.ability === "truant" || pokemon.ability === "insomnia") {
 				return null;
 			}
-			if (pokemon.getAbility().flags['cantsuppress']) {
+			if (pokemon.getAbility().flags["cantsuppress"]) {
 				return null;
 			}
 			if (pokemon.hasItem("Ability Shield")) {
@@ -16048,7 +16061,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		priority: 0,
 		flags: { protect: 1, metronome: 1, mirror: 1 },
 		onBasePower(basePower, pokemon, target) {
-			if (target.status === "psn" || target.status === "tox" || this.field.isTerrain("corrosiveterrain")) {
+			if (target.status === "psn" || target.status === "tox") {
 				return this.chainModify(2);
 			}
 		},
@@ -17491,8 +17504,8 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		flags: { protect: 1, mirror: 1, metronome: 1, heal: 1 },
 		drain: [1, 2],
 		secondary: {
-				chance: 20,
-				status: 'par',
+			chance: 20,
+			status: "par",
 		},
 		target: "allAdjacent",
 		type: "Electric",
@@ -19693,6 +19706,16 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		pp: 5,
 		flags: { bypasssub: 1 },
 		breaksProtect: true,
+		onTry(source, target, move) {
+			if (source.species.name === "Delta-Hoopa-Unbound" || move.hasBounced) {
+				return;
+			}
+			this.add("-fail", source, "move: Sandstorm Fury");
+			this.hint(
+				"Only a Pokemon whose form is Delta-Hoopa-Unbound can use this move."
+			);
+			return null;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Ground",
@@ -25437,10 +25460,10 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
 		onHit(pokemon) {
-			if (pokemon.ability === 'truant' || pokemon.ability === 'levitate') {
+			if (pokemon.ability === "truant" || pokemon.ability === "levitate") {
 				return null;
 			}
-			if (pokemon.getAbility().flags['cantsuppress']) {
+			if (pokemon.getAbility().flags["cantsuppress"]) {
 				return null;
 			}
 			if (pokemon.hasItem("Ability Shield")) {
@@ -26645,13 +26668,12 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		basePowerCallback(pokemon, target, move) {
 			let bp = move.basePower;
 			if (pokemon.side.totalFainted) {
-				bp = move.basePower + (5 * pokemon.side.totalFainted);
-				
+				bp = move.basePower + 5 * pokemon.side.totalFainted;
 			}
 			this.debug(`BP: ${bp}`);
 			return bp;
 		},
-		
+
 		category: "Physical",
 		name: "Wretched Stab",
 		pp: 10,
@@ -26886,14 +26908,16 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		target: "self",
 		type: "Water",
 		zMove: { effect: "clearnegativeboost" },
-		onModifyMove(move, pokemon){
-			if (pokemon.status === "brn"){
+		onModifyMove(move, pokemon) {
+			if (pokemon.status === "brn") {
 				move.heal = [1, 2];
 			} else {
-				this.hint(`${pokemon.name}'s Pressurize failed because it isn't burned.`)
+				this.hint(
+					`${pokemon.name}'s Pressurize failed because it isn't burned.`
+				);
 				return;
 			}
-		}
+		},
 	},
 	solardance: {
 		num: -82,
@@ -26941,6 +26965,5 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		},
 		target: "allies",
 		type: "Fire",
-	}
-	
+	},
 };
