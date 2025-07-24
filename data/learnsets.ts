@@ -114212,6 +114212,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			skittersmack: ["9M"],
 			sleeptalk: ["9M","9M"],
 			snore: ["9M","9M"],
+			storedpower: ["9M"],
 			stringshot: ["9M"],
 			strugglebug: ["9M"],
 			substitute: ["9M"],

@@ -16048,7 +16048,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		priority: 0,
 		flags: { protect: 1, metronome: 1, mirror: 1 },
 		onBasePower(basePower, pokemon, target) {
-			if (target.status === "psn" || target.status === "tox") {
+			if (target.status === "psn" || target.status === "tox" || this.field.isTerrain("corrosiveterrain")) {
 				return this.chainModify(2);
 			}
 		},
@@ -19693,16 +19693,6 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		pp: 5,
 		flags: { bypasssub: 1 },
 		breaksProtect: true,
-		onTry(source, target, move) {
-			if (source.species.name === "Delta-Hoopa-Unbound" || move.hasBounced) {
-				return;
-			}
-			this.add("-fail", source, "move: Sandstorm Fury");
-			this.hint(
-				"Only a Pokemon whose form is Delta-Hoopa-Unbound can use this move."
-			);
-			return null;
-		},
 		secondary: null,
 		target: "normal",
 		type: "Ground",
