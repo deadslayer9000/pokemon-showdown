@@ -1083,7 +1083,28 @@ export const Aliases: import('../sim/dex').AliasesTable = {
 	dghold: "Gholdengo-Delta",
 	djoe: "Gholdengo-Delta",
 	upult: "Dragapult-Ultra",
+	drose: "Roserade-Delta",
+	tois: "Eruptois",
+	flygun: "Flygon-Ultra",
+	gengur: "Gengar-Ultra",
+	goo: "Goolossal",
+	deatran: "Heatran-Delta",
+	dax: "Haxorus-Delta",
+	datias: "Latias-Delta",
+	dop: "Lopunny-Delta",
+	dlop: "Lopunny-Delta",
+	duxie: "Uxie-Delta",
+	dazelf: "Azelf-Delta",
+	machi: "Cosmachi",
+	darchomp: "Garchomp-Delta",
+	dchomp: "Garchomp-Delta",
+	dastrodon: "Gastrodon-Delta",
+	dolurk: "Golurk-Delta",
+	doopa: "Hoopa-Delta",
+	doopau: "Hoopa-Delta-Unbound",
+	datios: "Latios-Delta",
 	
+
 
 	// ultra beast codenames
 	ub01: "Nihilego",
