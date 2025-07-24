@@ -119920,6 +119920,11 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			toxic: ["9M"],
 		}
 	},
+	chimechodelta:{
+		learnset: {
+			thebelltolls: ["9L55"],
+		}
+	},
 	pokestarsmeargle: {
 		eventData: [
 			{generation: 5, level: 60, gender: "M", abilities: ["owntempo"], moves: ["mindreader", "guillotine", "tailwhip", "gastroacid"]},
