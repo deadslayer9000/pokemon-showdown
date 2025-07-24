@@ -20613,7 +20613,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		eggGroups: ["Grass", "Flying"],
 		evos: ["Yanmelia"],
 	},
-	yanmelia: {
+	yanmellia: {
 		num: 469,
 		name: "Yanmellia",
 		baseSpecies: "Yanmega",
