@@ -107527,6 +107527,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			sandtomb: ["9M"],
 			sandstorm: ["9L25","9M"],
 			sandstormfury: ["9L85"],
+			sandstormsphere: ["9L85"],
 			scorchingsands: ["9M","9M"],
 			secretpower: ["9M"],
 			shadowball: ["9M"],
@@ -115038,7 +115039,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			zenheadbutt: ["9M"],
 		}
 	},	
-	meloettadeltalento: {
+	meloettadelta: {
 		learnset: {
 			alluringvoice: ["9M"],
 			burningjealousy: ["9M","9M"],
@@ -115102,6 +115103,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			temperflare: ["9M"],
 			terablast: ["9M"],
 			terrainpulse: ["9M"],
+			torchsong: ["9M"],
 			toxic: ["9M"],
 			uturn: ["9L43","9M"],
 			waterpulse: ["9L31","9M"],
