@@ -7901,13 +7901,11 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 						pokemon.abilityState.foamfrenzy = true;
 					}
 				}
-				if ((pokemon.abilityState.foamfrenzy = true)) {
-					this.boost({ spa: 1 }, pokemon, pokemon, move);
-					this.hint(
-						`Foam Frenzy boosted ${pokemon.name}'s Special Attack!`
-					);
-					pokemon.abilityState.foamfrenzy = false;
-				}
+			}
+			if (pokemon.abilityState.foamfrenzy) {
+				pokemon.abilityState.foamfrenzy = false;
+				this.boost({ spa: 1 }, pokemon, pokemon, move);
+				this.hint(`Foam Frenzy boosted ${pokemon.name}'s Special Attack!`)
 			}
 		},
 		onAfterSubDamage(damage, target, pokemon, move) {
@@ -7928,15 +7926,14 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 							"[from] move: Foam Frenzy",
 							`[of] ${pokemon}`
 						);
-						if ((pokemon.abilityState.foamfrenzy = true)) {
-							this.boost({ spa: 1 }, pokemon, pokemon, move);
-							this.hint(
-								`Foam Frenzy boosted ${pokemon.name}'s Special Attack!`
-							);
-							pokemon.abilityState.foamfrenzy = false;
-						}
+						pokemon.abilityState.foamfrenzy = true;
 					}
 				}
+			}
+			if (pokemon.abilityState.foamfrenzy) {
+				pokemon.abilityState.foamfrenzy = false;
+				this.boost({ spa: 1 }, pokemon, pokemon, move);
+				this.hint(`Foam Frenzy boosted ${pokemon.name}'s Special Attack!`)
 			}
 		},
 		target: "allAdjacentFoes",

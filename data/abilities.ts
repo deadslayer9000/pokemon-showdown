@@ -4064,7 +4064,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	marvel: {
 		onModifyMove(move, pokemon) {
 			if (!pokemon.abilityState.marvelUsed) {
-				if (move.category === "Special") {
+				if (move.category != "Status") {
 					move.willCrit = true;
 					this.add("-activate", pokemon, "ability: Marvel");
 					pokemon.abilityState.marvelUsed = true;
