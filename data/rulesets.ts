@@ -1615,6 +1615,7 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 					moveTypes.push(dex.moves.get(move.name).type);
 
 					const pokemon = dex.species.get(species.name);
+					speciesTypes.push(...pokemon.types);
 					if (pokemon.forme || pokemon.otherFormes) {
 						const baseSpecies = dex.species.get(pokemon.baseSpecies);
 						const originalForme = dex.species.get(pokemon.changesFrom || pokemon.name);
@@ -1627,7 +1628,7 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 								}
 								const forme = dex.species.get(formeName);
 								if (forme.changesFrom === originalForme.name && !forme.battleOnly) {
-									speciesTypes.push(...forme.types);
+//									speciesTypes.push(...forme.types);
 								}
 							}
 						}
