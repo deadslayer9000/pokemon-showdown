@@ -1077,6 +1077,13 @@ export const Aliases: import('../sim/dex').AliasesTable = {
 	zong: "Bronzong",
 	zor: "Scizor",
 	zyg: "Zygarde",
+	
+	//delta pokemon
+	darsh: "Marshadow-Delta",
+	dghold: "Gholdengo-Delta",
+	djoe: "Gholdengo-Delta",
+	upult: "Dragapult-Ultra",
+	
 
 	// ultra beast codenames
 	ub01: "Nihilego",
