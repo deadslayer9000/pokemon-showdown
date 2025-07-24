@@ -6058,7 +6058,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	yanfern: {
 		tier: "LC",
 	},
-	yanmelia: {
+	yanmellia: {
 		tier: "UU",
 	},
 	shuckledelta: {

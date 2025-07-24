@@ -102195,7 +102195,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			xscissor: ["9M"],
 		}
 	},
-	yanmelia: {
+	yanmellia: {
 		learnset: {
 			acrobatics: ["9M"],
 			aerialace: ["9M"],
