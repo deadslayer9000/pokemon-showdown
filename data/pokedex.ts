@@ -23888,4 +23888,17 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		forme: "Delta",
 		baseSpecies: "Cresselia",
 	},
+	chimechodelta: {
+		num: 358,
+		name: "Chimecho-Delta",
+		types: ["Dark", "Psychic"],
+		baseStats: { hp: 75, atk: 50, def: 70, spa: 105, spd: 80, spe: 75},
+		abilities: { 0: "Levitate" },
+		heightm: 0.6,
+		weightkg: 1,
+		color: "Pink",
+		eggGroups: ["Amorphous"],
+		forme: "Delta",
+		baseSpecies: "Chimecho",
+	}
 };

@@ -7905,7 +7905,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			if (pokemon.abilityState.foamfrenzy) {
 				pokemon.abilityState.foamfrenzy = false;
 				this.boost({ spa: 1 }, pokemon, pokemon, move);
-				this.hint(`Foam Frenzy boosted ${pokemon.name}'s Special Attack!`)
+				this.hint(`Foam Frenzy boosted ${pokemon.name}'s Special Attack!`);
 			}
 		},
 		onAfterSubDamage(damage, target, pokemon, move) {
@@ -7933,7 +7933,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			if (pokemon.abilityState.foamfrenzy) {
 				pokemon.abilityState.foamfrenzy = false;
 				this.boost({ spa: 1 }, pokemon, pokemon, move);
-				this.hint(`Foam Frenzy boosted ${pokemon.name}'s Special Attack!`)
+				this.hint(`Foam Frenzy boosted ${pokemon.name}'s Special Attack!`);
 			}
 		},
 		target: "allAdjacentFoes",
@@ -26962,5 +26962,55 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		},
 		target: "allies",
 		type: "Fire",
+	},
+	thebelltolls: {
+		num: -84,
+		accuracy: 90,
+		basePower: 0,
+		category: "Status",
+		name: "The Bell Tolls",
+		pp: 5,
+		priority: 0,
+		flags: {
+			sound: 1,
+			distance: 1,
+			bypasssub: 1,
+			metronome: 1,
+			cantusetwice: 1,
+		},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+		onHit(target, source, move) {
+			let result = false;
+			let message = false;
+
+			if (this.runEvent("Invulnerability", target, source, move) === false) {
+				this.add("-miss", source, target);
+				result = true;
+			} else if (this.runEvent("TryHit", target, source, move) === null) {
+				result = true;
+			} else if (!target.volatiles["perishsong"]) {
+				target.addVolatile("perishsong");
+				this.add("-start", target, "perish3", "[silent]");
+				result = true;
+				message = true;
+			}
+
+			if (!result) return false;
+			if (message) this.add("-fieldactivate", "move: Perish Song");
+		},
+		condition: {
+			duration: 4,
+			onEnd(target) {
+				this.add("-start", target, "perish0");
+				target.faint();
+			},
+			onResidualOrder: 24,
+			onResidual(target) {
+				const duration = target.volatiles["perishsong"].duration;
+				this.add("-start", target, `perish${duration}`);
+			},
+		},
 	},
 };

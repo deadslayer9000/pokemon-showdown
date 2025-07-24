@@ -7183,6 +7183,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Power doubles if the user is grounded and a terrain is active, and this move's type changes to match. Electric type during Electric Terrain, Grass type during Grassy Terrain, Fairy type during Misty Terrain, and Psychic type during Psychic Terrain.",
 		shortDesc: "User on terrain: power doubles, type varies.",
 	},
+	thebelltolls: {
+		name: "The Bell Tolls",
+		desc: "Sets Perish Song on the opponent. This move cannot be used twice in a row.",
+		shortDesc: "Sets Perish Song on the opponent. This move cannot be used twice in a row."
+	},
 	thief: {
 		name: "Thief",
 		desc: "If this attack was successful and the user has not fainted, it steals the target's held item if the user is not holding one. The target's item is not stolen if it is a Mail or Z-Crystal, or if the target is a Kyogre holding a Blue Orb, a Groudon holding a Red Orb, a Giratina holding a Griseous Orb, an Arceus holding a Plate, a Genesect holding a Drive, a Silvally holding a Memory, or a Pokemon that can Mega Evolve holding the Mega Stone for its species. Items lost to this move cannot be regained with Recycle or the Harvest Ability.",
