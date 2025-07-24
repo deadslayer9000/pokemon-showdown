@@ -21882,7 +21882,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		num: 2035,
 		name: "Necromauser",
 		types: ["Poison", "Ghost"],
-		baseStats: { hp: 150, atk: 110, def: 60, spa: 40, spd: 60, spe: 50 },
+		baseStats: { hp: 150, atk: 125, def: 60, spa: 35, spd: 60, spe: 40 },
 		abilities: { 0: "Unrelenting Stampede" },
 		weightkg: 4.5,
 		heightm: 0.3,
