@@ -8639,6 +8639,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	wishreaper: {
 		onEnd(pokemon) {
+			if(!pokemon.hp) return;
 			let activated = false;
 			for (const target of pokemon.adjacentFoes()) {
 				if (!activated) {
@@ -8651,6 +8652,8 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 					this.boost({ spa: -1 }, target, pokemon, null, true);
 				}
 			}
+			
+			
 		},
 		num: -72,
 		name: "Wish Reaper",
