@@ -6971,9 +6971,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		},
 		onSourceModifySecondaries(secondaries, target, source, move) {
 			if (move.multihitType === "spectreonslaught" && move.hit > 1) {
-				return secondaries.filter(
-					(effect) => effect.volatileStatus !== "flinch"
-				);
+				return [];
 			}
 		},
 
