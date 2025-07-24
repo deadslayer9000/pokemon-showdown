@@ -5762,6 +5762,9 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	purranormal: {
 		onStart(pokemon) {
+			if (pokemon.hp >= pokemon.maxhp / 2){
+
+			
 			this.add("-activate", pokemon, "ability: Purranormal");
 			const alliesWithUser = pokemon.side.pokemon;
 			const allTypes: string[] = [];
@@ -5811,8 +5814,10 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			} else {
 				this.hint(`${pokemon.name}'s Purranormal increased its Speed`);
 			}
+		}
 		},
 		onModifyDamage(damage, source, target, move) {
+			if (source.hp >= source.maxhp / 2){
 			if (
 				source.getStat("spa") >= source.getStat("spe") ||
 				source.abilityState.monotype === true
@@ -5848,6 +5853,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 						return this.chainModify([5336, 4096]);
 				}
 			}
+		}
 		},
 		onModifySpe(spe, pokemon) {
 			if (
