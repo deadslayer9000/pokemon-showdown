@@ -20615,7 +20615,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	},
 	yanmelia: {
 		num: 469,
-		name: "Yanmelia",
+		name: "Yanmellia",
 		baseSpecies: "Yanmega",
 		forme: "Delta",
 		types: ["Grass", "Flying"],
@@ -23839,7 +23839,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		gender: "N",
 		baseStats: { hp: 91, atk: 108, def: 103, spa: 136, spd: 96, spe: 69 },
 		abilities: { 0: "Steamforged" },
-		//height
+		heightm: 1.9,
 		weightkg: 310,
 		color: "Blue",
 		eggGroups: ["Undiscovered"],
@@ -23853,7 +23853,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		gender: "N",
 		baseStats: { hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100 },
 		abilities: { 0: "Wish Reaper" },
-		//height
+		heightm: 0.3,
 		weightkg: 3,
 		color: "Black",
 		eggGroups: ["Undiscovered"],
@@ -23867,7 +23867,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		gender: "N",
 		baseStats: { hp: 88, atk: 123, def: 81, spa: 96, spd: 91, spe: 121 },
 		abilities: { 0: "Unburden" },
-		//height
+		heightm: 0.3,
 		weightkg: 44.5,
 		color: "Red",
 		eggGroups: ["Undiscovered"],
@@ -23881,7 +23881,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		gender: "N",
 		baseStats: { hp: 120, atk: 75, def: 70, spa: 120, spd: 110, spe: 85 },
 		abilities: { 0: "Serene Grace" },
-		//height
+		heightm: 1.5,
 		weightkg: 70.6,
 		color: "Red",
 		eggGroups: ["Undiscovered"],
