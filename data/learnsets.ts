@@ -119600,6 +119600,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			flamewheel: ["9L1"],
 			flamethrower: ["9M"],
 			flareblitz: ["9L72","9M"],
+			flashpointfists: ["9L84"],
 			fling: ["9M"],
 			focusblast: ["9M"],
 			focuspunch: ["9M","9M"],
