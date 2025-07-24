@@ -494,15 +494,15 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				source.formeChange("Greninja-Ash", this.effect, true);
 			}
 			if (
-				(source.species.id === "omegagreninjabond" ||
-					(source.species.id === "omegagreninja" &&
+				(source.species.id === "greninjaomegabond" ||
+					(source.species.id === "greninjaomega" &&
 						source.ability === "battlebond")) &&
 				source.hp &&
 				!source.transformed &&
 				source.side.foePokemonLeft()
 			) {
 				this.add("-activate", source, "ability: Battle Bond");
-				source.formeChange("Omega-Greninja-Ash", this.effect, true);
+				source.formeChange("Greninja-Omega-Ash", this.effect, true);
 			}
 		},
 		onModifyMovePriority: -1,

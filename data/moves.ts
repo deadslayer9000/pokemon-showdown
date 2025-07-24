@@ -5075,24 +5075,26 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		flags: { allyanim: 1, metronome: 1, futuremove: 1 },
 		ignoreImmunity: true,
 		onTry(source, target) {
-			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
-			Object.assign(target.side.slotConditions[target.position]['futuremove'], {
-				move: 'divination',
-				source,
-				moveData: {
-					id: 'divination',
-					name: "Divination",
-					accuracy: 100,
-					basePower: 120,
-					category: "Special",
-					priority: 0,
-					flags: { allyanim: 1, metronome: 1, futuremove: 1 },
-					onTryHit(target, source) {
-						let divstatus = source.status;
-						if (divstatus != '') {
-							target.trySetStatus(divstatus);
-						}
-					},
+			if (!target.side.addSlotCondition(target, "futuremove")) return false;
+			Object.assign(
+				target.side.slotConditions[target.position]["futuremove"],
+				{
+					move: "divination",
+					source,
+					moveData: {
+						id: "divination",
+						name: "Divination",
+						accuracy: 100,
+						basePower: 120,
+						category: "Special",
+						priority: 0,
+						flags: { allyanim: 1, metronome: 1, futuremove: 1 },
+						onTryHit(target, source) {
+							let divstatus = source.status;
+							if (divstatus != "") {
+								target.trySetStatus(divstatus);
+							}
+						},
 						self: {
 							onHit(pokemon) {
 								pokemon.cureStatus();
@@ -6407,7 +6409,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		priority: 0,
 		flags: { snatch: 1, heal: 1, metronome: 1 },
 		onModifyMove(move, pokemon, target) {
-			if (pokemon.species.name === "Delta-Aegislash-Blade") {
+			if (pokemon.species.name === "Aegislash-Delta-Blade") {
 				move.basePower = 100;
 				move.target = "normal";
 				move.flags = { protect: 1, mirror: 1, contact: 1 };
@@ -6419,7 +6421,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				} else {
 					move.category = "Special";
 				}
-			} else if (pokemon.species.name === "Delta-Aegislash") {
+			} else if (pokemon.species.name === "Aegislash-Delta") {
 				move.heal = [1, 4];
 			}
 		},
@@ -7903,7 +7905,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			if (pokemon.abilityState.foamfrenzy) {
 				pokemon.abilityState.foamfrenzy = false;
 				this.boost({ spa: 1 }, pokemon, pokemon, move);
-				this.hint(`Foam Frenzy boosted ${pokemon.name}'s Special Attack!`)
+				this.hint(`Foam Frenzy boosted ${pokemon.name}'s Special Attack!`);
 			}
 		},
 		onAfterSubDamage(damage, target, pokemon, move) {
@@ -7931,7 +7933,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			if (pokemon.abilityState.foamfrenzy) {
 				pokemon.abilityState.foamfrenzy = false;
 				this.boost({ spa: 1 }, pokemon, pokemon, move);
-				this.hint(`Foam Frenzy boosted ${pokemon.name}'s Special Attack!`)
+				this.hint(`Foam Frenzy boosted ${pokemon.name}'s Special Attack!`);
 			}
 		},
 		target: "allAdjacentFoes",
@@ -11914,7 +11916,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			const bp = (move.basePower * pokemon.hp) / pokemon.maxhp;
 			this.debug(`BP: ${bp}`);
 			if (
-				pokemon.species.name === "Omega-Greninja-Ash" &&
+				pokemon.species.name === "Greninja-Omega-Ash" &&
 				pokemon.hasAbility("battlebond") &&
 				!pokemon.transformed
 			) {
@@ -15882,10 +15884,10 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
 		onHit(pokemon) {
-			if (pokemon.ability === 'truant' || pokemon.ability === 'insomnia') {
+			if (pokemon.ability === "truant" || pokemon.ability === "insomnia") {
 				return null;
 			}
-			if (pokemon.getAbility().flags['cantsuppress']) {
+			if (pokemon.getAbility().flags["cantsuppress"]) {
 				return null;
 			}
 			if (pokemon.hasItem("Ability Shield")) {
@@ -16056,7 +16058,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		priority: 0,
 		flags: { protect: 1, metronome: 1, mirror: 1 },
 		onBasePower(basePower, pokemon, target) {
-			if (target.status === "psn" || target.status === "tox" || this.field.isTerrain("corrosiveterrain")) {
+			if (target.status === "psn" || target.status === "tox") {
 				return this.chainModify(2);
 			}
 		},
@@ -17499,8 +17501,8 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		flags: { protect: 1, mirror: 1, metronome: 1, heal: 1 },
 		drain: [1, 2],
 		secondary: {
-				chance: 20,
-				status: 'par',
+			chance: 20,
+			status: "par",
 		},
 		target: "allAdjacent",
 		type: "Electric",
@@ -18747,8 +18749,8 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				move.willChangeForme = true;
 			}
 			if (
-				pokemon.species.id === "deltameloettalento" ||
-				(pokemon.species.id === "deltameloettaallegro" &&
+				pokemon.species.id === "meloettadeltalento" ||
+				(pokemon.species.id === "meloettadeltaallegro" &&
 					!pokemon.transformed)
 			) {
 				move.WillChangeForme = true;
@@ -18770,9 +18772,9 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				);
 			} else {
 				const deltaMeloettaForme =
-					pokemon.species.id === "deltameloettaallegro" ? "" : "-Allegro";
+					pokemon.species.id === "meloettadeltaallegro" ? "" : "-Allegro";
 				pokemon.formeChange(
-					"Delta-Meloetta" + deltaMeloettaForme,
+					"Meloetta-Delta" + deltaMeloettaForme,
 					this.effect,
 					false,
 					"0",
@@ -19701,6 +19703,16 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		pp: 5,
 		flags: { bypasssub: 1 },
 		breaksProtect: true,
+		onTry(source, target, move) {
+			if (source.species.name === "Hoopa-Delta-Unbound" || move.hasBounced) {
+				return;
+			}
+			this.add("-fail", source, "move: Sandstorm Fury");
+			this.hint(
+				"Only a Pokemon whose form is Hoopa-Delta-Unbound can use this move."
+			);
+			return null;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Ground",
@@ -25445,10 +25457,10 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
 		onHit(pokemon) {
-			if (pokemon.ability === 'truant' || pokemon.ability === 'levitate') {
+			if (pokemon.ability === "truant" || pokemon.ability === "levitate") {
 				return null;
 			}
-			if (pokemon.getAbility().flags['cantsuppress']) {
+			if (pokemon.getAbility().flags["cantsuppress"]) {
 				return null;
 			}
 			if (pokemon.hasItem("Ability Shield")) {
@@ -26653,13 +26665,12 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		basePowerCallback(pokemon, target, move) {
 			let bp = move.basePower;
 			if (pokemon.side.totalFainted) {
-				bp = move.basePower + (5 * pokemon.side.totalFainted);
-				
+				bp = move.basePower + 5 * pokemon.side.totalFainted;
 			}
 			this.debug(`BP: ${bp}`);
 			return bp;
 		},
-		
+
 		category: "Physical",
 		name: "Wretched Stab",
 		pp: 10,
@@ -26894,14 +26905,16 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		target: "self",
 		type: "Water",
 		zMove: { effect: "clearnegativeboost" },
-		onModifyMove(move, pokemon){
-			if (pokemon.status === "brn"){
+		onModifyMove(move, pokemon) {
+			if (pokemon.status === "brn") {
 				move.heal = [1, 2];
 			} else {
-				this.hint(`${pokemon.name}'s Pressurize failed because it isn't burned.`)
+				this.hint(
+					`${pokemon.name}'s Pressurize failed because it isn't burned.`
+				);
 				return;
 			}
-		}
+		},
 	},
 	solardance: {
 		num: -82,
@@ -26949,6 +26962,55 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		},
 		target: "allies",
 		type: "Fire",
-	}
-	
+	},
+	thebelltolls: {
+		num: -84,
+		accuracy: 90,
+		basePower: 0,
+		category: "Status",
+		name: "The Bell Tolls",
+		pp: 5,
+		priority: 0,
+		flags: {
+			sound: 1,
+			distance: 1,
+			bypasssub: 1,
+			metronome: 1,
+			cantusetwice: 1,
+		},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+		onHit(target, source, move) {
+			let result = false;
+			let message = false;
+
+			if (this.runEvent("Invulnerability", target, source, move) === false) {
+				this.add("-miss", source, target);
+				result = true;
+			} else if (this.runEvent("TryHit", target, source, move) === null) {
+				result = true;
+			} else if (!target.volatiles["perishsong"]) {
+				target.addVolatile("perishsong");
+				this.add("-start", target, "perish3", "[silent]");
+				result = true;
+				message = true;
+			}
+
+			if (!result) return false;
+			if (message) this.add("-fieldactivate", "move: Perish Song");
+		},
+		condition: {
+			duration: 4,
+			onEnd(target) {
+				this.add("-start", target, "perish0");
+				target.faint();
+			},
+			onResidualOrder: 24,
+			onResidual(target) {
+				const duration = target.volatiles["perishsong"].duration;
+				this.add("-start", target, `perish${duration}`);
+			},
+		},
+	},
 };

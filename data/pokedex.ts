@@ -21882,7 +21882,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		num: 2035,
 		name: "Necromauser",
 		types: ["Poison", "Ghost"],
-		baseStats: { hp: 150, atk: 110, def: 60, spa: 40, spd: 60, spe: 50 },
+		baseStats: { hp: 150, atk: 125, def: 60, spa: 35, spd: 60, spe: 40 },
 		abilities: { 0: "Unrelenting Stampede" },
 		weightkg: 4.5,
 		heightm: 0.3,
@@ -23888,4 +23888,17 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		forme: "Delta",
 		baseSpecies: "Cresselia",
 	},
+	chimechodelta: {
+		num: 358,
+		name: "Chimecho-Delta",
+		types: ["Dark", "Psychic"],
+		baseStats: { hp: 75, atk: 50, def: 70, spa: 105, spd: 80, spe: 75},
+		abilities: { 0: "Levitate" },
+		heightm: 0.6,
+		weightkg: 1,
+		color: "Pink",
+		eggGroups: ["Amorphous"],
+		forme: "Delta",
+		baseSpecies: "Chimecho",
+	}
 };
