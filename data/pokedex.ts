@@ -22870,7 +22870,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	charizarddeltamega: {
 		num: 6,
 		name: "Charizard-Delta-Mega",
-		types: ["Dragon"],
+		types: ["Dragon", "Rock"],
 		baseStats: { hp: 72, atk: 155, def: 132, spa: 92, spd: 103, spe: 80 },
 		abilities: { 0: "Sheer Force" },
 		heightm: 1.7,
