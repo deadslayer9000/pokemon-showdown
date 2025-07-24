@@ -1599,7 +1599,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	purranormal: {
 		name: "Purranormal",
-		shortDesc: "Effect changes based on team composition. Inactive below 50% HP.",
+		shortDesc: "Gives Spatk or Speed boost depending on team composition. Inactive below 50% HP.",
+		desc: "This pokemon's Spatk or Speed is boosted depending which is higher, the more unique types on the pokemon's team the higher the boost. Monotype teams get max boosts."
 	},
 	pyroclastic: {
 		name: "Pyroclastic (WIP)",

@@ -26648,13 +26648,25 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		num: -33,
 		accuracy: 100,
 		basePower: 20,
+		/*
 		basePowerCallback(pokemon, target, move) {
 			return 20 + 5 * pokemon.side.totalFainted;
+		},*/
+		basePowerCallback(pokemon, target, move) {
+			let bp = move.basePower;
+			if (pokemon.side.totalFainted) {
+				bp = move.basePower + (5 * pokemon.side.totalFainted);
+				
+			}
+			this.debug(`BP: ${bp}`);
+			return bp;
 		},
+		
 		category: "Physical",
 		name: "Wretched Stab",
 		pp: 10,
 		priority: 0,
+		multihit: [2, 5],
 		flags: { protect: 1, mirror: 1 },
 		secondary: null,
 		target: "normal",
