@@ -6409,7 +6409,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		priority: 0,
 		flags: { snatch: 1, heal: 1, metronome: 1 },
 		onModifyMove(move, pokemon, target) {
-			if (pokemon.species.name === "Delta-Aegislash-Blade") {
+			if (pokemon.species.name === "Aegislash-Delta-Blade") {
 				move.basePower = 100;
 				move.target = "normal";
 				move.flags = { protect: 1, mirror: 1, contact: 1 };
@@ -6421,7 +6421,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				} else {
 					move.category = "Special";
 				}
-			} else if (pokemon.species.name === "Delta-Aegislash") {
+			} else if (pokemon.species.name === "Aegislash-Delta") {
 				move.heal = [1, 4];
 			}
 		},
@@ -11916,7 +11916,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			const bp = (move.basePower * pokemon.hp) / pokemon.maxhp;
 			this.debug(`BP: ${bp}`);
 			if (
-				pokemon.species.name === "Omega-Greninja-Ash" &&
+				pokemon.species.name === "Greninja-Omega-Ash" &&
 				pokemon.hasAbility("battlebond") &&
 				!pokemon.transformed
 			) {
@@ -18749,8 +18749,8 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				move.willChangeForme = true;
 			}
 			if (
-				pokemon.species.id === "deltameloettalento" ||
-				(pokemon.species.id === "deltameloettaallegro" &&
+				pokemon.species.id === "meloettadeltalento" ||
+				(pokemon.species.id === "meloettadeltaallegro" &&
 					!pokemon.transformed)
 			) {
 				move.WillChangeForme = true;
@@ -18772,9 +18772,9 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				);
 			} else {
 				const deltaMeloettaForme =
-					pokemon.species.id === "deltameloettaallegro" ? "" : "-Allegro";
+					pokemon.species.id === "meloettadeltaallegro" ? "" : "-Allegro";
 				pokemon.formeChange(
-					"Delta-Meloetta" + deltaMeloettaForme,
+					"Meloetta-Delta" + deltaMeloettaForme,
 					this.effect,
 					false,
 					"0",
@@ -19704,12 +19704,12 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		flags: { bypasssub: 1 },
 		breaksProtect: true,
 		onTry(source, target, move) {
-			if (source.species.name === "Delta-Hoopa-Unbound" || move.hasBounced) {
+			if (source.species.name === "Hoopa-Delta-Unbound" || move.hasBounced) {
 				return;
 			}
 			this.add("-fail", source, "move: Sandstorm Fury");
 			this.hint(
-				"Only a Pokemon whose form is Delta-Hoopa-Unbound can use this move."
+				"Only a Pokemon whose form is Hoopa-Delta-Unbound can use this move."
 			);
 			return null;
 		},

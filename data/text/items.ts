@@ -383,39 +383,39 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 	},
 	deltagholdiumz: {
 		name: "Delta Gholdium Z",
-		shortDesc: "If held by Delta-Gholdengo with Pearly Parade, allows it to use Ride The Wave.",
+		shortDesc: "If held by Gholdengo-Delta with Pearly Parade, allows it to use Ride The Wave.",
 	},
 	deltahaxorusite: {
 		name: "Delta Haxorusite",
-		shortDesc: "If held by Delta-Haxorus, this item allows it to Mega Evolve in battle.",
+		shortDesc: "If held by Haxorus-Delta, this item allows it to Mega Evolve in battle.",
 	},
 	deltainfernapeite: {
 		name: "Delta Infernapeite",
-		shortDesc: "If held by Delta-Infernape, this item allows it to Mega Evolve in battle.",
+		shortDesc: "If held by Infernape-Delta, this item allows it to Mega Evolve in battle.",
 	},
 	deltaklinklangiumz: {
 		name: "Delta Klinklangium Z",
-		shortDesc: "If held by Delta-Klinklang with Flux Emission, allows it to use Absolute Zero.",
+		shortDesc: "If held by Klinklang-Delta with Flux Emission, allows it to use Absolute Zero.",
 	},
 	deltalatiasite: {
 		name: "Delta Latiasite",
-		shortDesc: "If held by Delta-Latias, this item allows her to Mega Evolve in battle.",
+		shortDesc: "If held by Latias-Delta, this item allows her to Mega Evolve in battle.",
 	},
 	deltalatiosite: {
 		name: "Delta Latiosite",
-		shortDesc: "If held by Delta-Latios, this item allows him to Mega Evolve in battle.",
+		shortDesc: "If held by Latios-Delta, this item allows him to Mega Evolve in battle.",
 	},
 	deltalopunnite: {
 		name: "Delta Lopunnite",
-		shortDesc: "If held by Delta-Lopunny, this item allows it to Mega Evolve in battle.",
+		shortDesc: "If held by Lopunny-Delta, this item allows it to Mega Evolve in battle.",
 	},
 	deltasteelixite: {
 		name: "Delta Steelixite",
-		shortDesc: "If held by Delta-Steelix, this item allows it to Mega Evolve in battle.",
+		shortDesc: "If held by Steelix-Delta, this item allows it to Mega Evolve in battle.",
 	},
 	deltatyphlosiumz: {
 		name: "Delta Typhlosium Z",
-		shortDesc: "If held by a Delta-Typhlosion with Thunder, allows it to use Cataclysmic Typhoon",
+		shortDesc: "If held by a Typhlosion-Delta with Thunder, allows it to use Cataclysmic Typhoon",
 	},
 	destinyknot: {
 		name: "Destiny Knot",
