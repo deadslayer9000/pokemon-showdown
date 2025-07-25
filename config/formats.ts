@@ -39,9 +39,8 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		],
 	},
 	{
-		name: "[Gen 9] Realgam AAA",
+		name: "[Gen 9] [ND] Realgam AAA",
 		mod: 'gen9',
-		teambuilderFormat: 'National Dex',
 		ruleset: ['Standard NatDex', '!Obtainable Abilities', 'Ability Clause = 2', 'Sleep Moves Clause', 'Terastal Clause'],
 		banlist: [
 			'isshaymindeltasky','ND AG', 'Assist', 'Baton Pass', 'Electrify', 'Last Respects', 'Rage Fist', 'Shed Tail', 'Arena Trap', 
