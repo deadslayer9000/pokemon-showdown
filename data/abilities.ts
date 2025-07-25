@@ -5807,7 +5807,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 					this.hint(
 						`${pokemon.name}'s Monotype boosted Purranormal increased its Special Attack and Speed!`
 					);
-				} else if (pokemon.getStat("spa") >= pokemon.getStat("spe")) {
+				} else if (pokemon.storedStats["spa"] >= pokemon.storedStats["spe"]) {
 					this.hint(
 						`${pokemon.name}'s Purranormal increased its Special Attack`
 					);
@@ -5819,7 +5819,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		onModifyDamage(damage, source, target, move) {
 			if (source.hp >= source.maxhp / 2) {
 				if (
-					source.getStat("spa") >= source.getStat("spe") ||
+					source.storedStats["spa"] >= source.storedStats["spe"] ||
 					source.abilityState.monotype === true
 				) {
 					const typeCount = source.abilityState?.typeCount;
@@ -5857,7 +5857,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		},
 		onModifySpe(spe, pokemon) {
 			if (
-				pokemon.speed > pokemon.getStat("spa") ||
+				pokemon.storedStats["spe"] > pokemon.storedStats["spa"] ||
 				pokemon.abilityState.monotype === true
 			) {
 				const typeCount = pokemon.abilityState?.typeCount;
