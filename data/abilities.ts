@@ -6621,7 +6621,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 23,
 	},
 	shapeshift: {
-		onBeforeMove(pokemon) {
+		onAfterMega(pokemon) {
 			if (pokemon.illusion) {
 					this.singleEvent(
 						"End",
