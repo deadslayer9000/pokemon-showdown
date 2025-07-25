@@ -296,6 +296,10 @@ export const Tags: { [id: IDEntry]: TagData } = {
 		name: "Nonexistent",
 		genericFilter: thing => !!thing.isNonstandard && thing.isNonstandard !== 'Unobtainable',
 	},
+	isshaymindeltasky: {
+		name: "Is Shaymin Delta Sky",
+		genericFilter: species => species.name === 'Shaymin-Delta-Sky',
+	},
 
 	// filter columns
 	// --------------
