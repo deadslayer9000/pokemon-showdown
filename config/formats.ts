@@ -24,7 +24,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	// SO THEY STAY
 	// JUST DON'T EXPECT ANYONE TO CHALLENGE THEM
 	{
-		section: "Cobblemon Delta Tiers",
+		section: "Delta Showdown Tiers",
 	},
 	{
 		name: "[Gen 9] National Dex",
@@ -37,6 +37,26 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		unbanlist: [
 			'Solgaleo', 'Sneasler', 'Annihilape', 'Ursaluna-Bloodmoon', 'Espathra',
 		],
+	},
+	{
+		name: "[Gen 9] [ND] Realgam AAA",
+		mod: 'gen9',
+		ruleset: ['Standard NatDex', '!Obtainable Abilities', 'Ability Clause = 2', 'Sleep Moves Clause', 'Terastal Clause'],
+		banlist: [
+			'isshaymindeltasky','ND AG', 'Assist', 'Baton Pass', 'Electrify', 'Last Respects', 'Rage Fist', 'Shed Tail', 'Arena Trap', 
+			'Boundless', 'Breach', 'Chromatic Scales', 'Chronostasis', 'Comatose', 'Contrary', 'Covenant', 'Dark Decree', 'Death Defiance',
+			'Desert Spirit', 'Diamond Grove', 'Dire Ambush', 'Evil\'s Bane', 'Exalt', 'Fabled', 'Feast or Famine', 'Forbidden Treat', 'Fur Coat', 'Geyser', 'Gorilla Tactics',
+			'Good as Gold', 'Helix Nebula', 'Hocus Pocus', 'Huge Power', 'Ice Scales', 'Illusion', 'Imposter', 'Innards Out', 'Magic Bounce', 'Magnet Pull', 
+			'Marvel', 'Merciless', 'Monarch\'s Pole', 'Moody', 'Neutralizing Gas', 'Orichalcum Pulse', 'Parental Bond', 'Performer', 'Poison Heal', 'Pure Power', 'Purranormal',
+			'Quick Wit', 'Serene Grace', 'Shadow Tag', 'Simple', 'Spectre Onslaught', 'Speed Boost', 'Stakeout', 'Strong Psyche', 'Swordmaster', 'Triage', 'Unburden',
+			'Usurper', 'Water Bubble', 'Wonder Guard', 'Surge Deluge', 'Sheltered Slumber', 'Ragnarok', 'Alakazam-Mega', 'Archeops', 'Arceus', 'Baxcalibur', 'Blacephalon', 'Blastoise-Mega',
+			'Blaziken-Mega', 'Calyrex-Ice', 'Calyrex-Shadow', 'Chien-Pao', 'Darkrai', 'Deoxys-Normal', 'Deoxys-Attack', 'Dialga', 'Dialga-Origin', 'Dracovish', 'Dragapult', 'Enamorus',
+			'Eternatus', 'Flutter Mane', 'Gouging Fire', 'Groudon', 'Ho-Oh', 'Hoopa-Unbound', 'Hoopa-Delta-Unbound', 'Iron Boulder', 'Iron Bundle', 'Iron Pilot', 'Iron Revival', 'Iron Storm',
+			'Iron Valiant', 'Kangaskhan-Mega', 'Kartana', 'Keldeo', 'Kingambit', 'Koraidon', 'Kyogre', 'Kyurem', 'Kyurem-Black', 'Kyurem-White', 'Kyurem-Original', 'Lucario-Mega', 'Lugia', 'Lunala', 
+			'Magearna', 'Marshadow', 'Melmetal', 'Mewthree', 'Mewtwo', 'Miraidon', 'Naganadel', 'Necrozma-Dusk-Mane', 'Necrozma-Dawn-Wings', 'Noivern', 'Palkia', 'Palkia-Origin', 'Pheromosa', 'Raging Bolt', 
+			'Rayquaza', 'Regigigas', 'Reshiram', 'Rising Phoenix', 'Salamence-Mega', 'Shaymin-Sky', 'Shedinja', 'Slaking', 'Sneasler', 'Spectrier', 'Urshifu', 'Urshifu-Rapid-Strike',
+			'Weavile', 'Whirling Abyss', 'Wisphir', 'Xerneas', 'Xurkitree', 'Yveltal', 'Zacian', 'Zacian-Crowned', 'Zekrom', 'Zeraora', 'Zygarde-50%', 'King\'s Rock', 'Light Clay', 'Quick Claw' 	  
+		]
 	},
 	// S/V Singles
 	///////////////////////////////////////////////////////////////////
