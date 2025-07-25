@@ -5766,7 +5766,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		onStart(pokemon) {
 			if (pokemon.hp >= pokemon.maxhp / 2) {
 				this.add("-activate", pokemon, "ability: Purranormal");
-				this.add('-boos', pokemon, 'spe', 1);
+				this.add('-boost', pokemon, 'spe', 1);
 				const alliesWithUser = pokemon.side.pokemon;
 				const allTypes: string[] = [];
 				const monoCounter: { [key: string]: number } = {};
