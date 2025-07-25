@@ -55,7 +55,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'Iron Valiant', 'Kangaskhan-Mega', 'Kartana', 'Keldeo', 'Kingambit', 'Koraidon', 'Kyogre', 'Kyurem', 'Kyurem-Black', 'Kyurem-White', 'Kyurem-Original', 'Lucario-Mega', 'Lugia', 'Lunala', 
 			'Magearna', 'Marshadow', 'Melmetal', 'Mewthree', 'Mewtwo', 'Miraidon', 'Naganadel', 'Necrozma-Dusk-Mane', 'Necrozma-Dawn-Wings', 'Noivern', 'Palkia', 'Palkia-Origin', 'Pheromosa', 'Raging Bolt', 
 			'Rayquaza', 'Regigigas', 'Reshiram', 'Rising Phoenix', 'Salamence-Mega', 'Shaymin-Sky', 'Shaymin-Delta-Sky', 'Shedinja', 'Slaking', 'Sneasler', 'Spectrier', 'Urshifu', 'Urshifu-Rapid-Strike',
-			'Weavile', 'Whirling Abyss', 'Wisphir', 'Xerneas', 'Xurkitree', 'Yveltal', 'Zacian', 'Zacian-Crowned', 'Zekrom', 'Zeraora', 'Zygarde-50%', 'Bright Powder', 'King\'s Rock', 'Light Clay', 'Quick Claw' 	  
+			'Weavile', 'Whirling Abyss', 'Wisphir', 'Xerneas', 'Xurkitree', 'Yveltal', 'Zacian', 'Zacian-Crowned', 'Zekrom', 'Zeraora', 'Zygarde-50%', 'King\'s Rock', 'Light Clay', 'Quick Claw' 	  
 		]
 	},
 	// S/V Singles
