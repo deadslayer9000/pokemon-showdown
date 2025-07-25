@@ -3488,9 +3488,16 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			}
 		},
 		onAfterMega(pokemon) {
+			this.debug("aftermega");
 			if(pokemon.name === "Zoroark-Hisui-Mega"){
 				pokemon.illusion = null;
 				this.hint(`${pokemon}'s Illusion fell.`)
+				if (this.ruleTable.has("illusionlevelmod")) {
+					this.hint(
+						"Illusion Level Mod is active, so this Pok\u00e9mon's true level was hidden.",
+						true
+					);
+				}
 			}
 		},
 		onDamagingHit(damage, target, source, move) {
@@ -3522,6 +3529,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		},
 		onFaint(pokemon) {
 			pokemon.illusion = null;
+			
 		},
 		flags: {
 			failroleplay: 1,
