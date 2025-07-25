@@ -3487,6 +3487,12 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				}
 			}
 		},
+		onAfterMega(pokemon) {
+			if(pokemon.name === "Zoroark-Hisui-Mega"){
+				pokemon.illusion = null;
+				this.hint(`${pokemon}'s Illusion fell.`)
+			}
+		},
 		onDamagingHit(damage, target, source, move) {
 			if (target.illusion) {
 				this.singleEvent(
