@@ -339,6 +339,11 @@ export const DefaultText: { [id: IDEntry]: DefaultText } = {
 		end: "  The weirdness disappeared from the battlefield!",
 		block: "  [POKEMON] is protected by the Psychic Terrain!",
 	},
+	corrosiveterrain: {
+		start: " The field became polluted!",
+		end: " The pollution disappeared from the battlefield.",
+		damage: " [POKEMON] is hurt by the Corrosive Terrain!",
+	},
 
 	// field effects
 	gravity: {

@@ -20611,7 +20611,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		heightm: 1.3,
 		color: "Green",
 		eggGroups: ["Grass", "Flying"],
-		evos: ["Yanmelia"],
+		evos: ["Yanmellia"],
 	},
 	yanmellia: {
 		num: 469,
