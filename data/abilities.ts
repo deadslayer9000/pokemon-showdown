@@ -3487,6 +3487,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				}
 			}
 		},
+		
 		onDamagingHit(damage, target, source, move) {
 			if (target.illusion) {
 				this.singleEvent(
@@ -3516,6 +3517,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		},
 		onFaint(pokemon) {
 			pokemon.illusion = null;
+			
 		},
 		flags: {
 			failroleplay: 1,
@@ -6619,6 +6621,19 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 23,
 	},
 	shapeshift: {
+		onAfterMega(pokemon) {
+			if (pokemon.illusion) {
+					this.singleEvent(
+						"End",
+						this.dex.abilities.get("Illusion"),
+						pokemon.abilityState,
+						pokemon,
+						pokemon,
+						"Shapeshift"
+					);
+				}
+			
+		},
 		onAfterMove(source, target, move) {
 			if (move.id === "bittermalice") {
 				if (target && !target.fainted && !source.transformed) {
