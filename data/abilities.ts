@@ -6622,14 +6622,14 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	shapeshift: {
 		onBeforeMove(pokemon) {
-			this.debug("beforemove");
-			
-				pokemon.illusion = null;
-				this.hint(`${pokemon}'s Illusion fell.`)
-				if (this.ruleTable.has("illusionlevelmod")) {
-					this.hint(
-						"Illusion Level Mod is active, so this Pok\u00e9mon's true level was hidden.",
-						true
+			if (pokemon.illusion) {
+					this.singleEvent(
+						"End",
+						this.dex.abilities.get("Illusion"),
+						pokemon.abilityState,
+						pokemon,
+						pokemon,
+						"Shapeshift"
 					);
 				}
 			
