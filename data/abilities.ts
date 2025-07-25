@@ -3487,19 +3487,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				}
 			}
 		},
-		onBeforeMove(pokemon) {
-			this.debug("beforemove");
-			
-				pokemon.illusion = null;
-				this.hint(`${pokemon}'s Illusion fell.`)
-				if (this.ruleTable.has("illusionlevelmod")) {
-					this.hint(
-						"Illusion Level Mod is active, so this Pok\u00e9mon's true level was hidden.",
-						true
-					);
-				}
-			
-		},
+		
 		onDamagingHit(damage, target, source, move) {
 			if (target.illusion) {
 				this.singleEvent(
@@ -6633,6 +6621,19 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 23,
 	},
 	shapeshift: {
+		onBeforeMove(pokemon) {
+			this.debug("beforemove");
+			
+				pokemon.illusion = null;
+				this.hint(`${pokemon}'s Illusion fell.`)
+				if (this.ruleTable.has("illusionlevelmod")) {
+					this.hint(
+						"Illusion Level Mod is active, so this Pok\u00e9mon's true level was hidden.",
+						true
+					);
+				}
+			
+		},
 		onAfterMove(source, target, move) {
 			if (move.id === "bittermalice") {
 				if (target && !target.fainted && !source.transformed) {
