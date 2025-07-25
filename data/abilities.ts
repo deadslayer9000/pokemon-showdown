@@ -3489,7 +3489,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		},
 		onBeforeMove(pokemon) {
 			this.debug("beforemove");
-			if(pokemon.name === "Zoroark-Hisui-Mega"){
+			
 				pokemon.illusion = null;
 				this.hint(`${pokemon}'s Illusion fell.`)
 				if (this.ruleTable.has("illusionlevelmod")) {
@@ -3498,7 +3498,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 						true
 					);
 				}
-			}
+			
 		},
 		onDamagingHit(damage, target, source, move) {
 			if (target.illusion) {
