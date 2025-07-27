@@ -5262,14 +5262,13 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	poisonheal: {
 		onDamagePriority: 1,
 		onDamage(damage, target, source, effect) {
-			if (effect.id === "psn" || effect.id === "tox") {
-				this.heal(target.baseMaxhp / 8);
+			if (effect.id === "psn" || effect.id === "tox" && this.field.isTerrain('corrosiveterrain')) {
+				this.heal(target.baseMaxhp / 6);
 				return false;
 			}
-		},
-		onResidual(pokemon) {
-			if (this.field.isTerrain("corrosiveterrain")) {
-				this.heal(pokemon.baseMaxhp / 6);
+			else if (effect.id === "psn" || effect.id === "tox") {
+				this.heal(target.baseMaxhp / 8);
+				return false;
 			}
 		},
 		flags: {},
