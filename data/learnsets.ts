@@ -106559,7 +106559,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			brickbreak: ["9L45","9M"],
 			bulkup: ["9M"],
 			camouflage: ["9M"],
-			closecombat: ["9M"],
 			coaching: ["9M","9M"],
 			confide: ["9M"],
 			counter: ["9M"],
