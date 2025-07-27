@@ -538,11 +538,17 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 
 		boost: "  The Hearthflame Mask worn by [POKEMON] shone brilliantly, and [POKEMON]'s Attack rose!",
 	},
+	embodyaspectshadowcrest: {
+		name: "Embody Aspect (Shadowcrest)",
+		shortDesc: "On switch-in, this Pokemon's Special Defense is raised by 1 stage.",
+
+		boost: " The Shadowcrest Mask worn by [POKEMON] shone brilliantly, and [POKEMON]'s Sp. Def rose!",
+	},
 	embodyaspectstormpeak: {
 		name: "Embody Aspect (Stormpeak)",
 		shortDesc: "On switch-in, this Pokemon's Speed is raised by 1 stage.",
 
-		boost: " The Stormpeak Mask worn by [POKEMON] shone brilliantly, and [POKEMON]'s Attack rose!",
+		boost: " The Stormpeak Mask worn by [POKEMON] shone brilliantly, and [POKEMON]'s Speed rose!",
 	},
 	embodyaspectteal: {
 		name: "Embody Aspect (Teal)",

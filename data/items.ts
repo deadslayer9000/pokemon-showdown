@@ -5469,6 +5469,27 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		gen: 3,
 		isNonstandard: "Past",
 	},
+	shadowcrestmask: {
+		name: "Shadowcrest Mask",
+		spritenum: ,
+		fling: {
+			basePower: 60,
+		},
+		onBasePowerPriority: 15,
+		onBasePower(basePower, user, target, move) {
+			if (user.baseSpecies.name.startsWith('Ogerpon-Shadowcrest')) {
+				return this.chainModify([4915, 4096]);
+			}
+		},
+		onTakeItem(item, source) {
+			if (source.baseSpecies.baseSpecies === 'Ogerpon') return false;
+			return true;
+		},
+		forcedForme: "Ogerpon-Shadowcrest",
+		itemUser: ["Ogerpon-Shadowcrest"],
+		num: 2409,
+		gen: 9,
+	},
 	sharpbeak: {
 		name: "Sharp Beak",
 		spritenum: 436,
