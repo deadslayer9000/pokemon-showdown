@@ -1686,6 +1686,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 			shortDesc: "Holder's Water-type attacks have 1.05x power.",
 		},
 	},
+	shadowcrestmask: {
+		name: "Shadowcrest Mask",
+		shortDesc: "Ogerpon-Shadowcrest: Attacks has 1.2x power; Terrastalize to gain Embody Aspect."
+	},
 	sharpbeak: {
 		name: "Sharp Beak",
 		shortDesc: "Holder's Flying-type attacks have 1.2x power.",
