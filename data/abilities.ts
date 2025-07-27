@@ -5264,7 +5264,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	poisonheal: {
 		onDamagePriority: 1,
 		onDamage(damage, target, source, effect) {
-			if (effect.id === "psn" || effect.id === "tox" && this.field.isTerrain('corrosiveterrain')) {
+			if ((effect.id === "psn" || effect.id === "tox") && this.field.isTerrain('corrosiveterrain')) {
 				this.heal(target.baseMaxhp / 6);
 				return false;
 			}
