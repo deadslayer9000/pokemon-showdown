@@ -22160,7 +22160,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		name: "Sprigatito-Delta",
 		baseSpecies: "Sprigatito",
 		forme: "Delta",
-		types: ["Fairy", "Ghost"],
+		types: ["Fairy"],
 		baseStats: { hp: 40, atk: 45, def: 45, spa: 61, spd: 54, spe: 65 },
 		abilities: { 0: "Twinkle", H: "Telepathy" },
 		weightkg: 4.5,
