@@ -5471,7 +5471,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	},
 	shadowcrestmask: {
 		name: "Shadowcrest Mask",
-		spritenum: ,
+		spritenum: 758,
 		fling: {
 			basePower: 60,
 		},
