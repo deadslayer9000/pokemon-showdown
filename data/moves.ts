@@ -7459,6 +7459,13 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		num: -79,
 		accuracy: 100,
 		basePower: 80,
+		onHit(target, source, move){
+			if (target.types[0] === "Fire"){
+				target.types[0] = "???"
+			} else if ( target.types[1] === "Fire"){
+				target.types[1] = "???"
+			}
+		},
 		basePowerCallback(pokemon, target, move) {
 			let bp = move.basePower;
 			if (this.field.pseudoWeather.echoedvoice) {
