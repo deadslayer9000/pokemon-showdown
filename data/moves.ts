@@ -11963,7 +11963,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					source.hasAbility("battlebond") &&
 					!source.transformed
 				) {
-					move.secondary = { chance: 100, self: { boosts: { atk: 1 } } };
+					this.boost({atk:1}, source, source, move)
 				}
 			}
 		},
@@ -11974,7 +11974,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Ice Mace",
 		priority: 0,
 		flags: { contact: 1, protect: 1, mirror: 1, punch: 1, metronome: 1 },
-		secondary: {},
+		secondary: null,
 		target: "normal",
 		type: "Ice",
 	},
