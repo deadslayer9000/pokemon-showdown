@@ -6245,8 +6245,8 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 4.5,
 		num: 144,
 	},
-	renegade:{
-		onTryHit(target, source, move) {
+	renegade: {
+		/*onTryHit(target, move, source,) {
 			if (!source.abilityState.renegade) source.abilityState.renegade = 0;
 			if(target !== source && move.type === 'Dark' && move.category !== 'Status') {
 				if(source.abilityState.renegade >= 5) return;
@@ -6254,10 +6254,8 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			} 
 			this.hint(source.abilityState.renegade);
 		},
-		onBasePower(source, move) {
-			this.hint(source.abilityState.renegade);
-			
-			/*switch (renegade) {
+		onBasePower(pokemon, move) {
+			switch (pokemon.abilityState.renegade) {
 				case 1:
 					return this.chainModify(4915, 4096);
 					break;
@@ -6276,8 +6274,8 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				default:
 					return;
 					break; 
-			} */
-		}, 
+			} 
+		}, */
 		flags: {breakable: 1},
 		name: "Renegade",
 		rating: 4,
