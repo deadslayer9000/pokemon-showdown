@@ -159,7 +159,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				if (target === pokemon) continue;
 				if (this.queue.willMove(target)) {
 					boosted = false;
-					break;
+					break; 
 				}
 			}
 			if (boosted) {
@@ -1815,6 +1815,21 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -13,
 	},
 	direambush: {
+		onBasePowerPriority: 21,
+		onBasePower(basePower, pokemon) {
+			let boosted = true;
+			for (const target of this.getAllActive()) {
+				if (target === pokemon) continue;
+				if (!this.queue.willMove(target)) {
+					boosted = false;
+					break; 
+				}
+			}
+			if (boosted) {
+				this.debug("Dire Ambush boost");
+				return this.chainModify([5325, 4096]);
+			}
+		},
 		flags: {},
 		name: "Dire Ambush",
 		rating: 3,
