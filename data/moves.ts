@@ -7458,7 +7458,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	flashpointfists: {
 		num: -79,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 100,
 		onHit(target, source, move) {
 			if (target.hasType("Fire")) {
 				target.setType(
@@ -7475,6 +7475,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				);
 			}
 		},
+		/*
 		basePowerCallback(pokemon, target, move) {
 			let bp = move.basePower;
 			if (this.field.pseudoWeather.echoedvoice) {
@@ -7482,18 +7483,18 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					move.basePower +
 					10 * this.field.pseudoWeather.echoedvoice.multiplier -
 					10;
-				return (
-					bp + (10 * this.field.pseudoWeather.echoedvoice.multiplier - 10)
-				);
+				this.hint(`Flashpoint Fists hit with ${bp} BP`);
+				return bp;
 			}
-			this.debug(`BP: ${bp}`);
+
 			return bp;
-		},
+		},*/
 		category: "Physical",
 		name: "Flashpoint Fists",
-		pp: 15,
+		pp: 10,
 		priority: 0,
 		flags: { contact: 1, punch: 1, protect: 1, mirror: 1, metronome: 1 },
+		/*
 		onTry() {
 			this.field.addPseudoWeather("echoedvoice");
 		},
@@ -7510,7 +7511,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					}
 				}
 			},
-		},
+		},*/
 		secondary: null,
 		target: "normal",
 		type: "Fire",

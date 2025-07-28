@@ -21386,7 +21386,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		baseSpecies: "Greninja-Omega-Bond",
 		forme: "Ash",
 		types: ["Ice", "Fighting"],
-		baseStats: { hp: 75, atk: 150, def: 80, spa: 140, spd: 75, spe: 114 },
+		baseStats: { hp: 75, atk: 150, def: 84, spa: 140, spd: 83, spe: 114 },
 		abilities: { 0: "Battle Bond" },
 		weightkg: 40,
 		heightm: 1.5,

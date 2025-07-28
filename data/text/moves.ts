@@ -2291,8 +2291,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	flashpointfists: {
 		name: "Flashpoint Fists",
-		desc: "Every consecutive turn this move is used, its base power increases by 10. This can stack up to 4 times (120 base power). If this move hits a Fire type Pokemon, it gets rid of their Fire type.",
-		shortDesc: "Consecutive hits raise the move's BP by 10, burns up the opponents fire type.",
+		desc: "If this move hits a Fire type Pokemon, it gets rid of their Fire type.",
+		shortDesc: "If this move hits a Fire type Pokemon, it gets rid of their Fire type.",
 		typeChange: "  [POKEMON]'s Fire type was burned out with Flashpoint Fists!",
 	},
 	flatter: {
