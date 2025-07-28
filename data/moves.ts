@@ -7482,11 +7482,10 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					move.basePower +
 					10 * this.field.pseudoWeather.echoedvoice.multiplier -
 					10;
-				return (
-					bp + (10 * this.field.pseudoWeather.echoedvoice.multiplier - 10)
-				);
+				this.debug(`BP: ${bp}`);
+				return bp;
 			}
-			this.debug(`BP: ${bp}`);
+
 			return bp;
 		},
 		category: "Physical",
