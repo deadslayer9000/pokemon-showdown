@@ -7486,7 +7486,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					bp + (10 * this.field.pseudoWeather.echoedvoice.multiplier - 10)
 				);
 			}
-			this.debug(`BP: ${bp}`);
+			this.hint(`Flashpoint's BP: ${bp}`);
 			return bp;
 		},
 		category: "Physical",
