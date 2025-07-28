@@ -2860,7 +2860,9 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		flags: { protect: 1, mirror: 1, bite: 1, metronome: 1 },
 		secondary: {
 			chance: 30,
-			volatileStatus: "flinch",
+			boosts: {
+				spe: -1,
+			},
 		},
 		target: "normal",
 		type: "Rock",
@@ -5756,7 +5758,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	},
 	dualdivide: {
 		num: -32,
-		accuracy: 95,
+		accuracy: 100,
 		basePower: 40,
 		category: "Physical",
 		name: "Dual Divide",
@@ -10495,7 +10497,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
 		onBasePower(basePower, pokemon) {
-			if (this.randomChance(3, 10)) {
+			if (this.randomChance(4, 10)) {
 				this.attrLastMove("[anim] Fickle Beam All Out");
 				this.add("-activate", pokemon, "move: Hat Trick");
 				return this.chainModify(2);
