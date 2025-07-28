@@ -7482,7 +7482,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					move.basePower +
 					10 * this.field.pseudoWeather.echoedvoice.multiplier -
 					10;
-				this.debug(`BP: ${bp}`);
+				this.hint(`Flashpoint Fists hit with ${bp} BP`);
 				return bp;
 			}
 
