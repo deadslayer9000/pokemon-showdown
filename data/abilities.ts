@@ -6255,7 +6255,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			this.hint(source.abilityState.renegade);
 		},
 		onBasePower(source, move) {
-			this.hint(source.abilityState);
+			this.hint(source.abilityState.renegade);
 			
 			/*switch (renegade) {
 				case 1:
