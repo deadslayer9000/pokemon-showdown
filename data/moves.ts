@@ -11911,7 +11911,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		contestType: "Tough",
 	},
 	icemace: {
-		num: -26,
+		num: -26,/*
 		accuracy: 90,
 		basePower: 140,
 		basePowerCallback(pokemon, target, move) {
@@ -11927,9 +11927,44 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				return bp;
 			}
 		},
+		pp: 5,*/
+		onBasePower(basePower, source, target, move) {
+			const item = target.getItem();
+			if (
+				!this.singleEvent(
+					"TakeItem",
+					item,
+					target.itemState,
+					target,
+					target,
+					move,
+					item
+				)
+			)
+				return;
+			if (item.id) {
+				return this.chainModify(1.5);
+			}
+		},
+		onAfterHit(target, source) {
+			if (source.hp) {
+				const item = target.takeItem();
+				if (item) {
+					this.add(
+						"-enditem",
+						target,
+						item.name,
+						"[from] move: Ice Mace",
+						`[of] ${source}`
+					);
+				}
+			}
+		},
+		accuracy: 100,
+		basePower: 65,
+		pp: 10,
 		category: "Physical",
 		name: "Ice Mace",
-		pp: 5,
 		priority: 0,
 		flags: { contact: 1, protect: 1, mirror: 1, punch: 1, metronome: 1 },
 		secondary: null,
