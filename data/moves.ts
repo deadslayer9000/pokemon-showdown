@@ -7459,12 +7459,12 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		num: -79,
 		accuracy: 100,
 		basePower: 80,
-		onHit(target, source, move){
-			if (target.types[0] === "Fire"){
-				target.types[0] = "???"
-			} else if ( target.types[1] === "Fire"){
-				target.types[1] = "???"
-			}
+		onHit(target, source, move) {
+			target.setType(
+				target
+					.getTypes(true)
+					.map((type) => (type === "Fire" ? "???" : type))
+			);
 		},
 		basePowerCallback(pokemon, target, move) {
 			let bp = move.basePower;
@@ -11970,7 +11970,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					source.hasAbility("battlebond") &&
 					!source.transformed
 				) {
-					this.boost({atk:1}, source, source, move)
+					this.boost({ atk: 1 }, source, source, move);
 				}
 			}
 		},
