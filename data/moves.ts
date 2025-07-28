@@ -7475,6 +7475,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				);
 			}
 		},
+		/*
 		basePowerCallback(pokemon, target, move) {
 			let bp = move.basePower;
 			if (this.field.pseudoWeather.echoedvoice) {
@@ -7487,12 +7488,13 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			}
 
 			return bp;
-		},
+		},*/
 		category: "Physical",
 		name: "Flashpoint Fists",
 		pp: 10,
 		priority: 0,
 		flags: { contact: 1, punch: 1, protect: 1, mirror: 1, metronome: 1 },
+		/*
 		onTry() {
 			this.field.addPseudoWeather("echoedvoice");
 		},
@@ -7509,7 +7511,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					}
 				}
 			},
-		},
+		},*/
 		secondary: null,
 		target: "normal",
 		type: "Fire",
