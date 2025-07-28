@@ -6748,22 +6748,22 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "OU",
 	},
 	etherion: {
-		tier: "",
+		tier: "UU",
 	},
 	grimorgon: {
 		tier: "UU",
 	},
 	druddigondelta: {
-		tier: "",
+		tier: "UU",
 	},
 	heatrandelta: {
-		tier: "",
+		tier: "UU",
 	},
 	jirachidelta: {
-		tier: "",
+		tier: "UU",
 	},
 	cresseliadelta: {
-		tier: "",
+		tier: "UU",
 	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",

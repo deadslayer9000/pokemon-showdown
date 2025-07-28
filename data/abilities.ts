@@ -6245,6 +6245,41 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 4.5,
 		num: 144,
 	},
+	renegade:{
+		onTryHit(target, source, move) {
+			if(target !== source && move.type === 'Dark' && move.category !== 'Status') {
+				if(source.abilityState.renegade >= 5) return;
+				source.abilityState.renegade += 1;
+			} 
+		},
+		onBasePower(source, move) {
+			const renegade = source.abilityState.renegade;
+			switch (renegade) {
+				case 1:
+					return this.chainModify(4915, 4096);
+					break;
+				case 2: 
+					return this.chainModify(5734, 4096);
+					break;
+				case 3:
+					return this.chainModify(6553, 4096);
+					break;
+				case 4: 
+					return this.chainModify(7372, 4096);
+					break;
+				case 5: 
+					return this.chainModify(2);
+					break;
+				default:
+					return;
+					break;
+			}
+		},
+		flags: {breakable: 1},
+		name: "Renegade",
+		rating: 4,
+		num: -73,
+	},
 	ripen: {
 		onTryHeal(damage, target, source, effect) {
 			if (!effect) return;
