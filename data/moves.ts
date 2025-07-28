@@ -2860,7 +2860,9 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		flags: { protect: 1, mirror: 1, bite: 1, metronome: 1 },
 		secondary: {
 			chance: 30,
-			volatileStatus: "flinch",
+			boosts: {
+				spe: -1,
+			},
 		},
 		target: "normal",
 		type: "Rock",
@@ -5756,7 +5758,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	},
 	dualdivide: {
 		num: -32,
-		accuracy: 95,
+		accuracy: 100,
 		basePower: 40,
 		category: "Physical",
 		name: "Dual Divide",
@@ -7457,6 +7459,22 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		num: -79,
 		accuracy: 100,
 		basePower: 80,
+		onHit(target, source, move) {
+			if (target.hasType("Fire")) {
+				target.setType(
+					target
+						.getTypes(true)
+						.map((type) => (type === "Fire" ? "???" : type))
+				);
+				this.add(
+					"-start",
+					target,
+					"typechange",
+					target.getTypes().join("/"),
+					"[from] move: Flashpoint Fists"
+				);
+			}
+		},
 		basePowerCallback(pokemon, target, move) {
 			let bp = move.basePower;
 			if (this.field.pseudoWeather.echoedvoice) {
@@ -10495,7 +10513,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
 		onBasePower(basePower, pokemon) {
-			if (this.randomChance(3, 10)) {
+			if (this.randomChance(4, 10)) {
 				this.attrLastMove("[anim] Fickle Beam All Out");
 				this.add("-activate", pokemon, "move: Hat Trick");
 				return this.chainModify(2);
@@ -11909,7 +11927,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		contestType: "Tough",
 	},
 	icemace: {
-		num: -26,
+		num: -26 /*
 		accuracy: 90,
 		basePower: 140,
 		basePowerCallback(pokemon, target, move) {
@@ -11925,9 +11943,51 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				return bp;
 			}
 		},
+		pp: 5,*/,
+		onBasePower(basePower, source, target, move) {
+			const item = target.getItem();
+			if (
+				!this.singleEvent(
+					"TakeItem",
+					item,
+					target.itemState,
+					target,
+					target,
+					move,
+					item
+				)
+			)
+				return;
+			if (item.id) {
+				return this.chainModify(1.5);
+			}
+		},
+		onAfterHit(target, source, move) {
+			if (source.hp) {
+				const item = target.takeItem();
+				if (item) {
+					this.add(
+						"-enditem",
+						target,
+						item.name,
+						"[from] move: Ice Mace",
+						`[of] ${source}`
+					);
+				}
+				if (
+					source.species.name === "Greninja-Omega-Ash" &&
+					source.hasAbility("battlebond") &&
+					!source.transformed
+				) {
+					this.boost({ atk: 1 }, source, source, move);
+				}
+			}
+		},
+		accuracy: 100,
+		basePower: 65,
+		pp: 10,
 		category: "Physical",
 		name: "Ice Mace",
-		pp: 5,
 		priority: 0,
 		flags: { contact: 1, protect: 1, mirror: 1, punch: 1, metronome: 1 },
 		secondary: null,
@@ -16062,7 +16122,11 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		priority: 0,
 		flags: { protect: 1, metronome: 1, mirror: 1 },
 		onBasePower(basePower, pokemon, target) {
-			if (target.status === "psn" || target.status === "tox" || this.field.isTerrain("corrosiveterrain")) {
+			if (
+				target.status === "psn" ||
+				target.status === "tox" ||
+				this.field.isTerrain("corrosiveterrain")
+			) {
 				return this.chainModify(2);
 			}
 		},

@@ -2175,7 +2175,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	swordmaster: {
 		name: "Swordmaster",
-		shortDesc: "Combines the effects of Chlorophyll and Sharpness.",
+		desc: "Combines the effects of Chlorophyll and Sharpness, but offensive moves make the user lose 10% of its max hp.",
+		shortDesc: "Combines the effects of Chlorophyll and Sharpness, but hurts the user on attack.",
 	},
 	swordofruin: {
 		name: "Sword of Ruin",
