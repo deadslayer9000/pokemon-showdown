@@ -159,7 +159,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				if (target === pokemon) continue;
 				if (this.queue.willMove(target)) {
 					boosted = false;
-					break;
+					break; 
 				}
 			}
 			if (boosted) {
@@ -1815,6 +1815,21 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -13,
 	},
 	direambush: {
+		onBasePowerPriority: 21,
+		onBasePower(basePower, pokemon) {
+			let boosted = true;
+			for (const target of this.getAllActive()) {
+				if (target === pokemon) continue;
+				if (!this.queue.willMove(target)) {
+					boosted = false;
+					break; 
+				}
+			}
+			if (boosted) {
+				this.debug("Dire Ambush boost");
+				return this.chainModify([5325, 4096]);
+			}
+		},
 		flags: {},
 		name: "Dire Ambush",
 		rating: 3,
@@ -6229,6 +6244,42 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		name: "Regenerator",
 		rating: 4.5,
 		num: 144,
+	},
+	renegade: {
+		/*onTryHit(target, move, source,) {
+			if (!source.abilityState.renegade) source.abilityState.renegade = 0;
+			if(target !== source && move.type === 'Dark' && move.category !== 'Status') {
+				if(source.abilityState.renegade >= 5) return;
+				source.abilityState.renegade += 1;
+			} 
+			this.hint(source.abilityState.renegade);
+		},
+		onBasePower(pokemon, move) {
+			switch (pokemon.abilityState.renegade) {
+				case 1:
+					return this.chainModify(4915, 4096);
+					break;
+				case 2: 
+					return this.chainModify(5734, 4096);
+					break;
+				case 3:
+					return this.chainModify(6553, 4096);
+					break;
+				case 4: 
+					return this.chainModify(7372, 4096);
+					break;
+				case 5: 
+					return this.chainModify(2);
+					break;
+				default:
+					return;
+					break; 
+			} 
+		}, */
+		flags: {breakable: 1},
+		name: "Renegade",
+		rating: 4,
+		num: -73,
 	},
 	ripen: {
 		onTryHeal(damage, target, source, effect) {

@@ -17,7 +17,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		name: "Ivysaur",
 		types: ["Grass", "Poison"],
 		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 60, atk: 62, def: 63, spa: 80, spd: 80, spe: 120 },
+		baseStats: { hp: 60, atk: 62, def: 63, spa: 80, spd: 80, spe: 60 },
 		abilities: { 0: "Overgrow", H: "Chlorophyll" },
 		heightm: 1,
 		weightkg: 13,
@@ -23807,7 +23807,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		gender: "N",
 		baseStats: { hp: 91, atk: 129, def: 90, spa: 90, spd: 72, spe: 108 },
 		abilities: { 0: "Renegade" },
-		//height
+		heightm: 2.1,
 		weightkg: 260,
 		color: "Purple",
 		eggGroups: ["Undiscovered"],
