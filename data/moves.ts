@@ -7458,7 +7458,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	flashpointfists: {
 		num: -79,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 100,
 		onHit(target, source, move) {
 			if (target.hasType("Fire")) {
 				target.setType(
@@ -7491,7 +7491,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		},
 		category: "Physical",
 		name: "Flashpoint Fists",
-		pp: 15,
+		pp: 10,
 		priority: 0,
 		flags: { contact: 1, punch: 1, protect: 1, mirror: 1, metronome: 1 },
 		onTry() {
