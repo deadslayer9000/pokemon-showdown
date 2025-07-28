@@ -7465,6 +7465,13 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					.getTypes(true)
 					.map((type) => (type === "Fire" ? "???" : type))
 			);
+			this.add(
+					"-start",
+					target,
+					"typechange",
+					target.getTypes().join("/"),
+					"[from] move: Flashpoint Fists"
+				);
 		},
 		basePowerCallback(pokemon, target, move) {
 			let bp = move.basePower;
