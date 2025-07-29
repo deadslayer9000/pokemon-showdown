@@ -6255,7 +6255,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			this.hint(target.abilityState.renegade);
 		},
 		onBasePower(relayVar, source, target, move) {
-			const renegadeCounter = source.abilityState.renegade;
+			const renegadeCounter = source.abilityState?.renegade ?? 0;
 			this.debug(`renegade counter:${renegadeCounter}`)
 			switch (renegadeCounter) {
 				case 1:
