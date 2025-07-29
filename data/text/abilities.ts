@@ -538,11 +538,17 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 
 		boost: "  The Hearthflame Mask worn by [POKEMON] shone brilliantly, and [POKEMON]'s Attack rose!",
 	},
+	embodyaspectshadowcrest: {
+		name: "Embody Aspect (Shadowcrest)",
+		shortDesc: "On switch-in, this Pokemon's Special Defense is raised by 1 stage.",
+
+		boost: " The Shadowcrest Mask worn by [POKEMON] shone brilliantly, and [POKEMON]'s Sp. Def rose!",
+	},
 	embodyaspectstormpeak: {
 		name: "Embody Aspect (Stormpeak)",
 		shortDesc: "On switch-in, this Pokemon's Speed is raised by 1 stage.",
 
-		boost: " The Stormpeak Mask worn by [POKEMON] shone brilliantly, and [POKEMON]'s Attack rose!",
+		boost: " The Stormpeak Mask worn by [POKEMON] shone brilliantly, and [POKEMON]'s Speed rose!",
 	},
 	embodyaspectteal: {
 		name: "Embody Aspect (Teal)",
@@ -1693,6 +1699,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Regenerator",
 		shortDesc: "This Pokemon restores 1/3 of its maximum HP, rounded down, when it switches out.",
 	},
+	renegade: {
+		name: "Renegade",
+		shortDesc: "Each time the user is hit by a dark type move, power of its moves is raised by 20%.",
+	},
 	ripen: {
 		name: "Ripen",
 		desc: "When this Pokemon eats certain Berries, the effects are doubled. Berries that restore HP or PP have the amount doubled, Berries that raise stat stages have the amount doubled, Berries that halve damage taken quarter it instead, and a Jaboca Berry or Rowap Berry has the attacker lose 1/4 of its maximum HP, rounded down.",
@@ -2169,7 +2179,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	swordmaster: {
 		name: "Swordmaster",
-		shortDesc: "Combines the effects of Chlorophyll and Sharpness.",
+		desc: "Combines the effects of Chlorophyll and Sharpness, but offensive moves make the user lose 10% of its max hp.",
+		shortDesc: "Combines the effects of Chlorophyll and Sharpness, but hurts the user on attack.",
 	},
 	swordofruin: {
 		name: "Sword of Ruin",

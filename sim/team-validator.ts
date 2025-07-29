@@ -510,7 +510,7 @@ export class TeamValidator {
 
 		let outOfBattleSpecies = species;
 		let tierSpecies = species;
-		if (ability.id === 'battlebond' && toID(species.baseSpecies) === 'greninja') {
+		if (ability.id === 'battlebond' && toID(species.baseSpecies) === 'greninja'  && tierSpecies.name !== "Greninja-Omega") {
 			outOfBattleSpecies = dex.species.get('greninjabond');
 			if (ruleTable.has('obtainableformes')) {
 				tierSpecies = outOfBattleSpecies;
@@ -1676,7 +1676,7 @@ export class TeamValidator {
 			}
 		}
 
-		if (species.baseSpecies === "Greninja" && toID(set.ability) === 'battlebond') {
+		if (species.baseSpecies === "Greninja" && toID(set.ability) === 'battlebond'  && species.name !== "Greninja-Omega") {
 			set.species = "Greninja-Bond";
 		}
 		if (species.baseSpecies === "Rockruff" && toID(set.ability) === 'owntempo') {
@@ -1727,7 +1727,7 @@ export class TeamValidator {
 			setHas['pokemon:' + tierSpecies.id + 'gmax'] = true;
 			isGmax = true;
 		}
-		if (tierSpecies.baseSpecies === 'Greninja' && toID(set.ability) === 'battlebond') {
+		if (tierSpecies.baseSpecies === 'Greninja' && toID(set.ability) === 'battlebond' && tierSpecies.name !== "Greninja-Omega") {
 			setHas['pokemon:greninjabond'] = true;
 		}
 		if (tierSpecies.baseSpecies === 'Rockruff' && toID(set.ability) === 'owntempo') {

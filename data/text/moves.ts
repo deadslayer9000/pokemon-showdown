@@ -891,7 +891,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	cataclench: {
 		name: "Cataclench",
-		shortDesc: "30% chance to flinch the opposing pokemon.",
+		shortDesc: "30% chance to lower the opposing pokemon's Speed by 1 stage.",
 	},
 	cataclysmictyphoon: {
 		name: "Cataclysmic Typhoon",
@@ -1537,7 +1537,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	divination: {
 		name: "Divination",
-		shortDesc: "Hits two turns later. Transfers status.",
+		shortDesc: "Hits two turns later, 30% chance to lower opponent's SpDef by one stage.",
 
 		start: " [POKEMON] saw a horrible fate!",
 		activate: " [TARGET] took the Divination attack!",
@@ -2291,8 +2291,9 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	flashpointfists: {
 		name: "Flashpoint Fists",
-		desc: "Every consecutive turn this move is used, its base power increases by 10. This can stack up to 4 times (120 base power).",
-		shortDesc: "Consecutive hits raise the move's base power by 10."
+		desc: "If this move hits a Fire type Pokemon, it gets rid of their Fire type.",
+		shortDesc: "If this move hits a Fire type Pokemon, it gets rid of their Fire type.",
+		typeChange: "  [POKEMON]'s Fire type was burned out with Flashpoint Fists!",
 	},
 	flatter: {
 		name: "Flatter",
@@ -3029,7 +3030,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	hattrick: {
 		name: "Hat Trick",
-		shortDesc: "Has a 30% chance this move's power is doubled.",
+		shortDesc: "Has a 40% chance this move's power is doubled.",
 
 		activate: "  [POKEMON] pulled off a hat trick!",
 	},
@@ -3429,7 +3430,9 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	icemace: {
 		name: "Ice Mace",
-		shortDesc: "Power decreases as HP does.",
+		desc: "If the target is holding an item that can be removed from it, ignoring the Sticky Hold Ability, this move's power is multiplied by 1.5. If the user has not fainted, the target loses its held item. This move cannot cause Pokemon with the Sticky Hold Ability to lose their held item or cause a Kyogre, a Groudon, a Giratina, an Arceus, a Genesect, a Silvally, a Zacian, or a Zamazenta to lose their Blue Orb, Red Orb, Griseous Orb, Plate, Drive, Memory, Rusted Sword, or Rusted Shield respectively. Items lost to this move cannot be regained with Recycle or the Harvest Ability.",
+		shortDesc: "1.5x damage if foe holds an item. Removes item.",
+		removeItem: "  [SOURCE] knocked off [POKEMON]'s [ITEM]!",
 	},
 	icepunch: {
 		name: "Ice Punch",
@@ -3604,7 +3607,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	ivycudgel: {
 		name: "Ivy Cudgel",
-		desc: "Has a higher chance for a critical hit. If the user is an Ogerpon, this move's type changes depending on its form. Water type for Wellspring Mask, Fire type for Hearthflame Mask, and Rock type for Cornerstone Mask.",
+		desc: "Has a higher chance for a critical hit. If the user is an Ogerpon, this move's type changes depending on its form. Water type for Wellspring Mask, Fire type for Hearthflame Mask, Rock type for Cornerstone Mask, Electric for Stormpeak Mask and Ghost for Shadowcrest Mask.",
 		shortDesc: "High critical hit ratio. Type depends on user's form.",
 	},
 	jawlock: {

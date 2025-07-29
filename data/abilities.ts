@@ -3502,6 +3502,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				}
 			}
 		},
+		
 		onDamagingHit(damage, target, source, move) {
 			if (target.illusion) {
 				this.singleEvent(
@@ -3531,6 +3532,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		},
 		onFaint(pokemon) {
 			pokemon.illusion = null;
+			
 		},
 		flags: {
 			failroleplay: 1,
@@ -5277,7 +5279,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	poisonheal: {
 		onDamagePriority: 1,
 		onDamage(damage, target, source, effect) {
-			if (effect.id === "psn" || effect.id === "tox" && this.field.isTerrain('corrosiveterrain')) {
+			if ((effect.id === "psn" || effect.id === "tox") && this.field.isTerrain('corrosiveterrain')) {
 				this.heal(target.baseMaxhp / 6);
 				return false;
 			}
@@ -5776,102 +5778,100 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	purranormal: {
 		onStart(pokemon) {
-			if (pokemon.hp >= pokemon.maxhp / 2){
-
-			
-			this.add("-activate", pokemon, "ability: Purranormal");
-			const alliesWithUser = pokemon.side.pokemon;
-			const allTypes: string[] = [];
-			const monoCounter: { [key: string]: number } = {};
-			for (const ally of alliesWithUser) {
-				for (const type of ally.types) {
-					allTypes.push(type);
+			if (pokemon.hp >= pokemon.maxhp / 2) {
+				this.add("-activate", pokemon, "ability: Purranormal");
+				const alliesWithUser = pokemon.side.pokemon;
+				const allTypes: string[] = [];
+				const monoCounter: { [key: string]: number } = {};
+				for (const ally of alliesWithUser) {
+					for (const type of ally.types) {
+						allTypes.push(type);
+					}
 				}
-			}
-			allTypes.forEach((occurance) => {
-				if (monoCounter[occurance]) {
-					monoCounter[occurance] += 1;
+				allTypes.forEach((occurance) => {
+					if (monoCounter[occurance]) {
+						monoCounter[occurance] += 1;
+					} else {
+						monoCounter[occurance] = 1;
+					}
+				});
+				const monoCounterResult = Math.max(...Object.values(monoCounter));
+				this.debug(`monocounter: ${monoCounterResult}`);
+				if (monoCounterResult === 6) {
+					pokemon.abilityState.monotype = true;
+				}
+
+				const alliesWithoutUser = pokemon.side.pokemon.filter(
+					(p) => p !== pokemon
+				);
+				const uniqueTypes: string[] = [];
+				for (const ally of alliesWithoutUser) {
+					//				this.debug(`${ally.name}: ${ally.types.join("/")}`);
+					for (const type of ally.types) {
+						if (!uniqueTypes.includes(type)) {
+							uniqueTypes.push(type);
+						}
+					}
+				}
+				const typeCount = uniqueTypes.length;
+				//			this.debug(uniqueTypes.join("/"));
+				//			this.debug(`${typeCount} unique types`);
+				pokemon.abilityState.typeCount = typeCount;
+				if (pokemon.abilityState.monotype === true) {
+					this.hint(
+						`${pokemon.name}'s Monotype boosted Purranormal increased its Special Attack and Speed!`
+					);
+				} else if (pokemon.storedStats["spa"] >= pokemon.storedStats["spe"]) {
+					this.hint(
+						`${pokemon.name}'s Purranormal increased its Special Attack`
+					);
 				} else {
-					monoCounter[occurance] = 1;
+					this.hint(`${pokemon.name}'s Purranormal increased its Speed`);
 				}
-			});
-			const monoCounterResult = Math.max(...Object.values(monoCounter));
-			this.debug(`monocounter: ${monoCounterResult}`);
-			if (monoCounterResult === 6) {
-				pokemon.abilityState.monotype = true;
 			}
+		},
+		onModifyDamage(damage, source, target, move) {
+			if (source.hp >= source.maxhp / 2) {
+				if (
+					source.storedStats["spa"] >= source.storedStats["spe"] ||
+					source.abilityState.monotype === true
+				) {
+					const typeCount = source.abilityState?.typeCount;
+					if (source.abilityState.monotype === true) {
+						this.debug("MONOTYPE SPECIAL ATTACK");
+						return this.chainModify([5336, 4096]);
+					}
 
-			const alliesWithoutUser = pokemon.side.pokemon.filter(
-				(p) => p !== pokemon
-			);
-			const uniqueTypes: string[] = [];
-			for (const ally of alliesWithoutUser) {
-				//				this.debug(`${ally.name}: ${ally.types.join("/")}`);
-				for (const type of ally.types) {
-					if (!uniqueTypes.includes(type)) {
-						uniqueTypes.push(type);
+					switch (typeCount) {
+						case 1:
+							return this.chainModify([4219, 4096]);
+						case 2:
+							return this.chainModify([4343, 4096]);
+						case 3:
+							return this.chainModify([4467, 4096]);
+						case 4:
+							return this.chainModify([4591, 4096]);
+						case 5:
+							return this.chainModify([4715, 4096]);
+						case 6:
+							return this.chainModify([4839, 4096]);
+						case 7:
+							return this.chainModify([4963, 4096]);
+						case 8:
+							return this.chainModify([5088, 4096]);
+						case 9:
+							return this.chainModify([5212, 4096]);
+						case 10:
+							return this.chainModify([5336, 4096]);
+						default:
+							return this.chainModify([5336, 4096]);
 					}
 				}
 			}
-			const typeCount = uniqueTypes.length;
-			//			this.debug(uniqueTypes.join("/"));
-			//			this.debug(`${typeCount} unique types`);
-			pokemon.abilityState.typeCount = typeCount;
-			if (pokemon.abilityState.monotype === true) {
-				this.hint(
-					`${pokemon.name}'s Monotype boosted Purranormal increased its Special Attack and Speed!`
-				);
-			} else if (pokemon.getStat("spa") >= pokemon.getStat("spe")) {
-				this.hint(
-					`${pokemon.name}'s Purranormal increased its Special Attack`
-				);
-			} else {
-				this.hint(`${pokemon.name}'s Purranormal increased its Speed`);
-			}
-		}
-		},
-		onModifyDamage(damage, source, target, move) {
-			if (source.hp >= source.maxhp / 2){
-			if (
-				source.getStat("spa") >= source.getStat("spe") ||
-				source.abilityState.monotype === true
-			) {
-				const typeCount = source.abilityState?.typeCount;
-				if (source.abilityState.monotype === true) {
-					this.debug("MONOTYPE SPECIAL ATTACK");
-					return this.chainModify([5336, 4096]);
-				}
-
-				switch (typeCount) {
-					case 1:
-						return this.chainModify([4219, 4096]);
-					case 2:
-						return this.chainModify([4343, 4096]);
-					case 3:
-						return this.chainModify([4467, 4096]);
-					case 4:
-						return this.chainModify([4591, 4096]);
-					case 5:
-						return this.chainModify([4715, 4096]);
-					case 6:
-						return this.chainModify([4839, 4096]);
-					case 7:
-						return this.chainModify([4963, 4096]);
-					case 8:
-						return this.chainModify([5088, 4096]);
-					case 9:
-						return this.chainModify([5212, 4096]);
-					case 10:
-						return this.chainModify([5336, 4096]);
-					default:
-						return this.chainModify([5336, 4096]);
-				}
-			}
-		}
 		},
 		onModifySpe(spe, pokemon) {
 			if (
-				pokemon.speed > pokemon.getStat("spa") ||
+				pokemon.storedStats["spe"] > pokemon.storedStats["spa"] ||
 				pokemon.abilityState.monotype === true
 			) {
 				const typeCount = pokemon.abilityState?.typeCount;
@@ -6246,20 +6246,18 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 144,
 	},
 	renegade: {
-		onDamagingHit(source, target, move,) {
-			if (target !== source && move.type === 'Dark') {
-				if (!target.abilityState.renegade) {
-					target.abilityState.renegade = 1;
-				} else if (target.abilityState.renegade < 5) {
-				target.abilityState.renegade += 1;
-				}
-			}
-			this.hint(target.abilityState.renegade);
+		onTryHit(source, target, move) {
+			if (!source.abilityState.renegade) source.abilityState.renegade = 0;
+			if(source !== target && move.type === "Dark" && move.category !== 'Status') {
+				if(source.abilityState.renegade >= 5) return;
+				source.abilityState.renegade += 1;
+			} 
+//			this.hint(source.abilityState.renegade);
 		},
-		modifyDamage(source, move) {
-			this.hint(source.abilityState.renegade);
-			const renegade = source.abilityState?.renegade;
-			switch (renegade) {
+		onModifyDamage(relayVar, source, target, move) {
+			const renegadeCounter = source.abilityState?.renegade ?? 0;
+//			this.debug(`renegade counter:${renegadeCounter}`)
+			switch (renegadeCounter) {
 				case 1:
 					return this.chainModify(4915, 4096);
 				case 2: 
@@ -6669,27 +6667,37 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 23,
 	},
 	shapeshift: {
+		onAfterMega(pokemon) {
+			if (pokemon.illusion) {
+					this.singleEvent(
+						"End",
+						this.dex.abilities.get("Illusion"),
+						pokemon.abilityState,
+						pokemon,
+						pokemon,
+						"Shapeshift"
+					);
+				}
+			
+		},
 		onAfterMove(source, target, move) {
-			if (
-				move.id === "bittermalice" &&
-				target &&
-				!target.fainted &&
-				!source.transformed
-			) {
-				source.transformInto(target);
-				this.add("-activate", source, "ability: Shapeshift");
-				this.add(
-					"-message",
-					`${source.name} transformed into ${target.name} thanks to Shapeshift!`
-				);
+			if (move.id === "bittermalice") {
+				if (target && !target.fainted && !source.transformed) {
+					source.transformInto(target);
+					this.add("-activate", source, "ability: Shapeshift");
+					this.add(
+						"-message",
+						`${source.name} transformed into ${target.name} thanks to Shapeshift!`
+					);
 
-				const targetsability = target.getAbility().name;
-				this.add("-ability", source, targetsability);
-			} else {
-				this.add(
-					"-message",
-					`${source.name} failed to shapeshift into ${target.name}.`
-				);
+					const targetsability = target.getAbility().name;
+					this.add("-ability", source, targetsability);
+				} else {
+					this.add(
+						"-message",
+						`${source.name} failed to shapeshift into ${target.name}.`
+					);
+				}
 			}
 		},
 		flags: {},
@@ -7631,6 +7639,11 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			if (move.flags["slicing"]) {
 				this.debug("Sharpness boost");
 				return this.chainModify(1.5);
+			}
+		},
+		onAfterMoveSecondarySelf(source, target, move) {
+			if (source && source !== target && move && move.category !== 'Status' && !source.forceSwitchFlag) {
+				this.damage(source.baseMaxhp / 10, source, source, this.dex.abilities.get("Swordmaster"));
 			}
 		},
 		onModifySpe(spe, pokemon) {
@@ -8687,6 +8700,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	wishreaper: {
 		onEnd(pokemon) {
+			if (!pokemon.hp) return;
 			let activated = false;
 			for (const target of pokemon.adjacentFoes()) {
 				if (!activated) {
