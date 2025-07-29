@@ -8699,7 +8699,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -65,
 	},
 	wishreaper: {
-		onEnd(pokemon) {
+		onSwitchOut(pokemon) {
 			if (!pokemon.hp) return;
 			let activated = false;
 			for (const target of pokemon.adjacentFoes()) {
