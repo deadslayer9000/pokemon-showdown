@@ -1699,6 +1699,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Regenerator",
 		shortDesc: "This Pokemon restores 1/3 of its maximum HP, rounded down, when it switches out.",
 	},
+	renegade: {
+		name: "Renegade",
+		shortDesc: "Each time the user is hit by a dark type move, power of its moves is raised by 20%.",
+	},
 	ripen: {
 		name: "Ripen",
 		desc: "When this Pokemon eats certain Berries, the effects are doubled. Berries that restore HP or PP have the amount doubled, Berries that raise stat stages have the amount doubled, Berries that halve damage taken quarter it instead, and a Jaboca Berry or Rowap Berry has the attacker lose 1/4 of its maximum HP, rounded down.",
