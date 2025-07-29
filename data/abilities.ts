@@ -6247,15 +6247,15 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	renegade: {
 		onTryHit(source, target, move) {
-			if (!target.abilityState.renegade) target.abilityState.renegade = 0;
-			if(target !== source && move.type === "Dark" && move.category !== 'Status') {
-				if(target.abilityState.renegade >= 5) return;
-				target.abilityState.renegade += 1;
+			if (!source.abilityState.renegade) source.abilityState.renegade = 0;
+			if(source !== target && move.type === "Dark" && move.category !== 'Status') {
+				if(source.abilityState.renegade >= 5) return;
+				source.abilityState.renegade += 1;
 			} 
-			this.hint(target.abilityState.renegade);
+			this.hint(source.abilityState.renegade);
 		},
 		onModifyDamage(relayVar, source, target, move) {
-			const renegadeCounter = target.abilityState?.renegade ?? 0;
+			const renegadeCounter = source.abilityState?.renegade ?? 0;
 			this.debug(`renegade counter:${renegadeCounter}`)
 			switch (renegadeCounter) {
 				case 1:
