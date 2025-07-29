@@ -6247,12 +6247,20 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	renegade: {
 		onDamagingHit(source, target, move,) {
-			if (!source.effectState.renegade) source.effectState.renegade = 0;
 			if (move.type === 'Dark' && target !== source) {
+				if (!source.abilityState.renegade) {
+					source.abilityState.renegade = 1;
+					this.hint(source.abilityState.renegade);
+				} else if (source.abilityState.renegade < 5) {
+				source.abilityState.renegade += 1;
+				this.hint(source.abilityState.renegade);
+				source.effectState.renegade = source.abilityState.renegade;
+				}
 			}
 		},
 		modifyDamage(source, move) {
-			const renegade = source.renegade;
+			this.hint(source.effectState.renegade);
+			const renegade = source.effectState?.renegade;
 			switch (renegade) {
 				case 1:
 					return this.chainModify(4915, 4096);
