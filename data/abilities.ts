@@ -6252,11 +6252,11 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				if(source.abilityState.renegade >= 5) return;
 				source.abilityState.renegade += 1;
 			} 
-			this.hint(source.abilityState.renegade);
+//			this.hint(source.abilityState.renegade);
 		},
 		onModifyDamage(relayVar, source, target, move) {
 			const renegadeCounter = source.abilityState?.renegade ?? 0;
-			this.debug(`renegade counter:${renegadeCounter}`)
+//			this.debug(`renegade counter:${renegadeCounter}`)
 			switch (renegadeCounter) {
 				case 1:
 					return this.chainModify(4915, 4096);
