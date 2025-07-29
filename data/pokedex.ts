@@ -21244,7 +21244,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		num: 2040,
 		name: "Malevorus-Therian",
 		baseSpecies: "Malevorus",
-		baseForme: "Therian",
+		forme: "Therian",
 		gender: "M",
 		types: ["Dark", "Flying"],
 		baseStats: { hp: 89, atk: 105, def: 80, spa: 130, spd: 80, spe: 116 },
