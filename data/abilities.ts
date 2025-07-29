@@ -6246,16 +6246,13 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 144,
 	},
 	renegade: {
-		onTryHit(pokemon, target, move, source,) {
-			if (!pokemon.effectState.renegade) pokemon.effectState.renegade = 0;
-			if(target !== source && move.type === 'Dark' && move.category !== 'Status') {
-				if(pokemon.effectState.renegade >= 5) return;
-				pokemon.effectState.renegade += 1;
-			} 
-			this.hint(pokemon.effectState.renegade);
+		onDamagingHit(source, target, move,) {
+			if (!source.effectState.renegade) source.effectState.renegade = 0;
+			if (move.type === 'Dark' && target !== source) {
+			}
 		},
-		modifyDamage(pokemon, move) {
-			const renegade = pokemon.effectState.renegade;
+		modifyDamage(source, move) {
+			const renegade = source.renegade;
 			switch (renegade) {
 				case 1:
 					return this.chainModify(4915, 4096);
