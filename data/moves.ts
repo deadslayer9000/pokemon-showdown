@@ -16637,7 +16637,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	pearlyparade: {
 		num: -18,
 		accuracy: 100,
-		basePower: 100,
+		basePower: 120,
 		category: "Special",
 		name: "Pearly Parade",
 		pp: 5,
