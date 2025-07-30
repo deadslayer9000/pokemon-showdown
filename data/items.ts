@@ -6176,13 +6176,13 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	thrashdrive: {
 		name: "Thrash Drive",
 		spritenum: 143,
-		/*
+		
 		onTakeItem(item, pokemon, source) {
 			if ((source && source.baseSpecies.num === 649) || pokemon.baseSpecies.num === 649) {
 				return false;
 			}
 			return true;
-		},*/
+		},
 		onStart(pokemon) {
 			this.effectState.started = true;
 			((this.effect as any).onUpdate as (p: Pokemon) => void).call(this, pokemon);
@@ -6191,7 +6191,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			if (!this.effectState.started || pokemon.transformed) return;
 
 			
-			if (pokemon.name === "Iron Pilot" && pokemon.hasAbility('quarkdrive') && !this.field.isTerrain('electricterrain') && pokemon.useItem()) {
+			if (pokemon.name === "Iron Pilot" && pokemon.hasAbility('quarkdrive') && !this.field.isTerrain('electricterrain')) {
 				pokemon.addVolatile('quarkdrive');
 			}
 			
