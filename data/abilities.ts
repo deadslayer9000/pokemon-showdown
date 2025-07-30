@@ -832,7 +832,8 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				this.debug(move1type);
 				this.debug(move2type);
 				const newtype = [move1type, move2type];
-				if (pokemon.setType(newtype) && newtype !== pokemon.getTypes().join) {
+				if (pokemon.setType(newtype) && !pokemon.abilityState.chromaon) {
+					pokemon.abilityState.chromaon = true;
 					this.add(
 						"-start",
 						pokemon,
@@ -852,7 +853,8 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		onDamagingHit(damage, pokemon) {
 			if (pokemon.hp < pokemon.maxhp / 2) {
 				const regulartype = pokemon.abilityState.regulartype;
-				if (pokemon.setType(regulartype) && regulartype !== pokemon.setType(regulartype).join) {
+				if (pokemon.setType(regulartype) && pokemon.abilityState.chromaon != false) {
+					pokemon.abilityState.chromaon = false;
 					this.add(
 						"-start",
 						pokemon,
@@ -871,7 +873,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 					);
 				}
 			} 
-	},
+	}, //USE AN EFFECTSTATE WHEN YOU GET BACK
 	onAfterMove(pokemon) {
 		if (pokemon.hp >= pokemon.maxhp / 2) {
 				const move1name = pokemon.moves[0];
@@ -881,7 +883,8 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				this.debug(move1type);
 				this.debug(move2type);
 				const newtype = [move1type, move2type];
-				if (pokemon.setType(newtype) && newtype !== pokemon.setType(newtype).join) {
+				if (pokemon.setType(newtype) && !pokemon.abilityState.chromaon) {
+					pokemon.abilityState.chromaon = true;
 					this.add(
 						"-start",
 						pokemon,
