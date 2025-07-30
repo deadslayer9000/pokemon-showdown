@@ -6182,6 +6182,19 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			}
 			return true;
 		},
+		onStart(pokemon) {
+			this.effectState.started = true;
+			((this.effect as any).onUpdate as (p: Pokemon) => void).call(this, pokemon);
+		},
+		onUpdate(pokemon) {
+			if (!this.effectState.started || pokemon.transformed) return;
+
+			
+			if (pokemon.name === "Iron Pilot" && pokemon.hasAbility('quarkdrive') && !this.field.isTerrain('electricterrain') && pokemon.useItem()) {
+				pokemon.addVolatile('quarkdrive');
+			}
+			
+		},
 		onDrive: 'Fighting',
 		itemUser: ["Iron Pilot"],
 		num: -18,
