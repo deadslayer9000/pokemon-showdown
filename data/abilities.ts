@@ -832,7 +832,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				this.debug(move1type);
 				this.debug(move2type);
 				const newtype = [move1type, move2type];
-				if (pokemon.setType(newtype)) {
+				if (pokemon.setType(newtype) && newtype !== pokemon.getTypes().join) {
 					this.add(
 						"-start",
 						pokemon,
@@ -840,7 +840,6 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 						newtype.join("/"),
 						"[from] ability: Chromatic Scales"
 					);
-
 					this.add(
 						"-message",
 						`${pokemon.name}'s type changed to ${newtype.join(
@@ -850,10 +849,10 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				}
 			}
 		},
-		onResidual(pokemon) {
+		onDamagingHit(damage, pokemon) {
 			if (pokemon.hp < pokemon.maxhp / 2) {
 				const regulartype = pokemon.abilityState.regulartype;
-				if (pokemon.setType(regulartype)) {
+				if (pokemon.setType(regulartype) && regulartype !== pokemon.setType(regulartype).join) {
 					this.add(
 						"-start",
 						pokemon,
@@ -871,9 +870,10 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 						)}`
 					);
 				}
-			} else if (pokemon.hp >= pokemon.maxhp / 2) {
-				const regulartype = pokemon.types;
-				pokemon.abilityState.regulartype = regulartype;
+			} 
+	},
+	onAfterMove(pokemon) {
+		if (pokemon.hp >= pokemon.maxhp / 2) {
 				const move1name = pokemon.moves[0];
 				const move1type = this.dex.moves.get(move1name).type;
 				const move2name = pokemon.moves[1];
@@ -881,12 +881,12 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				this.debug(move1type);
 				this.debug(move2type);
 				const newtype = [move1type, move2type];
-				if (pokemon.setType(newtype)) {
+				if (pokemon.setType(newtype) && newtype !== pokemon.setType(newtype).join) {
 					this.add(
 						"-start",
 						pokemon,
 						"typechange",
-						regulartype.join("/"),
+						newtype.join("/"),
 						"[from] ability: Chromatic Scales"
 					);
 
