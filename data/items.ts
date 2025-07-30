@@ -625,7 +625,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		onSwitchInPriority: -2,
 		onStart(pokemon) {
 			this.effectState.started = true;
-//			((this.effect as any).onUpdate as (p: Pokemon) => void).call(this, pokemon);
+			((this.effect as any).onUpdate as (p: Pokemon) => void).call(this, pokemon);
 		},
 		onUpdate(pokemon) {
 			if (!this.effectState.started || pokemon.transformed) return;
@@ -6185,7 +6185,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onStart(pokemon) {
 			this.effectState.started = true;
-			((this.effect as any).onUpdate as (p: Pokemon) => void).call(this, pokemon);
+//			((this.effect as any).onUpdate as (p: Pokemon) => void).call(this, pokemon);
 		},
 		onUpdate(pokemon) {
 			if (!this.effectState.started || pokemon.transformed) return;
