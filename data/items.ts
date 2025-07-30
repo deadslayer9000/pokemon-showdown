@@ -1777,6 +1777,26 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 			}
 			return true;
 		},
+		onStart(pokemon) {
+			this.effectState.started = true;
+			//			((this.effect as any).onUpdate as (p: Pokemon) => void).call(this, pokemon);
+		},
+		onUpdate(pokemon) {
+			if ((this.effectState.used === true)) {
+				return;
+			} else {
+				if (!this.effectState.started || pokemon.transformed) return;
+
+				if (
+					pokemon.name === "Iron Pilot" &&
+					pokemon.hasAbility("quarkdrive") &&
+					!this.field.isTerrain("electricterrain")
+				) {
+					pokemon.addVolatile("quarkdrive");
+					this.effectState.used = true;
+				}
+			}
+		},
 		onDrive: "Dark",
 		itemUser: ["Iron Pilot"],
 		num: -14,
@@ -4499,6 +4519,26 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 			}
 			return true;
 		},
+		onStart(pokemon) {
+			this.effectState.started = true;
+			//			((this.effect as any).onUpdate as (p: Pokemon) => void).call(this, pokemon);
+		},
+		onUpdate(pokemon) {
+			if ((this.effectState.used === true)) {
+				return;
+			} else {
+				if (!this.effectState.started || pokemon.transformed) return;
+
+				if (
+					pokemon.name === "Iron Pilot" &&
+					pokemon.hasAbility("quarkdrive") &&
+					!this.field.isTerrain("electricterrain")
+				) {
+					pokemon.addVolatile("quarkdrive");
+					this.effectState.used = true;
+				}
+			}
+		},
 		onDrive: "Psychic",
 		itemUser: ["Iron Pilot"],
 		num: -17,
@@ -5054,6 +5094,26 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 				return false;
 			}
 			return true;
+		},
+		onStart(pokemon) {
+			this.effectState.started = true;
+			//			((this.effect as any).onUpdate as (p: Pokemon) => void).call(this, pokemon);
+		},
+		onUpdate(pokemon) {
+			if ((this.effectState.used === true)) {
+				return;
+			} else {
+				if (!this.effectState.started || pokemon.transformed) return;
+
+				if (
+					pokemon.name === "Iron Pilot" &&
+					pokemon.hasAbility("quarkdrive") &&
+					!this.field.isTerrain("electricterrain")
+				) {
+					pokemon.addVolatile("quarkdrive");
+					this.effectState.used = true;
+				}
+			}
 		},
 		onDrive: "Fairy",
 		itemUser: ["Iron Pilot"],
