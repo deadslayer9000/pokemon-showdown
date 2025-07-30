@@ -6817,7 +6817,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 			//			((this.effect as any).onUpdate as (p: Pokemon) => void).call(this, pokemon);
 		},
 		onUpdate(pokemon) {
-			if ((this.effectState.notUsed = false)) {
+			if ((this.effectState.notUsed === true)) {
 				return;
 			} else {
 				if (!this.effectState.started || pokemon.transformed) return;
@@ -6828,7 +6828,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 					!this.field.isTerrain("electricterrain")
 				) {
 					pokemon.addVolatile("quarkdrive");
-					this.effectState.notUsed = false;
+					this.effectState.used = true;
 				}
 			}
 		},
