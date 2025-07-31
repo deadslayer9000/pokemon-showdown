@@ -6595,7 +6595,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		target: "normal",
 		type: "Dragon",
 	},
-	exaltedpotion: {
+	exaltedbrew: {
 		num: -61,
 		accuracy: true,
 		basePower: 0,
@@ -6634,7 +6634,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		target: "normal",
 		type: "Psychic",
 	},
-	exaltedpotionz: { //bypasses the targeting check by calling z move instead
+	exaltedpotion: { //bypasses the targeting check by calling z move instead
 		num: -83,
 		accuracy: 100,
 		basePower: 0,
@@ -6645,8 +6645,9 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		isZ: 'brewliumz',
 		flags: {},
 		onTryHit(target, pokemon) {
-			let move = 'exaltedpotion';
-			this.actions.useMove(move, pokemon, { target });
+			let move = 'exaltedbrew';
+			this.actions.useMove(move, pokemon);
+			return null;
 		},
 		callsMove: true,
 		secondary: null,
@@ -18608,10 +18609,9 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Rebirth",
 		pp: 1,
 		priority: 0,
-		isZ: "Ancientgenium Z",
+		isZ: 'ancientgeniumz',
 		flags: { heal: 1, nosketch: 1 },
 		onHit(target, source) {
-			//	this.actions.useMove('revivalblessing');
 			const move1name = source.moves[0];
 			const move1type = this.dex.moves.get(move1name).type;
 			const move2name = source.moves[1];
@@ -18635,9 +18635,10 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					)} type!`
 				);
 			}
-			this.hint("This move is not fully implemented yet");
+			let move = 'revivalblessing';
+			this.actions.useMove(move, source,);
 		},
-		//callsMove: true,
+		callsMove: true,
 		secondary: null,
 		target: "normal",
 		type: "Psychic",
