@@ -1610,7 +1610,8 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			return true;
 		},
 		onDrive: 'Dark',
-		itemUser: ["Iron Pilot"],
+		forcedForme: "Iron Pilot-Dread",
+		itemUser: ["Iron Pilot-Dread"],
 		num: -14,
 	},
 	dreadplate: {
@@ -4031,7 +4032,8 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			return true;
 		},
 		onDrive: 'Psychic',
-		itemUser: ['Iron Pilot'],
+		forcedForme: "Iron Pilot-Mind",
+		itemUser: ['Iron Pilot-Mind'],
 		num: -17,
 	},
 	mindplate: {
@@ -4549,7 +4551,8 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			return true;
 		},
 		onDrive: 'Fairy',
-		itemUser: ["Iron Pilot"],
+		forcedForme: "Iron Pilot-Pixie",
+		itemUser: ["Iron Pilot-Pixie"],
 		num: -16,
 	},
 	pixieplate: {
@@ -6183,7 +6186,8 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			return true;
 		},
 		onDrive: 'Fighting',
-		itemUser: ["Iron Pilot"],
+		forcedForme: "Iron Pilot-Thrash",
+		itemUser: ["Iron Pilot-Thrash"],
 		num: -18,
 	},
 	throatspray: {
