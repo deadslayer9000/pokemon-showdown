@@ -6600,10 +6600,9 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
-		name: "Exalted Potion",
+		name: "Exalted Brew",
 		pp: 1,
 		priority: 0,
-		isZ: "Brewlium Z",
 		flags: {},
 		onHit(target, source) {
 			if (source.hp) {
@@ -6613,7 +6612,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 						"-enditem",
 						target,
 						item.name,
-						"[from] move: Exalted Potion",
+						"[from] move: Exalted Brew",
 						`[of] ${source}`
 					);
 				}
@@ -6633,6 +6632,25 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			},
 		},
 		target: "normal",
+		type: "Psychic",
+	},
+	exaltedpotionz: { //bypasses the targeting check by calling z move instead
+		num: -83,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Exalted Potion",
+		pp: 1,
+		priority: 0,
+		isZ: 'brewliumz',
+		flags: {},
+		onTryHit(target, pokemon) {
+			let move = 'exaltedpotion';
+			this.actions.useMove(move, pokemon, { target });
+		},
+		callsMove: true,
+		secondary: null,
+		target: "self",
 		type: "Psychic",
 	},
 	expandingforce: {
@@ -16637,7 +16655,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	pearlyparade: {
 		num: -18,
 		accuracy: 100,
-		basePower: 100,
+		basePower: 120,
 		category: "Special",
 		name: "Pearly Parade",
 		pp: 5,

@@ -22426,7 +22426,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	ironpilotdread: {
 		num: 2047,
 		name: "Iron Pilot-Dread",
-		basesSpecies: "Iron Pilot",
+		baseSpecies: "Iron Pilot",
 		types: ["Steel", "Electric"],
 		forme: "Dread",
 		gender: "N",
@@ -22442,7 +22442,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	ironpilotmind: {
 		num: 2047,
 		name: "Iron Pilot-Mind",
-		basesSpecies: "Iron Pilot",
+		baseSpecies: "Iron Pilot",
 		types: ["Steel", "Electric"],
 		forme: "Mind",
 		gender: "N",
@@ -22458,7 +22458,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	ironpilotpixie: {
 		num: 2047,
 		name: "Iron Pilot-Pixie",
-		basesSpecies: "Iron Pilot",
+		baseSpecies: "Iron Pilot",
 		types: ["Steel", "Electric"],
 		forme: "Pixie",
 		gender: "N",
@@ -22474,7 +22474,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	ironpilotthrash: {
 		num: 2047,
 		name: "Iron Pilot-Thrash",
-		basesSpecies: "Iron Pilot",
+		baseSpecies: "Iron Pilot",
 		types: ["Steel", "Electric"],
 		forme: "Thrash",
 		gender: "N",
