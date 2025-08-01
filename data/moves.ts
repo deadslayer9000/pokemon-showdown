@@ -27117,6 +27117,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			
 			const form = source.species.name;
 			if ( source.status === "slp" && form !== "Snorlax-Delta-Autumn"){
+				this.hint("But it failed because its form isn't Snorlax-Delta-Autumn.")
 				return;
 			} else {
 
@@ -27155,7 +27156,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			if ( form === "Snorlax-Delta-Autumn" ) {
 				if ( source.status === "slp" ){
 					this.boost({ atk: 2, spa: 2 })
-					this.hint(`${source}'s Sleep increased the power of the boost!`);
+					this.hint(`${source.name}'s sleep increased the power of the boost!`);
 				} else {
 					this.boost({ atk: 1, spa: 1 })
 				}
