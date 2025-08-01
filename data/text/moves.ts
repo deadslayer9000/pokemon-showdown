@@ -5813,6 +5813,12 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Savage Spin-Out",
 		shortDesc: "Power is equal to the base move's Z-Power.",
 	},
+	seasonalblessing: {
+		name: "Seasonal Blessing",
+		desc: "This move's effects changes between the different seasonal forms.",
+		shortDesc: "This move's effects changes on different forms.",
+		removeItem: "  [SOURCE] knocked off [POKEMON]'s [ITEM]!",
+	},
 	scald: {
 		name: "Scald",
 		desc: "Has a 30% chance to burn the target. The target thaws out if it is frozen.",

@@ -3877,13 +3877,14 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			onResidualSubOrder: 2,
 			onResidual(pokemon) {
 				const types = pokemon.getTypes();
-				const immuneTypes = types.includes("Poison") || types.includes("Steel"); 
+				const immuneTypes =
+					types.includes("Poison") || types.includes("Steel");
 				if (
 					(pokemon.status || pokemon.hasAbility("comatose")) &&
-						pokemon.isGrounded() &&
-						!immuneTypes &&
-						!pokemon.isSemiInvulnerable())
-				 {
+					pokemon.isGrounded() &&
+					!immuneTypes &&
+					!pokemon.isSemiInvulnerable()
+				) {
 					if (
 						pokemon.hasAbility("toxicboost") ||
 						pokemon.hasAbility("poisonheal") ||
@@ -6632,7 +6633,8 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		target: "normal",
 		type: "Psychic",
 	},
-	exaltedpotion: { //bypasses the targeting check by calling z move instead
+	exaltedpotion: {
+		//bypasses the targeting check by calling z move instead
 		num: -83,
 		accuracy: 100,
 		basePower: 0,
@@ -6640,10 +6642,10 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Exalted Potion",
 		pp: 1,
 		priority: 0,
-		isZ: 'brewliumz',
+		isZ: "brewliumz",
 		flags: {},
 		onTryHit(target, pokemon) {
-			let move = 'exaltedbrew';
+			let move = "exaltedbrew";
 			this.actions.useMove(move, pokemon);
 			return null;
 		},
@@ -18607,7 +18609,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Rebirth",
 		pp: 1,
 		priority: 0,
-		isZ: 'ancientgeniumz',
+		isZ: "ancientgeniumz",
 		flags: { heal: 1, nosketch: 1 },
 		onHit(target, source) {
 			const move1name = source.moves[0];
@@ -18633,8 +18635,8 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					)} type!`
 				);
 			}
-			let move = 'revivalblessing';
-			this.actions.useMove(move, source,);
+			let move = "revivalblessing";
+			this.actions.useMove(move, source);
 		},
 		callsMove: true,
 		secondary: null,
@@ -27097,6 +27099,106 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				const duration = target.volatiles["perishsong"].duration;
 				this.add("-start", target, `perish${duration}`);
 			},
+		},
+	},
+	seasonalblessing: {
+		num: -85,
+		type: "Grass",
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Seasonal Blessing",
+		pp: 10,
+		priority: 0,
+		flags: { metronome: 1 },
+		secondary: null,
+		target: "self",
+		sleepUsable: true,
+		onModifyMove(move, pokemon, target) {
+			if ( pokemon.species.name === "Snorlax-Delta-Cherry"){
+				move.target = "normal";
+			}
+		},
+
+		onTry(source, target, move) {
+			const form = source.species.name;
+			if (source.status === "slp" && form !== "Snorlax-Delta-Autumn") {
+				this.hint(
+					"But it failed because its form isn't Snorlax-Delta-Autumn."
+				);
+				return;
+			} else {
+				if (form === "Snorlax-Delta-Winter") {
+					const newtype = ["Normal", "Ice"];
+					source.setType(newtype);
+					source.setAbility("Refrigirate");
+					this.add("-ability", source, "Refrigirate");
+					if (
+						this.field.isWeather("hail") ||
+						this.field.isWeather("snowscape")
+					) {
+						source.side.addSideCondition("auroraveil");
+					}
+				}
+				if (form === "Snorlax-Delta-Summer") {
+					const item = source.getItem();
+					if (item.isBerry) {
+						this.add(
+							"-enditem",
+							source,
+							item.name,
+							"[from] eat",
+							"[move] Seasonal Blessing",
+							`[of] ${source}`
+						);
+
+						this.boost({ def: 1, spd: 1 }, source);
+
+						if (this.singleEvent("Eat", item, null, source, null, null)) {
+							this.runEvent("EatItem", source, null, null, item);
+							if (item.id === "leppaberry")
+								source.staleness = "external";
+						}
+						if (item.onEat) source.ateBerry = true;
+						source.setItem("");
+					}
+				}
+				if (form === "Snorlax-Delta-Autumn") {
+					if (source.status === "slp") {
+						this.boost({ atk: 2, spa: 2 });
+						this.hint(
+							`${source.name}'s sleep increased the power of the boost!`
+						);
+					} else {
+						this.boost({ atk: 1, spa: 1 });
+					}
+				}
+				if (form === "Snorlax-Delta-Spring") {
+					if (this.field.isTerrain("grassyterrain")) {
+						move.heal = [1, 1];
+						this.hint(
+							`${source.name} used up Grassy Terrain to heal its pain!`
+						);
+						this.field.clearTerrain();
+					} else {
+						return false;
+					}
+				}
+				if (form === "Snorlax-Delta-Cherry") {
+//					move.target = "normal";
+					const item = target.takeItem();
+					if (item) {
+						this.add(
+							"-enditem",
+							target,
+							item.name,
+							"[from] move: Seasonal Blessing",
+							`[of] ${source}`
+						);
+					}
+					target.addVolatile("leechseed", source);
+				}
+			}
 		},
 	},
 };
