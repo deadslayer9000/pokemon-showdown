@@ -27111,6 +27111,11 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		flags: { metronome: 1, },
 		secondary: null,
 		target: "self",
+		onModifyMove(move, pokemon, target) {
+			if (pokemon.species.name === "Snorlax-Delta-Autumn"){
+				move.sleepUsable = true;
+			}
+		},
 		onTry( source, target, move){
 			const form = source.species.name;
 			if ( form === "Snorlax-Delta-Winter" ){
@@ -27143,6 +27148,14 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				if (item.onEat) source.ateBerry = true;
 				source.setItem("");
 			}
+			}
+			if ( form === "Snorlax-Delta-Autumn" ) {
+				if ( source.status === "slp" ){
+					this.boost({ atk: 2, spa: 2 })
+					this.hint(`${source}'s Sleep increased the power of the boost!`);
+				} else {
+					this.boost({ atk: 1, spa: 1 })
+				}
 			}
 		}
 	},
