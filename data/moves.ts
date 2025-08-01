@@ -27114,6 +27114,11 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		secondary: null,
 		target: "self",
 		sleepUsable: true,
+		onModifyMove(move, pokemon, target) {
+			if ( pokemon.species.name === "Snorlax-Delta-Cherry"){
+				move.target = "normal";
+			}
+		},
 
 		onTry(source, target, move) {
 			const form = source.species.name;
@@ -27169,13 +27174,29 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					}
 				}
 				if (form === "Snorlax-Delta-Spring") {
-					if (this.field.isTerrain("grassyterrain")){
-						source.heal(source.baseMaxhp / 1);
-						this.hint(`${source.name} used up Grassy Terrain to heal its pain!`);
+					if (this.field.isTerrain("grassyterrain")) {
+						move.heal = [1, 1];
+						this.hint(
+							`${source.name} used up Grassy Terrain to heal its pain!`
+						);
 						this.field.clearTerrain();
 					} else {
 						return false;
 					}
+				}
+				if (form === "Snorlax-Delta-Cherry") {
+//					move.target = "normal";
+					const item = target.takeItem();
+					if (item) {
+						this.add(
+							"-enditem",
+							target,
+							item.name,
+							"[from] move: Seasonal Blessing",
+							`[of] ${source}`
+						);
+					}
+					target.addVolatile("leechseed", source);
 				}
 			}
 		},

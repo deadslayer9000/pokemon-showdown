@@ -5816,8 +5816,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	seasonalblessing: {
 		name: "Seasonal Blessing",
 		desc: "This move's effects changes between the different seasonal forms.",
-		shortDesc: "This move's effects changes between the different seasonal forms.",
-		removeItem: "  [SOURCE] ate its [ITEM]!",
+		shortDesc: "This move's effects changes on different forms.",
+		removeItem: "  [SOURCE] knocked off [POKEMON]'s [ITEM]!",
 	},
 	scald: {
 		name: "Scald",
