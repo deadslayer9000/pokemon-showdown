@@ -27122,6 +27122,27 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					source.side.addSideCondition("auroraveil");
 				}
 			}
+			if ( form === "Snorlax-Delta-Summer" ) {
+				const item = source.getItem();
+			if (item.isBerry) {
+				this.add(
+					"-enditem",
+					source,
+					item.name,
+					"[from] stealeat",
+					"[move] Seasonal Blessing",
+					`[of] ${source}`
+				);
+				
+				this.boost({ def: 1, spd: 1 }, source);
+				
+				if (this.singleEvent("Eat", item, null, source, null, null)) {
+					this.runEvent("EatItem", source, null, null, item);
+					if (item.id === "leppaberry") target.staleness = "external";
+				}
+				if (item.onEat) source.ateBerry = true;
+			}
+			}
 		}
 	},
 };
