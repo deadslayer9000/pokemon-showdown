@@ -1816,7 +1816,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 						"[from] move: Bizzare Elixir"
 					);
 					break;
-				case "Heavy Duty Boots":
+				case "Heavy-Duty Boots":
 					pokemon.setAbility("Magic Guard");
 					this.add(
 						"-ability",
@@ -27185,7 +27185,6 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					}
 				}
 				if (form === "Snorlax-Delta-Cherry") {
-//					move.target = "normal";
 					const item = target.takeItem();
 					if (item) {
 						this.add(
