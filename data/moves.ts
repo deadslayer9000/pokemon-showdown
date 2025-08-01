@@ -27111,13 +27111,16 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		flags: { metronome: 1, },
 		secondary: null,
 		target: "self",
-		onModifyMove(move, pokemon, target) {
-			if (pokemon.species.name === "Snorlax-Delta-Autumn"){
-				move.sleepUsable = true;
-			}
-		},
+		sleepUsable: true,
+
 		onTry( source, target, move){
+			
 			const form = source.species.name;
+			if ( source.status === "slp" && form !== "Snorlax-Delta-Autumn"){
+				return;
+			} else {
+
+			
 			if ( form === "Snorlax-Delta-Winter" ){
 				const newtype = ["Normal", "Ice"];
 				source.setType(newtype);
@@ -27157,6 +27160,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					this.boost({ atk: 1, spa: 1 })
 				}
 			}
+		}
 		}
 	},
 };
