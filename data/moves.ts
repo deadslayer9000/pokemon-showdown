@@ -27126,9 +27126,12 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				const item = source.getItem();
 			if (item.isBerry) {
 				this.add(
-					"-eat",
+					"-enditem",
 					source,
 					item.name,
+					"[from] eat",
+					"[move] Seasonal Blessing",
+					`[of] ${source}`
 				);
 				
 				this.boost({ def: 1, spd: 1 }, source);
