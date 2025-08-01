@@ -27099,4 +27099,29 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			},
 		},
 	},
+	seasonalblessing: {
+		num: -85,
+		type: "Grass",
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Seasonal Blessing",
+		pp: 10,
+		priority: 0,
+		flags: { metronome: 1, },
+		secondary: null,
+		target: "self",
+		onTry( source, target, move){
+			const form = source.name;
+			if ( form === "Snorlax-Delta-Winter" ){
+				const newtype = ["Normal", "Ice"];
+				source.setType(newtype);
+				source.setAbility("Refrigirate");
+				this.add("-ability", source, "Refrigirate");
+				if (this.field.isWeather("hail") || this.field.isWeather("snowscape")){
+					source.side.addSideCondition("auroraveil");
+				}
+			}
+		}
+	},
 };
