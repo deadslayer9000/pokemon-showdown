@@ -6451,6 +6451,18 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	ironpilot: {
 		tier: "UU",
 	},
+	ironpilotdread: {
+		tier: "UU",
+	},
+	ironpilotmind: {
+		tier: "UU",
+	},
+	ironpilotpixie: {
+		tier: "UU",
+	},
+	ironpilotthrash: {
+		tier: "UU",
+	},
 	dragetsu: {
 		tier: "OU",
 	},

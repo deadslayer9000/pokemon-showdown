@@ -6593,15 +6593,14 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		target: "normal",
 		type: "Dragon",
 	},
-	exaltedpotion: {
+	exaltedbrew: {
 		num: -61,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
-		name: "Exalted Potion",
+		name: "Exalted Brew",
 		pp: 1,
 		priority: 0,
-		isZ: "Brewlium Z",
 		flags: {},
 		onHit(target, source) {
 			if (source.hp) {
@@ -6611,7 +6610,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 						"-enditem",
 						target,
 						item.name,
-						"[from] move: Exalted Potion",
+						"[from] move: Exalted Brew",
 						`[of] ${source}`
 					);
 				}
@@ -6631,6 +6630,26 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			},
 		},
 		target: "normal",
+		type: "Psychic",
+	},
+	exaltedpotion: { //bypasses the targeting check by calling z move instead
+		num: -83,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Exalted Potion",
+		pp: 1,
+		priority: 0,
+		isZ: 'brewliumz',
+		flags: {},
+		onTryHit(target, pokemon) {
+			let move = 'exaltedbrew';
+			this.actions.useMove(move, pokemon);
+			return null;
+		},
+		callsMove: true,
+		secondary: null,
+		target: "self",
 		type: "Psychic",
 	},
 	expandingforce: {
@@ -18588,10 +18607,9 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Rebirth",
 		pp: 1,
 		priority: 0,
-		isZ: "Ancientgenium Z",
+		isZ: 'ancientgeniumz',
 		flags: { heal: 1, nosketch: 1 },
 		onHit(target, source) {
-			//	this.actions.useMove('revivalblessing');
 			const move1name = source.moves[0];
 			const move1type = this.dex.moves.get(move1name).type;
 			const move2name = source.moves[1];
@@ -18615,9 +18633,10 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					)} type!`
 				);
 			}
-			this.hint("This move is not fully implemented yet");
+			let move = 'revivalblessing';
+			this.actions.useMove(move, source,);
 		},
-		//callsMove: true,
+		callsMove: true,
 		secondary: null,
 		target: "normal",
 		type: "Psychic",
