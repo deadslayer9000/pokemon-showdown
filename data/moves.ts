@@ -3877,15 +3877,13 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			onResidualSubOrder: 2,
 			onResidual(pokemon) {
 				const types = pokemon.getTypes();
-				let type = types[0];
+				const immuneTypes = types.includes("Poison") || types.includes("Steel"); 
 				if (
-					pokemon.status ||
-					(pokemon.hasAbility("comatose") &&
+					(pokemon.status || pokemon.hasAbility("comatose")) &&
 						pokemon.isGrounded() &&
-						type != "Poison" &&
-						type != "Steel" &&
+						!immuneTypes &&
 						!pokemon.isSemiInvulnerable())
-				) {
+				 {
 					if (
 						pokemon.hasAbility("toxicboost") ||
 						pokemon.hasAbility("poisonheal") ||
