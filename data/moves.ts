@@ -27129,7 +27129,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					"-enditem",
 					source,
 					item.name,
-					"[from] stealeat",
+					"[from] eat",
 					"[move] Seasonal Blessing",
 					`[of] ${source}`
 				);
