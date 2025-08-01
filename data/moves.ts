@@ -27112,7 +27112,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		secondary: null,
 		target: "self",
 		onTry( source, target, move){
-			const form = source.name;
+			const form = source.species.name;
 			if ( form === "Snorlax-Delta-Winter" ){
 				const newtype = ["Normal", "Ice"];
 				source.setType(newtype);
