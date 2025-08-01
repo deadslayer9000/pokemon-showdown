@@ -27138,7 +27138,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				
 				if (this.singleEvent("Eat", item, null, source, null, null)) {
 					this.runEvent("EatItem", source, null, null, item);
-					if (item.id === "leppaberry") target.staleness = "external";
+					if (item.id === "leppaberry") source.staleness = "external";
 				}
 				if (item.onEat) source.ateBerry = true;
 			}
