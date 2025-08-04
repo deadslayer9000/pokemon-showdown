@@ -440,7 +440,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen9',
 		searchShow: false,
 		teraPreviewDefault: true,
-		ruleset: ['Standard Draft', '+Unobtainable', '+Past'],
+		ruleset: ['Standard NatDex', 'Standard Draft'],
 	},
 	{
 		name: "[Gen 9] NatDex 6v6 Doubles Draft",
