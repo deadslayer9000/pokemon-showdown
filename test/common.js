@@ -138,7 +138,7 @@ class TestTools {
 			out.write(
 				`<!DOCTYPE html>\n` +
 				`<script type="text/plain" class="battle-log-data">${battleLog}</script>\n` +
-				`<script src="https://play.pokemonshowdown.com/js/replay-embed.js"></script>\n`
+				`<script src="https://cobblemondelta.dynv6.net/js/replay-embed.js"></script>\n`
 			);
 			out.end();
 		});
