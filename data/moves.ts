@@ -5876,8 +5876,8 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		pp: 15,
 		priority: 0,
 		flags: { protect: 1, mirror: 1, sound: 1, bypasssub: 1, metronome: 1 },
-		onTry() {
-			this.field.addPseudoWeather("echoedvoice");
+		onTryMove() {
+			this.field.addPseudoWeather('echoedvoice');
 		},
 		condition: {
 			duration: 2,
@@ -7596,7 +7596,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			noparentalbond: 1,
 		},
 		onPrepareHit(target, source, move) {
-			if (source.ignoringItem()) return false;
+			if (source.ignoringItem(true)) return false;
 			const item = source.getItem();
 			if (
 				!this.singleEvent(
@@ -12151,8 +12151,8 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			},
 			onFoeDisableMove(pokemon) {
 				for (const moveSlot of this.effectState.source.moveSlots) {
-					if (moveSlot.id === "struggle") continue;
-					pokemon.disableMove(moveSlot.id, "hidden");
+					if (moveSlot.id === 'struggle') continue;
+					pokemon.disableMove(moveSlot.id, true);
 				}
 				pokemon.maybeDisabled = true;
 			},
@@ -13707,9 +13707,8 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				const newMove = this.dex.getActiveMove(move.id);
 				newMove.hasBounced = true;
 				newMove.pranksterBoosted = false;
-				this.actions.useMove(newMove, this.effectState.target, {
-					target: source,
-				});
+				this.actions.useMove(newMove, this.effectState.target, { target: source });
+				move.hasBounced = true; // only bounce once in free-for-all battles
 				return null;
 			},
 		},
@@ -16493,14 +16492,6 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		self: {
 			volatileStatus: "lockedmove",
 		},
-		onAfterMove(pokemon) {
-			if (
-				pokemon.volatiles["lockedmove"] &&
-				pokemon.volatiles["lockedmove"].duration === 1
-			) {
-				pokemon.removeVolatile("lockedmove");
-			}
-		},
 		secondary: null,
 		target: "randomNormal",
 		type: "Dragon",
@@ -16792,14 +16783,6 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		},
 		self: {
 			volatileStatus: "lockedmove",
-		},
-		onAfterMove(pokemon) {
-			if (
-				pokemon.volatiles["lockedmove"] &&
-				pokemon.volatiles["lockedmove"].duration === 1
-			) {
-				pokemon.removeVolatile("lockedmove");
-			}
 		},
 		secondary: null,
 		target: "randomNormal",
@@ -18418,11 +18401,6 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		flags: { protect: 1, mirror: 1 },
 		self: {
 			volatileStatus: "lockedmove",
-		},
-		onAfterMove(pokemon) {
-			if (pokemon.volatiles["lockedmove"]?.duration === 1) {
-				pokemon.removeVolatile("lockedmove");
-			}
 		},
 		secondary: null,
 		target: "randomNormal",
@@ -23127,12 +23105,8 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					this.attrLastMove("[still]");
 					return null;
 				}
-				damage = this.runEvent("SubDamage", target, source, move, damage);
-				if (!damage) {
-					return damage;
-				}
-				if (damage > target.volatiles["substitute"].hp) {
-					damage = target.volatiles["substitute"].hp as number;
+				if (damage > target.volatiles['substitute'].hp) {
+					damage = target.volatiles['substitute'].hp as number;
 				}
 				target.volatiles["substitute"].hp -= damage;
 				source.lastDamage = damage;
@@ -24426,14 +24400,6 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		},
 		self: {
 			volatileStatus: "lockedmove",
-		},
-		onAfterMove(pokemon) {
-			if (
-				pokemon.volatiles["lockedmove"] &&
-				pokemon.volatiles["lockedmove"].duration === 1
-			) {
-				pokemon.removeVolatile("lockedmove");
-			}
 		},
 		secondary: null,
 		target: "randomNormal",
@@ -26923,7 +26889,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	// CAP moves
 
 	paleowave: {
-		num: 0,
+		num: -1,
 		accuracy: 100,
 		basePower: 85,
 		category: "Special",
@@ -26943,7 +26909,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		contestType: "Beautiful",
 	},
 	shadowstrike: {
-		num: 0,
+		num: -2,
 		accuracy: 95,
 		basePower: 80,
 		category: "Physical",
