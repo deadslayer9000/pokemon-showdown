@@ -6861,4 +6861,12 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	serperiorultra: {
 		tier: "UU",
 	},
+	meloettaomega: {
+		tier: "UU",
+		isNonstandard: "Past",
+	},
+	meloettaomegaamped: {
+		isNonstandard: "Past",
+		tier: "Illegal",
+	}
 };
