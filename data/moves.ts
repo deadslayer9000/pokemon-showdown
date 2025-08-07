@@ -27197,7 +27197,13 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		secondary: null,
 		target: "normal",
 		onBasePower(relayVar, source, target, move) {
-			
+			const fallenallies = Math.min(source.side.totalFainted, 5);
+			const fallenopponents = Math.min(source.side.foe.pokemon.filter((p) => p.fainted).length, 5);
+			const fallentotal = fallenallies+fallenopponents;
+			let bp = 0;
+			bp = move.basePower + 10 * fallentotal;
+				this.hint(`Haunted Requiem channeled the power of the dead to hit with ${bp} BP!`);
+				return bp;
 		},
 	}
 };
