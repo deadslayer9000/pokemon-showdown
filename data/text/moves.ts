@@ -3036,7 +3036,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	hauntedrequiem: {
 		name: "Haunted Requiem",
-		shortDesc: "The more pokemon are dead the higher the BP.",
+		shortDesc: "Base Power increases for each fainted pokemon.",
 		desc: "Haunted Requiem's Base Power is raised by 10 for each fainted pokemon in user's and opponent's party.",
 	},
 	haze: {
