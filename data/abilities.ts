@@ -142,6 +142,38 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				return null;
 			}
 		},
+		onResidual(target, source, effect) {
+			for (const ally of target.adjacentAllies()) {
+				const myItem = target.takeItem();
+			if (!myItem) return;
+			if (
+				!this.singleEvent(
+					"TakeItem",
+					myItem,
+					target.itemState,
+					target,
+					ally,
+					this.effect,
+					myItem
+				) ||
+				!ally.setItem(myItem)
+			) {
+				ally.item = myItem.id;
+				return;
+			}
+			this.add(
+				"-activate",
+				target,
+				"ability: Altruistic",
+				myItem,
+				`[of] ${target}`
+			);
+			this.hint(`${target.name} gave its ${myItem.name} to ${ally.name}`);
+			break;
+			}
+
+			
+		},
 		flags: { breakable: 1 },
 		name: "Altruistic",
 		rating: 3,
