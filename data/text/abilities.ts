@@ -332,7 +332,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	crescendoswitch: {
 		name: "Crescendo Switch",
-		shortDesc: "Changes the form of the user if electric terrain is active."
+		shortDesc: "If Meloetta-Omega, changes forme to Amped if Electric Terrain is active."
 	},
 	crescentform: {
 		name: "Crescent Form",
