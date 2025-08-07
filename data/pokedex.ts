@@ -24067,7 +24067,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "White",
 		eggGroups: ["Undiscovered"],
 		forme: "Omega",
-		baseSpecies: "Meloetta",
+		baseSpecies: "Meloetta-Omega",
 		otherFormes: ["Meloetta-Omega-Amped"],
 		formeOrder: ["Meloetta-Omega", "Meloetta-Omega-Amped"],
 	},
@@ -24083,7 +24083,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "White",
 		eggGroups: ["Undiscovered"],
 		forme: "Omega",
-		baseSpecies: "Meloetta",
+		baseSpecies: "Meloetta-Omega",
 		otherFormes: ["Meloetta-Omega"],
 		formeOrder: ["Meloetta-Omega", "Meloetta-Omega-Amped"],
 	}

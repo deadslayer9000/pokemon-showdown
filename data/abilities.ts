@@ -1433,18 +1433,27 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -41,
 	},
 	crescendoswitch: {
+		onStart(pokemon) {
+			if (this.field.isTerrain("electricterrain")) {
+//				this.add("-activate", pokemon, "ability: Crescendo Switch");
+				pokemon.formeChange("Meloetta-Omega-Amped");
+			}else{
+				if(pokemon.species.name === "Meloetta-Omega-Amped"){
+					this.add("-activate", pokemon, "ability: Crescendo Switch");
+					pokemon.formeChange("Meloetta-Omega");
+				}
+			}
+		},
 		onTerrainChange(target, source, sourceEffect) {
 			if(this.field.isTerrain("electricterrain")){
-				if (target.species.baseSpecies !== "Meloetta-Omega" || target.transformed){
-					return;
-				}else {
-					target.formeChange("Meloetta-Omega-Amped")
+				if(target.species.name === "Meloetta-Omega"){
+					this.add("-activate", target, "ability: Crescendo Switch");
+					target.formeChange("Meloetta-Omega-Amped");
 				}
 			} else {
-				if (target.species.baseSpecies !== "Meloetta-Omega-Amped" || target.transformed){
-					return;
-				}else {
-					target.formeChange("Meloetta-Omega")
+				if(target.species.name === "Meloetta-Omega-Amped"){
+//					this.add("-activate", target, "ability: Crescendo Switch");
+					target.formeChange("Meloetta-Omega");
 				}
 			}
 		},
