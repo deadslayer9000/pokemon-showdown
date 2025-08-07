@@ -12094,8 +12094,39 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		pp: 5,
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1, contact: 1 }, //missing the increased bp on multiple target hits
+		onBasePower(relayVar, source, target, move) {
+			let bp = move.basePower;
+			let amountoftargets = 0;
+			for (let targets of source.adjacentAllies()){
+				amountoftargets += 1;
+			}
+			for (let targets of source.adjacentFoes()){
+				amountoftargets += 1;
+			}
+			if (!amountoftargets){
+				bp = 0;
+			}else {
+				bp = bp*amountoftargets;
+				this.hint(`Icicle Flail hit with ${bp} BP because of its ${amountoftargets} targets!`)
+				return bp;
+			}
+		},
+		/*
+		basePowerCallback(pokemon, target, move) {
+			let bp = move.basePower;
+			if (this.field.pseudoWeather.echoedvoice) {
+				bp =
+					move.basePower +
+					10 * this.field.pseudoWeather.echoedvoice.multiplier -
+					10;
+				this.hint(`Flashpoint Fists hit with ${bp} BP`);
+				return bp;
+			}
+
+			return bp;
+		},*/
 		secondary: null,
-		target: "normal",
+		target: "allAdjacent",
 		type: "Ice",
 	},
 	iciclespear: {
