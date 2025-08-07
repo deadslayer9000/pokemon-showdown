@@ -24108,7 +24108,6 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		heightm: 0.7,
 		weightkg: 85,
 		color: "Brown",
-		evos: ["Dunecargo"],
 		eggGroups: ["Amorphous"],
 	},
 };
