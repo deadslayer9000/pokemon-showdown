@@ -143,15 +143,15 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			}
 		},
 		onResidual(target, source, effect) {
-			for (const ally of source.adjacentAllies()) {
-				const myItem = source.takeItem();
+			for (const ally of target.adjacentAllies()) {
+				const myItem = target.takeItem();
 			if (!myItem) return;
 			if (
 				!this.singleEvent(
 					"TakeItem",
 					myItem,
-					source.itemState,
-					source,
+					target.itemState,
+					target,
 					ally,
 					this.effect,
 					myItem
@@ -163,11 +163,12 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			}
 			this.add(
 				"-activate",
-				source,
+				target,
 				"ability: Altruistic",
 				myItem,
-				`[of] ${source}`
+				`[of] ${target}`
 			);
+			break;
 			}
 
 			
