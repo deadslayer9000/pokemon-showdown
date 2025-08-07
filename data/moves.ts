@@ -27094,7 +27094,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Seasonal Blessing",
 		pp: 10,
 		priority: 0,
-		flags: { metronome: 1 },
+		flags: { metronome: 1, protect: 1 },
 		secondary: null,
 		target: "self",
 		sleepUsable: true,
@@ -27184,4 +27184,20 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			}
 		},
 	},
+	hauntedrequiem: {
+		num: -86,
+		type: "Ghost",
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		name: "Haunted Requiem",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, sound: 1, bypasssub: 1 },
+		secondary: null,
+		target: "normal",
+		onBasePower(relayVar, source, target, move) {
+			
+		},
+	}
 };

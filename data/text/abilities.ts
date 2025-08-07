@@ -330,6 +330,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Covenant",
 		shortDesc: "Atk and Spe are halved. This ability becomes Huge Power when under 50% HP.",
 	},
+	crescendoswitch: {
+		name: "Crescendo Switch",
+		shortDesc: "Changes the form of the user if electric terrain is active."
+	},
 	crescentform: {
 		name: "Crescent Form",
 		shortDesc: "Takes 50% less from, and deals 30% more damage with Beam, Pulse, and Light moves.",
