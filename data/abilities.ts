@@ -1432,6 +1432,34 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 0,
 		num: -41,
 	},
+	crescendoswitch: {
+		onTerrainChange(target, source, sourceEffect) {
+			if(this.field.isTerrain("electricterrain")){
+				if (target.species.baseSpecies !== "Meloetta-Omega" || target.transformed){
+					return;
+				}else {
+					target.formeChange("Meloetta-Omega-Amped")
+				}
+			} else {
+				if (target.species.baseSpecies !== "Meloetta-Omega-Amped" || target.transformed){
+					return;
+				}else {
+					target.formeChange("Meloetta-Omega")
+				}
+			}
+		},
+		flags: {
+			failroleplay: 1,
+			noreceiver: 1,
+			noentrain: 1,
+			notrace: 1,
+			failskillswap: 1,
+			cantsuppress: 1,
+		},
+		name: "Crescendo Switch",
+		rating: 4,
+		num: -74,
+	},
 	crescentform: {
 		onBasePowerPriority: 7,
 		onBasePower(basePower, attacker, defender, move) {
