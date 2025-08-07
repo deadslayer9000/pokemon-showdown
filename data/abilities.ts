@@ -168,6 +168,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				myItem,
 				`[of] ${target}`
 			);
+			this.hint(`${target.name} gave its ${myItem.name} to ${ally.name}`);
 			break;
 			}
 
