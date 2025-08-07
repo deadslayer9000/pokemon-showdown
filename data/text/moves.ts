@@ -3034,6 +3034,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 
 		activate: "  [POKEMON] pulled off a hat trick!",
 	},
+	hauntedrequiem: {
+		name: "Haunted Requiem",
+		shortDesc: "The more pokemon are dead the higher the base power.",
+		desc: "Haunted Requiem's Base Power is raised by 10 for each fainted pokemon in user's and opponent's party.",
+	},
 	haze: {
 		name: "Haze",
 		desc: "Resets the stat stages of all active Pokemon to 0.",

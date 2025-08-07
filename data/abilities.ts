@@ -1435,7 +1435,6 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	crescendoswitch: {
 		onStart(pokemon) {
 			if (this.field.isTerrain("electricterrain")) {
-//				this.add("-activate", pokemon, "ability: Crescendo Switch");
 				pokemon.formeChange("Meloetta-Omega-Amped");
 			}else{
 				if(pokemon.species.name === "Meloetta-Omega-Amped"){
@@ -1452,7 +1451,6 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				}
 			} else {
 				if(target.species.name === "Meloetta-Omega-Amped"){
-//					this.add("-activate", target, "ability: Crescendo Switch");
 					target.formeChange("Meloetta-Omega");
 				}
 			}
