@@ -100894,6 +100894,8 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			terablast: ["9M"],
 			thief: ["9M"],
 			thunderwave: ["9M"],
+			thunderbolt: ["9M"],
+			wildcharge: ["9M"],
 		}
 	},
 	valianttime: {
