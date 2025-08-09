@@ -4767,16 +4767,8 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 					boostPlus[i] = (boostPlus[i] || 0) + boost[i]!;
 				}
 				const feaster = this.effectState.target;
-				this.attrLastMove("[still]");
-				this.add(
-					"cant",
-					target,
-					"ability: Feast or Famine",
-					effect,
-					`[of] ${feaster}`
-				);
-				return false;
 			}
+			return false;
 		},
 		onAnySwitchInPriority: -3,
 		onAnySwitchIn() {
