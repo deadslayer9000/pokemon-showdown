@@ -61,7 +61,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		name: "[Gen 9] Colour Tournament",
 		mod: 'gen9',
-		ruleset: ['Standard NatDex', 'Terastal Clause', 'Force Monocolor'],
+		ruleset: ['Standard NatDex', 'Terastal Clause', 'Force Monocolor = true'],
 		banlist: [
 			'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock',
 			'Quick Claw', 'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail', 'Dire Claw', 'Rage Fist', 'Blood Moon', 'Darkrai', 'Zamazenta', 'Good as Gold'
