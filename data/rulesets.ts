@@ -4,8 +4,45 @@ import type { Learnset } from "../sim/dex-species";
 
 // The list of formats is stored in config/formats.js
 export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
-
-	// Rulesets
+	// Delta Rulesets
+	samecolorclause: {
+		effectType: 'ValidatorRule',
+		name: 'Same Color Clause',
+		desc: "Forces all Pok&eacute;mon on a team to share a color with each other",
+		onBegin() {
+			this.add('rule', 'Same Color Clause: Pokémon in a team must share a color');
+		},
+		onValidateTeam(team) {
+			let requiredColor: string = "";
+			for (const [i, set] of team.entries()) {
+				let species = this.dex.species.get(set.species);
+				if (!species.color) return [`Invalid pokemon ${set.name || set.species}`];
+				if (i === 0) {
+					requiredColor = species.color;
+				} else {
+					if (species.color !== requiredColor){
+						return [`${set.name || set.species} must be ${requiredColor} color to match your team.`];
+					}
+				}
+				const item = this.dex.items.get(set.item);
+				if (item.megaStone && species.baseSpecies === item.megaEvolves) {
+					const megaSpecies = this.dex.species.get(item.megaStone);
+					if (megaSpecies.color !== requiredColor){
+						return [`${set.name || set.species}'s Mega Evolution must be ${requiredColor} color to match your team.`];
+					}
+				}
+				if (item.id === "ultranecroziumz" && species.baseSpecies === "Necrozma") {
+					const necrozmaSpecies = this.dex.species.get("Necrozma-Ultra");
+					if (necrozmaSpecies.color !== requiredColor){
+						return [`${set.name || set.species}'s Ultra form must be ${requiredColor} color to match your team.`];
+					}
+				}
+				}
+				
+			}
+		},
+	},
+	// Regular Rulesets
 	///////////////////////////////////////////////////////////////////
 
 	standardag: {
