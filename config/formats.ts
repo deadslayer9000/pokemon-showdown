@@ -58,6 +58,18 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'Weavile', 'Whirling Abyss', 'Wisphir', 'Xerneas', 'Xurkitree', 'Yveltal', 'Zacian', 'Zacian-Crowned', 'Zekrom', 'Zeraora', 'Zygarde-50%', 'King\'s Rock', 'Light Clay', 'Quick Claw' 	  
 		]
 	},
+	{
+		name: "[Gen 9] National Dex",
+		mod: 'gen9',
+		ruleset: ['Standard NatDex', 'Terastal Clause', 'Force Monocolor'],
+		banlist: [
+			'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock',
+			'Quick Claw', 'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail', 'Dire Claw', 'Rage Fist', 'Blood Moon', 'Darkrai', 'Zamazenta', 'Good as Gold'
+		],
+		unbanlist: [
+			'Solgaleo', 'Sneasler', 'Annihilape', 'Ursaluna-Bloodmoon', 'Espathra', 'Roaring Moon',
+		],
+	},
 	// S/V Singles
 	///////////////////////////////////////////////////////////////////
 
