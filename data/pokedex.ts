@@ -20643,8 +20643,6 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	yanfern: {
 		num: 193,
 		name: "Yanfern",
-		baseSpecies: "Yanma",
-		forme: "Delta",
 		types: ["Grass", "Flying"],
 		baseStats: { hp: 75, atk: 45, def: 35, spa: 65, spd: 75, spe: 105 },
 		abilities: { 0: "Anticipation" },
@@ -20657,8 +20655,6 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	yanmellia: {
 		num: 469,
 		name: "Yanmellia",
-		baseSpecies: "Yanmega",
-		forme: "Delta",
 		types: ["Grass", "Flying"],
 		baseStats: { hp: 98, atk: 91, def: 71, spa: 70, spd: 110, spe: 75 },
 		abilities: { 0: "Aerilate" },
@@ -23795,7 +23791,6 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Red",
 		eggGroups: ["Undiscovered"],
 		tags: ["Paradox"],
-		baseSpecies: "Ho-Oh",
 	},
 	ironstorm: {
 		num: 2044,
@@ -23809,7 +23804,6 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "White",
 		eggGroups: ["Undiscovered"],
 		tags: ["Paradox"],
-		baseSpecies: "Lugia",
 	},
 	risingphoenix: {
 		num: 2043,
@@ -23823,7 +23817,6 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Red",
 		eggGroups: ["Undiscovered"],
 		tags: ["Paradox"],
-		baseSpecies: "Ho-Oh",
 	},
 	whirlingabyss: {
 		num: 2042,
@@ -23837,7 +23830,6 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "White",
 		eggGroups: ["Undiscovered"],
 		tags: ["Paradox"],
-		baseSpecies: "Lugia",
 	},
 	mewthree: {
 		num: 2052,
@@ -23850,7 +23842,6 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		weightkg: 140,
 		color: "Purple",
 		eggGroups: ["Undiscovered"],
-		baseSpecies: "Mewtwo",
 	},
 	kyuremoriginal: {
 		num: 646,
