@@ -20643,8 +20643,6 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	yanfern: {
 		num: 193,
 		name: "Yanfern",
-		baseSpecies: "Yanma",
-		forme: "Delta",
 		types: ["Grass", "Flying"],
 		baseStats: { hp: 75, atk: 45, def: 35, spa: 65, spd: 75, spe: 105 },
 		abilities: { 0: "Anticipation" },
@@ -20657,8 +20655,6 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	yanmellia: {
 		num: 469,
 		name: "Yanmellia",
-		baseSpecies: "Yanmega",
-		forme: "Delta",
 		types: ["Grass", "Flying"],
 		baseStats: { hp: 98, atk: 91, def: 71, spa: 70, spd: 110, spe: 75 },
 		abilities: { 0: "Aerilate" },
@@ -20749,6 +20745,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		num: 396,
 		name: "Starly-Delta",
 		baseSpecies: "Starly",
+		forme: "Delta",
 		types: ["Normal", "Flying"],
 		baseStats: { hp: 40, atk: 55, def: 30, spa: 30, spd: 30, spe: 60 },
 		abilities: { 0: "Keen Eye", H: "Pressure" },
@@ -20762,6 +20759,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		num: 397,
 		name: "Staravia-Delta",
 		baseSpecies: "Staravia",
+		forme: "Delta",
 		types: ["Normal", "Flying"],
 		baseStats: { hp: 55, atk: 75, def: 50, spa: 40, spd: 40, spe: 80 },
 		abilities: { 0: "Intimidate", H: "Pressure" },
@@ -20776,6 +20774,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		num: 398,
 		name: "Staraptor-Delta",
 		baseSpecies: "Staraptor",
+		forme: "Delta",
 		types: ["Fire", "Flying"],
 		baseStats: { hp: 85, atk: 100, def: 80, spa: 60, spd: 60, spe: 100 },
 		abilities: { 0: "Intimidate", H: "Welkin Torch" },
@@ -23440,7 +23439,6 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Purple",
 		prevo: "Turniton",
 		eggGroups: ["Grass", "Field"],
-		baseSpecies: "Magnezone",
 	},
 	turniton: {
 		num: 2016,
@@ -23455,7 +23453,6 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		prevo: "Turnimite",
 		evos: ["Turnizone"],
 		eggGroups: ["Grass", "Field"],
-		baseSpecies: "Magneton",
 	},
 	turnimite: {
 		num: 2015,
@@ -23469,7 +23466,6 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Purple",
 		evos: ["Turniton"],
 		eggGroups: ["Grass", "Field"],
-		baseSpecies: "Magnemite",
 	},
 	grimmsnarldelta: {
 		num: 861,
@@ -23798,7 +23794,6 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Red",
 		eggGroups: ["Undiscovered"],
 		tags: ["Paradox"],
-		baseSpecies: "Ho-Oh",
 	},
 	ironstorm: {
 		num: 2044,
@@ -23812,7 +23807,6 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "White",
 		eggGroups: ["Undiscovered"],
 		tags: ["Paradox"],
-		baseSpecies: "Lugia",
 	},
 	risingphoenix: {
 		num: 2043,
@@ -23826,7 +23820,6 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Red",
 		eggGroups: ["Undiscovered"],
 		tags: ["Paradox"],
-		baseSpecies: "Ho-Oh",
 	},
 	whirlingabyss: {
 		num: 2042,
@@ -23840,7 +23833,6 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "White",
 		eggGroups: ["Undiscovered"],
 		tags: ["Paradox"],
-		baseSpecies: "Lugia",
 	},
 	mewthree: {
 		num: 2052,
@@ -23853,7 +23845,6 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		weightkg: 140,
 		color: "Purple",
 		eggGroups: ["Undiscovered"],
-		baseSpecies: "Mewtwo",
 	},
 	kyuremoriginal: {
 		num: 646,
@@ -23879,7 +23870,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		abilities: { 0: "Magician" },
 		heightm: 1.8,
 		weightkg: 6.5,
-		color: "Black",
+		color: "Red",
 		prevo: "Hattrem-Delta",
 		eggGroups: ["Fairy"],
 	},
@@ -23892,7 +23883,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		abilities: { 0: "Magician" },
 		heightm: 0.6,
 		weightkg: 5.5,
-		color: "Black",
+		color: "Red",
 		evos: ["Hattirage"],
 		prevo: "Hatenna-Delta",
 		eggGroups: ["Fairy"],
@@ -23907,7 +23898,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		abilities: { 0: "Levitate" },
 		heightm: 0.5,
 		weightkg: 5,
-		color: "Black",
+		color: "Red",
 		evos: ["Hattrem-Delta"],
 		eggGroups: ["Fairy"],
 		forme: "Delta",
