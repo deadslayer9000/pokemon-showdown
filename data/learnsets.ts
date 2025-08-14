@@ -113527,7 +113527,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			raindance: ["9M"],
 			recycle: ["9M"],
 			rest: ["9L1","9M"],
-			septicwave: ["9L48"],
+			noxiouswave: ["9L48"],
 			shadowball: ["9M"],
 			slackoff: ["9M"],
 			slam: ["9L16"],

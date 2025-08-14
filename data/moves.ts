@@ -20151,7 +20151,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		type: "Normal",
 		contestType: "Beautiful",
 	},
-	septicwave: {
+	noxiouswave: {
 		num: -57,
 		accuracy: 90,
 		basePower: 0,
@@ -20162,7 +20162,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			);
 		},
 		category: "Special",
-		name: "Septic Wave",
+		name: "Noxious Wave",
 		pp: 10,
 		priority: 0,
 		flags: { protect: 1, mirror: 1 },
