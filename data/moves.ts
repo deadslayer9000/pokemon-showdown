@@ -20157,9 +20157,12 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		basePower: 0,
 		damageCallback(pokemon, target) {
 			return this.clampIntRange(
-				Math.floor(target.getUndynamaxedHP() / 2),
-				1
-			);
+				Math.floor(target.getUndynamaxedHP() / 2), 1);
+		},
+		onHit(target) {
+			if (this.field.isTerrain('corrosiveterrain')) {
+				target.trySetStatus('psn');
+			}
 		},
 		category: "Special",
 		name: "Noxious Wave",
