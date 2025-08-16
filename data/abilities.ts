@@ -7812,6 +7812,20 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 0,
 		num: 140,
 	},
+	tempestveil: {
+		onModifyDamage(relayVar, source, target, move) {
+			if (move.flags.contact === 1){
+				return;
+			}else{
+				this.add("activate", source, "ability: Tempest Veil");
+				return this.chainModify([2048, 4096]);
+			}
+		},
+		flags: { breakable: 1 },
+		name: "Tempest Veil",
+		rating: 4,
+		num: -75,
+	},
 	teraformzero: {
 		onAfterTerastallization(pokemon) {
 			if (pokemon.baseSpecies.name !== "Terapagos-Stellar") return;
