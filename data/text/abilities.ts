@@ -2247,6 +2247,12 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 
 		block: "  [POKEMON] can't be hit by attacks from its ally Pok\u00E9mon!",
 	},
+	tempestveil: {
+		name: "Tempest Veil",
+		shortDesc: "Moves that do not make contact deal half damage.",
+		desc: "This Pokemon takes half damage from moves that do not make contact.",
+		activate: "  [POKEMON] was protected by a veil of wind!",
+	},
 	teraformzero: {
 		name: "Teraform Zero",
 		shortDesc: "Terapagos: Terastallizing ends the effects of weather and terrain. Once per battle.",
