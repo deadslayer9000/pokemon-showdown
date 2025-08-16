@@ -7813,11 +7813,11 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 140,
 	},
 	tempestveil: {
-		onModifyDamage(relayVar, source, target, move) {
-			if (move.flags.contact === 1){
+		onSourceModifyDamage(relayVar, source, target, move) {
+			if (move.flags["contact"]){
 				return;
 			}else{
-				this.add("activate", source, "ability: Tempest Veil");
+				this.add("-activate", target, "ability: Tempest Veil");
 				return this.chainModify([2048, 4096]);
 			}
 		},
