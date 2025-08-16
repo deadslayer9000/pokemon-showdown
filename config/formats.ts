@@ -59,7 +59,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		]
 	},
 	{
-		name: "[Gen 9] Colour Tournament",
+		name: "[Gen 9] [ND] Colour Tournament",
 		mod: 'gen9',
 		ruleset: ['Standard NatDex', 'Terastal Clause', 'Same Color Clause'],
 		banlist: [
