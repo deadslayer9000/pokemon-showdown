@@ -8328,7 +8328,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 						target.addVolatile("taunt", pokemon);
 						this.add(
 							"-activate",
-							target,
+							pokemon,
 							"ability: Usurped",
 							"[from] ability: Usurped",
 							"[of] " + pokemon
