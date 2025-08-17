@@ -23135,7 +23135,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Blue",
 		prevo: "Munchlax-Delta",
 		eggGroups: ["Monster"],
-		forme: "Delta",
+		forme: "Winter",
 		baseSpecies: "Snorlax",
 	},
 	snorlaxdeltaspring: {
@@ -23149,7 +23149,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Green",
 		prevo: "Munchlax-Delta",
 		eggGroups: ["Monster"],
-		forme: "Delta",
+		forme: "Spring",
 		baseSpecies: "Snorlax",
 	},
 	snorlaxdeltasummer: {
@@ -23163,7 +23163,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Green",
 		prevo: "Munchlax-Delta",
 		eggGroups: ["Monster"],
-		forme: "Delta",
+		forme: "Summer",
 		baseSpecies: "Snorlax",
 	},
 	snorlaxdeltaautumn: {
@@ -23177,7 +23177,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Brown",
 		prevo: "Munchlax-Delta",
 		eggGroups: ["Monster"],
-		forme: "Delta",
+		forme: "Autumn",
 		baseSpecies: "Snorlax",
 	},
 	snorlaxdeltacherry: {
@@ -23191,7 +23191,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Pink",
 		prevo: "Munchlax-Delta",
 		eggGroups: ["Monster"],
-		forme: "Delta",
+		forme: "Cherry",
 		baseSpecies: "Snorlax",
 	},
 	chatotdelta: {
