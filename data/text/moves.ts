@@ -5924,9 +5924,9 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			desc: "The user faints after using this move, unless the target's substitute was broken by the damage. The target's Defense is halved during damage calculation.",
 		},
 	},
-	septicwave: {
-		name: "Septic Wave",
-		shortDesc: "Does damage equal to 1/2 target's current HP.",
+	noxiouswave: {
+		name: "Noxious Wave",
+		shortDesc: "Damage = 1/2 foe HP, poisons in Corrosive Terrain.",
 	},
 	shadowball: {
 		name: "Shadow Ball",
