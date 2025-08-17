@@ -24116,7 +24116,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	},
 	staralyx: {
 		num: 2099,
-		name: "Starid",
+		name: "Staralyx",
 		types: ["Steel", "Psychic"],
 		baseStats: { hp: 75, atk: 50, def: 105, spa: 85, spd: 90, spe: 115 },
 		abilities: { 0: "Illuminate", 1: "Heatproof", H: "Telepathy" },

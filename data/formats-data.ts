@@ -6782,6 +6782,21 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	cresseliadelta: {
 		tier: "RU",
 	},
+	slugrit: {
+		tier: "NFE",
+	},
+	dunecargo: {
+		tier: "RU",
+	},
+	starid: {
+		tier: "NFE",
+	},
+	staralyx: {
+		tier: "UU",
+	},
+	zephior: {
+		tier: "RU",
+	},
 	ramnarok: {
 		isNonstandard: "CAP",
 		tier: "CAP",
