@@ -27107,7 +27107,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			}
 		},
 
-		onHit(source, target, move) {
+		onTry(source, target, move) {
 			const form = source.species.name;
 			if (source.status === "slp" && form !== "Snorlax-Delta-Autumn") {
 				this.hint(
@@ -27172,6 +27172,9 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					}
 				}
 				if (form === "Snorlax-Delta-Cherry") {
+					if (target.ability === 'sapsipper' || target.ability === 'goodasgold') { //hardcoded interaction
+						return;
+					}
 					const item = target.takeItem();
 					if (item) {
 						this.add(

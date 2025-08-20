@@ -7310,7 +7310,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			if (!pokemon.hp || pokemon.item === "stickybarb") return;
 			if (
 				(source && source !== pokemon) ||
-				this.activeMove.id === "knockoff"
+				this.activeMove.id === "knockoff" || this.activeMove.id === 'seasonalblessing' || this.activeMove.id === 'whiskaway' //fuck this hardcode
 			) {
 				this.add("-activate", pokemon, "ability: Sticky Hold");
 				return false;

@@ -23136,7 +23136,6 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		prevo: "Munchlax-Delta",
 		eggGroups: ["Monster"],
 		forme: "Delta",
-		baseForme: "Winter",
 		baseSpecies: "Snorlax",
 	},
 	snorlaxdeltaspring: {
@@ -23151,7 +23150,6 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		prevo: "Munchlax-Delta",
 		eggGroups: ["Monster"],
 		forme: "Delta",
-		baseForme: "Spring",
 		baseSpecies: "Snorlax",
 	},
 	snorlaxdeltasummer: {
@@ -23166,7 +23164,6 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		prevo: "Munchlax-Delta",
 		eggGroups: ["Monster"],
 		forme: "Delta",
-		baseForme: "Summer",
 		baseSpecies: "Snorlax",
 	},
 	snorlaxdeltaautumn: {
@@ -23181,7 +23178,6 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		prevo: "Munchlax-Delta",
 		eggGroups: ["Monster"],
 		forme: "Delta",
-		baseForme: "Autumn",
 		baseSpecies: "Snorlax",
 	},
 	snorlaxdeltacherry: {
@@ -23196,7 +23192,6 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		prevo: "Munchlax-Delta",
 		eggGroups: ["Monster"],
 		forme: "Delta",
-		baseForme: "Cherry",
 		baseSpecies: "Snorlax",
 	},
 	chatotdelta: {
