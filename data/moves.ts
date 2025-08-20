@@ -27107,7 +27107,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			}
 		},
 
-		onTry(source, target, move) {
+		onHit(source, target, move) {
 			const form = source.species.name;
 			if (source.status === "slp" && form !== "Snorlax-Delta-Autumn") {
 				this.hint(
