@@ -27,7 +27,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		section: "Delta Showdown Tiers",
 	},
 	{
-		name: "[Gen 9] [ND] Cobblemon Delta",
+		name: "[Gen 9] National Dex",
 		mod: 'gen9',
 		ruleset: ['Standard NatDex', 'Terastal Clause'],
 		banlist: [
