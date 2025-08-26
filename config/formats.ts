@@ -45,7 +45,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 1', 'VGC Timer', 'Standard NatDex', 'Terastal Clause', 'Open Team Sheets'],
 		restricted: ['Mythical'],
 		banlist: [ 'Alakazam-Mega', 'Magirigus', 'Slowhost', 'Maestrot', 'Melmetal', 'Magearna', 'Mewtwo', 'Eevium Z',],
-		unbanlist: ['Flutter Mane', 'Iron Bundle', 'Chi-Yu','Chien-Pao', 'Urshifu-Single-Strike', 'Urshifu-Rapid-Strike', 'Urshifu', 'Gholdengo', 'Ogerpon-Hearthflame', 'Ogerpon-Shadowcrest', 'Naganadel', 'Blastoise-Mega', 'Gouging Fire', 'Walking Wake', 'Lucario-Mega', 'Landorus-Incarnate', 'Pheromosa', 'Dragapult', 'Terapagos', ],
+		unbanlist: ['Flutter Mane', 'Iron Bundle', 'Chi-Yu','Chien-Pao', 'Urshifu-Single-Strike', 'Urshifu-Rapid-Strike', 'Urshifu', 'Gholdengo', 'Ogerpon-Hearthflame', 'Ogerpon-Shadowcrest', 'Naganadel', 'Blastoise-Mega', 'Gouging Fire', 'Walking Wake', 'Lucario-Mega', 'Landorus-Incarnate', 'Pheromosa', 'Dragapult', 'Terapagos', 'Whirling Abyss', 'Rising Phoenix', 'Iron Storm', 'Iron Revival',],
 	},
 	{
 		name: "[Gen 9] [ND] Realgam AAA",
