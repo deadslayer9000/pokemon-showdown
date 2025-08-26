@@ -5443,9 +5443,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "UU",
 	},
 	roaringmoon: {
-		tier: "Uber",
-		doublesTier: "DBL",
-		natDexTier: "Uber",
+		tier: "OU",
+		doublesTier: "(DOU)",
+		natDexTier: "OU",
 	},
 	irontreads: {
 		tier: "OU",
@@ -6736,15 +6736,19 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	ironrevival: {
 		tier: "Uber",
+		doublesTier: "DBL",
 	},
 	ironstorm: {
 		tier: "Uber",
+		doublesTier: "DBL",
 	},
 	risingphoenix: {
 		tier: "Uber",
+		doublesTier: "DBL",
 	},
 	whirlingabyss: {
 		tier: "Uber",
+		doublesTier: "DBL",
 	},
 	mewthree: {
 		tier: "Uber",
