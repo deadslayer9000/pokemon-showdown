@@ -6736,19 +6736,19 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	ironrevival: {
 		tier: "Uber",
-		doublesTier: "DBL",
+		doublesTier: "DUber",
 	},
 	ironstorm: {
 		tier: "Uber",
-		doublesTier: "DBL",
+		doublesTier: "DUber",
 	},
 	risingphoenix: {
 		tier: "Uber",
-		doublesTier: "DBL",
+		doublesTier: "DUber",
 	},
 	whirlingabyss: {
 		tier: "Uber",
-		doublesTier: "DBL",
+		doublesTier: "DUber",
 	},
 	mewthree: {
 		tier: "Uber",
