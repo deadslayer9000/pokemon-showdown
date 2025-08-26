@@ -39,6 +39,15 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		],
 	},
 	{
+		name: "[Gen 9] [ND] Delta VGC Reg Beta",
+		mod: 'gen9',
+		gameType: 'doubles',
+		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 1', 'VGC Timer', 'Standard NatDex', 'Terastal Clause', 'Open Team Sheets'],
+//		restricted: ['Mythical'],
+		banlist: [ 'Alakazam-Mega', 'Magirigus', 'Slowhost', 'Maestrot', 'Melmetal', 'Magearna', 'Mewtwo', 'Eevium Z', 'Whirling Abyss', 'Rising Phoenix', 'Iron Storm', 'Iron Revival', 'Gengar-Mega', 'Kangaskhan-Mega', 'Deoxys', 'Deoxys-Attack', 'Dark Void'],
+		unbanlist: ['Flutter Mane', 'Iron Bundle', 'Chi-Yu','Chien-Pao', 'Urshifu-Single-Strike', 'Urshifu-Rapid-Strike', 'Urshifu', 'Gholdengo', 'Ogerpon-Hearthflame', 'Ogerpon-Shadowcrest', 'Naganadel', 'Blastoise-Mega', 'Gouging Fire', 'Walking Wake', 'Lucario-Mega', 'Landorus-Incarnate', 'Pheromosa', 'Dragapult', 'Terapagos', 'Mythical', 'Deoxys-Defense', 'Deoxys-Speed'],
+	},
+	{
 		name: "[Gen 9] [ND] Realgam AAA",
 		mod: 'gen9',
 		ruleset: ['Standard NatDex', '!Obtainable Abilities', 'Ability Clause = 2', 'Sleep Moves Clause', 'Terastal Clause'],

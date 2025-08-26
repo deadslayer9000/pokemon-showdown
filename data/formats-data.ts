@@ -2451,7 +2451,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	deoxysspeed: {
 		tier: "OU",
 		doublesTier: "(DUU)",
-		natDexTier: "Uber",
+		natDexTier: "OU",
 	},
 	turtwig: {
 		tier: "LC",
@@ -5443,9 +5443,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "UU",
 	},
 	roaringmoon: {
-		tier: "Uber",
-		doublesTier: "DBL",
-		natDexTier: "Uber",
+		tier: "OU",
+		doublesTier: "(DOU)",
+		natDexTier: "OU",
 	},
 	irontreads: {
 		tier: "OU",
@@ -6736,15 +6736,19 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	ironrevival: {
 		tier: "Uber",
+		doublesTier: "DUber",
 	},
 	ironstorm: {
 		tier: "Uber",
+		doublesTier: "DUber",
 	},
 	risingphoenix: {
 		tier: "Uber",
+		doublesTier: "DUber",
 	},
 	whirlingabyss: {
 		tier: "Uber",
+		doublesTier: "DUber",
 	},
 	mewthree: {
 		tier: "Uber",
