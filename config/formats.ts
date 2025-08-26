@@ -39,6 +39,15 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		],
 	},
 	{
+		name: "[Gen 9] VGC Delta Reg Beta",
+		mod: 'gen9',
+		bestOfDefault: true,
+		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 9', 'VGC Timer', ],
+		restricted: ['Restricted Legendary', 'Mythical'],
+		banlist: [ 'Alakazam-Mega', 'Magirigus', 'Slowhost', 'Maestrot', 'Melmetal', 'Magearna',],
+		unbanlist: ['Flutter Mane', 'Iron Bundle', 'Chien-Pao', 'Urshifu-Single-Strike', 'Urshifu-Rapid-Strike', 'Urshifu', 'Gholdengo', 'Ogerpon-Heartflame', 'Ogerpon-Shadowcrest', 'Naganadel', 'Blastoise-Mega', 'Gouging Fire', 'Walking Wake', 'Lucario-Mega', 'Landorus-Incarnate', 'Pheromosa', 'Dragapult', 'Terapagos'],
+	},
+	{
 		name: "[Gen 9] [ND] Realgam AAA",
 		mod: 'gen9',
 		ruleset: ['Standard NatDex', '!Obtainable Abilities', 'Ability Clause = 2', 'Sleep Moves Clause', 'Terastal Clause'],
