@@ -1481,7 +1481,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				return this.chainModify(0.5);
 			}
 		},
-		flags: {},
+		flags: {breakable: 1},
 		name: "Crescent Form",
 		rating: 3,
 		num: -57,
@@ -1851,7 +1851,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				return this.chainModify(0.5);
 			}
 		},
-		flags: {},
+		flags: {breakable: 1},
 		name: "Desert Spirit",
 		rating: 4,
 		num: -31,
