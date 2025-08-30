@@ -6478,7 +6478,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	},
 	eonrift: {
 		num: -25,
-		accuracy: 95,
+		accuracy: 100,
 		basePower: 185,
 		category: "Special",
 		name: "Eon Rift",
