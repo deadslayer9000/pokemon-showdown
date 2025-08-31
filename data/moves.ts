@@ -458,7 +458,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Amber Assault",
 		pp: 10,
 		priority: 0,
-		flags: { contact: 1, metronome: 1, mirror: 1, protect: 1 },
+		flags: { metronome: 1, mirror: 1, protect: 1 },
 		secondary: {
 			chance: 30,
 			status: "par",
@@ -4255,7 +4255,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Crimson Charge",
 		pp: 10,
 		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		flags: { protect: 1, mirror: 1, metronome: 1 },
 		secondary: {
 			chance: 30,
 			status: "brn",
