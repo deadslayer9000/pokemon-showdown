@@ -120943,7 +120943,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			covet: ["9L16"],
 			dragonpulse: ["9M"],
 			drainpunch: ["9L24"],
-			drainpunch: ["9M"],
 			drainingkiss: ["9M"],
 			endure: ["9M"],
 			facade: ["9M"],
