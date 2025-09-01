@@ -6797,6 +6797,12 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	zephior: {
 		tier: "RU",
 	},
+	koraiton: {
+		tier: "UU",
+	},
+	miraiton: {
+		tier: "UU",
+	},
 	ramnarok: {
 		isNonstandard: "CAP",
 		tier: "CAP",

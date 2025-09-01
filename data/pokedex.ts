@@ -24136,5 +24136,27 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		weightkg: 5,
 		//color: "White", no page yet
 		eggGroups: ["Amorphous"],
-	}
+	},
+	miraiton: {
+		num: 2103,
+		name: "Miraiton",
+		types: ["Electric", "Steel"],
+		baseStats: { hp: 80, atk: 112, def: 132, spa: 100, spd: 104, spe: 72 },
+		abilities: { 0: "Hadron Cell"},
+		//heightm:
+		weightkg: 212.8,
+		//color: "white"
+		eggGroups: ["Undiscovered"],
+	},
+	koraiton: {
+		num: 2102,
+		name: "Koraiton",
+		types: ["Fighting", "Fairy"],
+		baseStats: { hp: 80, atk: 132, def: 112, spa: 72, spd: 104, spe: 100 },
+		ablities: { 0: "Orichalcum Scale"},
+		//heightm:
+		weightkg: 212.8,
+		//color: "red"
+		eggGroups: ["Undiscovered"],
+	},
 };
