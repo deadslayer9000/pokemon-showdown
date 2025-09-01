@@ -3153,6 +3153,17 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 3.5,
 		num: 62,
 	},
+	hadroncell: {
+		onBasePower(basepower, move, pokemon, target) {
+			if (this.field.isTerrain("electricterrain")) {
+				return this.chainModify([5324, 4096]);
+			}
+		},
+		flags: {},
+		name: "Hadron Cell",
+		rating: 3,
+		num: -77,
+	},
 	hadronengine: {
 		onStart(pokemon) {
 			if (
@@ -4986,6 +4997,18 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		name: "Orichalcum Pulse",
 		rating: 4.5,
 		num: 288,
+	},
+	orichalcumscale: {
+		onBasePowerPriority: 5,
+		onBasePower(basepower, move, pokemon, target) {
+			if (["sunnyday", "desolateland"].includes(pokemon.effectiveWeather())) {
+				return this.chainModify([5324, 4096]);
+			}
+		},
+		flags: {},
+		name: "Orichalcum Scale",
+		rating: 3,
+		num: -76,
 	},
 	overcoat: {
 		onImmunity(type, pokemon) {

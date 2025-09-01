@@ -776,6 +776,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "If this Pokemon has a non-volatile status condition, its Attack is multiplied by 1.5. This Pokemon's physical attacks ignore the burn effect of halving damage.",
 		shortDesc: "If this Pokemon is statused, its Attack is 1.5x; ignores burn halving physical damage.",
 	},
+	hadroncell: {
+		name: "Hadron Cell",
+		shortDesc: "If Electric Terrain is active, offensive moves deal 1.3x damage."
+	},
 	hadronengine: {
 		name: "Hadron Engine",
 		shortDesc: "On switch-in, summons Electric Terrain. During Electric Terrain, Sp. Atk is 1.3333x.",
@@ -1351,6 +1355,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 
 		start: "  [POKEMON] turned the sunlight harsh, sending its ancient pulse into a frenzy!",
 		activate: "  [POKEMON] basked in the sunlight, sending its ancient pulse into a frenzy!",
+	},
+	orichalcumscale: {
+		name: "Orichalcum Scale",
+		shortDesc: "If Sunny Day is active, offensive moves deal 1.3x damage.",
 	},
 	overcoat: {
 		name: "Overcoat",
