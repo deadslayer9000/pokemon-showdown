@@ -1246,7 +1246,6 @@ export const Aliases: import('../sim/dex').AliasesTable = {
 	dictini: "Victini-Delta",
 	
 
-
 	// ultra beast codenames --- ordered by dex number
 	ub01: "Nihilego",
 	ub01symbiont: "Nihilego",
