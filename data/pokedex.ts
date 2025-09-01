@@ -24153,7 +24153,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		name: "Koraiton",
 		types: ["Fighting", "Fairy"],
 		baseStats: { hp: 80, atk: 132, def: 112, spa: 72, spd: 104, spe: 100 },
-		ablities: { 0: "Orichalcum Scale"},
+		abilities: { 0: "Orichalcum Scale"},
 		//heightm:
 		weightkg: 212.8,
 		//color: "red"
