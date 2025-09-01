@@ -3156,7 +3156,11 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			if (this.field.isTerrain("electricterrain")) {
 				return this.chainModify([5324, 4096]);
 			}
-		}
+		},
+		flags: {},
+		name: "Hadron Cell",
+		rating: 3,
+		num: -77,
 	},
 	hadronengine: {
 		onStart(pokemon) {
@@ -4998,7 +5002,11 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			if (["sunnyday", "desolateland"].includes(pokemon.effectiveWeather())) {
 				return this.chainModify([5324, 4096]);
 			}
-		}
+		},
+		flags: {},
+		name: "Orichalcum Scale",
+		rating: 3,
+		num: -76,
 	},
 	overcoat: {
 		onImmunity(type, pokemon) {
