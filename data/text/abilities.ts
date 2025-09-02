@@ -762,9 +762,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "This Pokemon is immune to the effect of the Intimidate Ability and raises its Attack by 1 stage instead. This Pokemon cannot be forced to switch out by another Pokemon's attack or item.",
 		shortDesc: "Immune to Intimidate. Intimidated: +1 Attack. Cannot be forced to switch out.",
 	},
-	guarded: {
-		name: "Guarded",
-		shortDesc: "Immune to status effects and flinch.",
+	guardian: {
+		name: "Guardian",
+		shortDesc: "When ally is hit by contact it raises their defense.",
+		activate: "  [POKEMON] is raised defense of its ally!",
 	},
 	gulpmissile: {
 		name: "Gulp Missile",
@@ -2064,8 +2065,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	steamforged: {
 		name: "Steamforged",
-		desc: "30% chance a Pokemon making contact with this Pokemon will be burned.",
-		shortDesc: "30% chance a Pokemon making contact with this Pokemon will be burned.",
+		desc: "30% chance a Pokemon making contact with this Pokemon will be burned. Water type attacks against this Pokemon have their power lowered by 50%.",
+		shortDesc: "30% to burn attacker on contact, takes 50% dmg from Water-type attacks.",
 	},
 	steelworker: {
 		name: "Steelworker",

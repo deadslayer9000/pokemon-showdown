@@ -1397,7 +1397,6 @@ export const Aliases: import('../sim/dex').AliasesTable = {
 	genesis: "Genesis Supernova",
 	goa: "Guardian of Alola",
 	gs: "Genesis Supernova",
-	guardian: "Guardian of Alola",
 	lets: "Let's Snuggle Forever",
 	light: "Light That Burns the Sky",
 	lsf: "Let's Snuggle Forever",
