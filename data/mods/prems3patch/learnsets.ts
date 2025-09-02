@@ -16,7 +16,6 @@ tapukehe: {
 		calmmind: ["9M"],
 		confide: ["9M"],
 		corrosiveterrain: ["9L75","9M"],
-        collisioncourse: ["9M"],
 		covet: ["9M"],
 		dazzlinggleam: ["9M"],
 		dive: ["9M"],
@@ -87,4 +86,10 @@ tapukehe: {
 		wrap: ["9L25"],
     }
 },
+golurkdelta: {
+    inherit: true,
+    learnset: {
+        trickroom: ["9M"],
+    }
+}
 }

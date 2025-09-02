@@ -45,7 +45,7 @@ colddeparture: {
 		},
 		onHit(target, source, move) {
 			const success = this.boost(
-				{ def: -3, spd: -1, spe: -1 },
+				{ def: -1, spd: -1, spe: -1 },
 				target,
 				source
 			);
@@ -54,5 +54,47 @@ colddeparture: {
 			}
 		},
     },
-
+icicleflail: {
+		num: -70,
+		accuracy: 90,
+		basePower: 60,
+		category: "Physical",
+		name: "Icicle Flail",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1, contact: 1 }, //TODO MAKE THIS NOT SHOW A HINT MSG FOR EACH TARGET
+		onBasePower(relayVar, source, target, move) {
+			let bp = move.basePower;
+			let amountoftargets = 0;
+			for (let targets of source.adjacentAllies()){
+				amountoftargets += 1;
+			}
+			for (let targets of source.adjacentFoes()){
+				amountoftargets += 1;
+			}
+			if (!amountoftargets){
+				bp = 0;
+			}else {
+				bp = bp*amountoftargets;
+				this.hint(`Icicle Flail hit with ${bp} BP because of its ${amountoftargets} targets!`)
+				return bp;
+			}
+		},
+		secondary: null,
+		target: "allAdjacent",
+		type: "Ice",
+	},
+hauntedrequiem: {
+    inherit: true,
+    onTry() {},
+},
+primedcurrent: {
+    inherit: true,
+    basePower: 90,
+    accuracy: 100,
+    secondary: {
+        chance: 20,
+        status: 'par',
+    },
+},
 };
