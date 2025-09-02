@@ -2494,7 +2494,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				}
 			}
 		},
-		onTryHit(target, source, move) {
+		onSourceModifyDamage(relayVar, source, target, move) {
 			if (target !== source && move.type === "Water") {
 				this.add("-activate", target, "ability: Steamforged");
 				return this.chainModify(0.5);
@@ -3095,7 +3095,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	guardian: {
 		onAllyHit(target, source, move) {
-			if (move.flags["contact"]){
+			if (target !== this.effectState.target && move.flags["contact"]){
 				this.boost({ def: 1 }, target, target, null, false, true);
 				this.add("-activate", target, "ability: Guardian");
 			}

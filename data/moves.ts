@@ -12096,7 +12096,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			volatileStatus: "lockedmove",
 		},
 		secondary: null,
-		target: "allAdjacent",
+		target: "allAdjacentFoes",
 		type: "Ice",
 	},
 	iciclespear: {
@@ -27196,7 +27196,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		},
 		onTry(source, target, move) {
 			if (source.species.name === "Meloetta-Omega-Amped") {
-				this.hint(`But it failed`);
+				this.hint(`But it failed because ${source.name} is not in its Nocturne form!`);
 				return null;
 			}
 		},
