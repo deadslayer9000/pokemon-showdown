@@ -1,6 +1,7 @@
 export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTable = {
-guarded: {
+guardian: {
     inherit: true,
+    onAllyHit() {},
     onSetStatus(status, target, source, effect) {
 			if ((effect as Move)?.status) {
 				this.add("-immune", target, "[from] ability: Guarded");

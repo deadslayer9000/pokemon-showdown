@@ -55,14 +55,9 @@ colddeparture: {
 		},
     },
 icicleflail: {
-		num: -70,
-		accuracy: 90,
+    inherit: true,
 		basePower: 60,
-		category: "Physical",
-		name: "Icicle Flail",
 		pp: 5,
-		priority: 0,
-		flags: { protect: 1, mirror: 1, metronome: 1, contact: 1 }, //TODO MAKE THIS NOT SHOW A HINT MSG FOR EACH TARGET
 		onBasePower(relayVar, source, target, move) {
 			let bp = move.basePower;
 			let amountoftargets = 0;
@@ -80,9 +75,8 @@ icicleflail: {
 				return bp;
 			}
 		},
-		secondary: null,
+        self: {},
 		target: "allAdjacent",
-		type: "Ice",
 	},
 hauntedrequiem: {
     inherit: true,
