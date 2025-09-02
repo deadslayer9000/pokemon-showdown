@@ -3454,13 +3454,11 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			protect: 1,
 			reflectable: 1,
 			mirror: 1,
-			sound: 1,
-			bypasssub: 1,
 			metronome: 1,
 		},
 		onHit(target, source, move) {
 			const success = this.boost(
-				{ def: -1, spd: -1, spe: -1 },
+				{ spa: -1, spe: -1 },
 				target,
 				source
 			);
@@ -12088,28 +12086,14 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	icicleflail: {
 		num: -70,
 		accuracy: 90,
-		basePower: 60,
+		basePower: 150,
 		category: "Physical",
 		name: "Icicle Flail",
-		pp: 5,
+		pp: 10,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, metronome: 1, contact: 1 }, //TODO MAKE THIS NOT SHOW A HINT MSG FOR EACH TARGET
-		onBasePower(relayVar, source, target, move) {
-			let bp = move.basePower;
-			let amountoftargets = 0;
-			for (let targets of source.adjacentAllies()){
-				amountoftargets += 1;
-			}
-			for (let targets of source.adjacentFoes()){
-				amountoftargets += 1;
-			}
-			if (!amountoftargets){
-				bp = 0;
-			}else {
-				bp = bp*amountoftargets;
-				this.hint(`Icicle Flail hit with ${bp} BP because of its ${amountoftargets} targets!`)
-				return bp;
-			}
+		flags: { protect: 1, mirror: 1, metronome: 1, contact: 1 },
+		self: {
+			volatileStatus: "lockedmove",
 		},
 		secondary: null,
 		target: "allAdjacent",
@@ -17581,18 +17565,15 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	},
 	primedcurrent: {
 		num: -55,
-		accuracy: 100,
-		basePower: 90,
+		accuracy: 90,
+		basePower: 80,
 		category: "Special",
 		name: "Primed Current",
 		pp: 15,
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1, heal: 1 },
 		drain: [1, 2],
-		secondary: {
-			chance: 20,
-			status: "par",
-		},
+		secondary: null,
 		target: "allAdjacent",
 		type: "Electric",
 	},
@@ -20770,6 +20751,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			this.actions.useMove(move.id, target);
 			this.add("-activate", target, "move: Simulate", move.name);
 			//let success = false;
+			/*
 			const allies = [
 				...target.side.pokemon,
 				...(target.side.allySide?.pokemon || []),
@@ -20787,6 +20769,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				//) success = true;
 			}
 			//return success;
+			*/
 		},
 		callsMove: true,
 		target: "self",
@@ -27210,6 +27193,12 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			bp = move.basePower + 10 * fallentotal;
 				this.hint(`Haunted Requiem channeled the power of the dead to hit with ${bp} BP!`);
 				return bp;
+		},
+		onTry(source, target, move) {
+			if (source.species.name === "Meloetta-Omega-Amped") {
+				this.hint(`But it failed`);
+				return null;
+			}
 		},
 	}
 };

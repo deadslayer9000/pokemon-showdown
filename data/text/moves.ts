@@ -1053,7 +1053,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	colddeparture: {
 		name: "Cold Departure",
-		shortDesc: "Lowers foe's Def, Spd, and Spe by 1. Switches out."
+		shortDesc: "Lowers foe's SpAtk and Spe by 1. Switches out."
 	},
 	collisioncourse: {
 		name: "Collision Course",
@@ -5108,7 +5108,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	primedcurrent: {
 		name: "Primed Current",
-		shortDesc: "Heals for 50% of damage dealt. 20% paralyze chance.",
+		shortDesc: "Heals for 50% of damage dealt.",
 	},
 	prismaticlaser: {
 		name: "Prismatic Laser",
@@ -6074,7 +6074,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	simulate: {
 		name: "Simulate",
-		shortDesc: "Copies last move; cure party and sets E.Terrain.",
+		shortDesc: "Copies last move and sets E.Terrain.",
 	},
 	sing: {
 		name: "Sing",

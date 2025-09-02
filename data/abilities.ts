@@ -2494,7 +2494,13 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				}
 			}
 		},
-		flags: {},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === "Water") {
+				this.add("-activate", target, "ability: Steamforged");
+				return this.chainModify(0.5);
+			}
+		},
+		flags: { breakable: 1 },
 		name: "Steamforged",
 		rating: 2,
 		num: -71,
@@ -3087,22 +3093,15 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 2,
 		num: 275,
 	},
-	guarded: {
-		onSetStatus(status, target, source, effect) {
-			if ((effect as Move)?.status) {
-				this.add("-immune", target, "[from] ability: Guarded");
+	guardian: {
+		onAllyHit(target, source, move) {
+			if (move.flags["contact"]){
+				this.boost({ def: 1 }, target, target, null, false, true);
+				this.add("-activate", target, "ability: Guardian");
 			}
-			return false;
-		},
-		onTryAddVolatile(status, target) {
-			if (status.id === "yawn") {
-				this.add("-immune", target, "[from] ability: Guarded");
-				return null;
-			}
-			if (status.id === "flinch") return null;
 		},
 		flags: {},
-		name: "Guarded",
+		name: "Guardian",
 		rating: 3,
 		num: -17,
 	},
