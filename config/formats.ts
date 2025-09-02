@@ -71,7 +71,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		],
 	},
 	{
-		name: "[ND] Pre Mid-Season 3 Patch",
+		name: "[Gen 9] [ND] Pre Mid-Season 3 Patch",
 		searchShow: false,
 		mod: 'prems3patch',
 		ruleset: ['Standard NatDex', 'Terastal Clause'],
