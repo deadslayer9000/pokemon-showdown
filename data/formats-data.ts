@@ -2449,9 +2449,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "RU",
 	},
 	deoxysspeed: {
-		tier: "OU",
+		tier: "Uber",
 		doublesTier: "(DUU)",
-		natDexTier: "OU",
+		natDexTier: "Uber",
 	},
 	turtwig: {
 		tier: "LC",
@@ -5033,9 +5033,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "Uber",
 	},
 	zamazenta: {
-		tier: "OU",
+		tier: "Uber",
 		doublesTier: "DUber",
-		natDexTier: "OU",
+		natDexTier: "Uber",
 	},
 	zamazentacrowned: {
 		tier: "Uber",
@@ -5433,8 +5433,8 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "RU",
 	},
 	fluttermane: {
-		tier: "Uber",
-		doublesTier: "DUber",
+		tier: "OU",
+		doublesTier: "DOU",
 		natDexTier: "Uber",
 	},
 	slitherwing: {
