@@ -530,7 +530,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		banlist: ['Dragon Rage', 'Sonic Boom'],
 	},
 	{
-		name: "[Gen 9] Pre Mid Season 3 Patch Draft",
+		name: "[Gen 9] [ND] Pre Mid Season 3 Patch Draft",
 		mod: 'prems3patch',
 		searchShow: false,
 		teraPreviewDefault: true,
