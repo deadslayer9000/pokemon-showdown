@@ -3461,8 +3461,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	icicleflail: {
 		name: "Icicle Flail",
-		desc: "Power increases by 60 for every Pokemon this targets.",
-		shortDesc: "Power increases for each targeted Pokemon.",
+		desc: "Targets both opponents, lasts 2-3 turns. Confuses the user afterwards.",
+		shortDesc: "Targets both opponents, lasts 2-3 turns. Confuses the user afterwards.",
 	},
 	iciclespear: {
 		name: "Icicle Spear",
