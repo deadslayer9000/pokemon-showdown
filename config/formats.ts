@@ -79,6 +79,18 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'Solgaleo', 'Sneasler', 'Annihilape', 'Ursaluna-Bloodmoon', 'Espathra', 'Roaring Moon',
 		],
 	},
+	{
+		name: "[Gen 9] [ND] Pre Mid-Season 3 Patch",
+		searchShow: false,
+		mod: 'prems3patch',
+		ruleset: ['Standard NatDex', 'Terastal Clause'],
+		banlist: [ 'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock', 'Quick Claw',
+			'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail', 'Dire Claw', 'Rage Fist', 'Blood Moon', 'Darkrai', 'Zamazenta', 'Good as Gold'
+		],
+		unbanlist: [
+			'Solgaleo', 'Sneasler', 'Annihilape', 'Ursaluna-Bloodmoon', 'Espathra', 'Roaring Moon',
+		],
+	},
 	// S/V Singles
 	///////////////////////////////////////////////////////////////////
 
@@ -516,6 +528,13 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		teraPreviewDefault: true,
 		ruleset: ['[Gen 9] NatDex Draft', 'Item Clause = 2', 'Little Cup'],
 		banlist: ['Dragon Rage', 'Sonic Boom'],
+	},
+	{
+		name: "[Gen 9] [ND] Pre Mid Season 3 Patch Draft",
+		mod: 'prems3patch',
+		searchShow: false,
+		teraPreviewDefault: true,
+		ruleset: ['Standard Natdex', 'Standard Draft'],
 	},
 	{
 		name: "[Gen 8] Draft",
