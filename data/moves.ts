@@ -20766,9 +20766,9 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			if (move.flags["failcopycat"] || move.isZ || move.isMax) {
 				return false;
 			}
+			this.field.setTerrain("electricterrain", target);
 			this.actions.useMove(move.id, target);
 			this.add("-activate", target, "move: Simulate", move.name);
-			this.field.setTerrain("electricterrain", target);
 			//let success = false;
 			const allies = [
 				...target.side.pokemon,

@@ -846,7 +846,6 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 34,
 	},
 	chromaticscales: {
-		//TODO
 		onStart(pokemon) {
 			if (pokemon.hp >= pokemon.maxhp / 2) {
 				const regulartype = pokemon.types;
@@ -927,6 +926,9 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 					);
 				}
 		}
+	},
+	onSwitchOut(pokemon) {
+		pokemon.abilityState.chromaon = false;
 	},
 		flags: {},
 		name: "Chromatic Scales",
@@ -7537,14 +7539,21 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	surgedeluge: {
 		onStart(pokemon) {
-			if (this.field.isTerrain("electricterrain")) {
+			if (this.field.isTerrain("electricterrain") && !pokemon.abilityState.surgedelugeActive) {
+				pokemon.abilityState.surgedelugeActive = true;
 				this.boost({ spd: 1 }, pokemon);
 				pokemon.addVolatile("charge");
 			}
 		},
 		onTerrainChange(pokemon) {
-			if (this.field.isTerrain("electricterrain")) {
-				this.boost({ def: 1 }, pokemon);
+			if (this.field.isTerrain("electricterrain") && !pokemon.abilityState.surgedelugeActive) {
+				pokemon.abilityState.surgedelugeActive = true;
+				this.boost({ spd: 1 }, pokemon);
+				pokemon.addVolatile("charge");
+			}
+		},
+		onResidual(pokemon) {
+			if (this.field.isTerrain("electricterrain")){
 				pokemon.addVolatile("charge");
 			}
 		},
@@ -7555,6 +7564,9 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 					return null;
 				}
 			}
+		},
+		onEnd(pokemon) {
+			pokemon.abilityState.surgedelugeActive = false;
 		},
 		flags: {},
 		name: "Surge Deluge",
@@ -8351,7 +8363,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 						target.addVolatile("taunt", pokemon);
 						this.add(
 							"-activate",
-							target,
+							pokemon,
 							"ability: Usurped",
 							"[from] ability: Usurped",
 							"[of] " + pokemon
