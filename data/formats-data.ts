@@ -6037,7 +6037,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 	},
 	scizantrum: {
-		tier: "OU",
+		tier: "UU",
 	},
 	dragascue: {
 		tier: "UU",
@@ -6076,7 +6076,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 	},
 	mespritdelta: {
-		tier: "RU",
+		tier: "UU",
 	},
 	lucaurus: {
 		tier: "OU",
@@ -6112,7 +6112,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 	},
 	steelixdeltamega: {
-		tier: "UU",
+		tier: "OU",
 	},
 	spectreon: {
 		tier: "UU",
@@ -6202,7 +6202,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 	},
 	malevorus: {
-		tier: "OU",
+		tier: "UU",
 	},
 	malevorustherian: {
 		tier: "OU",
@@ -6790,7 +6790,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "NFE",
 	},
 	dunecargo: {
-		tier: "RU",
+		tier: "NU",
 	},
 	starid: {
 		tier: "NFE",
