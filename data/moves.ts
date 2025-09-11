@@ -27024,8 +27024,8 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	thebelltolls: {
 		num: -84,
 		accuracy: 90,
-		basePower: 0,
-		category: "Status",
+		basePower: 140,
+		category: "Special",
 		name: "The Bell Tolls",
 		pp: 5,
 		priority: 0,
@@ -27037,7 +27037,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			cantusetwice: 1,
 		},
 		secondary: null,
-		target: "normal",
+		target: "allAdjacent",
 		type: "Dark",
 		onHit(target, source, move) {
 			let result = false;

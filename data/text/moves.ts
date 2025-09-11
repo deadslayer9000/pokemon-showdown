@@ -7200,7 +7200,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	thebelltolls: {
 		name: "The Bell Tolls",
 		desc: "Sets Perish Song on the opponent. This move cannot be used twice in a row.",
-		shortDesc: "Sets Perish Song on the opponent. This move cannot be used twice in a row."
+		shortDesc: "Perish Song on the opponent. Can't be used twice in a row.",
 	},
 	thief: {
 		name: "Thief",
