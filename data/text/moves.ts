@@ -3399,6 +3399,9 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	iaislash: {
 		name: "Iai Slash",
 		shortDesc: "Usually goes first. Fails if target is not attacking.",
+		desc: "Usually goes first. Fails if target is not attacking. If Greninja Delta Ash is the user, this move's power is 40, but doesn't fail if the target is not attacking. Additionally, it makes enemy bleed (1/8 max hp), Fighting and Grass types take more damage from the bleed effect (1/4 max hp).",
+		start: "  [POKEMON] started bleeding!",
+		damage: "  [POKEMON] is hurt by its wounds!",
 	},
 	iceball: {
 		name: "Ice Ball",

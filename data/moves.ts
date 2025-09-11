@@ -11773,16 +11773,30 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			}
 			
 		},
+		onBasePower(relayVar, source, target, move) {
+			if (source.species.name === "Greninja-Delta-Ash") {
+				move.basePower = 40;
+			}
+		},
+		onHit(target, source, move) {
+			if (source.species.name === "Greninja-Delta-Ash") {
+				target.addVolatile("iaislash");
+				condition: true;
+			}
+		
+		},
 		condition: {
 			noCopy: true,
 			onStart(pokemon) {
 				this.add("-start", pokemon, "Iai Slash");
+				this.hint(`${pokemon.name} started bleeding!`);
 			},
 			onResidualOrder: 13,
 			onResidual(pokemon) {
 				this.damage(
 					pokemon.baseMaxhp / (pokemon.hasType(["Fighting", "Grass"]) ? 4 : 8)
 				);
+				this.hint(`${pokemon.name} is hurt by its wounds!`);
 			},
 			onEnd(pokemon) {
 				this.add("-end", pokemon, "Iai Slash");
