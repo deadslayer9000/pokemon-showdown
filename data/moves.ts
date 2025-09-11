@@ -11753,16 +11753,54 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		pp: 5,
 		priority: 1,
 		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
-		onTry(source, target) {
-			const action = this.queue.willMove(target);
-			const move = action?.choice === "move" ? action.move : null;
-			if (
-				!move ||
-				(move.category === "Status" && move.id !== "mefirst") ||
-				target.volatiles["mustrecharge"]
-			) {
-				return false;
+		onTry(source, target, move) {
+			if (source.species.name !== "Greninja-Delta-Ash") {
+				const action = this.queue.willMove(target);
+				const moveselect = action?.choice === "move" ? action.move : null;
+				if (
+					!moveselect ||
+					(moveselect.category === "Status" && moveselect.id !== "mefirst") ||
+					target.volatiles["mustrecharge"]
+				) {
+					return false;
+				}
+			} else {
+				move.secondaries?.push({
+					chance: 100,
+					volatileStatus: "iaislash",
+				});
+				
 			}
+			
+		},
+		onBasePower(relayVar, source, target, move) {
+			if (source.species.name === "Greninja-Delta-Ash") {
+				move.basePower = 40;
+			}
+		},
+		onHit(target, source, move) {
+			if (source.species.name === "Greninja-Delta-Ash") {
+				target.addVolatile("iaislash");
+				condition: true;
+			}
+		
+		},
+		condition: {
+			noCopy: true,
+			onStart(pokemon) {
+				this.add("-start", pokemon, "Iai Slash");
+				
+			},
+			onResidualOrder: 13,
+			onResidual(pokemon) {
+				this.damage(
+					pokemon.baseMaxhp / (pokemon.hasType(["Fighting", "Grass"]) ? 4 : 8)
+				);
+				
+			},
+			onEnd(pokemon) {
+				this.add("-end", pokemon, "Iai Slash");
+			},
 		},
 		secondary: null,
 		target: "normal",
@@ -27024,8 +27062,8 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	thebelltolls: {
 		num: -84,
 		accuracy: 90,
-		basePower: 0,
-		category: "Status",
+		basePower: 140,
+		category: "Special",
 		name: "The Bell Tolls",
 		pp: 5,
 		priority: 0,
@@ -27037,7 +27075,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			cantusetwice: 1,
 		},
 		secondary: null,
-		target: "normal",
+		target: "allAdjacent",
 		type: "Dark",
 		onHit(target, source, move) {
 			let result = false;
