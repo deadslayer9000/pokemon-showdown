@@ -555,6 +555,7 @@ dunsparath: {
 		scaryface: ["9M"],
 		sleeptalk: ["9M","9M"],
 		snore: ["9M"],
+		substitute: ["9M"],
 		supercellslam: ["9M"],
 		tailwind: ["9M"],
 		takedown: ["9M"],
