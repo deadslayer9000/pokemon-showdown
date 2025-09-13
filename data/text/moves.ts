@@ -557,7 +557,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	bizzareelixir: {
 		name: "Bizzare Elixir",
-		shortDesc: "Effect depends on held item.",
+		shortDesc: "+1 Spa, +1 Spe, consumes held item for effect.",
+		desc: "This move fails if no item is held. Raises Special Attack and Speed by one. Additional effect depends on currently held item: Leftovers heals user for 50% max HP, Choice Scarf raises Speed by one, Choice Band raises Attack by one, Choice Specs raises by Special Attack by one, Life Orb increases Attack and Special Attack by one stage and cuts HP by 50%, Air Balloon changes user's ability to Levitate, Focus Sash changes user's ability to Sturdy, Heavy-Duty Boots changes user's ability to Magic Guard, Rocky Helmet changes user's ability to Rough Skin, Toxic Orb changes user's ability to Toxic Heal, Black Sludge damages the user for 25% max HP, King's Rock changes the user's ability to Monarch, Flame Orb changes the user's ability to Guts, Weakness Policy changes the user's ability to Filter, Eviolite increases the user's greatest defensive stat by one stage, Booster Energy has a 50/50 chance to set either Sunny Day or Electric Terrain, Any other item has a 50% chance to confuse the user, and a 50% chance to increase the user's Attack and Special Attack by one stage.",
 	},
 	blackholeeclipse: {
 		name: "Black Hole Eclipse",
@@ -1044,7 +1045,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	coffeesplatter: {
 		name: "Coffee Splatter",
-		shortDesc: "Usable while asleep, wakes up user and target.",
+		shortDesc: "1.5x BP if asleep. Removes sleep. 20% burn.",
+		desc: "This move can be used while the user is asleep; if used while user is asleep, this move does 1.5x damage. On hit, this move wakes up the user and the target if they are asleep. 20% chance to burn on hit, and hits all adjacent pokemon.",
 	},
 	coil: {
 		name: "Coil",
@@ -1053,7 +1055,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	colddeparture: {
 		name: "Cold Departure",
-		shortDesc: "Lowers foe's SpAtk and Spe by 1. Switches out."
+		shortDesc: "Lowers foe's SpAtk and Spe by 1. Switches out.",
+		desc: "Lowers the foe's Special Attack and Speed by 1. This pokemon switches out after use.",
 	},
 	collisioncourse: {
 		name: "Collision Course",
@@ -1272,7 +1275,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	crescentedge: {
 		name: "Crescent Edge",
-		shortDesc: "Deals damage based on Sp.Def, not Defense.",
+		desc: "Deals damage to the foe based on their Special Defense instead of their Defense.",
+		shortDesc: "Deals damage based on Sp.Def.",
 	},
 	crimsoncharge: {
 		name: "Crimson Charge",
@@ -1403,6 +1407,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	depthdecree: {
 		name: "Depth Decree",
 		shortDesc: "In Sun: Ability becomes Drizzle and boosts SpA by +3.",
+		desc: "This move fails if used outside of Harsh Sunlight or Desolate Land. When used, this pokemon's ability becomes Drizzle, and it gains a +3 Special Attack boost.",
 	},
 	destinybond: {
 		name: "Destiny Bond",
@@ -1537,7 +1542,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	divination: {
 		name: "Divination",
-		shortDesc: "Hits two turns later, 30% chance to lower opponent's SpDef by one stage.",
+		desc: "This move hits two turns after its used. 30% chance to lower opponent's Special Defense by one stage.",
+		shortDesc: "Hits two turns later, 30% for SpD drop.",
 
 		start: " [POKEMON] saw a horrible fate!",
 		activate: " [TARGET] took the Divination attack!",
@@ -1762,6 +1768,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	dualdivide: {
 		name: "Dual Divide",
 		shortDesc: "Hits 2 times, Super-effective vs. Steel.",
+		desc: "This move hits two times, and is Super-effective against Steel-type Pokemon.",
 	},
 	dualwingbeat: {
 		name: "Dual Wingbeat",

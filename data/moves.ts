@@ -1781,7 +1781,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			switch (item.name) {
 				case "":
 					this.hint("But there was nothing to brew!");
-					break;
+					return;
 				case "Leftovers":
 					this.heal(pokemon.baseMaxhp / 2, move);
 					break;
@@ -1895,6 +1895,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					}
 					break;
 			}
+			this.boost({ spa: 1, spe: 1}, move);
 		},
 		secondary: null,
 		target: "self",
@@ -3416,7 +3417,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			}
 		},
 		secondary: {
-			chance: 30,
+			chance: 20,
 			status: "brn",
 		},
 		target: "allAdjacent",
