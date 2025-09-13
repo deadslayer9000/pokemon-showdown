@@ -1882,7 +1882,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	shelteredslumber: {
 		name: "Sheltered Slumber",
-		shortDesc: "When Polfeegeist is asleep, it becomes Polfeegeist-Slumber.",
+		shortDesc: "When asleep: Defense increased by 50%, transforms into Polfeegeist-Slumber.",
+		desc: "When Polfeegeist falls asleep, its defense is raised by 50%, and it transforms into Polfeegeist-Slumber, a Steel/Ghost type.",
 	},
 	shielddust: {
 		name: "Shield Dust",
