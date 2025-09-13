@@ -1055,7 +1055,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	colddeparture: {
 		name: "Cold Departure",
-		shortDesc: "Lowers foe's SpAtk and Spe by 1. Switches out."
+		shortDesc: "Lowers foe's SpAtk and Spe by 1. Switches out.",
 		desc: "Lowers the foe's Special Attack and Speed by 1. This pokemon switches out after use.",
 	},
 	collisioncourse: {
