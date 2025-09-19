@@ -6009,7 +6009,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		onTerrainChange(pokemon) {
 			if (this.field.isTerrain("electricterrain")) {
 				pokemon.addVolatile("quarkdrive");
-			} else if (!pokemon.volatiles["quarkdrive"]?.fromBooster) {
+			} else if (!pokemon.volatiles["quarkdrive"]?.fromBooster || !pokemon.item === ("Thrash Drive" || "Mind Drive" || "Dread Drive" || "Pixie Drive")) {
 				pokemon.removeVolatile("quarkdrive");
 			}
 		},
@@ -6020,7 +6020,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		condition: {
 			noCopy: true,
 			onStart(pokemon, source, effect) {
-				if (effect?.name === "Booster Energy") {
+				if (effect?.name === "Booster Energy" || effect?.name === "Thrash Drive" || effect?.name === "Mind Drive" || effect?.name === "Dread Drive" || effect?.name === "Pixie Drive") {
 					this.effectState.fromBooster = true;
 					this.add(
 						"-activate",
