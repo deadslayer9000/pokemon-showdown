@@ -6031,7 +6031,12 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		condition: {
 			noCopy: true,
 			onStart(pokemon, source, effect) {
-				if (effect?.name === "Booster Energy") {
+				if (effect?.name === "Booster Energy" || 
+					effect?.name === "Mind Drive" ||
+					effect?.name === "Thrash Drive" ||
+					effect?.name === "Pixie Drive" ||
+					effect?.name === "Dread Drive" 
+				) {
 					this.effectState.fromBooster = true;
 					this.add(
 						"-activate",
