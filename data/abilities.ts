@@ -521,6 +521,17 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				source.formeChange("Greninja-Ash", this.effect, true);
 			}
 			if (
+				(source.species.id === "greninjadelta" ||
+					(source.species.id === "greninjadeltabond" &&
+						source.ability === "battlebond")) &&
+				source.hp &&
+				!source.transformed &&
+				source.side.foePokemonLeft()
+			) {
+				this.add("-activate", source, "ability: Battle Bond");
+				source.formeChange("Greninja-Delta-Ash", this.effect, true);
+			}
+			if (
 				(source.species.id === "greninjaomegabond" ||
 					(source.species.id === "greninjaomega" &&
 						source.ability === "battlebond")) &&
@@ -6020,7 +6031,12 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		condition: {
 			noCopy: true,
 			onStart(pokemon, source, effect) {
-				if (effect?.name === "Booster Energy") {
+				if (effect?.name === "Booster Energy" || 
+					effect?.name === "Mind Drive" ||
+					effect?.name === "Thrash Drive" ||
+					effect?.name === "Pixie Drive" ||
+					effect?.name === "Dread Drive" 
+				) {
 					this.effectState.fromBooster = true;
 					this.add(
 						"-activate",
