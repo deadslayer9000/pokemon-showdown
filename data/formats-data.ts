@@ -6896,5 +6896,51 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	meloettaomegaamped: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-	}
+	},
+	regiroot: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
+	regisurge: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
+	regiblaze: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
+	regisand: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
+	regipsych: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
+	diancieruby: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
+	dianciesapphire: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
+	diancierubymega: {
+		isNonstandard: "Past",
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
+	dianciesapphiremega: {
+		isNonstandard: "Past",
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
+	ursasola: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
+	ursasolasolarflare: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
 };
