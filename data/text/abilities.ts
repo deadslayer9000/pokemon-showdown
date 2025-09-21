@@ -599,6 +599,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Feast or Famine",
 		shortDesc: "While this Pokemon is active, any stat boosts applied are immediately stolen.",
 	},
+	fierytouch: {
+		name: "Fiery Touch",
+		shortDesc: "30% chance a Pokemon making contact with this Pokemon will be burned.",
+	},
 	filter: {
 		name: "Filter",
 		shortDesc: "This Pokemon receives 3/4 damage from supereffective attacks.",
@@ -756,6 +760,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Grim Neigh",
 		desc: "This Pokemon's Special Attack is raised by 1 stage if it attacks and knocks out another Pokemon.",
 		shortDesc: "This Pokemon's Sp. Atk is raised by 1 stage if it attacks and KOes another Pokemon.",
+	},
+	grimsigil: {
+		name: "Grim Sigil",
+		shortDesc: "If the user is full HP, disables the opponent's last move on switch in."
 	},
 	guarddog: {
 		name: "Guard Dog",
@@ -1761,6 +1769,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Run Away",
 		shortDesc: "No competitive use.",
 	},
+	sanddweller: {
+		name: "Sand Dweller",
+		shortDesc: "This Pokemon heals 1/16th of its health each turn if Sandstorm is active.",
+	},
 	sandforce: {
 		name: "Sand Force",
 		desc: "If Sandstorm is active, this Pokemon's Ground-, Rock-, and Steel-type attacks have their power multiplied by 1.3. This Pokemon takes no damage from Sandstorm.",
@@ -2319,6 +2331,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			desc: "If a Pokemon uses a Fire- or Ice-type attack against this Pokemon, that Pokemon's Special Attack is halved when calculating the damage to this Pokemon.",
 			shortDesc: "Fire-/Ice-type moves against this Pokemon deal damage with a halved Sp. Atk stat.",
 		},
+	},
+	tidesigil: {
+		name: "Tide Sigil",
+		shortDesc: "If the user is full HP, encores the opponent on switch in."
 	},
 	tintedlens: {
 		name: "Tinted Lens",

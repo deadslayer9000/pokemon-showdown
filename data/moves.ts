@@ -27478,31 +27478,11 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		pp: 10,
 		priority: 0,
 		flags: { metronome: 1 },
-		slotCondition: "Aqua Ring",
-		condition: {
-			onResidualOrder: 4,
-			onResidual(target: Pokemon) {
-				target.side.removeSlotCondition(
-					this.getAtSlot(this.effectState.sourceSlot),
-					"aquaring"
-				);
-			},/*
-			onEnd(target) {
-				if (target && !target.fainted) {
-					const damage = this.heal(this.effectState.hp, target, target);
-					if (damage) {
-						this.add(
-							"-heal",
-							target,
-							target.getHealth,
-							"[from] move: Wish",
-							"[wisher] " + this.effectState.source.name
-						);
-					}
-				}
-			},*/
+		selfSwitch: true,
+		onTry(source, target, move) {
+			this.hint("This move isnt fully implemented yet.");
 		},
-		
+	
 		secondary: null,
 		target: "self",
 		type: "Water",
