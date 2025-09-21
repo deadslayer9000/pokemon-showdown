@@ -27464,7 +27464,9 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			if (source.hp < source.maxhp / 2) {
 				move.basePower === 100;
 				this.hint(`${source.name}'s Fission Blast was weakened due to its low HP.`);
+				
 			}
+			this.hint(`${move.basePower}`);
 		},
 	},
 	streamshift: {
@@ -27476,12 +27478,33 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		pp: 10,
 		priority: 0,
 		flags: { metronome: 1 },
-		selfSwitch: true,
-		onAfterMove(source, target, move) {
-			target.addVolatile("aquaring");
+		slotCondition: "Aqua Ring",
+		condition: {
+			onResidualOrder: 4,
+			onResidual(target: Pokemon) {
+				target.side.removeSlotCondition(
+					this.getAtSlot(this.effectState.sourceSlot),
+					"aquaring"
+				);
+			},/*
+			onEnd(target) {
+				if (target && !target.fainted) {
+					const damage = this.heal(this.effectState.hp, target, target);
+					if (damage) {
+						this.add(
+							"-heal",
+							target,
+							target.getHealth,
+							"[from] move: Wish",
+							"[wisher] " + this.effectState.source.name
+						);
+					}
+				}
+			},*/
 		},
+		
 		secondary: null,
-		target: "normal",
+		target: "self",
 		type: "Water",
 	},
 	ticketoutgrowth: {
@@ -27523,7 +27546,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 							"[from] move: Ticket Outgrowth",
 							`[of] ${pokemon}`
 						);
-						target.side.addSideCondition("leechseed", pokemon);
+						target.addVolatile("leechseed", pokemon);
 						this.hint(`${target.name} was seeded by ${pokemon.name}'s Ticket Outgrowth!`);
 					}
 				}
@@ -27559,7 +27582,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 							"[from] move: Ticket Outgrowth",
 							`[of] ${pokemon}`
 						);
-						target.side.addSideCondition("leechseed", pokemon);
+						target.addVolatile("leechseed", pokemon);
 						this.hint(`${target.name} was seeded by ${pokemon.name}'s Ticket Outgrowth!`);
 					}
 				}
