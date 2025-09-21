@@ -27435,6 +27435,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 						source.itemState,
 						source
 					);
+					source.addVolatile("embargo");
 				}
 				return this.NOT_FAIL;
 			},
@@ -27445,6 +27446,162 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		type: "Ground",
 		zMove: { boost: { def: 1 } },
 		contestType: "Tough",
+	},
+	fissionblast: {
+		num: -96,
+		accuracy: 100,
+		basePower: 200,
+		category: "Special",
+		name: "Fission Blast",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1, noparentalbond: 1 },
+		selfdestruct: "always",
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+		onBasePower(relayVar, source, target, move) {
+			if (source.hp < source.maxhp / 2) {
+				move.basePower === 100;
+				this.hint(`${source.name}'s Fission Blast was weakened due to its low HP.`);
+			}
+		},
+	},
+	streamshift: {
+		num: -97,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Stream Shift",
+		pp: 10,
+		priority: 0,
+		flags: { metronome: 1 },
+		selfSwitch: true,
+		onAfterMove(source, target, move) {
+			target.addVolatile("aquaring");
+		},
+		secondary: null,
+		target: "normal",
+		type: "Water",
+	},
+	ticketoutgrowth: {
+		num: -98,
+		accuracy: 90,
+		basePower: 40,
+		category: "Physical",
+		name: "Ticket Outgrowth",
+		pp: 10,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1 },
+		secondary: null,
+		target: "normal",
+		type: "Grass",
+		onAfterHit(target, pokemon, move) {
+			if (!move.hasSheerForce) {
+				if (pokemon.hp && pokemon.removeVolatile("leechseed")) {
+					this.add(
+						"-end",
+						pokemon,
+						"Leech Seed",
+						"[from] move: Ticket Outgrowth",
+						`[of] ${pokemon}`
+					);
+				}
+				const sideConditions = [
+					"spikes",
+					"toxicspikes",
+					"stealthrock",
+					"stickyweb",
+					"gmaxsteelsurge",
+				];
+				for (const condition of sideConditions) {
+					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+						this.add(
+							"-sideend",
+							pokemon.side,
+							this.dex.conditions.get(condition).name,
+							"[from] move: Ticket Outgrowth",
+							`[of] ${pokemon}`
+						);
+						target.side.addSideCondition("leechseed", pokemon);
+						this.hint(`${target.name} was seeded by ${pokemon.name}'s Ticket Outgrowth!`);
+					}
+				}
+				if (pokemon.hp && pokemon.volatiles["partiallytrapped"]) {
+					pokemon.removeVolatile("partiallytrapped");
+				}
+			}
+		},
+		onAfterSubDamage(damage, target, pokemon, move) {
+			if (!move.hasSheerForce) {
+				if (pokemon.hp && pokemon.removeVolatile("leechseed")) {
+					this.add(
+						"-end",
+						pokemon,
+						"Leech Seed",
+						"[from] move: Ticket Outgrowth",
+						`[of] ${pokemon}`
+					);
+				}
+				const sideConditions = [
+					"spikes",
+					"toxicspikes",
+					"stealthrock",
+					"stickyweb",
+					"gmaxsteelsurge",
+				];
+				for (const condition of sideConditions) {
+					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+						this.add(
+							"-sideend",
+							pokemon.side,
+							this.dex.conditions.get(condition).name,
+							"[from] move: Ticket Outgrowth",
+							`[of] ${pokemon}`
+						);
+						target.side.addSideCondition("leechseed", pokemon);
+						this.hint(`${target.name} was seeded by ${pokemon.name}'s Ticket Outgrowth!`);
+					}
+				}
+				if (pokemon.hp && pokemon.volatiles["partiallytrapped"]) {
+					pokemon.removeVolatile("partiallytrapped");
+				}
+			}
+		},
+	},
+	searingclaws: {
+		num: -99,
+		accuracy: 100,
+		basePower: 35,
+		category: "Physical",
+		name: "Searing Claws",
+		pp: 10,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1 },
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+		multihit: 2,
+		onBasePower(relayVar, source, target, move) {
+			if (target.status === 'brn') {
+				move.basePower*=2;
+				this.hint(`${source.name}'s Searing Claws doubled in power due to ${target.name} being burned!`);
+			}
+		},
+	},
+	solarflare: {
+		num: -100,
+		accuracy: 100,
+		basePower: 70,
+		category: "Special",
+		name: "Solar Flare",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1 },
+		willCrit: true,
+		secondary: null,
+		target: "normal",
+		type: "Normal",
 	}
 
 };

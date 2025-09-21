@@ -2230,6 +2230,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Power doubles if the user moves before the target.",
 		shortDesc: "Power doubles if user moves before the target.",
 	},
+	fissionblast: {
+		name: "Fission Blast",
+		shortDesc: "User faints. Lowers in power under 50% HP."
+	},
 	fissure: {
 		name: "Fissure",
 		desc: "Deals damage to the target equal to the target's maximum HP. Ignores accuracy and evasiveness modifiers. This attack's accuracy is equal to (user's level - target's level + 30)%, and fails if the target is at a higher level. Pokemon with the Sturdy Ability are immune.",
@@ -5892,6 +5896,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Lowers the target's Defense by 2 stages.",
 		shortDesc: "Lowers the target's Defense by 2.",
 	},
+	searingclaws: {
+		name: "Searing Claws",
+		shortDesc: "Power doubles on burned targets.",
+	},
 	searingchain: {
 		name: "Searing Chain",
 		shortDesc: "Has a 30% chance to burn the target.",
@@ -6453,6 +6461,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "The user heals itself and its ally for 25% of their max HPs and raises their Attack and Special Attack by one stage",
 		shortDesc: "Heals itself and allies, boosts Atk and Sp.Atk by one stage",
 	},
+	solarflare: {
+		name: "Solar Flare",
+		shortDesc: "Will always crit",
+	},
 	sonicboom: {
 		name: "Sonic Boom",
 		desc: "Deals 20 HP of damage to the target.",
@@ -6786,6 +6798,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Strange Steam",
 		desc: "Has a 20% chance to confuse the target.",
 		shortDesc: "20% chance to confuse the target.",
+	},
+	streamshift: {
+		name: "Stream Shift",
+		shortDesc: "Switches out and gives aqua rings the teammate.",
 	},
 	strength: {
 		name: "Strength",
@@ -7374,6 +7390,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Thunder Wave",
 		desc: "Paralyzes the target. This move does not ignore type immunity.",
 		shortDesc: "Paralyzes the target.",
+	},
+	ticketoutgrowth: {
+		name: "Ticket Outgrowth",
+		shortDesc: "Removes hazards, puts up leechseed if it does.",
 	},
 	tickle: {
 		name: "Tickle",
