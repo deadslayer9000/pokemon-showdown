@@ -27337,7 +27337,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		accuracy: 100,
 		basePower: 100,
 		category: "Special",
-		name: "Stunning Chain",
+		name: "Chaotic Chain",
 		pp: 5,
 		priority: 0,
 		flags: { contact: 1, protect: 1, mirror: 1 },
