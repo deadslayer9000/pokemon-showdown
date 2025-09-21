@@ -863,7 +863,7 @@ export class Pokemon {
 
 	ignoringItem() {
 		for (const pokemon of this.battle.getAllActive()) {
-			if (pokemon.ability === ('dawnbreak' as ID) && !pokemon.volatiles['embargo'] && !this.hasAbility('dawnbreak') 
+			if (pokemon.ability === ('dawnbreak' as ID) && !pokemon.volatiles['embargo'] && !pokemon.volatiles['sandbarrier'] && !this.hasAbility('dawnbreak') 
 				&& !this.battle.field.pseudoWeather['magicroom'] && !this.getItem().isPrimalOrb )
 			return true;
 		}

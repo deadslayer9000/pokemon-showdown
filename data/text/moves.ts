@@ -5840,7 +5840,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 
 		start: "  [POKEMON] became trapped by the quicksand!",
 	},
-	saphirestorm: {
+	sapphirestorm: {
 		name: "Saphire Storm",
 		shortDesc: "Has 50% chance to lower the target's Sp. Atk by 2.",
 	},

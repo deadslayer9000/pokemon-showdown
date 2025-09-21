@@ -27428,28 +27428,21 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					}
 				}
 				if (this.checkMoveMakesContact(move, source, target)) {
-					this.damage(source.baseMaxhp / 8, source, target);
+					this.add("-start", source, "Embargo");
+					this.singleEvent(
+						"End",
+						source.getItem(),
+						source.itemState,
+						source
+					);
 				}
 				return this.NOT_FAIL;
 			},
-			onHit(target, source, move) {
-				if (
-					move.isZOrMaxPowered &&
-					this.checkMoveMakesContact(move, source, target)
-				) {
-					this.add("-start", target, "Embargo");
-					this.singleEvent(
-						"End",
-						target.getItem(),
-						target.itemState,
-						target
-				);
-				}
-			}
+		
 		},
 		secondary: null,
 		target: "self",
-		type: "Grass",
+		type: "Ground",
 		zMove: { boost: { def: 1 } },
 		contestType: "Tough",
 	}
