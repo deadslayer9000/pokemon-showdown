@@ -19802,7 +19802,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		num: -30,
 		accuracy: true,
 		basePower: 100,
-		category: "SpeciaL",
+		category: "Special",
 		name: "Sandstorm Fury",
 		pp: 5,
 		flags: { bypasssub: 1 },
@@ -19820,6 +19820,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		secondary: null,
 		target: "normal",
 		type: "Ground",
+		priority: 0,
 	},
 	sandstormsphere: {
 		num: -31,
@@ -19833,6 +19834,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		secondary: null,
 		target: "normal",
 		type: "Rock",
+		priority: 0,
 	},
 	sandtomb: {
 		num: 328,
@@ -27239,5 +27241,217 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				return null;
 			}
 		},
+	},
+	remedialchain: {
+		num: -87,
+		type: "Grass",
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Remedial Chain",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, },
+		secondary: null,
+		target: "normal",
+		onHit(target, source, move) {
+			this.add("-activate", source, "move: Remedial Chain");
+			let success = false;
+			const allies = [
+				...source.side.pokemon,
+				...(source.side.allySide?.pokemon || []),
+			];
+			for (const ally of allies) {
+				if (ally.cureStatus()) success = true;
+			}
+			if (target.cureStatus()) success = true;
+			return success;
+			
+		},
+	},
+	hypnoticchain: {
+		num: -88,
+		type: "Normal",
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Hypnotic Chain",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1},
+		sleepUsable: true,
+		secondary: null,
+		target: "normal",
+	},
+	searingchain: {
+		num: -89,
+		type: "Fire",
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Searing Chain",
+		pp: 5,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1 },
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
+		target: "normal",
+	},
+	stunningchain: {
+		num: -90,
+		type: "Electric",
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Stunning Chain",
+		pp: 5,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1 },
+		secondary: {
+			chance: 30,
+			status: 'par',
+		},
+		target: "normal",
+	},
+	glacialchain: {
+		num: -91,
+		type: "Ice",
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Stunning Chain",
+		pp: 5,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1 },
+		secondary: {
+			chance: 30,
+			status: 'frz',
+		},
+		target: "normal",
+	},
+	chaoticchain: {
+		num: -92,
+		type: "Psychic",
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Stunning Chain",
+		pp: 5,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1 },
+		secondary: {
+			chance: 30,
+			onHit(target, source, move) {
+				target.addVolatile("confusion", source, move);
+			},
+		},
+		target: "normal",
+	},
+	sapphirestorm: {
+		num: -93,
+		accuracy: 95,
+		basePower: 100,
+		category: "Physical",
+		name: "Sapphire Storm",
+		pp: 5,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, },
+		secondary: {
+			chance: 50,
+			boosts: {
+				spa: -2,
+			}
+		},
+		target: "normal",
+		type: "Rock",
+	},
+	rubystorm: {
+		num: -94,
+		accuracy: 95,
+		basePower: 100,
+		category: "Physical",
+		name: "Ruby Storm",
+		pp: 5,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, },
+		secondary: {
+			chance: 50,
+			boosts: {
+				atk: -2,
+			}
+		},
+		target: "normal",
+		type: "Rock",
+	},
+	sandbarrier: {
+		num: -95,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Sand Barrier",
+		pp: 10,
+		priority: 4,
+		flags: { noassist: 1, failcopycat: 1 },
+		stallingMove: true,
+		volatileStatus: "sandbarrier",
+		onPrepareHit(pokemon) {
+			return !!this.queue.willAct() && this.runEvent("StallMove", pokemon);
+		},
+		onHit(pokemon) {
+			pokemon.addVolatile("stall");
+		},
+		condition: {
+			duration: 1,
+			onStart(target) {
+				this.add("-singleturn", target, "move: Protect");
+			},
+			onTryHitPriority: 3,
+			onTryHit(target, source, move) {
+				if (!move.flags["protect"]) {
+					if (["gmaxoneblow", "gmaxrapidflow"].includes(move.id)) return;
+					if (move.isZ || move.isMax)
+						target.getMoveHitData(move).zBrokeProtect = true;
+					return;
+				}
+				if (move.smartTarget) {
+					move.smartTarget = false;
+				} else {
+					this.add("-activate", target, "move: Protect");
+				}
+				const lockedmove = source.getVolatile("lockedmove");
+				if (lockedmove) {
+					// Outrage counter is reset
+					if (source.volatiles["lockedmove"].duration === 2) {
+						delete source.volatiles["lockedmove"];
+					}
+				}
+				if (this.checkMoveMakesContact(move, source, target)) {
+					this.damage(source.baseMaxhp / 8, source, target);
+				}
+				return this.NOT_FAIL;
+			},
+			onHit(target, source, move) {
+				if (
+					move.isZOrMaxPowered &&
+					this.checkMoveMakesContact(move, source, target)
+				) {
+					this.add("-start", target, "Embargo");
+					this.singleEvent(
+						"End",
+						target.getItem(),
+						target.itemState,
+						target
+				);
+				}
+			}
+		},
+		secondary: null,
+		target: "self",
+		type: "Grass",
+		zMove: { boost: { def: 1 } },
+		contestType: "Tough",
 	}
+
 };
