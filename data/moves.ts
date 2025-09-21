@@ -7266,6 +7266,26 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		target: "normal",
 		type: "Water",
 	},
+	fissionblast: {
+		num: -88,
+		accuracy: 100,
+		basePower: 200,
+		basePowerCallback(pokemon, target, move) {
+			if (pokemon.hp < (pokemon.maxhp / 2)) {
+				let bp = 100;
+				return bp;
+			}
+		},
+		category: "Special",
+		name: "Fission Blast",
+		selfdestruct: "always",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		secondary: null,
+		target: "allAdjacent",
+		type: "Fire",
+	},
 	fissure: {
 		num: 90,
 		accuracy: 30,
@@ -24320,6 +24340,45 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		type: "Normal",
 		zMove: { basePower: 160 },
 		maxMove: { basePower: 130 },
+	},
+	thicketoutgrowth: {
+		num: -87,
+		accuracy: 90,
+		basePower: 40,
+		category: "Physical",
+		name: "Thicket Outgrowth",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		onAfterHit(target, pokemon, move) {
+			if (!move.hasSheerForce) {
+				const sideConditions = [
+					"spikes",
+					"toxicspikes",
+					"stealthrock",
+					"stickyweb",
+					"gmaxsteelsurge",
+				];
+				for (const condition of sideConditions) {
+					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+						this.add(
+							"-sideend",
+							pokemon.side,
+							this.dex.conditions.get(condition).name,
+							"[from] move: Thicket Outgrowth",
+							`[of] ${pokemon}`
+						);
+						pokemon.abilityState.thicketoutgrowth = true;
+					}
+				}
+			}
+			if (pokemon.abilityState.thicketoutgrowth) {
+				pokemon.abilityState.thicketoutgrowth = false;
+				target.addVolatile('leechseed');
+			}
+		},
+		target: "normal",
+		type: "Grass",
 	},
 	thief: {
 		num: 168,

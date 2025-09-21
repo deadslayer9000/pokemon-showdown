@@ -1589,6 +1589,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 					"mindblown",
 					"mistyexplosion",
 					"selfdestruct",
+					"fissionblast",
 				].includes(effect.id)
 			) {
 				this.attrLastMove("[still]");
@@ -4290,6 +4291,31 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 0,
 		num: 250,
 	},
+	minddive: {
+		onStart(pokemon) {
+			for (const target of pokemon.foes()) {
+				for (const moveSlot of target.moveSlots) {
+					const move = this.dex.moves.get(moveSlot.move);
+					if (move.category === "Status") continue;
+					const moveType =
+						move.id === "hiddenpower" ? target.hpType : move.type;
+					if (
+						(this.dex.getImmunity(moveType, pokemon) &&
+							this.dex.getEffectiveness(moveType, pokemon) > 0) ||
+						move.ohko
+					) {
+						this.add("-ability", pokemon, "Anticipation");
+						this.boost({spd: 1})
+						return;
+					}
+				}
+			}
+		},
+		flags: {},
+		name: "Mind Dive",
+		rating: 2,
+		num: -79,
+	},
 	mindseye: {
 		onTryBoost(boost, target, source, effect) {
 			if (source && target === source) return;
@@ -6509,6 +6535,18 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		name: "Sand Force",
 		rating: 2,
 		num: 159,
+	},
+	sanddweller: {
+		onWeather(target, source, effect) {
+			if (target.hasItem("utilityumbrella")) return;
+			if (effect.id === "sandstorm") {
+				this.heal(target.baseMaxhp / 16);
+			}
+		},
+		flags: {},
+		name: "Sand Dweller",
+		rating: 1.5,
+		num: -78,
 	},
 	sandrush: {
 		onModifySpe(spe, pokemon) {
