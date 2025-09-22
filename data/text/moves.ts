@@ -951,6 +951,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			shortDesc: "For Chatot, 31% chance to confuse the target.",
 		},
 	},
+	chaoticchain: {
+		name: "Chaotic Chain",
+		shortDesc: "Has 30% to confuse the target.",
+	},
 	chillingsilence: {
 		name: "Chilling Silence",
 		shortDesc: "Hits first. First turn out only. 100% flinch chance.",
@@ -2226,6 +2230,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Power doubles if the user moves before the target.",
 		shortDesc: "Power doubles if user moves before the target.",
 	},
+	fissionblast: {
+		name: "Fission Blast",
+		shortDesc: "User faints. Lowers in power under 50% HP."
+	},
 	fissure: {
 		name: "Fissure",
 		desc: "Deals damage to the target equal to the target's maximum HP. Ignores accuracy and evasiveness modifiers. This attack's accuracy is equal to (user's level - target's level + 30)%, and fails if the target is at a higher level. Pokemon with the Sturdy Ability are immune.",
@@ -2639,6 +2647,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	gigavolthavoc: {
 		name: "Gigavolt Havoc",
 		shortDesc: "Power is equal to the base move's Z-Power.",
+	},
+	glacialchain: {
+		name: "Glacial Chain",
+		shortDesc: "Has 30% chance to freeze the target.",
 	},
 	glaciallance: {
 		name: "Glacial Lance",
@@ -3402,6 +3414,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	hypnosis: {
 		name: "Hypnosis",
 		shortDesc: "Causes the target to fall asleep.",
+	},
+	hypnoticchain: {
+		name: "Hypnotic Chain",
+		shortDesc: "Can be used while user is asleep.",
 	},
 	iaislash: {
 		name: "Iai Slash",
@@ -5517,6 +5533,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Has a 10% chance to cause the target to fall asleep. If this move is successful on at least one target and the user is a Meloetta, it changes to Pirouette Forme if it is currently in Aria Forme, or changes to Aria Forme if it is currently in Pirouette Forme. This forme change does not happen if the Meloetta has the Sheer Force Ability. The Pirouette Forme reverts to Aria Forme when Meloetta is not active.",
 		shortDesc: "10% chance to sleep foe(s). Meloetta transforms.",
 	},
+	remedialchain: {
+		name: "Remedial Chain",
+		desc: "Cures status of all allies and the opponent.",
+		shortDesc: "Cures status of allies and the oppoenent.",
+	},
 	retribution: {
 		name: "Retribution",
 		desc: "Deals damage to the target based on its Defense instead of its Special Defense.",
@@ -5725,6 +5746,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "If there are other active Pokemon that chose this move for use this turn, those Pokemon take their turn immediately after the user, in Speed order, and this move's power is 120 for each other user.",
 		shortDesc: "Power doubles if others used Round this turn.",
 	},
+	rubystorm: {
+		name: "Ruby Storm",
+		shortDesc: "Has 50% chance to lower the targets Atk by 2."
+	},
 	ruination: {
 		name: "Ruination",
 		desc: "Deals damage to the target equal to half of its current HP, rounded down, but not less than 1 HP.",
@@ -5819,6 +5844,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 
 		start: "  [POKEMON] became trapped by the quicksand!",
 	},
+	sapphirestorm: {
+		name: "Saphire Storm",
+		shortDesc: "Has 50% chance to lower the target's Sp. Atk by 2.",
+	},
 	sappyseed: {
 		name: "Sappy Seed",
 		desc: "This move summons Leech Seed on the foe.",
@@ -5866,6 +5895,14 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Screech",
 		desc: "Lowers the target's Defense by 2 stages.",
 		shortDesc: "Lowers the target's Defense by 2.",
+	},
+	searingclaws: {
+		name: "Searing Claws",
+		shortDesc: "Power doubles on burned targets.",
+	},
+	searingchain: {
+		name: "Searing Chain",
+		shortDesc: "Has a 30% chance to burn the target.",
 	},
 	searingshot: {
 		name: "Searing Shot",
@@ -5933,6 +5970,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		gen1: {
 			desc: "The user faints after using this move, unless the target's substitute was broken by the damage. The target's Defense is halved during damage calculation.",
 		},
+	},
+	stunningchain: {
+		name: "Stunning Chain",
+		shortDesc: "Has a 30% chance to paralyze the target.",
 	},
 	noxiouswave: {
 		name: "Noxious Wave",
@@ -6420,6 +6461,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "The user heals itself and its ally for 25% of their max HPs and raises their Attack and Special Attack by one stage",
 		shortDesc: "Heals itself and allies, boosts Atk and Sp.Atk by one stage",
 	},
+	solarflare: {
+		name: "Solar Flare",
+		shortDesc: "Will always crit",
+	},
 	sonicboom: {
 		name: "Sonic Boom",
 		desc: "Deals 20 HP of damage to the target.",
@@ -6753,6 +6798,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Strange Steam",
 		desc: "Has a 20% chance to confuse the target.",
 		shortDesc: "20% chance to confuse the target.",
+	},
+	streamshift: {
+		name: "Stream Shift",
+		shortDesc: "Switches out and gives aqua rings the teammate.",
 	},
 	strength: {
 		name: "Strength",
@@ -7341,6 +7390,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Thunder Wave",
 		desc: "Paralyzes the target. This move does not ignore type immunity.",
 		shortDesc: "Paralyzes the target.",
+	},
+	ticketoutgrowth: {
+		name: "Ticket Outgrowth",
+		shortDesc: "Removes hazards, puts up leechseed if it does.",
 	},
 	tickle: {
 		name: "Tickle",

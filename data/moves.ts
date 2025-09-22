@@ -7266,6 +7266,29 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		target: "normal",
 		type: "Water",
 	},
+	fissionblast: {
+		num: -88,
+		accuracy: 100,
+		basePower: 200,
+		basePowerCallback(pokemon, target, move) {
+			let bp = 100;
+			if (pokemon.hp < (pokemon.maxhp / 2)) {
+				
+				this.hint(`${bp}`);
+				return bp;
+			}
+			this.hint(`${bp}`);
+		},
+		category: "Special",
+		name: "Fission Blast",
+		selfdestruct: "always",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		secondary: null,
+		target: "allAdjacent",
+		type: "Fire",
+	},
 	fissure: {
 		num: 90,
 		accuracy: 30,
@@ -19802,7 +19825,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		num: -30,
 		accuracy: true,
 		basePower: 100,
-		category: "SpeciaL",
+		category: "Special",
 		name: "Sandstorm Fury",
 		pp: 5,
 		flags: { bypasssub: 1 },
@@ -19820,6 +19843,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		secondary: null,
 		target: "normal",
 		type: "Ground",
+		priority: 0,
 	},
 	sandstormsphere: {
 		num: -31,
@@ -19833,6 +19857,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		secondary: null,
 		target: "normal",
 		type: "Rock",
+		priority: 0,
 	},
 	sandtomb: {
 		num: 328,
@@ -24321,6 +24346,45 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		zMove: { basePower: 160 },
 		maxMove: { basePower: 130 },
 	},
+	thicketoutgrowth: {
+		num: -87,
+		accuracy: 90,
+		basePower: 40,
+		category: "Physical",
+		name: "Thicket Outgrowth",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		onAfterHit(target, pokemon, move) {
+			if (!move.hasSheerForce) {
+				const sideConditions = [
+					"spikes",
+					"toxicspikes",
+					"stealthrock",
+					"stickyweb",
+					"gmaxsteelsurge",
+				];
+				for (const condition of sideConditions) {
+					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+						this.add(
+							"-sideend",
+							pokemon.side,
+							this.dex.conditions.get(condition).name,
+							"[from] move: Thicket Outgrowth",
+							`[of] ${pokemon}`
+						);
+						pokemon.abilityState.thicketoutgrowth = true;
+					}
+				}
+			}
+			if (pokemon.abilityState.thicketoutgrowth) {
+				pokemon.abilityState.thicketoutgrowth = false;
+				target.addVolatile('leechseed');
+			}
+		},
+		target: "normal",
+		type: "Grass",
+	},
 	thief: {
 		num: 168,
 		accuracy: 100,
@@ -27239,5 +27303,393 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				return null;
 			}
 		},
+	},
+	remedialchain: {
+		num: -87,
+		type: "Grass",
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Remedial Chain",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, },
+		secondary: null,
+		target: "normal",
+		onHit(target, source, move) {
+			this.add("-activate", source, "move: Remedial Chain");
+			let success = false;
+			const allies = [
+				...source.side.pokemon,
+				...(source.side.allySide?.pokemon || []),
+			];
+			for (const ally of allies) {
+				if (ally.cureStatus()) success = true;
+			}
+			if (target.cureStatus()) success = true;
+			return success;
+			
+		},
+	},
+	hypnoticchain: {
+		num: -88,
+		type: "Normal",
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Hypnotic Chain",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1},
+		sleepUsable: true,
+		secondary: null,
+		target: "normal",
+	},
+	searingchain: {
+		num: -89,
+		type: "Fire",
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Searing Chain",
+		pp: 5,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1 },
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
+		target: "normal",
+	},
+	stunningchain: {
+		num: -90,
+		type: "Electric",
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Stunning Chain",
+		pp: 5,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1 },
+		secondary: {
+			chance: 30,
+			status: 'par',
+		},
+		target: "normal",
+	},
+	glacialchain: {
+		num: -91,
+		type: "Ice",
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Stunning Chain",
+		pp: 5,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1 },
+		secondary: {
+			chance: 30,
+			status: 'frz',
+		},
+		target: "normal",
+	},
+	chaoticchain: {
+		num: -92,
+		type: "Psychic",
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Chaotic Chain",
+		pp: 5,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1 },
+		secondary: {
+			chance: 30,
+			onHit(target, source, move) {
+				target.addVolatile("confusion", source, move);
+			},
+		},
+		target: "normal",
+	},
+	sapphirestorm: {
+		num: -93,
+		accuracy: 95,
+		basePower: 100,
+		category: "Physical",
+		name: "Sapphire Storm",
+		pp: 5,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, },
+		secondary: {
+			chance: 50,
+			boosts: {
+				spa: -2,
+			}
+		},
+		target: "normal",
+		type: "Rock",
+	},
+	rubystorm: {
+		num: -94,
+		accuracy: 95,
+		basePower: 100,
+		category: "Physical",
+		name: "Ruby Storm",
+		pp: 5,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, },
+		secondary: {
+			chance: 50,
+			boosts: {
+				atk: -2,
+			}
+		},
+		target: "normal",
+		type: "Rock",
+	},
+	sandbarrier: {
+		num: -95,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Sand Barrier",
+		pp: 10,
+		priority: 4,
+		flags: { noassist: 1, failcopycat: 1 },
+		stallingMove: true,
+		volatileStatus: "sandbarrier",
+		onPrepareHit(pokemon) {
+			return !!this.queue.willAct() && this.runEvent("StallMove", pokemon);
+		},
+		onHit(pokemon) {
+			pokemon.addVolatile("stall");
+		},
+		condition: {
+			duration: 1,
+			onStart(target) {
+				this.add("-singleturn", target, "move: Protect");
+			},
+			onTryHitPriority: 3,
+			onTryHit(target, source, move) {
+				if (!move.flags["protect"]) {
+					if (["gmaxoneblow", "gmaxrapidflow"].includes(move.id)) return;
+					if (move.isZ || move.isMax)
+						target.getMoveHitData(move).zBrokeProtect = true;
+					return;
+				}
+				if (move.smartTarget) {
+					move.smartTarget = false;
+				} else {
+					this.add("-activate", target, "move: Protect");
+				}
+				const lockedmove = source.getVolatile("lockedmove");
+				if (lockedmove) {
+					// Outrage counter is reset
+					if (source.volatiles["lockedmove"].duration === 2) {
+						delete source.volatiles["lockedmove"];
+					}
+				}
+				if (this.checkMoveMakesContact(move, source, target)) {
+					this.add("-start", source, "Embargo");
+					this.singleEvent(
+						"End",
+						source.getItem(),
+						source.itemState,
+						source
+					);
+					source.addVolatile("embargo");
+				}
+				return this.NOT_FAIL;
+			},
+		
+		},
+		secondary: null,
+		target: "self",
+		type: "Ground",
+		zMove: { boost: { def: 1 } },
+		contestType: "Tough",
+	},/*
+	fissionblast: {
+		num: -96,
+		accuracy: 100,
+		basePower: 200,
+		category: "Special",
+		name: "Fission Blast",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1, noparentalbond: 1 },
+		selfdestruct: "always",
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+		onTryHit(source, target, move) {
+			let bp = move.basePower;
+			if (source.hp < (source.maxhp / 2)) {
+				this.hint(`${source.name}'s Fission Blast was weakened due to its low HP.`);
+				bp = bp/2;
+				this.hint(`${bp}`);
+				return bp;
+			}
+			this.hint(`${bp}`);
+			return bp;
+		},/*
+		basePowerCallback(source, target, move) {
+			let bp = move.basePower;
+			if (source.hp < (source.maxhp / 2)) {
+				this.hint(`${source.name}'s Fission Blast was weakened due to its low HP.`);
+				bp = bp/2;
+				this.hint(`${bp}`);
+				return bp;
+			}
+			this.hint(`${bp}`);
+			return bp;
+		},*/
+	
+	streamshift: {
+		num: -97,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Stream Shift",
+		pp: 10,
+		priority: 0,
+		flags: { metronome: 1 },
+		selfSwitch: true,
+		onTry(source, target, move) {
+			this.hint("This move isnt fully implemented yet.");
+		},
+	
+		secondary: null,
+		target: "self",
+		type: "Water",
+	},
+	ticketoutgrowth: {
+		num: -98,
+		accuracy: 90,
+		basePower: 40,
+		category: "Physical",
+		name: "Ticket Outgrowth",
+		pp: 10,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1 },
+		secondary: null,
+		target: "normal",
+		type: "Grass",
+		onAfterHit(target, pokemon, move) {
+			if (!move.hasSheerForce) {
+				if (pokemon.hp && pokemon.removeVolatile("leechseed")) {
+					this.add(
+						"-end",
+						pokemon,
+						"Leech Seed",
+						"[from] move: Ticket Outgrowth",
+						`[of] ${pokemon}`
+					);
+				}
+				const sideConditions = [
+					"spikes",
+					"toxicspikes",
+					"stealthrock",
+					"stickyweb",
+					"gmaxsteelsurge",
+				];
+				for (const condition of sideConditions) {
+					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+						this.add(
+							"-sideend",
+							pokemon.side,
+							this.dex.conditions.get(condition).name,
+							"[from] move: Ticket Outgrowth",
+							`[of] ${pokemon}`
+						);
+						target.addVolatile("leechseed", pokemon);
+						this.hint(`${target.name} was seeded by ${pokemon.name}'s Ticket Outgrowth!`);
+					}
+				}
+				if (pokemon.hp && pokemon.volatiles["partiallytrapped"]) {
+					pokemon.removeVolatile("partiallytrapped");
+				}
+			}
+		},
+		onAfterSubDamage(damage, target, pokemon, move) {
+			if (!move.hasSheerForce) {
+				if (pokemon.hp && pokemon.removeVolatile("leechseed")) {
+					this.add(
+						"-end",
+						pokemon,
+						"Leech Seed",
+						"[from] move: Ticket Outgrowth",
+						`[of] ${pokemon}`
+					);
+				}
+				const sideConditions = [
+					"spikes",
+					"toxicspikes",
+					"stealthrock",
+					"stickyweb",
+					"gmaxsteelsurge",
+				];
+				for (const condition of sideConditions) {
+					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+						this.add(
+							"-sideend",
+							pokemon.side,
+							this.dex.conditions.get(condition).name,
+							"[from] move: Ticket Outgrowth",
+							`[of] ${pokemon}`
+						);
+						target.addVolatile("leechseed", pokemon);
+						this.hint(`${target.name} was seeded by ${pokemon.name}'s Ticket Outgrowth!`);
+					}
+				}
+				if (pokemon.hp && pokemon.volatiles["partiallytrapped"]) {
+					pokemon.removeVolatile("partiallytrapped");
+				}
+			}
+		},
+	},
+	searingclaws: {
+		num: -99,
+		accuracy: 100,
+		basePower: 35,
+		category: "Physical",
+		name: "Searing Claws",
+		pp: 10,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1 },
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+		multihit: 2,
+		
+		basePowerCallback(source, target, move) {
+			if (target.status === 'brn') {
+				
+				this.hint(`${move.name}'s BP doubled on burned target.`);
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},/*
+		onBasePower(relayVar, source, target, move) {
+			if (target.status === 'brn') {
+				move.basePower*=2;
+				this.hint(`${source.name}'s Searing Claws doubled in power due to ${target.name} being burned!`);
+			}
+		},*/
+	},
+	solarflare: {
+		num: -100,
+		accuracy: 100,
+		basePower: 70,
+		category: "Special",
+		name: "Solar Flare",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1 },
+		willCrit: true,
+		secondary: null,
+		target: "normal",
+		type: "Normal",
 	}
+
 };

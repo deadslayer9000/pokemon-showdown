@@ -863,7 +863,7 @@ export class Pokemon {
 
 	ignoringItem() {
 		for (const pokemon of this.battle.getAllActive()) {
-			if (pokemon.ability === ('dawnbreak' as ID) && !pokemon.volatiles['embargo'] && !this.hasAbility('dawnbreak') 
+			if (pokemon.ability === ('dawnbreak' as ID) && !pokemon.volatiles['embargo'] && !pokemon.volatiles['sandbarrier'] && !this.hasAbility('dawnbreak') 
 				&& !this.battle.field.pseudoWeather['magicroom'] && !this.getItem().isPrimalOrb )
 			return true;
 		}
@@ -871,7 +871,7 @@ export class Pokemon {
 			this.itemState.knockedOff || // Gen 3-4
 			(this.battle.gen >= 5 && !this.isActive) ||
 			(!this.getItem().ignoreKlutz && this.hasAbility('klutz')) ||
-			this.volatiles['embargo'] || this.battle.field.pseudoWeather['magicroom']
+			this.volatiles['embargo'] || this.volatiles['sandbarrier'] || this.battle.field.pseudoWeather['magicroom']
 		);
 	}
 
