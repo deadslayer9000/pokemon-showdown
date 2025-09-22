@@ -207,6 +207,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Bulletproof",
 		shortDesc: "This Pokemon is immune to bullet moves.",
 	},
+	burnberserker: {
+		name: "Burn Berserker",
+		shortDesc: "This Pokemon gets Focus Energy after burning an oppoenent.",
+	},
 	breach: {
 		name: "Breach",
 		shortDesc: "On switch in, this pokemon clears hazards."
@@ -298,6 +302,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	conductor: {
 		name: "Conductor",
 		shortDesc: "Encore, Instruct, and Tailwind gain +1 priority.",
+	},
+	confusionconjurer: {
+		name: "Confusion Conjurer",
+		shortDesc: "This Pokemon's moves will always crit against confused targets.",
 	},
 	contrary: {
 		name: "Contrary",
@@ -691,6 +699,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 
 		activate: "  [TARGET]'s [MOVE] was revealed!",
 		activateNoTarget: "  [POKEMON]'s Forewarn alerted it to [MOVE]!",
+	},
+	freezefanatic: {
+		name: "Freeze Fanatic",
+		shortDesc: "Thaws out frozen oppoents and gets Focus Energy buff when it does so."
 	},
 	friendguard: {
 		name: "Friend Guard",
@@ -1100,6 +1112,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Long Reach",
 		shortDesc: "This Pokemon's attacks do not make contact with the target.",
 	},
+	malicemender: {
+		name: "Malice Mender",
+		shortDesc: "This Pokemon gets +1 Sp. Atk when it cures a status condition.",
+	},
 	magicbounce: {
 		name: "Magic Bounce",
 		desc: "This Pokemon is unaffected by certain non-damaging moves directed at it and will instead use such moves against the original user. Moves reflected in this way are unable to be reflected again by this or Magic Coat's effect. Spikes, Stealth Rock, Sticky Web, and Toxic Spikes can only be reflected once per side, by the leftmost Pokemon under this or Magic Coat's effect. The Lightning Rod and Storm Drain Abilities redirect their respective moves before this Ability takes effect.",
@@ -1399,6 +1415,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			desc: "This Pokemon cannot be confused. Gaining this Ability while confused cures it.",
 			shortDesc: "This Pokemon cannot be confused.",
 		},
+	},
+	paralysisphantom: {
+		name: "Paralysis Phantom",
+		shortDesc: "Supresses oppoenent's item after paralizing them.",
 	},
 	parasolprayer: {
 		name: "Parasol Prayer",
@@ -1949,6 +1969,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		gen4: {
 			desc: "This Pokemon's multi-hit attacks always hit the maximum number of times. Does not affect Triple Kick.",
 		},
+	},
+	sleepsentinel: {
+		name: "Sleep Sentinel",
+		shortDesc: "When this Pokemon is asleep, making contact with it deals damage to the attacker.",
 	},
 	slowstart: {
 		name: "Slow Start",
