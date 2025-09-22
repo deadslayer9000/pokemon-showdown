@@ -7271,17 +7271,19 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		accuracy: 100,
 		basePower: 200,
 		basePowerCallback(pokemon, target, move) {
-			let bp = 100;
 			if (pokemon.hp < (pokemon.maxhp / 2)) {
 				
-				this.hint(`${bp}`);
-				return bp;
+				//this.hint(pokemon.maxhp);
+				//this.hint(pokemon.hp);
+				return 100;
 			}
-			this.hint(`${bp}`);
+			//this.hint(pokemon.maxhp);
+			//this.hint(pokemon.hp);
+			return 200;
 		},
 		category: "Special",
 		name: "Fission Blast",
-		selfdestruct: "always",
+		selfdestruct: "ifHit",
 		pp: 5,
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
@@ -27555,10 +27557,31 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		priority: 0,
 		flags: { metronome: 1 },
 		selfSwitch: true,
-		onTry(source, target, move) {
+		onTryHit(source) {
+			if (!this.canSwitch(source.side)) {
+				this.attrLastMove("[still]");
+				this.add("-fail", source);
+				return this.NOT_FAIL;
+			}
+		},
+		/*onTry(source, target, move) {
 			this.hint("This move isnt fully implemented yet.");
 		},
-	
+		*/
+		slotCondition: 'streamshift',
+		condition: {
+			onSwitchIn(target) {
+				this.singleEvent("Swap", this.effect, this.effectState, target);
+			},
+			onSwap(target) {
+				if (
+					!target.fainted
+				) {
+					target.addVolatile('aquaring');
+					target.side.removeSlotCondition(target, "streamshift");
+				}
+			},
+		},
 		secondary: null,
 		target: "self",
 		type: "Water",
