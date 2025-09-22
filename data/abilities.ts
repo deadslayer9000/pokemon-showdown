@@ -9071,7 +9071,6 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 4,
 		num: -79,
 	},
-
 	fierytouch: {
 		onSourceDamagingHit(damage, target, source, move) {
 			if (this.checkMoveMakesContact(move, target, source)) {
@@ -9084,6 +9083,145 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		name: "Fiery Touch",
 		rating: 3,
 		num: -81,
+	},
+	burnberserker: {
+		onAnyAfterSetStatus(status, target, source, effect) {
+			if (
+				source !== this.effectState.target ||
+				target === source ||
+				effect.effectType !== "Move"
+			)
+				return;
+			if (status.id === "brn") {
+				source.addVolatile("focusenergy");
+				this.add("-activate", source, "ability: Burn Berserker");
+			}
+		},
+		flags: {
+			failroleplay: 1,
+			noreceiver: 1,
+			noentrain: 1,
+			notrace: 1,
+			failskillswap: 1,
+		},
+		name: "Burn Berserker",
+		rating: 3,
+		num: -82,
+	},
+	paralysisphantom: {
+		onAnyAfterSetStatus(status, target, source, effect) {
+			if (
+				source !== this.effectState.target ||
+				target === source ||
+				effect.effectType !== "Move"
+			)
+				return;
+			if (status.id === "par") {
+				target.addVolatile("embargo");
+				this.add("-activate", source, "ability: Paralysis Phantom");
+			}
+		},
+		flags: {
+			failroleplay: 1,
+			noreceiver: 1,
+			noentrain: 1,
+			notrace: 1,
+			failskillswap: 1,
+		},
+		name: "Paralysis Phantom",
+		rating: 3,
+		num: -83,
+	},
+	freezefanatic: {
+		onResidual(target, source, effect) {
+			for (const opponent of target.adjacentFoes()) {
+			if (opponent.status === "frz") {
+				opponent.clearStatus();
+				target.addVolatile("focusenergy");
+				this.add("-activate", target, "ability: Freeze Fanatic");
+			}}
+		},
+		flags: {
+			failroleplay: 1,
+			noreceiver: 1,
+			noentrain: 1,
+			notrace: 1,
+			failskillswap: 1,
+		},
+		name: "Freeze Fanatic",
+		rating: 3,
+		num: -84,
+	},
+	sleepsentinel: {
+		onDamagingHitOrder: 1,
+		onDamagingHit(damage, target, source, move) {
+			if (target.status === 'slp' && this.checkMoveMakesContact(move, source, target, true)) {
+				this.damage(source.baseMaxhp / 8, source, target);
+			}
+		},
+		flags: {},
+		name: "Sleep Sentinel",
+		rating: 3,
+		num: -85,
+	},
+	confusionconjurer: {
+		onModifyCritRatio(critRatio, source, target) {
+			if ((target && target.volatiles['confusion']))
+				return 5;
+		},
+		flags: {},
+		name: "Confusion Conjurer",
+		rating: 3,
+		num: -86,
+	},
+	malicemender: {
+		onPrepareHit(source, target, move) {
+			source.abilityState.maliceUsed = false;
+			let possibleTargets = source.allies();
+			let ally;
+			for ( ally of possibleTargets){ //this doesnt work idk why
+				if ( 
+					["slp", "frz", "par", "psn", "tox", "brn"].includes(ally.status) && 
+					source.abilityState.maliceUsed === false && 
+					(move.name==="Remedial Chain" || move.name==="Heal Bell" || move.name === "Aromatherapy")
+				){
+					source.abilityState.maliceUsed = true;
+					this.boost({ spa: 1 }, source);
+					this.add("-activate", source, "ability: Malice Mender");
+				}
+			}
+			if ( 
+				["slp", "frz", "par", "psn", "tox", "brn"].includes(target.status) && 
+				move.name === "Remedial Chain" && 
+				source.abilityState.maliceUsed === false
+			){
+					source.abilityState.maliceUsed = true;
+					this.boost({ spa: 1 }, source);
+					this.add("-activate", source, "ability: Malice Mender");
+			}
+		},/*
+		onAnyAfterSetStatus(status, target, source, effect) {
+			if (
+				source !== this.effectState.target ||
+				target === source ||
+				effect.effectType !== "Move"
+			)
+				return;
+			if (status.id === "") {
+				source.boosts.spa = 1;
+				this.add("-activate", source, "ability: Malice Mender");
+			}
+		},*/
+		flags: {
+			failroleplay: 1,
+			noreceiver: 1,
+			noentrain: 1,
+			notrace: 1,
+			failskillswap: 1,
+		},
+		name: "Malice Mender",
+		rating: 3,
+		num: -87,
 	},
 
 	// CAP
