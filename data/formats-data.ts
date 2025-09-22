@@ -6943,4 +6943,29 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 		doublesTier: "(DUU)",
 	},
+	rawstrunt: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
+	cherirunt: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
+	aspearunt: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
+	chestorunt: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
+	persimrunt: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
+	lumrunt: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
+
 };
