@@ -9045,10 +9045,10 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -80,
 	},
 	fierytouch: {
-		onHit(target, source, move) {
-			if (move.flags["contact"]) {
+		onSourceDamagingHit(damage, target, source, move) {
+			if (this.checkMoveMakesContact(move, target, source)) {
 				if (this.randomChance(3, 10)) {
-					target.trySetStatus("psn", source);
+					target.trySetStatus("brn", source);
 				}
 			}
 		},

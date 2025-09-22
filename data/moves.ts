@@ -27460,14 +27460,28 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		secondary: null,
 		target: "normal",
 		type: "Fire",
-		onBasePower(relayVar, source, target, move) {
-			if (source.hp < source.maxhp / 2) {
-				move.basePower === 100;
+		onTryHit(source, target, move) {
+			let bp = move.basePower;
+			if (source.hp < (source.maxhp / 2)) {
 				this.hint(`${source.name}'s Fission Blast was weakened due to its low HP.`);
-				
+				bp = bp/2;
+				this.hint(`${bp}`);
+				return bp;
 			}
-			this.hint(`${move.basePower}`);
-		},
+			this.hint(`${bp}`);
+			return bp;
+		},/*
+		basePowerCallback(source, target, move) {
+			let bp = move.basePower;
+			if (source.hp < (source.maxhp / 2)) {
+				this.hint(`${source.name}'s Fission Blast was weakened due to its low HP.`);
+				bp = bp/2;
+				this.hint(`${bp}`);
+				return bp;
+			}
+			this.hint(`${bp}`);
+			return bp;
+		},*/
 	},
 	streamshift: {
 		num: -97,
@@ -27585,12 +27599,21 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		target: "normal",
 		type: "Fire",
 		multihit: 2,
+		
+		basePowerCallback(source, target, move) {
+			if (target.status === 'brn') {
+				
+				this.hint(`${move.name}'s BP doubled on burned target.`);
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},/*
 		onBasePower(relayVar, source, target, move) {
 			if (target.status === 'brn') {
 				move.basePower*=2;
 				this.hint(`${source.name}'s Searing Claws doubled in power due to ${target.name} being burned!`);
 			}
-		},
+		},*/
 	},
 	solarflare: {
 		num: -100,
