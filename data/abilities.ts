@@ -9094,7 +9094,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				return;
 			if (status.id === "brn") {
 				source.addVolatile("focusenergy");
-				this.add("-activate", target, "ability: Burn Berserker");
+				this.add("-activate", source, "ability: Burn Berserker");
 			}
 		},
 		flags: {
@@ -9118,7 +9118,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				return;
 			if (status.id === "par") {
 				target.addVolatile("embargo");
-				this.add("-activate", target, "ability: Paralysis Phantom");
+				this.add("-activate", source, "ability: Paralysis Phantom");
 			}
 		},
 		flags: {
@@ -9134,11 +9134,12 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	freezefanatic: {
 		onResidual(target, source, effect) {
-			if (target.status === "frz") {
-				target.clearStatus();
-				source.addVolatile("focusenergy");
+			for (const opponent of target.adjacentFoes()) {
+			if (opponent.status === "frz") {
+				opponent.clearStatus();
+				target.addVolatile("focusenergy");
 				this.add("-activate", target, "ability: Freeze Fanatic");
-			}
+			}}
 		},
 		flags: {
 			failroleplay: 1,
@@ -9174,6 +9175,31 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -86,
 	},
 	malicemender: {
+		onPrepareHit(source, target, move) {
+			source.abilityState.maliceUsed = false;
+			let possibleTargets = source.allies();
+			let ally;
+			for ( ally of possibleTargets){ //this doesnt work idk why
+				if ( 
+					["slp", "frz", "par", "psn", "tox", "brn"].includes(ally.status) && 
+					source.abilityState.maliceUsed === false && 
+					(move.name==="Remedial Chain" || move.name==="Heal Bell" || move.name === "Aromatherapy")
+				){
+					source.abilityState.maliceUsed = true;
+					this.boost({ spa: 1 }, source);
+					this.add("-activate", source, "ability: Malice Mender");
+				}
+			}
+			if ( 
+				["slp", "frz", "par", "psn", "tox", "brn"].includes(target.status) && 
+				move.name === "Remedial Chain" && 
+				source.abilityState.maliceUsed === false
+			){
+					source.abilityState.maliceUsed = true;
+					this.boost({ spa: 1 }, source);
+					this.add("-activate", source, "ability: Malice Mender");
+			}
+		},/*
 		onAnyAfterSetStatus(status, target, source, effect) {
 			if (
 				source !== this.effectState.target ||
@@ -9183,9 +9209,9 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				return;
 			if (status.id === "") {
 				source.boosts.spa = 1;
-				this.add("-activate", target, "ability: Malice Mender");
+				this.add("-activate", source, "ability: Malice Mender");
 			}
-		},
+		},*/
 		flags: {
 			failroleplay: 1,
 			noreceiver: 1,
