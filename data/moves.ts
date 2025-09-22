@@ -7271,10 +7271,13 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		accuracy: 100,
 		basePower: 200,
 		basePowerCallback(pokemon, target, move) {
+			let bp = 100;
 			if (pokemon.hp < (pokemon.maxhp / 2)) {
-				let bp = 100;
+				
+				this.hint(`${bp}`);
 				return bp;
 			}
+			this.hint(`${bp}`);
 		},
 		category: "Special",
 		name: "Fission Blast",
@@ -27505,7 +27508,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		type: "Ground",
 		zMove: { boost: { def: 1 } },
 		contestType: "Tough",
-	},
+	},/*
 	fissionblast: {
 		num: -96,
 		accuracy: 100,
@@ -27541,7 +27544,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			this.hint(`${bp}`);
 			return bp;
 		},*/
-	},
+	
 	streamshift: {
 		num: -97,
 		accuracy: true,

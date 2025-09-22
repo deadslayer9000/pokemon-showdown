@@ -9071,17 +9071,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 4,
 		num: -79,
 	},
-	sanddweller: {
-		onResidual(target, source, effect) {
-			if (this.field.isWeather("sandstorm")) {
-				this.heal(target.baseMaxhp / 16);
-			}
-		},
-		flags: {},
-		name: "Sand Dweller",
-		rating: 3,
-		num: -80,
-	},
+
 	fierytouch: {
 		onSourceDamagingHit(damage, target, source, move) {
 			if (this.checkMoveMakesContact(move, target, source)) {
