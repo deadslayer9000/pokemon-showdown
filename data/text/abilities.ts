@@ -936,7 +936,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	infernalwebs: {
 		name: "Infernal Webs",
-		shortDesc: "Traps and burns opponents that switch in webs.";
+		shortDesc: "Traps and burns opponents that switch in webs.",
 	},
 	infiltrator: {
 		name: "Infiltrator",
