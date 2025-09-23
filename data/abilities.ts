@@ -9226,14 +9226,22 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -87,
 	},
 	infernalwebs: {
-		onSwitchIn(pokemon) {
-			if (
-				pokemon.isGrounded() ||
-				!pokemon.hasItem("heavydutyboots") ||
-				!pokemon.hasAbility("Breach")
-			){
-				pokemon.addVolatile("partiallytrapped");
-				pokemon.trySetStatus("brn");
+		onFoeTrapPokemon(pokemon) {
+			
+			let foes = pokemon.adjacentFoes();
+			let foe;
+			for (foe of foes){		
+				if (
+					pokemon.isGrounded() &&
+					!pokemon.hasItem("heavydutyboots") &&
+					!pokemon.hasAbility("Breach") &&
+					pokemon.side.getSideCondition("Sticky Web") &&
+					!pokemon.activeTurns
+				){
+					this.add("-activate", foe, "ability: Infernal Webs");
+					pokemon.tryTrap(true);
+					pokemon.trySetStatus("brn"); // this one puts wrong ability on oppoenent
+				}
 			}
 		},
 		name: "Infernal Webs",
