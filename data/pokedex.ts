@@ -24398,6 +24398,8 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		//color: "Red",
 		evos: ["Galvantula-Delta"],
 		eggGroups: ["Bug"],
+		forme: "Delta",
+		baseSpecies: "Joltik",
 	},
 	galvantuladelta: {
 		num: 596,
@@ -24410,6 +24412,8 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		//color: "Red",
 		prevo: "Joltik-Delta",
 		eggGroups: ["Bug"],
+		forme: "Delta",
+		baseSpecies: "Galvantula",
 	},
 	litwickdelta: {
 		num: 607,
@@ -24422,6 +24426,8 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		//color: "Brown",
 		evos: ["Lampent-Delta"],
 		eggGroups: ["Amorphous"],
+		forme: "Delta",
+		baseSpecies: "Litwick",
 	},
 	lampentdelta: {
 		num: 607,
@@ -24435,6 +24441,8 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		prevo: "Litwick-Delta",
 		evos: ["Chandelure-Delta"],
 		eggGroups: ["Amorphous"],
+		forme: "Delta",
+		baseSpecies: "Lampent",
 	},
 	chandeluredelta: {
 		num: 607,
@@ -24447,6 +24455,8 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		//color: "Brown",
 		prevo: "Lampent-Delta",
 		eggGroups: ["Amorphous"],
+		forme: "Delta",
+		baseSpecies: "Chandelure",
 	},
 
 };

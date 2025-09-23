@@ -6967,5 +6967,25 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 		doublesTier: "(DUU)",
 	},
+	litwickdelta: {
+		tier: "LC",
+		doublesTier: "LC",
+	},
+	lampentdelta: {
+		tier: "NFE",
+		doublesTier: "NFE",
+	},
+	chandeluredelta: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
+	joltikdelta: {
+		tier: "LC",
+		doublesTier: "LC",
+	},
+	galvantuladelta: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
 
 };
