@@ -4132,7 +4132,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
 			return true;
 		},
-		num: -3,
+		num: -23,
 	},
 	manectite: {
 		name: "Manectite",
@@ -5914,6 +5914,20 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		num: 212,
 		gen: 4,
 	},
+	rubydiancite: {
+		name: "Ruby Diancite",
+		spritenum: 624,
+		megaStone: "Diancie-Ruby-Mega",
+		megaEvolves: "Diancie-Ruby",
+		itemUser: ["Diancie-Ruby"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -24,
+		gen: 6,
+		isNonstandard: "Past",
+	},
 	rustedshield: {
 		name: "Rusted Shield",
 		spritenum: 699,
@@ -6045,6 +6059,20 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 			return true;
 		},
 		num: 769,
+		gen: 6,
+		isNonstandard: "Past",
+	},
+	sapphirediancite: {
+		name: "Sapphire Diancite",
+		spritenum: 624,
+		megaStone: "Diancie-Sapphire-Mega",
+		megaEvolves: "Diancie-Sapphire",
+		itemUser: ["Diancie-Sapphire"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -25,
 		gen: 6,
 		isNonstandard: "Past",
 	},
