@@ -27492,14 +27492,24 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					}
 				}
 				if (this.checkMoveMakesContact(move, source, target)) {
-					this.add("-start", source, "Embargo");
+					/*this.add("-start", source, "Embargo");
 					this.singleEvent(
 						"End",
 						source.getItem(),
 						source.itemState,
 						source
 					);
-					source.addVolatile("embargo");
+					source.addVolatile("embargo");*/
+					const item = source.getItem();
+					if (item) {
+					this.add(
+						"-enditem",
+						source,
+						item.name,
+						"[from] move: Sand Barrier",
+						`[of] ${target}`
+					);
+				}
 				}
 				return this.NOT_FAIL;
 			},
