@@ -9177,7 +9177,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	malicemender: {
 		onPrepareHit(source, target, move) {
 			source.abilityState.maliceUsed = false;
-			let possibleTargets = source.allies();
+			let possibleTargets = source.side.pokemon;
 			let ally;
 			for ( ally of possibleTargets){ //this doesnt work idk why
 				if ( 
