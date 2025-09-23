@@ -9225,6 +9225,21 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 3,
 		num: -87,
 	},
+	infernalwebs: {
+		onSwitchIn(pokemon) {
+			if (
+				pokemon.isGrounded() ||
+				!pokemon.hasItem("heavydutyboots") ||
+				!pokemon.hasAbility("Breach")
+			){
+				pokemon.addVolatile("partiallytrapped");
+				pokemon.trySetStatus("brn");
+			}
+		},
+		name: "Infernal Webs",
+		rating: 2,
+		num: -88,
+	},
 
 	// CAP
 	mountaineer: {
