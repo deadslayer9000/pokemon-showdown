@@ -9177,17 +9177,15 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	malicemender: {
 		onPrepareHit(source, target, move) {
 			source.abilityState.maliceUsed = false;
-			let possibleTargets = source.allies();
+			let possibleTargets = source.side.pokemon;
 			let ally;
-			for ( ally of possibleTargets){ //this doesnt work idk why
+			for (ally of possibleTargets){ //store the malice state here
 				if ( 
 					["slp", "frz", "par", "psn", "tox", "brn"].includes(ally.status) && 
 					source.abilityState.maliceUsed === false && 
 					(move.name==="Remedial Chain" || move.name==="Heal Bell" || move.name === "Aromatherapy")
 				){
 					source.abilityState.maliceUsed = true;
-					this.boost({ spa: 1 }, source);
-					this.add("-activate", source, "ability: Malice Mender");
 				}
 			}
 			if ( 
@@ -9196,15 +9194,19 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				source.abilityState.maliceUsed === false
 			){
 					source.abilityState.maliceUsed = true;
-					this.boost({ spa: 1 }, source);
-					this.add("-activate", source, "ability: Malice Mender");
+			}
+		},
+		onAfterMove(source, move) { //drop payload here
+		if (source.abilityState.maliceUsed = true) {
+			this.boost({ spa: 1}, source);
+			this.add("-activate", source, "ability: Malice Mender");
 			}
 		},/*
 		onAnyAfterSetStatus(status, target, source, effect) {
 			if (
 				source !== this.effectState.target ||
 				target === source ||
-				effect.effectType !== "Move"
+				effect.effectType !== "Move"p
 			)
 				return;
 			if (status.id === "") {
