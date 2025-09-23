@@ -24430,7 +24430,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		baseSpecies: "Litwick",
 	},
 	lampentdelta: {
-		num: 607,
+		num: 608,
 		name: "Lampent-Delta",
 		types: ["Ghost", "Electric"],
 		baseStats: {hp: 60, atk: 35, def: 55, spa: 80, spd: 65, spe: 75 },
@@ -24445,7 +24445,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		baseSpecies: "Lampent",
 	},
 	chandeluredelta: {
-		num: 607,
+		num: 609,
 		name: "Chandelure-Delta",
 		types: ["Ghost", "Electric"],
 		baseStats: {hp: 60, atk: 50, def: 75, spa: 115, spd: 115, spe: 105 },
