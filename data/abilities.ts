@@ -9225,6 +9225,28 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 3,
 		num: -87,
 	},
+	infernalwebs: {
+		onFoeTrapPokemon(pokemon) {
+			
+			let foes = pokemon.adjacentFoes();
+			let foe;
+			for (foe of foes){		
+				if (
+					pokemon.isGrounded() &&
+					!pokemon.hasItem("heavydutyboots") &&
+					!pokemon.hasAbility("Breach") &&
+					pokemon.side.getSideCondition("Sticky Web") &&
+					!pokemon.activeTurns
+				){
+					pokemon.tryTrap(true);
+					pokemon.trySetStatus("brn", foe);
+				}
+			}
+		},
+		name: "Infernal Webs",
+		rating: 2,
+		num: -88,
+	},
 
 	// CAP
 	mountaineer: {

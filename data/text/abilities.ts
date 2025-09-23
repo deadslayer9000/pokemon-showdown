@@ -934,6 +934,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "On switch-in, this Pokemon Transforms into the opposing Pokemon that is facing it. If there is no Pokemon at that position, this Pokemon does not Transform.",
 		shortDesc: "On switch-in, this Pokemon Transforms into the opposing Pokemon that is facing it.",
 	},
+	infernalwebs: {
+		name: "Infernal Webs",
+		shortDesc: "Traps and burns opponents that switch in webs.",
+	},
 	infiltrator: {
 		name: "Infiltrator",
 		desc: "This Pokemon's moves ignore substitutes and the opposing side's Reflect, Light Screen, Safeguard, Mist, and Aurora Veil.",
