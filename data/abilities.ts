@@ -9041,10 +9041,16 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				let activated = false;
 				for (const target of pokemon.adjacentFoes()) {
 					if (!activated) {
-						this.add("-activate", "ability: Tide Sigil", pokemon);
+						this.add(
+							"-activate",
+							pokemon,
+							"ability: Tide Sigil",
+							"[from] ability: Tide Sigil",
+							"[of] " + pokemon
+						);
 						activated = true;
+						target.addVolatile("encore", pokemon);
 					}
-					target.addVolatile("encore", pokemon);
 				}
 			}
 		},
@@ -9059,7 +9065,13 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				let activated = false;
 				for (const target of pokemon.adjacentFoes()) {
 					if (!activated) {
-						this.add("-activate", "ability: Grim Sigil", pokemon);
+						this.add(
+							"-activate",
+							pokemon,
+							"ability: Grim Sigil",
+							"[from] ability: Grim Sigil",
+							"[of] " + pokemon
+						);
 						activated = true;
 					}
 					target.addVolatile("disable", pokemon);
@@ -9224,6 +9236,28 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		name: "Malice Mender",
 		rating: 3,
 		num: -87,
+	},
+	infernalwebs: {
+		onFoeTrapPokemon(pokemon) {
+			
+			let foes = pokemon.adjacentFoes();
+			let foe;
+			for (foe of foes){		
+				if (
+					pokemon.isGrounded() &&
+					!pokemon.hasItem("heavydutyboots") &&
+					!pokemon.hasAbility("Breach") &&
+					pokemon.side.getSideCondition("Sticky Web") &&
+					!pokemon.activeTurns
+				){
+					pokemon.tryTrap(true);
+					pokemon.trySetStatus("brn", foe);
+				}
+			}
+		},
+		name: "Infernal Webs",
+		rating: 2,
+		num: -88,
 	},
 
 	// CAP
