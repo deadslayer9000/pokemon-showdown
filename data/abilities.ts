@@ -9238,9 +9238,8 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 					pokemon.side.getSideCondition("Sticky Web") &&
 					!pokemon.activeTurns
 				){
-					this.add("-activate", foe, "ability: Infernal Webs");
 					pokemon.tryTrap(true);
-					pokemon.trySetStatus("brn"); // this one puts wrong ability on oppoenent
+					pokemon.trySetStatus("brn", foe);
 				}
 			}
 		},
