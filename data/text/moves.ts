@@ -6463,7 +6463,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	solarflare: {
 		name: "Solar Flare",
-		shortDesc: "Will always crit",
+		shortDesc: "Always lands a critical hit.",
 	},
 	sonicboom: {
 		name: "Sonic Boom",
