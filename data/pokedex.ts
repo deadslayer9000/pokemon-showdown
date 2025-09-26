@@ -22524,6 +22524,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	garchompdelta: {
 		num: 445,
 		name: "Garchomp-Delta",
+		baseSpecies: "Garchomp",
 		types: ["Dragon", "Ice"],
 		baseStats: { hp: 94, atk: 85, def: 95, spa: 120, spd: 100, spe: 106 },
 		weightkg: 87,
@@ -22536,6 +22537,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	gabitedelta: {
 		num: 444,
 		name: "Gabite-Delta",
+		baseSpecies: "Gabite",
 		types: ["Dragon", "Ice"],
 		baseStats: { hp: 68, atk: 55, def: 52, spa: 85, spd: 80, spe: 70 },
 		weightkg: 47,
@@ -22549,6 +22551,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	gibledelta: {
 		num: 443,
 		name: "Gible-Delta",
+		baseSpecies: "Gible",
 		types: ["Dragon", "Ice"],
 		baseStats: { hp: 58, atk: 45, def: 50, spa: 60, spd: 50, spe: 37 },
 		weightkg: 19.5,
