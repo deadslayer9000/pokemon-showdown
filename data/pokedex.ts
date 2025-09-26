@@ -24232,7 +24232,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		types: ["Psychic"],
 		gender: "N",
 		baseStats: { hp: 50, atk: 80, def: 100, spa: 150, spd: 150, spe: 50 },
-		abilities: { 0: "Telepathy", H: "Mind Drive" },
+		abilities: { 0: "Telepathy", H: "Mind Dive" },
 		heightm: 1.8,
 		weightkg: 95,
 		//color: "Pink",
