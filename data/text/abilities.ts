@@ -1193,6 +1193,11 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 
 		activate: "  [POKEMON] returned to its original type!",
 	},
+	minddive: {
+		name: "Mind Dive",
+		shortDesc: "Shudders if the opposing Pokemon has a super-effective move and raises SpD by 1 stage.",
+		desc: "On switch-in, if the opposing Pokemon has a move that is super-effective against this Pokemon, this Pokemon will shudder in anticipation",
+	},
 	mindseye: {
 		name: "Mind's Eye",
 		desc: "This Pokemon can hit Ghost types with Normal- and Fighting-type moves. Prevents other Pokemon from lowering this Pokemon's accuracy stat stage. This Pokemon ignores a target's evasiveness stat stage.",
