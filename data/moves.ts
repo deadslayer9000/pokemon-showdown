@@ -3423,12 +3423,12 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		target: "allAdjacent",
 		type: "Water",
 	},
-	cognitionblast: {
+	cogniblast: {
 		num: -101,
 		accuracy: 100,
 		basePower: 250,
 		category: "Special",
-		name: "Cognition Blast",
+		name: "Cogniblast",
 		pp: 5,
 		priority: 0,
 		flags: { metronome: 1, protect: 1, mirror: 1},
