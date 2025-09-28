@@ -3454,18 +3454,23 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			this.field.addPseudoWeather("echoedvoice");
 		},
 		condition: {
-			duration: 2,
-			onFieldStart() {
-				this.effectState.multiplier = 0;
-			},
+			duration: 255,
+			
 			onFieldRestart() {
-				if (this.effectState.duration !== 2) {
-					this.effectState.duration = 2;
-					if (this.effectState.multiplier < 4) {
+				if (this.effectState.duration !== 255) {
+					this.effectState.duration = 255;
+					if (this.effectState.multiplier < 8) {
 						this.effectState.multiplier++;
 					}
 				}
 			},
+		},
+		
+		onHit(target, source, move) {
+			let counter = this.field.pseudoWeather.echoedvoice.multiplier;
+			if(counter > 1){
+				source.deductPP(move.id, counter-1);
+			}
 		},
 
 	},
