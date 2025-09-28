@@ -3454,7 +3454,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			this.field.addPseudoWeather("echoedvoice");
 		},
 		condition: {
-			duration: 255,
+			duration: 255, //was 2, 255 was an attempt to make it work on switchouts
 			
 			onFieldRestart() {
 				if (this.effectState.duration !== 255) {
