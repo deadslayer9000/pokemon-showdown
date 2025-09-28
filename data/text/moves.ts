@@ -1052,6 +1052,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		shortDesc: "1.5x BP if asleep. Removes sleep. 20% burn.",
 		desc: "This move can be used while the user is asleep; if used while user is asleep, this move does 1.5x damage. On hit, this move wakes up the user and the target if they are asleep. 20% chance to burn on hit, and hits all adjacent pokemon.",
 	},
+	cogniblast: {
+		name: "Cogniblast",
+		shortDesc: "Hits adjacent foes. User faints.",
+	},
 	coil: {
 		name: "Coil",
 		desc: "Raises the user's Attack, Defense, and accuracy by 1 stage.",
@@ -6463,7 +6467,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	solarflare: {
 		name: "Solar Flare",
-		shortDesc: "Will always crit",
+		shortDesc: "Always lands a critical hit.",
 	},
 	sonicboom: {
 		name: "Sonic Boom",

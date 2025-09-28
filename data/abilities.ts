@@ -9218,7 +9218,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			if (
 				source !== this.effectState.target ||
 				target === source ||
-				effect.effectType !== "Move"p
+				effect.effectType !== "Move"
 			)
 				return;
 			if (status.id === "") {
