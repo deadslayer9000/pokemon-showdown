@@ -9264,6 +9264,16 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 2,
 		num: -88,
 	},
+	redress: {
+		onDamagingHit(damage, target, source, move) {
+			if (move.type === "Dark") {
+				this.boost({ spe: 1 });
+			}
+		},
+		name: "Redress",
+		rating: 2.5,
+		num: -89,
+	},
 
 	// CAP
 	mountaineer: {
