@@ -1054,7 +1054,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	cogniblast: {
 		name: "Cogniblast",
-		shortDesc: "Hits adjacent foes. User faints.",
+		shortDesc: "Gains 45 base power each consecutive use.",
 	},
 	coil: {
 		name: "Coil",
