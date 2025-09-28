@@ -6987,5 +6987,17 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 		doublesTier: "(DUU)",
 	},
+	viriziondelta: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
+	cobaliondelta: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
+	terrakiondelta: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
 
 };
