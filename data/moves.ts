@@ -3426,16 +3426,48 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	cogniblast: {
 		num: -101,
 		accuracy: 100,
-		basePower: 250,
+		basePower: 45,
 		category: "Special",
 		name: "Cogniblast",
 		pp: 5,
 		priority: 0,
 		flags: { metronome: 1, protect: 1, mirror: 1},
 		secondary: null,
-		target: 'allAdjacent',
-		selfdestruct: 'always',
+		target: 'normal',
 		type: "Psychic",
+		
+		basePowerCallback(pokemon, target, move) {
+			let bp = move.basePower;
+			if (this.field.pseudoWeather.echoedvoice) {
+				bp =
+					move.basePower +
+					45 * this.field.pseudoWeather.echoedvoice.multiplier -
+					45;
+				this.hint(`Cogniblast hit with ${bp} BP`);
+				return bp;
+			}
+
+			return bp;
+		},
+		
+		onTry() {
+			this.field.addPseudoWeather("echoedvoice");
+		},
+		condition: {
+			duration: 2,
+			onFieldStart() {
+				this.effectState.multiplier = 0;
+			},
+			onFieldRestart() {
+				if (this.effectState.duration !== 2) {
+					this.effectState.duration = 2;
+					if (this.effectState.multiplier < 4) {
+						this.effectState.multiplier++;
+					}
+				}
+			},
+		},
+
 	},
 	coil: {
 		num: 489,
