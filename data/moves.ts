@@ -27333,16 +27333,22 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		secondary: null,
 		target: "normal",
 		onHit(target, source, move) {
-			this.add("-activate", source, "move: Remedial Chain");
+			
 			let success = false;
 			const allies = [
 				...source.side.pokemon,
 				...(source.side.allySide?.pokemon || []),
 			];
 			for (const ally of allies) {
-				if (ally.cureStatus()) success = true;
+				if (ally.cureStatus()){
+					success = true;	
+					this.add("-activate", source, "move: Remedial Chain");
+				} 
 			}
-			if (target.cureStatus()) success = true;
+			if (target.cureStatus()) {
+				success = true;
+				this.add("-activate", source, "move: Remedial Chain");
+			}
 			return success;
 			
 		},

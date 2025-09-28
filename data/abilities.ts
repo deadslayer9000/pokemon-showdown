@@ -9187,8 +9187,9 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -86,
 	},
 	malicemender: {
-		onPrepareHit(source, target, move) {
+		onBeforeMove(source, target, move) {
 			source.abilityState.maliceUsed = false;
+			
 			let possibleTargets = source.side.pokemon;
 			let ally;
 			for (ally of possibleTargets){ //store the malice state here
@@ -9198,6 +9199,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 					(move.name==="Remedial Chain" || move.name==="Heal Bell" || move.name === "Aromatherapy")
 				){
 					source.abilityState.maliceUsed = true;
+					
 				}
 			}
 			if ( 
@@ -9206,12 +9208,15 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				source.abilityState.maliceUsed === false
 			){
 					source.abilityState.maliceUsed = true;
+					
 			}
 		},
 		onAfterMove(source, move) { //drop payload here
-		if (source.abilityState.maliceUsed = true) {
+		if (source.abilityState.maliceUsed === true) {
+			
 			this.boost({ spa: 1}, source);
-			this.add("-activate", source, "ability: Malice Mender");
+			//this.add("-activate", source, "ability: Malice Mender");
+			source.abilityState.maliceUsed = false;
 			}
 		},/*
 		onAnyAfterSetStatus(status, target, source, effect) {
