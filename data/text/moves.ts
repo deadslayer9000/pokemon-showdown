@@ -3186,7 +3186,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	heatsiphon: {
 		name: "Heat Siphon",
 		desc: "Cures the foe's status and clears their boosts. Heals the user based on the foe's attack stat. Fails if the target pokemon isn't burned.",
-		shortDesc: "Clears foe status and boosts. Heals the user.",
+		shortDesc: "If Foe is burned, clears status & boosts. User Healed.",
 	},
 	heatwave: {
 		name: "Heat Wave",
