@@ -9145,10 +9145,12 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -83,
 	},
 	freezefanatic: {
+		onResidualOrder: 6,
+		onResidualSubOrder: 2,
 		onResidual(target, source, effect) {
 			for (const opponent of target.adjacentFoes()) {
 			if (opponent.status === "frz") {
-				opponent.clearStatus();
+				opponent.cureStatus();
 				target.addVolatile("focusenergy");
 				this.add("-activate", target, "ability: Freeze Fanatic");
 			}}
