@@ -5426,13 +5426,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	poisonheal: {
 		onDamagePriority: 1,
 		onDamage(damage, target, source, effect) {
-			if (
-				(effect.id === "psn" || effect.id === "tox") &&
-				this.field.isTerrain("corrosiveterrain")
-			) {
-				this.heal(target.baseMaxhp / 6);
-				return false;
-			} else if (effect.id === "psn" || effect.id === "tox") {
+			if (effect.id === "psn" || effect.id === "tox") {
 				this.heal(target.baseMaxhp / 8);
 				return false;
 			}
@@ -8137,8 +8131,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		onBasePower(basePower, attacker, defender, move) {
 			if (
 				(attacker.status === "psn" ||
-					attacker.status === "tox" ||
-					this.field.isTerrain("corrosiveterrain")) &&
+					attacker.status === "tox") &&
 				move.category === "Physical"
 			) {
 				return this.chainModify(1.5);
@@ -8154,12 +8147,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			// Despite not being a secondary, Shield Dust / Covert Cloak block Toxic Chain's effect
 			if (target.hasAbility("shielddust") || target.hasItem("covertcloak"))
 				return;
-			if (
-				this.field.isTerrain("corrosiveterrain") &&
-				this.randomChance(6, 10)
-			) {
-				target.trySetStatus("tox", source);
-			} else if (this.randomChance(3, 10)) {
+			if (this.randomChance(3, 10)) {
 				target.trySetStatus("tox", source);
 			}
 		},
@@ -9198,11 +9186,19 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				if ( 
 					["slp", "frz", "par", "psn", "tox", "brn"].includes(ally.status) && 
 					source.abilityState.maliceUsed === false && 
-					(move.name==="Remedial Chain" || move.name==="Heal Bell" || move.name === "Aromatherapy")
+					(move.name==="Heal Bell" || move.name === "Aromatherapy")
 				){
 					source.abilityState.maliceUsed = true;
 					
 				}
+			}
+			if ( 
+				["slp", "frz", "par", "psn", "tox", "brn"].includes(source.status) && 
+				move.name === "Remedial Chain" && 
+				source.abilityState.maliceUsed === false
+			){
+					source.abilityState.maliceUsed = true;
+					
 			}
 			if ( 
 				["slp", "frz", "par", "psn", "tox", "brn"].includes(target.status) && 
