@@ -5539,8 +5539,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	remedialchain: {
 		name: "Remedial Chain",
-		desc: "Cures status of all allies and the opponent.",
-		shortDesc: "Cures status of allies and the oppoenent.",
+		desc: "Cures status of the user and the opponent.",
+		shortDesc: "Cures status of the user and the oppoenent.",
 	},
 	retribution: {
 		name: "Retribution",

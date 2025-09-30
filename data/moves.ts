@@ -8014,12 +8014,12 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 						pokemon.abilityState.foamfrenzy = true;
 					}
 				}
-			}
+			}/*
 			if (pokemon.abilityState.foamfrenzy) {
 				pokemon.abilityState.foamfrenzy = false;
 				this.boost({ spa: 1 }, pokemon, pokemon, move);
 				this.hint(`Foam Frenzy boosted ${pokemon.name}'s Special Attack!`);
-			}
+			}*/
 		},
 		onAfterSubDamage(damage, target, pokemon, move) {
 			if (!move.hasSheerForce) {
@@ -8043,11 +8043,12 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					}
 				}
 			}
+			/*
 			if (pokemon.abilityState.foamfrenzy) {
 				pokemon.abilityState.foamfrenzy = false;
 				this.boost({ spa: 1 }, pokemon, pokemon, move);
 				this.hint(`Foam Frenzy boosted ${pokemon.name}'s Special Attack!`);
-			}
+			}*/
 		},
 		target: "allAdjacentFoes",
 		type: "Water",
@@ -17038,7 +17039,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		},
 		secondary: null,
 		target: "normal",
-		type: "Rock",
+		type: "Ground",
 	},
 	plasmafists: {
 		num: 721,
@@ -27372,6 +27373,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		onHit(target, source, move) {
 			
 			let success = false;
+			/*
 			const allies = [
 				...source.side.pokemon,
 				...(source.side.allySide?.pokemon || []),
@@ -27381,6 +27383,11 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					success = true;	
 					this.add("-activate", source, "move: Remedial Chain");
 				} 
+			}
+				*/
+			if (source.cureStatus()) {
+				success = true;
+				this.add("-activate", source, "move: Remedial Chain");
 			}
 			if (target.cureStatus()) {
 				success = true;
