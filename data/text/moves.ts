@@ -5902,7 +5902,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	searingclaws: {
 		name: "Searing Claws",
-		shortDesc: "Power doubles on burned targets.",
+		shortDesc: "Doubled power on burned target. Hits twice.",
 	},
 	searingchain: {
 		name: "Searing Chain",
