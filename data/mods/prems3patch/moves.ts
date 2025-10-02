@@ -91,7 +91,7 @@ primedcurrent: {
         status: 'par',
     },
 },
-planetdemoliton: {
+planetdemolition: {
 	num: -42,
 		accuracy: 100,
 		basePower: 120,
