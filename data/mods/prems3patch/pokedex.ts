@@ -23,7 +23,7 @@ golurkdelta: {
     inherit: true,
     baseStats: { hp :79, atk: 134, def: 80, spa: 65, spd: 60, spe: 65},
 },
-mespritedelta: {
+mespritdelta: {
     inherit: true,
     baseStats: { hp: 80, atk: 100, def: 100, spa: 100, spd: 100, spe: 100 },
 },
