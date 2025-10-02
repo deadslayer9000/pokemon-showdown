@@ -41,6 +41,6 @@ glimmoradelta: {
 },
 yanmellia: {
     inherit: true,
-    baseStats: { hp: 98, atk: 91, def: 71, spa: 70, spd: 105, spe: 80 },
+    baseStats: { hp: 98, atk: 91, def: 71, spa: 70, spd: 110, spe: 75 },
 },
 };
