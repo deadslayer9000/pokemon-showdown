@@ -91,4 +91,67 @@ primedcurrent: {
         status: 'par',
     },
 },
+planetdemoliton: {
+	inherit: true,
+	type: "Rock",
+},
+foamfrenzy: {
+	inherit: true,
+	onAfterHit(target, pokemon, move) {
+			if (!move.hasSheerForce) {
+				const sideConditions = [
+					"spikes",
+					"toxicspikes",
+					"stealthrock",
+					"stickyweb",
+					"gmaxsteelsurge",
+				];
+				for (const condition of sideConditions) {
+					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+						this.add(
+							"-sideend",
+							pokemon.side,
+							this.dex.conditions.get(condition).name,
+							"[from] move: Foam Frenzy",
+							`[of] ${pokemon}`
+						);
+						pokemon.abilityState.foamfrenzy = true;
+					}
+				}
+			}
+			if (pokemon.abilityState.foamfrenzy) {
+				pokemon.abilityState.foamfrenzy = false;
+				this.boost({ spa: 1 }, pokemon, pokemon, move);
+				this.hint(`Foam Frenzy boosted ${pokemon.name}'s Special Attack!`);
+			}
+		},
+		onAfterSubDamage(damage, target, pokemon, move) {
+			if (!move.hasSheerForce) {
+				const sideConditions = [
+					"spikes",
+					"toxicspikes",
+					"stealthrock",
+					"stickyweb",
+					"gmaxsteelsurge",
+				];
+				for (const condition of sideConditions) {
+					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+						this.add(
+							"-sideend",
+							pokemon.side,
+							this.dex.conditions.get(condition).name,
+							"[from] move: Foam Frenzy",
+							`[of] ${pokemon}`
+						);
+						pokemon.abilityState.foamfrenzy = true;
+					}
+				}
+			}
+			if (pokemon.abilityState.foamfrenzy) {
+				pokemon.abilityState.foamfrenzy = false;
+				this.boost({ spa: 1 }, pokemon, pokemon, move);
+				this.hint(`Foam Frenzy boosted ${pokemon.name}'s Special Attack!`);
+			}
+		},
+},
 };
