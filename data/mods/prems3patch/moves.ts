@@ -91,4 +91,82 @@ primedcurrent: {
         status: 'par',
     },
 },
+planetdemolition: {
+	num: -42,
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		name: "Planet Demolition",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, bullet: 1 },
+		self: {
+			boosts: {
+				atk: -1,
+				def: -1,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Rock",
+},
+foamfrenzy: {
+	inherit: true,
+	onAfterHit(target, pokemon, move) {
+			if (!move.hasSheerForce) {
+				const sideConditions = [
+					"spikes",
+					"toxicspikes",
+					"stealthrock",
+					"stickyweb",
+					"gmaxsteelsurge",
+				];
+				for (const condition of sideConditions) {
+					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+						this.add(
+							"-sideend",
+							pokemon.side,
+							this.dex.conditions.get(condition).name,
+							"[from] move: Foam Frenzy",
+							`[of] ${pokemon}`
+						);
+						pokemon.abilityState.foamfrenzy = true;
+					}
+				}
+			}
+			if (pokemon.abilityState.foamfrenzy) {
+				pokemon.abilityState.foamfrenzy = false;
+				this.boost({ spa: 1 }, pokemon, pokemon, move);
+				this.hint(`Foam Frenzy boosted ${pokemon.name}'s Special Attack!`);
+			}
+		},
+		onAfterSubDamage(damage, target, pokemon, move) {
+			if (!move.hasSheerForce) {
+				const sideConditions = [
+					"spikes",
+					"toxicspikes",
+					"stealthrock",
+					"stickyweb",
+					"gmaxsteelsurge",
+				];
+				for (const condition of sideConditions) {
+					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+						this.add(
+							"-sideend",
+							pokemon.side,
+							this.dex.conditions.get(condition).name,
+							"[from] move: Foam Frenzy",
+							`[of] ${pokemon}`
+						);
+						pokemon.abilityState.foamfrenzy = true;
+					}
+				}
+			}
+			if (pokemon.abilityState.foamfrenzy) {
+				pokemon.abilityState.foamfrenzy = false;
+				this.boost({ spa: 1 }, pokemon, pokemon, move);
+				this.hint(`Foam Frenzy boosted ${pokemon.name}'s Special Attack!`);
+			}
+		},
+},
 };
