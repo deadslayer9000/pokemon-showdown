@@ -7007,5 +7007,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 		doublesTier: "(DUU)",
 	},
+	volcaniondelta: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
 
 };
