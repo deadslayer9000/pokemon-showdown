@@ -997,4 +997,9 @@ diancette: {
 			wish: ["9L32"],
 		}
 	},
+	ironbundle {
+		learnset: {
+
+		}
+	}
 }
