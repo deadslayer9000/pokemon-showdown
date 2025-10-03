@@ -1186,6 +1186,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Merciless",
 		shortDesc: "This Pokemon's attacks are critical hits if the target is poisoned.",
 	},
+	miazmaspit: {
+		name: "Miazma Spit",
+		shortDesc: "When this Pokemon is hit by an attack, the effect of Corrosive Terrain begins.",
+	},
 	mimicry: {
 		name: "Mimicry",
 		desc: "This Pokemon's types change to match the active Terrain when this Pokemon acquires this Ability, or whenever a Terrain begins. Electric type during Electric Terrain, Grass type during Grassy Terrain, Fairy type during Misty Terrain, and Psychic type during Psychic Terrain. If this Ability is acquired without an active Terrain, or a Terrain ends, this Pokemon's types become the original types for its species.",
