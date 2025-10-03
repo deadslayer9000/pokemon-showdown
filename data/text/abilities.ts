@@ -1186,8 +1186,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Merciless",
 		shortDesc: "This Pokemon's attacks are critical hits if the target is poisoned.",
 	},
-	miazmaspit: {
-		name: "Miazma Spit",
+	miasmaleak: {
+		name: "Miasma Leak",
 		shortDesc: "When this Pokemon is hit by an attack, the effect of Corrosive Terrain begins.",
 	},
 	mimicry: {
