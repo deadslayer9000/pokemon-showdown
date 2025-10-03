@@ -6065,7 +6065,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				pokemon
 			);
 		},
-		onTerraiChange(pokemon) {
+		onTerrainChange(pokemon) {
 			if (this.field.isTerrain("electricterrain")) {
 				pokemon.addVolatile("quarkdrive");
 			} else if (!pokemon.volatiles["quarkdrive"]?.fromBooster) {
