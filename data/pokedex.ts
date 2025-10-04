@@ -24506,4 +24506,42 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		//color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
+	volcaniondelta: {
+		num: 721,
+		name: "Volcanion-Delta",
+		types: ["Dark", "Poison"],
+		baseSpecies: "Volcanion",
+		forme: "Delta",
+		gender: "N",
+		baseStats: { hp: 80, atk: 110, def: 90, spa: 130, spd: 120, spe: 70 },
+		abilities: { 0: "Miasma Leak" },
+		//heightm:
+		weightkg: 44.5,
+		//color: "Black",
+		eggGroups: ["Undiscovered"],
+	},
+	ironmoon: {
+		num: 2116,
+		name: "Iron Moon",
+		types: ["Psychic", "Steel"],
+		gender: "N",
+		baseStats: { hp: 50, atk: 100, def: 74, spa: 152, spd: 140, spe: 74 },
+		abilities: { 0: "Quark Drive" },
+		//heightm:
+		weightkg: 185,
+		//color: "White",
+		eggGroups: ["Undiscovered"],
+	},
+	stridingsun: {
+		num: 2115,
+		name: "Striding Sun",
+		types: ["Steel", "Dragon"],
+		gender: "N",
+		baseStats: { hp: 61, atk: 145, def: 153, spa: 97, spd: 53, spe: 81 },
+		abilities: { 0: "Protosynthesis" },
+		//heightm:
+		weightkg: 185,
+		//color: "White",
+		eggGroups: ["Undiscovered"],
+	}
 };

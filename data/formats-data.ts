@@ -6999,5 +6999,17 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 		doublesTier: "(DUU)",
 	},
+	stridingsun: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
+	ironmoon: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
+	volcaniondelta: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
 
 };

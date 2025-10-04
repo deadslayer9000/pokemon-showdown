@@ -9272,6 +9272,16 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 2.5,
 		num: -89,
 	},
+	miasmaleak: {
+		onDamagingHit(damage, target, source, move) {
+			this.field.setTerrain("corrosiveterrain");
+		},
+		flags: {},
+		name: "Miasma Leak",
+		rating: 1,
+		num: 245,
+	},
+	
 
 	// CAP
 	mountaineer: {
