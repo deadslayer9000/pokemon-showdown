@@ -22638,7 +22638,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		accuracy: 95,
 		basePower: 110,
 		category: "Special",
-		name: "Steam Eruption",
+		name: "Fume Eruption",
 		pp: 5,
 		priority: 0,
 		flags: { protect: 1, mirror: 1, defrost: 1 },
