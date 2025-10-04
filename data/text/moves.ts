@@ -2518,6 +2518,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Power is equal to the greater of ((255 - user's Happiness) * 2/5), rounded down, or 1.",
 		shortDesc: "Max 102 power at minimum Happiness.",
 	},
+	fumeeruption: {
+		name: "Fume Eruption",
+		shortDesc: "30% chance to poison the target.",
+	},
 	furyattack: {
 		name: "Fury Attack",
 		desc: "Hits two to five times. Has a 35% chance to hit two or three times and a 15% chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times. If the user is holding Loaded Dice, this move will hit 4-5 times.",
