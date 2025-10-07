@@ -2398,7 +2398,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	foamfrenzy: {
 		name: "Foam Frenzy",
-		shortDesc: "Removes hazards, and boosts SpA by +1 if it does.",
+		shortDesc: "Removes hazards.",
 	},
 	focusblast: {
 		name: "Focus Blast",
