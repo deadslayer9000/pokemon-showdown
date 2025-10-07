@@ -2520,7 +2520,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	fumeeruption: {
 		name: "Fume Eruption",
-		shortDesc: "30% chance to poison the target.",
+		shortDesc: "30% chance to badly poison the target.",
 	},
 	furyattack: {
 		name: "Fury Attack",
@@ -6516,6 +6516,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		shortDesc: "Steals target's boosts before dealing damage.",
 
 		clearBoost: "  [SOURCE] stole the target's boosted stats!",
+	},
+	spectrecannon: {
+		name: "Spectre Cannon",
+		shortDesc: "Lowers the user's Sp. Atk by 2.",
 	},
 	spectrumscorch: {
 		name: "Spectrum Scorch",

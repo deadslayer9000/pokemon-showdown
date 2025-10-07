@@ -9281,6 +9281,16 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 1,
 		num: 245,
 	},
+	hollowheart: {
+		onAnyFaintPriority: 1,
+		onAnyFaint() {
+			this.boost({ spa: 1 }, this.effectState.target);
+		},
+		flags: {},
+		name: "Hollow-Heart",
+		rating: 3.5,
+		num: -90,
+	},
 	
 
 	// CAP
