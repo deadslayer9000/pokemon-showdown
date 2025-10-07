@@ -27805,6 +27805,25 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		secondary: null,
 		target: "normal",
 		type: "Normal",
+	},
+	spectrecannon: {
+		num: -101,
+		accuracy: 90,
+		basePower: 130,
+		category: "Special",
+		name: "Spectre Cannon",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1 },
+		secondary: { 
+			self: {
+				boosts: {
+					spa: -2,
+				},
+			},
+		},
+		target: "normal",
+		type: "Ghost",
 	}
 
 };

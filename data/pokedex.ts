@@ -24515,7 +24515,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		gender: "N",
 		baseStats: { hp: 80, atk: 110, def: 90, spa: 130, spd: 120, spe: 70 },
 		abilities: { 0: "Miasma Leak" },
-		//heightm:
+		heightm: 1.7,
 		weightkg: 44.5,
 		//color: "Black",
 		eggGroups: ["Undiscovered"],
@@ -24527,7 +24527,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		gender: "N",
 		baseStats: { hp: 50, atk: 100, def: 74, spa: 152, spd: 140, spe: 74 },
 		abilities: { 0: "Quark Drive" },
-		//heightm:
+		heightm: 3.5,
 		weightkg: 185,
 		//color: "White",
 		eggGroups: ["Undiscovered"],
@@ -24539,9 +24539,38 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		gender: "N",
 		baseStats: { hp: 61, atk: 145, def: 153, spa: 97, spd: 53, spe: 81 },
 		abilities: { 0: "Protosynthesis" },
-		//heightm:
+		heightm: 3.5,
 		weightkg: 185,
 		//color: "White",
 		eggGroups: ["Undiscovered"],
-	}
+	},
+	magearnadelta: {
+		num: 801,
+		name: "Magearna-Delta",
+		types: ["Steel", "Ghost"],
+		gender: "N",
+		baseStats: { hp: 80, atk: 100, def: 110, spa: 130, spd: 125, spe: 50 },
+		abilities: { 0: "Hollow-Heart" },
+		heightm: 1,
+		weightkg: 80.5,
+//		color: "Gray",
+		eggGroups: ["Undiscovered"],
+		otherFormes: ["Magearna-Original-Delta"],
+		formeOrder: ["Magearna-Delta", "Magearna-Original-Delta"],
+	},
+	magearnaoriginaldelta: {
+		num: 801,
+		name: "Magearna-Original-Delta",
+		baseSpecies: "Magearna-Delta",
+		forme: "Original",
+		types: ["Steel", "Ghost"],
+		gender: "N",
+		baseStats: { hp: 80, atk: 100, def: 110, spa: 130, spd: 125, spe: 50 },
+		abilities: { 0: "Hollow-Heart" },
+		heightm: 1,
+		weightkg: 80.5,
+//		color: "Red",
+		eggGroups: ["Undiscovered"],
+	},
+	
 };

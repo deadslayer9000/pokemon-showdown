@@ -6517,6 +6517,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 
 		clearBoost: "  [SOURCE] stole the target's boosted stats!",
 	},
+	spectrecannon: {
+		name: "Spectre Cannon",
+		shortDesc: "Lowers the user's Sp. Atk by 2.",
+	},
 	spectrumscorch: {
 		name: "Spectrum Scorch",
 		desc: "If this move hits, Sunny Day is set on the field.",

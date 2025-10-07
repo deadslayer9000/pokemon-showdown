@@ -7011,5 +7011,11 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 		doublesTier: "(DUU)",
 	},
+	magearnadelta: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
+	magearnaoriginaldelta: {
+	},
 
 };
