@@ -2520,7 +2520,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	fumeeruption: {
 		name: "Fume Eruption",
-		shortDesc: "30% chance to poison the target.",
+		shortDesc: "30% chance to badly poison the target.",
 	},
 	furyattack: {
 		name: "Fury Attack",
