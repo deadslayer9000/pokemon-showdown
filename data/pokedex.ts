@@ -24549,6 +24549,8 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		name: "Magearna-Delta",
 		types: ["Steel", "Ghost"],
 		gender: "N",
+		forme: "Delta",
+		baseSpecies: "Magearna",
 		baseStats: { hp: 80, atk: 100, def: 110, spa: 130, spd: 125, spe: 50 },
 		abilities: { 0: "Hollow-Heart" },
 		heightm: 1,
@@ -24572,5 +24574,5 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 //		color: "Red",
 		eggGroups: ["Undiscovered"],
 	},
-	
+
 };
