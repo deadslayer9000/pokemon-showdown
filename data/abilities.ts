@@ -8468,6 +8468,19 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				}
 			}
 		},
+		onUpdate(pokemon) {
+			if (pokemon.status === "psn" || pokemon.status === 'tox') {
+				this.add("-activate", pokemon, "ability: Usurped");
+				pokemon.cureStatus();
+			}
+		},
+		onSetStatus(status, target, source, effect) {
+			if (status.id !== "psn" || status.id !== "tox") return;
+			if ((effect as Move)?.status) {
+				this.add("-immune", target, "[from] ability: Usurped");
+			}
+			return false;
+		},
 		flags: {},
 		name: "Usurped",
 		rating: 2.5,
