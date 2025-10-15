@@ -697,18 +697,18 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		onModifyMovePriority: 1,
 		onModifyMove(move, pokemon, defender) {
 			if (
-				pokemon.species.baseSpecies !== "Delta-Aegislash" ||
+				pokemon.species.baseSpecies !== "Aegislash-Delta" ||
 				pokemon.transformed ||
 				move.name === "Enflame"
 			)
 				return;
 			if (
 				move.name === "Infernal Shield" &&
-				pokemon.species.name === "Delta-Aegislash-Blade"
+				pokemon.species.name === "Aegislash-Delta-Blade"
 			) {
-				pokemon.formeChange("Delta-Aegislash", this.effect, true);
-			} else if (pokemon.species.name === "Delta-Aegislash") {
-				pokemon.formeChange("Delta-Aegislash-Blade", this.effect, true);
+				pokemon.formeChange("Aegislash-Delta", this.effect, true);
+			} else if (pokemon.species.name === "Aegislash-Delta") {
+				pokemon.formeChange("Aegislash-Delta-Blade", this.effect, true);
 			}
 		},
 		flags: {
@@ -8467,6 +8467,19 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 					}
 				}
 			}
+		},
+		onUpdate(pokemon) {
+			if (pokemon.status === "psn" || pokemon.status === 'tox') {
+				this.add("-activate", pokemon, "ability: Usurped");
+				pokemon.cureStatus();
+			}
+		},
+		onSetStatus(status, target, source, effect) {
+			if (status.id !== "psn" || status.id !== "tox") return;
+			if ((effect as Move)?.status) {
+				this.add("-immune", target, "[from] ability: Usurped");
+			}
+			return false;
 		},
 		flags: {},
 		name: "Usurped",

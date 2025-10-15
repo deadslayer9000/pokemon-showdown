@@ -196,7 +196,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	blazingswap: {
 		name: "Blazing Swap",
-		shortDesc: "If Aegislash, changes Forme to Blade before attacks and Shield before King's Shield.",
+		shortDesc: "If Aegislash-Delta, swaps to Blade before attacks and Shield before Infernal Shield.",
+		
+		transform: "Changed to Blade forme!",
+		transformEnd: "Changed to Shield forme!",
 	},
 	boundless: {
 		name: "Boundless",

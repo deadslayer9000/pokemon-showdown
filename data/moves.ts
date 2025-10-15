@@ -5140,19 +5140,14 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 						category: "Special",
 						priority: 0,
 						flags: { allyanim: 1, metronome: 1, futuremove: 1 },
-						onTryHit(target, source) {
-							let divstatus = source.status;
-							if (divstatus != "") {
-								target.trySetStatus(divstatus);
-							}
-						},
-						self: {
-							onHit(pokemon) {
-								pokemon.cureStatus();
-							},
-						},
 						ignoreImmunity: false,
 						effectType: "Move",
+						secondary: {
+							chance: 30,
+							boosts: {
+								spd: -1,
+							}
+						},
 						type: "Dark",
 					},
 				}
