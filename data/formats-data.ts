@@ -7017,5 +7017,12 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	magearnaoriginaldelta: {
 	},
-
+	vrelie: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
+	vreliedelta: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	}
 };
