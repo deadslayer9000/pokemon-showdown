@@ -24589,5 +24589,31 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 //		color: "Red",
 		eggGroups: ["Undiscovered"],
 	},
+	vrelie: {
+		num: 2117,
+		name: "Vrelie",
+		types: ["Psychic"],
+		gender: "N",
+		baseStats: { hp: 100, atk: 95, def: 80, spa: 95, spd: 80, spe: 130 },
+		abilities: { 0: "Levitate" },
+		//heightm:
+		weightkg: 25.6,
+		//color: "Green",
+		eggGroups: ["Undiscovered"],
+	},
+	vreliedelta: {
+		num: 2117,
+		name: "Vrelie-Delta",
+		types: ["Poison", "Ghost"],
+		forme: "Delta",
+		baseSpecies: "Vrelie",
+		gender: "N",
+		baseStats: { hp: 100, atk: 95, def: 80, spa: 95, spd: 80, spe: 130 },
+		abilities: { 0: "Toxic Chain", 1: "Levitate", H: "Prankster"},
+		//heightm:
+		weightkg: 0.3,
+		//color: "Green",
+		eggGroups: ["Undiscovered"],
+	}
 
 };
