@@ -3453,7 +3453,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		onTry() {
 			this.field.addPseudoWeather("echoedvoice");
 		},
-		condition: {
+		condition: {		
 			duration: 255, //was 2, 255 was an attempt to make it work on switchouts
 			
 			onFieldRestart() {
@@ -21980,7 +21980,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		basePower: 145,
 		category: "Physical",
 		name: "Soul Sap",
-		pp: 2,
+		pp: 1.25,
 		priority: 0,
 		flags: {
 			contact: 1,
@@ -22000,7 +22000,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				move.category = "Special";
 			}
 		},
-		onHit(target) {
+		onHit(target, source) {
 			let move: Move | ActiveMove | null = target.lastMove;
 			if (!move || move.isZ) return false;
 			if (move.isMax && move.baseMove)
@@ -22009,6 +22009,9 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			const ppDeducted = target.deductPP(move.id, 2);
 			if (!ppDeducted) return false;
 			this.add("-activate", target, "move: Spite", move.name, ppDeducted);
+			const moveSlot = source.moveSlots.find((move) => move.id === 'soulsap' );
+			if (!moveSlot) return;
+			moveSlot.pp += 1;
 		}, //still need to restore
 		secondary: null,
 		target: "normal",
@@ -27110,6 +27113,14 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		priority: 0,
 		name: "Reckoning",
 		flags: { protect: 1, mirror: 1, metronome: 1 },
+		basePowerCallback(source, target, move) {
+			let bp = move.basePower;
+			if (target.lastMoveUsed?.type === "Dark" || source.reckoningboost){
+				source.reckoningboost = true;
+				bp = bp * 2;
+			}
+			return bp;
+			},
 		secondary: {
 			chance: 20,
 			boosts: {

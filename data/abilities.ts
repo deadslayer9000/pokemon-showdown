@@ -2331,19 +2331,19 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				move.pranksterBoosted
 			) {
 				this.add("-immune", target, "[from] ability: Evils Bane");
-				target.abilityState.evilsbane = true;
-				this.hint("Reckoning's power has been doubled!");
+				//target.abilityState.evilsbane = true;
+				//this.hint("Reckoning's power has been doubled!");
 				return null;
 			}
 		},
-		onBasePower(basePower, attacker, defender, move) {
+		/*onBasePower(basePower, attacker, defender, move) {
 			if (
 				move.name === "Reckoning" &&
 				attacker.abilityState.evilsbane === true
 			) {
 				this.chainModify([8192, 4096]);
 			}
-		},
+		},*/
 		flags: { breakable: 1 },
 		name: "Evil's Bane",
 		rating: 3,
@@ -7648,14 +7648,14 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				pokemon.addVolatile("charge");
 			}
 		},
-		onTryHit(target, source, move) {
+		/*onTryHit(target, source, move) {
 			if (this.field.isTerrain("electricterrain")) {
 				if (target !== source && move.type === "Ground") {
 					this.add("-immune", target, "[from] ability: Surge Deluge");
 					return null;
 				}
 			}
-		},
+		},*/ //Airborneness implemented in pokemon.ts
 		onEnd(pokemon) {
 			pokemon.abilityState.surgedelugeActive = false;
 		},
