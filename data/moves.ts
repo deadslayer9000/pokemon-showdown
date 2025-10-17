@@ -21980,7 +21980,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		basePower: 145,
 		category: "Physical",
 		name: "Soul Sap",
-		pp: 1.25,
+		pp: 1.25, //fucked up solution to giving it 2 pp
 		priority: 0,
 		flags: {
 			contact: 1,
@@ -21988,9 +21988,6 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			mirror: 1,
 			metronome: 1,
 			cantusetwice: 1,
-		},
-		onTryHit(pokemon) {
-			this.hint("This move isn't fully implemented");
 		},
 		onModifyMove(move, pokemon) {
 			if (
@@ -22012,7 +22009,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			const moveSlot = source.moveSlots.find((move) => move.id === 'soulsap' );
 			if (!moveSlot) return;
 			moveSlot.pp += 1;
-		}, //still need to restore
+		},
 		secondary: null,
 		target: "normal",
 		type: "Dark",
