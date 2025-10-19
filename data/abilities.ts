@@ -941,6 +941,83 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 						)} due to its Chromatic Scales!`
 					);
 				}
+			} else if (pokemon.hp < pokemon.maxhp / 2) {
+				const regulartype = pokemon.abilityState.regulartype;
+				if (
+					pokemon.setType(regulartype) &&
+					pokemon.abilityState.chromaon != false
+				) {
+					pokemon.abilityState.chromaon = false;
+					this.add(
+						"-start",
+						pokemon,
+						"typechange",
+						regulartype.join("/"),
+						"[from] ability: Chromatic Scales"
+					);
+
+					this.add(
+						"-message",
+						`${
+							pokemon.name
+						}'s Chromatic Scales fell and changed its type back to ${regulartype.join(
+							"/"
+						)}`
+					);
+				}
+			}
+		},
+		onResidualOrder: 30,
+		onResidual(pokemon) {
+			if (pokemon.hp >= pokemon.maxhp / 2) {
+				const move1name = pokemon.moves[0];
+				const move1type = this.dex.moves.get(move1name).type;
+				const move2name = pokemon.moves[1];
+				const move2type = this.dex.moves.get(move2name).type;
+				this.debug(move1type);
+				this.debug(move2type);
+				const newtype = [move1type, move2type];
+				if (pokemon.setType(newtype) && !pokemon.abilityState.chromaon) {
+					pokemon.abilityState.chromaon = true;
+					this.add(
+						"-start",
+						pokemon,
+						"typechange",
+						newtype.join("/"),
+						"[from] ability: Chromatic Scales"
+					);
+
+					this.add(
+						"-message",
+						`${pokemon.name}'s type changed to ${newtype.join(
+							"/"
+						)} due to its Chromatic Scales!`
+					);
+				}
+			} else if (pokemon.hp < pokemon.maxhp / 2) {
+				const regulartype = pokemon.abilityState.regulartype;
+				if (
+					pokemon.setType(regulartype) &&
+					pokemon.abilityState.chromaon != false
+				) {
+					pokemon.abilityState.chromaon = false;
+					this.add(
+						"-start",
+						pokemon,
+						"typechange",
+						regulartype.join("/"),
+						"[from] ability: Chromatic Scales"
+					);
+
+					this.add(
+						"-message",
+						`${
+							pokemon.name
+						}'s Chromatic Scales fell and changed its type back to ${regulartype.join(
+							"/"
+						)}`
+					);
+				}
 			}
 		},
 		onSwitchOut(pokemon) {
