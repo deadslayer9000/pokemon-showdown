@@ -7718,6 +7718,12 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				pokemon.abilityState.surgedelugeActive = true;
 				this.boost({ spd: 1 }, pokemon);
 				pokemon.addVolatile("charge");
+			} else if (
+				!this.field.isTerrain("electricterrain") &&
+				pokemon.abilityState.surgedelugeActive
+			) {
+				pokemon.abilityState.surgedelugeActive = false;
+				pokemon.removeVolatile("charge");
 			}
 		},
 		onResidual(pokemon) {
