@@ -6628,7 +6628,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	greninjadelta: {
 		tier: "UU",
 	},
-	gerninjadeltaash: {
+	greninjadeltaash: {
 		tier: "Illegal",
 	},
 	gibledelta: {
