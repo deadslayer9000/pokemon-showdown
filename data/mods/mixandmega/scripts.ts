@@ -406,7 +406,7 @@ export const Scripts: ModdedBattleScriptsData = {
 			}
 			// }
 
-			pokemon.canMegaEvo = null;
+			pokemon.canMegaEvo = false;
 			return true;
 		},
 		terastallize(pokemon) {
