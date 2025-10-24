@@ -27217,8 +27217,8 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				if (form === "Snorlax-Delta-Winter") {
 					const newtype = ["Normal", "Ice"];
 					source.setType(newtype);
-					source.setAbility("Refrigirate");
-					this.add("-ability", source, "Refrigirate");
+					source.setAbility("Refrigerate");
+					this.add("-ability", source, "Refrigerate");
 					if (
 						this.field.isWeather("hail") ||
 						this.field.isWeather("snowscape")
