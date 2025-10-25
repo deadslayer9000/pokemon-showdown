@@ -703,7 +703,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			)
 				return;
 			if (
-				move.name === "Infernal Shield" &&
+				move.category === "Status" || move.name === "Infernal Shield" &&
 				pokemon.species.name === "Aegislash-Delta-Blade"
 			) {
 				pokemon.formeChange("Aegislash-Delta", this.effect, true);
@@ -6585,11 +6585,11 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			if (this.checkMoveMakesContact(move, source, target)) {
 				if (!source.volatiles["sacredbody"]) {
 					source.addVolatile("sacredbody");
-					this.add("-start", source, "ability: Sacred Body");
+					this.add("-activate", source, "ability: Sacred Body");
 				}
 				if (!target.volatiles["sacredbody"]) {
 					target.addVolatile("sacredbody");
-					this.add("-start", target, "ability: Sacred Body");
+					this.add("-activate", target, "ability: Sacred Body");
 				}
 			}
 		},

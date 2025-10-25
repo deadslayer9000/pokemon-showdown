@@ -1819,7 +1819,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "When this Pokemon is hit by a contact move, this Pokemon and its attacker will be fully healed after 3 turns have passed. This effect will not activate if the recipient switches out.",
 
 		activate: "[POKEMON] is blessed by a sacred body!",
-		heal: "[POKEMON] felt as good as new!",
+		end: "[POKEMON] felt as good as new!",
 	},
 	sanddweller: {
 		name: "Sand Dweller",
