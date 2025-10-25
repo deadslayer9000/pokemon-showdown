@@ -6580,6 +6580,30 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 2,
 		num: 159,
 	},
+	sacredbody: {
+		onDamagingHit(target, move, source, pokemon){
+			if (this.checkMoveMakesContact(move, source, target)) {
+				source.addVolatile("sacredbody");
+				pokemon.addVolatile("sacredbody");
+				this.add("-start", source, "ability: Sacred Body");
+				this.add("-start", pokemon, "ability: Sacred Body");
+			}
+		},
+		onEnd(pokemon) {
+			pokemon.removeVolatile('sacredbody');
+		},
+		condition: {
+			duration: 4,
+			onEnd(target){
+				this.add("-start", target, "ability: Sacred Body");
+				this.heal(target.baseMaxhp);
+			}
+		},
+		flags: {breakable: 1},
+		name: "Sacred Body",
+		rating: 1,
+		num: -91,
+	},
 	sanddweller: {
 		onWeather(target, source, effect) {
 			if (target.hasItem("utilityumbrella")) return;
