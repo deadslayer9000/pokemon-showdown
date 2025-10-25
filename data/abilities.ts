@@ -6593,7 +6593,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				}
 			}
 		},
-		onEnd(pokemon) {
+		onSwitchOut(pokemon) {
 			pokemon.removeVolatile('sacredbody');
 		},
 		condition: {
