@@ -6581,12 +6581,16 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 159,
 	},
 	sacredbody: {
-		onDamagingHit(target, move, source, pokemon){
+		onDamagingHit(damage, target, source, move){
 			if (this.checkMoveMakesContact(move, source, target)) {
-				source.addVolatile("sacredbody");
-				pokemon.addVolatile("sacredbody");
-				this.add("-start", source, "ability: Sacred Body");
-				this.add("-start", pokemon, "ability: Sacred Body");
+				if (!source.volatiles["sacredbody"]) {
+					source.addVolatile("sacredbody");
+					this.add("-start", source, "ability: Sacred Body");
+				}
+				if (!target.volatiles["sacredbody"]) {
+					target.addVolatile("sacredbody");
+					this.add("-start", target, "ability: Sacred Body");
+				}
 			}
 		},
 		onEnd(pokemon) {
@@ -6595,7 +6599,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		condition: {
 			duration: 4,
 			onEnd(target){
-				this.add("-start", target, "ability: Sacred Body");
+				this.add("-end", target, "ability: Sacred Body");
 				this.heal(target.baseMaxhp);
 			}
 		},
