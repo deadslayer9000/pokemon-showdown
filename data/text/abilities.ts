@@ -1813,6 +1813,14 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Run Away",
 		shortDesc: "No competitive use.",
 	},
+	sacredbody: {
+		name: "Sacred Body",
+		shortDesc: "On contact: Both Pokemon are healed to full after 3 turns.",
+		desc: "When this Pokemon is hit by a contact move, this Pokemon and its attacker will be fully healed after 3 turns have passed. This effect will not activate if the recipient switches out.",
+
+		activate: "[POKEMON] is blessed by a sacred body!",
+		end: "[POKEMON] felt as good as new!",
+	},
 	sanddweller: {
 		name: "Sand Dweller",
 		shortDesc: "This Pokemon heals 1/16th of its health each turn if Sandstorm is active.",

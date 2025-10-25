@@ -703,7 +703,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			)
 				return;
 			if (
-				move.name === "Infernal Shield" &&
+				move.category === "Status" || move.name === "Infernal Shield" &&
 				pokemon.species.name === "Aegislash-Delta-Blade"
 			) {
 				pokemon.formeChange("Aegislash-Delta", this.effect, true);
@@ -6579,6 +6579,31 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		name: "Sand Force",
 		rating: 2,
 		num: 159,
+	},
+	sacredbody: {
+		onDamagingHit(damage, target, source, move){
+			if (this.checkMoveMakesContact(move, source, target)) {
+				if (!source.volatiles["sacredbody"]) {
+					source.addVolatile("sacredbody");
+					this.add("-activate", source, "ability: Sacred Body");
+				}
+				if (!target.volatiles["sacredbody"]) {
+					target.addVolatile("sacredbody");
+					this.add("-activate", target, "ability: Sacred Body");
+				}
+			}
+		},
+		condition: {
+			duration: 4,
+			onEnd(target){
+				this.add("-end", target, "ability: Sacred Body");
+				this.heal(target.baseMaxhp);
+			}
+		},
+		flags: {breakable: 1},
+		name: "Sacred Body",
+		rating: 1,
+		num: -91,
 	},
 	sanddweller: {
 		onWeather(target, source, effect) {
