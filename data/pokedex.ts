@@ -24839,7 +24839,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		num: 2097,
 		name: "Dunecargo",
 		types: ["Ground", "Rock"],
-		baseStats: { hp: 40, atk: 90, def: 120, spa: 50, spd: 70, spe: 20 },
+		baseStats: { hp: 60, atk: 90, def: 120, spa: 50, spd: 70, spe: 20 },
 		abilities: { 0: "Sand Veil", 1: "Earth Eater", H: "Weak Armor" },
 		heightm: 0.7,
 		weightkg: 85,
