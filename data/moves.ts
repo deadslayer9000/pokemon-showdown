@@ -7941,7 +7941,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	foamfrenzy: {
 		num: -23,
 		accuracy: 90,
-		basePower: 95,
+		basePower: 80,
 		category: "Special",
 		name: "Foam Frenzy",
 		pp: 10,
