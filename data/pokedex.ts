@@ -22049,7 +22049,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		forme: "Ultra",
 		types: ["Ghost", "Water"],
 		baseStats: { hp: 60, atk: 65, def: 60, spa: 130, spd: 75, spe: 110 },
-		abilities: { 0: "Levitate" },
+		abilities: { 0: "Cursed body" },
 		weightkg: 60.5,
 		heightm: 1.5,
 		color: "White",

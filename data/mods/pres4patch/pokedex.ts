@@ -5,7 +5,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
     },
     gengarultra: {
         inherit: true,
-        abilities: { 0: "Cursed Body", },
+        abilities: { 0: "Levitate", },
     },
 
 };
