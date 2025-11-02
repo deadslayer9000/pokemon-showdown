@@ -91,7 +91,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'Solgaleo', 'Sneasler', 'Annihilape', 'Ursaluna-Bloodmoon', 'Espathra', 'Roaring Moon',
 		],
 	},
-	/*
+	
 	{
 		name: "[Gen 9] [ND] Delta Draft League Season 2",
 		searchShow: false,
@@ -103,7 +103,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		unbanlist: [
 			'Solgaleo', 'Sneasler', 'Annihilape', 'Ursaluna-Bloodmoon', 'Espathra', 'Roaring Moon', 'Darkrai', 'Good as Gold', 'Blood Moon', 'Rage Fist', 'Baton Pass', 'Arena Trap', 'Shadow Tag', 'Palafin', 'Deoxys-Speed', 'Urshifu-Single-Strike', 'Gouging Fire', 'Chi-Yu', 'Walking Wake', 'Baxcalibur', 'Zygarde-50%',
 		],
-	},*/
+	},
 	// S/V Singles
 	///////////////////////////////////////////////////////////////////
 
