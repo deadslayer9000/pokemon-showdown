@@ -27517,7 +27517,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 						source.itemState,
 						source
 					);
-					source.addVolatile("embargo");*/
+					source.addVolatile("embargo");
 					const item = source.getItem();
 					if (item) {
 					this.add(
@@ -27527,7 +27527,10 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 						"[from] move: Sand Barrier",
 						`[of] ${target}`
 					);
-				}
+					}*/
+					source.damage(source.maxhp / 8);
+					this.hint(`${source.name} was hurt by the sand barrier!`);
+					this.field.setWeather('sandstorm');
 				}
 				return this.NOT_FAIL;
 			},
