@@ -5117,12 +5117,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 						flags: { allyanim: 1, metronome: 1, futuremove: 1 },
 						ignoreImmunity: false,
 						effectType: "Move",
-						secondary: {
-							chance: 30,
-							boosts: {
-								spd: -1,
-							}
-						},
+						secondary: null,
 						type: "Dark",
 					},
 				}
@@ -5536,7 +5531,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		},
 		secondary: null,
 		target: "self",
-		type: "Electric",
+		type: "Dragon",
 		zMove: { effect: "clearnegativeboost" },
 	},
 	dragonenergy: {

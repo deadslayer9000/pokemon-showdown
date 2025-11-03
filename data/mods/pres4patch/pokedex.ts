@@ -27,6 +27,18 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
         inherit: true,
         baseStats: { hp: 75, atk: 125, def: 70, spa: 125, spd: 70, spe: 115 },
     },
-    
+    dunsparath: {
+        inherit: true,
+        baseStats: { hp: 115, atk: 60, def: 60, spa: 125, spd: 80, spe: 80 },
+    },
+    klocktowl: {
+        inherit: true,
+        baseStats: { hp: 145, atk: 50, def: 70, spa: 100, spd: 112, spe: 65 },
+    },
+    heatrandelta: {
+        inherit: true,
+        baseStats: { hp: 91, atk: 108, def: 103, spa: 136, spd: 96, spe: 69 },
+    },
+
 
 };
