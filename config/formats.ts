@@ -98,7 +98,12 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'pres4patch',
 		ruleset: ['Standard NatDex', 'Terastal Clause', 'Standard Draft'],
 		
-		
+		banlist: [ 'Moody', 'Power Construct', 'King\'s Rock', 'Quick Claw',
+			'Razor Fang', 'Assist', 'Last Respects', 'Shed Tail', 'Dire Claw', 'Zamazenta', 'Hidden Power'
+		],
+		unbanlist: [
+			'Solgaleo', 'Sneasler', 'Annihilape', 'Ursaluna-Bloodmoon', 'Espathra', 'Roaring Moon', 'Darkrai', 'Good as Gold', 'Blood Moon', 'Rage Fist', 'Baton Pass', 'Arena Trap', 'Shadow Tag', 'Palafin', 'Deoxys-Speed', 'Urshifu-Single-Strike', 'Gouging Fire', 'Chi-Yu', 'Walking Wake', 'Baxcalibur', 'Zygarde-50%',
+		],
 	},
 	{
 		name: "[Gen 9] [ND] Pre Season 4 Patch",
