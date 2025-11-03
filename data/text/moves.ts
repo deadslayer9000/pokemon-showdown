@@ -1550,8 +1550,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	divination: {
 		name: "Divination",
-		desc: "This move hits two turns after its used. 30% chance to lower opponent's Special Defense by one stage.",
-		shortDesc: "Hits two turns later, 30% for SpD drop.",
+		desc: "This move hits two turns after its used.",
+		shortDesc: "Hits two turns later.",
 
 		start: " [POKEMON] saw a horrible fate!",
 		activate: " [TARGET] took the Divination attack!",
@@ -5990,6 +5990,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	noxiouswave: {
 		name: "Noxious Wave",
 		shortDesc: "Damage = 1/2 foe HP, poisons in Corrosive Terrain.",
+	},
+	sandbarrier: {
+		name: "Sand Barrier",
+		desc: "Protects the user. When a contact move is used, the opponent loses 1/8th of their max HP and Sandstorm is set on the field.",
+		shortDesc: "Protects the user, if hit with contact move, summons Sandstorm.",
 	},
 	shadowball: {
 		name: "Shadow Ball",

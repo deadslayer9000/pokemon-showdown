@@ -1626,7 +1626,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	prospect: {
 		name: "Prospect",
-		shortDesc: "50% chance to cure status at end of turn. Moves used on this Pokemon cannot miss.",
+		shortDesc: "When a Future Move is used successfully, the user's SpDef is increased by one stage.",
 	},
 	protosynthesis: {
 		name: "Protosynthesis",

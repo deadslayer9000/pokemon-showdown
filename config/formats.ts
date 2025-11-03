@@ -91,6 +91,31 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'Solgaleo', 'Sneasler', 'Annihilape', 'Ursaluna-Bloodmoon', 'Espathra', 'Roaring Moon',
 		],
 	},
+	
+	{
+		name: "[Gen 9] [ND] Delta Draft League Season 2",
+		searchShow: false,
+		mod: 'pres4patch',
+		ruleset: ['Standard NatDex', 'Terastal Clause', 'Standard Draft'],
+		banlist: [ 'ND Uber', 'ND AG', 'Moody', 'Power Construct', 'King\'s Rock', 'Quick Claw',
+			'Razor Fang', 'Assist', 'Last Respects', 'Shed Tail', 'Dire Claw', 'Zamazenta', 'Hidden Power'
+		],
+		unbanlist: [
+			'Solgaleo', 'Sneasler', 'Annihilape', 'Ursaluna-Bloodmoon', 'Espathra', 'Roaring Moon', 'Darkrai', 'Good as Gold', 'Blood Moon', 'Rage Fist', 'Baton Pass', 'Arena Trap', 'Shadow Tag', 'Palafin', 'Deoxys-Speed', 'Urshifu-Single-Strike', 'Gouging Fire', 'Chi-Yu', 'Walking Wake', 'Baxcalibur', 'Zygarde-50%',
+		],
+	},
+	{
+		name: "[Gen 9] [ND] Pre Season 4 Patch",
+		searchShow: false,
+		mod: 'pres4patch',
+		ruleset: ['Standard NatDex', 'Terastal Clause'],
+		banlist: [ 'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock', 'Quick Claw',
+			'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail', 'Dire Claw', 'Rage Fist', 'Blood Moon', 'Darkrai', 'Zamazenta', 'Good as Gold'
+		],
+		unbanlist: [
+			'Solgaleo', 'Sneasler', 'Annihilape', 'Ursaluna-Bloodmoon', 'Espathra', 'Roaring Moon',
+		],
+	},
 	// S/V Singles
 	///////////////////////////////////////////////////////////////////
 
