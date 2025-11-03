@@ -24694,7 +24694,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		types: ["Water", "Ground"],
 		gender: "N",
 		baseStats: { hp: 91, atk: 98, def: 113, spa: 134, spd: 96, spe: 69 },
-		abilities: { 0: "Steamforged" },
+		abilities: { 0: "Clear Body", H: "Steamforged" },
 		heightm: 1.9,
 		weightkg: 310,
 		color: "Blue",

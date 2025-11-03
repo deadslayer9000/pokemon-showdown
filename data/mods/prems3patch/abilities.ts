@@ -67,4 +67,25 @@ toxicchain: {
 			}
 		},
 },
+prospect: {
+		onResidualOrder: 5,
+		onResidualSubOrder: 3,
+		onResidual(pokemon) {
+			if (pokemon.hp && pokemon.status && this.randomChance(50, 100)) {
+				this.debug("prospect");
+				this.add("-activate", pokemon, "ability: Prospect");
+				pokemon.cureStatus();
+			}
+		},
+		onModifyAccuracyPriority: -1,
+		onModifyAccuracy(accuracy, target) {
+			if (typeof accuracy !== "number") return;
+			this.debug("Prospect - Sure hit");
+			return true;
+		},
+		flags: {},
+		name: "Prospect",
+		rating: 2,
+		num: -52,
+	},
 };

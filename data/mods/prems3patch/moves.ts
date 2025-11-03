@@ -112,6 +112,7 @@ planetdemolition: {
 },
 foamfrenzy: {
 	inherit: true,
+	basePower: 95,
 	onAfterHit(target, pokemon, move) {
 			if (!move.hasSheerForce) {
 				const sideConditions = [
@@ -169,4 +170,52 @@ foamfrenzy: {
 			}
 		},
 },
+divination: {
+		num: -54,
+		accuracy: 100,
+		basePower: 120,
+		category: "Special",
+		name: "Divination",
+		pp: 10,
+		priority: 0,
+		flags: { allyanim: 1, metronome: 1, futuremove: 1 },
+		ignoreImmunity: true,
+		onTry(source, target) {
+			if (!target.side.addSlotCondition(target, "futuremove")) return false;
+			Object.assign(
+				target.side.slotConditions[target.position]["futuremove"],
+				{
+					move: "divination",
+					source,
+					moveData: {
+						id: "divination",
+						name: "Divination",
+						accuracy: 100,
+						basePower: 120,
+						category: "Special",
+						priority: 0,
+						flags: { allyanim: 1, metronome: 1, futuremove: 1 },
+						ignoreImmunity: false,
+						effectType: "Move",
+						secondary: {
+							chance: 30,
+							boosts: {
+								spd: -1,
+							}
+						},
+						type: "Dark",
+					},
+				}
+			);
+			this.add("-start", source, "move: Divination");
+			return this.NOT_FAIL;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+	},
+		dragondrive: {
+		inherit: true,
+		type: "Electric",
+	},
 };
