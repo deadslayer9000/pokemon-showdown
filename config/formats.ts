@@ -93,7 +93,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	},
 	
 	{
-		name: "[Gen 9] NatDex Delta Draft League Season 2",
+		name: "[Gen 9] [ND] Delta Draft League Season 2",
 		searchShow: false,
 		mod: 'pres4patch',
 		ruleset: ['Standard NatDex', 'Terastal Clause', 'Standard Draft'],
