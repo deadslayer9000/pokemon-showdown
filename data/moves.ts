@@ -5118,12 +5118,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 						flags: { allyanim: 1, metronome: 1, futuremove: 1 },
 						ignoreImmunity: false,
 						effectType: "Move",
-						secondary: {
-							chance: 30,
-							boosts: {
-								spd: -1,
-							}
-						},
+						secondary: null,
 						type: "Dark",
 					},
 				}
@@ -5537,7 +5532,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		},
 		secondary: null,
 		target: "self",
-		type: "Electric",
+		type: "Dragon",
 		zMove: { effect: "clearnegativeboost" },
 	},
 	dragonenergy: {
@@ -7942,7 +7937,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	foamfrenzy: {
 		num: -23,
 		accuracy: 90,
-		basePower: 95,
+		basePower: 80,
 		category: "Special",
 		name: "Foam Frenzy",
 		pp: 10,
@@ -27524,7 +27519,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 						source.itemState,
 						source
 					);
-					source.addVolatile("embargo");*/
+					source.addVolatile("embargo");
 					const item = source.getItem();
 					if (item) {
 					this.add(
@@ -27534,7 +27529,21 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 						"[from] move: Sand Barrier",
 						`[of] ${target}`
 					);
-				}
+					}*/
+					source.damage(source.maxhp / 8);
+					this.hint(`${source.name} was hurt by the sand barrier!`);
+					this.field.setWeather('sandstorm');
+					if(target.item === 'smoothrock'){
+						this.field.weatherState.duration = 8;
+					}
+					/*
+					const oldAbility = target.ability;
+					target.setAbility('Sandstream', null, null, true);
+					target.setAbility(oldAbility, null, null, true);
+					*/
+					
+					
+					
 				}
 				return this.NOT_FAIL;
 			},

@@ -5692,20 +5692,10 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 168,
 	},
 	prospect: {
-		onResidualOrder: 5,
-		onResidualSubOrder: 3,
-		onResidual(pokemon) {
-			if (pokemon.hp && pokemon.status && this.randomChance(50, 100)) {
-				this.debug("prospect");
-				this.add("-activate", pokemon, "ability: Prospect");
-				pokemon.cureStatus();
+		onAfterMove(source, target, move) {
+			if (move.flags['futuremove']) {
+				this.boost({ spd: 1 }, source);
 			}
-		},
-		onModifyAccuracyPriority: -1,
-		onModifyAccuracy(accuracy, target) {
-			if (typeof accuracy !== "number") return;
-			this.debug("Prospect - Sure hit");
-			return true;
 		},
 		flags: {},
 		name: "Prospect",
@@ -9071,7 +9061,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			if (pokemon.hp === pokemon.maxhp) {
 				let activated = false;
 				for (const target of pokemon.adjacentFoes()) {
-					if (!activated) {
+					if (!activated && !target.volatiles["substitute"]) {
 						this.add(
 							"-activate",
 							pokemon,
@@ -9095,7 +9085,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			if (pokemon.hp === pokemon.maxhp) {
 				let activated = false;
 				for (const target of pokemon.adjacentFoes()) {
-					if (!activated) {
+					if (!activated && !target.volatiles["substitute"]) {
 						this.add(
 							"-activate",
 							pokemon,
