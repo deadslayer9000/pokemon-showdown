@@ -23421,7 +23421,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		num: 2029,
 		name: "Klocktowl",
 		types: ["Dark", "Flying"],
-		baseStats: { hp: 145, atk: 50, def: 70, spa: 100, spd: 112, spe: 65 },
+		baseStats: { hp: 122, atk: 65, def: 70, spa: 123, spd: 100, spe: 62 },
 		abilities: { 0: "Insomnia", 1: "Frisk", H: "Prospect" },
 		heightm: 1.7,
 		weightkg: 70,
