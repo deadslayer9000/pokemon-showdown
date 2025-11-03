@@ -27531,6 +27531,17 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					source.damage(source.maxhp / 8);
 					this.hint(`${source.name} was hurt by the sand barrier!`);
 					this.field.setWeather('sandstorm');
+					if(target.item === 'smoothrock'){
+						this.field.weatherState.duration = 8;
+					}
+					/*
+					const oldAbility = target.ability;
+					target.setAbility('Sandstream', null, null, true);
+					target.setAbility(oldAbility, null, null, true);
+					*/
+					
+					
+					
 				}
 				return this.NOT_FAIL;
 			},
