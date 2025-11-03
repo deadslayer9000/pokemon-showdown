@@ -97,8 +97,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		searchShow: false,
 		mod: 'pres4patch',
 		ruleset: ['Standard NatDex', 'Terastal Clause'],
-		
-		banlist: [ 'ND Uber', 'ND AG' ,'Moody', 'Power Construct', 'King\'s Rock', 'Quick Claw',
+		banlist: [ 'ND Uber', 'ND AG', 'Moody', 'Power Construct', 'King\'s Rock', 'Quick Claw',
 			'Razor Fang', 'Assist', 'Last Respects', 'Shed Tail', 'Dire Claw', 'Zamazenta', 'Hidden Power'
 		],
 		unbanlist: [
