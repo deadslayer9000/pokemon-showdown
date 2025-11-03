@@ -96,7 +96,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		name: "[Gen 9] [ND] Delta Draft League Season 2",
 		searchShow: false,
 		mod: 'pres4patch',
-		ruleset: ['Standard NatDex', 'Terastal Clause', 'Standard Draft'],
+		ruleset: ['Standard NatDex', 'Terastal Clause'],
 		
 		banlist: [ 'Moody', 'Power Construct', 'King\'s Rock', 'Quick Claw',
 			'Razor Fang', 'Assist', 'Last Respects', 'Shed Tail', 'Dire Claw', 'Zamazenta', 'Hidden Power'
