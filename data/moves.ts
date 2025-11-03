@@ -3431,12 +3431,11 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		
 		basePowerCallback(pokemon, target, move) {
 			let bp = move.basePower;
-			if (this.field.pseudoWeather.echoedvoice) {
+			if (this.field.pseudoWeather.cogniblast) {
 				bp =
 					move.basePower +
-					15 * (this.field.pseudoWeather.echoedvoice.multiplier - 1);
+					15 * (this.field.pseudoWeather.cogniblast.multiplier - 1);
 				this.hint(`Cogniblast hit with ${bp} BP`);
-				this.hint(this.field.pseudoWeather.echoedvoice.multiplier);
 				return bp;
 			}
 
@@ -3444,11 +3443,13 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		},
 		
 		onTry() {
-			this.field.addPseudoWeather("echoedvoice");
+			this.field.addPseudoWeather("cogniblast");
 		},
 		condition: {		
 			duration: 255, //was 2, 255 was an attempt to make it work on switchouts
-
+			onFieldStart() {
+				this.effectState.multiplier = 1;
+			},
 			onFieldRestart() {
 				if (this.effectState.duration !== 255) {
 					this.effectState.duration = 255;
