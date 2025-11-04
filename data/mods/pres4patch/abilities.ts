@@ -85,9 +85,15 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	infernalwebs: {
 		inherit: true,
 		onTryMove(pokemon,source,move) {
-			this.effectState.caught = false
+			this.effectState.caught = false;
+			let foes = pokemon.adjacentFoes();
+			let foe;
 			if (move.id === "stickyweb") {
-				this.effectState.caught = true
+				for (foe of foes){
+					if (!foe.side.getSideCondition("Sticky Web")) {
+				this.effectState.caught = true;
+					}
+				}
 			}
 		},
 		onFoeTrapPokemon(pokemon) {
@@ -103,7 +109,11 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 					!this.effectState.caught
 				){
 					pokemon.tryTrap(true);
+					if (pokemon.tryTrap()) {
+						pokemon.maybeTrapped = true;
+					}
 					pokemon.trySetStatus("brn", foe);
+					this.effectState.caught = false;
 				}
 			}
 		},
