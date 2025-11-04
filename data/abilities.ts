@@ -944,7 +944,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			} else if (pokemon.hp < pokemon.maxhp / 2) {
 				const regulartype = pokemon.abilityState.regulartype;
 				if (
-					pokemon.setType(regulartype) &&
+					pokemon.setType(regulartype) &&	
 					pokemon.abilityState.chromaon != false
 				) {
 					pokemon.abilityState.chromaon = false;
@@ -9274,13 +9274,15 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -87,
 	},
 	infernalwebs: {
-		onAfterMove(pokemon, source, move) {
+		onTryMove(pokemon, source, move) {
+			this.effectState.caught = false;
 			let foes = pokemon.adjacentFoes();
 			let foe;
-			if (move.name === "Sticky Web") {
+			if (move.id === "stickyweb") {
 			for (foe of foes)
 			if (foe.isGrounded() && !foe.hasItem("heavydutyboots") && !foe.hasType("Ghost") && !foe.side.getSideCondition("Sticky Web")) {
-				foe.addVolatile("trapped", pokemon, move, "trapper")
+				foe.addVolatile("trapped", pokemon, move, "trapper");
+				this.effectState.caught = true;
 				}
 			}
 		},
@@ -9294,7 +9296,8 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 					!pokemon.hasAbility("Breach") &&
 					pokemon.side.getSideCondition("Sticky Web") &&
 					!pokemon.activeTurns &&
-					!pokemon.types.includes("Ghost")
+					!pokemon.types.includes("Ghost") &&
+					!this.effectState.caught
 				){
 					pokemon.tryTrap();
 					if (pokemon.tryTrap()){

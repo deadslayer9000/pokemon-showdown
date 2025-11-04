@@ -68,6 +68,7 @@ toxicchain: {
 		},
 },
 prospect: {
+	inherit: true,
 		onResidualOrder: 5,
 		onResidualSubOrder: 3,
 		onResidual(pokemon) {
@@ -83,9 +84,5 @@ prospect: {
 			this.debug("Prospect - Sure hit");
 			return true;
 		},
-		flags: {},
-		name: "Prospect",
-		rating: 2,
-		num: -52,
 	},
 };
