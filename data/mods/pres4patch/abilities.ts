@@ -84,6 +84,12 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	},
 	infernalwebs: {
 		inherit: true,
+		onTryMove(pokemon,source,move) {
+			this.effectState.caught = false
+			if (move.id === "stickyweb") {
+				this.effectState.caught = true
+			}
+		},
 		onFoeTrapPokemon(pokemon) {
 			let foes = pokemon.adjacentFoes();
 			let foe;
@@ -93,7 +99,8 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 					!pokemon.hasItem("heavydutyboots") &&
 					!pokemon.hasAbility("Breach") &&
 					pokemon.side.getSideCondition("Sticky Web") &&
-					!pokemon.activeTurns
+					!pokemon.activeTurns &&
+					!this.effectState.caught
 				){
 					pokemon.tryTrap(true);
 					pokemon.trySetStatus("brn", foe);
