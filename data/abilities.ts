@@ -944,7 +944,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			} else if (pokemon.hp < pokemon.maxhp / 2) {
 				const regulartype = pokemon.abilityState.regulartype;
 				if (
-					pokemon.setType(regulartype) &&
+					pokemon.setType(regulartype) &&	
 					pokemon.abilityState.chromaon != false
 				) {
 					pokemon.abilityState.chromaon = false;
@@ -4369,7 +4369,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 						move.ohko
 					) {
 						this.add("-ability", pokemon, "Anticipation");
-						this.boost({spd: 1})
+						this.boost({spa: 1})
 						return;
 					}
 				}
@@ -5930,12 +5930,12 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 					pokemon.abilityState.monotype = true;
 				}
 
-				const alliesWithoutUser = pokemon.side.pokemon.filter(
+				/*const alliesWithoutUser = pokemon.side.pokemon.filter(
 					(p) => p !== pokemon
-				);
+				); */
 				const uniqueTypes: string[] = [];
-				for (const ally of alliesWithoutUser) {
-					//				this.debug(`${ally.name}: ${ally.types.join("/")}`);
+				for (const ally of alliesWithUser) {
+					this.debug(`${ally.name}: ${ally.types.join("/")}`);
 					for (const type of ally.types) {
 						if (!uniqueTypes.includes(type)) {
 							uniqueTypes.push(type);
@@ -5943,8 +5943,8 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 					}
 				}
 				const typeCount = uniqueTypes.length;
-				//			this.debug(uniqueTypes.join("/"));
-				//			this.debug(`${typeCount} unique types`);
+							this.hint(uniqueTypes.join("/"));
+							this.hint(`${typeCount} unique types`);
 				pokemon.abilityState.typeCount = typeCount;
 				if (pokemon.abilityState.monotype === true) {
 					this.hint(
@@ -5961,7 +5961,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				}
 			}
 		},
-		onModifyDamage(damage, source, target, move) {
+		onModifySpA(spa, source, target, move) {
 			if (source.hp >= source.maxhp / 2) {
 				if (
 					source.storedStats["spa"] >= source.storedStats["spe"] ||
@@ -9274,8 +9274,19 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -87,
 	},
 	infernalwebs: {
+		onTryMove(pokemon, source, move) {
+			this.effectState.caught = false;
+			let foes = pokemon.adjacentFoes();
+			let foe;
+			if (move.id === "stickyweb") {
+			for (foe of foes)
+			if (foe.isGrounded() && !foe.hasItem("heavydutyboots") && !foe.hasType("Ghost") && !foe.side.getSideCondition("Sticky Web")) {
+				foe.addVolatile("trapped", pokemon, move, "trapper");
+				this.effectState.caught = true;
+				}
+			}
+		},
 		onFoeTrapPokemon(pokemon) {
-			
 			let foes = pokemon.adjacentFoes();
 			let foe;
 			for (foe of foes){		
@@ -9284,9 +9295,15 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 					!pokemon.hasItem("heavydutyboots") &&
 					!pokemon.hasAbility("Breach") &&
 					pokemon.side.getSideCondition("Sticky Web") &&
-					!pokemon.activeTurns
+					!pokemon.activeTurns &&
+					!pokemon.types.includes("Ghost") &&
+					!this.effectState.caught
 				){
-					pokemon.tryTrap(true);
+					pokemon.tryTrap();
+					if (pokemon.tryTrap()){
+						pokemon.maybeTrapped = true;
+						this.hint(pokemon.name + " can no longer escape!");
+					}
 					pokemon.trySetStatus("brn", foe);
 				}
 			}

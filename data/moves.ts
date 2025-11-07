@@ -3419,7 +3419,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	cogniblast: {
 		num: -101,
 		accuracy: 100,
-		basePower: 45,
+		basePower: 70,
 		category: "Special",
 		name: "Cogniblast",
 		pp: 5,
@@ -3431,11 +3431,10 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		
 		basePowerCallback(pokemon, target, move) {
 			let bp = move.basePower;
-			if (this.field.pseudoWeather.echoedvoice) {
+			if (this.field.pseudoWeather.cogniblast) {
 				bp =
 					move.basePower +
-					45 * this.field.pseudoWeather.echoedvoice.multiplier -
-					45;
+					15 * (this.field.pseudoWeather.cogniblast.multiplier - 1);
 				this.hint(`Cogniblast hit with ${bp} BP`);
 				return bp;
 			}
@@ -3444,11 +3443,13 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		},
 		
 		onTry() {
-			this.field.addPseudoWeather("echoedvoice");
+			this.field.addPseudoWeather("cogniblast");
 		},
 		condition: {		
 			duration: 255, //was 2, 255 was an attempt to make it work on switchouts
-			
+			onFieldStart() {
+				this.effectState.multiplier = 1;
+			},
 			onFieldRestart() {
 				if (this.effectState.duration !== 255) {
 					this.effectState.duration = 255;
@@ -3459,12 +3460,12 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			},
 		},
 		
-		onHit(target, source, move) {
+		/*onHit(target, source, move) {
 			let counter = this.field.pseudoWeather.echoedvoice.multiplier;
 			if(counter > 1){
 				source.deductPP(move.id, counter-1);
 			}
-		},
+		},*/
 
 	},
 	coil: {
@@ -8512,7 +8513,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		onBasePower(basePower, pokemon) {
 			if (
 				this.lastSuccessfulMoveThisTurn === "fusionbolt" ||
-				this.lastSuccesfulMoveThisTurn === "fusionflare"
+				this.lastSuccessfulMoveThisTurn === "fusionflare"
 			) {
 				this.debug("double power");
 				return this.chainModify(2);
@@ -27075,11 +27076,12 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		type: "Water",
 		zMove: { effect: "clearnegativeboost" },
 		onModifyMove(move, pokemon) {
-			if (pokemon.status === "brn") {
+			if (pokemon.status === "brn" || pokemon.status === "") {
+				pokemon.trySetStatus("brn", pokemon);
 				move.heal = [1, 2];
 			} else {
 				this.hint(
-					`${pokemon.name}'s Pressurize failed because it isn't burned.`
+					`${pokemon.name}'s Pressurize failed because this Pokemon is not healthy or burned.`
 				);
 				return;
 			}

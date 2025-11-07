@@ -962,7 +962,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	kleavor: {
 		tier: "RU",
 		doublesTier: "(DUU)",
-		natDexTier: "UU",
+		natDexTier: "RU",
 	},
 	smoochum: {
 		isNonstandard: "Past",
@@ -1102,7 +1102,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	sylveon: {
 		tier: "NU",
 		doublesTier: "(DUU)",
-		natDexTier: "RU",
+		natDexTier: "NU",
 	},
 	porygon: {
 		tier: "NFE",
@@ -1333,7 +1333,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	xatu: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "RU",
+		natDexTier: "NU",
 	},
 	mareep: {
 		tier: "LC",
@@ -2063,7 +2063,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	roserade: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "RU",
+		natDexTier: "NU",
 	},
 	gulpin: {
 		tier: "LC",
@@ -2081,7 +2081,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	sharpedo: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "RU",
+		natDexTier: "NU",
 	},
 	sharpedomega: {
 		isNonstandard: "Past",
@@ -3800,7 +3800,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	diggersby: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "RU",
+		natDexTier: "NU",
 	},
 	fletchling: {
 		tier: "LC",
@@ -3899,7 +3899,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	aegislash: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "RU",
 	},
 	aegislashblade: {
 		isNonstandard: "Past",
@@ -4041,7 +4041,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	klefki: {
 		tier: "NU",
 		doublesTier: "(DUU)",
-		natDexTier: "RU",
+		natDexTier: "NU",
 	},
 	phantump: {
 		tier: "LC",
@@ -4654,7 +4654,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	kartana: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	guzzlord: {
 		isNonstandard: "Past",
@@ -4704,7 +4704,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	stakataka: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "RU",
 	},
 	blacephalon: {
 		isNonstandard: "Past",
@@ -5175,7 +5175,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	zarude: {
 		tier: "UU",
 		doublesTier: "(DUU)",
-		natDexTier: "UU",
+		natDexTier: "RU",
 	},
 	regieleki: {
 		tier: "Uber",
@@ -5565,7 +5565,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	ironjugulis: {
 		tier: "UU",
 		doublesTier: "DUU",
-		natDexTier: "UU",
+		natDexTier: "RU",
 	},
 	ironthorns: {
 		tier: "NUBL",
@@ -6077,7 +6077,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 	},
 	mewrai: {
-		tier: "OU",
+		tier: "UU",
 	},
 	snivyultra: {
 		tier: "LC",
@@ -6131,7 +6131,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "OU",
 	},
 	hatteon: {
-		tier: "UU",
+		tier: "OU",
 	},
 	grimmeon: {
 		tier: "UU",
@@ -6188,7 +6188,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "NFE",
 	},
 	staraptordelta: {
-		tier: "OU",
+		tier: "UU",
 	},
 	savagescar: {
 		tier: "OU",
@@ -6212,7 +6212,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 	},
 	steelixdeltamega: {
-		tier: "OU",
+		tier: "UU",
 	},
 	spectreon: {
 		tier: "UU",
@@ -6287,7 +6287,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 	},
 	glimmerix: {
-		tier: "OU",
+		tier: "UU",
 	},
 	wisphir: {
 		tier: "UU",
@@ -6329,7 +6329,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "NFE",
 	},
 	greninjaomega: {
-		tier: "OU",
+		tier: "UU",
 	},
 	greninjaomegabond: {
 		tier: "OU",
@@ -6386,7 +6386,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 	},
 	flygonmega: {
-		tier: "UU",
+		tier: "OU",
 	},
 	slowpokedelta: {
 		tier: "LC",
@@ -6425,7 +6425,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "RU",
 	},
 	huntaildelta: {
-		tier: "RU",
+		tier: "UU",
 	},
 	gorochu: {
 		tier: "UU",
@@ -6512,7 +6512,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "NFE",
 	},
 	tinkatongamma: {
-		tier: "UU",
+		tier: "OU",
 	},
 	tinkatinkdelta: {
 		tier: "LC",
@@ -6587,7 +6587,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "NU",
 	},
 	charizarddeltamega: {
-		tier: "UU",
+		tier: "RU",
 	},
 	volcaronadelta: {
 		tier: "UU",
@@ -6881,7 +6881,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "RU",
 	},
 	druddigondelta: {
-		tier: "RU",
+		tier: "NU",
 	},
 	heatrandelta: {
 		tier: "UU",
@@ -6902,7 +6902,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "NFE",
 	},
 	staralyx: {
-		tier: "UU",
+		tier: "RU",
 	},
 	zephior: {
 		tier: "RU",
@@ -7005,27 +7005,27 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		doublesTier: "(DUU)",
 	},
 	regisurge: {
-		tier: "UU",
+		tier: "NU",
 		doublesTier: "(DUU)",
 	},
 	regiblaze: {
-		tier: "UU",
+		tier: "NU",
 		doublesTier: "(DUU)",
 	},
 	regisand: {
-		tier: "UU",
+		tier: "RU",
 		doublesTier: "(DUU)",
 	},
 	regipsych: {
-		tier: "UU",
+		tier: "NU",
 		doublesTier: "(DUU)",
 	},
 	diancieruby: {
-		tier: "UU",
+		tier: "NU",
 		doublesTier: "(DUU)",
 	},
 	dianciesapphire: {
-		tier: "UU",
+		tier: "NU",
 		doublesTier: "(DUU)",
 	},
 	diancierubymega: {
@@ -7035,7 +7035,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	dianciesapphiremega: {
 		isNonstandard: "Past",
-		tier: "UU",
+		tier: "OU",
 		doublesTier: "(DUU)",
 	},
 	ursasola: {
@@ -7047,11 +7047,11 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		doublesTier: "(DUU)",
 	},
 	rawstrunt: {
-		tier: "UU",
+		tier: "RU",
 		doublesTier: "(DUU)",
 	},
 	cherirunt: {
-		tier: "UU",
+		tier: "NU",
 		doublesTier: "(DUU)",
 	},
 	aspearunt: {
@@ -7059,11 +7059,11 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		doublesTier: "(DUU)",
 	},
 	chestorunt: {
-		tier: "UU",
+		tier: "RU",
 		doublesTier: "(DUU)",
 	},
 	persimrunt: {
-		tier: "UU",
+		tier: "NU",
 		doublesTier: "(DUU)",
 	},
 	lumrunt: {
@@ -7079,7 +7079,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		doublesTier: "NFE",
 	},
 	chandeluredelta: {
-		tier: "UU",
+		tier: "NU",
 		doublesTier: "(DUU)",
 	},
 	joltikdelta: {
@@ -7087,15 +7087,15 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		doublesTier: "LC",
 	},
 	galvantuladelta: {
-		tier: "UU",
+		tier: "NU",
 		doublesTier: "(DUU)",
 	},
 	viriziondelta: {
-		tier: "UU",
+		tier: "RU",
 		doublesTier: "(DUU)",
 	},
 	cobaliondelta: {
-		tier: "UU",
+		tier: "RU",
 		doublesTier: "(DUU)",
 	},
 	terrakiondelta: {
@@ -7111,7 +7111,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		doublesTier: "(DUU)",
 	},
 	volcaniondelta: {
-		tier: "UU",
+		tier: "RU",
 		doublesTier: "(DUU)",
 	},
 	magearnadelta: {

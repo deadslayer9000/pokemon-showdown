@@ -1,5 +1,6 @@
 export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTable = {
 	tidesigil: {
+		inherit: true,
 		onStart(pokemon) {
 			if (pokemon.hp === pokemon.maxhp) {
 				let activated = false;
@@ -18,12 +19,9 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 				}
 			}
 		},
-		flags: {},
-		name: "Tide Sigil",
-		rating: 4,
-		num: -78,
 	},
 	grimsigil: {
+		inherit: true,
 		onStart(pokemon) {
 			if (pokemon.hp === pokemon.maxhp) {
 				let activated = false;
@@ -42,13 +40,10 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 				}
 			}
 		},
-		flags: {},
-		name: "Grim Sigil",
-		rating: 4,
-		num: -79,
 	},
 	
 	prospect: {
+		inherit: true,
 		onResidualOrder: 5,
 		onResidualSubOrder: 3,
 		onResidual(pokemon) {
@@ -64,12 +59,9 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 			this.debug("Prospect - Sure hit");
 			return true;
 		},
-		flags: {},
-		name: "Prospect",
-		rating: 2,
-		num: -52,
 	},
 	minddive: {
+		inherit: true,
 		onStart(pokemon) {
 			for (const target of pokemon.foes()) {
 				for (const moveSlot of target.moveSlots) {
@@ -89,14 +81,22 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 				}
 			}
 		},
-		flags: {},
-		name: "Mind Dive",
-		rating: 2,
-		num: -79,
 	},
 	infernalwebs: {
+		inherit: true,
+		onTryMove(pokemon,source,move) {
+			this.effectState.caught = false;
+			let foes = pokemon.adjacentFoes();
+			let foe;
+			if (move.id === "stickyweb") {
+				for (foe of foes){
+					if (!foe.side.getSideCondition("Sticky Web")) {
+				this.effectState.caught = true;
+					}
+				}
+			}
+		},
 		onFoeTrapPokemon(pokemon) {
-			
 			let foes = pokemon.adjacentFoes();
 			let foe;
 			for (foe of foes){		
@@ -105,16 +105,18 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 					!pokemon.hasItem("heavydutyboots") &&
 					!pokemon.hasAbility("Breach") &&
 					pokemon.side.getSideCondition("Sticky Web") &&
-					!pokemon.activeTurns
+					!pokemon.activeTurns &&
+					!this.effectState.caught
 				){
 					pokemon.tryTrap(true);
+					if (pokemon.tryTrap()) {
+						pokemon.maybeTrapped = true;
+					}
 					pokemon.trySetStatus("brn", foe);
+					this.effectState.caught = false;
 				}
 			}
 		},
-		name: "Infernal Webs",
-		rating: 2,
-		num: -88,
 	},
 
 };

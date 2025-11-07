@@ -135,7 +135,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 			if (this.field.pseudoWeather.echoedvoice) {
 				bp =
 					move.basePower +
-					45 * this.field.pseudoWeather.echoedvoice.multiplier -
+					10 * this.field.pseudoWeather.echoedvoice.multiplier -
 					45;
 				this.hint(`Cogniblast hit with ${bp} BP`);
 				return bp;
