@@ -3358,7 +3358,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			);
 			pokemon.side.addSlotCondition(pokemon, "wish");
 		},
-		onSwitchInPriority: -2,
+		onSwitchInPriority: 32,
 		onStart(pokemon) {
 			const possibleTargets = pokemon.adjacentFoes();
 			if (!possibleTargets.length) return;
