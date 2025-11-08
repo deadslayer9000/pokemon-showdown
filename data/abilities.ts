@@ -3349,7 +3349,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	helixnebula: {
 		flags: {},
 		name: "Helix Nebula",
-		rating: 0,
+		rating: 2,
 		num: -1,
 		onFaint(pokemon) {
 			this.add(
@@ -3358,7 +3358,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			);
 			pokemon.side.addSlotCondition(pokemon, "wish");
 		},
-
+		onSwitchInPriority: -2,
 		onStart(pokemon) {
 			const possibleTargets = pokemon.adjacentFoes();
 			if (!possibleTargets.length) return;
