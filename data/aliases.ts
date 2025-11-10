@@ -1250,6 +1250,7 @@ export const Aliases: import('../sim/dex').AliasesTable = {
 	duxie: "Uxie-Delta",
 	dazelf: "Azelf-Delta",
 	desprit: "Mesprit-Delta",
+	drelie: "Vrelie-Delta",
 	machi: "Cosmachi",
 	darchomp: "Garchomp-Delta",
 	dchomp: "Garchomp-Delta",
@@ -1271,7 +1272,6 @@ export const Aliases: import('../sim/dex').AliasesTable = {
 	mag: "Magoodra",
 	magoo: "Magoodra",
 	roto: "Rotogar",
-
 	
 
 	// ultra beast codenames --- ordered by dex number
