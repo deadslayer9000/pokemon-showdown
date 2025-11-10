@@ -22612,6 +22612,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Blue",
 		eggGroups: ["Water 1", "Amorphous"],
 		cosmeticFormes: ["Gastrodon-Delta-South"],
+		formeOrder: ["Gastrodon-Delta", "Gastrodon-Delta-South"],
 		prevo: "Shellos-Delta",
 	},
 	gastrodondeltasouth: {
