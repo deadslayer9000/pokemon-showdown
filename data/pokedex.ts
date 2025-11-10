@@ -22613,6 +22613,12 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		eggGroups: ["Water 1", "Amorphous"],
 		prevo: "Shellos-Delta",
 	},
+	gastrodondeltasouth: {
+		isCosmeticForme: true,
+		name: "Gastron-Delta-South",
+		forme: "South",
+		color: "Gray",
+	},
 	tandemausdelta: {
 		num: 924,
 		name: "Tandemaus-Delta",
