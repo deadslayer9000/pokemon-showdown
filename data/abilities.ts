@@ -4250,6 +4250,8 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 					move.willCrit = true;
 					this.add("-activate", pokemon, "ability: Marvel");
 					pokemon.abilityState.marvelUsed = true;
+				}else{
+					pokemon.abilityState.marvelUsed = true;
 				}
 			}
 		},
