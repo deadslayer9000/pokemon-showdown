@@ -7877,8 +7877,9 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		prevo: "Shellos",
 		evoLevel: 30,
 		eggGroups: ["Water 1", "Amorphous"],
+		otherFormes: ["Gastrodon-Delta", "Gastrodon-Delta-South"],
 		cosmeticFormes: ["Gastrodon-East"],
-		formeOrder: ["Gastrodon", "Gastrodon-East"],
+		formeOrder: ["Gastrodon", "Gastrodon-East", "Gastrodon-Delta", "Gastrodon-Delta-South"],
 	},
 	gastrodoneast: {
 		isCosmeticForme: true,
