@@ -7878,7 +7878,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		evoLevel: 30,
 		eggGroups: ["Water 1", "Amorphous"],
 		otherFormes: ["Gastrodon-Delta", "Gastrodon-Delta-South"],
-		cosmeticFormes: ["Gastrodon-East", "Gastrodon-Delta-South"],
+		cosmeticFormes: ["Gastrodon-East"],
 		formeOrder: ["Gastrodon", "Gastrodon-East", "Gastrodon-Delta", "Gastrodon-Delta-South"],
 	},
 	gastrodoneast: {
@@ -22619,7 +22619,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	gastrodondeltasouth: {
 		isCosmeticForme: true,
 		name: "Gastrodon-Delta-South",
-		baseSpecies: "Gastrodon-Delta",
+		baseSpecies: "Gastrodon",
 		forme: "South",
 		color: "Gray",
 	},
