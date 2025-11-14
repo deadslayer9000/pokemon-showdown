@@ -1872,23 +1872,17 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 			}
 			return true;
 		},
-		onStart(pokemon) {
-			this.effectState.started = true;
-			//			((this.effect as any).onUpdate as (p: Pokemon) => void).call(this, pokemon);
-		},
 		onUpdate(pokemon) {
-			if ((this.effectState.used === true)) {
+			if ((pokemon.driveused === true)) {
 				return;
 			} else {
-				if (!this.effectState.started || pokemon.transformed) return;
-
 				if (
 					pokemon.species.name === "Iron Pilot-Dread" &&
 					pokemon.hasAbility("quarkdrive") &&
 					!this.field.isTerrain("electricterrain")
 				) {
 					pokemon.addVolatile("quarkdrive");
-					this.effectState.used = true;
+					pokemon.driveused = true;
 				}
 			}
 		},
@@ -4776,22 +4770,19 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 			return true;
 		},
 		onStart(pokemon) {
-			this.effectState.started = true;
+			pokemon.driveused = true;
 			//			((this.effect as any).onUpdate as (p: Pokemon) => void).call(this, pokemon);
 		},
 		onUpdate(pokemon) {
-			if ((this.effectState.used === true)) {
+			if ((pokemon.driveused === true)) {
 				return;
 			} else {
-				if (!this.effectState.started || pokemon.transformed) return;
-
 				if (
 					pokemon.species.name === "Iron Pilot-Mind" &&
 					pokemon.hasAbility("quarkdrive") &&
 					!this.field.isTerrain("electricterrain")
 				) {
 					pokemon.addVolatile("quarkdrive");
-					this.effectState.used = true;
 				}
 			}
 		},
@@ -5353,22 +5344,19 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 			return true;
 		},
 		onStart(pokemon) {
-			this.effectState.started = true;
+			pokemon.driveused = true;
 			//			((this.effect as any).onUpdate as (p: Pokemon) => void).call(this, pokemon);
 		},
 		onUpdate(pokemon) {
-			if ((this.effectState.used === true)) {
+			if ((pokemon.driveused === true)) {
 				return;
 			} else {
-				if (!this.effectState.started || pokemon.transformed) return;
-
 				if (
 					pokemon.species.name === "Iron Pilot-Pixie" &&
 					pokemon.hasAbility("quarkdrive") &&
 					!this.field.isTerrain("electricterrain")
 				) {
 					pokemon.addVolatile("quarkdrive");
-					this.effectState.used = true;
 				}
 			}
 		},
@@ -7236,22 +7224,19 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 			return true;
 		},
 		onStart(pokemon) {
-			this.effectState.started = true;
+			pokemon.driveused = true;
 			//			((this.effect as any).onUpdate as (p: Pokemon) => void).call(this, pokemon);
 		},
 		onUpdate(pokemon) {
-			if ((this.effectState.used === true)) {
+			if ((pokemon.driveused === true)) {
 				return;
 			} else {
-				if (!this.effectState.started || pokemon.transformed) return;
-
 				if (
 					pokemon.species.name === "Iron Pilot-Thrash" &&
 					pokemon.hasAbility("quarkdrive") &&
 					!this.field.isTerrain("electricterrain")
 				) {
 					pokemon.addVolatile("quarkdrive");
-					this.effectState.used = true;
 				}
 			}
 		},
