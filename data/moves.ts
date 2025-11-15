@@ -27197,7 +27197,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		secondary: null,
 		target: "self",
 		sleepUsable: true,
-		onModifyMove(move, pokemon, target) {
+		onModifyMove(move, pokemon, target) {	
 			if ( pokemon.species.name === "Snorlax-Delta-Cherry"){
 				move.target = "normal";
 			}
@@ -27212,7 +27212,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				return;
 			} else {
 				if (form === "Snorlax-Delta-Winter") {
-					const newtype = ["Normal", "Ice"];
+					const newtype = ["Ice", "Grass"];
 					source.setType(newtype);
 					source.setAbility("Refrigerate");
 					this.add("-ability", source, "Refrigerate");
