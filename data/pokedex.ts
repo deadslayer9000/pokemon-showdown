@@ -24662,6 +24662,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	hatennadelta: {
 		num: 856,
 		name: "Hatenna-Delta",
+		gender: "F",
 		types: ["Fire"],
 		baseStats: { hp: 42, atk: 25, def: 40, spa: 60, spd: 49, spe: 49 },
 		abilities: { 0: "Levitate" },
