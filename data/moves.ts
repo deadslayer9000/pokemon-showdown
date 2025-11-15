@@ -27214,6 +27214,19 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				if (form === "Snorlax-Delta-Winter") {
 					const newtype = ["Ice", "Grass"];
 					source.setType(newtype);
+					this.add(
+							"-start",
+							source,
+							"typechange",
+							newtype.join("/"),
+							"[from] move: Seasonal Blessing"
+						);
+					this.add(
+						"-message",
+						`${source.name}'s type changed to ${newtype.join(
+							"/"
+						)} due to its Seasonal Blessing!`
+						);
 					source.setAbility("Refrigerate");
 					this.add("-ability", source, "Refrigerate");
 					if (
