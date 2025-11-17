@@ -6624,6 +6624,12 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	meowthdelta: {
 		tier: "LC",
 	},
+	froakiedelta: {
+		tier: "LC",
+	},
+	frogadierdelta: {
+		tier: "NFE",
+	},
 	greninjadelta: {
 		tier: "UU",
 	},
