@@ -612,7 +612,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	fierytouch: {
 		name: "Fiery Touch",
-		shortDesc: "30% chance that this Pokemon's attacks making contact with an opponent will burn.",
+		shortDesc: "30% chance that this Pokemon's contact moves will burn the target.",
+		desc: "Every time this Pokemon's move makes contact with an opponent, there is a 30% chance that the target will be burned.",
 	},
 	filter: {
 		name: "Filter",
