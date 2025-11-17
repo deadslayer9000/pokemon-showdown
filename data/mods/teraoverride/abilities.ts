@@ -601,4 +601,184 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 			}
 		},
 	},
+	//delta abilities
+	finalverdict: {
+		inherit: true,
+		onModifyDamage(damage, pokemon, target, move) {
+			if (move.category === "Special" && move.type === pokemon.teraType) {
+				this.add("-activate", pokemon, "ability: Final Verdict");
+				return this.chainModify(1.5);
+			} else if (move.category === "Physical" && move.type === pokemon.teraType) {
+				this.add("-activate", pokemon, "ability: Final Verdict");
+				return this.chainModify(1.5);
+			}
+		},
+	},
+	noblesse: {
+		inherit: true,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.type === attacker.teraType && this.field.weather === "sunnyday") {
+				this.add("-activate", attacker, "ability: Noblesse");
+				return this.chainModify(8192, 4096);
+			}
+		},
+	},
+	igneous: {
+		inherit: true,
+		onSourceModifyAtk(atk, attacker, defender, move) {
+			if (move.type === defender.teraType|| move.type === defender.teraType) {
+				this.debug("Thick Fat weaken");
+				return this.chainModify(0.5);
+			}
+		},
+		onSourceModifySpA(atk, attacker, defender, move) {
+			if (move.type === defender.teraType || move.type === defender.teraType) {
+				this.debug("Thick Fat weaken");
+				return this.chainModify(0.5);
+			}
+		},
+	},
+	surge: {
+		inherit: true,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === attacker.teraType && attacker.hp <= attacker.maxhp / 3) {
+				this.debug("Surge boost");
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === attacker.teraType && attacker.hp <= attacker.maxhp / 3) {
+				this.debug("Surge boost");
+				return this.chainModify(1.5);
+			}
+		},
+	},
+	flurry: {
+		inherit: true,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === "Ice" && attacker.hp <= attacker.maxhp / 3) {
+				this.debug("Flurry boost");
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === "Ice" && attacker.hp <= attacker.maxhp / 3) {
+				this.debug("Flurry boost");
+				return this.chainModify(1.5);
+			}
+		},
+	},
+	fatalize: {
+		inherit: true,
+		onModifyType(move, pokemon) {
+			const noModifyType = [
+				"judgment",
+				"multiattack",
+				"naturalgift",
+				"revelationdance",
+				"technoblast",
+				"terrainpulse",
+				"weatherball",
+			];
+			if (
+				move.type === "Normal" &&
+				!noModifyType.includes(move.id) &&
+				!(move.isZ && move.category !== "Status") &&
+				!(move.name === "Tera Blast" && pokemon.terastallized)
+			) {
+				move.type = pokemon.teraType;
+				move.typeChangerBoosted = this.effect;
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect)
+				return this.chainModify([4915, 4096]);
+		},
+	},
+	geyser: {
+		inherit: true,
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === target.teraType) {
+				this.add("-immune", target, "[from] ability: Geyser");
+				return null;
+			}
+		},
+	},
+	exalt: {
+		inherit: true,
+		onStart(pokemon) {
+			for (const foe of pokemon.foes()) {
+				if (!foe.hasType(pokemon.teraType)) {
+					if (!foe.addType(pokemon.teraType)) continue;
+					this.add(
+						"-start",
+						foe,
+						"typechange",
+						foe.getTypes().join("/"),
+						"[from] ability: Exalt",
+						"[of] " + pokemon
+					);
+				}
+			}
+		},
+	},
+	twinkle: {
+		inherit: true,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === attacker.teraType && attacker.hp <= attacker.maxhp / 3) {
+				this.debug("Twinkle boost");
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === attacker.teraType && attacker.hp <= attacker.maxhp / 3) {
+				this.debug("Twinkle boost");
+				return this.chainModify(1.5);
+			}
+		},
+	},
+	draconic: {
+		inherit: true,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === attacker.teraType && attacker.hp <= attacker.maxhp / 3) {
+				this.debug("Draconic boost");
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === attacker.teraType && attacker.hp <= attacker.maxhp / 3) {
+				this.debug("Draconic boost");
+				return this.chainModify(1.5);
+			}
+		},
+	},
+	stoneheart: {
+		inherit: true,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === attacker.teraType) {
+				this.debug("Stoneheart boost");
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === attacker.teraType) {
+				this.debug("Stoneheart boost");
+				return this.chainModify(1.5);
+			}
+		},
+	},
+	evilsbane: {
+		inherit: true,
+		onTryHit(target, source, move) {
+			if (
+				(target !== source && move.type === target.teraType) ||
+				move.pranksterBoosted
+			) {
+				this.add("-immune", target, "[from] ability: Evils Bane");
+				return null;
+			}
+		},
+	},
 };
