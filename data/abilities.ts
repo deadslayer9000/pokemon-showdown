@@ -861,8 +861,8 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	chromaticscales: {
 		onStart(pokemon) {
 			if (pokemon.hp >= pokemon.maxhp / 2) {
-				const regulartype = pokemon.types;
-				pokemon.abilityState.regulartype = regulartype;
+				//const regulartype = pokemon.baseTypes;;
+				//pokemon.abilityState.regulartype = regulartype;
 				const move1name = pokemon.moves[0];
 				const move1type = this.dex.moves.get(move1name).type;
 				const move2name = pokemon.moves[1];
@@ -890,7 +890,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		},
 		onDamagingHit(damage, pokemon) {
 			if (pokemon.hp < pokemon.maxhp / 2) {
-				const regulartype = pokemon.abilityState.regulartype;
+				const regulartype = pokemon.baseTypes;;
 				if (
 					pokemon.setType(regulartype) &&
 					pokemon.abilityState.chromaon != false
@@ -942,7 +942,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 					);
 				}
 			} else if (pokemon.hp < pokemon.maxhp / 2) {
-				const regulartype = pokemon.abilityState.regulartype;
+				const regulartype = pokemon.baseTypes;
 				if (
 					pokemon.setType(regulartype) &&	
 					pokemon.abilityState.chromaon != false
@@ -995,7 +995,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 					);
 				}
 			} else if (pokemon.hp < pokemon.maxhp / 2) {
-				const regulartype = pokemon.abilityState.regulartype;
+				const regulartype = pokemon.baseTypes;
 				if (
 					pokemon.setType(regulartype) &&
 					pokemon.abilityState.chromaon != false
