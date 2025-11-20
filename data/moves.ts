@@ -604,7 +604,13 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		flags: { snatch: 1, metronome: 1 },
 		volatileStatus: "aquaring",
 		condition: {
-			duration: 3,
+			duration: 255, //basically infinite
+			durationCallback(target, source, effect) {
+				if (effect?.name === 'Stream Shift') {
+					return 4; //streamshift duration
+				}
+				return 255;
+			},
 			onStart(pokemon) {
 				this.add("-start", pokemon, "Aqua Ring");
 			},
@@ -27634,11 +27640,11 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			onSwitchIn(target) {
 				this.singleEvent("Swap", this.effect, this.effectState, target);
 			},
-			onSwap(target) {
+			onSwap(target, effect) {
 				if (
 					!target.fainted
 				) {
-					target.addVolatile('aquaring');
+					target.addVolatile('aquaring', effect);
 					target.side.removeSlotCondition(target, "streamshift");
 				}
 			},
