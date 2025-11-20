@@ -181,6 +181,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 
 		start: "  [POKEMON] surrounded itself with a veil of water!",
 		heal: "  A veil of water restored [POKEMON]'s HP!",
+		end: " [POKEMON]'s veil dissipates!",
 	},
 	aquastep: {
 		name: "Aqua Step",
@@ -6822,7 +6823,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	streamshift: {
 		name: "Stream Shift",
-		shortDesc: "Switches out and gives aqua rings the teammate.",
+		shortDesc: "User switches out, sets Aqua Ring for 3 turns.",
+		desc: "The user switches out, then the incoming Pokemon receives the effects of Aqua Ring for 3 turns."
 	},
 	strength: {
 		name: "Strength",

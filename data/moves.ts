@@ -604,6 +604,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		flags: { snatch: 1, metronome: 1 },
 		volatileStatus: "aquaring",
 		condition: {
+			duration: 3,
 			onStart(pokemon) {
 				this.add("-start", pokemon, "Aqua Ring");
 			},

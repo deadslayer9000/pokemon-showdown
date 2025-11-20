@@ -59,6 +59,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 			this.debug("Prospect - Sure hit");
 			return true;
 		},
+		onAfterMove() {},
 	},
 	minddive: {
 		inherit: true,
