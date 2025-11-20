@@ -27291,7 +27291,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					}
 				}
 				if (form === "Snorlax-Delta-Cherry") {
-					if (target.types.includes('Grass') || target.ability === 'sapsipper' || target.ability === 'goodasgold') { //hardcoded interaction
+					if (target.types.includes('Grass') || target.ability === 'sapsipper' || target.ability === 'goodasgold' || target.volatiles.substitute) { //hardcoded interaction
 						return false;
 					}
 					const item = target.takeItem();
