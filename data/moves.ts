@@ -612,6 +612,9 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			onResidual(pokemon) {
 				this.heal(pokemon.baseMaxhp / 16);
 			},
+			onEnd(pokemon) {
+				this.add("end", pokemon, "Aqua Ring");
+			},
 		},
 		secondary: null,
 		target: "self",
