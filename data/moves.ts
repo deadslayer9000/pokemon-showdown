@@ -27464,7 +27464,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Sapphire Storm",
 		pp: 5,
 		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1, },
+		flags: { protect: 1, mirror: 1, },
 		secondary: {
 			chance: 50,
 			boosts: {
@@ -27482,7 +27482,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Ruby Storm",
 		pp: 5,
 		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1, },
+		flags: { protect: 1, mirror: 1, },
 		secondary: {
 			chance: 50,
 			boosts: {
