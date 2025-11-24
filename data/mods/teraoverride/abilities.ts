@@ -781,4 +781,75 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 			}
 		},
 	},
+	altruistic: {
+		inherit: true,
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === target.teraType) {
+				if (!this.heal(target.baseMaxhp / 4)) {
+					this.add("-immune", target, "[from] ability: Altruistic");
+				}
+				return null;
+			}
+		},
+	},
+	steamforged: {
+		inherit: true,
+		onSourceModifyDamage(relayVar, source, target, move) {
+			if (target !== source && move.type === target.teraType) {
+				this.add("-activate", target, "ability: Steamforged");
+				return this.chainModify(0.5);
+			}
+		},
+	},
+	renegade: {
+		inherit: true,
+		onTryHit(source, target, move) {
+			if (!source.abilityState.renegade) source.abilityState.renegade = 0;
+			if (
+				source !== target &&
+				move.type === target.teraType &&
+				move.category !== "Status"
+			) {
+				if (source.abilityState.renegade >= 5) return;
+				source.abilityState.renegade += 1;
+			}
+			//			this.hint(source.abilityState.renegade);
+		},
+	},
+	redress: {
+		inherit: true,
+		onDamagingHit(damage, target, source, move) {
+			if (move.type === target.teraType) {
+				this.boost({ spe: 1 });
+			}
+		},
+	},
+	boundless: {
+		inherit: true,
+		onPrepareHit(source, target, move) {
+			if (
+				move.hasBounced ||
+				move.flags["futuremove"] ||
+				move.sourceEffect === "snatch" ||
+				move.callsMove
+			)
+				return;
+			if (
+				move.type === source.teraType
+			) {
+				const type = move.type;
+				if (type && !source.hasType(type)) {
+					if (!source.addType(type)) return;
+					this.add(
+						"-start",
+						source,
+						"typechange",
+						source.getTypes().join("/"),
+						"[from] ability: Boundless"
+					);
+				}
+			}
+		},
+	}
+
 };
