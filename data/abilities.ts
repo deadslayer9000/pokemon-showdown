@@ -9104,7 +9104,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		flags: {},
 		name: "Grim Sigil",
 		rating: 4,
-		num: -79,
+		num: -80,
 	},
 	fierytouch: {
 		onSourceDamagingHit(damage, target, source, move) {

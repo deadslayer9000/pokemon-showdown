@@ -830,4 +830,261 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 			}
 		},
 	},
+	//delta moves
+	corrosiveterrain: {
+		inherit: true,
+			terrain: "corrosiveterrain",
+		condition: {
+			effectType: "Terrain",
+			duration: 5,
+			durationCallback(source, effect) {
+				if (source?.hasItem("terrainextender")) {
+					return 8;
+				}
+				return 5;
+			},
+			onBasePowerPriority: 6,
+			onBasePower(basePower, attacker, defender, move) {
+				if (
+					move.type === this.effectState.source.teraType &&
+					defender.isGrounded() &&
+					!defender.isSemiInvulnerable()
+				) {
+					this.debug("corrosive terrain weaken");
+					return this.chainModify(0.5);
+				}
+			},
+			onFieldStart(field, source, effect) {
+				if (effect?.effectType === "Ability") {
+					this.add(
+						"-fieldstart",
+						"move: Corrosive Terrain",
+						"[from] ability: " + effect.name,
+						`[of] ${source}`
+					);
+				} else {
+					this.add("-fieldstart", "move: Corrosive Terrain");
+				}
+			},
+			onResidualOrder: 5,
+			onResidualSubOrder: 2,
+			onResidual(pokemon) {
+				const types = pokemon.getTypes();
+				const immuneTypes = types.includes(this.effectState.source.teraType);
+				if (
+					(pokemon.status || pokemon.hasAbility("comatose")) &&
+					pokemon.isGrounded() &&
+					!immuneTypes &&
+					!pokemon.isSemiInvulnerable()
+				) {
+					if (
+						pokemon.hasAbility("toxicboost") ||
+						pokemon.hasAbility("poisonheal") ||
+						pokemon.hasAbility("magicguard") ||
+						pokemon.hasAbility("immunity") ||
+						pokemon.hasAbility("pastelveil") ||
+						pokemon.hasAbility("wonderguard")
+					) {
+						this.debug(
+							`Pokemon semi-invuln, immune, or not grounded; Corrosive Terrain skipped`
+						);
+						return;
+					}
+					this.damage(pokemon.baseMaxhp / 16, pokemon, pokemon);
+				} else {
+					this.debug(
+						`Pokemon semi-invuln, immune, or not grounded; Corrosive Terrain skipped`
+					);
+				}
+			},
+		}
+	},
+	ridethewave: {
+		inherit: true,
+		onHit(target, source) {
+			if (target.getTypes().join() === source.teraType || !target.setType(source.teraType)) {
+				// Soak should animate even when it fails.
+				// Returning false would suppress the animation.
+				this.add("-fail", target);
+				return null;
+			}
+			this.add("-start", target, "typechange", source.teraType);
+		},
+	},
+	tribeam: {
+		inherit: true,
+		onPrepareHit(target, source, move) {
+			const vsTeraType = Dex.getEffectiveness(source.teraType, target);
+			const vsNormal = Dex.getEffectiveness("Normal", target);
+			if (vsTeraType > vsNormal) {
+				move.type = source.teraType;
+			} 
+			this.hint(`Tri Beam changed its type to: ${move.type} to maximize damage against ${target.name}.`);
+		},
+	},
+	dualdivide: {
+		inherit: true,	
+		onEffectiveness(typeMod, target, type) {
+			if (target && type ==	 target.side.foe.active[0].teraType) return 1;
+		},
+	},
+	gigatonanchor: {
+		inherit: true,
+		onEffectiveness(typeMod, target, type) {
+			if (target && type == target.side.foe.active[0].teraType) return 1;
+		},
+	},
+	iaislash: {
+		inherit: true,
+		condition: {
+			noCopy: true,
+			onStart(pokemon) {
+				this.add("-start", pokemon, "Iai Slash");
+				
+			},
+			onResidualOrder: 13,
+			onResidual(pokemon) {
+				this.damage(
+					pokemon.baseMaxhp / (pokemon.hasType(this.effectState.source.teraType) ? 4 : 8)
+				);
+				
+			},
+			onEnd(pokemon) {
+				this.add("-end", pokemon, "Iai Slash");
+			},
+		},
+	},
+	botanize: {
+		inherit: true,
+		condition: {
+			duration: 1,
+			onStart(target) {
+				this.add("-singleturn", target, "move: Botanize");
+			},
+			onModifyTypePriority: -2,
+			onModifyType(move) {
+				if (move.id !== "struggle") {
+					this.debug("Electrify making move type electric");
+					move.type = this.effectState.source.teraType;
+				}
+			},
+		},
+	},
+	flashpointfists: {
+		inherit: true,
+		onHit(target, source, move) {
+			if (target.hasType(source.teraType)) {
+				target.setType(
+					target
+						.getTypes(true)
+						.map((type) => (type === source.teraType ? "???" : type))
+				);
+				this.add(
+					"-start",
+					target,
+					"typechange",
+					target.getTypes().join("/"),
+					"[from] move: Flashpoint Fists"
+				);
+			}
+		},
+	},
+	seasonalblessing: {
+		inherit: true,
+		onTry(source, target, move) {
+			const form = source.species.name;
+			if (source.status === "slp" && form !== "Snorlax-Delta-Autumn") {
+				this.hint(
+					"But it failed because its form isn't Snorlax-Delta-Autumn."
+				);
+				return;
+			} else {
+				if (form === "Snorlax-Delta-Winter") {
+					const newtype = [source.teraType, "Grass"];
+					source.setType(newtype);
+					this.add(
+							"-start",
+							source,
+							"typechange",
+							newtype.join("/"),
+							"[from] move: Seasonal Blessing"
+						);
+					this.add(
+						"-message",
+						`${source.name}'s type changed to ${newtype.join(
+							"/"
+						)} due to its Seasonal Blessing!`
+						);
+					source.setAbility("Refrigerate");
+					this.add("-ability", source, "Refrigerate");
+					if (
+						this.field.isWeather("hail") ||
+						this.field.isWeather("snowscape")
+					) {
+						source.side.addSideCondition("auroraveil");
+					}
+				}
+				if (form === "Snorlax-Delta-Summer") {
+					const item = source.getItem();
+					if (item.isBerry) {
+						this.add(
+							"-enditem",
+							source,
+							item.name,
+							"[from] eat",
+							"[move] Seasonal Blessing",
+							`[of] ${source}`
+						);
+
+						this.boost({ def: 1, spd: 1 }, source);
+
+						if (this.singleEvent("Eat", item, null, source, null, null)) {
+							this.runEvent("EatItem", source, null, null, item);
+							if (item.id === "leppaberry")
+								source.staleness = "external";
+						}
+						if (item.onEat) source.ateBerry = true;
+						source.setItem("");
+					}
+				}
+				if (form === "Snorlax-Delta-Autumn") {
+					if (source.status === "slp") {
+						this.boost({ atk: 2, spa: 2 });
+						this.hint(
+							`${source.name}'s sleep increased the power of the boost!`
+						);
+					} else {
+						this.boost({ atk: 1, spa: 1 });
+					}
+				}
+				if (form === "Snorlax-Delta-Spring") {
+					if (this.field.isTerrain("grassyterrain")) {
+						move.heal = [1, 1];
+						this.hint(
+							`${source.name} used up Grassy Terrain to heal its pain!`
+						);
+						this.field.clearTerrain();
+					} else {
+						return false;
+					}
+				}
+				if (form === "Snorlax-Delta-Cherry") {
+					if (target.types.includes('Grass') || target.ability === 'sapsipper' || target.ability === 'goodasgold') { //hardcoded interaction
+						return false;
+					}
+					const item = target.takeItem();
+					if (item) {
+						this.add(
+							"-enditem",
+							target,
+							item.name,
+							"[from] move: Seasonal Blessing",
+							`[of] ${source}`
+						);
+					}
+					target.addVolatile("leechseed", source);
+				}
+			}
+		},
+	},
 };
