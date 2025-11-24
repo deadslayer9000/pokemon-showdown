@@ -1087,4 +1087,15 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 			}
 		},
 	},
+	reckoning: {
+		inherit: true,
+		basePowerCallback(source, target, move) {
+			let bp = move.basePower;
+			if (target.lastMoveUsed?.type === source.teraType || source.reckoningboost){
+				source.reckoningboost = true;
+				bp = bp * 2;
+			}
+			return bp;
+			},
+	}
 };
