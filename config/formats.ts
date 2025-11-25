@@ -771,6 +771,9 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'Volcarona', 'Zacian', 'Zacian-Crowned', 'Zamazenta-Crowned', 'Zekrom', 'Arena Trap', 'Magnet Pull', 'Moody', 'Shadow Tag', 'Focus Band', 'King\'s Rock', 'Razor Fang', 'Quick Claw',
 			'Baton Pass', 'Last Respects', 'Shed Tail', 'Weather Ball',
 		],
+		unbanlist: [
+			'Gholdengo'
+		],
 		onSwitchIn(pokemon) {
 			this.add('-start', pokemon, pokemon.teraType, '[silent]');
 		},
