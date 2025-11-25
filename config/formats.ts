@@ -772,7 +772,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'Baton Pass', 'Last Respects', 'Shed Tail', 'Weather Ball',
 		],
 		unbanlist: [
-			'Gholdengo'
+			'Gholdengo', 'Dragapult'
 		],
 		onSwitchIn(pokemon) {
 			this.add('-start', pokemon, pokemon.teraType, '[silent]');
