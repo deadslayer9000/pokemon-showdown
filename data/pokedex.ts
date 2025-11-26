@@ -22164,7 +22164,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		baseSpecies: "Lopunny-Delta",
 		forme: "Mega",
 		types: ["Dark", "Fighting"],
-		baseStats: { hp: 75, atk: 100, def: 76, spa: 95, spd: 112, spe: 129 },
+		baseStats: { hp: 68, atk: 100, def: 76, spa: 95, spd: 112, spe: 129 },
 		abilities: { 0: "Fatalize" },
 		weightkg: 33.5,
 		heightm: 1.2,
