@@ -21082,7 +21082,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		name: "Magoodra",
 		types: ["Dragon", "Fire"],
 		gender: "N",
-		baseStats: { hp: 63, atk: 104, def: 152, spa: 100, spd: 64, spe: 72 },
+		baseStats: { hp: 68, atk: 104, def: 152, spa: 100, spd: 64, spe: 72 },
 		abilities: { 0: "Magma Armor", 1: "Gooey", H: "Pyroclastic" },
 		weightkg: 288,
 		heightm: 2,
