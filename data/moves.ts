@@ -26398,6 +26398,12 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		pp: 10,
 		priority: 0,
 		onTryMove(attacker, defender, move) {
+			if (!this.field.isWeather("snowscape")) {
+				move.flags['charge'] = 1;
+				if (!this.runEvent("ChargeMove", attacker, defender, move)) {
+				return;
+			}
+			}
 			if (attacker.removeVolatile(move.id)) {
 				return;
 			}
@@ -26412,18 +26418,14 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				this.addMove("-anim", attacker, move.name, defender);
 				return;
 			}
-
-			if (!this.runEvent("ChargeMove", attacker, defender, move)) {
-				return;
-			}
 			if (this.field.isWeather("snowscape")) {
 				this.attrLastMove("[still]");
 				return;
 			}
-			attacker.addVolatile("twoturnmove", defender);
-			return null;
+			//attacker.addVolatile("twoturnmove", defender);
+			//return null;
 		},
-		flags: { charge: 1, protect: 1, mirror: 1 },
+		flags: { protect: 1, mirror: 1 },
 		secondary: null,
 		target: "normal",
 		type: "Ice",
