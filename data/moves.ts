@@ -26407,7 +26407,8 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			if (attacker.removeVolatile(move.id)) {
 				return;
 			}
-			this.add('-prepare', attacker, move.name);
+			this.hint(`The air around ${attacker.name} suddenly became colder!`);
+			//this.add('-prepare', attacker, move.name);
 			if (this.field.weather !== "" && this.field.weather !== "snowscape") {
 				this.hint(
 					`${attacker.name}'s Whiteout made snow fall on the battlefield!`
