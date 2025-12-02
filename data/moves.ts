@@ -26407,7 +26407,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			if (attacker.removeVolatile(move.id)) {
 				return;
 			}
-			//this.add('-prepare', attacker, move.name);
+			this.add('-prepare', attacker, move.name);
 			if (this.field.weather !== "" && this.field.weather !== "snowscape") {
 				this.hint(
 					`${attacker.name}'s Whiteout made snow fall on the battlefield!`
@@ -26422,8 +26422,8 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				this.attrLastMove("[still]");
 				return;
 			}
-			//attacker.addVolatile("twoturnmove", defender);
-			//return null;
+			attacker.addVolatile("twoturnmove", defender);
+			return null;
 		},
 		flags: { protect: 1, mirror: 1 },
 		secondary: null,

@@ -7901,6 +7901,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	whiteout: {
 		name: "Whiteout",
 		shortDesc: "Charge move. No charge in weather and sets snow.",
+		prepare: "The air around [POKEMON] suddenly became colder!",
 	},
 	wickedblow: {
 		name: "Wicked Blow",
