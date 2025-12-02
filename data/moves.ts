@@ -26418,8 +26418,6 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				this.addMove("-anim", attacker, move.name, defender);
 				return;
 			}
-			/*
-			*/
 			if (this.field.isWeather("snowscape")) {
 				this.attrLastMove("[still]");
 				return;
