@@ -26407,6 +26407,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			if (attacker.removeVolatile(move.id)) {
 				return;
 			}
+			this.hint(`The air around ${attacker.name} suddenly became colder!`);
 			//this.add('-prepare', attacker, move.name);
 			if (this.field.weather !== "" && this.field.weather !== "snowscape") {
 				this.hint(
@@ -26422,8 +26423,8 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				this.attrLastMove("[still]");
 				return;
 			}
-			//attacker.addVolatile("twoturnmove", defender);
-			//return null;
+			attacker.addVolatile("twoturnmove", defender);
+			return null;
 		},
 		flags: { protect: 1, mirror: 1 },
 		secondary: null,
