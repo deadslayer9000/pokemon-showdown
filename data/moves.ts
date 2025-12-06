@@ -16251,16 +16251,14 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		pp: 10,
 		priority: 0,
 		flags: { protect: 1, metronome: 1, mirror: 1 },
-		/*
 		onBasePower(basePower, pokemon, target) {
 			if (
 				target.status === "psn" ||
 				target.status === "tox" ||
-				this.field.isTerrain("corrosiveterrain")
 			) {
 				return this.chainModify(2);
 			}
-		},*/
+		},
 		secondary: {
 			chance: 50,
 			self: {
