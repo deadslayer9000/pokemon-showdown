@@ -27350,7 +27350,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Remedial Chain",
 		pp: 5,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, },
+		flags: { protect: 1, mirror: 1, metronome: 1 },
 		secondary: null,
 		target: "normal",
 		onHit(target, source, move) {
@@ -27389,7 +27389,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Hypnotic Chain",
 		pp: 5,
 		priority: 0,
-		flags: { protect: 1, mirror: 1},
+		flags: { protect: 1, mirror: 1, metronome: 1 },
 		sleepUsable: true,
 		secondary: null,
 		target: "normal",
@@ -27403,7 +27403,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Searing Chain",
 		pp: 5,
 		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1 },
+		flags: { protect: 1, mirror: 1, metronome: 1 },
 		secondary: {
 			chance: 30,
 			status: 'brn',
@@ -27419,7 +27419,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Stunning Chain",
 		pp: 5,
 		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1 },
+		flags: { protect: 1, mirror: 1, metronome: 1 },
 		secondary: {
 			chance: 30,
 			status: 'par',
@@ -27435,7 +27435,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Glacial Chain",
 		pp: 5,
 		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1 },
+		flags: { protect: 1, mirror: 1, metronome: 1 },
 		secondary: {
 			chance: 30,
 			status: 'frz',
@@ -27451,7 +27451,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Chaotic Chain",
 		pp: 5,
 		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1 },
+		flags: { protect: 1, mirror: 1, metronome: 1 },
 		secondary: {
 			chance: 30,
 			onHit(target, source, move) {
