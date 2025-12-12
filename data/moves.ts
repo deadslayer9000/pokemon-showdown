@@ -16254,7 +16254,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		onBasePower(basePower, pokemon, target) {
 			if (
 				target.status === "psn" ||
-				target.status === "tox" ||
+				target.status === "tox"
 			) {
 				return this.chainModify(2);
 			}
@@ -21416,6 +21416,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				) {
 					continue;
 				}
+				pokemon.sleepTalkUsed = true;
 				moves.push(moveid);
 			}
 			let randomMove = "";
@@ -27216,12 +27217,14 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 
 		onTry(source, target, move) {
 			const form = source.species.name;
-			if (source.status === "slp" && form !== "Snorlax-Delta-Autumn") {
+			if (source.status === "slp" && form !== "Snorlax-Delta-Autumn" && !source.sleepTalkUsed === true) {
+				source.sleepTalkUsed = false;
 				this.hint(
 					"But it failed because its form isn't Snorlax-Delta-Autumn."
 				);
 				return;
 			} else {
+				source.sleepTalkUsed = false;
 				if (form === "Snorlax-Delta-Winter") {
 					const newtype = ["Ice", "Grass"];
 					source.setType(newtype);
