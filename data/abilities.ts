@@ -9343,7 +9343,15 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 3.5,
 		num: -90,
 	},
-	
+	umbralsurge: {
+		onStart(pokemon) {
+			this.field.clearTerrain();
+		},
+		flags: {},
+		name: "Umbral Surge",
+		rating: 2,
+		num: -91,
+	},
 
 	// CAP
 	mountaineer: {

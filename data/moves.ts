@@ -27803,6 +27803,45 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		},
 		target: "normal",
 		type: "Ghost",
+	},
+	lumencascade: {
+		num: -102,
+		accuracy: 100,
+		basePower: 50,
+		category: "Special",
+		name: "Lumen Cascade",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1 },
+		secondary: {
+			chance: 10,
+			boosts: {
+				spd: -1,
+			}
+		},
+		target: "normal",
+		type: "Normal",
+		multihit: 2,
+		onModifyMove(move, pokemon) {
+			switch (pokemon.effectiveWeather()) {
+				case "sunnyday":
+				case "desolateland":
+					move.basePower *= 0.5;
+					break;
+				case "raindance":
+				case "primordialsea":
+					move.basePower *= 0.5;
+					break;
+				case "sandstorm":
+					move.basePower *= 0.5;
+					break;
+				case "hail":
+				case "snowscape":
+					move.basePower *= 0.5;
+					break;
+			}
+			this.debug(`BP: ${move.basePower}`);
+			this.hint(`The weather weakened ${pokemon.name}'s Lumen Cascade.`);
+		},
 	}
-
 };
