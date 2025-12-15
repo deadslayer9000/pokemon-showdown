@@ -17330,7 +17330,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		evoCondition: "Defeat the Single Strike Tower",
 		eggGroups: ["Undiscovered"],
 		otherFormes: ["Urshifu-Rapid-Strike"],
-		formeOrder: ["Urshifu", "Urshifu-Rapid-Strike"],
+		formeOrder: ["Urshifu", "Urshifu-Rapid-Strike", "Urshifu-Flash-Strike"],
 		canGigantamax: "G-Max One Blow",
 	},
 	urshifurapidstrike: {
@@ -25375,6 +25375,32 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		weightkg: 0.3,
 		//color: "Green",
 		eggGroups: ["Undiscovered"],
-	}
+	},
+	tapuhina: {
+		num: 2118, //nodex yet
+		name: "Tapu Hina",
+		types: ["Normal", "Fairy"],
+		gender: "N",
+		baseStats: { hp: 70, atk: 75, def: 115, spa: 95, spd: 130, spe: 85 },
+		abilities: { 0: "Umbral Surge" },
+		heightm: 1.6,
+		weightkg: 25.5,
+		//color: "Blue",
+		eggGroups: ["Undiscovered"],
+	},
+	urshifuflashstrike: {
+		num: 892,
+		name: "Urshifu-Flash-Strike",
+		baseSpecies: "Urshifu",
+		forme: "Flash-Strike",
+		types: ["Fighting", "Electric"],
+		gender: "N",
+		baseStats: { hp: 100, atk: 130, def: 100, spa: 63, spd: 60, spe: 97 },
+		abilities: { 0: "Unseen Fist" },
+		heightm: 1.9,
+		weightkg: 105,
+		color: "Gray",
+		eggGroups: ["Undiscovered"],
+	},
 
 };
