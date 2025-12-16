@@ -39,6 +39,20 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
         inherit: true,
         baseStats: { hp: 91, atk: 108, def: 103, spa: 136, spd: 96, spe: 69 },
     },
-
-
+    hatteon: {
+        inherit: true,
+        baseStats: { hp: 76, atk: 76, def: 68, spa: 132, spd: 112, spe: 112 },
+    },
+    zeraoradelta: {
+        inherit: true,
+        baseStats: { hp: 88, atk: 123, def: 81, spa: 96, spd: 91, spe: 121 },
+    },
+    grimmeon: {
+        inherit: true,
+        baseStats: { hp: 96, atk: 76, def: 112, spa: 68, spd: 132, spe: 76 },
+    },
+    tangledtime: {
+        inherit: true,
+        baseStats: { hp: 100, atk: 95, def: 75, spa: 125, spd: 75, spe: 120 },
+    },
 };

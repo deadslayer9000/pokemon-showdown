@@ -2313,8 +2313,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	taproot: {
 		name: "Taproot",
-		shortDesc: "Heal 1/16th of your health at the end of every turn. Drain moves heal 30% more.",
-		desc: "This Pokemon heals 1/16th of it's health at the end of the turn. Moves that drain HP from the target heal 30% more, similar to Big Root.",
+		shortDesc: "Heal 1/16th HP every turn, effect is lost if super-effective damage taken.",
+		desc: "This Pokemon heals 1/16th of it's health at the end of the turn. This effect is disabled for the rest of the battle if this Pokemon takes any super-effective damage.",
+
+		end: "[POKEMON] was uprooted!",
 	},
 	technician: {
 		name: "Technician",

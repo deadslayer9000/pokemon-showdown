@@ -1991,6 +1991,13 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				this.add("-activate", pokemon, "ability: Diamond Grove");
 			}
 		},
+		onDamage(damage, target, source, effect) {
+			if (this.field.isTerrain("grassyterrain")){
+			if (effect && effect.id === 'stealthrock' || effect.id === 'gmaxsteelsurge' || effect.id === 'spikes') {
+				return false;
+			}
+		}
+		},
 		flags: {},
 		name: "Diamond Grove",
 		rating: 4,
@@ -7924,7 +7931,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 221,
 	},
 	taproot: {
-		onTryHealPriority: 1,
+		/*onTryHealPriority: 1,
 		onTryHeal(damage, target, source, effect) {
 			const heals = [
 				"drain",
@@ -7936,11 +7943,19 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			if (heals.includes(effect.id)) {
 				return this.chainModify([5324, 4096]);
 			}
-		},
+		},*/
 		onResidualOrder: 5,
 		onResidualSubOrder: 4,
 		onResidual(pokemon) {
+			if (!pokemon.derooted) {
 			this.heal(pokemon.baseMaxhp / 16);
+			}
+		},
+		onSourceModifyDamage(damage, source, target, move) {
+			if(target.getMoveHitData(move).typeMod > 0) {
+				this.add('-end', target, 'Taproot');
+				target.derooted = true;
+			}
 		},
 		flags: {},
 		name: "Taproot",
