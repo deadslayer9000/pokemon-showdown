@@ -9367,6 +9367,11 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	icebound: {
 		//effectiveness defined in pokemon.ts
+		onStart(pokemon) {
+			if (this.field.isWeather('snowscape') || this.field.isWeather('hail')) {
+				this.add("-ability", pokemon, "Icebound");
+			}
+		},
 		onDamage(damage, target, source, effect) {
 			if (this.field.isWeather('snowscape') || this.field.isWeather('hail')){
 			if (effect && effect.id === 'stealthrock' || effect.id === 'gmaxsteelsurge' || effect.id === 'spikes') {

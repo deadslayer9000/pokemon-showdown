@@ -7532,14 +7532,17 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		onModifyMove(move, pokemon, target) {
 			if (
 				target &&
-				["snow", "hail"].includes(target.effectiveWeather())
+				["snowscape", "hail"].includes(target.effectiveWeather())
 			) {
 				move.accuracy = true;
 			}
 		},
+		secondary: {
+			chance: 10,
+			status: 'frz',
+		},
 		target: "allAdjacentFoes",
 		type: "Ice",
-		contestType: "Beautiful",
 	},
 	flashpointfists: {
 		num: -79,
