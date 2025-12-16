@@ -900,6 +900,11 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			shortDesc: "If Hail is active, this Pokemon heals 1/16 of its max HP each turn; immunity to Hail.",
 		},
 	},
+	icebound: {
+		name: "Icebound",
+		desc: "If Snow is active, this Pokemon is immune to the effects of hazards, and Super-effective attacks on it become neutral.",
+		shortDesc: "In Snow: Immune to hazards and Super-effective attacks become neutral.",
+	},
 	iceface: {
 		name: "Ice Face",
 		desc: "If this Pokemon is an Eiscue, the first physical hit it takes in battle deals 0 neutral damage. Its ice face is then broken and it changes forme to Noice Face. Eiscue regains its Ice Face forme when Snow begins or when Eiscue switches in while Snow is active. Confusion damage also breaks the ice face.",
@@ -2498,6 +2503,12 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	twinkle: {
 		name: "Twinkle",
 		shortDesc: "At 1/3 or less of its max HP, this Pokemon's offensive stat is 1.5x with Fairy attacks.",
+	},
+	umbralsurge: {
+		name: "Umbral Surge",
+		shortDesc: "The effects of terrain are disabled while this Pokemon is active.",
+
+		start: " [POKEMON] dispelled the effects of surrounding terrain!",
 	},
 	unaware: {
 		name: "Unaware",

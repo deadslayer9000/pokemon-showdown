@@ -27854,7 +27854,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		secondary: {
 			chance: 10,
 			boosts: {
-				spd: -1,
+				spa: -1,
 			}
 		},
 		target: "normal",
