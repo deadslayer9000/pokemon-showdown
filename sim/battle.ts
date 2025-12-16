@@ -620,6 +620,10 @@ export class Battle {
 			this.debug(eventid + ' handler suppressed by Air Lock');
 			return relayVar;
 		}
+		if (effect.effectType === 'Terrain' && eventid !== 'FieldStart' && eventid !== 'FieldResidual' && eventid !== 'FieldEnd' && this.field.suppressingTerrain()) {
+			this.debug(eventid + ' handler suppressed by Umbral Surge');
+			return relayVar;
+		}
 
 		const callback = customCallback || (effect as any)[`on${eventid}`];
 		if (callback === undefined) return relayVar;

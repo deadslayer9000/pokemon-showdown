@@ -167,10 +167,22 @@ export class Field {
 	}
 
 	effectiveTerrain(target?: Pokemon | Side | Battle) {
+		if (this.suppressingTerrain()) return '';
 		if (this.battle.event && !target) target = this.battle.event.target;
 		return this.battle.runEvent('TryTerrain', target) ? this.terrain : '';
 	}
 
+	suppressingTerrain() {
+		for (const side of this.battle.sides) {
+			for (const pokemon of side.active) {
+				if (pokemon && !pokemon.fainted && !pokemon.ignoringAbility() &&
+					pokemon.getAbility().suppressTerrain && !pokemon.abilityState.ending) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
 	isTerrain(terrain: string | string[], target?: Pokemon | Side | Battle) {
 		const ourTerrain = this.effectiveTerrain(target);
 		if (!Array.isArray(terrain)) {

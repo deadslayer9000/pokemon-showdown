@@ -7506,6 +7506,44 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		type: "Steel",
 		contestType: "Beautiful",
 	},
+	flashfist: {
+		num: -105,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Flash Fist",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1, contact: 1 },
+		overrideOffensiveStat: 'spe',
+		secondary: null,
+		target: "normal",
+		type: "Electric",
+	},
+	flashfreezestorm: {
+		num: -104,
+		accuracy: 80,
+		basePower: 100,
+		category: "Special",
+		name: "Flashfreeze Storm",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1, wind: 1 },
+		onModifyMove(move, pokemon, target) {
+			if (
+				target &&
+				["snowscape", "hail"].includes(target.effectiveWeather())
+			) {
+				move.accuracy = true;
+			}
+		},
+		secondary: {
+			chance: 10,
+			status: 'frz',
+		},
+		target: "allAdjacentFoes",
+		type: "Ice",
+	},
 	flashpointfists: {
 		num: -79,
 		accuracy: 100,
@@ -27805,7 +27843,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		type: "Ghost",
 	},
 	lumencascade: {
-		num: -102,
+		num: -103,
 		accuracy: 100,
 		basePower: 50,
 		category: "Special",
@@ -27816,7 +27854,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		secondary: {
 			chance: 10,
 			boosts: {
-				spd: -1,
+				spa: -1,
 			}
 		},
 		target: "normal",

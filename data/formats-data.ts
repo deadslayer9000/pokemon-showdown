@@ -7124,12 +7124,38 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		doublesTier: "(DUU)",
 	},
 	magearnaoriginaldelta: {
+		tier: "UU",
+		doublesTier: "(DUU)",
 	},
 	vrelie: {
 		tier: "UU",
 		doublesTier: "(DUU)",
 	},
 	vreliedelta: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
+	tapuhina: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
+	urshifuflashstrike: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
+	keldeodelta: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
+	glaciarus: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
+	glaciarustherian: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
+	celebidelta: {
 		tier: "UU",
 		doublesTier: "(DUU)",
 	}

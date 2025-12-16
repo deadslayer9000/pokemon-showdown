@@ -2309,10 +2309,18 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
 		shortDesc: "10% chance to lower the target's Sp. Def by 1.",
 	},
+	flashfist: {
+		name: "Flash Fist",
+		shortDesc: "Damage is calculated with Speed instead of Attack.",
+	},
+	flashfreezestorm: {
+		name: "Flashfreeze Storm",
+		shortDesc: "100% accurate in Snow; 10% chance to freeze.",
+	},
 	flashpointfists: {
 		name: "Flashpoint Fists",
-		desc: "If this move hits a Fire type Pokemon, it gets rid of their Fire type.",
-		shortDesc: "If this move hits a Fire type Pokemon, it gets rid of their Fire type.",
+		desc: "If this move hits a Fire-type Pokemon, it removes the Fire-typing.",
+		shortDesc: "Removes fire-typing from hit targets.",
 		typeChange: "  [POKEMON]'s Fire type was burned out with Flashpoint Fists!",
 	},
 	flatter: {
@@ -3937,6 +3945,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 
 		start: "  Lucky Chant shielded [TEAM] from critical hits!",
 		end: "  [TEAM]'s Lucky Chant wore off!",
+	},
+	lumencascade: {
+		name: "Lumen Cascade",
+		desc: "This move hits twice, each hit having a 10% chance to drop the target\'s Special Attack. This move's Base Power drops to 25 if any Weather is currently active.",
+		shortDesc: "Hits twice; 10% for SpA drop. Weaker in weather.",
 	},
 	luminacrash: {
 		name: "Lumina Crash",
