@@ -2195,7 +2195,7 @@ export class Pokemon {
 		}
 		}
 		if (this.hasAbility('Icebound') && !this.battle.suppressingAbility(this)) {
-			if (this.battle.field.isWeather('snow')) {
+			if (this.battle.field.isWeather('snow') || this.battle.field.isWeather('hail')) {
 				if (move.category !== 'Status' && move.id !== 'struggle' && this.runImmunity(move.type)) {
 					if (totalTypeMod > 0) return 0;
 				}

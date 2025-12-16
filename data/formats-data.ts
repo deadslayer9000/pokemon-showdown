@@ -7151,7 +7151,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 		doublesTier: "(DUU)",
 	},
-	glaciarusincarnate: {
+	glaciarustherian: {
 		tier: "UU",
 		doublesTier: "(DUU)",
 	},
