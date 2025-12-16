@@ -25413,10 +25413,12 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		weightkg: 66,
 		color: "Blue",
 		eggGroups: ["Undiscovered"],
+		otherFormes: ["Glaciarus-Therian"]
 	},
 	glaciarustherian: {
 		num: 2119, 
 		name: "Glaciarus-Therian",
+		baseSpecies: "Glaciarus",
 		types: ["Ice", "Flying"],
 		gender: "N",
 		baseStats: { hp: 79, atk: 140, def: 70, spa: 110, spd: 80, spe: 101 },
