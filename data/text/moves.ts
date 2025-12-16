@@ -2319,8 +2319,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	flashpointfists: {
 		name: "Flashpoint Fists",
-		desc: "If this move hits a Fire type Pokemon, it gets rid of their Fire type.",
-		shortDesc: "If this move hits a Fire type Pokemon, it gets rid of their Fire type.",
+		desc: "If this move hits a Fire-type Pokemon, it removes the Fire-typing.",
+		shortDesc: "Removes fire-typing from hit targets.",
 		typeChange: "  [POKEMON]'s Fire type was burned out with Flashpoint Fists!",
 	},
 	flatter: {
