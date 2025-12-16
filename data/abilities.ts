@@ -9344,15 +9344,39 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -90,
 	},
 	umbralsurge: {
-		onStart(pokemon) {
-			this.field.clearTerrain();
+		onSwitchIn(pokemon) {
+			this.add("-ability", pokemon, "Umbral Surge");
+			((this.effect as any).onStart as (p: Pokemon) => void).call(
+				this,
+				pokemon
+			);
 		},
+		onStart(pokemon) {
+			pokemon.abilityState.ending = false; // Clear the ending flag
+			this.eachEvent("TerrainChange", this.effect);
+		},
+		onEnd(pokemon) {
+			pokemon.abilityState.ending = true;
+			this.eachEvent("TerrainChange", this.effect);
+		},
+		suppressTerrain: true,
 		flags: {},
 		name: "Umbral Surge",
 		rating: 2,
 		num: -91,
 	},
-
+	icebound: {
+		//effectiveness defined in pokemon.ts
+		onDamage(damage, target, source, effect) {
+			if (effect && effect.id === 'stealthrock' || effect.id === 'gmaxsteelsurge' || effect.id === 'spikes') {
+				return false;
+			}
+		},
+		flags: {},
+		name: "Icebound",
+		rating: 3,
+		num: -92,
+	},
 	// CAP
 	mountaineer: {
 		onDamage(damage, target, source, effect) {
