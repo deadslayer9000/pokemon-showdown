@@ -25416,7 +25416,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	},
 	glaciarustherian: {
 		num: 2119, 
-		name: "Glaciarus",
+		name: "Glaciarus-Therian",
 		types: ["Ice", "Flying"],
 		gender: "N",
 		baseStats: { hp: 79, atk: 140, def: 70, spa: 110, spd: 80, spe: 101 },
