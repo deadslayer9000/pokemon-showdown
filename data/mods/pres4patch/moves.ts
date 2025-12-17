@@ -192,4 +192,15 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 			}
 		},
 	},
+	pollenpuff: {
+		inherit: true,
+		basePower: 80,
+		pp: 10,
+	},
+	verdantflush: {
+		inherit: true,
+		basePower: 80,
+		category: "Special",
+		pp: 10,
+	},
 };

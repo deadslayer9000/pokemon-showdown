@@ -7790,10 +7790,10 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	floridpuff: {
 		num: -12,
 		accuracy: 90,
-		basePower: 80,
+		basePower: 75,
 		category: "Special",
 		name: "Florid Puff",
-		pp: 10,
+		pp: 5,
 		priority: 0,
 		flags: { metronome: 1, mirror: 1, protect: 1 },
 		secondary: {
@@ -9557,8 +9557,8 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			},
 			onSwitchIn(pokemon) {
 				if (
-					pokemon.hasItem("heavydutyboots") ||
-					pokemon.hasAbility("Breach")
+					pokemon.hasItem("heavydutyboots")
+					//pokemon.hasAbility("Breach") 
 				)
 					return;
 				// Ice Face and Disguise correctly get typed damage from Stealth Rock
@@ -22255,8 +22255,8 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			onSwitchIn(pokemon) {
 				if (
 					!pokemon.isGrounded() ||
-					pokemon.hasItem("heavydutyboots") ||
-					pokemon.hasAbility("Breach")
+					pokemon.hasItem("heavydutyboots")
+					//pokemon.hasAbility("Breach")
 				)
 					return;
 				const damageAmounts = [0, 3, 4, 6]; // 1/8, 1/6, 1/4
@@ -22602,8 +22602,8 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			},
 			onSwitchIn(pokemon) {
 				if (
-					pokemon.hasItem("heavydutyboots") ||
-					pokemon.hasAbility("Breach")
+					pokemon.hasItem("heavydutyboots") 
+					//pokemon.hasAbility("Breach")
 				)
 					return;
 				const typeMod = this.clampIntRange(
@@ -22768,8 +22768,8 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			onSwitchIn(pokemon) {
 				if (
 					!pokemon.isGrounded() ||
-					pokemon.hasItem("heavydutyboots") ||
-					pokemon.hasAbility("Breach")
+					pokemon.hasItem("heavydutyboots") 
+					//pokemon.hasAbility("Breach")
 				)
 					return;
 				this.add("-activate", pokemon, "move: Sticky Web");
@@ -25108,8 +25108,8 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					pokemon.side.removeSideCondition("toxicspikes");
 				} else if (
 					pokemon.hasType("Steel") ||
-					pokemon.hasItem("heavydutyboots") ||
-					pokemon.hasAbility("Breach")
+					pokemon.hasItem("heavydutyboots")
+					//pokemon.hasAbility("Breach")
 				) {
 					// do nothing
 				} else if (this.effectState.layers >= 2) {
@@ -25919,17 +25919,17 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	verdantflush: {
 		num: -13,
 		accuracy: 90,
-		basePower: 80,
-		category: "Special",
+		basePower: 75,
+		category: "Physical",
 		name: "Verdant Flush",
-		pp: 10,
+		pp: 5,
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
 		secondary: {
 			chance: 50,
 			self: {
 				boosts: {
-					spa: 1,
+					atk: 1,
 				},
 			},
 		},
