@@ -138,5 +138,36 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 				return this.chainModify([5324, 4096]);
 			}
 		},
+		onSourceModifyDamage() {},
+	},
+	breach: {
+		inherit: true,
+		onDamage(damage, target, source, effect) {
+			if (effect && effect.id === 'stealthrock' || effect.id === 'gmaxsteelsurge' || effect.id === 'spikes') {
+				return false;
+			} //the relevance in question
+		},	
+		onSetStatus(status, target, source, effect) {
+			if (effect.id === 'toxicspikes') {
+				return false;
+			}
+		},
+		onTryBoost(boost, target, source, effect) {
+			if (effect.id === 'stickyweb') {
+				return false;
+			}
+		},
+	},
+	deathdefiance: {
+		inherit: true,
+		onDamagePriority: -41, ///snipes focus sash priority so this goes after it
+		onDamage(damage, target, source, effect) {
+			if (damage >= target.hp && effect && effect.effectType === "Move") {
+				if (target.deathdefiance) return;
+				target.deathdefiance = true;
+				this.add("-ability", target, "Death Defiance");
+				return target.hp - 1;
+			}
+		},
 	}
 };

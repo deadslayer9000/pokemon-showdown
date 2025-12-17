@@ -7740,7 +7740,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	verdantflush: {
 		name: "Verdant Flush",
-		shortDesc: "50% chance to raise Special Attack of user.",
+		shortDesc: "50% chance to raise Attack of user.",
 	},
 	victorydance: {
 		name: "Victory Dance",

@@ -430,7 +430,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	deathdefiance: {
 		name: "Death Defiance",
-		shortDesc: "Once per battle, this Pokemon survives a lethal hit.",
+		desc: "Once per battle, this Pokemon can survive a lethal damaging move. If the move is super-effective, Death Defiance will fail to activate.",
+		shortDesc: "Survive a lethal hit once per battle; Bypassed by super-effective moves.",
 	},
 	defeatist: {
 		name: "Defeatist",
@@ -459,7 +460,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	diamondgrove: {
 		name: "Diamond Grove",
-		shortDesc: "If Grassy Terrain is active, Super-effective attacks on this Pokemon become neutral.",
+		desc: "If Grassy Terrain is active, Super-effective moves used against this Pokemon deal neutral damage. Additionally, this Pokemon does not take hazard damage from Stealth Rocks, Spikes, or G-Max Steelsurge while Grassy Terrain is active.",
+		shortDesc: "In Grassy Terrain: Super-effective moves become neutral; Hazard damage immune.",
 
 		activate: " [POKEMON]'s weaknesses were patched up by the grassy terrain!",
 	},
@@ -902,8 +904,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	icebound: {
 		name: "Icebound",
-		desc: "If Snow is active, this Pokemon is immune to the effects of hazards, and Super-effective attacks on it become neutral.",
-		shortDesc: "In Snow: Immune to hazards and Super-effective attacks become neutral.",
+		shortDesc: "If Snow is active, this Pokemon is immune to the effects of hazards.",
 	},
 	iceface: {
 		name: "Ice Face",
@@ -2316,7 +2317,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		shortDesc: "Heal 1/16th HP every turn, effect is lost if super-effective damage taken.",
 		desc: "This Pokemon heals 1/16th of it's health at the end of the turn. This effect is disabled for the rest of the battle if this Pokemon takes any super-effective damage.",
 
-		end: "[POKEMON] was uprooted!",
+		end: " [POKEMON] was uprooted!",
 	},
 	technician: {
 		name: "Technician",
@@ -2508,7 +2509,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	umbralsurge: {
 		name: "Umbral Surge",
-		shortDesc: "The effects of terrain are disabled while this Pokemon is active.",
+		desc: "On switch-in, this Pokemon clears the active terrain, and gains a boost depending on which terrain was cleared. Electric Terrain gives Speed, Psychic Terrain gives Special Attack, Misty Terrain gives Special Defense, Grassy Terrain gives Defense, and Corrosive Terrain gives Attack. This effect only activates once per battle.",
+		shortDesc: "This Pokemon clears terrain when it switches in, and boosts depending on the terrain.",
 
 		start: " [POKEMON] dispelled the effects of surrounding terrain!",
 	},

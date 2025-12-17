@@ -798,8 +798,23 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 						} from the battlefield.`
 					);
 				}
-			} //hazard immunity in moves.ts
+			}
 		},
+		/*onDamage(damage, target, source, effect) {
+			if (effect && effect.id === 'stealthrock' || effect.id === 'gmaxsteelsurge' || effect.id === 'spikes') {
+				return false;
+			} //this is a significantly better way to implement this, but should only be relevant for prems4patch
+		},	
+		onSetStatus(status, target, source, effect) {
+			if (effect.id === 'toxicspikes') {
+				return false;
+			}
+		},
+		onTryBoost(boost, target, source, effect) {
+			if (effect.id === 'stickyweb') {
+				return false;
+			}
+		},*/
 		flags: {},
 		name: "Breach",
 		rating: 4,
@@ -1837,8 +1852,9 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	deathdefiance: {
 		onDamagePriority: -41, ///snipes focus sash priority so this goes after it
 		onDamage(damage, target, source, effect) {
+			let move = this.activeMove;
 			if (damage >= target.hp && effect && effect.effectType === "Move") {
-				if (target.deathdefiance) return;
+				if (target.deathdefiance || target.getMoveHitData(move).typeMod > 0) return;
 				target.deathdefiance = true;
 				this.add("-ability", target, "Death Defiance");
 				return target.hp - 1;
@@ -9359,22 +9375,32 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -90,
 	},
 	umbralsurge: {
-		onSwitchIn(pokemon) {
-			this.add("-ability", pokemon, "Umbral Surge");
-			((this.effect as any).onStart as (p: Pokemon) => void).call(
-				this,
-				pokemon
-			);
-		},
 		onStart(pokemon) {
-			pokemon.abilityState.ending = false; // Clear the ending flag
-			this.eachEvent("TerrainChange", this.effect);
+			const terrain = this.field.getTerrain();
+			this.add("-ability", pokemon, "Umbral Surge");
+			if (!pokemon.surged) {
+			switch (terrain.name) {
+			case 'Electric Terrain':
+				this.boost({ spe: 1 });
+				break;
+			case 'Psychic Terrain':
+				this.boost({ spa: 1});
+				break;
+			case 'Misty Terrain':
+				this.boost({ spd: 1});
+				break;
+			case 'Grassy Terrain':
+				this.boost({ def: 1});
+				break;
+			case 'Corrosive Terrain':
+				this.boost({ atk: 1});
+				break;
+			}
+		}
+			this.field.clearTerrain();
+			pokemon.surged = true;
 		},
-		onEnd(pokemon) {
-			pokemon.abilityState.ending = true;
-			this.eachEvent("TerrainChange", this.effect);
-		},
-		suppressTerrain: true,
+		//suppressTerrain: FUUUUUCK I HATE IT ALLAT FOR NOTHING !!!!!!!!!
 		flags: {},
 		name: "Umbral Surge",
 		rating: 2,
