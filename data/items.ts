@@ -4950,6 +4950,34 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		num: 243,
 		gen: 2,
 	},
+	necromausite: {
+		name: "Necromausite",
+		spritenum: 587,
+		megaStone: "Necromauser-Mega",
+		megaEvolves: "Necromauser",
+		itemUser: ["Necromauser"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -26,
+		gen: 6,
+		isNonstandard: "Past",
+	},
+	slaughtermausite: {
+		name: "Slaughtermausite",
+		spritenum: 587,
+		megaStone: "Slaughtermaus-Mega",
+		megaEvolves: "Slaughtermaus",
+		itemUser: ["Slaughtermaus"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -27,
+		gen: 6,
+		isNonstandard: "Past",
+	},
 	nanabberry: {
 		name: "Nanab Berry",
 		spritenum: 302,
