@@ -4962,7 +4962,6 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		},
 		num: -26,
 		gen: 6,
-		isNonstandard: "Past",
 	},
 	slaughtermausite: {
 		name: "Slaughtermausite",
@@ -4976,7 +4975,6 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		},
 		num: -27,
 		gen: 6,
-		isNonstandard: "Past",
 	},
 	nanabberry: {
 		name: "Nanab Berry",
