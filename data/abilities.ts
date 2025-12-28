@@ -5719,7 +5719,18 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	prospect: {
 		onAfterMove(source, target, move) {
 			if (move.flags['futuremove']) {
-				this.boost({ spd: 1 }, source);
+				source.abilityState.prospect = true;
+				//this.boost({ spd: 1 }, source);
+			}
+		},
+		onResidual(target, source, effect) {
+			const possibleTargets = target.adjacentFoes();
+			if (!possibleTargets.length) return;
+
+			const foe = this.sample(possibleTargets);
+			if (!foe.side.slotConditions[foe.position]["futuremove"] && target.abilityState?.prospect) {
+				target.abilityState.prospect = false;
+				this.boost({ spd: 1 }, target);
 			}
 		},
 		flags: {},
@@ -9424,6 +9435,46 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		name: "Icebound",
 		rating: 3,
 		num: -92,
+	},
+	reap: {
+		onBasePowerPriority: 19,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags["slicing"]) {
+				this.debug("Reap boost");
+				return this.chainModify(1.3);
+			}
+		},
+		onTryBoost(boost, target, source, effect) {
+			if (source && target === source) return;
+			if (boost.spe && boost.spe < 0) {
+				delete boost.spe;
+				if (!(effect as ActiveMove).secondaries) {
+					this.add(
+						"-fail",
+						target,
+						"unboost",
+						"Speed",
+						"[from] ability: Reap",
+						`[of] ${target}`
+					);
+				}
+			}
+		},
+		flags: {},
+		name: "Reap",
+		rating: 3.5,
+		num: -93,
+	},
+	necromancy: {
+		onBeforeMove(source, target, move) {
+			if (move.category === "Physical"){
+				move.overrideOffensiveStat = 'spa';
+			}
+		},
+		flags: {},
+		name: "Necromancy",
+		rating: 4,
+		num: -94,
 	},
 	// CAP
 	mountaineer: {

@@ -1348,6 +1348,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 
 		activate: "  ([POKEMON] is cured by its Natural Cure!)",
 	},
+	necromancy: {
+		name: "Necromancy",
+		shortDesc: "This Pokemon's physical moves use Sp. Atk for damage calculation.",
+	},
 	neuroforce: {
 		name: "Neuroforce",
 		desc: "This Pokemon's attacks that are super effective against the target have their damage multiplied by 1.25.",
@@ -1735,6 +1739,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			desc: "This Pokemon's Speed is raised by 1 stage if hit by a Bug-, Dark-, or Ghost-type attack.",
 			shortDesc: "This Pokemon's Speed is raised 1 stage if hit by a Bug-, Dark-, or Ghost-type attack.",
 		},
+	},
+	reap: {
+		name: "Reap",
+		shortDesc: "This Pokemon's slicing moves have 30% increased power, user's speed cant be lowered.",
 	},
 	receiver: {
 		name: "Receiver",
