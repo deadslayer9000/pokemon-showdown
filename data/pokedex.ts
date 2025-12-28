@@ -25472,7 +25472,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	},
 	necromausermega: {
 		num: 2035,
-		name: "Necromauser",
+		name: "Necromauser-Mega",
 		types: ["Poison", "Ghost"],
 		baseStats: { hp: 150, atk: 70, def: 75, spa: 150, spd: 85, spe: 40 },
 		abilities: { 0: "Necromancy" },

@@ -8956,22 +8956,6 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				}
 			}
 		},
-		onTryBoost(boost, target, source, effect) {
-			if (source && target === source) return;
-			if (boost.spe && boost.spe < 0) {
-				delete boost.spe;
-				if (!(effect as ActiveMove).secondaries) {
-					this.add(
-						"-fail",
-						target,
-						"unboost",
-						"Attack",
-						"[from] ability: Reap",
-						`[of] ${target}`
-					);
-				}
-			}
-		},
 		num: -72,
 		name: "Wish Reaper",
 		rating: 3,
@@ -9460,11 +9444,38 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				return this.chainModify(1.3);
 			}
 		},
-
+		onTryBoost(boost, target, source, effect) {
+			if (source && target === source) return;
+			if (boost.spe && boost.spe < 0) {
+				delete boost.spe;
+				if (!(effect as ActiveMove).secondaries) {
+					this.add(
+						"-fail",
+						target,
+						"unboost",
+						"Speed",
+						"[from] ability: Reap",
+						`[of] ${target}`
+					);
+				}
+			}
+		},
 		flags: {},
 		name: "Reap",
 		rating: 3.5,
 		num: -93,
+	},
+	necromancy: {
+		onBeforeMove(source, target, move) {
+			if (move.category === "Physical"){
+				move.overrideOffensiveStat = 'spa';
+				this.hint(`${source.name} used its necromancy!`);
+			}
+		},
+		flags: {},
+		name: "Necromancy",
+		rating: 4,
+		num: -94,
 	},
 	// CAP
 	mountaineer: {
