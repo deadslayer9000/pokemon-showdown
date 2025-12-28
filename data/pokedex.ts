@@ -25456,6 +25456,18 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Blue",
 		eggGroups: ["Undiscovered"],
 	},
+	ironblaster: {
+		num: 2120,
+		name: "Iron Blaster",
+		types: ["Psychic", "Fire"],
+		gender: "N",
+		baseStats: { hp: 74, atk: 100, def: 68, spa: 150, spd: 108, spe: 90 },
+		abilities: { 0: "Quark Drive"},
+		heightm: 1.5,
+		weightkg: 55,
+		color: "Red",
+		eggGroups: ["Undiscovered"],
+	},
 	slaughtermausmega: {
 		num: 2036,
 		name: "Slaughtermaus-Mega",
