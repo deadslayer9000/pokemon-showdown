@@ -22662,6 +22662,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Purple",
 		eggGroups: ["Field", "Fairy"],
 		prevo: "Tandemaus-Delta",
+		otherFormes: ["Necromauser-Mega"],
 	},
 	slaughtermaus: {
 		num: 2036,
@@ -22674,6 +22675,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Red",
 		eggGroups: ["Field", "Fairy"],
 		prevo: "Tandemaus-Delta",
+		otherFormes: ["Slaughtermaus-Mega"],
 	},
 	ironcoil: {
 		num: 2081,
@@ -25453,5 +25455,34 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		weightkg: 5,
 		color: "Blue",
 		eggGroups: ["Undiscovered"],
+	},
+	slaughtermausmega: {
+		num: 2036,
+		name: "Slaughtermaus-Mega",
+		types: ["Poison", "Dark"],
+		baseStats: { hp: 65, atk: 150, def: 80, spa: 70, spd: 75, spe: 130 },
+		abilities: { 0: "Reap" },
+		weightkg: 0.45,//no page yet
+		heightm: 0.3,//no page yet
+		color: "Red",
+		eggGroups: ["Field", "Fairy"],
+		baseSpecies: "Slaughtermaus",
+		requiredItem: "Slaughtermausite",
+		forme: "Mega",
+	},
+	necromausermega: {
+		num: 2035,
+		name: "Necromauser",
+		types: ["Poison", "Ghost"],
+		baseStats: { hp: 150, atk: 70, def: 75, spa: 150, spd: 85, spe: 40 },
+		abilities: { 0: "Necromancy" },
+		weightkg: 4.5,
+		heightm: 0.3,
+		color: "Purple",
+		eggGroups: ["Field", "Fairy"],
+		baseSpecies: "Necromauser",
+		requiredItem: "Necromausite",
+		forme: "Mega",
 	}
+
 };

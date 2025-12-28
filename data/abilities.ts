@@ -8956,6 +8956,22 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				}
 			}
 		},
+		onTryBoost(boost, target, source, effect) {
+			if (source && target === source) return;
+			if (boost.spe && boost.spe < 0) {
+				delete boost.spe;
+				if (!(effect as ActiveMove).secondaries) {
+					this.add(
+						"-fail",
+						target,
+						"unboost",
+						"Attack",
+						"[from] ability: Reap",
+						`[of] ${target}`
+					);
+				}
+			}
+		},
 		num: -72,
 		name: "Wish Reaper",
 		rating: 3,
@@ -9435,6 +9451,20 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		name: "Icebound",
 		rating: 3,
 		num: -92,
+	},
+	reap: {
+		onBasePowerPriority: 19,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags["slicing"]) {
+				this.debug("Reap boost");
+				return this.chainModify(1.3);
+			}
+		},
+
+		flags: {},
+		name: "Reap",
+		rating: 3.5,
+		num: -93,
 	},
 	// CAP
 	mountaineer: {
