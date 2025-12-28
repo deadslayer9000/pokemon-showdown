@@ -1536,6 +1536,13 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Has a 30% chance to paralyze the target.",
 		shortDesc: "30% chance to paralyze adjacent Pokemon.",
 	},
+	disintegrate: {
+		name: "Disintegrate",
+		desc: "If Electric Terrain is active, this move consumes it and grants the user the Mega Launcher ability.",
+		shortDesc: "E.Terrain: Clear it, ability becomes Mega Launcher.",
+		
+		activate: "[POKEMON] absorbed the surrounding electricity and upgraded itself!",
+	},
 	dive: {
 		name: "Dive",
 		desc: "This attack charges on the first turn and executes on the second. On the first turn, the user avoids all attacks other than Surf and Whirlpool but takes double damage from them, and is also unaffected by weather. If the user is holding a Power Herb, the move completes in one turn.",

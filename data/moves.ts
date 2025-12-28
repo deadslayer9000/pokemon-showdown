@@ -5023,14 +5023,11 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		flags: { protect: 1, pulse: 1},
 		onTryMove(pokemon, target, move) {
 			if (this.field.isTerrain('electricterrain')) {
-				this.add("-activate", pokemon, "Disintegrate");
 				if (pokemon.ability === 'megalauncher' || pokemon.getAbility().flags['cantsuppress']){
 					return false;
 				}
 				const oldAbility = pokemon.setAbility('megalauncher');
-				if (oldAbility) {
-					this.add("-ability", pokemon, "Mega Launcher", "[from] move: Disintegrate");
-				}
+				this.add("-activate", pokemon, "Disintegrate");
 				this.field.clearTerrain();
 			}
 		},
