@@ -9469,7 +9469,6 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		onBeforeMove(source, target, move) {
 			if (move.category === "Physical"){
 				move.overrideOffensiveStat = 'spa';
-				this.hint(`${source.name} used its dark magic!`);
 			}
 		},
 		flags: {},

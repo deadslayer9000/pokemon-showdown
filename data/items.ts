@@ -4952,7 +4952,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	necromausite: {
 		name: "Necromausite",
-		spritenum: 587,
+		spritenum: 577,
 		megaStone: "Necromauser-Mega",
 		megaEvolves: "Necromauser",
 		itemUser: ["Necromauser"],
@@ -4966,7 +4966,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	slaughtermausite: {
 		name: "Slaughtermausite",
-		spritenum: 587,
+		spritenum: 591,
 		megaStone: "Slaughtermaus-Mega",
 		megaEvolves: "Slaughtermaus",
 		itemUser: ["Slaughtermaus"],
