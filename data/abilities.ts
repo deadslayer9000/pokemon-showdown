@@ -5719,7 +5719,18 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	prospect: {
 		onAfterMove(source, target, move) {
 			if (move.flags['futuremove']) {
-				this.boost({ spd: 1 }, source);
+				source.abilityState.prospect = true;
+				//this.boost({ spd: 1 }, source);
+			}
+		},
+		onResidual(target, source, effect) {
+			const possibleTargets = target.adjacentFoes();
+			if (!possibleTargets.length) return;
+
+			const foe = this.sample(possibleTargets);
+			if (!foe.side.slotConditions[foe.position]["futuremove"] && target.abilityState?.prospect) {
+				target.abilityState.prospect = false;
+				this.boost({ spd: 1 }, target);
 			}
 		},
 		flags: {},
