@@ -7158,5 +7158,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	celebidelta: {
 		tier: "UU",
 		doublesTier: "(DUU)",
+	},
+	ironblaster: {
+		tier: "UU",
+		doublesTier: "(DUU)",
 	}
 };

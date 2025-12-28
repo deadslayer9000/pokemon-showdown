@@ -5012,6 +5012,31 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		type: "Electric",
 		contestType: "Beautiful",
 	},
+	disintegrate: {
+		num: -106,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Disintegrate",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, pulse: 1},
+		onTryMove(pokemon, target, move) {
+			if (this.field.isTerrain('electricterrain')) {
+				this.add("-activate", pokemon, "Disintegrate");
+				if (pokemon.ability === 'megalauncher' || pokemon.getAbility().flags['cantsuppress']){
+					return false;
+				}
+				const oldAbility = pokemon.setAbility('megalauncher');
+				if (oldAbility) {
+					this.add("-ability", pokemon, "Mega Launcher", "[from] move: Disintegrate");
+				}
+				this.field.clearTerrain();
+			}
+		},
+		target: "normal",
+		type: "Fire",
+	},
 	direclaw: {
 		num: 827,
 		accuracy: 100,
