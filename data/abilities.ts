@@ -694,7 +694,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				return null;
 			}
 		},
-		onModifyMovePriority: 1,
+		onModifyMovePriority: 1,	
 		onModifyMove(move, pokemon, defender) {
 			if (
 				pokemon.species.baseSpecies !== "Aegislash-Delta" ||
@@ -702,14 +702,11 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				move.name === "Enflame"
 			)
 				return;
-			if (
-				move.category === "Status" || move.name === "Infernal Shield" &&
-				pokemon.species.name === "Aegislash-Delta-Blade"
-			) {
-				pokemon.formeChange("Aegislash-Delta", this.effect, true);
-			} else if (pokemon.species.name === "Aegislash-Delta") {
-				pokemon.formeChange("Aegislash-Delta-Blade", this.effect, true);
-			}
+			if (move.category === "Status" && move.id !== "infernalshield") return;
+			const targetForme =	
+				move.id === "infernalshield" ? "Aegislash-Delta" : "Aegislash-Delta-Blade";
+			if (pokemon.species.name !== targetForme)
+				pokemon.formeChange(targetForme);
 		},
 		flags: {
 			failroleplay: 1,
