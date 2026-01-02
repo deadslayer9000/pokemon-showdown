@@ -24156,7 +24156,6 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	aegislashdelta: {
 		num: 681,
 		name: "Aegislash-Delta",
-		baseSpecies: "Aegislash-Delta",
 		forme: "Delta",
 		baseForme: "Shield",
 		types: ["Steel", "Fire"],
