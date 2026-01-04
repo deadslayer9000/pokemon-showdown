@@ -9434,27 +9434,11 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -92,
 	},
 	reap: {
-		onBasePowerPriority: 19,
-		onBasePower(basePower, attacker, defender, move) {
+		onModifyMovePriority: 19,
+		onModifyMove(move) {
 			if (move.flags["slicing"]) {
 				this.debug("Reap boost");
-				return this.chainModify(1.3);
-			}
-		},
-		onTryBoost(boost, target, source, effect) {
-			if (source && target === source) return;
-			if (boost.spe && boost.spe < 0) {
-				delete boost.spe;
-				if (!(effect as ActiveMove).secondaries) {
-					this.add(
-						"-fail",
-						target,
-						"unboost",
-						"Speed",
-						"[from] ability: Reap",
-						`[of] ${target}`
-					);
-				}
+				move.willCrit = true;
 			}
 		},
 		flags: {},
@@ -9463,6 +9447,53 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -93,
 	},
 	necromancy: {
+		onStart(pokemon) {
+			const fallen = Math.min(
+				pokemon.side.foe.pokemon.filter((p) => p.fainted).length,
+				5
+			);
+			if (fallen > 0) {
+				this.add("-start", pokemon, `fallen${fallen}`, "[silent]");
+				this.effectState.fallen = fallen;
+			}
+		},
+		onEnd(pokemon) {
+			if (this.effectState.fallen) {
+				this.add(
+					"-end",
+					pokemon,
+					`fallen${this.effectState.fallen}`,
+					"[silent]"
+				);
+			}
+		},
+		onResidual(pokemon) {
+			const fallen = Math.min(
+				pokemon.side.foe.pokemon.filter((p) => p.fainted).length,
+				5
+			);
+			if (fallen > 0) {
+				this.add(
+					"-end",
+					pokemon,
+					`fallen${this.effectState.fallen}`,
+					"[silent]"
+				);
+				this.add("-start", pokemon, `fallen${fallen}`, "[silent]");
+				this.add("-activate", pokemon, "ability: Necromancy");
+				this.effectState.fallen = fallen;
+			}
+		},
+		onBasePowerPriority: 21,
+		onBasePower(basePower, attacker, defender, move) {
+			if (this.effectState.fallen) {
+				const powMod = [4096, 4506, 4915, 5325, 5734, 6144];
+				this.debug(
+					`Supreme Overlord boost: ${powMod[this.effectState.fallen]}/4096`
+				);
+				return this.chainModify([powMod[this.effectState.fallen], 4096]);
+			}
+		},
 		onBeforeMove(source, target, move) {
 			if (move.category === "Physical"){
 				move.overrideOffensiveStat = 'spa';

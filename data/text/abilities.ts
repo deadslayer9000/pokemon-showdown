@@ -1350,7 +1350,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	necromancy: {
 		name: "Necromancy",
-		shortDesc: "This Pokemon's physical moves use Sp. Atk for damage calculation.",
+		shortDesc: "Physical moves use Sp. Atk; includes effects of Unrelenting Stampede",
+		desc: "Physical moves used by this Pokemon use the Pokemon's Special Attack instead of it's Attack when calculating damage. This ability also includes the effects of Unrelenting Stampede.",
 	},
 	neuroforce: {
 		name: "Neuroforce",
@@ -1742,7 +1743,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	reap: {
 		name: "Reap",
-		shortDesc: "This Pokemon's slicing moves have 30% increased power, user's speed cant be lowered.",
+		shortDesc: "This Pokemon's slicing always land critical hits.",
 	},
 	receiver: {
 		name: "Receiver",
