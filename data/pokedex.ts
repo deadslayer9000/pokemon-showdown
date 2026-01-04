@@ -25405,7 +25405,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	},
 	glaciarus: {
 		num: 2119, //nodex yet
-		name: "Glaciarus",
+		name: "Glacierus",
 		types: ["Ice", "Flying"],
 		gender: "N",
 		baseStats: { hp: 79, atk: 115, def: 70, spa: 125, spd: 80, spe: 111 },
@@ -25414,12 +25414,12 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		weightkg: 66,
 		color: "Blue",
 		eggGroups: ["Undiscovered"],
-		otherFormes: ["Glaciarus-Therian"]
+		otherFormes: ["Glacierus-Therian"]
 	},
 	glaciarustherian: {
 		num: 2119, 
-		name: "Glaciarus-Therian",
-		baseSpecies: "Glaciarus",
+		name: "Glacierus-Therian",
+		baseSpecies: "Glacierus",
 		types: ["Ice", "Flying"],
 		gender: "N",
 		baseStats: { hp: 79, atk: 140, def: 70, spa: 110, spd: 80, spe: 101 },
