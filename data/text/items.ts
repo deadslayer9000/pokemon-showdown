@@ -2649,4 +2649,15 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Vile Vial",
 		shortDesc: "If held by a Venomicon, its Poison- and Flying-type attacks have 1.2x power.",
 	},
+	
+	//delta stones
+
+	slaughtermausite: {
+		name: "Slaughtermausite",
+		shortDesc: "If held by a Slaughtermaus, this item allows it to Mega Evolve in battle.",
+	},
+	necromausite: {
+		name: "Necromausite",
+		shortDesc: "If held by a Necromauser, this item allows it to Mega Evolve in battle.",
+	}
 };
