@@ -9435,7 +9435,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	reap: {
 		onModifyMovePriority: 19,
-		onModifyMove(move, attacker, defender) {
+		onModifyMove(move) {
 			if (move.flags["slicing"]) {
 				this.debug("Reap boost");
 				move.willCrit = true;

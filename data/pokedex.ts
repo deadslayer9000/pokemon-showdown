@@ -25403,7 +25403,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Gray",
 		eggGroups: ["Undiscovered"],
 	},
-	glaciarus: {
+	glacierus: {
 		num: 2119, //nodex yet
 		name: "Glacierus",
 		types: ["Ice", "Flying"],
@@ -25416,7 +25416,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		eggGroups: ["Undiscovered"],
 		otherFormes: ["Glacierus-Therian"]
 	},
-	glaciarustherian: {
+	glacierustherian: {
 		num: 2119, 
 		name: "Glacierus-Therian",
 		baseSpecies: "Glacierus",
