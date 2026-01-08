@@ -21143,7 +21143,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		types: ["Steel", "Fairy"],
 		gender: "N",
 		baseStats: { hp: 80, atk: 140, def: 68, spa: 104, spd: 100, spe: 108 },
-		abilities: { 0: "Transcience" },
+		abilities: { 0: "Transience" },
 		weightkg: 36,
 		heightm: 1.4,
 		color: "Blue",

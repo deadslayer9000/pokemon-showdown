@@ -8306,15 +8306,19 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 3.5,
 		num: 262,
 	},
-	transcience: {
+	transience: {
 		onModifyMove(move) {
 			if (move.category === "Status") return;
 			if (!move.drain) {
 				move.drain = [1, 4];
+			} else if (move.drain) {
+				const originalDrain = move.drain;
+				const finalDrain = originalDrain[0] / originalDrain[1] + 0.25;
+				move.drain = [finalDrain * 4, 4];	
 			}
 		},
 		flags: {},
-		name: "Transcience",
+		name: "Transience",
 		rating: 3,
 		num: -7,
 	},
