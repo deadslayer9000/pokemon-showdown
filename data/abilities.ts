@@ -7971,16 +7971,16 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		onResidualOrder: 5,
 		onResidualSubOrder: 4,
 		onResidual(pokemon) {
-			if (!pokemon.derooted) {
+			//if (!pokemon.derooted) {
 			this.heal(pokemon.baseMaxhp / 16);
-			}
+			//}
 		},
-		onSourceModifyDamage(damage, source, target, move) {
+		/*onSourceModifyDamage(damage, source, target, move) {
 			if(target.getMoveHitData(move).typeMod > 0) {
 				this.add('-end', target, 'Taproot');
 				target.derooted = true;
 			}
-		},
+		}, FUUUUUUUUUUUUUUUUUUUUUUCK */
 		flags: {},
 		name: "Taproot",
 		rating: 3,
