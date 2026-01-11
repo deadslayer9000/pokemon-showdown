@@ -6904,7 +6904,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "NU",
 	},
 	starid: {
-		tier: "NFE",
+		tier: "LC",
 	},
 	staralyx: {
 		tier: "RU",
