@@ -328,7 +328,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "LC",
 	},
 	vulpixalola: {
-		tier: "NFE",
+		tier: "LC",
 	},
 	ninetales: {
 		tier: "ZU",
@@ -6412,7 +6412,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 	},
 	annetrem: {
-		tier: "NFE",
+		tier: "LC",
 	},
 	bansherene: {
 		tier: "UU",
@@ -6776,7 +6776,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	turniton: {
 		tier: "NFE",
 	},
-	turnmite: {
+	turnimite: {
 		tier: "LC",
 	},
 	grimmsnarldelta: {
@@ -6898,7 +6898,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "RU",
 	},
 	slugrit: {
-		tier: "NFE",
+		tier: "LC",
 	},
 	dunecargo: {
 		tier: "NU",
