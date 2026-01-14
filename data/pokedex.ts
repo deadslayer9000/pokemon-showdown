@@ -21841,6 +21841,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		heightm: 1.2,
 		color: "Blue",
 		eggGroups: ["Undiscovered"],
+		prevo: "Gimmighoul-Delta",
 	},
 	goomyepsilon: {
 		num: 704,
