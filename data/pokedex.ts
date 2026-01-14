@@ -21811,6 +21811,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		heightm: 0.3,
 		color: "Blue",
 		eggGroups: ["Undiscovered"],
+		evos: ["Gholdengo-Delta"],
 	},
 	gimmighouldeltaroaming: {
 		num: 999,
@@ -21825,6 +21826,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		heightm: 0.1,
 		color: "Blue",
 		eggGroups: ["Undiscovered"],
+		evos: ["Gholdengo-Delta"],
 	},
 	gholdengodelta: {
 		num: 1000,
