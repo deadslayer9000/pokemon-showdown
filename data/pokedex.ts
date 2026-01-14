@@ -22653,6 +22653,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Purple",
 		eggGroups: ["Field", "Fairy"],
 		changesFrom: "Tandemaus",
+		evos: ["Necromauser", "Slaughtermaus"],
 	},
 	necromauser: {
 		num: 2035,
@@ -23485,6 +23486,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		eggGroups: ["Flying"],
 		forme: "Delta",
 		baseSpecies: "Hoothoot",
+		evos: ["Noctowl-Delta"],
 	},
 	dragetsu: {
 		num: 2007,
