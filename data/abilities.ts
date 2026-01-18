@@ -9521,21 +9521,21 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	fervorswitch: {
 		onSwitchIn(pokemon) {
-			if ((this.field.isWeather('sunnyday') || this.field.isWeather('desolateland')) && pokemon.species.forme === "meloettadelta") {
+			if ((this.field.isWeather('sunnyday') || this.field.isWeather('desolateland')) && pokemon.species.name === "Meloetta-Delta") {
 				this.add("-ability", pokemon, "Fervor Switch");
 				pokemon.formeChange("Meloetta-Delta-Allegro");
 			}
-			if (!(this.field.isWeather('sunnyday') || this.field.isWeather('desolateland')) && pokemon.species.forme === "meloettaallegro") {
+			if (!(this.field.isWeather('sunnyday') || this.field.isWeather('desolateland')) && pokemon.species.name === "Meloetta-Delta-Allegro") {
 				this.add("-ability", pokemon, "Fervor Switch");
 				pokemon.formeChange("Meloetta-Delta");
 			}
 		},
 		onResidual(pokemon) {
-			if ((this.field.isWeather('sunnyday') || this.field.isWeather('desolateland')) && pokemon.species.forme === "meloettadelta") {
+			if ((this.field.isWeather('sunnyday') || this.field.isWeather('desolateland')) && pokemon.species.forme === "Meloetta-Delta") {
 				this.add("-ability", pokemon, "Fervor Switch");
 				pokemon.formeChange("Meloetta-Delta-Allegro");
 			}
-			if (!(this.field.isWeather('sunnyday') || this.field.isWeather('desolateland')) && pokemon.species.forme === "meloettaallegro") {
+			if (!(this.field.isWeather('sunnyday') || this.field.isWeather('desolateland')) && pokemon.species.forme === "Meloetta-Delta-Allegro") {
 				this.add("-ability", pokemon, "Fervor Switch");
 				pokemon.formeChange("Meloetta-Delta");
 			}
