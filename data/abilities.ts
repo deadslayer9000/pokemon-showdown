@@ -9105,7 +9105,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	tidesigil: {
 		onStart(pokemon) {
-			if (pokemon.abilityState.tideUsed) return;
+			if (!pokemon.tideSigilUsed) {
 				let activated = false;
 				for (const target of pokemon.adjacentFoes()) {
 					if (!activated && !target.volatiles["substitute"]) {
@@ -9118,10 +9118,13 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 						);
 						activated = true;
 						target.addVolatile("encore", pokemon);
-						pokemon.boosts.spe += 1;
-						pokemon.abilityState.tideUsed = true;
+						if (target.volatiles['encore']) {
+							this.boost({ spe: 1 });
+						}
+						pokemon.tideSigilUsed = true;
 					}
 				}
+			}
 			
 		},
 		flags: {},
@@ -9131,7 +9134,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	grimsigil: {
 		onStart(pokemon) {
-			if (pokemon.hp === pokemon.maxhp) {
+			if (!pokemon.grimSigilUsed) {
 				let activated = false;
 				for (const target of pokemon.adjacentFoes()) {
 					if (!activated && !target.volatiles["substitute"]) {
@@ -9143,8 +9146,12 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 							"[of] " + pokemon
 						);
 						activated = true;
+						target.addVolatile("disable", pokemon);
+						if (target.volatiles['disable']) {
+							this.boost({ atk: 1 });
+						}
+						pokemon.grimSigilUsed = true;
 					}
-					target.addVolatile("disable", pokemon);
 				}
 			}
 		},
