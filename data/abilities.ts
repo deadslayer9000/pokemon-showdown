@@ -2592,12 +2592,14 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				}
 			}
 		},
+		/*
 		onSourceModifyDamage(relayVar, source, target, move) {
 			if (target !== source && move.type === "Water") {
 				this.add("-activate", target, "ability: Steamforged");
 				return this.chainModify(0.5);
 			}
 		},
+		*/
 		flags: { breakable: 1 },
 		name: "Steamforged",
 		rating: 2,
@@ -9103,7 +9105,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	tidesigil: {
 		onStart(pokemon) {
-			if (pokemon.hp === pokemon.maxhp) {
+			if (pokemon.abilityState.tideUsed) return;
 				let activated = false;
 				for (const target of pokemon.adjacentFoes()) {
 					if (!activated && !target.volatiles["substitute"]) {
@@ -9116,9 +9118,11 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 						);
 						activated = true;
 						target.addVolatile("encore", pokemon);
+						pokemon.boosts.spe += 1;
+						pokemon.abilityState.tideUsed = true;
 					}
 				}
-			}
+			
 		},
 		flags: {},
 		name: "Tide Sigil",

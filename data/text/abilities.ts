@@ -781,7 +781,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	grimsigil: {
 		name: "Grim Sigil",
-		shortDesc: "If the user is full HP, disables the opponent's last move on switch in."
+		shortDesc: "Once per battle: Disables the opponent's last move on switch in and raises Atk by 1."
 	},
 	guarddog: {
 		name: "Guard Dog",
@@ -2408,7 +2408,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	tidesigil: {
 		name: "Tide Sigil",
-		shortDesc: "If the user is full HP, encores the opponent on switch in."
+		shortDesc: "Once per battle: Encores the opponent on switch in and raises Speed by 1."
 	},
 	tintedlens: {
 		name: "Tinted Lens",
