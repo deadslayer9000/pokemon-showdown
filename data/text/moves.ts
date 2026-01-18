@@ -1415,7 +1415,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	depthdecree: {
 		name: "Depth Decree",
-		shortDesc: "In Sun: Ability becomes Sheer Force and sun is removed.",
+		shortDesc: "In Sun: Ability = Sheer Force and sun is removed.",
 		desc: "When used, this pokemon's ability becomes Sheer Force, and sun is removed.",
 	},
 	destinybond: {

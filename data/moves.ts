@@ -4705,13 +4705,19 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		pp: 10,
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
-		onTryMove(attacker, source) {
+		onTryMove(source, target) {
 			if (
-				["sunnyday", "desolateland"].includes(attacker.effectiveWeather())
+				["sunnyday", "desolateland"].includes(source.effectiveWeather())
 			) {
+				this.add("-activate", source, "Depth Decree");
+				if(source.ability === "sheerforce" || source.getAbility().flags["cantsuppress"]){
+					return false;
+				}
 				//const bestStat = source.getBestStat(true, true);
 				//this.boost({ [bestStat]: 3 }, source);
 				const oldAbility = source.setAbility("sheerforce");
+				this.field.clearWeather();
+				/*
 				if (oldAbility) {
 					this.add(
 						"-ability",
@@ -4720,15 +4726,15 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 						"[from] move: Depth Decree"
 					);
 					return;
-				}
-				return oldAbility as false | null;
+				}*/
+				//return oldAbility as false | null;
 			}
 		},
 		secondary: {
-			chance: 10,
+			chance: 100,
 			volatileStatus: "confusion",
 		},
-		target: "self",
+		target: "normal",
 		type: "Water",
 	},
 	destinybond: {

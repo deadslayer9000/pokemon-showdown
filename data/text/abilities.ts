@@ -612,6 +612,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Feast or Famine",
 		shortDesc: "While this Pokemon is active, any stat boosts applied are immediately stolen.",
 	},
+	fervorswitch: {
+		name: "Fervor Switch",
+		shortDesc: "Changes Meloetta-Delta's form depending if sun is up."
+	},
 	fierytouch: {
 		name: "Fiery Touch",
 		shortDesc: "30% chance that this Pokemon's contact moves will burn the target.",

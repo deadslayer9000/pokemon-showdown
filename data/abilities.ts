@@ -9519,6 +9519,32 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 4,
 		num: -94,
 	},
+	fervorswitch: {
+		onSwitchIn(pokemon) {
+			if ((this.field.isWeather('sunnyday') || this.field.isWeather('desolateland')) && pokemon.species.forme === "meloettadelta") {
+				this.add("-ability", pokemon, "Fervor Switch");
+				pokemon.formeChange("Meloetta-Delta-Allegro");
+			}
+			if (!(this.field.isWeather('sunnyday') || this.field.isWeather('desolateland')) && pokemon.species.forme === "meloettaallegro") {
+				this.add("-ability", pokemon, "Fervor Switch");
+				pokemon.formeChange("Meloetta-Delta");
+			}
+		},
+		onResidual(pokemon) {
+			if ((this.field.isWeather('sunnyday') || this.field.isWeather('desolateland')) && pokemon.species.forme === "meloettadelta") {
+				this.add("-ability", pokemon, "Fervor Switch");
+				pokemon.formeChange("Meloetta-Delta-Allegro");
+			}
+			if (!(this.field.isWeather('sunnyday') || this.field.isWeather('desolateland')) && pokemon.species.forme === "meloettaallegro") {
+				this.add("-ability", pokemon, "Fervor Switch");
+				pokemon.formeChange("Meloetta-Delta");
+			}
+		},
+		flags: {},
+		name: "Fervor Switch",
+		rating: 4,
+		num: -95,
+	},
 	// CAP
 	mountaineer: {
 		onDamage(damage, target, source, effect) {
