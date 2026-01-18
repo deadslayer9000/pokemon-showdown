@@ -4698,35 +4698,36 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	},
 	depthdecree: {
 		num: -58,
-		accuracy: true,
-		basePower: 0,
-		category: "Status",
+		accuracy: 100,
+		basePower: 75,
+		category: "Special",
 		name: "Depth Decree",
 		pp: 10,
 		priority: 0,
-		flags: {},
+		flags: { protect: 1, mirror: 1, metronome: 1 },
 		onTryMove(attacker, source) {
 			if (
 				["sunnyday", "desolateland"].includes(attacker.effectiveWeather())
 			) {
-				const bestStat = source.getBestStat(true, true);
-				this.boost({ [bestStat]: 3 }, source);
-				const oldAbility = source.setAbility("drizzle");
+				//const bestStat = source.getBestStat(true, true);
+				//this.boost({ [bestStat]: 3 }, source);
+				const oldAbility = source.setAbility("sheerforce");
 				if (oldAbility) {
 					this.add(
 						"-ability",
 						source,
-						"Drizzle",
+						"Sheer Force",
 						"[from] move: Depth Decree"
 					);
 					return;
 				}
 				return oldAbility as false | null;
 			}
-			this.hint("This move fails if the weather isn't Sunny Day");
-			return null;
 		},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			volatileStatus: "confusion",
+		},
 		target: "self",
 		type: "Water",
 	},

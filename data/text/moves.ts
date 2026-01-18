@@ -1415,8 +1415,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	depthdecree: {
 		name: "Depth Decree",
-		shortDesc: "In Sun: Ability becomes Drizzle and boosts SpA by +3.",
-		desc: "This move fails if used outside of Harsh Sunlight or Desolate Land. When used, this pokemon's ability becomes Drizzle, and it gains a +3 Special Attack boost.",
+		shortDesc: "In Sun: Ability becomes Sheer Force and sun is removed.",
+		desc: "When used, this pokemon's ability becomes Sheer Force, and sun is removed.",
 	},
 	destinybond: {
 		name: "Destiny Bond",

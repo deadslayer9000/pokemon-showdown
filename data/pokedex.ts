@@ -23839,7 +23839,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		name: "Rogue Prince",
 		types: ["Water", "Psychic"],
 		gender: "N",
-		baseStats: { hp: 97, atk: 91, def: 81, spa: 125, spd: 103, spe: 93 },
+		baseStats: { hp: 97, atk: 101, def: 81, spa: 119, spd: 105, spe: 87 },
 		abilities: { 0: "Protosynthesis" },
 		heightm: 0.8,
 		weightkg: 2.2,
