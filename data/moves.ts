@@ -4705,7 +4705,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		pp: 10,
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
-		onTryMove(source, target) {
+		onTryMove(source, target, move) {
 			if (
 				["sunnyday", "desolateland"].includes(source.effectiveWeather())
 			) {
@@ -4724,7 +4724,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 						source,
 						"Sheer Force",
 						"[from] move: Depth Decree"
-					);
+					); 
 					return;
 				}*/
 				//return oldAbility as false | null;

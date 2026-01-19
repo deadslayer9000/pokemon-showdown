@@ -1882,7 +1882,7 @@ export class BattleActions {
 		}
 		// a hacked-in Megazard X can mega evolve into Megazard Y, but not into Megazard X
 		// FIXME: Change to species.name when champions comes
-		const megaEvolution = item.megaStone[species.baseSpecies];
+		const megaEvolution = item.megaStone[species.name];
 		return megaEvolution && megaEvolution !== species.name ? megaEvolution : null;
 	}
 
