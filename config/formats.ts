@@ -35,7 +35,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'Quick Claw', 'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail', 'Dire Claw', 'Rage Fist', 'Blood Moon', 'Darkrai', 'Zamazenta', 'Good as Gold',
 		],
 		unbanlist: [
-			'Solgaleo', 'Sneasler', 'Annihilape', 'Ursaluna-Bloodmoon', 'Espathra', 'Roaring Moon', 'Dragapult'
+			'Solgaleo', 'Sneasler', 'Annihilape', 'Ursaluna-Bloodmoon', 'Espathra', 'Roaring Moon', 'Dragapult', 'Raichu-Mega-Y', 'Raichu-Mega-X', 'Absol-Mega-Z', 'Delphox-Mega', 'Greninja-Mega', 'Chesnaught-Mega',
 		],
 	},
 	{
