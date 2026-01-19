@@ -7911,25 +7911,6 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 4,
 		num: -24,
 	},
-	swordofruin: {
-		onStart(pokemon) {
-			if (this.suppressingAbility(pokemon)) return;
-			this.add("-ability", pokemon, "Sword of Ruin");
-		},
-		onAnyModifyDef(def, target, source, move) {
-			const abilityHolder = this.effectState.target;
-			if (target.hasAbility("Sword of Ruin")) return;
-			if (!move.ruinedDef?.hasAbility("Sword of Ruin"))
-				move.ruinedDef = abilityHolder;
-			if (move.ruinedDef !== abilityHolder) return;
-			this.debug("Sword of Ruin Def drop");
-			return this.chainModify(0.75);
-		},
-		flags: {},
-		name: "Sword of Ruin",
-		rating: 4.5,
-		num: 285,
-	},
 	tabletsofruin: {
 		onStart(pokemon) {
 			if (this.suppressingAbility(pokemon)) return;
