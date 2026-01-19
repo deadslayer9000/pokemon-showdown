@@ -57,7 +57,6 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		},
 		num: 2588,
 		gen: 9,
-		isNonstandard: "Future",
 	},
 	absorbbulb: {
 		name: "Absorb Bulb",
@@ -978,7 +977,6 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		onTakeItem(item, source) {
 			return !item.megaStone?.[source.baseSpecies.baseSpecies];
 		},
-		isNonstandard: "Future",
 		num: 2575,
 		gen: 9,
 	},
@@ -1653,7 +1651,6 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		onTakeItem(item, source) {
 			return !item.megaStone?.[source.baseSpecies.baseSpecies];
 		},
-		isNonstandard: "Future",
 		num: 2576,
 		gen: 9,
 	},
@@ -3043,7 +3040,6 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 			// TODO: Figure out if this works on Greninja-Bond
 			return !item.megaStone?.[source.baseSpecies.baseSpecies];
 		},
-		isNonstandard: "Future",
 		num: 2577,
 		gen: 9,
 	},
@@ -5835,7 +5831,6 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		},
 		num: 2585,
 		gen: 9,
-		isNonstandard: "Future",
 	},
 	raichunitey: {
 		name: "Raichunite Y",
@@ -5847,7 +5842,6 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		},
 		num: 2586,
 		gen: 9,
-		isNonstandard: "Future",
 	},
 	rarebone: {
 		name: "Rare Bone",
