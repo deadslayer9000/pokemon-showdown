@@ -5,7 +5,7 @@ import type { Learnset } from "../sim/dex-species";
 // The list of formats is stored in config/formats.js
 export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 	// Delta Rulesets
-	samecolorclause: {
+	/*samecolorclause: {
 		effectType: 'ValidatorRule',
 		name: 'Same Color Clause',
 		desc: "Forces all Pok&eacute;mon on a team to share a color with each other",
@@ -41,7 +41,7 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 				
 			}
 		},
-	
+	*/ //they got to us quicker than i expected
 	// Regular Rulesets
 	///////////////////////////////////////////////////////////////////
 
@@ -1545,8 +1545,8 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 					typeTable = typeTable.filter(type => species.types.includes(type));
 				}
 				const item = this.dex.items.get(set.item);
-				if (item.megaStone && species.baseSpecies === item.megaEvolves) {
-					species = this.dex.species.get(item.megaStone);
+				if (item.megaStone?.[species.name]) {
+					species = this.dex.species.get(item.megaStone[species.name]);
 					typeTable = typeTable.filter(type => species.types.includes(type));
 				}
 				if (item.id === "ultranecroziumz" && species.baseSpecies === "Necrozma") {
@@ -1568,6 +1568,34 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 		name: 'Enforce Same Tera Type',
 		desc: "Forces Pok&eacute;mon to have a Tera Type matching one of their original types.",
 		// implemented in sametypeclause
+	},
+	samecolorclause: {
+		effectType: 'ValidatorRule',
+		name: 'Same Color Clause',
+		desc: "Forces all Pok&eacute;mon on a team to share a color",
+		onBegin() {
+			this.add('rule', 'Same Color Clause: Pokémon in a team must be the same color');
+		},
+		onValidateTeam(team) {
+			let color = "";
+			for (const [i, set] of team.entries()) {
+				let species = this.dex.species.get(set.species);
+				if (!species.color) return [`Invalid Pok\u00e9mon ${set.name || set.species}`];
+				if (color && species.color !== color) {
+					return [`All Pok\u00e9mon must share a color.`];
+				}
+				color = species.color;
+				const item = this.dex.items.get(set.item);
+				if (item.megaStone?.[species.name]) {
+					species = this.dex.species.get(item.megaStone[species.name]);
+					color = species.color;
+				}
+				if (item.id === "ultranecroziumz" && species.baseSpecies === "Necrozma") {
+					species = this.dex.species.get("Necrozma-Ultra");
+					color = species.color;
+				}
+			}
+		},
 	},
 	megarayquazaclause: {
 		effectType: 'Rule',
@@ -2660,10 +2688,10 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 				) {
 					species = this.dex.species.get(`${species.baseSpecies}-Crowned`);
 				}
-				if (set.item && this.dex.items.get(set.item).megaStone) {
+				if (set.item) {
 					const item = this.dex.items.get(set.item);
-					if (item.megaEvolves === species.baseSpecies) {
-						species = this.dex.species.get(item.megaStone);
+					if (item.megaStone?.[species.name]) {
+						species = this.dex.species.get(item.megaStone[species.name]);
 					}
 				}
 				if (this.ruleTable.isRestrictedSpecies(species) ||
@@ -2685,7 +2713,9 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 				}
 				if (set.item) {
 					const item = this.dex.items.get(set.item);
-					if (item.megaEvolves === set.species) godSpecies = this.dex.species.get(item.megaStone);
+					if (item.megaStone?.[set.species]) {
+						godSpecies = this.dex.species.get(item.megaStone[set.species]);
+					}
 					if (["Zacian", "Zamazenta"].includes(godSpecies.baseSpecies) && item.id.startsWith('rusted')) {
 						godSpecies = this.dex.species.get(set.species + "-Crowned");
 					}
