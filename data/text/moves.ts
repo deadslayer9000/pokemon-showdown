@@ -3960,8 +3960,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	lumencascade: {
 		name: "Lumen Cascade",
-		desc: "This move hits twice, each hit having a 10% chance to drop the target\'s Special Attack. This move's Base Power drops to 25 if any Weather is currently active.",
-		shortDesc: "Hits twice; 10% for SpA drop. Weaker in weather.",
+		desc: "This move hits twice, each hit having a 10% chance to drop the target\'s Special Attack.",
+		shortDesc: "Hits twice; 10% for SpA drop.",
 	},
 	luminacrash: {
 		name: "Lumina Crash",

@@ -4731,7 +4731,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			}
 		},
 		secondary: {
-			chance: 100,
+			chance: 10,
 			volatileStatus: "confusion",
 		},
 		target: "normal",
@@ -27886,9 +27886,9 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				spa: -1,
 			}
 		},
-		target: "normal",
+		target: "allAdjacentFoes",
 		type: "Normal",
-		multihit: 2,
+		multihit: 2,/*
 		onModifyMove(move, pokemon) {
 			switch (pokemon.effectiveWeather()) {
 				case "sunnyday":
@@ -27909,7 +27909,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			}
 			this.debug(`BP: ${move.basePower}`);
 			this.hint(`The weather weakened ${pokemon.name}'s Lumen Cascade.`);
-		},
+		},*/
 	},
 	grandserenade: {
 		num: -104,
@@ -27922,9 +27922,12 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		flags: { protect: 1, mirror: 1, sound: 1, bypasssub: 1 },
 		secondary: {
 			chance: 50,
-			boosts: {
-				spa: 1,
-			},
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			}
+			
 		},
 		target: "normal",
 		type: "Water",
