@@ -203,4 +203,17 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		category: "Special",
 		pp: 10,
 	},
+	depthdecree: {
+		inherit: true,
+		onTryMove(source, target, move) {
+			if (
+				["sunnyday", "desolateland"].includes(source.effectiveWeather())
+			) {
+				this.add("-activate", source, "Depth Decree");
+				const bestStat = source.getBestStat(true, true);
+				this.boost({ [bestStat]: 3 }, source);
+				this.field.clearWeather();
+			}
+		},
+	}
 };
