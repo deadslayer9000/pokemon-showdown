@@ -55,4 +55,32 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
         inherit: true,
         baseStats: { hp: 100, atk: 95, def: 75, spa: 125, spd: 75, spe: 120 },
     },
+    turnizone: {
+        inherit: true,
+        baseStats: { hp: 95, atk: 50, def: 110, spa: 110, spd: 130, spe: 40 },
+    },
+    haxorusdeltamega: {
+        inherit: true, 
+        baseStats: {hp: 76, atk: 159, def: 140, spa: 88, spd: 98, spe: 79}
+    },
+    hoopadelta: {
+        inherit: true,
+        baseStats: {hp: 80, atk: 150, def: 125, spa: 110, spd: 60, spe: 75 },
+    },
+    rogueprince: {
+        inherit: true, 
+        baseStats: {hp: 97, atk: 101, def: 81, spa: 125, spd: 103, spe: 93},
+    },
+    meloettadelta: {
+        inherit: true,
+        abilities: {0: "Serene Grace"},
+    },
+    yanmellia: {
+        inherit: true,
+        baseStats: {hp: 98, atk: 91, def: 71, spa: 70, spd: 105, spe: 80},
+    },
+    malevorus: {
+        inherit: true,
+        baseStats: { hp: 89, atk: 100, def: 102, spa: 120, spd: 90, spe: 99 },
+    },
 };
