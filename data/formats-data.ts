@@ -3752,8 +3752,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "RU",
 	},
 	chesnaughtmega: {
-		isNonstandard: "Future",
+		isNonstandard: "Past",
 		tier: "Illegal",
+		natDexTier: "OU",
 	},
 	fennekin: {
 		tier: "LC",
@@ -3767,8 +3768,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "RU",
 	},
 	delphoxmega: {
-		isNonstandard: "Future",
+		isNonstandard: "Past",
 		tier: "Illegal",
+		natDexTier: "OU",
 	},
 	froakie: {
 		tier: "LC",
@@ -3789,8 +3791,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "Illegal",
 	},
 	greninjamega: {
-		isNonstandard: "Future",
+		isNonstandard: "Past",
 		tier: "Illegal",
+		natDexTier: "OU",
 	},
 	bunnelby: {
 		isNonstandard: "Past",

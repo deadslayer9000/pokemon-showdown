@@ -4698,36 +4698,43 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	},
 	depthdecree: {
 		num: -58,
-		accuracy: true,
-		basePower: 0,
-		category: "Status",
+		accuracy: 100,
+		basePower: 75,
+		category: "Special",
 		name: "Depth Decree",
 		pp: 10,
 		priority: 0,
-		flags: {},
-		onTryMove(attacker, source) {
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		onTryMove(source, target) {
 			if (
-				["sunnyday", "desolateland"].includes(attacker.effectiveWeather())
+				["sunnyday", "desolateland"].includes(source.effectiveWeather())
 			) {
-				const bestStat = source.getBestStat(true, true);
-				this.boost({ [bestStat]: 3 }, source);
-				const oldAbility = source.setAbility("drizzle");
+				this.add("-activate", source, "Depth Decree");
+				if(source.ability === "sheerforce" || source.getAbility().flags["cantsuppress"]){
+					return false;
+				}
+				//const bestStat = source.getBestStat(true, true);
+				//this.boost({ [bestStat]: 3 }, source);
+				const oldAbility = source.setAbility("sheerforce");
+				this.field.clearWeather();
+				/*
 				if (oldAbility) {
 					this.add(
 						"-ability",
 						source,
-						"Drizzle",
+						"Sheer Force",
 						"[from] move: Depth Decree"
 					);
 					return;
-				}
-				return oldAbility as false | null;
+				}*/
+				//return oldAbility as false | null;
 			}
-			this.hint("This move fails if the weather isn't Sunny Day");
-			return null;
 		},
-		secondary: null,
-		target: "self",
+		secondary: {
+			chance: 10,
+			volatileStatus: "confusion",
+		},
+		target: "normal",
 		type: "Water",
 	},
 	destinybond: {
@@ -27879,9 +27886,9 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				spa: -1,
 			}
 		},
-		target: "normal",
+		target: "allAdjacentFoes",
 		type: "Normal",
-		multihit: 2,
+		multihit: 2,/*
 		onModifyMove(move, pokemon) {
 			switch (pokemon.effectiveWeather()) {
 				case "sunnyday":
@@ -27902,6 +27909,33 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			}
 			this.debug(`BP: ${move.basePower}`);
 			this.hint(`The weather weakened ${pokemon.name}'s Lumen Cascade.`);
+		},*/
+	},
+	grandserenade: {
+		num: -104,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Grand Serenade",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, sound: 1, bypasssub: 1 },
+		secondary: {
+			chance: 50,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			}
+			
+		},
+		target: "normal",
+		type: "Water",
+		onModifyType(move, pokemon, target) {
+			if (this.field.isWeather("sunnyday") || this.field.isWeather("desolateland")) {
+				move.type = "Fire";
+				this.add("-message", `${pokemon.name}'s Grand Serenade became Fire type due to the sunlight!`);
+			}
 		},
 	}
 };

@@ -2592,12 +2592,14 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				}
 			}
 		},
+		/*
 		onSourceModifyDamage(relayVar, source, target, move) {
 			if (target !== source && move.type === "Water") {
 				this.add("-activate", target, "ability: Steamforged");
 				return this.chainModify(0.5);
 			}
 		},
+		*/
 		flags: { breakable: 1 },
 		name: "Steamforged",
 		rating: 2,
@@ -9103,7 +9105,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	tidesigil: {
 		onStart(pokemon) {
-			if (pokemon.hp === pokemon.maxhp) {
+			if (!pokemon.tideSigilUsed) {
 				let activated = false;
 				for (const target of pokemon.adjacentFoes()) {
 					if (!activated && !target.volatiles["substitute"]) {
@@ -9116,9 +9118,14 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 						);
 						activated = true;
 						target.addVolatile("encore", pokemon);
+						if (target.volatiles['encore']) {
+							this.boost({ spe: 1 });
+						}
+						pokemon.tideSigilUsed = true;
 					}
 				}
 			}
+			
 		},
 		flags: {},
 		name: "Tide Sigil",
@@ -9127,7 +9134,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	grimsigil: {
 		onStart(pokemon) {
-			if (pokemon.hp === pokemon.maxhp) {
+			if (!pokemon.grimSigilUsed) {
 				let activated = false;
 				for (const target of pokemon.adjacentFoes()) {
 					if (!activated && !target.volatiles["substitute"]) {
@@ -9139,8 +9146,12 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 							"[of] " + pokemon
 						);
 						activated = true;
+						target.addVolatile("disable", pokemon);
+						if (target.volatiles['disable']) {
+							this.boost({ atk: 1 });
+						}
+						pokemon.grimSigilUsed = true;
 					}
-					target.addVolatile("disable", pokemon);
 				}
 			}
 		},
@@ -9507,6 +9518,45 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		name: "Necromancy",
 		rating: 4,
 		num: -94,
+	},
+	fervorswitch: {
+		onSwitchIn(pokemon) {
+			if ((this.field.isWeather('sunnyday') || this.field.isWeather('desolateland')) && pokemon.species.name === "Meloetta-Delta") {
+				this.add("-ability", pokemon, "Fervor Switch");
+				pokemon.formeChange("Meloetta-Delta-Allegro");
+			}
+			if (!(this.field.isWeather('sunnyday') || this.field.isWeather('desolateland')) && pokemon.species.name === "Meloetta-Delta-Allegro") {
+				this.add("-ability", pokemon, "Fervor Switch");
+				pokemon.formeChange("Meloetta-Delta");
+			}
+		},
+		onWeatherChange(pokemon) {		
+			if ((this.field.isWeather('sunnyday') || this.field.isWeather('desolateland')) && pokemon.species.name === "Meloetta-Delta") {
+				this.add("-ability", pokemon, "Fervor Switch");
+				pokemon.formeChange("Meloetta-Delta-Allegro");
+			}
+			if (!(this.field.isWeather('sunnyday') || this.field.isWeather('desolateland')) && pokemon.species.name === "Meloetta-Delta-Allegro") {
+				this.add("-ability", pokemon, "Fervor Switch");
+				pokemon.formeChange("Meloetta-Delta");
+			}
+		},
+		onModifyMove(move) {
+			if (move.flags["sound"] && move.category !== "Status") {
+				this.debug("Adding Fervor Confusion");
+				if (!move.secondaries) move.secondaries = [];
+				for (const secondary of move.secondaries) {
+					if (secondary.volatileStatus === "confusion") return;
+				}
+				move.secondaries.push({
+					chance: 10,
+					volatileStatus: "confusion",
+				});
+			}
+		},
+		flags: {},
+		name: "Fervor Switch",
+		rating: 4,
+		num: -95,
 	},
 	// CAP
 	mountaineer: {

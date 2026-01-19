@@ -1415,8 +1415,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	depthdecree: {
 		name: "Depth Decree",
-		shortDesc: "In Sun: Ability becomes Drizzle and boosts SpA by +3.",
-		desc: "This move fails if used outside of Harsh Sunlight or Desolate Land. When used, this pokemon's ability becomes Drizzle, and it gains a +3 Special Attack boost.",
+		shortDesc: "In Sun: Ability = Sheer Force and sun is removed.",
+		desc: "When used, this pokemon's ability becomes Sheer Force, and sun is removed.",
 	},
 	destinybond: {
 		name: "Destiny Bond",
@@ -2892,6 +2892,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Power is equal to the base move's Max Move power. If this move is successful, the effects of Electric Terrain, Grassy Terrain, Misty Terrain, and Psychic Terrain end, the effects of Reflect, Light Screen, Aurora Veil, Safeguard, Mist, G-Max Steelsurge, Spikes, Toxic Spikes, Stealth Rock, and Sticky Web end for the target's side, and the effects of G-Max Steelsurge, Spikes, Toxic Spikes, Stealth Rock, and Sticky Web end for the user's side.",
 		shortDesc: "Base move affects power. Ends Terrain, hazards.",
 	},
+	grandserenade: {
+		name: "Grand Serenade",
+		desc: "Changes typing to fire if sunnyday is active, has 50% chance to raise the user's Sp. Atk by 1 stage.",
+		shortDesc: "In Sun, Fire type. 50% chance to raise Sp. Atk 1.",
+	},
 	grassknot: {
 		name: "Grass Knot",
 		desc: "This move's power is 20 if the target weighs less than 10 kg, 40 if less than 25 kg, 60 if less than 50 kg, 80 if less than 100 kg, 100 if less than 200 kg, and 120 if greater than or equal to 200 kg.",
@@ -3955,8 +3960,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	lumencascade: {
 		name: "Lumen Cascade",
-		desc: "This move hits twice, each hit having a 10% chance to drop the target\'s Special Attack. This move's Base Power drops to 25 if any Weather is currently active.",
-		shortDesc: "Hits twice; 10% for SpA drop. Weaker in weather.",
+		desc: "This move hits twice, each hit having a 10% chance to drop the target\'s Special Attack.",
+		shortDesc: "Hits twice; 10% for SpA drop.",
 	},
 	luminacrash: {
 		name: "Lumina Crash",
