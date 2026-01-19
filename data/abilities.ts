@@ -9530,14 +9530,27 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				pokemon.formeChange("Meloetta-Delta");
 			}
 		},
-		onResidual(pokemon) {
-			if ((this.field.isWeather('sunnyday') || this.field.isWeather('desolateland')) && pokemon.species.forme === "Meloetta-Delta") {
+		onWeatherChange(pokemon) {		
+			if ((this.field.isWeather('sunnyday') || this.field.isWeather('desolateland')) && pokemon.species.name === "Meloetta-Delta") {
 				this.add("-ability", pokemon, "Fervor Switch");
 				pokemon.formeChange("Meloetta-Delta-Allegro");
 			}
-			if (!(this.field.isWeather('sunnyday') || this.field.isWeather('desolateland')) && pokemon.species.forme === "Meloetta-Delta-Allegro") {
+			if (!(this.field.isWeather('sunnyday') || this.field.isWeather('desolateland')) && pokemon.species.name === "Meloetta-Delta-Allegro") {
 				this.add("-ability", pokemon, "Fervor Switch");
 				pokemon.formeChange("Meloetta-Delta");
+			}
+		},
+		onModifyMove(move) {
+			if (move.flags["sound"] && move.category !== "Status") {
+				this.debug("Adding Fervor Confusion");
+				if (!move.secondaries) move.secondaries = [];
+				for (const secondary of move.secondaries) {
+					if (secondary.volatileStatus === "confusion") return;
+				}
+				move.secondaries.push({
+					chance: 10,
+					volatileStatus: "confusion",
+				});
 			}
 		},
 		flags: {},

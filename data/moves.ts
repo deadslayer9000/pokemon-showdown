@@ -27910,5 +27910,29 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			this.debug(`BP: ${move.basePower}`);
 			this.hint(`The weather weakened ${pokemon.name}'s Lumen Cascade.`);
 		},
+	},
+	grandserenade: {
+		num: -104,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Grand Serenade",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, sound: 1, bypasssub: 1 },
+		secondary: {
+			chance: 50,
+			boosts: {
+				spa: 1,
+			},
+		},
+		target: "normal",
+		type: "Water",
+		onModifyType(move, pokemon, target) {
+			if (this.field.isWeather("sunnyday") || this.field.isWeather("desolateland")) {
+				move.type = "Fire";
+				this.add("-message", `${pokemon.name}'s Grand Serenade became Fire type due to the sunlight!`);
+			}
+		},
 	}
 };
