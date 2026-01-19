@@ -992,7 +992,6 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		},
 		num: 2575,
 		gen: 9,
-		isNonstandard: "Past",
 	},
 	chestoberry: {
 		name: "Chesto Berry",
@@ -1673,7 +1672,6 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		},
 		num: 2576,
 		gen: 9,
-		isNonstandard: "Past",
 	},
 	destinyknot: {
 		name: "Destiny Knot",
@@ -3050,7 +3048,6 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		},
 		num: 2577,
 		gen: 9,
-		isNonstandard: "Past",
 	},
 	grepaberry: {
 		name: "Grepa Berry",
