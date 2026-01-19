@@ -262,10 +262,12 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	raichumegax: {
 		isNonstandard: "Future",
 		tier: "Illegal",
+		natDexTier: "OU",
 	},
 	raichumegay: {
 		isNonstandard: "Future",
 		tier: "Illegal",
+		natDexTier: "OU",
 	},
 	sandshrew: {
 		tier: "LC",
@@ -2316,6 +2318,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	absolmegaz: {
 		isNonstandard: "Future",
 		tier: "Illegal",
+		natDexTier: "OU",
 	},
 	snorunt: {
 		tier: "LC",
