@@ -1550,7 +1550,8 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		megaStone: { "Charizard-Delta": "Charizard-Delta-Mega" },
 		itemUser: ["Charizard-Delta"],
 		onTakeItem(item, source) {
-			return !item.megaStone?.[source.baseSpecies.name];
+			return !item.megaStone || (!item.megaStone[source.baseSpecies.name] &&
+				!Object.values(item.megaStone).includes(source.baseSpecies.name));
 		},
 		num: -19,
 	},
@@ -1569,7 +1570,8 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		megaStone: {"Haxorus-Delta": "Haxorus-Delta-Mega"},
 		itemUser: ["Haxorus-Delta"],
 		onTakeItem(item, source) {
-			return !item.megaStone?.[source.baseSpecies.name];
+			return !item.megaStone || (!item.megaStone[source.baseSpecies.name] &&
+				!Object.values(item.megaStone).includes(source.baseSpecies.name));
 		},
 		num: -12,
 	},
@@ -1579,7 +1581,8 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		megaStone: { "Infernape-Delta": "Infernape-Delta-Mega" },
 		itemUser: ["Infernape-Delta"],
 		onTakeItem(item, source) {
-			return !item.megaStone?.[source.baseSpecies.name];
+			return !item.megaStone || (!item.megaStone[source.baseSpecies.name] &&
+				!Object.values(item.megaStone).includes(source.baseSpecies.name));
 		},
 		num: -8,
 	},
@@ -1598,7 +1601,8 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		megaStone: {"Latias-Delta": "Latias-Delta-Mega"},
 		itemUser: ["Latias-Delta"],
 		onTakeItem(item, source) {
-			return !item.megaStone?.[source.baseSpecies.name];
+			return !item.megaStone || (!item.megaStone[source.baseSpecies.name] &&
+				!Object.values(item.megaStone).includes(source.baseSpecies.name));
 		},
 		num: -1,
 		gen: 9,
@@ -1609,7 +1613,8 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		megaStone: { "Latios-Delta": "Latios-Delta-Mega" },
 		itemUser: ["Latios-Delta"],
 		onTakeItem(item, source) {
-			return !item.megaStone?.[source.baseSpecies.name];
+			return !item.megaStone || (!item.megaStone[source.baseSpecies.name] &&
+				!Object.values(item.megaStone).includes(source.baseSpecies.name));
 		},
 		num: -2,
 		gen: 9,
@@ -1620,7 +1625,8 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		megaStone: { "Lopunny-Delta": "Lopunny-Delta-Mega"},
 		itemUser: ["Lopunny-Delta"],
 		onTakeItem(item, source) {
-			return !item.megaStone?.[source.baseSpecies.name];
+			return !item.megaStone || (!item.megaStone[source.baseSpecies.name] &&
+				!Object.values(item.megaStone).includes(source.baseSpecies.name));
 		},
 		num: -7,
 	},
@@ -1630,7 +1636,8 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		megaStone: { "Steelix-Delta": "Steelix-Delta-Mega" },
 		itemUser: ["Steelix-Delta"],
 		onTakeItem(item, source) {
-			return !item.megaStone?.[source.baseSpecies.name];
+			return !item.megaStone || (!item.megaStone[source.baseSpecies.name] &&
+				!Object.values(item.megaStone).includes(source.baseSpecies.name));
 		},
 		num: -3,
 	},
@@ -3317,7 +3324,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		megaStone: {"Zoroark-Hisui": "Zoroark-Hisui-Mega"},
 		itemUser: ["Zoroark-Hisui"],
 		onTakeItem(item, source) {
-			return !item.megaStone?.[source.baseSpecies.name];
+			return !item.megaStone?.[source.baseSpecies.baseSpecies];
 		},
 	},
 	hondewberry: {
@@ -6229,7 +6236,8 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		megaStone: {"Diancie-Ruby": "Diancie-Ruby-Mega"},
 		itemUser: ["Diancie-Ruby"],
 		onTakeItem(item, source) {
-			return !item.megaStone?.[source.baseSpecies.name];
+			return !item.megaStone || (!item.megaStone[source.baseSpecies.name] &&
+				!Object.values(item.megaStone).includes(source.baseSpecies.name));
 		},
 		num: -24,
 		gen: 6,
@@ -6370,7 +6378,8 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		megaStone: {"Diancie-Sapphire": "Diancie-Sapphire-Mega"},
 		itemUser: ["Diancie-Sapphire"],
 		onTakeItem(item, source) {
-			return !item.megaStone?.[source.baseSpecies.baseSpecies];
+			return !item.megaStone || (!item.megaStone[source.baseSpecies.name] &&
+				!Object.values(item.megaStone).includes(source.baseSpecies.name));
 		},
 		num: -25,
 		gen: 6,
