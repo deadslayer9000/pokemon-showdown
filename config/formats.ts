@@ -117,12 +117,13 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		ruleset: ['Standard NatDex', 'Terastal Clause', 'Z-Move Clause'],
 		banlist: [ 'ND OU', 'ND Uber', 'ND AG', 'Baton Pass', 'Dire Claw', 'Hidden Power', 'Last Respects', 'Light Clay', 'King\'s Rock', 'Quick Claw', 'Rage Fist', 'Razor Fang', 'Shed Tail',
 			'Serperior', 'Kartana', 'Clefable', 'Hawlucha', 'Hippowdon', 'Toxapex', 'Clodsire', 'Excadrill', 'Hoopa-Unbound', 'Skarmory', 'Cinderace', 'Garganacl', 'Iron Crown', 'Ting-Lu', 
-			'Amoonguss', 'Grimmsnarl', 'Archapult', 'Iron Pilot', 'Klocktowl', 'Greninja', 'Kommo-o', 'Mawilite', 'Iron Boulder', 'Armaledge', 'Dunsparath', 'Dragapult-Ultra', 'Latios-Delta', 
-			'Drifblimp', 'Luxray-Delta', 'Delta Latiosite', 'Eruptois', 'Hoopa-Delta-Unbound', 'Tapu Kehe', 'Lumrunt', 'Urshifu-Flash-Strike', 'Serperior-Ultra', 'Koraiton', 'Zeraora-Delta', 
+			'Amoonguss', 'Grimmsnarl', 'Archapult', 'Iron Pilot', 'Klocktowl', 'Greninja', 'Kommo-o', 'Mawile-Mega', 'Iron Boulder', 'Armaledge', 'Dunsparath', 'Dragapult-Ultra', 'Latios-Delta', 
+			'Drifblimp', 'Luxray-Delta', 'Latios-Delta-Mega', 'Eruptois', 'Hoopa-Delta-Unbound', 'Tapu Kehe', 'Lumrunt', 'Urshifu-Flash-Strike', 'Serperior-Ultra', 'Koraiton', 'Zeraora-Delta', 
 			'Greninja-Delta', 'Zorotales', 'Magearna-Delta', 'Spiritomb-Unbound', 'Meloetta-Omega', 'Spectreon', 'Scizantrum', 'Ambipom-Ultra', 'Zeraora', 'Tapu Fini', 'Tapu Hina', 'Latios', 
-			'Secret Armor', 'Victini', 'Ursaluna-Bloodmoon', 'Gyaradosite', 'Keldeo', 'Savage Scar', 'Vrelie-Delta', 'Rotom-Wash', 'Lochtrier', 'Aspearunt', 'Delta Steelixite', 'Diancette', 'Aerodactylite',
-			'Weezing-Galar', 'Slowbro', 'Glacierus-Therian', 'Tinkaton-Delta', 'Blaziken', 'Victini-Delta', 'Volcarona-Delta', 'Malevorus', 'Pinsirite', 'Volcanion-Delta', 'Hover Pollen', 'Galladite',
-			'Gastrodon-Delta', 'Pecharunt', 'Roserade-Delta', 'Turnizone', 'Slaughtermaus', 'Liesler', 'Latiasite', 'Latiosite', 'Magirigus', 'Gholdengo-Delta', 'Cosmachi', 'Malevorus-Therian', 'Hisuianzoroarkanite', 
+			'Secret Armor', 'Victini', 'Ursaluna-Bloodmoon', 'Gyarados-Mega', 'Keldeo', 'Savage Scar', 'Vrelie-Delta', 'Rotom-Wash', 'Lochtrier', 'Aspearunt', 'Delta Steelixite', 'Diancette', 'Aerodactylite', 'Aerodactyl-Mega',
+			'Weezing-Galar', 'Slowbro', 'Glacierus-Therian', 'Tinkaton-Delta', 'Blaziken', 'Victini-Delta', 'Volcarona-Delta', 'Malevorus', 'Pinsirite', 'Volcanion-Delta', 'Hover Pollen', 'Gallade-Mega',
+			'Gastrodon-Delta', 'Pecharunt', 'Roserade-Delta', 'Turnizone', 'Slaughtermaus', 'Liesler', 'Latias-Mega', 'Latiosite', 'Magirigus', 'Gholdengo-Delta', 'Cosmachi', 'Malevorus-Therian', 'Zoroark-Hisui-Mega', 'Barraskewda', 'Dondozo',
+			'Ogerpon-Cornerstone', 'Manaphy', 'Zapdos-Galar', 'Charizard-Mega-X', 'Dragonite', 'Slowhost', 'Ogerpon-Stormpeak', 'Klinklang-Delta', 'Shrookle', 'Electisaur'
 		],
 	},
 	{
@@ -130,7 +131,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		desc: "Ubers format for the Delta Premier League.",
 		mod: 'gen9',
 		ruleset: ['Standard Natdex', 'Terastal Clause', 'Z-Move Clause'],
-		banlist: [ 'ND AG', 'Baton Pass', 'Dire Claw', 'Hidden Power', 'Last Respects', 'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Shed Tail', 'Zacian-Crowned'],
+		banlist: [ 'ND AG', 'Baton Pass', 'Dire Claw', 'Hidden Power', 'Last Respects', 'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Shed Tail', 'Zacian-Crowned', 'Mewthree'],
 	},
 	{
 		name: "[Gen 9] [ND] DPL Monotype",
