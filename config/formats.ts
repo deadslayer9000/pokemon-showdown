@@ -93,12 +93,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	},
 	
 	{
-		name: "[Gen 9] [ND] Delta Draft League Season 2",
-		searchShow: false,
-		mod: 'pres4patch',
-		ruleset: ['Standard NatDex', 'Standard Draft'],
-	},
-	{
 		name: "[Gen 9] [ND] Pre Season 4 Patch",
 		searchShow: false,
 		mod: 'pres4patch',
@@ -113,6 +107,45 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	// S/V Singles
 	///////////////////////////////////////////////////////////////////
 
+	{
+		section: "Tour Formats",
+	},
+	{
+		name: "[Gen 9] [ND] DPL RU",
+		desc: "RU format for the Delta Premier League.",
+		mod: 'gen9',
+		ruleset: ['Standard NatDex', 'Terastal Clause', 'Z-Move Clause'],
+		banlist: [ 'ND OU', 'ND Uber', 'ND AG', 'Baton Pass', 'Dire Claw', 'Hidden Power', 'Last Respects', 'Light Clay', 'King\'s Rock', 'Quick Claw', 'Rage Fist', 'Razor Fang', 'Shed Tail',
+			'Serperior', 'Kartana', 'Clefable', 'Hawlucha', 'Hippowdon', 'Toxapex', 'Clodsire', 'Excadrill', 'Hoopa-Unbound', 'Skarmory', 'Cinderace', 'Garganacl', 'Iron Crown', 'Ting-Lu', 
+			'Amoonguss', 'Grimmsnarl', 'Archapult', 'Iron Pilot', 'Klocktowl', 'Greninja', 'Kommo-o', 'Mawilite', 'Iron Boulder', 'Armaledge', 'Dunsparath', 'Dragapult-Ultra', 'Latios-Delta', 
+			'Drifblimp', 'Luxray-Delta', 'Delta Latiosite', 'Eruptois', 'Hoopa-Delta-Unbound', 'Tapu Kehe', 'Lumrunt', 'Urshifu-Flash-Strike', 'Serperior-Ultra', 'Koraiton', 'Zeraora-Delta', 
+			'Greninja-Delta', 'Zorotales', 'Magearna-Delta', 'Spiritomb-Unbound', 'Meloetta-Omega', 'Spectreon', 'Scizantrum', 'Ambipom-Ultra', 'Zeraora', 'Tapu Fini', 'Tapu Hina', 'Latios', 
+			'Secret Armor', 'Victini', 'Ursaluna-Bloodmoon', 'Gyaradosite', 'Keldeo', 'Savage Scar', 'Vrelie-Delta', 'Rotom-Wash', 'Lochtrier', 'Aspearunt', 'Delta Steelixite', 'Diancette', 'Aerodactylite',
+			'Weezing-Galar', 'Slowbro', 'Glacierus-Therian', 'Tinkaton-Delta', 'Blaziken', 'Victini-Delta', 'Volcarona-Delta', 'Malevorus', 'Pinsirite', 'Volcanion-Delta', 'Hover Pollen', 'Galladite',
+			'Gastrodon-Delta', 'Pecharunt', 'Roserade-Delta', 'Turnizone', 'Slaughtermaus', 'Liesler', 'Latiasite', 'Latiosite', 'Magirigus', 'Gholdengo-Delta', 'Cosmachi', 'Malevorus-Therian', 'Hisuianzoroarkanite', 
+		],
+	},
+	{
+		name: "[Gen 9] [ND] DPL Ubers",
+		desc: "Ubers format for the Delta Premier League.",
+		mod: 'gen9',
+		ruleset: ['Standard Natdex', 'Terastal Clause', 'Z-Move Clause'],
+		banlist: [ 'ND AG', 'Baton Pass', 'Dire Claw', 'Hidden Power', 'Last Respects', 'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Shed Tail', 'Zacian-Crowned'],
+	},
+	{
+		name: "[Gen 9] [ND] DPL Monotype",
+		desc: "Monotype format for the Delta Premier League.",
+		mod: 'gen9', 
+		ruleset: ['[Gen 9] National Dex', 'Same-Type Clause'],
+		banlist: ['Espathra', 'Flygon-Delta', 'Magoodra', 'Meowscarada-Delta', 'Kingambit'],
+		unbanlist: ['Landorus'],
+	},
+	{
+		name: "[Gen 9] [ND] Delta Draft League Season 2",
+		searchShow: false,
+		mod: 'pres4patch',
+		ruleset: ['Standard NatDex', 'Standard Draft'],
+	},
 	{
 		section: "S/V Singles",
 	},
