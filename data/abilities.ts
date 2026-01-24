@@ -1739,32 +1739,100 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			const fallen = Math.min(pokemon.side.totalFainted, 5);
 			this.add("-start", pokemon, `fallen${fallen}`, "[silent]");
 			this.effectState.fallen = fallen;
-			let newability: string;
+			
+			let newabilities: string;
 			switch (fallen) {
 				case 0:
-					newability = "Pressure";
+					newabilities = "Pressure";
 					break;
 				case 1:
-					newability = "Defiant";
+					newabilities = "Defiant, Pressure";
 					break;
 				case 2:
-					newability = "Mold Breaker";
+					newabilities = "Mold Breaker, Defiant, Pressure";
 					break;
 				case 3:
-					newability = "Sheer Force";
+					newabilities = "Sheer Force, Mold Breaker, Defiant, Pressure";
 					break;
 				case 4:
-					newability = "Dark Aura";
+					newabilities = "Dark Aura, Sheer Force, Mold Breaker, Defiant, Pressure";
 					break;
 				case 5:
-					newability = "Soul-Heart";
+					newabilities = "Soul-Heart, Dark Aura, Sheer Force, Mold Breaker, Defiant, Pressure";
 					break;
 				default:
-					newability = "Pressure";
+					newabilities = "Pressure";
 					break;
 			}
-			pokemon.setAbility(newability);
-			this.add("-ability", pokemon, newability);
+			if (fallen > 0){
+				this.hint(`${pokemon.name} has gained the power of: ${newabilities} to avenge its fallen allies!`);
+			}
+		},
+		onAfterEachBoost(boost, target, source, effect) {
+			if (this.effectState.fallen >= 1){ //Defiant effect
+
+				if (!source || target.isAlly(source)) {
+					return;
+				}
+				let statsLowered = false;
+				let i: BoostID;
+				for (i in boost) {
+					if (boost[i]! < 0) {
+						statsLowered = true;
+					}
+				}
+				if (statsLowered) {
+					this.boost({ atk: 2 }, target, target, null, false, true);
+				}
+			}
+			
+		},
+		onModifyMove(move) {
+			if (this.effectState.fallen >= 2) { //Mold Breaker effect
+				move.ignoreAbility = true;
+			}
+			if (this.effectState.fallen >= 3) { //Sheer Force effect
+				if (move.secondaries) {
+				delete move.secondaries;
+				// Technically not a secondary effect, but it is negated
+				delete move.self;
+				if (move.id === "clangoroussoulblaze") delete move.selfBoost;
+				// Actual negation of `AfterMoveSecondary` effects implemented in scripts.js
+				move.hasSheerForce = true;
+			}
+			}
+
+		},
+		onDeductPP(target, source) {
+			if (target.isAlly(source)) return;
+			return 1;
+		},
+		onBasePowerPriority: 21,
+		onBasePower(basePower, pokemon, target, move) {
+			if (this.effectState.fallen >= 3) { //Sheer Force effect
+			if (move.hasSheerForce) return this.chainModify([5325, 4096]);
+			}
+		},
+		onAnyBasePowerPriority: 20,
+		onAnyBasePower(basePower, source, target, move) {
+			if (this.effectState.fallen >= 4) { //Dark Aura effect
+				if (
+					target === source ||
+					move.category === "Status" ||
+					move.type !== "Dark"
+				)
+					return;
+				if (!move.auraBooster?.hasAbility("Dark Aura"))
+					move.auraBooster = this.effectState.target;
+				if (move.auraBooster !== this.effectState.target) return;
+				return this.chainModify([move.hasAuraBreak ? 3072 : 5448, 4096]);
+			}
+		},
+		onAnyFaintPriority: 1,
+		onAnyFaint() {
+			if (this.effectState.fallen >= 5){ //Soul-Heart effect
+				this.boost({ spa: 1 }, this.effectState.target);
+			}
 		},
 		onEnd(pokemon) {
 			this.add(
