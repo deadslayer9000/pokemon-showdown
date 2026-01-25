@@ -2154,8 +2154,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	steamforged: {
 		name: "Steamforged",
-		desc: "30% chance a Pokemon making contact with this Pokemon will be burned. Water type attacks against this Pokemon have their power lowered by 50%.",
-		shortDesc: "30% to burn attacker on contact, takes 50% dmg from Water-type attacks.",
+		desc: "30% chance a Pokemon making contact with this Pokemon will be burned.",
+		shortDesc: "30% to burn attacker on contact.",
 	},
 	steelworker: {
 		name: "Steelworker",

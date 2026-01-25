@@ -1845,7 +1845,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		flags: {},
 		name: "Dark Decree",
 		rating: 4,
-		num: -68, //implement later
+		num: -68, 
 	},
 	dauntlessshield: {
 		onStart(pokemon) {
