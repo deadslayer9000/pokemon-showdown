@@ -27891,5 +27891,25 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				this.add("-message", `${pokemon.name}'s Grand Serenade became Fire type due to the sunlight!`);
 			}
 		},
-	}
+	},
+	quillstorm: {
+		num: -107,
+		accuracy: 90,
+		basePower: 20,
+		basePowerCallback(pokemon, target, move) {
+			return 20 * move.hit;
+		},
+		category: "Physical",
+		name: "Quillstorm",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		multihit: 3,
+		multiaccuracy: true,
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+		zMove: { basePower: 120 },
+		maxMove: { basePower: 140 },
+	},
 };

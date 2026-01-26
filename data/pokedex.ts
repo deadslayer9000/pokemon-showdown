@@ -25889,6 +25889,17 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		baseSpecies: "Necromauser",
 		requiredItem: "Necromausite",
 		forme: "Mega",
+	},
+	flaringquill: {
+		num: 2121,
+		name: "Flaring Quill",
+		types: ["Fire", "Ground"],
+		baseStats: { hp: 75, atk: 139, def: 89, spa: 113, spd: 63, spe: 91, },
+		abilities: { 0: "Protosynthesis" },
+		weightkg: 99.5,
+		//heightm: no dsc page yet,
+		// color: purple, no dsc page yet
+		eggGroups: ["Undiscovered"],
 	}
 
 };
