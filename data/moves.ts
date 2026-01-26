@@ -27290,15 +27290,6 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				if (form === "Snorlax-Delta-Summer") {
 					const item = source.getItem();
 					if (item.isBerry) {
-						this.add(
-							"-enditem",
-							source,
-							item.name,
-							"[from] eat",
-							"[move] Seasonal Blessing",
-							`[of] ${source}`
-						);
-
 						this.boost({ def: 1, spd: 1 }, source);
 
 						if (this.singleEvent("Eat", item, null, source, null, null)) {
@@ -27307,7 +27298,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 								source.staleness = "external";
 						}
 						if (item.onEat) source.ateBerry = true;
-						source.setItem("");
+						source.eatItem();
 					}
 				}
 				if (form === "Snorlax-Delta-Autumn") {
