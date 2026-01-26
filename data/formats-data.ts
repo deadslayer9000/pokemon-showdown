@@ -3545,6 +3545,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	chandeluremega: {
 		isNonstandard: "Future",
 		tier: "Illegal",
+		natDexTier: "OU",
 	},
 	axew: {
 		tier: "LC",
@@ -4061,6 +4062,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	hawluchamega: {
 		isNonstandard: "Future",
 		tier: "Illegal",
+		natDexTier: "OU",
 	},
 	dedenne: {
 		tier: "ZU",
