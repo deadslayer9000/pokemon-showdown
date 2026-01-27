@@ -7268,5 +7268,10 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	slaughtermausmega: {
 		tier: "UU",
 		doublesTier: "(DUU)",
-	}
+	},
+	flaringquill: {
+		tier: "UU",
+		natDexTier: "UU",
+		doublesTier: "DUU",
+	},
 };

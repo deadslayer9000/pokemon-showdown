@@ -5374,6 +5374,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		start: "  Quick Guard protected [TEAM]!",
 		block: "  Quick Guard protected [POKEMON]!",
 	},
+	quillstorm: {
+		name: "Quillstorm",
+		desc: "Hits three times. Power increases to 40 for the second hit and 60 for the third. This move checks accuracy for each hit, and the attack ends if the target avoids a hit. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit three times.",
+		shortDesc: "Hits 3 times. Each hit can miss, but power rises.",
+	},
 	quiverdance: {
 		name: "Quiver Dance",
 		desc: "Raises the user's Special Attack, Special Defense, and Speed by 1 stage.",
