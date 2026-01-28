@@ -2955,7 +2955,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	serperior: {
 		tier: "RUBL",
 		doublesTier: "(DUU)",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	tepig: {
 		tier: "LC",
@@ -6225,7 +6225,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "OU",
 	},
 	zorotales: {
-		tier: "OU",
+		tier: "UU",
 	},
 	hatteon: {
 		tier: "OU",
@@ -6363,7 +6363,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "LC",
 	},
 	gholdengodelta: {
-		tier: "OU",
+		tier: "UU",
 	},
 	goomyepsilon: {
 		tier: "LC",
@@ -6402,7 +6402,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 	},
 	malevorustherian: {
-		tier: "OU",
+		tier: "UU",
 	},
 	ironrunner: {
 		tier: "UU",
@@ -6459,7 +6459,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "OU",
 	},
 	hoopadelta: {
-		tier: "UU",
+		tier: "OU",
 	},
 	hoopadeltaunbound: {
 		tier: "UU",
@@ -6744,7 +6744,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "NFE",
 	},
 	garchompdelta: {
-		tier: "UU",
+		tier: "OU",
 	},
 	shinxdelta: {
 		tier: "LC",
@@ -6987,7 +6987,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "NU",
 	},
 	heatrandelta: {
-		tier: "UU",
+		tier: "OU",
 	},
 	jirachidelta: {
 		tier: "UU",
