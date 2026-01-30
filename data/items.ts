@@ -49,7 +49,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	absolitez: {
 		name: "Absolite Z",
-		spritenum: 576,
+		spritenum: 16,
 		megaStone: { "Absol": "Absol-Mega-Z" },
 		itemUser: ["Absol"],
 		onTakeItem(item, source) {
@@ -864,7 +864,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	chandelurite: {
 		name: "Chandelurite",
-		spritenum: 557,
+		spritenum: 28,
 		megaStone: { "Chandelure": "Chandelure-Mega" },
 		itemUser: ["Chandelure"],
 		onTakeItem(item, source) {
@@ -971,7 +971,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	chesnaughtite: {
 		name: "Chesnaughtite",
-		spritenum: 558,
+		spritenum: 18,
 		megaStone: { "Chesnaught": "Chesnaught-Mega" },
 		itemUser: ["Chesnaught"],
 		onTakeItem(item, source) {
@@ -1048,7 +1048,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	chimechite: {
 		name: "Chimechite",
-		spritenum: 0,
+		spritenum: 19,
 		megaStone: { "Chimecho": "Chimecho-Mega" },
 		itemUser: ["Chimecho"],
 		onTakeItem(item, source) {
@@ -1555,6 +1555,17 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		},
 		num: -19,
 	},
+	deltachimechite: {
+		name: "Delta Chimechite",
+		spritenum: 30,
+		megaStone: { "Chimecho-Delta": "Chimecho-Delta-Mega" },
+		itemUser: ["Chimecho-Delta"],
+		onTakeItem(item, source) {
+			return !item.megaStone || (!item.megaStone[source.baseSpecies.name] &&
+				!Object.values(item.megaStone).includes(source.baseSpecies.name));
+		},
+		num: -28,
+	},
 	deltagholdiumz: {
 		name: "Delta Gholdium Z",
 		spritenum: 633,
@@ -1630,6 +1641,17 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		},
 		num: -7,
 	},
+	deltametagrossite: {
+		name: "Delta Metagrossite",
+		spritenum: 33,
+		megaStone: {"Metagross-Delta": "Metagross-Delta-Mega"},
+		itemUser: ["Metagross-Delta"],
+		onTakeItem(item, source) {
+			return !item.megaStone || (!item.megaStone[source.baseSpecies.name] &&
+				!Object.values(item.megaStone).includes(source.baseSpecies.name));
+		},
+		num: -29,
+	},
 	deltasteelixite: {
 		name: "Delta Steelixite",
 		spritenum: 14,
@@ -1652,7 +1674,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 },
 	delphoxite: {
 		name: "Delphoxite",
-		spritenum: 559,
+		spritenum: 20,
 		megaStone: { "Delphox": "Delphox-Mega" },
 		itemUser: ["Delphox"],
 		onTakeItem(item, source) {
@@ -3040,7 +3062,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	greninjite: {
 		name: "Greninjite",
-		spritenum: 560,
+		spritenum: 23,
 		megaStone: { "Greninja": "Greninja-Mega" },
 		itemUser: ["Greninja"],
 		onTakeItem(item, source) {
@@ -3220,7 +3242,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	hawluchanite: {
 		name: "Hawluchanite",
-		spritenum: 566,
+		spritenum: 36,
 		megaStone: { "Hawlucha": "Hawlucha-Mega" },
 		itemUser: ["Hawlucha"],
 		onTakeItem(item, source) {
@@ -3755,6 +3777,17 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		num: 221,
 		gen: 2,
 	},
+	klocktowlite: {
+		name: "Klocktowlite",
+		spritenum: 37,
+		megaStone: {"Klocktowl": "Klocktowl-Mega"},
+		itemUser: ["Klocktowl"],
+		onTakeItem(item, source) {
+			return !item.megaStone || (!item.megaStone[source.baseSpecies.name] &&
+				!Object.values(item.megaStone).includes(source.baseSpecies.name));
+		},
+		num: -30,
+	},
 	kommoniumz: {
 		name: "Kommonium Z",
 		spritenum: 690,
@@ -4081,7 +4114,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	lucarionitez: {
 		name: "Lucarionite Z",
-		spritenum: 594,
+		spritenum: 24,
 		megaStone: { "Lucario": "Lucario-Mega-Z" },
 		itemUser: ["Lucario"],
 		onTakeItem(item, source) {
@@ -5830,7 +5863,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	raichunitex: {
 		name: "Raichunite X",
-		spritenum: 0,
+		spritenum: 25,
 		megaStone: { "Raichu": "Raichu-Mega-X" },
 		itemUser: ["Raichu"],
 		onTakeItem(item, source) {
@@ -5841,7 +5874,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	raichunitey: {
 		name: "Raichunite Y",
-		spritenum: 0,
+		spritenum: 26,
 		megaStone: { "Raichu": "Raichu-Mega-Y" },
 		itemUser: ["Raichu"],
 		onTakeItem(item, source) {
