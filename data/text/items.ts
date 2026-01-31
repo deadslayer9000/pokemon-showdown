@@ -13,6 +13,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Absolite",
 		shortDesc: "If held by an Absol, this item allows it to Mega Evolve in battle.",
 	},
+	absolitez: {
+		name: "Absolite Z",
+		shortDesc: "If held by an Absol, this item allows it to Mega Evolve in battle.",
+	},
 	absorbbulb: {
 		name: "Absorb Bulb",
 		shortDesc: "Raises holder's Sp. Atk by 1 stage if hit by a Water-type attack. Single use.",
@@ -387,6 +391,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Delta Charizardite",
 		shortDesc: "If held by a Delta-Charizard, this item allows it to Mega Evolve in battle.",
 	},
+	deltachimechite: {
+		name: "Delta Chimechite",
+		shortDesc: "If held by a Delta-Chimecho, this item allows it to Mega Evolve in battle.",
+	},
 	deepseascale: {
 		name: "Deep Sea Scale",
 		desc: "If held by a Clamperl, its Sp. Def is doubled. Evolves Clamperl into Gorebyss when traded.",
@@ -409,6 +417,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Delta Infernapeite",
 		shortDesc: "If held by Infernape-Delta, this item allows it to Mega Evolve in battle.",
 	},
+	deltakeldeoite: {
+		name: "Delta Keldeoite",
+		shortDesc: "If held by Keldeo-Delta, this item allows it to Mega Evolve in battle.",
+	},
 	deltaklinklangiumz: {
 		name: "Delta Klinklangium Z",
 		shortDesc: "If held by Klinklang-Delta with Flux Emission, allows it to use Absolute Zero.",
@@ -424,6 +436,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 	deltalopunnite: {
 		name: "Delta Lopunnite",
 		shortDesc: "If held by Lopunny-Delta, this item allows it to Mega Evolve in battle.",
+	},
+	deltametagrossite: {
+		name: "Delta Metagrossite",
+		shortDesc: "If held by Metagross-Delta, this item allows it to Mega Evolve in battle.",
 	},
 	deltasteelixite: {
 		name: "Delta Steelixite",
@@ -1039,6 +1055,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Kee Berry",
 		shortDesc: "Raises holder's Defense by 1 stage after it is hit by a physical attack. Single use.",
 	},
+	keldeoite: {
+		name: "Keldeoite",
+		shortDesc: "If held by a Keldeo, this item allows it to Mega Evolve in battle.",
+	},
 	kelpsyberry: {
 		name: "Kelpsy Berry",
 		shortDesc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",
@@ -1047,6 +1067,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "King's Rock",
 		desc: "Holder's attacks without a chance to make the target flinch gain a 10% chance to make the target flinch. Evolves Poliwhirl into Politoed and Slowpoke into Slowking when traded.",
 		shortDesc: "Holder's attacks without a chance to flinch gain a 10% chance to flinch.",
+	},
+	klocktowlite: {
+		name: "Klocktowlite",
+		shortDesc: "If held by a Klocktowl, this item allows it to Mega Evolve in battle.",
 	},
 	kommoniumz: {
 		name: "Kommonium Z",
@@ -1625,6 +1649,14 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 	rabutaberry: {
 		name: "Rabuta Berry",
 		shortDesc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",
+	},
+	raichunitex: {
+		name: "Raichunite X",
+		shortDesc: "If held by a Raichu, this item allows it to Mega Evolve in battle.",
+	},
+	raichunitey: {
+		name: "Raichunite Y",
+		shortDesc: "If held by a Raichu, this item allows it to Mega Evolve in battle.",
 	},
 	rarebone: {
 		name: "Rare Bone",
