@@ -7280,4 +7280,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "UU",
 		doublesTier: "DUU",
 	},
+	chimechodeltamega: {
+		tier: "UU",
+	},
 };
