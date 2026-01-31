@@ -7311,8 +7311,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	thebelltolls: {
 		name: "The Bell Tolls",
-		desc: "Sets Perish Song on the opponent. This move cannot be used twice in a row.",
-		shortDesc: "Perish Song on the opponent. Can't be used twice in a row.",
+		desc: "If it is this Pokemon's first turn on the field, then it raises Special Attack by 1.",
+		shortDesc: "If first turn out: raise SpA by 1.",
 	},
 	thief: {
 		name: "Thief",

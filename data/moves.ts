@@ -27196,7 +27196,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			bypasssub: 1,
 			metronome: 1,
 		},
-		onHit(source) {
+		onHit(target, source) {
 			if(source.activeMoveActions <= 1){
 				this.boost({spa: 1}, source);
 			}
