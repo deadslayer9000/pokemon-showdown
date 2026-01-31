@@ -417,6 +417,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Delta Infernapeite",
 		shortDesc: "If held by Infernape-Delta, this item allows it to Mega Evolve in battle.",
 	},
+	deltakeldeoite: {
+		name: "Delta Keldeoite",
+		shortDesc: "If held by Keldeo-Delta, this item allows it to Mega Evolve in battle.",
+	},
 	deltaklinklangiumz: {
 		name: "Delta Klinklangium Z",
 		shortDesc: "If held by Klinklang-Delta with Flux Emission, allows it to use Absolute Zero.",
@@ -1051,6 +1055,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Kee Berry",
 		shortDesc: "Raises holder's Defense by 1 stage after it is hit by a physical attack. Single use.",
 	},
+	keldeoite: {
+		name: "Keldeoite",
+		shortDesc: "If held by a Keldeo, this item allows it to Mega Evolve in battle.",
+	},
 	kelpsyberry: {
 		name: "Kelpsy Berry",
 		shortDesc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",
@@ -1641,6 +1649,14 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 	rabutaberry: {
 		name: "Rabuta Berry",
 		shortDesc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",
+	},
+	raichunitex: {
+		name: "Raichunite X",
+		shortDesc: "If held by a Raichu, this item allows it to Mega Evolve in battle.",
+	},
+	raichunitey: {
+		name: "Raichunite Y",
+		shortDesc: "If held by a Raichu, this item allows it to Mega Evolve in battle.",
 	},
 	rarebone: {
 		name: "Rare Bone",
