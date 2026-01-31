@@ -13,6 +13,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Absolite",
 		shortDesc: "If held by an Absol, this item allows it to Mega Evolve in battle.",
 	},
+	absolitez: {
+		name: "Absolite Z",
+		shortDesc: "If held by an Absol, this item allows it to Mega Evolve in battle.",
+	},
 	absorbbulb: {
 		name: "Absorb Bulb",
 		shortDesc: "Raises holder's Sp. Atk by 1 stage if hit by a Water-type attack. Single use.",
