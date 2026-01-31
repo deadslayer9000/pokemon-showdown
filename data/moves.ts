@@ -27189,7 +27189,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		basePower: 90,
 		category: "Special",
 		name: "The Bell Tolls",
-		pp: 19,
+		pp: 10,
 		priority: 0,
 		flags: {
 			sound: 1,
