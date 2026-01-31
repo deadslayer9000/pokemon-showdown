@@ -3754,6 +3754,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		doublesTier: "(DUU)",
 		natDexTier: "UU",
 	},
+	keldeomega: {
+		tier: "OU",
+	},
 	meloetta: {
 		tier: "NU",
 		doublesTier: "(DUU)",
@@ -7244,6 +7247,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	keldeodelta: {
 		tier: "UU",
 		doublesTier: "(DUU)",
+	},
+	keldeodeltamega: {
+		tier: "UU",
 	},
 	glacierus: {
 		tier: "NU",

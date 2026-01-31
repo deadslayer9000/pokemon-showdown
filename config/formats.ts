@@ -157,7 +157,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		team: 'random',
 		bestOfDefault: true,
 		ruleset: ['PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Illusion Level Mod'],
-		searchShow: false,
 	},
 	{
 		name: "[Gen 9] Unrated Random Battle",
@@ -280,6 +279,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		bestOfDefault: true,
 		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 9', 'VGC Timer'],
 		banlist: ['Sub-Legendary', 'Paradox', 'Gouging Fire', 'Iron Boulder', 'Iron Crown', 'Raging Bolt'],
+		searchShow: false,
 	},
 	{
 		name: "[Gen 9] BSS Reg J",
@@ -380,6 +380,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		bestOfDefault: true,
 		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 9', 'VGC Timer', 'Limit Two Restricted'],
 		restricted: ['Restricted Legendary'],
+		searchShow: false,
 	},
 	{
 		name: "[Gen 9] VGC 2026 Reg F",
@@ -388,6 +389,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		gameType: 'doubles',
 		bestOfDefault: true,
 		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 9', 'VGC Timer', 'Open Team Sheets'],
+		searchShow: false,
 	},
 	{
 		name: "[Gen 9] VGC 2026 Reg F (Bo3)",
@@ -395,6 +397,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen9',
 		gameType: 'doubles',
 		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 9', 'VGC Timer', 'Force Open Team Sheets', 'Best of = 3'],
+		searchShow: false,
 	},
 	{
 		name: "[Gen 9] Doubles Custom Game",
