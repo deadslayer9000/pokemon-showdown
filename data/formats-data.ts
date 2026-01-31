@@ -1210,7 +1210,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	dragonitemega: {
 		isNonstandard: "Future",
-		tier: "Illegal",
+		tier: "UU",
 	},
 	mewtwo: {
 		tier: "Uber",
@@ -1245,7 +1245,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	meganiummega: {
 		isNonstandard: "Future",
-		tier: "Illegal",
+		tier: "UU",
 	},
 	cyndaquil: {
 		tier: "LC",
@@ -1276,7 +1276,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	feraligatrmega: {
 		isNonstandard: "Future",
-		tier: "Illegal",
+		tier: "UU",
 	},
 	sentret: {
 		tier: "LC",
@@ -1630,7 +1630,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	skarmorymega: {
 		isNonstandard: "Future",
-		tier: "Illegal",
+		tier: "UU",
 	},
 	houndour: {
 		tier: "LC",
@@ -2970,7 +2970,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	emboarmega: {
 		isNonstandard: "Future",
-		tier: "Illegal",
+		tier: "UU",
 	},
 	oshawott: {
 		tier: "LC",
@@ -4017,7 +4017,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	dragalgemega: {
 		isNonstandard: "Future",
-		tier: "Illegal",
+		tier: "UU",
 	},
 	clauncher: {
 		tier: "LC",
@@ -6844,6 +6844,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	metagrossdelta: {
 		tier: "NU",
+	},
+	metagrossdeltamega: {
+		tier: "UU",
 	},
 	sinisfee: {
 		tier: "LC",
