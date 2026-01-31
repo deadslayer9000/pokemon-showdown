@@ -391,6 +391,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Delta Charizardite",
 		shortDesc: "If held by a Delta-Charizard, this item allows it to Mega Evolve in battle.",
 	},
+	deltachimechite: {
+		name: "Delta Chimechite",
+		shortDesc: "If held by a Delta-Chimecho, this item allows it to Mega Evolve in battle.",
+	},
 	deepseascale: {
 		name: "Deep Sea Scale",
 		desc: "If held by a Clamperl, its Sp. Def is doubled. Evolves Clamperl into Gorebyss when traded.",
@@ -428,6 +432,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 	deltalopunnite: {
 		name: "Delta Lopunnite",
 		shortDesc: "If held by Lopunny-Delta, this item allows it to Mega Evolve in battle.",
+	},
+	deltametagrossite: {
+		name: "Delta Metagrossite",
+		shortDesc: "If held by Metagross-Delta, this item allows it to Mega Evolve in battle.",
 	},
 	deltasteelixite: {
 		name: "Delta Steelixite",
@@ -1051,6 +1059,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "King's Rock",
 		desc: "Holder's attacks without a chance to make the target flinch gain a 10% chance to make the target flinch. Evolves Poliwhirl into Politoed and Slowpoke into Slowking when traded.",
 		shortDesc: "Holder's attacks without a chance to flinch gain a 10% chance to flinch.",
+	},
+	klocktowlite: {
+		name: "Klocktowlite",
+		shortDesc: "If held by a Klocktowl, this item allows it to Mega Evolve in battle.",
 	},
 	kommoniumz: {
 		name: "Kommonium Z",

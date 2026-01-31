@@ -1597,6 +1597,17 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		},
 		num: -8,
 	},
+	deltakeldeoite: {
+		name: "Delta Keldeoite",
+		spritenum: 0,
+		megaStone: {"Keldeo-Delta": "Keldeo-Delta-Mega"},
+		itemUser: ["Keldeo-Delta"],
+		onTakeItem(item, source) {
+			return !item.megaStone || (!item.megaStone[source.baseSpecies.name] &&
+				!Object.values(item.megaStone).includes(source.baseSpecies.name));
+		},
+		num: -32,
+	},
 	deltaklinklangiumz: {
 		name: "Delta Klinklangium Z",
 		spritenum: 636,
@@ -3741,6 +3752,17 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		},
 		num: 687,
 		gen: 6,
+	},
+	keldeoite: {
+		name: "Keldeoite",
+		spritenum: 0,
+		megaStone: {"Keldeo": "Keldeo-Mega"},
+		itemUser: ["Keldeo"],
+		onTakeItem(item, source) {
+			return !item.megaStone || (!item.megaStone[source.baseSpecies.name] &&
+				!Object.values(item.megaStone).includes(source.baseSpecies.name));
+		},
+		num: -31,
 	},
 	kelpsyberry: {
 		name: "Kelpsy Berry",

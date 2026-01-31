@@ -2473,6 +2473,61 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 1,
 		num: 194,
 	},
+	eternalchime: {
+		onStart(pokemon) {
+			pokemon.abilityState.choiceLock = "";
+		},
+		onBeforeMove(pokemon, target, move) {
+			if (move.isZOrMaxPowered || move.id === "struggle") return;
+			if (
+				pokemon.abilityState.choiceLock &&
+				pokemon.abilityState.choiceLock !== move.id
+			) {
+				// Fails unless ability is being ignored (these events will not run), no PP lost.
+				this.addMove("move", pokemon, move.name);
+				this.attrLastMove("[still]");
+				this.debug("Disabled by Eternal Chime");
+				this.add("-fail", pokemon);
+				return false;
+			}
+		},
+		onModifyMove(move, pokemon) {
+			if (
+				pokemon.abilityState.choiceLock ||
+				move.isZOrMaxPowered ||
+				move.id === "struggle"
+			)
+				return;
+			pokemon.abilityState.choiceLock = move.id;
+		},
+		onModifySpAPriority: 1,
+		onModifySpA(spa, pokemon) {
+			if (pokemon.volatiles["dynamax"]) return;
+			// PLACEHOLDER
+			this.debug("Eternal Chime Spatk Boost");
+			return this.chainModify(1.5);
+		},
+		onDisableMove(pokemon) {
+			if (!pokemon.abilityState.choiceLock) return;
+			if (pokemon.volatiles["dynamax"]) return;
+			for (const moveSlot of pokemon.moveSlots) {
+				if (moveSlot.id !== pokemon.abilityState.choiceLock) {
+					pokemon.disableMove(
+						moveSlot.id,
+						false,
+						this.effectState.sourceEffect
+					);
+				}
+			}
+		},
+		onEnd(pokemon) {
+			pokemon.abilityState.choiceLock = "";
+		},
+		flags: {},
+		name: "Eternal Chime",
+		rating: 4.5,
+		num: -96,
+	},
 	evilsbane: {
 		onTryHit(target, source, move) {
 			if (
@@ -5286,6 +5341,36 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 1.5,
 		num: 20,
 	},
+	paragon: {
+		onTryBoost(boost, target, source, effect) {
+			if (source && target === source) return;
+			let showMsg = false;
+			let i: BoostID;
+			for (i in boost) {
+				if (boost[i]! < 0) {
+					delete boost[i];
+					showMsg = true;
+				}
+			}
+			if (
+				showMsg &&
+				!(effect as ActiveMove).secondaries &&
+				effect.id !== "octolock"
+			) {
+				this.add(
+					"-fail",
+					target,
+					"unboost",
+					"[from] ability: Paragon",
+					`[of] ${target}`
+				);
+			}
+		},
+		flags: { breakable: 1 },
+		name: "Paragon",
+		rating: 2,
+		num: -97,
+	},
 	parasolprayer: {
 		onStart(source) {
 			this.field.setWeather("deltastream");
@@ -6512,6 +6597,20 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		name: "Renegade",
 		rating: 4,
 		num: -73,
+	},
+	resolute: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.priority > 0) {
+				if (!this.heal(target.baseMaxhp / 4)) {
+					this.add("-immune", target, "[from] ability: Resolute");
+				}
+				return null;
+			}
+		},
+		flags: { breakable: 1 },
+		name: "Resolute",
+		rating: 3,
+		num: -98
 	},
 	ripen: {
 		onTryHeal(damage, target, source, effect) {

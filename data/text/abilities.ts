@@ -584,6 +584,11 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "When this Pokemon has more than 1/2 its maximum HP and takes damage bringing it to 1/2 or less of its maximum HP, it immediately switches out to a chosen ally. This effect applies after all hits from a multi-hit move. This effect is prevented if the move had a secondary effect removed by the Sheer Force Ability. This effect applies to both direct and indirect damage, except Curse and Substitute on use, Belly Drum, Pain Split, and confusion damage.",
 		shortDesc: "This Pokemon switches out when it reaches 1/2 or less of its maximum HP.",
 	},
+	eternalchime: {
+		name: "Eternal Chime",
+		desc: "When this Pokemon executes a move, it's Special Attack is multiplied by 1.5x, but it is locked into that move until it switches out, similar to Choice Specs.",
+		shortDesc: "This Pokemon's SpAtk is 1.5x, but it can only select the first move it executes.",
+	},
 	evilsbane: {
 		name: "Evil's Bane",
 		shortDesc: "This Pokemon is immune to Dark-type moves and Prankster moves.",
@@ -1456,6 +1461,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Paralysis Phantom",
 		shortDesc: "Supresses oppoenent's item after paralizing them.",
 	},
+	paragon: {
+		name: "Paragon",
+		shortDesc: "Prevents other Pokemon from lowering this Pokemon's stat stages.",
+	},
 	parasolprayer: {
 		name: "Parasol Prayer",
 		shortDesc: "On switch-in, strong winds begin until this Ability is not active in battle.",
@@ -1787,6 +1796,11 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	renegade: {
 		name: "Renegade",
 		shortDesc: "Each time the user is hit by a dark type move, power of its moves is raised by 20%.",
+	},
+	resolute: {
+		name: "Resolute",
+		shortDesc: "This Pokemon heals 1/4 of its max HP when hit by priority moves; Priority immunity.",
+		desc: "When this Pokemon is targeted by a move with increased priority, that attack instead heals 1/4 of this Pokemon's max HP and deals no damage.",
 	},
 	ripen: {
 		name: "Ripen",

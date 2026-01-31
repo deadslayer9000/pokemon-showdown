@@ -25912,7 +25912,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		//heightm: no dsc page
 		color: "Yellow",
 		eggGroups: ["Undiscovered"],
-		requiredItem: "Keldite",
+		requiredItem: "Keldeoite",
 		forme: "Mega",
 	},
 	keldeodeltamega: {
@@ -25926,7 +25926,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		//heightm: no dsc page
 		color: "White",
 		eggGroups: ["Undiscovered"],
-		requiredItem: "Delta Keldite",
+		requiredItem: "Delta Keldeoite",
 		forme: "Mega",
 	},
 	chimechodeltamega: {
