@@ -5650,7 +5650,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	irontreads: {
 		tier: "OU",
 		doublesTier: "(DUU)",
-		natDexTier: "UU",
+		natDexTier: "OU",
 	},
 	ironmoth: {
 		tier: "OU",
@@ -6192,7 +6192,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 	},
 	magoodra: {
-		tier: "UU",
+		tier: "OU",
 	},
 	clefgar: {
 		tier: "OU",
@@ -6273,7 +6273,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "OU",
 	},
 	azelfdelta: {
-		tier: "UU",
+		tier: "OU",
 	},
 	mespritdelta: {
 		tier: "UU",
@@ -6765,7 +6765,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "NFE",
 	},
 	flygondelta: {
-		tier: "UU",
+		tier: "OU",
 	},
 	klinkdelta: {
 		tier: "LC",
@@ -7267,15 +7267,15 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		doublesTier: "(DUU)",
 	},
 	ironblaster: {
-		tier: "UU",
+		tier: "OU",
 		doublesTier: "(DUU)",
 	},
 	necromausermega: {
-		tier: "UU",
+		tier: "OU",
 		doublesTier: "(DUU)",
 	},
 	slaughtermausmega: {
-		tier: "UU",
+		tier: "OU",
 		doublesTier: "(DUU)",
 	},
 	flaringquill: {

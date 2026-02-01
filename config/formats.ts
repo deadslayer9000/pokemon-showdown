@@ -122,9 +122,10 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'Greninja-Delta', 'Zorotales', 'Magearna-Delta', 'Spiritomb-Unbound', 'Meloetta-Omega', 'Spectreon', 'Scizantrum', 'Ambipom-Ultra', 'Zeraora', 'Tapu Fini', 'Tapu Hina', 'Latios', 
 			'Secret Armor', 'Victini', 'Ursaluna-Bloodmoon', 'Gyarados-Mega', 'Keldeo', 'Savage Scar', 'Vrelie-Delta', 'Rotom-Wash', 'Lochtrier', 'Aspearunt', 'Steelix-Delta-Mega', 'Diancette', 'Aerodactylite', 'Aerodactyl-Mega',
 			'Weezing-Galar', 'Slowbro', 'Glacierus-Therian', 'Tinkaton-Delta', 'Blaziken', 'Victini-Delta', 'Volcarona-Delta', 'Malevorus', 'Pinsir-Mega', 'Terrakion-Delta', 'Hover Pollen', 'Gallade-Mega',
-			'Gastrodon-Delta', 'Pecharunt', 'Roserade-Delta', 'Turnizone', 'Slaughtermaus', 'Liesler', 'Latias-Mega', 'Latiosite', 'Magirigus', 'Gholdengo-Delta', 'Cosmachi', 'Malevorus-Therian', 'Zoroark-Hisui-Mega', 'Barraskewda', 'Dondozo',
+			'Gastrodon-Delta', 'Pecharunt', 'Roserade-Delta', 'Turnizone', 'Slaughtermaus-Mega', 'Liesler', 'Latias-Mega', 'Latiosite', 'Magirigus', 'Gholdengo-Delta', 'Cosmachi', 'Malevorus-Therian', 'Zoroark-Hisui-Mega', 'Barraskewda', 'Dondozo',
 			'Ogerpon-Cornerstone', 'Manaphy', 'Zapdos-Galar', 'Charizard-Mega-X', 'Dragonite', 'Slowhost', 'Ogerpon-Stormpeak', 'Klinklang-Delta', 'Shrookle', 'Electisaur', 'Grimmsnarl-Delta', 'Celesteela', 'Iron World',
-			'Tyranitar', 'Magoodra', 'Azelf-Delta', 'Urshifu-Rapid-Strike', 'Blacephalon', 'Magnezone', 'Iron Blaster', 'Tyranitar-Mega', 'Flygon-Delta', 'Necromauser-Mega', 
+			'Tyranitar', 'Blacephalon', 'Magnezone', 'Mandibuzz', 'Tangrowth', 'Glimmerix',
+			
 		],
 	},
 	{
