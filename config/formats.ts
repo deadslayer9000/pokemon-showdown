@@ -125,7 +125,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'Gastrodon-Delta', 'Pecharunt', 'Roserade-Delta', 'Turnizone', 'Slaughtermaus-Mega', 'Liesler', 'Latias-Mega', 'Latiosite', 'Magirigus', 'Gholdengo-Delta', 'Cosmachi', 'Malevorus-Therian', 'Zoroark-Hisui-Mega', 'Barraskewda', 'Dondozo',
 			'Ogerpon-Cornerstone', 'Manaphy', 'Zapdos-Galar', 'Charizard-Mega-X', 'Dragonite', 'Slowhost', 'Ogerpon-Stormpeak', 'Klinklang-Delta', 'Shrookle', 'Electisaur', 'Grimmsnarl-Delta', 'Celesteela', 'Iron World',
 			'Tyranitar', 'Blacephalon', 'Magnezone', 'Mandibuzz', 'Tangrowth', 'Glimmerix', 'Feraligatr-Mega', 'Chimecho-Delta-Mega', 'Meganium-Mega', 'Emboar-Mega', 'Skarmory-Mega', 'Dragalge-Mega', 'Keldeo-Delta-Mega', 'Keldeo-Mega',
-			'Metagross-Delta-Mega', 'Klocktowl-Mega',
+			'Metagross-Delta-Mega', 'Klocktowl-Mega', 'Flaring Quill',
 		],
 	},
 	{
