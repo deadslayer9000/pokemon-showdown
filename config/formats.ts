@@ -125,9 +125,8 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'Gastrodon-Delta', 'Pecharunt', 'Roserade-Delta', 'Turnizone', 'Slaughtermaus-Mega', 'Liesler', 'Latias-Mega', 'Latiosite', 'Magirigus', 'Gholdengo-Delta', 'Cosmachi', 'Malevorus-Therian', 'Zoroark-Hisui-Mega', 'Barraskewda', 'Dondozo',
 			'Ogerpon-Cornerstone', 'Manaphy', 'Zapdos-Galar', 'Charizard-Mega-X', 'Dragonite', 'Slowhost', 'Ogerpon-Stormpeak', 'Klinklang-Delta', 'Shrookle', 'Electisaur', 'Grimmsnarl-Delta', 'Celesteela', 'Iron World',
 			'Tyranitar', 'Blacephalon', 'Magnezone', 'Mandibuzz', 'Glimmerix', 'Feraligatr-Mega', 'Chimecho-Delta-Mega', 'Meganium-Mega', 'Emboar-Mega', 'Skarmory-Mega', 'Dragalge-Mega',
-			'Metagross-Delta-Mega', 'Klocktowl-Mega', 'Flaring Quill', 'Keldeo-Delta-Mega', 'Keldeo', 'Slaughtermaus',
+			'Metagross-Delta-Mega', 'Klocktowl-Mega', 'Flaring Quill', 'Keldeo', 'Slaughtermaus',
 		],
-		unbanlist: ['Keldeo-Delta'],
 	},
 	{
 		name: "[Gen 9] [ND] DPL Ubers",
