@@ -260,12 +260,10 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "NU",
 	},
 	raichumegax: {
-		isNonstandard: "Future",
 		tier: "Illegal",
 		natDexTier: "OU",
 	},
 	raichumegay: {
-		isNonstandard: "Future",
 		tier: "Illegal",
 		natDexTier: "OU",
 	},
@@ -1209,7 +1207,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 	},
 	dragonitemega: {
-		isNonstandard: "Future",
 		tier: "UU",
 	},
 	mewtwo: {
@@ -1244,7 +1241,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "RU",
 	},
 	meganiummega: {
-		isNonstandard: "Future",
 		tier: "UU",
 	},
 	cyndaquil: {
@@ -1275,7 +1271,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "RU",
 	},
 	feraligatrmega: {
-		isNonstandard: "Future",
 		tier: "UU",
 	},
 	sentret: {
@@ -1629,7 +1624,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "UU",
 	},
 	skarmorymega: {
-		isNonstandard: "Future",
 		tier: "UU",
 	},
 	houndour: {
@@ -2316,7 +2310,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "NU",
 	},
 	absolmegaz: {
-		isNonstandard: "Future",
 		tier: "Illegal",
 		natDexTier: "OU",
 	},
@@ -2969,7 +2962,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "RU",
 	},
 	emboarmega: {
-		isNonstandard: "Future",
 		tier: "UU",
 	},
 	oshawott: {
@@ -3543,7 +3535,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "RU",
 	},
 	chandeluremega: {
-		isNonstandard: "Future",
 		tier: "Illegal",
 		natDexTier: "OU",
 	},
@@ -4016,7 +4007,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "RU",
 	},
 	dragalgemega: {
-		isNonstandard: "Future",
 		tier: "UU",
 	},
 	clauncher: {
@@ -4063,7 +4053,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "UUBL",
 	},
 	hawluchamega: {
-		isNonstandard: "Future",
 		tier: "Illegal",
 		natDexTier: "OU",
 	},
