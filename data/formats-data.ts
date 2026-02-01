@@ -6666,7 +6666,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 	},
 	dragetsu: {
-		tier: "OU",
+		tier: "UU",
 	},
 	energeist: {
 		tier: "UU",
