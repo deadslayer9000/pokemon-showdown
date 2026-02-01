@@ -127,6 +127,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'Tyranitar', 'Blacephalon', 'Magnezone', 'Mandibuzz', 'Glimmerix', 'Feraligatr-Mega', 'Chimecho-Delta-Mega', 'Meganium-Mega', 'Emboar-Mega', 'Skarmory-Mega', 'Dragalge-Mega',
 			'Metagross-Delta-Mega', 'Klocktowl-Mega', 'Flaring Quill', 'Keldeo', 'Slaughtermaus',
 		],
+		unbanlist: ['Keldeo-Delta'],
 	},
 	{
 		name: "[Gen 9] [ND] DPL Ubers",
