@@ -111,6 +111,18 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		section: "Tour Formats",
 	},
 	{
+		name: "[Gen 9] [ND] DPL OU",
+		mod: 'gen9',
+		ruleset: ['Standard NatDex', 'Terastal Clause', 'Z-Move Clause'],
+		banlist: [
+			'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock',
+			'Quick Claw', 'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail', 'Dire Claw', 'Rage Fist', 'Blood Moon', 'Darkrai', 'Zamazenta',
+		],
+		unbanlist: [
+			'Solgaleo', 'Sneasler', 'Annihilape', 'Ursaluna-Bloodmoon', 'Espathra', 'Roaring Moon', 'Dragapult', 'Gholdengo'
+		],
+	},
+	{
 		name: "[Gen 9] [ND] DPL RU",
 		desc: "RU format for the Delta Premier League.",
 		mod: 'gen9',

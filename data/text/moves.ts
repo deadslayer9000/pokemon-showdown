@@ -7312,7 +7312,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	thebelltolls: {
 		name: "The Bell Tolls",
 		desc: "If it is this Pokemon's first turn on the field, then it raises Special Attack by 1.",
-		shortDesc: "If first turn out: raise SpA by 1.",
+		shortDesc: "Once per match: raise SpA by 1.",
 	},
 	thief: {
 		name: "Thief",
