@@ -104,6 +104,14 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'Solgaleo', 'Sneasler', 'Annihilape', 'Ursaluna-Bloodmoon', 'Espathra', 'Roaring Moon',
 		],
 	},
+	{
+		name: "[Gen 9] [ND] Delta Random Battle",
+		desc: "Random battle format with Delta Pokemon and National Dex rules.",
+		mod: 'gen9',
+		team: 'randomDelta',
+		bestOfDefault: true,
+		ruleset: ['PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Illusion Level Mod'],
+	},
 	// S/V Singles
 	///////////////////////////////////////////////////////////////////
 
