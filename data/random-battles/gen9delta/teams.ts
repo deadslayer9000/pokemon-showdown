@@ -668,7 +668,7 @@ export class RandomDeltaTeams extends RandomTeams {
 
 	override randomSets: { [species: string]: RandomTeamsTypes.RandomSpeciesData } = require('./sets.json');
 
-	randomDeltaTeam() {
+	randomaTeam() {
 		this.enforceNoDirectCustomBanlistChanges();
 
 		const seed = this.prng.getSeed();
