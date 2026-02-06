@@ -3578,7 +3578,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		name: "[Gen 9] Baby Random Battle",
 		mod: 'gen9',
-		team: 'random',
+		team: 'randomBaby',
 		bestOfDefault: true,
 		ruleset: ['Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Illusion Level Mod'],
 	},
