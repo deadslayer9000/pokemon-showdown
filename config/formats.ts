@@ -108,7 +108,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		name: "[Gen 9] [ND] Random Delta Battle",
 		desc: "Random battle format with Delta Pokemon and National Dex rules.",
 		mod: 'gen9',
-		team: 'randomDelta',
+		team: 'randomBaby',
 		bestOfDefault: true,
 		ruleset: ['PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Illusion Level Mod'],
 	},
@@ -3578,7 +3578,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		name: "[Gen 9] Baby Random Battle",
 		mod: 'gen9',
-		team: 'randomBaby',
+		team: 'random',
 		bestOfDefault: true,
 		ruleset: ['Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Illusion Level Mod'],
 	},
