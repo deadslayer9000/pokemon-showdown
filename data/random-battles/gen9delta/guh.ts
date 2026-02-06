@@ -49,7 +49,7 @@ const MOVE_PAIRS = [
 	['protect', 'wish'],
 ];
 
-export class RandomDeltaTeams extends RandomTeams {
+export class RandomBabyTeams extends RandomTeams {
 	constructor(format: Format | string, prng: PRNG | PRNGSeed | null) {
 		super(format, prng);
 
@@ -668,7 +668,7 @@ export class RandomDeltaTeams extends RandomTeams {
 
 	override randomSets: { [species: string]: RandomTeamsTypes.RandomSpeciesData } = require('./sets.json');
 
-	randomDeltaTeam() {
+	randomBabyTeam() {
 		this.enforceNoDirectCustomBanlistChanges();
 
 		const seed = this.prng.getSeed();
@@ -819,4 +819,4 @@ export class RandomDeltaTeams extends RandomTeams {
 	}
 }
 
-export default RandomDeltaTeams;
+export default RandomBabyTeams;
