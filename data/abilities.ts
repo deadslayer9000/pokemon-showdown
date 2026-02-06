@@ -6189,41 +6189,49 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			}
 		},
 		onModifySpe(spe, pokemon) {
-			if (
-				pokemon.storedStats["spe"] > pokemon.storedStats["spa"] ||
-				pokemon.abilityState.monotype === true
-			) {
-				const typeCount = pokemon.abilityState?.typeCount;
-				if (pokemon.abilityState.monotype === true) {
-					this.debug("MONOTYPE SPEED");
-					return this.chainModify([6157, 4096]);
-				}
-				switch (typeCount) {
-					case 1:
-						return this.chainModify([4300, 4096]);
-					case 2:
-						return this.chainModify([4507, 4096]);
-					case 3:
-						return this.chainModify([4713, 4096]);
-					case 4:
-						return this.chainModify([4919, 4096]);
-					case 5:
-						return this.chainModify([5125, 4096]);
-					case 6:
-						return this.chainModify([5331, 4096]);
-					case 7:
-						return this.chainModify([5538, 4096]);
-					case 8:
-						return this.chainModify([5744, 4096]);
-					case 9:
-						return this.chainModify([5951, 4096]);
-					case 10:
+			if (pokemon.hp >= pokemon.maxhp / 2) {
+				if (
+					pokemon.storedStats["spe"] > pokemon.storedStats["spa"] ||
+					pokemon.abilityState.monotype === true
+				) {
+					const typeCount = pokemon.abilityState?.typeCount;
+					if (pokemon.abilityState.monotype === true) {
+						this.debug("MONOTYPE SPEED");
 						return this.chainModify([6157, 4096]);
-					default:
-						return this.chainModify([6157, 4096]);
+					}
+					switch (typeCount) {
+						case 1:
+							return this.chainModify([4300, 4096]);
+						case 2:
+							return this.chainModify([4507, 4096]);
+						case 3:
+							return this.chainModify([4713, 4096]);
+						case 4:
+							return this.chainModify([4919, 4096]);
+						case 5:
+							return this.chainModify([5125, 4096]);
+						case 6:
+							return this.chainModify([5331, 4096]);
+						case 7:
+							return this.chainModify([5538, 4096]);
+						case 8:
+							return this.chainModify([5744, 4096]);
+						case 9:
+							return this.chainModify([5951, 4096]);
+						case 10:
+							return this.chainModify([6157, 4096]);
+						default:
+							return this.chainModify([6157, 4096]);
+					}
 				}
 			}
 		},
+		onResidual(pokemon) {
+			if (pokemon.hp < pokemon.maxhp / 2) {
+				this.hint(`${pokemon.name} is too weak to use its Purranormal ability.`);
+			}
+		},
+
 		flags: {},
 		name: "Purranormal",
 		rating: 4,
