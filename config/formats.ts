@@ -105,7 +105,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		],
 	},
 	{
-		name: "[Gen 9] [ND] Delta Random Battle",
+		name: "[Gen 9] [ND] Random Delta Battle",
 		desc: "Random battle format with Delta Pokemon and National Dex rules.",
 		mod: 'gen9',
 		team: 'randomDelta',
