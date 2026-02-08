@@ -25960,7 +25960,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	metagrossdeltamega: {
 		num: 376, 
 		name: "Metagross-Delta-Mega",
-		baseSpecies: "Metagross-Mega",
+		baseSpecies: "Metagross-Delta",
 		types: ["Grass", "Rock"], 
 		baseStats: {hp: 80, atk: 155, def: 190, spa: 105, spd: 110, spe: 60},
 		abilities: {0: "Stalwart"},
