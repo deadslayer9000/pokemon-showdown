@@ -1597,8 +1597,8 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		},
 		num: -8,
 	},
-	deltakeldeoite: {
-		name: "Delta Keldeoite",
+	deltakeldeonite: {
+		name: "Delta Keldeonite",
 		spritenum: 0,
 		megaStone: {"Keldeo-Delta": "Keldeo-Delta-Mega"},
 		itemUser: ["Keldeo-Delta"],
@@ -3753,14 +3753,16 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		num: 687,
 		gen: 6,
 	},
-	keldeoite: {
-		name: "Keldeoite",
+	keldeonite: {
+		name: "Keldeonite",
 		spritenum: 0,
-		megaStone: {"Keldeo": "Keldeo-Mega"},
+		megaStone: {"Keldeo": "Keldeo-Mega",
+					"Keldeo-Resolute": "Keldeo-Mega",
+		},
 		itemUser: ["Keldeo"],
 		onTakeItem(item, source) {
-			return !item.megaStone || (!item.megaStone[source.baseSpecies.name] &&
-				!Object.values(item.megaStone).includes(source.baseSpecies.name));
+			return !item.megaStone || (!item.megaStone[source.baseSpecies.baseSpecies] &&
+				!Object.values(item.megaStone).includes(source.baseSpecies.baseSpecies));
 		},
 		num: -31,
 	},

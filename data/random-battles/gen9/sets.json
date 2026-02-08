@@ -7823,7 +7823,7 @@
         "sets": [
             {
                 "role": "Setup Sweeper",
-                "movepool": ["Nasty Plot", "New Moon", "Psychic", "Psyshock", "Ice Beam", "Earth Power", "Aura Sphere", "Dazzling Gleam"],
+                "movepool": ["Nasty Plot", "Psychic", "Psyshock", "Ice Beam", "Earth Power", "Aura Sphere", "Dazzling Gleam"],
                 "abilities": ["Feast or Famine"],
                 "teraTypes": ["Steel", "Water"]
             }
