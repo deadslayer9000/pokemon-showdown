@@ -417,8 +417,8 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Delta Infernapeite",
 		shortDesc: "If held by Infernape-Delta, this item allows it to Mega Evolve in battle.",
 	},
-	deltakeldeoite: {
-		name: "Delta Keldeoite",
+	deltakeldeonite: {
+		name: "Delta Keldeonite",
 		shortDesc: "If held by Keldeo-Delta, this item allows it to Mega Evolve in battle.",
 	},
 	deltaklinklangiumz: {
@@ -1055,8 +1055,8 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Kee Berry",
 		shortDesc: "Raises holder's Defense by 1 stage after it is hit by a physical attack. Single use.",
 	},
-	keldeoite: {
-		name: "Keldeoite",
+	keldeonite: {
+		name: "Keldeonite",
 		shortDesc: "If held by a Keldeo, this item allows it to Mega Evolve in battle.",
 	},
 	kelpsyberry: {
