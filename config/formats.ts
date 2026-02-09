@@ -162,7 +162,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen9', 
 		ruleset: ['[Gen 9] National Dex', 'Same-Type Clause'],
 		banlist: ['Espathra', 'Flygon-Delta', 'Magoodra', 'Meowscarada-Delta', 'Kingambit'],
-		unbanlist: ['Landorus'],
+		unbanlist: ['Landorus', 'Gholdengo'],
 	},
 	{
 		name: "[Gen 9] [ND] Delta Draft League Season 2",
