@@ -300,6 +300,10 @@ export const Tags: { [id: IDEntry]: TagData } = {
 		name: "Is Shaymin Delta Sky",
 		genericFilter: species => species.name === 'Shaymin-Delta-Sky',
 	},
+	ismagearnadelta: {
+		name: "Is Magearna Delta",
+		genericFilter: species => species.name === 'Magearna-Delta',
+	},
 
 	// filter columns
 	// --------------
