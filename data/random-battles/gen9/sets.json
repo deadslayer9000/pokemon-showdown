@@ -7867,7 +7867,7 @@
         "sets": [
             {
                 "role": "Bulky Support",
-                "movepool": ["Will-O-Wisp", "Hex", "Moonlight", "Moonblast", "Dark Pulse", "Energy Ball"],
+                "movepool": ["Will-O-Wisp", "Hex", "Moonlight", "Moonblast"],
                 "abilities": ["Unaware"],
                 "teraTypes": ["Steel", "Water"]
             },
@@ -8788,7 +8788,13 @@
         "sets": [
             {
                 "role": "Wallbreaker",
-                "movepool": ["Volt Tackle", "Ice Fang", "U-turn", "Knock Off", "Play Rough", "Fire Fang", "Trailblaze", "Nasty Plot", "Thunderbolt", "Mystical Fire", "Focus Blast", "Grass Knot", "Alluring Voice", "Volt Switch"],
+                "movepool": ["Nasty Plot", "Thunderbolt", "Focus Blast", "Grass Knot", "Hidden Power Ice", "Alluring Voice", "Volt Switch"],
+                "abilities": ["Transistor"],
+                "teraTypes": ["Steel", "Water"]
+            },
+            {
+                "role": "Wallbreaker",
+                "movepool": ["Volt Tackle", "Ice Fang", "Knock Off", "Play Rough", "Fire Fang"],
                 "abilities": ["Transistor"],
                 "teraTypes": ["Steel", "Water"]
             }
