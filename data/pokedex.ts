@@ -25894,7 +25894,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		num: 2121,
 		name: "Flaring Quill",
 		types: ["Fire", "Ground"],
-		baseStats: { hp: 75, atk: 139, def: 89, spa: 113, spd: 63, spe: 91 },
+		baseStats: { hp: 75, atk: 123, def: 101, spa: 113, spd: 75, spe: 83 },
 		abilities: { 0: "Protosynthesis" },
 		weightkg: 99.5,
 		//heightm: no dsc page yet,
