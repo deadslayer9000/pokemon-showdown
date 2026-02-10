@@ -10192,7 +10192,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 						"[move] Gravity"
 					);
 					return 7;
-				} else if (effect?.name === 'planarcollapse') {
+				} else if (effect?.name === 'Planar Collapse') {
 					return 4;
 				}
 				return 5;
