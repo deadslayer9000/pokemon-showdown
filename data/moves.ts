@@ -10193,9 +10193,6 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					);
 					return 7;
 				}
-				if (source?.hasAbility("planarcollapse")) {
-					return 4;
-				}
 				return 5;
 			},
 			onFieldStart(target, source) {
