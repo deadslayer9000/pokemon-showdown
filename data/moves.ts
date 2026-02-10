@@ -10183,7 +10183,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		pseudoWeather: "gravity",
 		condition: {
 			duration: 5,
-			durationCallback(target, source, effect) {
+			durationCallback(source, effect) {
 				if (source?.hasAbility("persistent")) {
 					this.add(
 						"-activate",
