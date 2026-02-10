@@ -3756,7 +3756,9 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	keldeonite: {
 		name: "Keldeonite",
 		spritenum: 0,
-		megaStone: {"Keldeo": "Keldeo-Mega"},
+		megaStone: {"Keldeo": "Keldeo-Mega",
+					"Keldeo-Resolute": "Keldeo-Mega"
+		},
 		itemUser: ["Keldeo"],
 		onTakeItem(item, source) {
 			return !item.megaStone || (!item.megaStone[source.baseSpecies.baseSpecies] &&
