@@ -13226,7 +13226,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		name: "Dragalge",
 		types: ["Poison", "Dragon"],
 		baseStats: { hp: 65, atk: 75, def: 90, spa: 97, spd: 123, spe: 44 },
-		abilities: { 0: "Corrosion"},
+		abilities: { 0: "Poison Point", 1: "Poison Touch", H: "Adaptability" },
 		heightm: 1.8,
 		weightkg: 81.5,
 		color: "Brown",
@@ -13243,7 +13243,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		forme: "Mega",
 		types: ["Poison", "Dragon"],
 		baseStats: { hp: 65, atk: 85, def: 105, spa: 132, spd: 163, spe: 44 },
-		abilities: { 0: "Poison Point", 1: "Poison Touch", H: "Adaptability" },
+		abilities: { 0: "Corrosion" },
 		heightm: 2.1,
 		weightkg: 100.3,
 		color: "Brown",
@@ -25912,7 +25912,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		//heightm: no dsc page
 		color: "Yellow",
 		eggGroups: ["Undiscovered"],
-		requiredItem: "Keldeoite",
+		requiredItem: "Keldeonite",
 		forme: "Mega",
 	},
 	keldeodeltamega: {
@@ -25926,7 +25926,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		//heightm: no dsc page
 		color: "White",
 		eggGroups: ["Undiscovered"],
-		requiredItem: "Delta Keldeoite",
+		requiredItem: "Delta Keldeonite",
 		forme: "Mega",
 	},
 	chimechodeltamega: {
