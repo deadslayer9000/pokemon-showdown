@@ -5376,8 +5376,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	quillstorm: {
 		name: "Quillstorm",
-		desc: "Hits three times. Power increases to 40 for the second hit and 60 for the third. This move checks accuracy for each hit, and the attack ends if the target avoids a hit. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit three times.",
-		shortDesc: "Hits 3 times. Each hit can miss, but power rises.",
+		desc: "Hits four times. Power increases to 20 for the second hit, 30 for the third and 40 for the fourth. This move checks accuracy for each hit, and the attack ends if the target avoids a hit. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit three times.",
+		shortDesc: "Hits 4 times. Each hit can miss, but power rises.",
 	},
 	quiverdance: {
 		name: "Quiver Dance",
@@ -7456,7 +7456,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	titaniumtempest: {
 		name: "Titanium Tempest",
 		desc: "Prevents the target from switching for four or five turns (seven turns if the user is holding Grip Claw). Causes damage to the target equal to 1/8 of its maximum HP (1/6 if the user is holding Binding Band), rounded down, at the end of each turn during effect. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Shed Tail, Teleport, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field, or if the target uses Mortal Spin, Rapid Spin, or Substitute successfully. This effect is not stackable or reset by using this or another binding move.",
-		shortDesc: "Traps the target for 4-5 turns.",
+		shortDesc: "Traps and damages the target for 4-5 turns.",
+		start: "  [POKEMON] became trapped by swirling magma!",
 	},
 	tidyup: {
 		name: "Tidy Up",
