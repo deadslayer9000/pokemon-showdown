@@ -9274,7 +9274,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	tidesigil: {
 		onStart(pokemon) {
-			if (!pokemon.tideSigilUsed) {
+			if (!pokemon.tideSigilUsed && !pokemon.tideSigilOneTime) {
 				let activated = false;
 				for (const target of pokemon.adjacentFoes()) {
 					if (!activated && !target.volatiles["substitute"]) {
@@ -9289,8 +9289,9 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 						target.addVolatile("encore", pokemon);
 						if (target.volatiles['encore']) {
 							this.boost({ spe: 1 });
+							pokemon.tideSigilUsed = true;
 						}
-						pokemon.tideSigilUsed = true;
+						pokemon.tideSigilOnetime = true;
 					}
 				}
 			}
