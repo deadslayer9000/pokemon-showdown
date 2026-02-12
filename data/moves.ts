@@ -27868,16 +27868,18 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	quillstorm: {
 		num: -107,
 		accuracy: 90,
-		basePower: 20,
+		basePower: 10,
 		basePowerCallback(pokemon, target, move) {
-			return 20 * move.hit;
+			let basePower = 10 * move.hit;
+			this.hint(`${basePower}`);
+			return basePower;
 		},
 		category: "Physical",
 		name: "Quillstorm",
 		pp: 10,
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
-		multihit: 3,
+		multihit: 4,
 		multiaccuracy: true,
 		secondary: null,
 		target: "normal",
