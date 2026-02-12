@@ -9297,6 +9297,11 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			}
 			
 		},
+		onModifyMove(move, pokemon, target){
+			if(move.id === "encore" && !target?.volatiles["encore"] && target?.lastMove){
+				this.boost({ spe: 1 });
+			}
+		},
 		flags: {},
 		name: "Tide Sigil",
 		rating: 4,
@@ -9304,7 +9309,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	grimsigil: {
 		onStart(pokemon) {
-			if (!pokemon.grimSigilUsed) {
+			if (!pokemon.grimSigilUsed && !pokemon.tideSigilOneTime) {
 				let activated = false;
 				for (const target of pokemon.adjacentFoes()) {
 					if (!activated && !target.volatiles["substitute"]) {
@@ -9319,10 +9324,16 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 						target.addVolatile("disable", pokemon);
 						if (target.volatiles['disable']) {
 							this.boost({ atk: 1 });
+							pokemon.grimSigilUsed = true;
 						}
-						pokemon.grimSigilUsed = true;
+						pokemon.grimSigilOneTime = true;
 					}
 				}
+			}
+		},
+		onModifyMove(move, pokemon, target){
+			if(move.id === "disable" && !target?.volatiles["disable"] && target?.lastMove){
+				this.boost({ atk: 1 });
 			}
 		},
 		flags: {},
