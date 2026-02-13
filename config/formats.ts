@@ -655,17 +655,18 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'Urshifu-Rapid-Strike', 'Volcarona', 'Zacian', 'Zacian-Crowned', 'Zamazenta-Crowned', 'Zekrom', 'Arena Trap', 'Moody', 'Sand Veil', 'Shadow Tag', 'Snow Cloak', 'Bright Powder',
 			'Choice Band', 'Choice Specs', 'King\'s Rock', 'Razor Fang', 'Baton Pass', 'Last Respects', 'Shed Tail',
 		],
-		validateSet(set, teamHas) {
+validateSet(set, teamHas) {
 			const dex = this.dex;
 			let species = dex.species.get(set.species);
 			let requiredItems: string[] = [];
 			let requiredMove = '';
 			let requiredAbility = '';
-			if (species.requiredItems) requiredItems = species.requiredItems;
-			if (species.requiredMove) requiredMove = species.requiredMove;
-			if (species.requiredAbility) requiredAbility = species.requiredAbility;
-			if (species.battleOnly) species = dex.species.get(species.battleOnly as string);
-
+			if (species.battleOnly) {
+				if (species.requiredItems) requiredItems = species.requiredItems;
+				if (species.requiredMove) requiredMove = species.requiredMove;
+				if (species.requiredAbility) requiredAbility = species.requiredAbility;
+				species = dex.species.get(species.battleOnly as string);
+			}
 			const effectFunctions = [dex.abilities, dex.items, dex.moves];
 			if (
 				!effectFunctions.some(f => f.get(set.ability).exists) &&
@@ -674,64 +675,43 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			) {
 				return this.validateSet(set, teamHas);
 			}
-			const allThings = [set.ability, set.item, ...set.moves].filter(e => e.length);
-			for (const thing of allThings) {
-				if (!dex.moves.get(thing).exists && !dex.abilities.get(thing).exists && !dex.items.get(thing).exists) {
-					return [`${thing} does not exist.`];
-				}
-			}
+			const allThings = [set.ability, set.item, ...set.moves];
 			if (
 				allThings.some(y => effectFunctions.some(x => x.get(y).isNonstandard &&
 					!this.ruleTable.has(`+pokemontag:${this.toID(x.get(y).isNonstandard)}`)))
 			) {
 				return this.validateSet(set, teamHas);
 			}
-			const moves = allThings.map(e => this.dex.moves.get(e)).filter(thing => thing.id !== 'metronome' && thing.exists);
-			for (const m of moves) {
-				if (this.ruleTable.isBanned(`move:${m.id}`)) return [`${set.species}'s move ${m.name} is banned.`];
-			}
-
-			const abilities = allThings.map(e => this.dex.abilities.get(e)).filter(thing => thing.exists);
-			for (const a of abilities) {
-				if (this.ruleTable.isBanned(`ability:${a.id}`)) return [`${set.species}'s ability ${a.name} is banned.`];
-			}
-
-			const items = allThings.map(e => this.dex.items.get(e)).filter(thing => thing.exists);
-			for (const i of items) {
-				if (this.ruleTable.isBanned(`item:${i.id}`)) return [`${set.species}'s item ${i.name} is banned.`];
-			}
-
-			const setHas: { [k: string]: true } = {};
-			for (const thing of [...moves, ...items, ...abilities]) {
-				if (setHas[thing.id]) return [`${set.species} has multiple copies of ${thing.name}.`];
-				setHas[thing.id] = true;
-			}
+			const moves = allThings.filter(thing => thing !== 'metronome' && dex.moves.get(thing).exists);
+			const abilities = allThings.filter(thing => dex.abilities.get(thing).exists);
+			const items = allThings.filter(thing => dex.items.get(thing).exists);
 			const normalAbility = set.ability;
 			if (!abilities.length) {
 				set.ability = 'noability';
 			} else {
-				set.ability = abilities[0].id;
+				set.ability = this.toID(abilities[0]);
 			}
-			if (abilities.some(abil => !Object.values(species.abilities).map(this.toID).includes(abil.id)) &&
+			if (
+				!Object.values(species.abilities).map(this.toID).includes(this.toID(set.ability)) &&
 				this.ruleTable.has('obtainableabilities')
 			) {
-				if (set.ability !== 'noability') return [`${set.species} has illegal abilities.`];
+				if (set.ability !== 'noability') return [`${set.ability} is not a valid ability for ${set.species}.`];
 			}
-			if (requiredAbility && !abilities.map(a => a.id).includes(this.toID(requiredAbility))) {
+			if (requiredAbility && !abilities.map(this.toID).includes(this.toID(requiredAbility))) {
 				return [`${set.species} requires ${requiredAbility} on its set.`];
 			}
 			if (!moves.length) {
 				return [`${set.species} requires at least one move.`];
 			}
-			if (set.moves.length > this.ruleTable.maxMoveCount) {
-				return [`${set.name} has ${set.moves.length} moves, which is more than the limit of ${this.ruleTable.maxMoveCount}.`];
-			}
 			const normalMoves = set.moves;
-			set.moves = [moves[0].id];
-			if (moves.some(move => this.checkCanLearn(move, species)) && this.ruleTable.has('obtainablemoves')) {
+			set.moves = [moves[0]];
+			if (
+				moves.some(move => this.checkCanLearn(dex.moves.get(move), species)) &&
+				this.ruleTable.has('obtainablemoves')
+			) {
 				return [`${set.species} has illegal moves.`];
 			}
-			if (requiredMove && !moves.map(m => m.id).includes(this.toID(requiredMove))) {
+			if (requiredMove && !moves.map(this.toID).includes(this.toID(requiredMove))) {
 				return [`${set.species} requires ${requiredMove} on its set.`];
 			}
 			if (!items.length && requiredItems.length) {
@@ -739,23 +719,16 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			}
 			const normalItem = set.item;
 			if (items.length) {
-				set.item = (items.find(i => i.forcedForme || i.itemUser) || items[0]).id;
+				set.item = items.find(i => dex.items.get(i).forcedForme || dex.items.get(i).itemUser) || items[0];
 			} else {
 				set.item = '';
 			}
 			if (!this.ruleTable.has('+ability:noability')) {
 				this.ruleTable.set('+ability:noability', '');
 			}
-			for (const curMove of moves) {
-				set.moves = [curMove.id];
-				if (requiredMove && moves.map(m => m.id).includes(curMove.id) &&
-					curMove.id !== this.toID(requiredMove)) {
-					set.moves.push(requiredMove);
-				}
-				let problems = this.validateSet(set, teamHas);
-				if (problems) problems = problems.filter(p => !p.endsWith('needs to have an ability.'));
-				if (problems?.length) return problems;
-			}
+			let problems = this.validateSet(set, teamHas);
+			if (problems) problems = problems.filter(p => !p.endsWith('needs to have an ability.'));
+			if (problems?.length) return problems;
 			set.ability = normalAbility;
 			set.item = normalItem;
 			set.moves = normalMoves;
@@ -810,44 +783,33 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 				};
 
 				if (this.dex.items.get(pokemon.set.ability).exists) {
-					pokemon.m.scrambled.items.push({ thing: this.dex.items.get(pokemon.set.ability).name, inSlot: 'Ability' });
+					pokemon.m.scrambled.items.push({ thing: pokemon.set.ability, inSlot: 'Ability' });
 				} else if (this.dex.moves.get(pokemon.set.ability).exists) {
-					pokemon.m.scrambled.moves.push({ thing: this.dex.moves.get(pokemon.set.ability).name, inSlot: 'Ability' });
+					pokemon.m.scrambled.moves.push({ thing: pokemon.set.ability, inSlot: 'Ability' });
 				}
 
 				if (this.dex.abilities.get(pokemon.set.item).exists) {
-					pokemon.m.scrambled.abilities.push({ thing: this.dex.abilities.get(pokemon.set.item).name, inSlot: 'Item' });
-				} else if (this.dex.moves.get(pokemon.set.item).exists && this.dex.moves.get(pokemon.set.item).id !== 'metronome') {
-					pokemon.m.scrambled.moves.push({ thing: this.dex.moves.get(pokemon.set.item).name, inSlot: 'Item' });
+					pokemon.m.scrambled.abilities.push({ thing: pokemon.set.item, inSlot: 'Item' });
+				} else if (this.dex.moves.get(pokemon.set.item).exists) {
+					pokemon.m.scrambled.moves.push({ thing: pokemon.set.item, inSlot: 'Item' });
 				}
 
 				for (const move of pokemon.set.moves) {
-					if (this.dex.moves.get(move).id === 'metronome') continue;
 					if (this.dex.abilities.get(move).exists) {
-						pokemon.m.scrambled.abilities.push({ thing: this.dex.abilities.get(move).name, inSlot: 'Move' });
+						pokemon.m.scrambled.abilities.push({ thing: move, inSlot: 'Move' });
 					} else if (this.dex.items.get(move).exists) {
-						pokemon.m.scrambled.items.push({ thing: this.dex.items.get(move).name, inSlot: 'Move' });
+						pokemon.m.scrambled.items.push({ thing: move, inSlot: 'Move' });
 					}
 				}
 
 				const newMoveSlots = [];
 				for (const moveSlot of pokemon.baseMoveSlots) {
-					if (moveSlot.id === 'metronome') {
-						const TeamValidator: typeof import('../sim/team-validator').TeamValidator =
-							require('../sim/team-validator').TeamValidator;
-						const cantMetronome = TeamValidator.get(this.format).checkCanLearn(this.dex.moves.get('metronome'), pokemon.species);
-						if (!cantMetronome) {
-							newMoveSlots.push(moveSlot);
-						} else {
-							pokemon.m.scrambled.items.push({ thing: this.dex.items.get('metronome').name, inSlot: 'Move' });
-						}
-						continue;
-					}
 					if (!this.dex.moves.get(moveSlot.id).exists) continue;
 					newMoveSlots.push(moveSlot);
 				}
-
+				// Do not let these be pointed at the same thing. Causes bugs otherwise.
 				(pokemon as any).baseMoveSlots = newMoveSlots;
+				pokemon.moveSlots = this.dex.deepClone(newMoveSlots);
 
 				for (const scrambledMove of pokemon.m.scrambled.moves) {
 					const move = this.dex.moves.get(scrambledMove.thing);
@@ -861,8 +823,8 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 						used: false,
 					};
 					pokemon.baseMoveSlots.push(newMove);
+					pokemon.moveSlots.push(newMove);
 				}
-				pokemon.moveSlots = pokemon.baseMoveSlots.slice();
 			}
 		},
 	},
