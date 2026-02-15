@@ -137,7 +137,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		ruleset: ['Standard NatDex', 'Terastal Clause', 'Z-Move Clause'],
 		banlist: [ 'ND OU', 'ND Uber', 'ND AG', 'Arena Trap', 'Shadow Tag', 'ismagearnadelta', 'Baton Pass', 'Dire Claw', 'Last Respects', 'Light Clay', 'King\'s Rock', 'Quick Claw', 'Rage Fist', 'Razor Fang', 'Shed Tail',
 			'Serperior', 'Kartana', 'Clefable', 'Hawlucha', 'Hippowdon', 'Toxapex', 'Clodsire', 'Excadrill', 'Hoopa-Unbound', 'Skarmory', 'Cinderace', 'Garganacl', 'Iron Crown', 'Ting-Lu', 
-			'Amoonguss', 'Grimmsnarl', 'Archapult', 'Iron Pilot', 'Klocktowl', 'Greninja', 'Kommo-o', 'Mawile-Mega', 'Iron Boulder', 'Armaledge', 'Dunsparath', 'Dragapult-Ultra', 'Latios-Delta', 
+			'Amoonguss', 'Grimmsnarl', 'Archapult', 'Iron Pilot', 'Klocktowl', 'Kommo-o', 'Mawile-Mega', 'Iron Boulder', 'Armaledge', 'Dunsparath', 'Dragapult-Ultra', 'Latios-Delta', 
 			'Drifblimp', 'Luxray-Delta', 'Latios-Delta-Mega', 'Eruptois', 'Hoopa-Delta-Unbound', 'Tapu Kehe', 'Lumrunt', 'Urshifu-Flash-Strike', 'Serperior-Ultra', 'Koraiton', 'Zeraora-Delta', 
 			'Zorotales', 'Spiritomb-Unbound', 'Meloetta-Omega', 'Spectreon', 'Scizantrum', 'Ambipom-Ultra', 'Zeraora', 'Tapu Fini', 'Tapu Hina', 'Latios', 
 			'Secret Armor', 'Victini', 'Ursaluna-Bloodmoon', 'Gyarados-Mega', 'Savage Scar', 'Vrelie-Delta', 'Rotom-Wash', 'Lochtrier', 'Aspearunt', 'Steelix-Delta-Mega', 'Diancette', 'Aerodactylite', 'Aerodactyl-Mega',
