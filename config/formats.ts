@@ -148,7 +148,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'Metagross-Delta-Mega', 'Klocktowl-Mega', 'Flaring Quill', 'Keldeo', 'Slaughtermaus', 'Keldeo-Delta-Mega', 'Medicham-Mega', 'Archaludon', 'Molteon', 'Raichu-Mega-Y', 'Raichu-Mega-X',
 			'Delphox-Mega', 'Valiant Time', 'Radiant Moon', 'Gengar-Ultra', 'Diancie-Sapphire-Mega', 'Necromauser-Mega', 'Magearna-Original-Delta', 'Chesnaught-Mega', 'Battle Bond', 'Greninja-Omega-Bond', 'Greninja'
 		],
-		unbanlist: ['Keldeo-Delta', 'Greninja-Omega'],
+		unbanlist: ['Keldeo-Delta'],
 	},
 	{
 		name: "[Gen 9] [ND] DPL Ubers",
