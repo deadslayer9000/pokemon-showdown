@@ -12352,8 +12352,8 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		prevo: "Frogadier",
 		evoLevel: 36,
 		eggGroups: ["Water 1"],
-		otherFormes: ["Greninja-Bond", "Greninja-Ash", "Greninja-Mega"],
-		formeOrder: ["Greninja", "Greninja-Bond", "Greninja-Ash", "Greninja-Mega"],
+		otherFormes: ["Greninja-Bond", "Greninja-Ash", "Greninja-Mega", 'Greninja-Delta', 'Greninja-Omega'],
+		formeOrder: ["Greninja", "Greninja-Delta", "Greninja-Omega", "Greninja-Bond", "Greninja-Ash", "Greninja-Mega"],
 	},
 	greninjabond: {
 		num: 658,
