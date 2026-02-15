@@ -304,10 +304,6 @@ export const Tags: { [id: IDEntry]: TagData } = {
 		name: "Is Magearna Delta",
 		genericFilter: species => species.name === 'Magearna-Delta',
 	},
-	isgreninja: {
-		name: "Is Greninja",
-		genericFilter: species => species.name === 'Greninja-Delta',
-	},
 
 	// filter columns
 	// --------------
