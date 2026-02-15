@@ -12352,8 +12352,8 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		prevo: "Frogadier",
 		evoLevel: 36,
 		eggGroups: ["Water 1"],
-		otherFormes: ["Greninja-Bond", "Greninja-Ash", "Greninja-Mega"],
-		formeOrder: ["Greninja", "Greninja-Bond", "Greninja-Ash", "Greninja-Mega"],
+		otherFormes: ["Greninja-Bond", "Greninja-Ash", "Greninja-Mega", 'Greninja-Delta', 'Greninja-Omega'],
+		formeOrder: ["Greninja", "Greninja-Delta", "Greninja-Omega", "Greninja-Bond", "Greninja-Ash", "Greninja-Mega"],
 	},
 	greninjabond: {
 		num: 658,
@@ -22507,7 +22507,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Blue",
 		eggGroups: ["Water 1"],
 		prevo: "Frogadier-Omega",
-		otherFormes: ["Greninja-Omega-Ash"],
+		otherFormes: ['Greninja-Omega-Bond', 'Greninja-Omega-Ash'],
 	},
 	greninjaomegabond: {
 		num: 658,
@@ -22524,7 +22524,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	greninjaomegaash: {
 		num: 658,
 		name: "Greninja-Omega-Ash",
-		baseSpecies: "Greninja-Omega-Bond",
+		baseSpecies: "Greninja-Omega",
 		forme: "Ash",
 		types: ["Ice", "Fighting"],
 		baseStats: { hp: 75, atk: 150, def: 84, spa: 140, spd: 83, spe: 114 },

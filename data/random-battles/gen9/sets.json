@@ -8735,7 +8735,7 @@
                 "role": "Wallbreaker",
                 "movepool": ["Swords Dance", "Ivy Cudgel", "Play Rough", "Knock Off", "Taunt", "Spikes", "Encore", "Trailblaze", "Horn Leech", "Power Whip", "Superpower", "U-turn", "Synthesis"],
                 "abilities": ["Infiltrator"],
-                "teraTypes": ["Steel", "Water"]
+                "teraTypes": ["Electric"]
             }
         ]
     },
