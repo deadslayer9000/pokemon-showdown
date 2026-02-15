@@ -139,7 +139,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'Serperior', 'Kartana', 'Clefable', 'Hawlucha', 'Hippowdon', 'Toxapex', 'Clodsire', 'Excadrill', 'Hoopa-Unbound', 'Skarmory', 'Cinderace', 'Garganacl', 'Iron Crown', 'Ting-Lu', 
 			'Amoonguss', 'Grimmsnarl', 'Archapult', 'Iron Pilot', 'Klocktowl', 'Greninja', 'Kommo-o', 'Mawile-Mega', 'Iron Boulder', 'Armaledge', 'Dunsparath', 'Dragapult-Ultra', 'Latios-Delta', 
 			'Drifblimp', 'Luxray-Delta', 'Latios-Delta-Mega', 'Eruptois', 'Hoopa-Delta-Unbound', 'Tapu Kehe', 'Lumrunt', 'Urshifu-Flash-Strike', 'Serperior-Ultra', 'Koraiton', 'Zeraora-Delta', 
-			'Greninja-Delta', 'Zorotales', 'Spiritomb-Unbound', 'Meloetta-Omega', 'Spectreon', 'Scizantrum', 'Ambipom-Ultra', 'Zeraora', 'Tapu Fini', 'Tapu Hina', 'Latios', 
+			'Zorotales', 'Spiritomb-Unbound', 'Meloetta-Omega', 'Spectreon', 'Scizantrum', 'Ambipom-Ultra', 'Zeraora', 'Tapu Fini', 'Tapu Hina', 'Latios', 
 			'Secret Armor', 'Victini', 'Ursaluna-Bloodmoon', 'Gyarados-Mega', 'Savage Scar', 'Vrelie-Delta', 'Rotom-Wash', 'Lochtrier', 'Aspearunt', 'Steelix-Delta-Mega', 'Diancette', 'Aerodactylite', 'Aerodactyl-Mega',
 			'Weezing-Galar', 'Slowbro', 'Glacierus-Therian', 'Tinkaton-Delta', 'Blaziken', 'Victini-Delta', 'Volcarona-Delta', 'Malevorus', 'Pinsir-Mega', 'Terrakion-Delta', 'Hover Pollen', 'Gallade-Mega',
 			'Gastrodon-Delta', 'Pecharunt', 'Roserade-Delta', 'Turnizone', 'Slaughtermaus-Mega', 'Liesler', 'Latias-Mega', 'Latiosite', 'Magirigus', 'Gholdengo-Delta', 'Cosmachi', 'Malevorus-Therian', 'Zoroark-Hisui-Mega', 'Barraskewda', 'Dondozo',
@@ -148,7 +148,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'Metagross-Delta-Mega', 'Klocktowl-Mega', 'Flaring Quill', 'Keldeo', 'Slaughtermaus', 'Keldeo-Delta-Mega', 'Medicham-Mega', 'Archaludon', 'Molteon', 'Raichu-Mega-Y', 'Raichu-Mega-X',
 			'Delphox-Mega', 'Valiant Time', 'Radiant Moon', 'Gengar-Ultra', 'Diancie-Sapphire-Mega', 'Necromauser-Mega', 'Magearna-Original-Delta', 'Chesnaught-Mega', 
 		],
-		unbanlist: ['Keldeo-Delta'],
+		unbanlist: ['Keldeo-Delta', 'Greninja-Omega'],
 	},
 	{
 		name: "[Gen 9] [ND] DPL Ubers",
