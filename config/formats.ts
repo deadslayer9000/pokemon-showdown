@@ -135,7 +135,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		desc: "RU format for the Delta Premier League.",
 		mod: 'gen9',
 		ruleset: ['Standard NatDex', 'Terastal Clause', 'Z-Move Clause'],
-		banlist: [ 'ND OU', 'ND Uber', 'ND AG', 'Arena Trap', 'Shadow Tag', 'ismagearnadelta', 'Baton Pass', 'Dire Claw', 'Last Respects', 'Light Clay', 'King\'s Rock', 'Quick Claw', 'Rage Fist', 'Razor Fang', 'Shed Tail',
+		banlist: [ 'ND OU', 'ND Uber', 'ND AG', 'Power Construct', 'Arena Trap', 'Shadow Tag', 'ismagearnadelta', 'Baton Pass', 'Dire Claw', 'Last Respects', 'Light Clay', 'King\'s Rock', 'Quick Claw', 'Rage Fist', 'Razor Fang', 'Shed Tail',
 			'Serperior', 'Greninja', 'Kartana', 'Clefable', 'Hawlucha', 'Hippowdon', 'Toxapex', 'Clodsire', 'Excadrill', 'Hoopa-Unbound', 'Skarmory', 'Cinderace', 'Garganacl', 'Iron Crown', 'Ting-Lu', 
 			'Amoonguss', 'Grimmsnarl', 'Archapult', 'Iron Pilot', 'Klocktowl', 'Kommo-o', 'Mawile-Mega', 'Iron Boulder', 'Armaledge', 'Dunsparath', 'Dragapult-Ultra', 'Latios-Delta', 
 			'Drifblimp', 'Luxray-Delta', 'Latios-Delta-Mega', 'Eruptois', 'Hoopa-Delta-Unbound', 'Tapu Kehe', 'Lumrunt', 'Urshifu-Flash-Strike', 'Serperior-Ultra', 'Koraiton', 'Zeraora-Delta', 
