@@ -27867,7 +27867,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	},
 	quillstorm: {
 		num: -107,
-		accuracy: 90,
+		accuracy: 95,
 		basePower: 10,
 		basePowerCallback(pokemon, target, move) {
 			let basePower = 10 * move.hit;
