@@ -4309,7 +4309,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		priority: 0,
 		flags: { contact: 1, mirror: 1, metronome: 1 },
 		secondary: null,
-		target: "normal",
+		target: "allAdjacent",
 		type: "Dragon",
 	},
 	crosschop: {
@@ -27867,7 +27867,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	},
 	quillstorm: {
 		num: -107,
-		accuracy: 90,
+		accuracy: 95,
 		basePower: 10,
 		basePowerCallback(pokemon, target, move) {
 			let basePower = 10 * move.hit;

@@ -6438,7 +6438,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	quickwit: {
 		onModifyPriorityPriority: 30,
 		onModifyPriority(priority, source, target, move) {
-			if (move.basePower <= 60) {
+			if (move.basePower <= 60 && move.basePower > 0) {
 				this.debug("Quick Wit boost");
 				return priority + 1;
 			}
