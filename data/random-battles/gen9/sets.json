@@ -8261,7 +8261,7 @@
             {
                 "role": "Wallbreaker",
                 "movepool": ["Earth Power", "Psyshock", "Energy Ball", "Dragon Pulse", "Calm Mind", "Freezing Glare"],
-                "abilities": ["Planar Collapse"],
+                "abilities": ["Regenerator"],
                 "teraTypes": ["Steel", "Water"]
             }
         ]
