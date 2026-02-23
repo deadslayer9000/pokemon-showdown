@@ -607,7 +607,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			duration: 255, //basically infinite
 			durationCallback(target, source, effect) {
 				if (effect?.name === 'Stream Shift') {
-					return 4; //streamshift duration
+					return 255; //streamshift duration
 				}
 				return 255;
 			},
