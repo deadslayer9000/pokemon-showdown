@@ -33,17 +33,6 @@
             }
         ]
     },
-    "charizarddeltamega": {
-        "level": 85,
-        "sets": [
-            {
-                "role": "Setup Sweeper",
-                "movepool": ["Dragon Dance", "Earthquake", "Flare Blitz", "Precipice Blades"],
-                "abilities": ["Blaze"],
-                "teraTypes": ["Dragon", "Ground"]
-            }
-        ]
-    },
     "blastoise": {
         "level": 80,
         "sets": [
@@ -8623,8 +8612,14 @@
         "sets": [
             {
                 "role": "Wallbreaker",
-                "movepool": ["Bulk Up", "Sandstorm Sphere", "Knock Off", "Earthquake", "Fire Punch", "Ice Punch", "Gunk Shot", "Drain Punch", "Sandstorm Fury", "Mystical Fire", "Meteor Beam", "Vacuum Wave", "Dark Pulse"],
+                "movepool": ["Bulk Up", "Sandstorm Sphere", "Knock Off", "Earthquake", "Fire Punch", "Ice Punch", "Gunk Shot", "Drain Punch"],
                 "abilities": ["Mirage"],
+                "teraTypes": ["Steel", "Water"]
+            },
+            {
+                "role": "Wallbreaker",
+                "movepool": ["Earth Power", "Sandstorm Fury", "Dark Pulse", "Mystical Fire", "Vacuum Wave"],
+                "abilities": ["Mirage"], 
                 "teraTypes": ["Steel", "Water"]
             }
         ]
@@ -8678,7 +8673,13 @@
         "sets": [
             {
                 "role": "Wallbreaker",
-                "movepool": ["Dragon Dance", "Boomburst", "Draco Meteor", "Flamethrower", "Earthquake", "Outrage", "U-turn", "Fire Punch", "Roost", "Superpower"],
+                "movepool": ["Dragon Dance", "Boomburst", "Earthquake", "Outrage", "U-turn", "Fire Punch", "Roost", "Superpower"],
+                "abilities": ["Desert Spirit"],
+                "teraTypes": ["Steel", "Water"]
+            },
+            {
+                "role" :"Fast Attacker",
+                "movepool": ["Earth Power", "Draco Meteor", "Flamethrower", "U-turn", "Boomburst"],
                 "abilities": ["Desert Spirit"],
                 "teraTypes": ["Steel", "Water"]
             }
@@ -8733,7 +8734,7 @@
         "sets": [
             {
                 "role": "Wallbreaker",
-                "movepool": ["Swords Dance", "Ivy Cudgel", "Play Rough", "Knock Off", "Taunt", "Spikes", "Encore", "Trailblaze", "Horn Leech", "Power Whip", "Superpower", "U-turn", "Synthesis"],
+                "movepool": ["Swords Dance", "Ivy Cudgel", "Play Rough", "Knock Off", "Encore", "Power Whip", "Superpower", "U-turn"],
                 "abilities": ["Infiltrator"],
                 "teraTypes": ["Electric"]
             }
