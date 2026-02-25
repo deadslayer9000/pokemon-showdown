@@ -105,6 +105,18 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		],
 	},
 	{
+		name: "[Gen 9] [ND] Pre Season 6 Patch",
+		searchShow: false,
+		mod: 'pres6patch',
+		ruleset: ['Standard NatDex', 'Terastal Clause'],
+		banlist: [ 'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock', 'Quick Claw',
+			'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail', 'Dire Claw', 'Rage Fist', 'Blood Moon', 'Darkrai', 'Zamazenta', 'Good as Gold'
+		],
+		unbanlist: [
+			'Solgaleo', 'Sneasler', 'Annihilape', 'Ursaluna-Bloodmoon', 'Espathra', 'Roaring Moon',
+		],
+	},
+	{
 		name: "[Gen 9] Random Battle",
 		desc: `Randomized teams of Pok&eacute;mon with sets that are generated to be competitively viable.`,
 		mod: 'gen9',
