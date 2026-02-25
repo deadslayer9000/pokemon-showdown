@@ -7314,6 +7314,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "If it is this Pokemon's first turn on the field, then it raises Special Attack by 1.",
 		shortDesc: "Once per match: raise SpA by 1.",
 	},
+	thicketoutgrowth: {
+		name: "Thicket Outgrowth",
+		shortDesc: "Removes hazards and sets Leech Seed on target.",
+	},
 	thief: {
 		name: "Thief",
 		desc: "If this attack was successful and the user has not fainted, it steals the target's held item if the user is not holding one. The target's item is not stolen if it is a Mail or Z-Crystal, or if the target is a Kyogre holding a Blue Orb, a Groudon holding a Red Orb, a Giratina holding a Griseous Orb, an Arceus holding a Plate, a Genesect holding a Drive, a Silvally holding a Memory, or a Pokemon that can Mega Evolve holding the Mega Stone for its species. Items lost to this move cannot be regained with Recycle or the Harvest Ability.",

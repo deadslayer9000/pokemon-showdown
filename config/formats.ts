@@ -132,7 +132,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	},
 	{
 		name: "[Gen 9] [ND] DPL OU",
-		mod: 'gen9',
+		mod: 'pres6patch',
 		ruleset: ['Standard NatDex', 'Terastal Clause', 'Z-Move Clause'],
 		banlist: [
 			'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock',
@@ -145,7 +145,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		name: "[Gen 9] [ND] DPL RU",
 		desc: "RU format for the Delta Premier League.",
-		mod: 'gen9',
+		mod: 'pres6patch',
 		ruleset: ['Standard NatDex', 'Terastal Clause', 'Z-Move Clause'],
 		banlist: [ 'ND OU', 'ND Uber', 'ND AG', 'Power Construct', 'Arena Trap', 'Shadow Tag', 'ismagearnadelta', 'Baton Pass', 'Dire Claw', 'Last Respects', 'Light Clay', 'King\'s Rock', 'Quick Claw', 'Rage Fist', 'Razor Fang', 'Shed Tail',
 			'Serperior', 'Greninja', 'Kartana', 'Clefable', 'Hawlucha', 'Hippowdon', 'Toxapex', 'Clodsire', 'Excadrill', 'Hoopa-Unbound', 'Skarmory', 'Cinderace', 'Garganacl', 'Iron Crown', 'Ting-Lu', 
@@ -166,14 +166,14 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		name: "[Gen 9] [ND] DPL Ubers",
 		desc: "Ubers format for the Delta Premier League.",
-		mod: 'gen9',
+		mod: 'pres6patch',
 		ruleset: ['Standard Natdex', 'Terastal Clause', 'Z-Move Clause'],
 		banlist: [ 'ND AG', 'Baton Pass', 'Dire Claw', 'Last Respects', 'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Shed Tail', 'Mewthree', 'Kyurem-Original'],
 	},
 	{
 		name: "[Gen 9] [ND] DPL Monotype",
 		desc: "Monotype format for the Delta Premier League.",
-		mod: 'gen9', 
+		mod: 'pres6patch', 
 		ruleset: ['[Gen 9] National Dex', 'Same-Type Clause'],
 		banlist: ['Espathra', 'Flygon-Delta', 'Magoodra', 'Meowscarada-Delta', 'Kingambit'],
 		unbanlist: ['Landorus', 'Gholdengo', 'Good as Gold'],

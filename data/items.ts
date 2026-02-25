@@ -3509,13 +3509,20 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		gen: 4,
 	},
 	illusorysword: {
-		onSwitchInPriority: -2,
-		onStart(pokemon) {
-			if (pokemon.hasAbility("Hocus Pocus") && !pokemon.illusionarysword) {
-				pokemon.addVolatile("illusorysword");
-				pokemon.illusionarysword = true;
+		/*onSwitchInPriority: -2,
+		onDamagingHit(damage, target, source, move) {
+			if (target.hasAbility("Hocus Pocus") && !target.illusionarysword && move.type == 'Physical') {
+				target.addVolatile("illusorysword");
+				target.illusionarysword = true;
+				this.add(
+					"-activate",
+					target,
+					"ability: Hocus Pocus",
+					"[consumed]"
+				);
+				this.field.addPseudoWeather("trickroom");
 			}
-		},
+		},*/
 		onModifyAtk(pokemon) {
 			if (this.field.getPseudoWeather("trickroom")) {
 				return this.chainModify([5324, 4096]);
@@ -3525,9 +3532,9 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 			if (this.field.getPseudoWeather("trickroom")) {
 				return this.chainModify([5324, 4096]);
 			}
-		},/*
-		condition: {
-			onStart(pokemon) {
+		},
+		/*condition: {
+			onDamagingHit(pokemon) {
 				this.add(
 					"-activate",
 					pokemon,
