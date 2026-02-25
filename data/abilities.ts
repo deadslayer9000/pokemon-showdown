@@ -2708,6 +2708,13 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 49,
 	},
 	steamforged: {
+		onDamagePriority: 1,
+		onDamage(damage, target, source, effect) {
+			if (effect.id === "brn") {
+				return false;
+			}
+		},
+		/*
 		onDamagingHit(damage, target, source, move) {
 			if (this.checkMoveMakesContact(move, source, target)) {
 				if (this.randomChance(3, 10)) {
@@ -2723,9 +2730,9 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			}
 		},
 		*/
-		flags: { breakable: 1 },
+		flags: { },
 		name: "Steamforged",
-		rating: 2,
+		rating: 4,
 		num: -71,
 	},
 
@@ -3530,6 +3537,13 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		},
 	},
 	hocuspocus: {
+		onDamagingHitOrder: 1,
+		onDamagingHit(damage, target, source, move) {
+			if (move.category === "Physical" && source.item === "Illusory Sword") {
+				this.field.addPseudoWeather("trickroom", source);
+			}
+		},
+		/*
 		onFractionalPriorityPriority: -1,
 		onFractionalPriority(priority, pokemon, target, move) {
 			if (
@@ -3539,6 +3553,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				return -9;
 			}
 		},
+		*/
 		flags: {},
 		name: "Hocus Pocus",
 		rating: 5,
@@ -6239,6 +6254,26 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -44,
 	},
 	pyroclastic: {
+		onModifyMovePriority: -1,
+		onModifyMove(move) {
+			if (move.type === "Rock") {
+				if (!move.secondaries) move.secondaries = [];
+				for (const secondary of move.secondaries) {
+					if (secondary.status === "brn") return;
+				}
+				move.secondaries.push({
+					chance: 30,
+					status: "brn",
+				});
+			}
+		},
+		onBasePowerPriority: 21,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.type === "Rock"){
+			 	this.chainModify([5325, 4096]);
+			}	
+		},
+		/*
 		onTryBoost(boost, target, source, effect) {
 			if (source && target === source) return;
 			if (boost.accuracy && boost.accuracy < 0) {
@@ -6257,10 +6292,10 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		},
 		onSwitchOut(pokemon) {
 			pokemon.heal(pokemon.baseMaxhp / 3);
-		},
+		},*/
 		flags: {},
 		name: "Pyroclastic",
-		rating: 3.5,
+		rating: 2,
 		num: -5,
 	},
 	quarkdrive: {

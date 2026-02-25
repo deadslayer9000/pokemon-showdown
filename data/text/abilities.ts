@@ -1695,8 +1695,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "This pokemon's Spatk or Speed is boosted depending which is higher, the more unique types on the pokemon's team the higher the boost. Monotype teams get max boosts."
 	},
 	pyroclastic: {
-		name: "Pyroclastic (WIP)",
-		shortDesc: "Pokemon heals 1/3rd of it's health when switching in; Accuracy can't be lowered.",
+		name: "Pyroclastic",
+		shortDesc: "Pokemon's Rock-type moves are 1.3x stronger and can burn.",
 	},
 	quarkdrive: {
 		name: "Quark Drive",
@@ -2168,8 +2168,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	steamforged: {
 		name: "Steamforged",
-		desc: "30% chance a Pokemon making contact with this Pokemon will be burned.",
-		shortDesc: "30% to burn attacker on contact.",
+		desc: "This Pokemon is immune to burn damage.",
+		shortDesc: "This Pokemon is immune to burn damage.",
 	},
 	steelworker: {
 		name: "Steelworker",

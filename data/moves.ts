@@ -1970,22 +1970,14 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Blaze Out",
 		pp: 10,
 		priority: 0,
-		flags: {},
-		priorityChargeCallback(source) {
-			source.addVolatile("chillyreception");
+		flags: { snatch: 1, heal: 1, metronome: 1 },
+		heal: [1, 3],
+		onTry(source) {
+			return !!this.canSwitch(source.side);
 		},
-		weather: "sunnyday",
 		selfSwitch: true,
 		secondary: null,
-		condition: {
-			duration: 1,
-			onBeforeMovePriority: 100,
-			onBeforeMove(source, target, move) {
-				if (move.id !== "chillyreception") return;
-				this.add("-prepare", source, "Chilly Reception", "[premajor]");
-			},
-		},
-		target: "all",
+		target: "self",
 		type: "Fire",
 	},
 
@@ -27125,12 +27117,11 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		type: "Water",
 		zMove: { effect: "clearnegativeboost" },
 		onModifyMove(move, pokemon) {
-			if (pokemon.status === "brn" || pokemon.status === "") {
-				pokemon.trySetStatus("brn", pokemon);
+			if (pokemon.status === "brn") {
 				move.heal = [1, 2];
 			} else {
 				this.hint(
-					`${pokemon.name}'s Pressurize failed because this Pokemon is not healthy or burned.`
+					`${pokemon.name}'s Pressurize failed because this Pokemon is not burned.`
 				);
 				return;
 			}
