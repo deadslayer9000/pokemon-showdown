@@ -607,7 +607,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			duration: 255, //basically infinite
 			durationCallback(target, source, effect) {
 				if (effect?.name === 'Stream Shift') {
-					return 4; //streamshift duration
+					return 255; //streamshift duration
 				}
 				return 255;
 			},
@@ -1970,22 +1970,14 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Blaze Out",
 		pp: 10,
 		priority: 0,
-		flags: {},
-		priorityChargeCallback(source) {
-			source.addVolatile("chillyreception");
+		flags: { snatch: 1, heal: 1, metronome: 1 },
+		heal: [1, 3],
+		onTry(source) {
+			return !!this.canSwitch(source.side);
 		},
-		weather: "sunnyday",
 		selfSwitch: true,
 		secondary: null,
-		condition: {
-			duration: 1,
-			onBeforeMovePriority: 100,
-			onBeforeMove(source, target, move) {
-				if (move.id !== "chillyreception") return;
-				this.add("-prepare", source, "Chilly Reception", "[premajor]");
-			},
-		},
-		target: "all",
+		target: "self",
 		type: "Fire",
 	},
 
@@ -4699,7 +4691,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	depthdecree: {
 		num: -58,
 		accuracy: 100,
-		basePower: 75,
+		basePower: 80,
 		category: "Special",
 		name: "Depth Decree",
 		pp: 10,
@@ -18724,7 +18716,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	rebirth: {
 		num: -62,
 		accuracy: 100,
-		basePower: 185,
+		basePower: 195,
 		category: "Special",
 		name: "Rebirth",
 		pp: 1,
@@ -19207,7 +19199,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	ridethewave: {
 		num: -19,
 		accuracy: true,
-		basePower: 195,
+		basePower: 185,
 		category: "Special",
 		name: "Ride The Wave",
 		pp: 1,
@@ -20657,7 +20649,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	shockingblow: {
 		num: -29,
 		accuracy: 100,
-		basePower: 85,
+		basePower: 80,
 		category: "Physical",
 		name: "Shocking Blow",
 		pp: 15,
@@ -24952,8 +24944,8 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	},
 	tomahawkvolley: {
 		num: -47,
-		accuracy: 85,
-		basePower: 25,
+		accuracy: 95,
+		basePower: 20,
 		category: "Physical",
 		name: "Tomahawk Volley",
 		pp: 10,
@@ -25804,8 +25796,8 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	},
 	vascend: {
 		num: -52,
-		accuracy: 100,
-		basePower: 150,
+		accuracy: 95,
+		basePower: 165,
 		category: "Physical",
 		name: "V-ascend",
 		pp: 5,
@@ -27125,12 +27117,11 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		type: "Water",
 		zMove: { effect: "clearnegativeboost" },
 		onModifyMove(move, pokemon) {
-			if (pokemon.status === "brn" || pokemon.status === "") {
-				pokemon.trySetStatus("brn", pokemon);
+			if (pokemon.status === "brn") {
 				move.heal = [1, 2];
 			} else {
 				this.hint(
-					`${pokemon.name}'s Pressurize failed because this Pokemon is not healthy or burned.`
+					`${pokemon.name}'s Pressurize failed because this Pokemon is not burned.`
 				);
 				return;
 			}

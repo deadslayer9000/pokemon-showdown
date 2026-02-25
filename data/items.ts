@@ -3525,7 +3525,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 			if (this.field.getPseudoWeather("trickroom")) {
 				return this.chainModify([5324, 4096]);
 			}
-		},
+		},/*
 		condition: {
 			onStart(pokemon) {
 				this.add(
@@ -3536,7 +3536,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 				);
 				this.field.addPseudoWeather("trickroom");
 			},
-		},
+		},*/
 		onTakeItem(item, source) {
 			if (source.baseSpecies.name === "Magirigus") return false;
 			return true;

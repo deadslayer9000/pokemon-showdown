@@ -1359,8 +1359,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	necromancy: {
 		name: "Necromancy",
-		shortDesc: "Physical moves use Sp. Atk; includes effects of Unrelenting Stampede",
-		desc: "Physical moves used by this Pokemon use the Pokemon's Special Attack instead of it's Attack when calculating damage. This ability also includes the effects of Unrelenting Stampede.",
+		shortDesc: "Physical moves use Sp. Atk.",
+		desc: "Physical moves used by this Pokemon use the Pokemon's Special Attack instead of it's Attack when calculating damage.",
 	},
 	neuroforce: {
 		name: "Neuroforce",
@@ -1695,8 +1695,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "This pokemon's Spatk or Speed is boosted depending which is higher, the more unique types on the pokemon's team the higher the boost. Monotype teams get max boosts."
 	},
 	pyroclastic: {
-		name: "Pyroclastic (WIP)",
-		shortDesc: "Pokemon heals 1/3rd of it's health when switching in; Accuracy can't be lowered.",
+		name: "Pyroclastic",
+		shortDesc: "Pokemon's Rock-type moves are 1.3x stronger and can burn.",
 	},
 	quarkdrive: {
 		name: "Quark Drive",
@@ -1735,7 +1735,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	ragnarok: {
 		name: "Ragnarok",
-		shortDesc: "Multi-hit moves always hit at least 3 times. Physical moves have a 10% chance to burn.",
+		shortDesc: "Multi-hit moves always hit at least 3 times.",
 	},
 	raindish: {
 		name: "Rain Dish",
@@ -1799,8 +1799,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	resolute: {
 		name: "Resolute",
-		shortDesc: "This Pokemon heals 1/4 of its max HP when hit by priority moves; Priority immunity.",
-		desc: "When this Pokemon is targeted by a move with increased priority, that attack instead heals 1/4 of this Pokemon's max HP and deals no damage.",
+		shortDesc: "This Pokemon is immune to flinching and being taunted.",
+		desc: "This Pokemon is immune to flinching and being taunted.",
 	},
 	ripen: {
 		name: "Ripen",
@@ -2168,8 +2168,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	steamforged: {
 		name: "Steamforged",
-		desc: "30% chance a Pokemon making contact with this Pokemon will be burned.",
-		shortDesc: "30% to burn attacker on contact.",
+		desc: "This Pokemon is immune to burn damage.",
+		shortDesc: "This Pokemon is immune to burn damage.",
 	},
 	steelworker: {
 		name: "Steelworker",

@@ -2708,6 +2708,13 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 49,
 	},
 	steamforged: {
+		onDamagePriority: 1,
+		onDamage(damage, target, source, effect) {
+			if (effect.id === "brn") {
+				return false;
+			}
+		},
+		/*
 		onDamagingHit(damage, target, source, move) {
 			if (this.checkMoveMakesContact(move, source, target)) {
 				if (this.randomChance(3, 10)) {
@@ -2723,9 +2730,9 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			}
 		},
 		*/
-		flags: { breakable: 1 },
+		flags: { },
 		name: "Steamforged",
-		rating: 2,
+		rating: 4,
 		num: -71,
 	},
 
@@ -3530,6 +3537,13 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		},
 	},
 	hocuspocus: {
+		onDamagingHitOrder: 1,
+		onDamagingHit(damage, target, source, move) {
+			if (move.category === "Physical" && source.item === "Illusory Sword") {
+				this.field.addPseudoWeather("trickroom", source);
+			}
+		},
+		/*
 		onFractionalPriorityPriority: -1,
 		onFractionalPriority(priority, pokemon, target, move) {
 			if (
@@ -3539,6 +3553,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				return -9;
 			}
 		},
+		*/
 		flags: {},
 		name: "Hocus Pocus",
 		rating: 5,
@@ -6239,6 +6254,34 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -44,
 	},
 	pyroclastic: {
+		onModifyMovePriority: -1,
+		onModifyMove(move) {
+			if (move.type === "Rock") {
+				if (!move.secondaries) move.secondaries = [];
+				for (const secondary of move.secondaries) {
+					if (secondary.status === "brn") return;
+				}
+				move.secondaries.push({
+					chance: 30,
+					status: "brn",
+				});
+			}
+		},
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === "Rock") {
+				this.debug("Pyroclastic boost");
+				return this.chainModify(1.3);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === "Rock") {
+				this.debug("Pyroclastic boost");
+				return this.chainModify(1.3);
+			}
+		},
+		/*
 		onTryBoost(boost, target, source, effect) {
 			if (source && target === source) return;
 			if (boost.accuracy && boost.accuracy < 0) {
@@ -6257,10 +6300,10 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		},
 		onSwitchOut(pokemon) {
 			pokemon.heal(pokemon.baseMaxhp / 3);
-		},
+		},*/
 		flags: {},
 		name: "Pyroclastic",
-		rating: 3.5,
+		rating: 2,
 		num: -5,
 	},
 	quarkdrive: {
@@ -6461,16 +6504,6 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			if (move.multiaccuracy) {
 				delete move.multiaccuracy;
 			}
-			if (move.category === "Physical") {
-				if (!move.secondaries) move.secondaries = [];
-				for (const secondary of move.secondaries) {
-					if (secondary.status === "brn") return;
-				}
-				move.secondaries.push({
-					chance: 10,
-					status: "brn",
-				});
-			}
 		},
 		flags: {},
 		name: "Ragnarok",
@@ -6608,11 +6641,18 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -73,
 	},
 	resolute: {
+		/*
 		onTryHit(target, source, move) {
 			if (target !== source && move.priority > 0) {
 				if (!this.heal(target.baseMaxhp / 4)) {
 					this.add("-immune", target, "[from] ability: Resolute");
 				}
+				return null;
+			}
+		},*/
+		onTryAddVolatile(status, pokemon) {
+			if (status.id === "flinch" || status.id === "taunt"){
+				this.add("-immune", pokemon, "[from] ability: Resolute");
 				return null;
 			}
 		},
@@ -9643,6 +9683,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -93,
 	},
 	necromancy: {
+		/*
 		onStart(pokemon) {
 			const fallen = Math.min(
 				pokemon.side.foe.pokemon.filter((p) => p.fainted).length,
@@ -9689,7 +9730,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				);
 				return this.chainModify([powMod[this.effectState.fallen], 4096]);
 			}
-		},
+		},*/
 		onBeforeMove(source, target, move) {
 			if (move.category === "Physical"){
 				move.overrideOffensiveStat = 'spa';
