@@ -6853,8 +6853,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	streamshift: {
 		name: "Stream Shift",
-		shortDesc: "User switches out, sets Aqua Ring for 3 turns.",
-		desc: "The user switches out, then the incoming Pokemon receives the effects of Aqua Ring for 3 turns."
+		shortDesc: "User switches out, sets Aqua Ring.",
+		desc: "The user switches out, then the incoming Pokemon receives the effects of Aqua Ring.",
 	},
 	strength: {
 		name: "Strength",
