@@ -60,4 +60,8 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		inherit: true,
 		baseStats: { hp: 85, atk: 90, def: 95, spa: 65, spd: 77, spe: 94 },
 	},
+	gholdaton: {
+		inherit: true,
+		abilities: { 0: "Mold Breaker", 1: "Good as Gold", H: "Surge Surfer" },
+	},
 };

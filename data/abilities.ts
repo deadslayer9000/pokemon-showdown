@@ -6267,11 +6267,19 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				});
 			}
 		},
-		onBasePowerPriority: 21,
-		onBasePower(basePower, pokemon, target, move) {
-			if (move.type === "Rock"){
-			 	this.chainModify([5325, 4096]);
-			}	
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === "Rock") {
+				this.debug("Pyroclastic boost");
+				return this.chainModify(1.3);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === "Rock") {
+				this.debug("Pyroclastic boost");
+				return this.chainModify(1.3);
+			}
 		},
 		/*
 		onTryBoost(boost, target, source, effect) {
@@ -6496,16 +6504,6 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			if (move.multiaccuracy) {
 				delete move.multiaccuracy;
 			}
-			if (move.category === "Physical") {
-				if (!move.secondaries) move.secondaries = [];
-				for (const secondary of move.secondaries) {
-					if (secondary.status === "brn") return;
-				}
-				move.secondaries.push({
-					chance: 10,
-					status: "brn",
-				});
-			}
 		},
 		flags: {},
 		name: "Ragnarok",
@@ -6643,11 +6641,18 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -73,
 	},
 	resolute: {
+		/*
 		onTryHit(target, source, move) {
 			if (target !== source && move.priority > 0) {
 				if (!this.heal(target.baseMaxhp / 4)) {
 					this.add("-immune", target, "[from] ability: Resolute");
 				}
+				return null;
+			}
+		},*/
+		onTryAddVolatile(status, pokemon) {
+			if (status.id === "flinch" || status.id === "taunt"){
+				this.add("-immune", pokemon, "[from] ability: Resolute");
 				return null;
 			}
 		},
@@ -9678,6 +9683,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -93,
 	},
 	necromancy: {
+		/*
 		onStart(pokemon) {
 			const fallen = Math.min(
 				pokemon.side.foe.pokemon.filter((p) => p.fainted).length,
@@ -9724,7 +9730,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				);
 				return this.chainModify([powMod[this.effectState.fallen], 4096]);
 			}
-		},
+		},*/
 		onBeforeMove(source, target, move) {
 			if (move.category === "Physical"){
 				move.overrideOffensiveStat = 'spa';

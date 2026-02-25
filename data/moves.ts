@@ -4691,7 +4691,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	depthdecree: {
 		num: -58,
 		accuracy: 100,
-		basePower: 75,
+		basePower: 80,
 		category: "Special",
 		name: "Depth Decree",
 		pp: 10,
@@ -18716,7 +18716,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	rebirth: {
 		num: -62,
 		accuracy: 100,
-		basePower: 185,
+		basePower: 195,
 		category: "Special",
 		name: "Rebirth",
 		pp: 1,
@@ -19199,7 +19199,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	ridethewave: {
 		num: -19,
 		accuracy: true,
-		basePower: 195,
+		basePower: 185,
 		category: "Special",
 		name: "Ride The Wave",
 		pp: 1,
@@ -20649,7 +20649,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	shockingblow: {
 		num: -29,
 		accuracy: 100,
-		basePower: 85,
+		basePower: 80,
 		category: "Physical",
 		name: "Shocking Blow",
 		pp: 15,
@@ -24944,8 +24944,8 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	},
 	tomahawkvolley: {
 		num: -47,
-		accuracy: 85,
-		basePower: 25,
+		accuracy: 95,
+		basePower: 20,
 		category: "Physical",
 		name: "Tomahawk Volley",
 		pp: 10,
@@ -25796,8 +25796,8 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	},
 	vascend: {
 		num: -52,
-		accuracy: 100,
-		basePower: 150,
+		accuracy: 95,
+		basePower: 165,
 		category: "Physical",
 		name: "V-ascend",
 		pp: 5,
