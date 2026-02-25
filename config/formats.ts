@@ -557,6 +557,13 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		column: 1,
 	},
 	{
+		name: "[Gen 9] [ND] Pre S6 Patch Draft",
+		mod: 'pres6patch',
+		searchShow: false,
+		teraPreviewDefault: true,
+		ruleset: ['Standard Draft'],
+	},
+	{
 		name: "[Gen 9] Draft",
 		mod: 'gen9',
 		searchShow: false,
