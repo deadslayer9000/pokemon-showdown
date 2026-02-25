@@ -860,7 +860,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	hocuspocus: {
 		name: "Hocus Pocus",
-		shortDesc: "Sets Trick Room on switch-in if holding Illusory Sword. Status moves go last in TR."
+		shortDesc: "If hit by a physical move, this Pokemon sets up Trick Room. Once per battle.",
 	},
 	hollowheart: {
 		name: "Hollow-Heart",

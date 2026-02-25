@@ -3539,8 +3539,10 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	hocuspocus: {
 		onDamagingHitOrder: 1,
 		onDamagingHit(damage, target, source, move) {
-			if (move.category === "Physical" && source.item === "Illusory Sword") {
-				this.field.addPseudoWeather("trickroom", source);
+			if (move.category === "Physical" && target.item === "illusorysword" && !target.trproc) {
+				this.add("-activate", target, "Hocus Pocus");
+				this.field.addPseudoWeather("trickroom", target);
+				target.trproc = true;
 			}
 		},
 		/*
