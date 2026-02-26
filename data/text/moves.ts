@@ -577,7 +577,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	blazeout: {
 		name: "Blaze Out",
-		shortDesc: "User heals 1/3 of its hp and switches out.",
+		shortDesc: "User heals 1/2 of its hp and switches out.",
 	},
 	blazingtorque: {
 		name: "Blazing Torque",
