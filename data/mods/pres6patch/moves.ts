@@ -1,6 +1,5 @@
 export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	pressurize: {
-		inherit: true,
 		num: -81,
 		accuracy: true,
 		basePower: 0,
@@ -26,7 +25,6 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		},
 	},
 	blazeout: {
-		inherit: true,
 		num: -3,
 		accuracy: true,
 		basePower: 0,

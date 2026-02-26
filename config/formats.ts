@@ -561,7 +561,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'pres6patch',
 		searchShow: false,
 		teraPreviewDefault: true,
-		ruleset: ['Standard NatDex', 'Standard Draft'],
+		ruleset: ['Standard Draft', 'Standard NatDex'],
 	},
 	{
 		name: "[Gen 9] Draft",
