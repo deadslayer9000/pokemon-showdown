@@ -2020,6 +2020,16 @@
             }
         ]
     },
+    "medichammega": {
+        "level": 78,
+        "sets": [
+            {
+                "role": "Fast Attacker",
+                "movepool": ["Fake Out", "High Jump Kick", "Ice Punch", "Thunder Punch", "Zen Headbutt"],
+                "abilities": ["Pure Power"]
+            }
+        ]
+    },
     "plusle": {
         "level": 92,
         "sets": [
@@ -2361,6 +2371,16 @@
                 "movepool": ["Draco Meteor", "Dual Wingbeat", "Fire Blast", "Protect", "Roost"],
                 "abilities": ["Intimidate"],
                 "teraTypes": ["Fire", "Steel"]
+            }
+        ]
+    },
+     "salamencemega": {
+        "level": 70,
+        "sets": [
+            {
+                "role": "Setup Sweeper",
+                "movepool": ["Dobule Edge", "Dragon Dance", "Earthquake", "Return", "Roost"],
+                "abilities": ["Intimidate"]
             }
         ]
     },
@@ -4668,6 +4688,16 @@
                 "movepool": ["Heat Wave", "Imprison", "Protect", "Psychic"],
                 "abilities": ["Blaze"],
                 "teraTypes": ["Grass"]
+            }
+        ]
+    },
+    "delphoxmega": {
+        "level": 75,
+        "sets": [
+            {
+                "role": "Setup Sweeper",
+                "movepool": ["Nasty Plot", "Flamethrower", "Psychic", "Psyshock", "Shadow Ball", "Dazzling Gleam"],
+                "abilities": ["Blaze"]
             }
         ]
     },
@@ -8793,6 +8823,34 @@
                 "movepool": ["Volt Tackle", "Ice Fang", "Knock Off", "Play Rough", "Fire Fang"],
                 "abilities": ["Transistor"],
                 "teraTypes": ["Steel", "Water"]
+            }
+        ]
+    },
+    "ambipomultra": {
+        "level": 75,
+        "sets": [
+            {
+                "role": "Wallbreaker",
+                "movepool": ["Fire Lash", "Play Rough", "Tidy Up", "Taunt", "Low Kick", "U-Turn"],
+                "abilities": ["Tough Claws"],
+                "teraTypes": ["Fairy", "Fire"]
+            },
+            {
+                "role": "Choice Item User",
+                "movepool": ["Fire Lash", "Play Rough", "U-Turn", "Low Kick", "Thunder Punch"],
+                "abilities": ["Tough Claws"],
+                "teraTypes": ["Fairy", "Fire"]
+            }
+        ]
+    },
+    "tentacrueldelta": {
+        "level": 79,
+        "sets": [
+            {
+                "role": "Bulky Support",
+                "movepool": ["Amp Serum", "Rapid Spin", "Scald", "Knock Off", "Volt Switch", "Sludge Bomb"],
+                "abilities": ["Usurper"],
+                "teraTypes": ["Flying", "Grass"]
             }
         ]
     }
