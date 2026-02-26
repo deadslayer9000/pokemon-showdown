@@ -1,6 +1,5 @@
 export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTable = {
 	steamforged: {
-		inherit: true,
 		onDamagingHit(damage, target, source, move) {
 			if (this.checkMoveMakesContact(move, source, target)) {
 				if (this.randomChance(3, 10)) {
@@ -21,8 +20,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		rating: 2,
 		num: -71,
 	},
-	hocuspocus: {
-		inherit: true,
+	hocuspocus: {	
 		onFractionalPriorityPriority: -1,
 		onFractionalPriority(priority, pokemon, target, move) {
 			if (
@@ -38,7 +36,6 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		num: -47,
 	},
 	pyroclastic: {
-		inherit: true,
 		onTryBoost(boost, target, source, effect) {
 			if (source && target === source) return;
 			if (boost.accuracy && boost.accuracy < 0) {
@@ -64,7 +61,6 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		num: -5,
 	},
 	necromancy: {
-		inherit: true,
 		onStart(pokemon) {
 			const fallen = Math.min(
 				pokemon.side.foe.pokemon.filter((p) => p.fainted).length,
@@ -123,7 +119,6 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		num: -94,
 	},
 	ragnarok: {
-		inherit: true,
 		onModifyMovePriority: -1,
 		onModifyMove(move) {
 			if (
@@ -153,7 +148,6 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		num: -46,
 	},
 	resolute: {
-		inherit: true,
 		onTryHit(target, source, move) {
 			if (target !== source && move.priority > 0) {
 				if (!this.heal(target.baseMaxhp / 4)) {
