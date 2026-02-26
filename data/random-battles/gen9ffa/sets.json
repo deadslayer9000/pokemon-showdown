@@ -8842,17 +8842,6 @@
                 "teraTypes": ["Fairy", "Fire"]
             }
         ]
-    },
-    "tentacrueldelta": {
-        "level": 79,
-        "sets": [
-            {
-                "role": "Bulky Support",
-                "movepool": ["Amp Serum", "Rapid Spin", "Scald", "Knock Off", "Volt Switch", "Sludge Bomb"],
-                "abilities": ["Usurper"],
-                "teraTypes": ["Flying", "Grass"]
-            }
-        ]
     }
 }
 
