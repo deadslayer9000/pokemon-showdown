@@ -7656,7 +7656,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	twincross: {
 		name: "Twin Cross",
 		desc: "Hits twice. Each hit has a 20% chance to either burn or paralyze the target.",
-		shortDesc: "Hits twice. Each hit has 20% chance to burn or paralyze.", 
+		shortDesc: "Hits twice. Each hit has 20% chance to brn or para.", 
 	},
 	twineedle: {
 		name: "Twineedle",
