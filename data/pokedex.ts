@@ -25970,5 +25970,17 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		eggGroups: ["Mineral"],
 		requiredItem: "Delta Metagrossite",
 		forme: "Mega",
+	},
+	draculedge: {
+		num: 2122,
+		name: "Draculedge",
+		types: ["Dragon", "Fighting"],
+		gender: "N",
+		baseStats: { hp: 64, atk: 144, def: 76, spa: 120, spd: 96, spe: 100 },
+		abilities: { 0: "Conviction" },
+		//heightm: no dsc page yet,
+		weightkg: 78,
+		//color: "Black", no dsc page yet
+		eggGroups: ["Undiscovered"],
 	}
 };

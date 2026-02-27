@@ -27878,4 +27878,29 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		zMove: { basePower: 120 },
 		maxMove: { basePower: 140 },
 	},
+	twincross: {
+		num: -108,
+		accuracy: 95,
+		basePower: 50,
+		category: "Physical",
+		name: "Twin Cross",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		multihit: 2,
+		multiaccuracy: false,
+		secondary: {
+			chance: 20,
+			onHit(target, source) {
+				const result = this.random(2);
+				if (result === 0) {
+					target.trySetStatus("brn", source);
+				} else {
+					target.trySetStatus("par", source);
+				}
+			},
+		},
+		target: "normal",
+		type: "Dragon",
+	}
 };
