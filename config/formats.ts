@@ -29,14 +29,14 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		name: "[Gen 9] National Dex",
 		mod: 'gen9',
-		ruleset: ['Standard NatDex', 'Terastal Clause', 'Z-Move Clause'],
+		ruleset: ['Standard NatDex', 'Terastal Clause',],
 		banlist: [
 			'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock',
 			'Quick Claw', 'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail', 'Dire Claw', 'Rage Fist', 'Blood Moon', 'Darkrai', 'Zamazenta', 'Good as Gold',  'Raichunite Y', 'Delphoxite', 'Delphox-Mega', 'Raichu-Mega-Y', 'Walking Wake',
+			'Normalium Z', 'Fightinium Z', 'Flyinium Z', 'Poisonium Z', 'Groundium Z', 'Rockium Z', 'Buginium Z', 'Ghostium Z', 'Steelium Z', 'Firium Z', 'Waterium Z', 'Grassium Z', 'Electrium Z', 'Psychium Z', 'Icium Z', 'Dragonium Z', 'Darkinium Z', 'Fairium Z'
 		],
 		unbanlist: [
 			'Solgaleo', 'Sneasler', 'Annihilape', 'Ursaluna-Bloodmoon', 'Espathra', 'Roaring Moon', 'Dragapult',  'Raichu-Mega-X', 'Absol-Mega-Z',  'Greninja-Mega', 'Chesnaught-Mega', 'Absolite Z', 'Raichunite X', 'Greninjite', 'Chesnaughtite', 'Hawlucha-Mega', 'Hawluchanite', 'Chandelure-Mega', 'Chandelurite', 
-			'Tangledtimium Z',
 		],
 	},
 	{
