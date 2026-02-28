@@ -215,5 +215,31 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 				this.field.clearWeather();
 			}
 		},
-	}
+	},
+	blazeout: {
+		num: -3,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Blaze Out",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		priorityChargeCallback(source) {
+			source.addVolatile("chillyreception");
+		},
+		weather: "sunnyday",
+		selfSwitch: true,
+		secondary: null,
+		condition: {
+			duration: 1,
+			onBeforeMovePriority: 100,
+			onBeforeMove(source, target, move) {
+				if (move.id !== "chillyreception") return;
+				this.add("-prepare", source, "Chilly Reception", "[premajor]");
+			},
+		},
+		target: "all",
+		type: "Fire",
+	},
 };
