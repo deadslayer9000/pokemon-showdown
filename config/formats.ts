@@ -159,7 +159,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'Tyranitar', 'Blacephalon', 'Magnezone', 'Mandibuzz', 'Glimmerix', 'Feraligatr-Mega', 'Chimecho-Delta-Mega', 'Meganium-Mega', 'Emboar-Mega', 'Skarmory-Mega', 'Dragalge-Mega',
 			'Metagross-Delta-Mega', 'Klocktowl-Mega', 'Flaring Quill', 'Keldeo', 'Slaughtermaus', 'Keldeo-Delta-Mega', 'Medicham-Mega', 'Archaludon', 'Molteon', 'Raichu-Mega-Y', 'Raichu-Mega-X',
 			'Delphox-Mega', 'Valiant Time', 'Radiant Moon', 'Gengar-Ultra', 'Diancie-Sapphire-Mega', 'Necromauser-Mega', 'Magearna-Original-Delta', 'Chesnaught-Mega', 'Battle Bond',
-			'Enamorus', 'Gardevoir-Mega', 'Gorochu', 'Iron Hands',
+			'Enamorus', 'Gardevoir-Mega', 'Gorochu', 'Iron Hands', 'Lokix'
 		],	
 		unbanlist: ['Keldeo-Delta'],
 	},

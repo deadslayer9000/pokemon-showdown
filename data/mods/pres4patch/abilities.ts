@@ -169,5 +169,30 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 				return target.hp - 1;
 			}
 		},
-	}
+	},
+	pyroclastic: {
+		onTryBoost(boost, target, source, effect) {
+			if (source && target === source) return;
+			if (boost.accuracy && boost.accuracy < 0) {
+				delete boost.accuracy;
+				if (!(effect as ActiveMove).secondaries) {
+					this.add(
+						"-fail",
+						target,
+						"unboost",
+						"accuracy",
+						"[from] ability: Keen Eye",
+						`[of] ${target}`
+					);
+				}
+			}
+		},
+		onSwitchOut(pokemon) {
+			pokemon.heal(pokemon.baseMaxhp / 3);
+		},
+		flags: {},
+		name: "Pyroclastic",
+		rating: 3.5,
+		num: -5,
+	},
 };
