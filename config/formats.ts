@@ -179,7 +179,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		desc: "Monotype format for the Delta Premier League.",
 		mod: 'gen9', 
 		ruleset: ['[Gen 9] National Dex', 'Same-Type Clause'],
-		banlist: ['Espathra', 'Flygon-Delta', 'Magoodra', 'Meowscarada-Delta', 'Kingambit'],
+		banlist: ['Espathra', 'Flygon-Delta', 'Meowscarada-Delta', 'Kingambit'],
 		unbanlist: ['Landorus', 'Gholdengo', 'Good as Gold'],
 	},
 	{
