@@ -134,10 +134,11 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		name: "[Gen 9] [ND] DPL OU",
 		mod: 'pres6patch',
-		ruleset: ['Standard NatDex', 'Terastal Clause', 'Z-Move Clause'],
+		ruleset: ['Standard NatDex', 'Terastal Clause'],
 		banlist: [
 			'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock',
 			'Quick Claw', 'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail', 'Dire Claw', 'Rage Fist', 'Blood Moon', 'Darkrai', 'Zamazenta',
+			'Normalium Z', 'Fightinium Z', 'Flyinium Z', 'Poisonium Z', 'Groundium Z', 'Rockium Z', 'Buginium Z', 'Ghostium Z', 'Steelium Z', 'Firium Z', 'Waterium Z', 'Grassium Z', 'Electrium Z', 'Psychium Z', 'Icium Z', 'Dragonium Z', 'Darkinium Z', 'Fairium Z',
 		],
 		unbanlist: [
 			'Solgaleo', 'Sneasler', 'Annihilape', 'Ursaluna-Bloodmoon', 'Espathra', 'Roaring Moon', 'Dragapult', 'Gholdengo'
@@ -160,7 +161,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'Tyranitar', 'Blacephalon', 'Magnezone', 'Mandibuzz', 'Glimmerix', 'Feraligatr-Mega', 'Chimecho-Delta-Mega', 'Meganium-Mega', 'Emboar-Mega', 'Skarmory-Mega', 'Dragalge-Mega',
 			'Metagross-Delta-Mega', 'Klocktowl-Mega', 'Flaring Quill', 'Keldeo', 'Slaughtermaus', 'Keldeo-Delta-Mega', 'Medicham-Mega', 'Archaludon', 'Molteon', 'Raichu-Mega-Y', 'Raichu-Mega-X',
 			'Delphox-Mega', 'Valiant Time', 'Radiant Moon', 'Gengar-Ultra', 'Diancie-Sapphire-Mega', 'Necromauser-Mega', 'Magearna-Original-Delta', 'Chesnaught-Mega', 'Battle Bond',
-			'Enamorus', 'Gardevoir-Mega', 'Gorochu', 'Iron Hands', 'Lokix'
+			'Enamorus', 'Gardevoir-Mega', 'Gorochu', 'Iron Hands', 'Lokix', 'Draculedge', 'Iron Shades', 'Dragascue'
 		],	
 		unbanlist: ['Keldeo-Delta'],
 	},
@@ -168,8 +169,10 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		name: "[Gen 9] [ND] DPL Ubers",
 		desc: "Ubers format for the Delta Premier League.",
 		mod: 'pres6patch',
-		ruleset: ['Standard Natdex', 'Terastal Clause', 'Z-Move Clause'],
-		banlist: [ 'ND AG', 'Baton Pass', 'Dire Claw', 'Last Respects', 'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Shed Tail', 'Mewthree', 'Kyurem-Original'],
+		ruleset: ['Standard Natdex', 'Terastal Clause'],
+		banlist: [ 'ND AG', 'Baton Pass', 'Dire Claw', 'Last Respects', 'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Shed Tail', 'Mewthree', 'Kyurem-Original',
+			'Normalium Z', 'Fightinium Z', 'Flyinium Z', 'Poisonium Z', 'Groundium Z', 'Rockium Z', 'Buginium Z', 'Ghostium Z', 'Steelium Z', 'Firium Z', 'Waterium Z', 'Grassium Z', 'Electrium Z', 'Psychium Z', 'Icium Z', 'Dragonium Z', 'Darkinium Z', 'Fairium Z'
+		],
 	},
 	{
 		name: "[Gen 9] [ND] DPL Monotype",
