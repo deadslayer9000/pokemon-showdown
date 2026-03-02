@@ -9782,6 +9782,17 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 4,
 		num: -95,
 	},
+	conviction: {
+		onModifyDamage(damage, source, target, move) {
+			if (move && target.getMoveHitData(move).typeMod > 0) {
+				return this.chainModify([5120, 4096]);
+			}
+		},
+		flags: {},
+		name: "Conviction",
+		rating: 2.5,
+		num: -96,
+	},
 	// CAP
 	mountaineer: {
 		onDamage(damage, target, source, effect) {

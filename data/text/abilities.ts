@@ -320,6 +320,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			desc: "If this Pokemon has a stat stage raised it is lowered instead, and vice versa.",
 		},
 	},
+	conviction: {
+		name: "Conviction",
+		shortDesc: "This Pokemon's attacks that are super effective against the target do 1.25x damage.",
+	},
 	corrosion: {
 		name: "Corrosion",
 		shortDesc: "This Pokemon can poison or badly poison a Pokemon regardless of its typing.",

@@ -7653,6 +7653,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Hits twice. If the first hit breaks the target's substitute, it will take damage for the second hit.",
 		shortDesc: "Hits 2 times in one turn.",
 	},
+	twincross: {
+		name: "Twin Cross",
+		desc: "Hits twice. Each hit has a 20% chance to either burn or paralyze the target.",
+		shortDesc: "Hits twice. Each hit has 20% chance to brn or para.", 
+	},
 	twineedle: {
 		name: "Twineedle",
 		desc: "Hits twice, with each hit having a 20% chance to poison the target. If the first hit breaks the target's substitute, it will take damage for the second hit.",

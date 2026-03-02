@@ -7278,4 +7278,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	klocktowlmega: {
 		tier: "UU",
 	},
+	draculedge: {
+		tier: "UU",
+		natDexTier: "UU",
+		doublesTier: "DUU",
+	},
 };
