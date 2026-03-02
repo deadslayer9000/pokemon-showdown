@@ -5648,7 +5648,7 @@
                 "teraTypes": ["Steel"]
             },
             {
-                "role": "Wallbreaker",
+                "role": "Bulky Setup",
                 "movepool": ["Boomburst", "Clanging Scales", "Clangorous Soul", "Drain Punch"],
                 "abilities": ["Soundproof"],
                 "teraTypes": ["Normal"]
