@@ -2469,6 +2469,15 @@
             }
         ]
     },
+    "latiasmega": {
+        "level": 79,
+        "sets": [
+            {
+                "role": "Bulky Setup",
+                "movepool": ["Calm Mind", "Stored Power", "Recover", "Ice Beam", "Alluring Voice", "Mystical Fire"],
+            }
+        ]
+    },
     "latios": {
         "level": 79,
         "sets": [
@@ -2483,6 +2492,17 @@
                 "movepool": ["Calm Mind", "Draco Meteor", "Luster Purge", "Psyshock", "Recover"],
                 "abilities": ["Levitate"],
                 "teraTypes": ["Steel"]
+            }
+        ]
+    },
+    "latiosmega": {
+        "level": 78,
+        "sets": [
+            {
+                "role": "Wallbreaker",
+                "movepool": ["Luster Purge", "Draco Meteor", "Flip Turn", "Aura Sphere", "Mystical Fire", "Ice Beam", "Earthquake"],
+                "abilities": ["Levitate"],
+                "teraTypes": ["Steel"],
             }
         ]
     },
@@ -5628,7 +5648,7 @@
                 "teraTypes": ["Steel"]
             },
             {
-                "role": "Bulky Setup",
+                "role": "Wallbreaker",
                 "movepool": ["Boomburst", "Clanging Scales", "Clangorous Soul", "Drain Punch"],
                 "abilities": ["Soundproof"],
                 "teraTypes": ["Normal"]
