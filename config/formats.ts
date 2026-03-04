@@ -77,16 +77,16 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'Calyrex-Shadow', 'Koraidon', 'Kyogre', 'Miraidon', 'Moody', 'Shadow Tag', 'Beedrillite', 'Blazikenite', 'Gengarite',
 			'Kangaskhanite', 'Lucarionite Z','Mawilite', 'Medichamite', 'Pidgeotite', 'Red Orb', 'Baton Pass',
 			'Shed Tail', 'Kyurem-Original', 'Mewthree', 'Heracronite', 'Klocktowlite', 'Delta Chimechite', 'Necromausite', 'Diancite', 'Sapphire Diancite', 'Ruby Diancite',
-			'Flygonite', 'Raichunite Y', 'Absolite Z', 'Meganiumite', 'Hawluchanite',
+			'Flygonite', 'Raichunite Y', 'Absolite Z', 'Meganiumite', 'Hawluchanite', 
 			//not in game
 			'Barbaracite', 'Baxcalibrite', 'Chimechite', 'Clefablite', 'Crabominite', 'Darkranite', 'Drampanite', 'Eelektrossite', 'Excadrite', 'Falinksite', 'Floettite',
-			'Froslassite', 'Garchompite Z', 'Glimmoranite', 'Golisopite', 'Golurkite', 'Heatranite', 'Magearnite', 'Malamarite', 'Meowsticite', 'Pyroarite', 'Scolipite', 'Scovillainite', 'Scraftinite', 'Staraptite', 'Starminite', 'Tatsugirinite', 'Victreebelite', 'Zeraorite', 'Zygardite',
+			'Froslassite', 'Garchompite Z', 'Glimmoranite', 'Golisopite', 'Golurkite', 'Heatranite', 'Magearnite', 'Malamarite', 'Meowsticite', 'Pyroarite', 'Scolipite', 'Scovillainite', 'Scraftinite', 'Staraptite', 'Starminite', 'Tatsugirinite', 'Victreebelite', 'Zeraorite', 'Zygardite', 'Illusory Sword',
 		],
 		restricted: [
 			'Arceus', 'Basculegion-M', 'Calyrex-Ice', 'Ceruledge', 'Deoxys-Normal', 'Deoxys-Attack', 'Dialga', 'Eternatus', 'Flutter Mane',
 			'Gengar', 'Gholdengo', 'Giratina', 'Gouging Fire', 'Groudon', 'Ho-Oh', 'Iron Bundle', 'Kyurem-Black', 'Kyurem-White', 'Lugia',
 			'Lunala', 'Manaphy', 'Mewtwo', 'Necrozma-Dawn-Wings', 'Necrozma-Dusk-Mane', 'Palkia', 'Rayquaza', 'Regigigas', 'Reshiram',
-			'Slaking', 'Sneasler', 'Solgaleo', 'Ursaluna-Bloodmoon', 'Urshifu-Single-Strike', 'Urshifu-Flash-Strike', 'Walking Wake', 'Zacian', 'Zapeon', 'Zekrom', 'Draculedge', 'Iron Blaster',
+			'Slaking', 'Sneasler', 'Solgaleo', 'Ursaluna-Bloodmoon', 'Urshifu-Single-Strike', 'Urshifu-Flash-Strike', 'Walking Wake', 'Zacian', 'Zapeon', 'Zekrom', 'Draculedge', 'Iron Blaster', 
 		],
 		onValidateTeam(team) {
 			const itemTable = new Set<ID>();
