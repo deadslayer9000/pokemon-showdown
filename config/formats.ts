@@ -72,17 +72,21 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		name: "[Gen 9] [ND] Delta Mix and Mega",
 		desc: `Mega evolve any Pok&eacute;mon with any mega stone, or transform them with Genesect Drives, Primal orbs, Origin orbs, Rusted items, Ogerpon Masks, Arceus Plates, and Silvally Memories with no limit. Mega and Primal boosts based on form changes from gen 7.`,
 		mod: 'mixandmega',
-		ruleset: ['Standard OMs', 'Sleep Moves Clause', 'Terastal Clause', 'NatDex Mod'],
+		ruleset: ['Standard OMs', 'Sleep Moves Clause', 'Terastal Clause', 'NatDex Mod', 'Z-Move Clause'],
 		banlist: [
 			'Calyrex-Shadow', 'Koraidon', 'Kyogre', 'Miraidon', 'Moody', 'Shadow Tag', 'Beedrillite', 'Blazikenite', 'Gengarite',
-			'Kangaskhanite', 'Lucarionite Z', 'Malamarite', 'Mawilite', 'Medichamite', 'Pidgeotite', 'Red Orb', 'Baton Pass',
-			'Shed Tail',
+			'Kangaskhanite', 'Lucarionite Z','Mawilite', 'Medichamite', 'Pidgeotite', 'Red Orb', 'Baton Pass',
+			'Shed Tail', 'Kyurem-Original', 'Mewthree', 'Heracronite', 'Klocktowlite', 'Delta Chimechite', 'Necromausite', 'Diancite', 'Sapphire Diancite', 'Ruby Diancite',
+			'Flygonite', 'Raichunite Y', 'Absolite Z', 'Meganiumite', 'Hawluchanite',
+			//not in game
+			'Barbaracite', 'Baxcalibrite', 'Chimechite', 'Clefablite', 'Crabominite', 'Darkranite', 'Drampanite', 'Eelektrossite', 'Excadrite', 'Falinksite', 'Floettite',
+			'Froslassite', 'Garchompite Z', 'Glimmoranite', 'Golisopite', 'Golurkite', 'Heatranite', 'Magearnite', 'Malamarite', 'Meowsticite', 'Pyroarite', 'Scolipite', 'Scovillainite', 'Scraftinite', 'Staraptite', 'Starminite', 'Tatsugirinite', 'Victreebelite', 'Zeraorite', 'Zygardite',
 		],
 		restricted: [
 			'Arceus', 'Basculegion-M', 'Calyrex-Ice', 'Ceruledge', 'Deoxys-Normal', 'Deoxys-Attack', 'Dialga', 'Eternatus', 'Flutter Mane',
 			'Gengar', 'Gholdengo', 'Giratina', 'Gouging Fire', 'Groudon', 'Ho-Oh', 'Iron Bundle', 'Kyurem-Black', 'Kyurem-White', 'Lugia',
 			'Lunala', 'Manaphy', 'Mewtwo', 'Necrozma-Dawn-Wings', 'Necrozma-Dusk-Mane', 'Palkia', 'Rayquaza', 'Regigigas', 'Reshiram',
-			'Slaking', 'Sneasler', 'Solgaleo', 'Ursaluna-Bloodmoon', 'Urshifu-Single-Strike', 'Zacian', 'Zekrom',
+			'Slaking', 'Sneasler', 'Solgaleo', 'Ursaluna-Bloodmoon', 'Urshifu-Single-Strike', 'Urshifu-Flash-Strike', 'Walking Wake', 'Zacian', 'Zapeon', 'Zekrom', 'Draculedge', 'Iron Blaster',
 		],
 		onValidateTeam(team) {
 			const itemTable = new Set<ID>();
