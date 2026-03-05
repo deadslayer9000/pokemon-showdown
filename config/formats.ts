@@ -65,7 +65,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'Iron Valiant', 'Kangaskhan-Mega', 'Kartana', 'Keldeo', 'Kingambit', 'Koraidon', 'Kyogre', 'Kyurem', 'Kyurem-Black', 'Kyurem-White', 'Kyurem-Original', 'Lucario-Mega', 'Lugia', 'Lunala', 
 			'Magearna', 'Marshadow', 'Melmetal', 'Mewthree', 'Mewtwo', 'Miraidon', 'Naganadel', 'Necrozma-Dusk-Mane', 'Necrozma-Dawn-Wings', 'Noivern', 'Palkia', 'Palkia-Origin', 'Pheromosa', 'Raging Bolt', 
 			'Rayquaza', 'Regigigas', 'Reshiram', 'Rising Phoenix', 'Salamence-Mega', 'Shaymin-Sky', 'Shedinja', 'Slaking', 'Sneasler', 'Spectrier', 'Urshifu', 'Urshifu-Rapid-Strike',
-			'Weavile', 'Whirling Abyss', 'Wisphir', 'Xerneas', 'Xurkitree', 'Yveltal', 'Zacian', 'Zacian-Crowned', 'Zekrom', 'Zeraora', 'Zygarde-50%', 'King\'s Rock', 'Light Clay', 'Quick Claw' 	  
+			'Weavile', 'Whirling Abyss', 'Wisphir', 'Xerneas', 'Xurkitree', 'Yveltal', 'Zacian', 'Zacian-Crowned', 'Zekrom', 'Zeraora', 'Zygarde-50%', 'King\'s Rock', 'Light Clay', 'Quick Claw', 'Magoodra' 	  
 		]
 	},
 	{
@@ -77,16 +77,16 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'Calyrex-Shadow', 'Koraidon', 'Kyogre', 'Miraidon', 'Moody', 'Shadow Tag', 'Beedrillite', 'Blazikenite', 'Gengarite',
 			'Kangaskhanite', 'Lucarionite Z','Mawilite', 'Medichamite', 'Pidgeotite', 'Red Orb', 'Baton Pass',
 			'Shed Tail', 'Kyurem-Original', 'Mewthree', 'Heracronite', 'Klocktowlite', 'Delta Chimechite', 'Necromausite', 'Diancite', 'Sapphire Diancite', 'Ruby Diancite',
-			'Flygonite', 'Raichunite Y', 'Absolite Z', 'Meganiumite', 'Hawluchanite', 
+			'Flygonite', 'Raichunite Y', 'Absolite Z', 'Meganiumite', 'Hawluchanite', 'Illusory Sword', 'Delta Steelixite', 'Emboarite',
 			//not in game
 			'Barbaracite', 'Baxcalibrite', 'Chimechite', 'Clefablite', 'Crabominite', 'Darkranite', 'Drampanite', 'Eelektrossite', 'Excadrite', 'Falinksite', 'Floettite',
-			'Froslassite', 'Garchompite Z', 'Glimmoranite', 'Golisopite', 'Golurkite', 'Heatranite', 'Magearnite', 'Malamarite', 'Meowsticite', 'Pyroarite', 'Scolipite', 'Scovillainite', 'Scraftinite', 'Staraptite', 'Starminite', 'Tatsugirinite', 'Victreebelite', 'Zeraorite', 'Zygardite', 'Illusory Sword',
+			'Froslassite', 'Garchompite Z', 'Glimmoranite', 'Golisopite', 'Golurkite', 'Heatranite', 'Magearnite', 'Malamarite', 'Meowsticite', 'Pyroarite', 'Scolipite', 'Scovillainite', 'Scraftinite', 'Staraptite', 'Starminite', 'Tatsugirinite', 'Victreebelite', 'Zeraorite', 'Zygardite', 
 		],
 		restricted: [
 			'Arceus', 'Basculegion-M', 'Calyrex-Ice', 'Ceruledge', 'Deoxys-Normal', 'Deoxys-Attack', 'Dialga', 'Eternatus', 'Flutter Mane',
 			'Gengar', 'Gholdengo', 'Giratina', 'Gouging Fire', 'Groudon', 'Ho-Oh', 'Iron Bundle', 'Kyurem-Black', 'Kyurem-White', 'Lugia',
 			'Lunala', 'Manaphy', 'Mewtwo', 'Necrozma-Dawn-Wings', 'Necrozma-Dusk-Mane', 'Palkia', 'Rayquaza', 'Regigigas', 'Reshiram',
-			'Slaking', 'Sneasler', 'Solgaleo', 'Ursaluna-Bloodmoon', 'Urshifu-Single-Strike', 'Urshifu-Flash-Strike', 'Walking Wake', 'Zacian', 'Zapeon', 'Zekrom', 'Draculedge', 'Iron Blaster', 
+			'Slaking', 'Sneasler', 'Solgaleo', 'Ursaluna-Bloodmoon', 'Urshifu-Single-Strike', 'Urshifu-Flash-Strike', 'Walking Wake', 'Zacian', 'Zapeon', 'Zekrom', 'Draculedge', 'Iron Blaster', 'Aspearunt', 
 		],
 		onValidateTeam(team) {
 			const itemTable = new Set<ID>();
