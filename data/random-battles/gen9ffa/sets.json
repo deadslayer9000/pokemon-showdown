@@ -2475,6 +2475,8 @@
             {
                 "role": "Bulky Setup",
                 "movepool": ["Calm Mind", "Stored Power", "Recover", "Ice Beam", "Alluring Voice", "Mystical Fire"],
+                "abilities": ["Levitate"],
+                "teraTypes": ["Steel"]
             }
         ]
     },
@@ -2502,7 +2504,7 @@
                 "role": "Wallbreaker",
                 "movepool": ["Luster Purge", "Draco Meteor", "Flip Turn", "Aura Sphere", "Mystical Fire", "Ice Beam", "Earthquake"],
                 "abilities": ["Levitate"],
-                "teraTypes": ["Steel"],
+                "teraTypes": ["Steel"]
             }
         ]
     },
