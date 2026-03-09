@@ -5506,6 +5506,11 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				return priority + 1;
 			}
 		},
+		onModifyCritRatio(critRatio, pokemon, target, move) {
+			if (move.flags["sound"]) {
+				return critRatio + 1;
+			}
+		},
 		onTryHit(target, source, move) {
 			if (target !== source && move.flags["sound"]) {
 				this.add("-immune", target, "[from] ability: Performer");

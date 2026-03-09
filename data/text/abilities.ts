@@ -1495,7 +1495,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	performer: {
 		name: "Performer",
-		shortDesc: "Dance moves used by this pokemon gain +1 priority.",
+		shortDesc: "User is immune to sound moves; Sound moves: +1 crit ratio; Dance moves: +1 priority.",
+		desc: "This Pokemon is immune from sound moves from both opponents and allies. Sound moves used by this Pokemon gain increased critical hit chance, and dance moves used by this Pokemon gain increased priority.",
 	},
 	perishbody: {
 		name: "Perish Body",
