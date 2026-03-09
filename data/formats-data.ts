@@ -5558,6 +5558,10 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		doublesTier: "DOU",
 		natDexTier: "OU",
 	},
+	glimmoramega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	shroodle: {
 		tier: "LC",
 	},

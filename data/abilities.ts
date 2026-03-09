@@ -5506,6 +5506,11 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				return priority + 1;
 			}
 		},
+		onModifyCritRatio(critRatio, pokemon, target, move) {
+			if (move.flags["sound"]) {
+				return critRatio + 1;
+			}
+		},
 		onTryHit(target, source, move) {
 			if (target !== source && move.flags["sound"]) {
 				this.add("-immune", target, "[from] ability: Performer");
@@ -9347,7 +9352,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		flags: {},
 		name: "Tide Sigil",
 		rating: 4,
-		num: -78,
+		num: -99,
 	},
 	grimsigil: {
 		onStart(pokemon) {
@@ -9650,7 +9655,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		flags: {},
 		name: "Umbral Surge",
 		rating: 2,
-		num: -91,
+		num: -98,
 	},
 	icebound: {
 		//effectiveness defined in pokemon.ts
