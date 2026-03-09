@@ -9347,7 +9347,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		flags: {},
 		name: "Tide Sigil",
 		rating: 4,
-		num: -78,
+		num: -99,
 	},
 	grimsigil: {
 		onStart(pokemon) {
@@ -9650,7 +9650,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		flags: {},
 		name: "Umbral Surge",
 		rating: 2,
-		num: -91,
+		num: -98,
 	},
 	icebound: {
 		//effectiveness defined in pokemon.ts
