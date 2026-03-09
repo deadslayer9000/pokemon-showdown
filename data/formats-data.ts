@@ -5755,7 +5755,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	walkingwake: {
 		tier: "OU",
 		doublesTier: "DOU",
-		natDexTier: "OU",
+		natDexTier: "Uber",
 	},
 	ironleaves: {
 		tier: "RUBL",
