@@ -7999,9 +7999,15 @@
         "sets": [
             {
                 "role": "Choice Item User",
-                "movepool": ["Seed Flare", "Magical Leaf", "Double-Edge"],
+                "movepool": ["Seed Flare", "Magical Leaf", "Double-Edge", "Flail"],
                 "abilities": ["Fabled"],
                 "teraTypes": ["Steel", "Water"]
+            },
+            {
+                "role": "Fast Attacker",
+                "movepool": ["Seed Flare", "Magical Leaf", "Double-Edge", "Leech Seed"],
+                "abilities": ["Fabled"],
+                "teraTypes": ["Grass", "Normal"]
             }
         ]
     },
