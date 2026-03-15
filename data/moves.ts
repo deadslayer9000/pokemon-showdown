@@ -12755,10 +12755,6 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				case "Ogerpon-Stormpeak-Tera":
 					move.type = "Electric";
 					break;
-				case "Ogerpon-Shadowcrest":
-				case "Ogerpon-Shadowcrest-Tera":
-					move.type = "Ghost";
-					break;
 			}
 		},
 		secondary: null,
