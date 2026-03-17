@@ -28298,8 +28298,6 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		onHit(target, source, move) {
 			let dice = this.random(5);
 			let dice2 = this.random(5);
-			this.hint(`dice1: ${dice}`);
-			this.hint(`dice2: ${dice2}`);
 			if (dice > 2){
 				switch (dice2){
 					case 0:
