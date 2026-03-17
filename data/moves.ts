@@ -27930,12 +27930,32 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		category: "Physical",
 		name: "Wormhole Rush",
 		pp: 1,
-		priority: -6,
+		priority: 0,
 		flags: {},
-		isZ: "atomslakothiumz",
 		forceSwitch: true,
 		target: "normal",
 		type: "Psychic",
+	},
+	wormholerushdown: { //wow its like exalted brew but AGAIN
+		//delta source code CANNOT leak faster
+		num: -110, 
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Wormhole Rushdown",
+		pp: 1,
+		priority: -6,
+		isZ: "atomslakothiumz",
+		flags: {},
+		onTryHit(target, pokemon) {
+			let move = "wormholerush";
+			this.actions.useMove(move, pokemon);
+			return null;
+		},
+		callsMove: true,
+		secondary: null,
+		target: "self",
+		type: "Psychic", 
 	},
 	beastmine: {
 		num: -111,
@@ -27979,7 +27999,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		basePower: 20,
 		category: "Physical",
 		name: "Divine Volley",
-		pp: 16, 
+		pp: 10, 
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		multihit: 6,
@@ -28020,8 +28040,8 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				}
 			},
 			onAnyModifyDamage(damage, source, target, move){
-				if (target.volatiles["divineparry"]?.gotHit) {
-					return this.chainModify([2732,4096]);
+				if (target.volatiles["divineparry"]) {
+					return this.chainModify(0.5);
 				}
 			},
 		},

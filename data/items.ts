@@ -401,6 +401,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 			return !item.megaStone || (!item.megaStone[source.baseSpecies.name] &&
 				!Object.values(item.megaStone).includes(source.baseSpecies.name));
 		},
+		itemUser: ["Gallade-ATOM"],
 		num: -35,
 	},
 	atomgardevoirite: {
@@ -411,13 +412,14 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 			return !item.megaStone || (!item.megaStone[source.baseSpecies.name] &&
 				!Object.values(item.megaStone).includes(source.baseSpecies.name));
 		},
+		itemUser: ["Gardevoir-ATOM"],
 		num: -36,
 	},
 	atomslakothiumz: {
 		name: "Atom Slakothium Z",
 		spritenum: 641,
 		onTakeItem: false,
-		zMove: "Wormhole Rush",
+		zMove: "Wormhole Rushdown",
 		zMoveFrom: "Teleport",
 		itemUser: ["Slakoth-ATOM"],
 		num: -34,
