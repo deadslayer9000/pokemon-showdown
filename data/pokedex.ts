@@ -21944,7 +21944,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		num: 381,
 		name: "Latios-Delta-Mega",
 		baseSpecies: "Latios-Delta",
-		forme: "Delta-Mega"
+		forme: "Delta-Mega",
 		types: ["Dragon", "Fairy"],
 		gender: "M",
 		baseStats: { hp: 80, atk: 155, def: 115, spa: 140, spd: 100, spe: 110 },
@@ -21988,7 +21988,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		num: 208,
 		name: "Steelix-Delta-Mega",
 		baseSpecies: "Steelix-Delta",
-		forme: "Delta-Mega"
+		forme: "Delta-Mega",
 		types: ["Ground", "Psychic"],
 		baseStats: { hp: 85, atk: 65, def: 65, spa: 135, spd: 230, spe: 30 },
 		abilities: { 0: "Planar Collapse" },
@@ -22554,7 +22554,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		num: 428,
 		name: "Lopunny-Delta-Mega",
 		baseSpecies: "Lopunny-Delta",
-		forme: "Delta-Mega"
+		forme: "Delta-Mega",
 		types: ["Dark", "Fighting"],
 		baseStats: { hp: 68, atk: 100, def: 76, spa: 95, spd: 112, spe: 129 },
 		abilities: { 0: "Fatalize" },
@@ -22637,7 +22637,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		num: 392,
 		name: "Infernape-Delta-Mega",
 		baseSpecies: "Infernape-Delta",
-		forme: "Delta-Mega"
+		forme: "Delta-Mega",
 		types: ["Electric", "Fighting"],
 		baseStats: { hp: 73, atk: 125, def: 114, spa: 107, spd: 104, spe: 111 },
 		abilities: { 0: "Monarch's Pole" },
@@ -23493,7 +23493,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		num: 612,
 		name: "Haxorus-Delta-Mega",
 		baseSpecies: "Haxorus-Delta",
-		forme: "Delta-Mega"
+		forme: "Delta-Mega",
 		types: ["Dragon", "Fire"],
 		baseStats: { hp: 76, atk: 154, def: 125, spa: 108, spd: 98, spe: 79 },
 		abilities: { 0: "Ragnarok" },
@@ -24190,7 +24190,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		weightkg: 210.5,
 		color: "Black",
 		eggGroups: ["Monster", "Dragon"],
-		forme: "Delta-Mega"
+		forme: "Delta-Mega",
 		baseSpecies: "Charizard-Delta",
 		requiredItem: "Delta Charizardite",
 	},
@@ -25927,7 +25927,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "White",
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Delta Keldeonite",
-		forme: "Delta-Mega"
+		forme: "Delta-Mega",
 	},
 	chimechodeltamega: {
 		num: 358,
@@ -25941,7 +25941,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Pink",
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Delta Chimechite",
-		forme: "Delta-Mega"
+		forme: "Delta-Mega",
 	},
 	klocktowlmega: {
 		num: 2029, 
@@ -25969,7 +25969,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Brown",
 		eggGroups: ["Mineral"],
 		requiredItem: "Delta Metagrossite",
-		forme: "Delta-Mega"
+		forme: "Delta-Mega",
 	},
 	draculedge: {
 		num: 2122,
