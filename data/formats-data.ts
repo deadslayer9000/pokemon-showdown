@@ -6712,6 +6712,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	meloettadelta: {
 		tier: "UU",
 	},
+	meloettadeltaallegro: {
+		tier: "Illegal",
+	},
 	perrception: {
 		tier: "RU",
 	},
