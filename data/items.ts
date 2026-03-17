@@ -384,6 +384,46 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		num: 640,
 		gen: 6,
 	},
+	atomdustoxiumz: {
+		name: "Atom Dustoxium Z",
+		spritenum: 646,
+		onTakeItem: false,
+		zMove: "Complete Takeover",
+		zMoveFrom: "Dark Pulse",
+		itemUser: ["Dustox-ATOM"],
+		num: -33,
+	},
+	atomgalladite: {
+		name: "Atom Galladite",
+		spritenum: 616,
+		megaStone: { "Gallade-ATOM": "Gallade-ATOM-Mega" },
+		onTakeItem(item, source) {
+			return !item.megaStone || (!item.megaStone[source.baseSpecies.name] &&
+				!Object.values(item.megaStone).includes(source.baseSpecies.name));
+		},
+		itemUser: ["Gallade-ATOM"],
+		num: -35,
+	},
+	atomgardevoirite: {
+		name: "Atom Gardevoirite",
+		spritenum: 587,
+		megaStone: { "Gardevoir-ATOM": "Gardevoir-ATOM-Mega" },
+		onTakeItem(item, source) {
+			return !item.megaStone || (!item.megaStone[source.baseSpecies.name] &&
+				!Object.values(item.megaStone).includes(source.baseSpecies.name));
+		},
+		itemUser: ["Gardevoir-ATOM"],
+		num: -36,
+	},
+	atomslakothiumz: {
+		name: "Atom Slakothium Z",
+		spritenum: 641,
+		onTakeItem: false,
+		zMove: "Wormhole Rushdown",
+		zMoveFrom: "Teleport",
+		itemUser: ["Slakoth-ATOM"],
+		num: -34,
+	},
 	audinite: {
 		name: "Audinite",
 		spritenum: 617,

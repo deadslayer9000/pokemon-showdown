@@ -27903,5 +27903,150 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		},
 		target: "normal",
 		type: "Dragon",
-	}
+	},
+	completetakeover: {
+		num: -109,
+		accuracy: true,
+		basePower: 185,
+		category: "Special",
+		name: "Complete Takeover",
+		pp: 1,
+		priority: 0,
+		flags: {},
+		isZ: "atomdustoxiumz",
+		secondary: {
+			chance: 100,
+			onHit(target, source, move) {
+				target.addVolatile("confusion", source, move);
+			},
+		},
+		target: "normal",
+		type: "Dark",
+	},
+	wormholerush: {
+		num: -110,
+		accuracy: true,
+		basePower: 180,
+		category: "Physical",
+		name: "Wormhole Rush",
+		pp: 1,
+		priority: 0,
+		flags: {},
+		forceSwitch: true,
+		target: "normal",
+		type: "Psychic",
+	},
+	wormholerushdown: { //wow its like exalted brew but AGAIN
+		//delta source code CANNOT leak faster
+		num: -110, 
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Wormhole Rushdown",
+		pp: 1,
+		priority: -6,
+		isZ: "atomslakothiumz",
+		flags: {},
+		onTryHit(target, pokemon) {
+			let move = "wormholerush";
+			this.actions.useMove(move, pokemon);
+			return null;
+		},
+		callsMove: true,
+		secondary: null,
+		target: "self",
+		type: "Psychic", 
+	},
+	beastmine: {
+		num: -111,
+		accuracy: 100,
+		basePower: 150,
+		category: "Special",
+		name: "Beast Mine",
+		pp: 5,
+		priority: -3,
+		flags: {protect: 1, failmefirst: 1, failcopycat: 1, nosleeptalk: 1, noassist: 1, failinstruct: 1},
+		priorityChargeCallback(pokemon) {
+			pokemon.addVolatile("beastmine");
+		},
+		onBasePower(basePower, pokemon) {
+			if (!pokemon.volatiles["beastmine"]?.gotHit) {
+				return this.chainModify(0.5);
+			}
+		},	
+		condition: {
+			duration: 1,
+			onStart(pokemon) {
+				this.add("-singleturn", pokemon, "move: Beast Mine");
+			},
+			onHit(pokemon, source, move) {
+				if (!pokemon.isAlly(source) && move.category === "Physical") {
+					this.effectState.gotHit = true;
+					const action = this.queue.willMove(pokemon);
+					if (action) {
+						this.queue.prioritizeAction(action);
+					}
+				}
+			},
+		},
+		secondary: null,
+		target: "allAdjacentFoes",
+		type: "Poison",
+	},
+	divinevolley: {
+		num: -112,
+		accuracy: 95,
+		basePower: 20,
+		category: "Physical",
+		name: "Divine Volley",
+		pp: 10, 
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		multihit: 6,
+		multiaccuracy: true,
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+	},
+	divineparry: {
+		num: -113,
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Divine Parry",
+		pp: 5,
+		priority: -3,
+		flags: {protect: 1, failmefirst: 1, failcopycat: 1, nosleeptalk: 1, noassist: 1, failinstruct: 1},
+		priorityChargeCallback(pokemon) {
+			pokemon.addVolatile("divineparry");
+		},
+		onBasePower(basePower, pokemon) {
+			if (!pokemon.volatiles["divineparry"]?.gotHit) {
+				return this.chainModify([3071, 4096]);
+			}
+		},	
+		condition: {
+			duration: 1,
+			onStart(pokemon) {
+				this.add("-singleturn", pokemon, "move: Divine Parry");
+			},
+			onHit(pokemon, source, move) {
+				if (!pokemon.isAlly(source) && move.category != "Status") {
+					this.effectState.gotHit = true;
+					const action = this.queue.willMove(pokemon);
+					if (action) {
+						this.queue.prioritizeAction(action);
+					}
+				}
+			},
+			onAnyModifyDamage(damage, source, target, move){
+				if (target.volatiles["divineparry"]) {
+					return this.chainModify(0.5);
+				}
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Flying",
+	},
 };
