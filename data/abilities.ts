@@ -9798,6 +9798,18 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 2.5,
 		num: -96,
 	},
+	torquestep: {
+		onBasePowerPriority: 21,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags["kick"]) {
+				return this.chainModify([5325, 4096]);
+			}
+		},
+		flags: {},
+		name: "Torque Step",
+		rating: 3,
+		num: -97,
+	},
 	// CAP
 	mountaineer: {
 		onDamage(damage, target, source, effect) {

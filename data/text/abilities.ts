@@ -2446,6 +2446,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			shortDesc: "At 1/3 or less of its max HP, this Pokemon's Water-type attacks have 1.5x power.",
 		},
 	},
+	torquestep: {
+		name: "Torque Step",
+		shortDesc: "This Pokemon's Kicking moves have their power multiplied by 1.3.",
+	},
 	toughclaws: {
 		name: "Tough Claws",
 		shortDesc: "This Pokemon's contact moves have their power multiplied by 1.3.",
