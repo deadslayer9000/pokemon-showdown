@@ -28270,6 +28270,23 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		secondary: null,
 		target: "normal",
 		type: "Ghost",
-	}
-
+	},
+	zenithstorm: {
+		num: -120,
+		accuracy: 100, 
+		basePower: 120,
+		category: "Special",
+		name: "Zenith Storm",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, noassist: 1, failcopycat: 1, failmimic: 1, nosketch: 1},
+		onEffectiveness(typeMod, target, type, move){
+			if(this.activePokemon.name === "Terapagos-ATOM-Cosmic" || target.getMoveHitData(move).typeMod < 0){
+				return 0;
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+	},
 };
