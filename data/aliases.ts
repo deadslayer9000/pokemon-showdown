@@ -1275,7 +1275,7 @@ export const Aliases: import('../sim/dex').AliasesTable = {
 	mag: "Magoodra",
 	magoo: "Magoodra",
 	roto: "Rotogar",
-	
+	ratom: "Tandemaus-ATOM",
 
 	// ultra beast codenames --- ordered by dex number
 	ub01: "Nihilego",

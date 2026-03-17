@@ -64,6 +64,7 @@ interface MoveFlags {
 	sound?: 1; // Has no effect on Pokemon with the Ability Soundproof.
 	wind?: 1; // Activates the Wind Power and Wind Rider Abilities.
 	crescent?: 1; //Delta-specific, all moves that are resisted by and boosted by Delta-Volcarona's Crescent Form.
+	kick?: 1; //Delta-specific, all moves that are boosted by Lopunny-ATOM's Torque Step.
 }
 
 export interface HitEffect {

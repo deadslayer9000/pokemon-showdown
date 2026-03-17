@@ -1151,7 +1151,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Axe Kick",
 		pp: 10,
 		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1, kick: 1 },
 		hasCrashDamage: true,
 		onMoveFail(target, source, move) {
 			this.damage(
@@ -1952,7 +1952,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Blaze Kick",
 		pp: 10,
 		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1, kick: 1 },
 		critRatio: 2,
 		secondary: {
 			chance: 10,
@@ -5307,7 +5307,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Double Kick",
 		pp: 30,
 		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1, kick: 1 },
 		multihit: 2,
 		secondary: null,
 		target: "normal",
@@ -11488,7 +11488,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "High Jump Kick",
 		pp: 10,
 		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1, gravity: 1, metronome: 1 },
+		flags: { contact: 1, protect: 1, mirror: 1, gravity: 1, metronome: 1, kick: 1 },
 		hasCrashDamage: true,
 		onMoveFail(target, source, move) {
 			this.damage(
@@ -12822,7 +12822,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Jump Kick",
 		pp: 10,
 		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1, gravity: 1, metronome: 1 },
+		flags: { contact: 1, protect: 1, mirror: 1, gravity: 1, metronome: 1, kick: 1 },
 		hasCrashDamage: true,
 		onMoveFail(target, source, move) {
 			this.damage(
@@ -13558,7 +13558,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Low Kick",
 		pp: 20,
 		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1, kick: 1 },
 		onTryHit(target, pokemon, move) {
 			if (target.volatiles["dynamax"]) {
 				this.add("-fail", pokemon, "Dynamax");
@@ -13580,7 +13580,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Low Sweep",
 		pp: 20,
 		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1, kick: 1 },
 		secondary: {
 			chance: 100,
 			boosts: {
@@ -14814,7 +14814,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Mega Kick",
 		pp: 5,
 		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1, kick: 1 },
 		secondary: null,
 		target: "normal",
 		type: "Normal",
@@ -19459,7 +19459,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Rolling Kick",
 		pp: 15,
 		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1, kick: 1 },
 		secondary: {
 			chance: 30,
 			volatileStatus: "flinch",
@@ -22874,7 +22874,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Stomp",
 		pp: 20,
 		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1, nonsky: 1, metronome: 1 },
+		flags: { contact: 1, protect: 1, mirror: 1, nonsky: 1, metronome: 1, kick: 1 },
 		secondary: {
 			chance: 30,
 			volatileStatus: "flinch",
@@ -22900,7 +22900,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Stomping Tantrum",
 		pp: 10,
 		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1, kick: 1 },
 		secondary: null,
 		target: "normal",
 		type: "Ground",
@@ -24729,7 +24729,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Thunderous Kick",
 		pp: 10,
 		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1 },
+		flags: { contact: 1, protect: 1, mirror: 1, kick: 1, },
 		secondary: {
 			chance: 100,
 			boosts: {
@@ -25435,7 +25435,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Triple Arrows",
 		pp: 10,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, metronome: 1 },
+		flags: { protect: 1, mirror: 1, metronome: 1, kick: 1 },
 		critRatio: 2,
 		secondaries: [
 			{
@@ -25463,7 +25463,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Triple Axel",
 		pp: 10,
 		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1, kick: 1 },
 		multihit: 3,
 		multiaccuracy: true,
 		secondary: null,
@@ -25515,7 +25515,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Trop Kick",
 		pp: 15,
 		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1, kick: 1 },
 		secondary: {
 			chance: 100,
 			boosts: {
@@ -27922,7 +27922,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		},
 		target: "normal",
 		type: "Dark",
-	},
+	},/*
 	wormholerush: {
 		num: -110,
 		accuracy: true,
@@ -27935,24 +27935,36 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		forceSwitch: true,
 		target: "normal",
 		type: "Psychic",
-	},
-	wormholerushdown: { //wow its like exalted brew but AGAIN
+	},*/
+	wormholerush: { //wow its like exalted brew but AGAIN
 		//delta source code CANNOT leak faster
+		//
+		//more like aegislash delta move but again ;]
 		num: -110, 
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
-		name: "Wormhole Rushdown",
+		name: "Wormhole Rush",
 		pp: 1,
 		priority: -6,
 		isZ: "atomslakothiumz",
 		flags: {},
+//		forceSwitch: true,
+		onModifyMove(move, pokemon, target) {
+			if (pokemon.species.name === "Slakoth-ATOM") {
+				move.basePower = 180;
+				move.target = "normal";
+				move.category = "Physical";	
+				move.forceSwitch = true;
+			} 
+		},
+		/*
 		onTryHit(target, pokemon) {
 			let move = "wormholerush";
 			this.actions.useMove(move, pokemon);
 			return null;
-		},
-		callsMove: true,
+		},*/
+		//callsMove: true,
 		secondary: null,
 		target: "self",
 		type: "Psychic", 
@@ -28049,4 +28061,215 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		target: "normal",
 		type: "Flying",
 	},
+	crescentheel: {
+		num: -114,
+		accuracy: 90,
+		basePower: 90,
+		category: "Physical",
+		name: "Crescent Heel",
+		pp: 10,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, kick: 1 },
+		secondary: {
+			chance: 30,
+			volatileStatus: "confusion",
+		},
+		target: "normal",
+		type: "Fairy",
+	},
+	roundhouseeclipse: {
+		num: -115,
+		accuracy: true,
+		basePower: 180,
+		category: "Physical",
+		name: "Roundhouse Eclipse",
+		pp: 1,
+		priority: 0,
+		isZ: "atomlopunniumz",
+		flags: { kick: 1, },
+		secondary: {
+			self: {
+				boosts: {
+					atk: 1,
+				},
+			}
+		},
+		target: "normal",
+		type: "Fairy",
+	},
+	piezoshift: {
+		num: -116,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Piezoshift",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		secondary: null,
+		target: "self",
+		type: "Electric",
+		onHit(target) {
+			let success = false;
+			if (target.boosts.spe > 0 || target.boosts.spa > 0) {
+				let newSpe = target.boosts.spa;
+				let newSpa = target.boosts.spe;
+				let boostDiff = newSpa - newSpe;
+				if (boostDiff > 0) {
+					this.boost({ spa: boostDiff }, target);
+					this.boost({ spe: -boostDiff }, target);
+					this.hint(`${target.name} switched its speed boost (+${newSpa}) with Special Attack boost (+${newSpe})!`);
+					success = true;
+				} else if (boostDiff < 0) {
+					this.boost({ spa: boostDiff }, target);
+					this.boost({ spe: -boostDiff }, target);
+					this.hint(`${target.name} switched its speed boost (+${newSpa}) with Special Attack boost (+${newSpe})!`);
+					success = true;
+				} else {
+					success = false;
+					this.hint(`${target.name} has the same amount of Speed and Special Attack boosts, so Piezoshift failed!`);
+				}
+			} else {
+				this.hint(`Piezoshift failed because ${target.name} has no Speed or Special Attack boosts!`);
+				success = false;
+			}
+			
+			if (!success) return false;
+		},
+		zMove: { boost: { spe: 1 } },
+	},
+	collapsingclubpress: {
+		num: -117,
+		accuracy: true,
+		basePower: 0,
+		category: "Physical",
+		name: "Collapsing Club Press",
+		pp: 1,
+		priority: 0,
+		isZ: "atomwynautiumz",
+		flags: {},
+		damageCallback(pokemon, target) {
+			const damage = pokemon.hp - target.maxhp;
+			this.hint(`${damage}`);
+			return damage;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ice",
+	},
+	ionizedfangs: {
+		num: -118,
+		accuracy: 95,
+		basePower: 85,
+		category: "Physical",
+		name: "Ionized Fangs",
+		pp: 10,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1 },
+		onBasePower(relayVar, source, target, move) {
+			let bp = move.basePower;
+			if (this.field.pseudoWeather.echoedvoice) {
+				bp = move.basePower * 1.5;
+				this.hint(`Ionized Fangs grew in power to ${bp} BP`);
+				return bp;
+			}
+
+			return bp;
+		},
+		onModifyMove(move, pokemon, target) {
+			if (this.field.pseudoWeather.echoedvoice) {
+				move.overrideDefensiveStat = "spd";
+				this.hint(`Ionized Fangs hit on Special Defense!`);
+			}
+		},
+		onTry() {
+			this.field.addPseudoWeather("echoedvoice");
+		},
+		secondary: null,
+		target: "normal",
+		type: "Electric",
+	},
+	beamroulette: {
+		num: -119,
+		accuracy: 90,
+		basePower: 80,
+		category: "Special",
+		name: "Beam Roulette",
+		pp: 20,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		basePowerCallback(pokemon, target, move) {
+			let source = pokemon;
+			let dice = this.random(5);
+			let dice2 = this.random(5);
+			this.hint(`Beam Roulette rolled a ${dice} and a ${dice2}!`);
+			switch (dice) {
+				case 0:
+					move.basePower = move.basePower * 0.5;
+					this.hint(`Beam Roulette's power was halved!`);
+					break;
+				case 1:
+					move.basePower = move.basePower * 2;
+					this.hint(`Beam Roulette's power was doubled!`);
+					break;
+				case 2:
+					switch (dice2) {
+						case 0:
+							this.boost({ atk: 1 }, target);
+							this.hint(`Beam Roulette boosted the target's Attack!`);
+							break;
+						case 1:
+							this.boost({ def: 1 }, target);
+							this.hint(`Beam Roulette boosted the target's Defense!`);
+							break;
+						case 2:
+							this.boost({ spa: 1 }, target);
+							this.hint(`Beam Roulette boosted the target's Special Attack!`);
+							break;
+						case 3:
+							this.boost({ spd: 1 }, target);
+							this.hint(`Beam Roulette boosted the target's Special Defense!`);
+							break;
+						case 4:
+							this.boost({ spe: 1 }, target);
+							this.hint(`Beam Roulette boosted the target's Speed!`);
+							break;
+					}
+					break;
+				case 3:
+					switch (dice2) {
+						case 0:
+							this.boost({ atk: 1 }, source);
+							this.hint(`Beam Roulette boosted ${source.name}'s Attack!`);
+							break;
+						case 1:
+							this.boost({ def: 1 }, source);
+							this.hint(`Beam Roulette boosted ${source.name}'s Defense!`);
+							break;
+						case 2:
+							this.boost({ spa: 1 }, source);
+							this.hint(`Beam Roulette boosted ${source.name}'s Special Attack!`);
+							break;
+						case 3:
+							this.boost({ spd: 1 }, source);
+							this.hint(`Beam Roulette boosted ${source.name}'s Special Defense!`);
+							break;
+						case 4:
+							this.boost({ spe: 1 }, source);
+							this.hint(`Beam Roulette boosted ${source.name}'s Speed!`);
+							break;
+					}
+					break;
+				case 4:
+					move.selfSwitch = true;
+					this.hint(`Beam Roulette caused ${source.name} to switch out!`);
+					break;
+			}
+			return move.basePower;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ghost",
+	}
+
 };

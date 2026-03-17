@@ -1067,6 +1067,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		shortDesc: "Lowers foe's SpAtk and Spe by 1. Switches out.",
 		desc: "Lowers the foe's Special Attack and Speed by 1. This pokemon switches out after use.",
 	},
+	collapsingclubpress: {
+		name: "Collapsing Club Press",
+		shortDesc: "Damage = User's current HP - opponent's max HP.",
+	},
 	collisioncourse: {
 		name: "Collision Course",
 		desc: "Damage is multiplied by 1.3333 if this move is super effective against the target.",
@@ -1286,6 +1290,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Crescent Edge",
 		desc: "Deals damage to the foe based on their Special Defense instead of their Defense.",
 		shortDesc: "Deals damage based on Sp.Def.",
+	},
+	crescentheel: {
+		name: "Crescent Heel",
+		shortDesc: "Deals damage, 30% chance to confuse opponent.",
 	},
 	crimsoncharge: {
 		name: "Crimson Charge",
@@ -3650,6 +3658,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 
 		activate: "  A deluge of ions showers the battlefield!",
 	},
+	ionizedfangs: {
+		name: "Ionized Fangs",
+		shortDesc: "Consecutive hits increase in power and hit on special defense.",
+	},
 	ironcladguard: {
 		name: "Ironclad Guard",
 		shortDesc: "Protects from damaging attacks. Contact -1 Def, Spe.",
@@ -4966,6 +4978,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "This move becomes a physical attack if the user's Attack is greater than its Special Attack, including stat stage changes. This move and its effects ignore the Abilities of other Pokemon.",
 		shortDesc: "Physical if user's Atk > Sp. Atk. Ignores Abilities.",
 	},
+	piezoshift: {
+		name: "Piezoshift",
+		shortDesc: "User switches its speed and SpAtk stat changes."
+	},
 	pikapapow: {
 		name: "Pika Papow",
 		desc: "Power is equal to the greater of (user's Happiness * 2/5), rounded down, or 1.",
@@ -5783,6 +5799,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Rototiller",
 		desc: "Raises the Attack and Special Attack of all grounded Grass-type Pokemon on the field by 1 stage.",
 		shortDesc: "Raises Atk/Sp. Atk of grounded Grass types by 1.",
+	},
+	roudhouseeclipse: {
+		name: "Roudhouse Eclipse",
+		shortDesc: "Deals damage and raises users Atk by 1.",
 	},
 	round: {
 		name: "Round",
