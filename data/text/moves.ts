@@ -1067,6 +1067,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		shortDesc: "Lowers foe's SpAtk and Spe by 1. Switches out.",
 		desc: "Lowers the foe's Special Attack and Speed by 1. This pokemon switches out after use.",
 	},
+	collapsingclubpress: {
+		name: "Collapsing Club Press",
+		shortDesc: "Damage = User's current HP - opponent's max HP.",
+	},
 	collisioncourse: {
 		name: "Collision Course",
 		desc: "Damage is multiplied by 1.3333 if this move is super effective against the target.",
@@ -3653,6 +3657,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		shortDesc: "Normal moves become Electric type this turn.",
 
 		activate: "  A deluge of ions showers the battlefield!",
+	},
+	ionizedfangs: {
+		name: "Ionized Fangs",
+		shortDesc: "Consecutive hits increase in power and hit on special defense.",
 	},
 	ironcladguard: {
 		name: "Ironclad Guard",
