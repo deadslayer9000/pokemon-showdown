@@ -28166,7 +28166,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		pp: 10,
 		priority: 0,
 		flags: { contact: 1, protect: 1, mirror: 1 },
-		basePowerCallback(pokemon, target, move) {
+		onBasePower(relayVar, source, target, move) {
 			let bp = move.basePower;
 			if (this.field.pseudoWeather.echoedvoice) {
 				bp = move.basePower * 1.5;
@@ -28182,6 +28182,9 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				this.hint(`Ionized Fangs hit on Special Defense!`);
 			}
 		},
+		onTry() {
+			this.field.addPseudoWeather("echoedvoice");
+		},
 		secondary: null,
 		target: "normal",
 		type: "Electric",
@@ -28195,9 +28198,11 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		pp: 20,
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
-		onHit(target, source, move) {
+		basePowerCallback(pokemon, target, move) {
+			let source = pokemon;
 			let dice = this.random(5);
 			let dice2 = this.random(5);
+			this.hint(`Beam Roulette rolled a ${dice} and a ${dice2}!`);
 			switch (dice) {
 				case 0:
 					move.basePower = move.basePower * 0.5;
@@ -28260,6 +28265,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					this.hint(`Beam Roulette caused ${source.name} to switch out!`);
 					break;
 			}
+			return move.basePower;
 		},
 		secondary: null,
 		target: "normal",
