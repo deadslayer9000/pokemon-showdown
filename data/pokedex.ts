@@ -26070,7 +26070,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	gardevoiratommega: {
 		num: 282, 
 		name: "Gardevoir-ATOM-Mega",
-		baseSpecies: "Gardervoir-ATOM",
+		baseSpecies: "Gardevoir-ATOM",
 		types: ["Fairy", "Flying"],
 		gender: "N",
 		baseStats: { hp: 66, atk: 120, def: 105, spa: 66, spd: 105, spe: 66 },
