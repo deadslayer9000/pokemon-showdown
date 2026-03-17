@@ -1287,6 +1287,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Deals damage to the foe based on their Special Defense instead of their Defense.",
 		shortDesc: "Deals damage based on Sp.Def.",
 	},
+	crescentheel: {
+		name: "Crescent Heel",
+		shortDesc: "Deals damage, 30% chance to confuse opponent.",
+	},
 	crimsoncharge: {
 		name: "Crimson Charge",
 		shortDesc: "Has a 30% chance to burn the target.",
@@ -4966,6 +4970,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "This move becomes a physical attack if the user's Attack is greater than its Special Attack, including stat stage changes. This move and its effects ignore the Abilities of other Pokemon.",
 		shortDesc: "Physical if user's Atk > Sp. Atk. Ignores Abilities.",
 	},
+	piezoshift: {
+		name: "Piezo Shift",
+		shortDesc: "User switches its speed and SpAtk stat changes."
+	},
 	pikapapow: {
 		name: "Pika Papow",
 		desc: "Power is equal to the greater of (user's Happiness * 2/5), rounded down, or 1.",
@@ -5783,6 +5791,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Rototiller",
 		desc: "Raises the Attack and Special Attack of all grounded Grass-type Pokemon on the field by 1 stage.",
 		shortDesc: "Raises Atk/Sp. Atk of grounded Grass types by 1.",
+	},
+	roudhouseeclipse: {
+		name: "Roudhouse Eclipse",
+		shortDesc: "Deals damage and raises users Atk by 1.",
 	},
 	round: {
 		name: "Round",

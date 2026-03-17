@@ -419,7 +419,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		name: "Atom Slakothium Z",
 		spritenum: 641,
 		onTakeItem: false,
-		zMove: "Wormhole Rushdown",
+		zMove: "Wormhole Rush",
 		zMoveFrom: "Teleport",
 		itemUser: ["Slakoth-ATOM"],
 		num: -34,
