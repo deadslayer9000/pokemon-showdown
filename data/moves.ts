@@ -28082,7 +28082,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		accuracy: true,
 		basePower: 180,
 		category: "Physical",
-		name: "Wormhole Rush",
+		name: "Roundhouse Eclipse",
 		pp: 1,
 		priority: 0,
 		isZ: "atomlopunniumz",

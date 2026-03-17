@@ -415,6 +415,15 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		itemUser: ["Gardevoir-ATOM"],
 		num: -36,
 	},
+	atomlopunniumz: {
+		name: "Atom Lopunnium Z",
+		spritenum: 648,
+		onTakeItem: false,
+		zMove: "Roundhouse Eclipse",
+		zMoveFrom: "Crescent Heel",
+		itemUser: ["Lopunny-ATOM"],
+		num: -37,
+	},
 	atomslakothiumz: {
 		name: "Atom Slakothium Z",
 		spritenum: 641,
@@ -423,6 +432,15 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		zMoveFrom: "Teleport",
 		itemUser: ["Slakoth-ATOM"],
 		num: -34,
+	},
+	atomwynautiumz: {
+		name: "Atom Wynautium Z",
+		spritenum: 636,
+		onTakeItem: false,
+		zMove: "Collapsing Club Press",
+		zMoveFrom: "Ice Hammer",
+		itemUser: ["Wynaut-ATOM"],
+		num: -38,
 	},
 	audinite: {
 		name: "Audinite",
