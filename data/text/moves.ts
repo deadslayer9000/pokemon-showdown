@@ -4971,7 +4971,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		shortDesc: "Physical if user's Atk > Sp. Atk. Ignores Abilities.",
 	},
 	piezoshift: {
-		name: "Piezo Shift",
+		name: "Piezoshift",
 		shortDesc: "User switches its speed and SpAtk stat changes."
 	},
 	pikapapow: {

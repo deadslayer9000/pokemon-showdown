@@ -28088,9 +28088,11 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		isZ: "atomlopunniumz",
 		flags: { kick: 1, },
 		secondary: {
-			boosts: {
-				atk: 1,
-			},
+			self: {
+				boosts: {
+					atk: 1,
+				},
+			}
 		},
 		target: "normal",
 		type: "Fairy",
@@ -28100,7 +28102,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
-		name: "Piezo Shift",
+		name: "Piezoshift",
 		pp: 5,
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
@@ -28109,14 +28111,30 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		type: "Electric",
 		onHit(target) {
 			let success = false;
-			if (target.boosts.spe > 0) {
-				target.boosts.spa += target.boosts.spe;
-				target.boosts.spe = 0;
-				success = true;
+			if (target.boosts.spe > 0 || target.boosts.spa > 0) {
+				let newSpe = target.boosts.spa;
+				let newSpa = target.boosts.spe;
+				let boostDiff = newSpa - newSpe;
+				if (boostDiff > 0) {
+					this.boost({ spa: boostDiff }, target);
+					this.boost({ spe: -boostDiff }, target);
+					this.hint(`${target.name} switched its speed boost (+${newSpa}) with Special Attack boost (+${newSpe})!`);
+					success = true;
+				} else if (boostDiff < 0) {
+					this.boost({ spa: boostDiff }, target);
+					this.boost({ spe: -boostDiff }, target);
+					this.hint(`${target.name} switched its speed boost (+${newSpa}) with Special Attack boost (+${newSpe})!`);
+					success = true;
+				} else {
+					success = false;
+					this.hint(`${target.name} has the same amount of Speed and Special Attack boosts, so Piezoshift failed!`);
+				}
+			} else {
+				this.hint(`Piezoshift failed because ${target.name} has no Speed or Special Attack boosts!`);
+				success = false;
 			}
 			
 			if (!success) return false;
-			this.hint(`${target.name} switched its speed boosts to SpAtk boosts!`);
 		},
 		zMove: { boost: { spe: 1 } },
 	},
