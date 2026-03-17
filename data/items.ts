@@ -433,6 +433,14 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		itemUser: ["Slakoth-ATOM"],
 		num: -34,
 	},
+	atomtandemausiumz: {
+		name: "Atom Tandemausium Z",
+		spritenum: 644,
+		zMove: "Household Trifecta",
+		zMoveFrom: "Beam Roulette",
+		itemUser: ["Tandemaus-ATOM"],
+		num: -39,
+	},
 	atomwynautiumz: {
 		name: "Atom Wynautium Z",
 		spritenum: 636,
