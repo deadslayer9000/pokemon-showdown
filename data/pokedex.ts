@@ -26168,7 +26168,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	terapagosatomgalactic: {
 		num: 1024,
 		name: "Terapagos-ATOM-Galactic",
-		baseSpecies: "Terapagos",
+		baseSpecies: "Terapagos-ATOM",
 		types: ["Normal"],
 		gender: "N",
 		baseStats: { hp: 100, atk: 105, def: 100, spa: 115, spd: 100, spe: 80 },
@@ -26182,7 +26182,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	terapagosatomcosmic: {
 		num: 1024,
 		name: "Terapagos-ATOM-Cosmic",
-		baseSpecies: "Terapagos",
+		baseSpecies: "Terapagos-ATOM-Galactic",
 		types: ["Normal"],
 		gender: "N",
 		baseStats: { hp: 150, atk: 100, def: 115, spa: 140, spd: 115, spe: 80 },
