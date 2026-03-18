@@ -456,7 +456,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		spritenum: 631,
 		onTakeItem: false,
 		zMove: "Universe Expansion",
-		zMoveFrom: "Zenith Storm",
+		zMoveFrom: "Body Slam",
 		itemUser: ["Terapagos-ATOM"],
 		num: -40,
 	},
