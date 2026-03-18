@@ -1704,13 +1704,12 @@ export const commands: Chat.ChatCommands = {
 	opensource(target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox(
-			`Pok&eacute;mon Showdown is open source:<br />` +
+			`Delta Showdown is built off the open source Pokemon Showdown repo.<br />` +
 			`- Language: mostly TypeScript, a little PHP<br />` +
-			`- <a href="https://github.com/smogon/pokemon-showdown/commits/master">What's new?</a><br />` +
-			`- <a href="https://github.com/smogon/pokemon-showdown">Server source code</a><br />` +
-			`- <a href="https://github.com/smogon/pokemon-showdown-client">Client source code</a><br />` +
-			`- <a href="https://github.com/Zarel/Pokemon-Showdown-Dex">Dex source code</a><br />` +
-			`- <a href="https://github.com/smogon/pokemon-showdown-loginserver">Login server source code</a>`
+			`- <a href="https://github.com/deadslayer9000/pokemon-showdown/commits/master/">What's new?</a><br />` +
+			`- <a href="https://github.com/deadslayer9000/pokemon-showdown">Server source code</a><br />` +
+			`- <a href="https://github.com/deadslayer9000/pokemon-showdown-client">Client source code</a><br />` +
+			`- <a href="https://github.com/deadslayer9000/cobblemon-delta-showdown-sprites"> Sprite repo</a><br />` +
 		);
 	},
 	opensourcehelp: [
