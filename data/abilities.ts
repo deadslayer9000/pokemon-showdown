@@ -9873,21 +9873,19 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			}
 		},
 		onModifyMove(move, pokemon, target) {
-			if(pokemon.abilityState.spinurgy === 3 && !move.flags["spin"]){
+			if(pokemon.abilityState.spinurgy> 2 && !move.flags["spin"]){
 				move.flags["spin"] = 1;
 			}
 		},
 		onResidual(target, source, effect) {
+			target.abilityState.spinurgy = (target.abilityState.spinurgy || 0) + 1;
 			let spin = target.abilityState.spinurgy;
-
-			spin = spin + 1;
-			switch (spin){
-				case 1:
-					this.hint(`${target.name} started spinning!`);
-				case 2:
-					this.hint(`${target.name} spins even faster!`);
-				case 3:
-					this.hint(`${target.name} reached its max velocity!`);
+			if(spin === 1) {
+				this.hint(`${target.name} started spinning!`);
+			} else if (spin === 2){ 
+				this.hint(`${target.name} is spinning even faster!`);
+			} else if (spin > 2){
+				this.hint(`${target.name} is spinning at max velocity!`);
 			}
 		},
 		onSwitchOut(pokemon) {
