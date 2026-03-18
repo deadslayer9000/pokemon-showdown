@@ -28364,5 +28364,46 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		secondary: null, 
 		target: "normal",
 		type: "Normal",
-	}
+	},
+	householdtrifecta: {
+		num: -117,
+		accuracy: true,
+		basePower: 180,
+		category: "Special",
+		name: "Household Trifecta",
+		pp: 1,
+		priority: 0,
+		isZ: "atomtandemausiumz",
+		flags: {},
+		onHit(target, source, move) {
+			let dice = this.random(5);
+			let dice2 = this.random(5);
+			if (dice > 2){
+				switch (dice2){
+					case 0:
+							this.boost({ atk: 1 }, source);
+							this.hint(`Household Trifecta boosted ${source.name}'s Attack!`);
+							break;
+						case 1:
+							this.boost({ def: 1 }, source);
+							this.hint(`Household Trifecta boosted ${source.name}'s Defense!`);
+							break;
+						case 2:
+							this.boost({ spa: 1 }, source);
+							this.hint(`Household Trifecta boosted ${source.name}'s Special Attack!`);
+							break;
+						case 3:
+							this.boost({ spd: 1 }, source);
+							this.hint(`Household Trifecta boosted ${source.name}'s Special Defense!`);
+							break;
+						case 4:
+							this.boost({ spe: 1 }, source);
+							this.hint(`Household Trifecta boosted ${source.name}'s Speed!`);
+							break;
+				}
+			}
+		},
+		type: "Ghost",
+		target: "normal",
+	},
 };
