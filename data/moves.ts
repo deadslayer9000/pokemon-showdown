@@ -28299,7 +28299,6 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		priority: 0,
 		flags: {},
 		isZ: "atomterapagiumz",
-		volatileStatus: "astralbinds",
 		condition: {
 			onStart(target) {
 				if (target.activeTurns && !this.queue.willMove(target)) {
@@ -28324,7 +28323,10 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				}
 			},
 		},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			volatileStatus: "astralbinds",
+		},
 		target: "normal",
 		type: "Normal",
 	},
