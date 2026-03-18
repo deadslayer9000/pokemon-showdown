@@ -28289,4 +28289,5 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		target: "normal",
 		type: "Normal",
 	},
+	
 };

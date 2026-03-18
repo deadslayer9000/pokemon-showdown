@@ -9846,7 +9846,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.name !== "Terapagos-ATOM-Cosmic" && !pokemon.zodiac) return;
 			if (this.field.weather || this.field.terrain) {
-				this.add("-ability", pokemon, "Teraform Zero");
+				this.add("-ability", pokemon, "Zodiac Orbit");
 				this.field.clearWeather();
 				this.field.clearTerrain();
 				pokemon.zodiac = true;
