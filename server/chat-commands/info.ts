@@ -1709,7 +1709,7 @@ export const commands: Chat.ChatCommands = {
 			`- <a href="https://github.com/deadslayer9000/pokemon-showdown/commits/master/">What's new?</a><br />` +
 			`- <a href="https://github.com/deadslayer9000/pokemon-showdown">Server source code</a><br />` +
 			`- <a href="https://github.com/deadslayer9000/pokemon-showdown-client">Client source code</a><br />` +
-			`- <a href="https://github.com/deadslayer9000/cobblemon-delta-showdown-sprites"> Sprite repo</a><br />` +
+			`- <a href="https://github.com/deadslayer9000/cobblemon-delta-showdown-sprites"> Sprite repo</a><br />` 
 		);
 	},
 	opensourcehelp: [
