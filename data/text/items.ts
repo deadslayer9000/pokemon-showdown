@@ -94,6 +94,34 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Assault Vest",
 		shortDesc: "Holder's Sp. Def is 1.5x, but it can only select damaging moves.",
 	},
+	atomdustoxiumz: {
+		name: "Atom Dustoxium Z",
+		shortDesc: "If Held by Dustox-ATOM with Dark Pulse, it can use Complete Takeover",
+	},
+	atomgalladite: {
+		name: "Atom Galladite",
+		shortDesc: "If held by a Gallade-ATOM, this item allows it to Mega Evolve in battle.",
+	},
+	atomgardevoirite: {
+		name: "Atom Gardevoirite",
+		shortDesc: "If held by a Gardevoir-ATOM, this item allows it to Mega Evolve in battle.",
+	},
+	atomlopunniumz: {
+		name: "Atom Lopunnium Z",
+		shortDesc: "If Held by Lopunny-ATOM with Crescent Heel, it can use Roundhouse Eclipse",
+	},
+	atomslakothiumz: {
+		name: "Atom Slakothium Z",
+		shortDesc: "If Held by Slakoth-ATOM with Teleport, it can use Wormhole Rush",
+	},
+	atomtandemausiumz: {
+		name: "Atom Tandemausium Z",
+		shortDesc: "If Held by Tandemaus-ATOM with Beam Roulette, it can use Household Trifecta.",
+	},
+	atomwynautiumz: {
+		name: "Atom Wynautium Z",
+		shortDesc: "If Held by Wynaut-ATOM with Ice Hammer, it can use Collapsing Club Press.",
+	},
 	atomterapagiumz: {
 		name: "Atom Terapagium Z",
 		shortDesc: "If held by Terapagos-ATOM with Zenith Storm, it can use Astral Burst."
