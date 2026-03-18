@@ -1586,10 +1586,14 @@ export class TeamValidator {
 			if (item.id === 'zygardite' && set.ability !== 'Power Construct') {
 				problems.push(`Zygarde holding Zygardite can only Mega Evolve with the Power Construct ability.`);
 			}
-		} else if (species.baseSpecies === 'Terapagos') {
+		} else if (species.baseSpecies === 'Terapagos' && species.forme != "ATOM") {
 			set.species = 'Terapagos';
 			set.ability = 'Tera Shift';
-		} else if (species.battleOnly) {
+		} else if (species.baseSpecies === 'Terapagos-ATOM') {
+			set.species = 'Terapagos-ATOM';
+			set.ability = 'Cosmic Shift';
+		}
+		else if (species.battleOnly) {
 			if (species.requiredAbility && set.ability !== species.requiredAbility) {
 				// Darmanitan-Zen
 				problems.push(`${species.name} transforms in-battle with ${species.requiredAbility}, please fix its ability.`);
