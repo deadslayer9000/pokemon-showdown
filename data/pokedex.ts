@@ -26191,6 +26191,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		weightkg: 6.5,
 		//color: "Blue", no dsc page,
 		eggGroups: ["Undiscovered"],
-		forme: "ATOM-Cosmic"
+		forme: "ATOM-Cosmic",
+		requiredItem: "Cosmic Terapagium Z"
 	},
 };
