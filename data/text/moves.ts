@@ -1581,6 +1581,17 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		activate: " [TARGET] took the Divination attack!",
 
 	},
+	divineparry: {
+		name: "Divine Parry",
+		desc: "On use, this Pokemon enters a focus state. When in the focus state, all damage taken is reduced by 50%. If this Pokemon receives damage during the focus state, it will immediately use Divine Parry. If the Pokemon does not receive damage during the focus state, this attack executes at 3/4 power.",
+		shortDesc: "Has 3/4 power if user is not hit.",
+	},
+	divinevolley: {
+		name: "Divine Volley",
+		desc: "Hits 6 times, each hit having its own accuracy check. The attack ends early if the target avoids a hit. If this move breaks a substitute, the target will receive the remaining hits. This move will always land 6 hits if used with Loaded Dice or Skill Link.",
+		shortDesc: "Hits 6 times.",
+		
+	},
 	dizzypunch: {
 		name: "Dizzy Punch",
 		desc: "Has a 20% chance to confuse the target.",
@@ -2023,7 +2034,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		shortDesc: "100% chance to raise user Speed by 1. High crit.",
 	},
 	etherburst: {
-		name: "Ether Burst (WIP)",
+		name: "Ether Burst",
 		desc: "Ether Burst's type always matches the user's primary type. Ether Burst is Physical when the user's Attack is higher than their Special Attack.",
 		shortDesc: "Type = user's Type, Phys. if Atk > SpA.",
 	},
