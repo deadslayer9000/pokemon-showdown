@@ -7,6 +7,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Abyssal Neigh",
 		shortDesc: "This Pokemon's Sp. Def is raised by 1 stage if it attacks and KOes another Pokemon.",
 	},
+	accretionshell: {
+		name: "Accretion Shell",
+		shortDesc: "STAB moves used against this Pokemon lose their STAB bonus.",
+	},
 	adaptability: {
 		name: "Adaptability",
 		desc: "This Pokemon's moves that match one of its types have a same-type attack bonus (STAB) of 2 instead of 1.5.",
@@ -331,6 +335,11 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	corrosivesurge: {
 		name: "Corrosive Surge",
 		shortDesc: "On switch-in, this Pokemon summons Corrosive Terrain.",
+	},
+	cosmoshift: {
+		name: "Cosmo Shift",
+		shortDesc: "If this Pokemon is Terapagos-ATOM, it transforms into its Galactic form on entry.",
+		transform: "[POKEMON] transformed!"
 	},
 	costar: {
 		name: "Costar",
@@ -2727,7 +2736,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 
 		activate: "  [POKEMON] underwent a heroic transformation!",
 	},
-
+	zodiacorbit: {
+		name: "Zodiac Orbit",
+		shortDesc: "Terapagos-ATOM-Cosmic: Clears weather and terrain. Once per battle.",
+	},
 	// CAP
 	mountaineer: {
 		name: "Mountaineer",

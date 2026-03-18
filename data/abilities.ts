@@ -5386,7 +5386,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		flags: { breakable: 1 },
 		name: "Paragon",
 		rating: 2,
-		num: -97,
+		num: -101,
 	},
 	parasolprayer: {
 		onStart(source) {
@@ -6666,7 +6666,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		flags: { breakable: 1 },
 		name: "Resolute",
 		rating: 3,
-		num: -98
+		num: -102
 	},
 	ripen: {
 		onTryHeal(damage, target, source, effect) {
@@ -9352,7 +9352,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		flags: {},
 		name: "Tide Sigil",
 		rating: 4,
-		num: -99,
+		num: -103,
 	},
 	grimsigil: {
 		onStart(pokemon) {
@@ -9796,7 +9796,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		flags: {},
 		name: "Conviction",
 		rating: 2.5,
-		num: -96,
+		num: -100,
 	},
 	torquestep: {
 		onBasePowerPriority: 21,
@@ -9809,6 +9809,59 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		name: "Torque Step",
 		rating: 3,
 		num: -97,
+	},
+	cosmoshift: {
+		onSwitchInPriority: 2,
+		onSwitchIn(pokemon) {
+			if (pokemon.baseSpecies.baseSpecies !== "Terapagos") return;
+			if (pokemon.species.forme !== "Galactic") {
+				this.add("-activate", pokemon, "ability: Cosmo Shift");
+				pokemon.formeChange("Terapagos-ATOM-Galactic", this.effect, true);
+			}
+		},
+		flags: {
+			failroleplay: 1,
+			noreceiver: 1,
+			noentrain: 1,
+			notrace: 1,
+			failskillswap: 1,
+			cantsuppress: 1,
+			notransform: 1,
+		},
+		name: "Cosmo Shift",
+		rating: 3,
+		num: -103,
+	},
+	accretionshell: {
+		onFoeModifySTAB(stab, source, target, move){
+			if (stab > 1) {
+				return 1;
+			}
+		},
+		name: "Accretion Shell",
+		rating: 3,
+		num: -104,
+	},
+	zodiacorbit: {
+		onStart(pokemon) {
+			if (pokemon.baseSpecies.name !== "Terapagos-ATOM-Cosmic" && !pokemon.zodiac) return;
+			if (this.field.weather || this.field.terrain) {
+				this.add("-ability", pokemon, "Zodiac Orbit");
+				this.field.clearWeather();
+				this.field.clearTerrain();
+				pokemon.zodiac = true;
+			}
+		},
+		flags: {
+			failroleplay: 1,
+			noreceiver: 1,
+			noentrain: 1,
+			notrace: 1,
+			failskillswap: 1,
+		},
+		name: "Zodiac Orbit",
+		rating: 2.5,
+		num: -105,
 	},
 	// CAP
 	mountaineer: {

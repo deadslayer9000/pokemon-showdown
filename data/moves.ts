@@ -28285,46 +28285,84 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		target: "normal",
 		type: "Ghost",
 	},
-	householdtrifecta: {
-		num: -117,
-		accuracy: true,
-		basePower: 180,
+	zenithstorm: {
+		num: -120,
+		accuracy: 100, 
+		basePower: 120,
 		category: "Special",
-		name: "Household Trifecta",
-		pp: 1,
+		name: "Zenith Storm",
+		pp: 5,
 		priority: 0,
-		isZ: "atomtandemausiumz",
-		flags: {},
-		onHit(target, source, move) {
-			let dice = this.random(5);
-			let dice2 = this.random(5);
-			if (dice > 2){
-				switch (dice2){
-					case 0:
-							this.boost({ atk: 1 }, source);
-							this.hint(`Household Trifecta boosted ${source.name}'s Attack!`);
-							break;
-						case 1:
-							this.boost({ def: 1 }, source);
-							this.hint(`Household Trifecta boosted ${source.name}'s Defense!`);
-							break;
-						case 2:
-							this.boost({ spa: 1 }, source);
-							this.hint(`Household Trifecta boosted ${source.name}'s Special Attack!`);
-							break;
-						case 3:
-							this.boost({ spd: 1 }, source);
-							this.hint(`Household Trifecta boosted ${source.name}'s Special Defense!`);
-							break;
-						case 4:
-							this.boost({ spe: 1 }, source);
-							this.hint(`Household Trifecta boosted ${source.name}'s Speed!`);
-							break;
-				}
+		flags: {protect: 1, mirror: 1, noassist: 1, failcopycat: 1, failmimic: 1, nosketch: 1},
+		onEffectiveness(typeMod, target, type, move){
+			if(this.activePokemon?.species.name === "Terapagos-ATOM-Cosmic" || target.getMoveHitData(move).typeMod < 0){
+				return 0;
 			}
 		},
-		type: "Ghost",
+		secondary: null,
 		target: "normal",
+		type: "Normal",
+	},
+	astralburst: {
+		num: -121,
+		accuracy: true,
+		basePower: 195,
+		category: "Special",
+		name: "Astral Burst",
+		pp: 1,
+		priority: 0,
+		flags: {},
+		isZ: "atomterapagiumz",
+		condition: {
+			onStart(target) {
+				if (target.activeTurns && !this.queue.willMove(target)) {
+					this.effectState.duration!++;
+				}
+				this.add("-start", target, "move: Astral Burst");
+			},
+			onResidualOrder: 15,
+			onEnd(target) {
+				this.add("-end", target, "move: Astral Burst");
+			},
+			onTryMove(pokemon, target, move) {
+				if(move.isZ){
+					return false;
+				}
+			},
+			onBeforeMovePriority: 5,
+			onBeforeMove(attacker, defender, move) {
+				if (move.isZ) {
+					this.add('cant', attacker, 'move: Astral Burst', move);
+					return false;
+				}
+			},
+		},
+		secondary: {
+			chance: 100,
+			volatileStatus: "astralburst",
+		},
+		target: "normal",
+		type: "Normal",
+	},
+	universeexpansion: {
+		num: -122,
+		accuracy: true,
+		basePower: 200,
+		category: "Special",
+		name: "Universe Expansion",
+		pp: 1,
+		priority: 0,
+		flags: {},
+		isZ: "cosmicterapagiumz",
+		onAfterMove(pokemon) {
+			this.hint(pokemon.name);
+			if(pokemon.species.name === "Terapagos-ATOM-Galactic") {
+				this.add('-activate', pokemon, 'move: Universe Expansion');
+				pokemon.formeChange("Terapagos-ATOM-Cosmic", null, true);
+			}
+		},
+		secondary: null, 
+		target: "normal",
+		type: "Normal",
 	}
-
 };

@@ -450,6 +450,24 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		itemUser: ["Wynaut-ATOM"],
 		num: -38,
 	},
+	atomterapagiumz: {
+		name: "Atom Terapagium Z",
+		spritenum: 631,
+		onTakeItem: false,
+		zMove: "Astral Burst",
+		zMoveFrom: "Zenith Storm",
+		itemUser: ["Terapagos-ATOM", "Terapagos-ATOM-Galactic"],
+		num: -39,
+	},
+	cosmicterapagiumz: {
+		name: "Cosmic Terapagium Z",
+		spritenum: 631,
+		onTakeItem: false,
+		zMove: "Universe Expansion",
+		zMoveFrom: "Zenith Storm",
+		itemUser: ["Terapagos-ATOM", "Terapagos-ATOM-Galactic"],
+		num: -40,
+	},
 	audinite: {
 		name: "Audinite",
 		spritenum: 617,
@@ -3835,7 +3853,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		itemUser: ["Keldeo"],
 		onTakeItem(item, source) {
 			return !item.megaStone || (!item.megaStone[source.baseSpecies.baseSpecies] &&
-				!Object.values(item.megaStone).includes(source.baseSpecies.bas));
+				!Object.values(item.megaStone).includes(source.baseSpecies.baseSpecies));
 		},
 		num: -31,
 	},
