@@ -1589,11 +1589,10 @@ export class TeamValidator {
 		} else if (species.baseSpecies === 'Terapagos' && species.forme != "ATOM") {
 			set.species = 'Terapagos';
 			set.ability = 'Tera Shift';
-		} else if (species.baseSpecies === 'Terapagos-ATOM') {
+		} else if (species.name === 'Terapagos-ATOM-Galactic' || species.name === 'Terapagos-ATOM-Cosmic') {
 			set.species = 'Terapagos-ATOM';
 			set.ability = 'Cosmic Shift';
-		}
-		else if (species.battleOnly) {
+		} else if (species.battleOnly) {
 			if (species.requiredAbility && set.ability !== species.requiredAbility) {
 				// Darmanitan-Zen
 				problems.push(`${species.name} transforms in-battle with ${species.requiredAbility}, please fix its ability.`);

@@ -9816,7 +9816,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			if (pokemon.baseSpecies.baseSpecies !== "Terapagos") return;
 			if (pokemon.species.forme !== "Galactic") {
 				this.add("-activate", pokemon, "ability: Cosmic Shift");
-				pokemon.formeChange("Terapagos-Galactic", this.effect, true);
+				pokemon.formeChange("Terapagos-ATOM-Galactic", this.effect, true);
 			}
 		},
 		flags: {
