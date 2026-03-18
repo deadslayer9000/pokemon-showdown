@@ -1591,7 +1591,7 @@ export class TeamValidator {
 			set.ability = 'Tera Shift';
 		} else if (species.name === 'Terapagos-ATOM-Galactic' || species.name === 'Terapagos-ATOM-Cosmic') {
 			set.species = 'Terapagos-ATOM';
-			set.ability = 'Cosmic Shift';
+			set.ability = 'Cosmo Shift';
 		} else if (species.battleOnly) {
 			if (species.requiredAbility && set.ability !== species.requiredAbility) {
 				// Darmanitan-Zen
