@@ -436,6 +436,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Beam Roulette",
 		shortDesc: "Deals damage, has many random effects."
 	},
+	beastmine: {
+		name: "Beast Mine",
+		desc: "Sets up a mine at the beginning of the turn, if it is hit by a move it immediately attacks at full power. Otherwise, at the end of the turn this move executes at half power.",
+		shortDesc: "1/2 power if user is not attacked.",
+	},
 	beatup: {
 		name: "Beat Up",
 		desc: "Hits one time for the user and one time for each unfainted Pokemon without a non-volatile status condition in the user's party. The power of each hit is equal to 5+(X/10), where X is each participating Pokemon's base Attack; each hit is considered to come from the user.",
@@ -1081,6 +1086,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	collapsingclubpress: {
 		name: "Collapsing Club Press",
+		desc: "This move deals damage equal to the difference between the user's current HP and the opponent's maximum HP.",
 		shortDesc: "Damage = User's current HP - opponent's max HP.",
 	},
 	collisioncourse: {
@@ -1111,6 +1117,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Comeuppance",
 		desc: "Deals damage to the last opposing Pokemon to hit the user with a physical or special attack this turn equal to 1.5 times the HP lost by the user from that attack, rounded down. If the user did not lose HP from that attack, this move deals 1 HP of damage instead. If that opposing Pokemon's position is no longer in use and there is another opposing Pokemon on the field, the damage is done to it instead. Only the last hit of a multi-hit attack is counted. Fails if the user was not hit by an opposing Pokemon's physical or special attack this turn.",
 		shortDesc: "If hit by an attack, returns 1.5x damage.",
+	},
+	completetakeover: {
+		name: "Complete Takeover",
+		shortDesc: "Confuses target.",
 	},
 	confide: {
 		name: "Confide",
@@ -5007,7 +5017,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	piezoshift: {
 		name: "Piezoshift",
-		shortDesc: "User switches its speed and SpAtk stat changes."
+		desc: "This move swaps the user's Speed and Special Attack stat stages on use.",
+		shortDesc: "User switches its Spe and SpA stat stages.",
 	},
 	pikapapow: {
 		name: "Pika Papow",
@@ -5835,6 +5846,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Round",
 		desc: "If there are other active Pokemon that chose this move for use this turn, those Pokemon take their turn immediately after the user, in Speed order, and this move's power is 120 for each other user.",
 		shortDesc: "Power doubles if others used Round this turn.",
+	},
+	roundhouseeclipse: {
+		name: "Roundhouse Eclipse",
+		shortDesc: "Raises user's Attack by one stage.",
 	},
 	rubystorm: {
 		name: "Ruby Storm",
@@ -8083,6 +8098,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Work Up",
 		desc: "Raises the user's Attack and Special Attack by 1 stage.",
 		shortDesc: "Raises the user's Attack and Sp. Atk by 1.",
+	},
+	wormholerush: {
+		name: "Wormhole Rush",
+		shortDesc: "Switches the target out.",
 	},
 	worryseed: {
 		name: "Worry Seed",
