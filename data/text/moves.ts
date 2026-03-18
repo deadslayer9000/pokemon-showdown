@@ -432,6 +432,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 
 		start: "  [POKEMON] started heating up its beak!",
 	},
+	beamroulette: {
+		name: "Beam Roulette",
+		shortDesc: "Deals damage, has many random effects."
+	},
 	beatup: {
 		name: "Beat Up",
 		desc: "Hits one time for the user and one time for each unfainted Pokemon without a non-volatile status condition in the user's party. The power of each hit is equal to 5+(X/10), where X is each participating Pokemon's base Attack; each hit is considered to come from the user.",
@@ -3388,6 +3392,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Horn Leech",
 		desc: "The user recovers 1/2 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
 		shortDesc: "User recovers 50% of the damage dealt.",
+	},
+	householdtrifecta: {
+		name: "Household Trifecta",
+		shortDesc: "40% chance to get a random stat raise."
 	},
 	howl: {
 		name: "Howl",
