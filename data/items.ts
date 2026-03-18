@@ -3845,7 +3845,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		itemUser: ["Keldeo"],
 		onTakeItem(item, source) {
 			return !item.megaStone || (!item.megaStone[source.baseSpecies.baseSpecies] &&
-				!Object.values(item.megaStone).includes(source.baseSpecies.bas));
+				!Object.values(item.megaStone).includes(source.baseSpecies.baseSpecies));
 		},
 		num: -31,
 	},

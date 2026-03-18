@@ -274,9 +274,9 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Astral Burst",
 		desc: "Causes the target to be afflicted by Astral Binds, making it unable to use Z-Moves.",
 		shortDesc: "Target cannot use Z-Moves.",
-		start: "[POKEMON} is bound by Astral Binds!",
+		start: "[POKEMON] is bound by Astral Binds!",
 		end: "[POKEMON]'s Astral Binds faded.",
-		cant: "[POKEMON]'s cannot use [MOVE] due to the Astral Binds!"
+		cant: "[POKEMON] cannot use [MOVE] due to the Astral Binds!"
 	},
 	attackorder: {
 		name: "Attack Order",

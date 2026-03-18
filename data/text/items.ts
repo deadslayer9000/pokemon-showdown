@@ -94,6 +94,14 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Assault Vest",
 		shortDesc: "Holder's Sp. Def is 1.5x, but it can only select damaging moves.",
 	},
+	atomterapagiumz: {
+		name: "Atom Terapagium Z",
+		shortDesc: "If held by Terapagos-ATOM with Zenith Storm, it can use Astral Burst."
+	},
+	cosmicterapagiumz: {
+		name: "Cosmic Terapagium Z",
+		shortDesc: "If held by Terapagos-ATOM with Zenith Storm, it can use Universe Expansion.",
+	},
 	audinite: {
 		name: "Audinite",
 		shortDesc: "If held by an Audino, this item allows it to Mega Evolve in battle.",
