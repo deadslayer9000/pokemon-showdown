@@ -28325,7 +28325,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		},
 		secondary: {
 			chance: 100,
-			volatileStatus: "astralbinds",
+			volatileStatus: "astralburst",
 		},
 		target: "normal",
 		type: "Normal",
@@ -28341,8 +28341,10 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		flags: {},
 		isZ: "cosmicterapagiumz",
 		onAfterMove(pokemon) {
-			if(pokemon.name === "Terapagos-ATOM-Galactic") {
-				pokemon.formeChange("Terapagos-ATOM-Cosmic");
+			this.hint(pokemon.name);
+			if(pokemon.species.name === "Terapagos-ATOM-Galactic") {
+				this.add('-activate', pokemon, 'move: Universe Expansion');
+				pokemon.formeChange("Terapagos-ATOM-Cosmic", null, true);
 			}
 		},
 		secondary: null, 

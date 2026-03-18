@@ -270,6 +270,14 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "No additional effect.",
 		shortDesc: "No additional effect. Hits adjacent foes.",
 	},
+	astralburst: {
+		name: "Astral Burst",
+		desc: "Causes the target to be afflicted by Astral Binds, making it unable to use Z-Moves.",
+		shortDesc: "Target cannot use Z-Moves.",
+		start: "[POKEMON} is bound by Astral Binds!",
+		end: "[POKEMON]'s Astral Binds faded.",
+		cant: "[POKEMON]'s cannot use [MOVE] due to the Astral Binds!"
+	},
 	attackorder: {
 		name: "Attack Order",
 		desc: "Has a higher chance for a critical hit.",
@@ -7712,6 +7720,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			shortDesc: "20% chance to make the target flinch.",
 		},
 	},
+	universeexpansion: {
+		name: "Universe Expansion",
+		shortDesc: "User transforms into Terapagos-ATOM-Cosmic.",
+		desc: "If this Pokemon is Terapagos-ATOM-Galactic, this Pokemon transforms into Terapagos-ATOM-Cosmic after the move deals damage.",
+	},
 	upperhand: {
 		name: "Upper Hand",
 		desc: "Has a 100% chance to make the target flinch. Fails if the target did not select a priority move for use this turn, or if the target moves before the user.",
@@ -8132,6 +8145,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Zen Headbutt",
 		desc: "Has a 20% chance to make the target flinch.",
 		shortDesc: "20% chance to make the target flinch.",
+	},
+	zenithstorm: {
+		name: "Zenith Storm",
+		desc: "If the user is Terapagos-ATOM-Cosmic, then whenever this move would be resisted or have no effect, it instead deals neutral damage.",
+		shortDesc: "Terapagos-ATOM-Cosmic: Never resisted."
 	},
 	zingzap: {
 		name: "Zing Zap",

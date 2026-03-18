@@ -332,6 +332,11 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Corrosive Surge",
 		shortDesc: "On switch-in, this Pokemon summons Corrosive Terrain.",
 	},
+	cosmoshift: {
+		name: "Cosmo Shift",
+		shortDesc: "If this Pokemon is Terapagos-ATOM, it transforms into its Galactic form on entry.",
+		transform: "[POKEMON] transformed!"
+	},
 	costar: {
 		name: "Costar",
 		shortDesc: "On switch-in, this Pokemon copies all of its ally's stat stage changes.",
