@@ -448,7 +448,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		onTakeItem: false,
 		zMove: "Astral Burst",
 		zMoveFrom: "Zenith Storm",
-		itemUser: ["Terapagos-ATOM"],
+		itemUser: ["Terapagos-ATOM", "Terapagos-ATOM-Galactic"],
 		num: -39,
 	},
 	cosmicterapagiumz: {
@@ -457,7 +457,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		onTakeItem: false,
 		zMove: "Universe Expansion",
 		zMoveFrom: "Body Slam",
-		itemUser: ["Terapagos-ATOM"],
+		itemUser: ["Terapagos-ATOM", "Terapagos-ATOM-Galactic"],
 		num: -40,
 	},
 	audinite: {
