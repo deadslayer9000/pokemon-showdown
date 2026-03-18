@@ -26158,7 +26158,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		types: ["Normal"],
 		gender: "N",
 		baseStats: { hp: 90, atk: 85, def: 70, spa: 85, spd: 70, spe: 50 },
-		abilities: { 0: "Cosmo Shift"},
+		abilities: { 0: "Cosmic Shift"},
 		heightm: 0.2,
 		weightkg: 6.5,
 		//color: "Blue", no dsc page,
@@ -26182,7 +26182,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	terapagosatomcosmic: {
 		num: 1024,
 		name: "Terapagos-ATOM-Cosmic",
-		baseSpecies: "Terapagos-ATOM-Galactic",
+		baseSpecies: "Terapagos-ATOM",
 		types: ["Normal"],
 		gender: "N",
 		baseStats: { hp: 150, atk: 100, def: 115, spa: 140, spd: 115, spe: 80 },
