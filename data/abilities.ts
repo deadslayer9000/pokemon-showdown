@@ -9810,13 +9810,13 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 3,
 		num: -97,
 	},
-	cosmicshift: {
+	cosmoshift: {
 		onSwitchInPriority: 2,
 		onSwitchIn(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== "Terapagos") return;
 			if (pokemon.species.forme !== "Galactic") {
-				this.add("-activate", pokemon, "ability: Cosmic Shift");
-				pokemon.formeChange("Terapagos-Galactic", this.effect, true);
+				this.add("-activate", pokemon, "ability: Cosmo Shift");
+				pokemon.formeChange("Terapagos-ATOM-Galactic", this.effect, true);
 			}
 		},
 		flags: {
@@ -9828,7 +9828,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			cantsuppress: 1,
 			notransform: 1,
 		},
-		name: "Cosmic Shift",
+		name: "Cosmo Shift",
 		rating: 3,
 		num: -103,
 	},
@@ -9846,7 +9846,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.name !== "Terapagos-ATOM-Cosmic" && !pokemon.zodiac) return;
 			if (this.field.weather || this.field.terrain) {
-				this.add("-ability", pokemon, "Teraform Zero");
+				this.add("-ability", pokemon, "Zodiac Orbit");
 				this.field.clearWeather();
 				this.field.clearTerrain();
 				pokemon.zodiac = true;
