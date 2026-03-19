@@ -456,16 +456,16 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		onTakeItem: false,
 		zMove: "Astral Burst",
 		zMoveFrom: "Zenith Storm",
-		itemUser: ["Terapagos-ATOM", "Terapagos-ATOM-Galactic"],
+		itemUser: ["Terapagos-ATOM", "Terapagos-ATOM-Cosmic"],
 		num: -39,
 	},
-	cosmicterapagiumz: {
-		name: "Cosmic Terapagium Z",
+	galacticterapagiumz: {
+		name: "Galactic Terapagium Z",
 		spritenum: 631,
 		onTakeItem: false,
 		zMove: "Universe Expansion",
 		zMoveFrom: "Zenith Storm",
-		itemUser: ["Terapagos-ATOM", "Terapagos-ATOM-Galactic"],
+		itemUser: ["Terapagos-ATOM", "Terapagos-ATOM-Cosmic"],
 		num: -40,
 	},
 	audinite: {

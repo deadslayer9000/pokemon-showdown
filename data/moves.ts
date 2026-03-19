@@ -28355,12 +28355,12 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		pp: 1,
 		priority: 0,
 		flags: {},
-		isZ: "cosmicterapagiumz",
+		isZ: "galacticterapagiumz",
 		onAfterMove(pokemon) {
 			this.hint(pokemon.name);
-			if(pokemon.species.name === "Terapagos-ATOM-Galactic") {
+			if(pokemon.species.name === "Terapagos-ATOM-Cosmic") {
 				this.add('-activate', pokemon, 'move: Universe Expansion');
-				pokemon.formeChange("Terapagos-ATOM-Cosmic", null, true);
+				pokemon.formeChange("Terapagos-ATOM-Galactic", null, true);
 			}
 		},
 		secondary: null, 
