@@ -434,7 +434,13 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	beamroulette: {
 		name: "Beam Roulette",
+		desc: "Random chance to trigger any of the following effects: Doubled Damage, Halved Damage, Random Stat Drop on Target, Random Stat Boost on User, Swap User Out.",
 		shortDesc: "Deals damage, has many random effects."
+	},
+	beastmine: {
+		name: "Beast Mine",
+		desc: "Sets up a mine at the beginning of the turn, if it is hit by a move it immediately attacks at full power. Otherwise, at the end of the turn this move executes at half power.",
+		shortDesc: "1/2 power if user is not attacked.",
 	},
 	beatup: {
 		name: "Beat Up",
@@ -1081,6 +1087,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	collapsingclubpress: {
 		name: "Collapsing Club Press",
+		desc: "This move deals damage equal to the difference between the user's current HP and the opponent's maximum HP.",
 		shortDesc: "Damage = User's current HP - opponent's max HP.",
 	},
 	collisioncourse: {
@@ -1111,6 +1118,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Comeuppance",
 		desc: "Deals damage to the last opposing Pokemon to hit the user with a physical or special attack this turn equal to 1.5 times the HP lost by the user from that attack, rounded down. If the user did not lose HP from that attack, this move deals 1 HP of damage instead. If that opposing Pokemon's position is no longer in use and there is another opposing Pokemon on the field, the damage is done to it instead. Only the last hit of a multi-hit attack is counted. Fails if the user was not hit by an opposing Pokemon's physical or special attack this turn.",
 		shortDesc: "If hit by an attack, returns 1.5x damage.",
+	},
+	completetakeover: {
+		name: "Complete Takeover",
+		shortDesc: "Confuses target.",
 	},
 	confide: {
 		name: "Confide",
@@ -1585,6 +1596,17 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		activate: " [TARGET] took the Divination attack!",
 
 	},
+	divineparry: {
+		name: "Divine Parry",
+		desc: "On use, this Pokemon enters a focus state. When in the focus state, all damage taken is reduced by 50%. If this Pokemon receives damage during the focus state, it will immediately use Divine Parry. If the Pokemon does not receive damage during the focus state, this attack executes at 3/4 power.",
+		shortDesc: "Has 3/4 power if user is not hit.",
+	},
+	divinevolley: {
+		name: "Divine Volley",
+		desc: "Hits 6 times, each hit having its own accuracy check. The attack ends early if the target avoids a hit. If this move breaks a substitute, the target will receive the remaining hits. This move will always land 6 hits if used with Loaded Dice or Skill Link.",
+		shortDesc: "Hits 6 times.",
+		
+	},
 	dizzypunch: {
 		name: "Dizzy Punch",
 		desc: "Has a 20% chance to confuse the target.",
@@ -2027,7 +2049,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		shortDesc: "100% chance to raise user Speed by 1. High crit.",
 	},
 	etherburst: {
-		name: "Ether Burst (WIP)",
+		name: "Ether Burst",
 		desc: "Ether Burst's type always matches the user's primary type. Ether Burst is Physical when the user's Attack is higher than their Special Attack.",
 		shortDesc: "Type = user's Type, Phys. if Atk > SpA.",
 	},
@@ -3676,7 +3698,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	ionizedfangs: {
 		name: "Ionized Fangs",
-		shortDesc: "Consecutive hits increase in power and hit on special defense.",
+		shortDesc: "Consecutive hits increase in power and hit on SpD.",
 	},
 	ironcladguard: {
 		name: "Ironclad Guard",
@@ -4996,7 +5018,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	piezoshift: {
 		name: "Piezoshift",
-		shortDesc: "User switches its speed and SpAtk stat changes."
+		desc: "This move swaps the user's Speed and Special Attack stat stages on use.",
+		shortDesc: "User switches its Spe and SpA stat stages.",
 	},
 	pikapapow: {
 		name: "Pika Papow",
@@ -5338,7 +5361,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	pulsarspiral: {
 		name: "Pulsar Spiral",
-		shortDesc: "10% chance to confuse, 100 base power at max spins",
+		shortDesc: "10% confuse chance, 100 power at max spins.",
 	},
 	purify: {
 		name: "Purify",
@@ -5828,6 +5851,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Round",
 		desc: "If there are other active Pokemon that chose this move for use this turn, those Pokemon take their turn immediately after the user, in Speed order, and this move's power is 120 for each other user.",
 		shortDesc: "Power doubles if others used Round this turn.",
+	},
+	roundhouseeclipse: {
+		name: "Roundhouse Eclipse",
+		shortDesc: "Raises user's Attack by one stage.",
 	},
 	rubystorm: {
 		name: "Ruby Storm",
@@ -8076,6 +8103,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Work Up",
 		desc: "Raises the user's Attack and Special Attack by 1 stage.",
 		shortDesc: "Raises the user's Attack and Sp. Atk by 1.",
+	},
+	wormholerush: {
+		name: "Wormhole Rush",
+		shortDesc: "Switches the target out.",
 	},
 	worryseed: {
 		name: "Worry Seed",
