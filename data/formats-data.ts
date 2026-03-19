@@ -7299,4 +7299,37 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	terapagosatomcosmic: {
 		tier: "Uber"
 	},
+	lotadatom: {
+		tier: "UU",
+	},
+	dustoxatom: {
+		tier: "UU",
+	},
+	gardevoiratom: {
+		tier: "UU",
+	},
+	gardevoiratommega: {
+		tier: "UU",
+	},
+	galladeatom: {
+		tier: "UU",
+	},
+	galladeatommega: {
+		tier: "UU",
+	},
+	slakothatom: {
+		tier: "UU",
+	},
+	amoongussatom: {
+		tier: "UU",
+	},
+	pachirisuatom: {
+		tier: "UU",
+	},
+	wynautatom: {
+		tier: "UU",
+	},
+	tandemausatom: {
+		tier: "UU",
+	},
 };
