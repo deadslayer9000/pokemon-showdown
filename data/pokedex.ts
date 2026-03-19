@@ -26106,7 +26106,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		baseSpecies: "Gardevoir-ATOM",
 		types: ["Fairy", "Flying"],
 		gender: "N",
-		baseStats: { hp: 66, atk: 120, def: 105, spa: 66, spd: 105, spe: 66 },
+		baseStats: { hp: 66, atk: 170, def: 130, spa: 66, spd: 130, spe: 66 },
 		abilities: { 0: "Clear Body"},
 		heightm: 1.5,
 		weightkg: 54.6,
@@ -26227,4 +26227,18 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		forme: "ATOM-Cosmic",
 		requiredItem: "Cosmic Terapagium Z"
 	},
+	spindaatom: {
+		num: 327,
+		name: "Spinda-ATOM",
+		baseSpecies: "Spinda",
+		types: ["Normal", "Dark"],
+		gender: "N",
+		baseStats: { hp: 91, atk: 91, def: 91, spa: 28, spd: 91, spe: 136 },
+		abilities: { 0: "Tangled Feet", H: "Spinurgy" },
+		heightm: 1.1,
+		weightkg: 5.1,
+		//color: "Black", no dsc page,
+		eggGroups: ["Undiscovered"],
+		forme: "ATOM",
+	}
 };

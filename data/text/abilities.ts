@@ -2133,6 +2133,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "This Pokemon's Speed is raised by 1 stage at the end of each full turn it has been on the field.",
 		shortDesc: "This Pokemon's Speed is raised 1 stage at the end of each full turn on the field.",
 	},
+	spinurgy: {
+		name: "Spinurgy",
+		shortDesc: "Spinning moves get stronger with time, after 3 turns all moves are spinning."
+	},
 	stakeout: {
 		name: "Stakeout",
 		shortDesc: "This Pokemon's offensive stat is doubled against a target that switched in this turn.",

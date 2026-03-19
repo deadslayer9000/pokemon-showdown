@@ -9863,6 +9863,39 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 2.5,
 		num: -105,
 	},
+	spinurgy: {
+		onBasePower(relayVar, source, target, move) {
+			if(source.abilityState.spinurgy === 1 && move.flags["spin"]){
+				return this.chainModify([5325, 4096]);
+			}
+			if(source.abilityState.spinurgy > 1 && move.flags["spin"]){
+				return this.chainModify([6144, 4096]);
+			}
+		},
+		onModifyMove(move, pokemon, target) {
+			if(pokemon.abilityState.spinurgy> 2 && !move.flags["spin"]){
+				move.flags["spin"] = 1;
+			}
+		},
+		onResidual(target, source, effect) {
+			target.abilityState.spinurgy = (target.abilityState.spinurgy || 0) + 1;
+			let spin = target.abilityState.spinurgy;
+			if(spin === 1) {
+				this.hint(`${target.name} started spinning!`);
+			} else if (spin === 2){ 
+				this.hint(`${target.name} is spinning even faster!`);
+			} else if (spin > 2){
+				this.hint(`${target.name} is spinning at max velocity!`);
+			}
+		},
+		onSwitchOut(pokemon) {
+			pokemon.abilityState.spinury = 0;
+		},
+		flags: {},
+		name: "Spinurgy",
+		rating: 2.5,
+		num: -106,
+	},
 	// CAP
 	mountaineer: {
 		onDamage(damage, target, source, effect) {

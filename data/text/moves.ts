@@ -5358,6 +5358,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Power is equal to 60+(X*20), where X is the target's total stat stage changes that are greater than 0, but not more than 200 power.",
 		shortDesc: "60 power +20 for each of the target's stat boosts.",
 	},
+	pulsarspiral: {
+		name: "Pulsar Spiral",
+		shortDesc: "10% chance to confuse, 100 base power at max spins",
+	},
 	purify: {
 		name: "Purify",
 		desc: "The target is cured if it has a non-volatile status condition. If the target was cured, the user restores 1/2 of its maximum HP, rounded down.",
