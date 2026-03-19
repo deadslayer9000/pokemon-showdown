@@ -26198,9 +26198,9 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		eggGroups: ["Undiscovered"],
 		forme: "ATOM",
 	},
-	terapagosatomgalactic: {
+	terapagosatomcosmic: {
 		num: 1024,
-		name: "Terapagos-ATOM-Galactic",
+		name: "Terapagos-ATOM-Cosmic",
 		baseSpecies: "Terapagos-ATOM",
 		types: ["Normal"],
 		gender: "N",
@@ -26212,9 +26212,9 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		eggGroups: ["Undiscovered"],
 		forme: "ATOM-Galactic"
 	},
-	terapagosatomcosmic: {
+	terapagosatomgalactic: {
 		num: 1024,
-		name: "Terapagos-ATOM-Cosmic",
+		name: "Terapagos-ATOM-Galactic",
 		baseSpecies: "Terapagos-ATOM",
 		types: ["Normal"],
 		gender: "N",

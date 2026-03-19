@@ -9838,6 +9838,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				return 1;
 			}
 		},
+		flags: { breakable: 1 },
 		name: "Accretion Shell",
 		rating: 3,
 		num: -104,
