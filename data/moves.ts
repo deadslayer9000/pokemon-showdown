@@ -28439,14 +28439,14 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Annihilate",
 		pp: 5,
 		priority: 0,
-		flags: { contact: 1, recharge: 1, protect: 1 },
-		onAfterHit(source, target, move) {
-			if (!target){
-				move.flags.recharge = undefined;
+		flags: { contact: 1, protect: 1 },
+		onHit(target, source, move) {
+			if (!target.hasType("Fairy")) {
+				source.addVolatile("annihilaterecharge");
 			}
 		},
 		type: "Dragon",
 		target: "normal",
 		secondary: null,
-	}
+	},
 };

@@ -376,6 +376,25 @@ export const Conditions: import('../sim/dex-conditions').ConditionDataTable = {
 		},
 		onLockMove: 'recharge',
 	},
+	annihilaterecharge: {
+    	name: 'annihilaterecharge',
+    	duration: 2,
+    	onBeforeMovePriority: 11,
+    	onBeforeMove(pokemon) {
+        	this.add('cant', pokemon, 'recharge');
+        	pokemon.removeVolatile('annihilaterecharge');
+        	return null;
+    	},
+    	onStart() {},
+    	onAfterMove(pokemon, target, move) {
+        	if (target && target.hp <= 0) {
+            	delete pokemon.volatiles['annihilaterecharge'];
+            	return;
+        	}
+        	this.add('-mustrecharge', pokemon);
+    	},
+    	onLockMove: 'recharge',
+	},
 	futuremove: {
 		// this is a slot condition
 		name: 'futuremove',
