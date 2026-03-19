@@ -26149,7 +26149,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		types: ["Ice", "Psychic"],
 		gender: "N",
 		baseStats: { hp: 210, atk: 136, def: 36, spa: 55, spd: 36, spe: 55 },
-		abilities: { 0: "Shadow Tag", H: "Unnerve" },
+		abilities: { 0: "Telepathy", H: "Unnerve" },
 		heightm: 1.0,
 		weightkg: 21,
 		//color: "White", no dsc page,
