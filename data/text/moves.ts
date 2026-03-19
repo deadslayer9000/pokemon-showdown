@@ -434,6 +434,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	beamroulette: {
 		name: "Beam Roulette",
+		desc: "Random chance to trigger any of the following effects: Doubled Damage, Halved Damage, Random Stat Drop on Target, Random Stat Boost on User, Swap User Out.",
 		shortDesc: "Deals damage, has many random effects."
 	},
 	beastmine: {
@@ -3697,7 +3698,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	ionizedfangs: {
 		name: "Ionized Fangs",
-		shortDesc: "Consecutive hits increase in power and hit on special defense.",
+		shortDesc: "Consecutive hits increase in power and hit on SpD.",
 	},
 	ironcladguard: {
 		name: "Ironclad Guard",
@@ -5360,7 +5361,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	pulsarspiral: {
 		name: "Pulsar Spiral",
-		shortDesc: "10% chance to confuse, 100 base power at max spins",
+		shortDesc: "10% confuse chance, 100 power at max spins.",
 	},
 	purify: {
 		name: "Purify",
