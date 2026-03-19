@@ -126,8 +126,8 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Atom Terapagium Z",
 		shortDesc: "If held by Terapagos-ATOM with Zenith Storm, it can use Astral Burst."
 	},
-	cosmicterapagiumz: {
-		name: "Cosmic Terapagium Z",
+	galacticterapagiumz: {
+		name: "Galactic Terapagium Z",
 		shortDesc: "If held by Terapagos-ATOM with Zenith Storm, it can use Universe Expansion.",
 	},
 	audinite: {

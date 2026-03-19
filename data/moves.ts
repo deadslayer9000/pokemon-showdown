@@ -28355,12 +28355,12 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		pp: 1,
 		priority: 0,
 		flags: {},
-		isZ: "cosmicterapagiumz",
+		isZ: "galacticterapagiumz",
 		onAfterMove(pokemon) {
 			this.hint(pokemon.name);
-			if(pokemon.species.name === "Terapagos-ATOM-Galactic") {
+			if(pokemon.species.name === "Terapagos-ATOM-Cosmic") {
 				this.add('-activate', pokemon, 'move: Universe Expansion');
-				pokemon.formeChange("Terapagos-ATOM-Cosmic", null, true);
+				pokemon.formeChange("Terapagos-ATOM-Galactic", null, true);
 			}
 		},
 		secondary: null, 
@@ -28430,5 +28430,23 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			chance: 10,
 			volatileStatus: "confusion",
 		},
-	}
+	},
+	annihilate: {
+		num: -119,
+		accuracy: 90,
+		basePower: 130,
+		category: "Physical",
+		name: "Annihilate",
+		pp: 5,
+		priority: 0,
+		flags: { contact: 1, protect: 1 },
+		onHit(target, source, move) {
+			if (!target.hasType("Fairy")) {
+				source.addVolatile("annihilaterecharge");
+			}
+		},
+		type: "Dragon",
+		target: "normal",
+		secondary: null,
+	},
 };

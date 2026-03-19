@@ -7332,4 +7332,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	tandemausatom: {
 		tier: "UU",
 	},
+	apextyrant: {
+		tier: "UU",
+	},
 };

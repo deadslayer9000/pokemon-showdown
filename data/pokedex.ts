@@ -26198,9 +26198,9 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		eggGroups: ["Undiscovered"],
 		forme: "ATOM",
 	},
-	terapagosatomgalactic: {
+	terapagosatomcosmic: {
 		num: 1024,
-		name: "Terapagos-ATOM-Galactic",
+		name: "Terapagos-ATOM-Cosmic",
 		baseSpecies: "Terapagos-ATOM",
 		types: ["Normal"],
 		gender: "N",
@@ -26212,9 +26212,9 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		eggGroups: ["Undiscovered"],
 		forme: "ATOM-Galactic"
 	},
-	terapagosatomcosmic: {
+	terapagosatomgalactic: {
 		num: 1024,
-		name: "Terapagos-ATOM-Cosmic",
+		name: "Terapagos-ATOM-Galactic",
 		baseSpecies: "Terapagos-ATOM",
 		types: ["Normal"],
 		gender: "N",
@@ -26225,7 +26225,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		//color: "Blue", no dsc page,
 		eggGroups: ["Undiscovered"],
 		forme: "ATOM-Cosmic",
-		requiredItem: "Cosmic Terapagium Z"
+		requiredItem: "Galactic Terapagium Z"
 	},
 	spindaatom: {
 		num: 327,
@@ -26240,5 +26240,17 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		//color: "Black", no dsc page,
 		eggGroups: ["Undiscovered"],
 		forme: "ATOM",
+	},
+	apextyrant: {
+		num: 2123, //placeholder
+		name: "Apex Tyrant",
+		types: ["Fighting", "Dragon"],
+		gender: "N",
+		baseStats: { hp: 63, atk: 147, def: 121, spa: 109, spd: 71, spe: 79 },
+    	abilities: { 0: "Protosynthesis"},
+		heightm: 2.2,
+    	weightkg: 114,
+		//color: "White", no dsc page,
+		eggGroups: ["Undiscovered"],
 	}
 };

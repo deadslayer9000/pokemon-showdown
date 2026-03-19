@@ -155,6 +155,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Has a 10% chance to raise the user's Attack, Defense, Special Attack, Special Defense, and Speed by 1 stage.",
 		shortDesc: "10% chance to raise all stats by 1 (not acc/eva).",
 	},
+	annihilate: {
+		name: "Annihilate",
+		shortDesc: "Can't move next turn if target or sub is not KOed.",
+	},
 	amberassault: {
 		name: "Amber Assault",
 		shortDesc: "30% chance to paralyze the target.",
