@@ -28430,5 +28430,23 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			chance: 10,
 			volatileStatus: "confusion",
 		},
+	},
+	annihilate: {
+		num: -119,
+		accuracy: 90,
+		basePower: 130,
+		category: "Physical",
+		name: "Annihilate",
+		pp: 5,
+		priority: 0,
+		flags: { contact: 1, recharge: 1, protect: 1 },
+		onAfterHit(source, target, move) {
+			if (!target){
+				move.flags.recharge = undefined;
+			}
+		},
+		type: "Dragon",
+		target: "normal",
+		secondary: null,
 	}
 };

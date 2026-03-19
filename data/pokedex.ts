@@ -26240,5 +26240,17 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		//color: "Black", no dsc page,
 		eggGroups: ["Undiscovered"],
 		forme: "ATOM",
+	},
+	apextyrant: {
+		num: 2123, //placeholder
+		name: "Apex Tyrant",
+		types: ["Fighting", "Dragon"],
+		gender: "N",
+		baseStats: { hp: 63, atk: 147, def: 121, spa: 109, spd: 71, spe: 79 },
+    	abilities: { 0: "Protosynthesis"},
+		heightm: 2.2,
+    	weightkg: 114,
+		//color: "White", no dsc page,
+		eggGroups: ["Undiscovered"],
 	}
 };
