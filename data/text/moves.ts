@@ -8195,8 +8195,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	zenithstorm: {
 		name: "Zenith Storm",
-		desc: "If the user is Terapagos-ATOM-Cosmic, then whenever this move would be resisted or have no effect, it instead deals neutral damage.",
-		shortDesc: "Terapagos-ATOM-Cosmic: Never resisted."
+		desc: "If the user is Terapagos-ATOM-Galactic, then whenever this move would be resisted or have no effect, it instead deals neutral damage.",
+		shortDesc: "Terapagos-ATOM-Galactic: Never resisted."
 	},
 	zingzap: {
 		name: "Zing Zap",
