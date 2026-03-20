@@ -28297,8 +28297,13 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1, noassist: 1, failcopycat: 1, failmimic: 1, nosketch: 1},
 		onEffectiveness(typeMod, target, type, move){
-			if(this.activePokemon?.species.name === "Terapagos-ATOM-Galactic" || target.getMoveHitData(move).typeMod < 0){
+			if(this.activePokemon?.species.name === "Terapagos-ATOM-Galactic" && (target.types.includes('Steel')|| target.types.includes('Rock'))){
 				return 0;
+			}
+		},
+		onModifyMove(move, pokemon, target) {
+			if(this.activePokemon?.species.name === "Terapagos-ATOM-Galactic" && target.types.includes("Ghost")){
+				move.ignoreImmunity = true;
 			}
 		},
 		secondary: null,
