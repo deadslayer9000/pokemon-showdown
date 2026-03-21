@@ -7293,10 +7293,10 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	terapagosatom: {
 		tier: "UU",
 	},
-	terapagosatomgalactic: {
+	terapagosatomcosmic: {
 		tier: "UU",
 	},
-	terapagosatomcosmic: {
+	terapagosatomgalactic: {
 		tier: "Uber"
 	},
 	lotadatom: {
