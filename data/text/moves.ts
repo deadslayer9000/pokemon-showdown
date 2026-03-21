@@ -157,7 +157,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	annihilate: {
 		name: "Annihilate",
-		shortDesc: "Can't move next turn if target or sub is not KOed.",
+		shortDesc: "If it hits but doesnt KO an opponent it has to recharge.",
 	},
 	amberassault: {
 		name: "Amber Assault",
