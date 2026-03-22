@@ -130,6 +130,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Galactic Terapagium Z",
 		shortDesc: "If held by Terapagos-ATOM with Zenith Storm, it can use Universe Expansion.",
 	},
+	atommewniumz: {
+		name: "Atom Mewnium Z",
+		shortDesc: "If held by Mew-ATOM with Gene Splice, it can use Total Cell Necrosis.",
+	},
 	audinite: {
 		name: "Audinite",
 		shortDesc: "If held by an Audino, this item allows it to Mega Evolve in battle.",

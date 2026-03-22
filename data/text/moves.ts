@@ -7582,6 +7582,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		start: "  [POKEMON] was subjected to torment!",
 		end: "  [POKEMON] is no longer tormented!",
 	},
+	totalcellnecrosis: {
+		name: "Total Cell Necrosis",
+		shortDesc: "For 3 turns if the target switches out it loses 1/4th of its max hp",
+	},
 	toxic: {
 		name: "Toxic",
 		desc: "Badly poisons the target. If a Poison-type Pokemon uses this move, the target cannot avoid the attack, even if the target is in the middle of a two-turn move.",

@@ -28533,4 +28533,23 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		target: "normal",
 		secondary: null,
 	},
+	totalcellnecrosis: {
+		num: -121,
+		accuracy: true,
+		basePower: 190,
+		category: "Special",
+		name: "Total Cell Necrosis",
+		pp: 1,
+		priority: 0,
+		isZ: "atommewniumz",
+		flags: {},
+		volatileStatus: "necrosis",
+		onHit(target, source, move) {
+			target.addVolatile("necrosis");
+			this.add("-start", target, "move: Necrosis");
+		},
+		type: "Poison",
+		target: "normal",
+		secondary: null,
+	}
 };
