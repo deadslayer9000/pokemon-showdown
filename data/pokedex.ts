@@ -26084,6 +26084,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		//color: "White", no dsc page,
 		eggGroups: ["Undiscovered"],
 		forme: "Mega",
+		requiredItem: "Atom Galladite",
 	},
 	gardevoiratom: {
 		num: 282,
@@ -26113,6 +26114,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		//color: "White", no dscpage,
 		eggGroups: ["Undiscovered"],
 		forme: "Mega",
+		requiredItem: "Atom Gardevoirite",
 	},
 	lopunnyatom: {
 		num: 428,
