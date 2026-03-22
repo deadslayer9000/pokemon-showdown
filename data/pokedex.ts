@@ -26258,6 +26258,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	mewatom: {
 		num: 101,
 		name: "Mew-ATOM",
+		baseSpecies: "Mew",
 		types: ["Psychic", "Poison"],
 		gender: "N",
 		baseStats: { hp: 120, atk: 78, def: 55, spa: 136, spd: 120, spe: 91 },
@@ -26266,5 +26267,6 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		weightkg: 4,
 		//color: "Purple", no dsc page,
 		eggGroups: ["Undiscovered"],
+		forme: "ATOM",
 	},
 };
