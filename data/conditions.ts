@@ -395,6 +395,18 @@ export const Conditions: import('../sim/dex-conditions').ConditionDataTable = {
     	},
     	onLockMove: 'recharge',
 	},
+	necrosis: {
+		name: 'necrosis',
+		duration: 4,
+		onEnd(target) {
+			this.add("-end", target, "move: Necrosis");
+			//this.hint(`${target.name}'s necrosis ended.`);
+		},
+		onSwitchOut(pokemon) {
+			this.damage(pokemon.maxhp / 4 );
+			this.hint(`${pokemon.name} got hurt by its necrosis!`);
+		},
+	},
 	futuremove: {
 		// this is a slot condition
 		name: 'futuremove',

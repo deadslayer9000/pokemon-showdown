@@ -28546,11 +28546,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		volatileStatus: "necrosis",
 		onHit(target, source, move) {
 			target.addVolatile("necrosis");
-		},
-		condition: {
-			onSwitchOut(pokemon) {
-				this.hint(`switchout${pokemon.name}`);
-			},
+			this.add("-start", target, "move: Necrosis");
 		},
 		type: "Poison",
 		target: "normal",
