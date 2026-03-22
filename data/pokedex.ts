@@ -26256,7 +26256,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		eggGroups: ["Undiscovered"],
 	},
 	mewatom: {
-		num: 101,
+		num: 151,
 		name: "Mew-ATOM",
 		baseSpecies: "Mew",
 		types: ["Psychic", "Poison"],
