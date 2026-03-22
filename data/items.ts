@@ -468,6 +468,15 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		itemUser: ["Terapagos-ATOM", "Terapagos-ATOM-Cosmic"],
 		num: -40,
 	},
+	atommewniumz: {
+		name: "Atom Mewnium Z",
+		spritenum: 658,
+		onTakeItem: false,
+		zMove: "Total Cell Necrosis",
+		zMoveFrom: "Gene Splice",
+		itemUser: ["Mew-ATOM"],
+		num: -41,
+	},
 	audinite: {
 		name: "Audinite",
 		spritenum: 617,
