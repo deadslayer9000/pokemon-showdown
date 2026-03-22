@@ -7,6 +7,11 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Abyssal Neigh",
 		shortDesc: "This Pokemon's Sp. Def is raised by 1 stage if it attacks and KOes another Pokemon.",
 	},
+	acclimate: {
+		name: "Acclimate",
+		shortDesc: "If the user is Mew-ATOM heals, otherwise it damages 1/16 of max hp.",
+		activate: "  [POKEMON]'s Acclimate activated!"
+	},
 	accretionshell: {
 		name: "Accretion Shell",
 		shortDesc: "STAB moves used against this Pokemon lose their STAB bonus.",

@@ -2683,6 +2683,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "If this move is successful, the terrain becomes Psychic Terrain.",
 		shortDesc: "Summons Psychic Terrain.",
 	},
+	genesplice: {
+		name: "Gene Splice",
+		shortDesc: "Deals damage and swaps the abilities of user and opponent."
+	},
 	geomancy: {
 		name: "Geomancy",
 		desc: "Raises the user's Special Attack, Special Defense, and Speed by 2 stages. This attack charges on the first turn and executes on the second. If the user is holding a Power Herb, the move completes in one turn.",
