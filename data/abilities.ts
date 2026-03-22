@@ -9897,6 +9897,16 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 2.5,
 		num: -106,
 	},
+	acclimate: {
+		onAfterMove(source, target, move) {
+			this.hint(`source${source.name} target${target.name}`);
+		},
+
+		flags: {},
+		name: "Acclimate",
+		rating: 3,
+		num: -107,
+	},
 	// CAP
 	mountaineer: {
 		onDamage(damage, target, source, effect) {

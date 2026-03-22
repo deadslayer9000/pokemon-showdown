@@ -26254,5 +26254,17 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
     	weightkg: 114,
 		//color: "White", no dsc page,
 		eggGroups: ["Undiscovered"],
-	}
+	},
+	mewatom: {
+		num: 101,
+		name: "Mew-ATOM",
+		types: ["Psychic", "Poison"],
+		gender: "N",
+		baseStats: { hp: 120, atk: 78, def: 55, spa: 136, spd: 120, spe: 91 },
+		abilities: { 0: "Acclimate" },
+		heightm: 0.4,
+		weightkg: 4,
+		//color: "Purple", no dsc page,
+		eggGroups: ["Undiscovered"],
+	},
 };
