@@ -9902,10 +9902,10 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			this.hint(`cat ${move.category} name ${move.name} species ${source.baseSpecies.name}`);
 			if(source.baseSpecies.name === "Mew-ATOM" && (move.category === "Physical" || move.category === "Special")){
 				//source.heal(source.baseMaxhp / 16);
-				this.heal(source.baseMaxhp / 16);
+				this.heal(source.baseMaxhp / 16, source, source);
 				//this.add("-activate", source, "ability: Acclimate");
 			} else if (move.category === "Physical" || move.category === "Special") {
-				this.damage(source.baseMaxhp / 16);
+				this.damage(source.baseMaxhp / 16, source, source);
 				//this.add("-activate", source, "ability: Acclimate");
 				//source.damage(source.baseMaxhp / 16);
 			}
