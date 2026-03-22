@@ -7584,7 +7584,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	totalcellnecrosis: {
 		name: "Total Cell Necrosis",
-		shortDesc: "For 3 turns if the target switches out it loses 1/4th of its max hp",
+		shortDesc: "For 3 turns, the target loses 1/4 HP on switch.",
+		desc: "On hit, the target will lose 1/4th of its max HP if it switches out."
 	},
 	toxic: {
 		name: "Toxic",
