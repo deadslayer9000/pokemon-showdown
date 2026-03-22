@@ -9,7 +9,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	acclimate: {
 		name: "Acclimate",
-		shortDesc: "If the user is Mew-ATOM heals, otherwise it damages 1/16 of max hp."
+		shortDesc: "If the user is Mew-ATOM heals, otherwise it damages 1/16 of max hp.",
+		activate: "  [POKEMON]'s Acclimate activated!"
 	},
 	accretionshell: {
 		name: "Accretion Shell",
