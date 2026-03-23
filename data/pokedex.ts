@@ -23175,7 +23175,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		name: "Zoroark-Hisui-Mega",
 		baseSpecies: "Zoroark-Hisui",
 		types: ["Normal", "Ghost"],
-		forme: "Hisui-Mega",
+		forme: "Mega",
 		baseStats: { hp: 55, atk: 130, def: 70, spa: 155, spd: 70, spe: 130 },
 		abilities: { 0: "Shapeshift" },
 		weightkg: 90.5,
