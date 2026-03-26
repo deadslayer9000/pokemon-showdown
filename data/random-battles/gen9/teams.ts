@@ -948,7 +948,7 @@ export class RandomTeams {
 		}
 
 		// Enforce setup
-		if (role.includes('Setup') || role === 'Tera Blast user') {
+		if (role.includes('Setup') || role === 'Tera Blast user' || role === 'Z-Move user') {
 			// First, try to add a non-Speed setup move
 			const nonSpeedSetupMoves = movePool.filter(moveid => SETUP.includes(moveid) && !SPEED_SETUP.includes(moveid));
 			if (nonSpeedSetupMoves.length) {
@@ -1008,7 +1008,7 @@ export class RandomTeams {
 		}
 
 		// Enforce coverage move
-		if (!['AV Pivot', 'Fast Support', 'Bulky Support', 'Bulky Protect', 'Doubles Support'].includes(role)) {
+		if (!['AV Pivot', 'Fast Support', 'Bulky Support', 'Bulky Protect', 'Doubles Support', 'Z-Move user'].includes(role)) {
 			if (counter.damagingMoves.size === 1) {
 				// Find the type of the current attacking move
 				const currentAttackType = counter.damagingMoves.values().next().value!.type;
@@ -1166,8 +1166,27 @@ export class RandomTeams {
 				return (role === 'Fast Attacker') ? 'Silver Powder' : 'Life Orb';
 			}
 		}
+
+		if (role === 'Z-Move user') {
+			// Specific Z-Crystals
+			if (species.baseSpecies === 'Arceus' && species.requiredItems) return species.requiredItems[1];
+			if (species.name === 'Raichu-Alola') return 'Aloraichium Z';
+			if (species.name === 'Decidueye') return 'Decidium Z';
+			if (species.name === 'Incineroar') return 'Incinium Z';
+			if (species.name === 'Kommo-o') return 'Kommonium Z';
+			if (species.name === 'Lunala') return 'Lunalium Z';
+			if (species.baseSpecies === 'Lycanroc') return 'Lycanium Z';
+			if (species.name === 'Marshadow') return 'Marshadium Z';
+			if (species.name === 'Mew') return 'Mewnium Z';
+			if (species.name === 'Mimikyu') return 'Mimikium Z';
+			if (species.name === 'Brewloom') return 'Brewlium Z';
+			if (species.name === 'Necrozma-Dusk-Mane' || species.name === 'Necrozma-Dawn-Wings') {
+				if (moves.has('autotomize') && moves.has('sunsteelstrike')) return 'Solganium Z';
+				if (moves.has('autotomize') && moves.has('moongeistbeam')) return 'Lunalium Z';
+				return 'Ultranecrozium Z';
+		}
+	}
 		if (species.requiredItems) {
-			// Z-Crystals aren't available in Gen 9, so require Plates
 			if (species.baseSpecies === 'Arceus') {
 				return species.requiredItems[0];
 			}

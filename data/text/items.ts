@@ -239,7 +239,7 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 	},
 	brewliumz: {
 		name: "Brewlium Z",
-		shortDesc: "If held by a Brewloom with Bizzare Elixir, it can use Exalted Potion.",
+		shortDesc: "If held by a Brewloom with Bizarre Elixir, it can use Exalted Potion.",
 	},
 	brightpowder: {
 		name: "Bright Powder",

@@ -9147,9 +9147,9 @@
         "level": 79,
         "sets": [
             {
-                "role": "Z-Move User",
+                "role": "Z-Move user",
                 "movepool": ["Bizarre Elixir", "Moonblast", "Earth Power", "Mystical Fire"],
-                "abilities": ["Natural Cure"],
+                "abilities": ["Magician"],
                 "teraTypes": ["Steel", "Water"]
             }
         ]
@@ -10427,7 +10427,7 @@
                 "teraTypes": ["Steel", "Water"]
             },
             {
-                "role": "Z-Move User",
+                "role": "Z-Move user",
                 "movepool": ["Calm Mind", "Sleep Talk", "Rest", "Zenith Storm"],
                 "abilities": ["Accretion Shell"],
                 "teraTypes": ["Steel", "Water"]
