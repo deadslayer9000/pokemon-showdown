@@ -1501,6 +1501,18 @@ export class RandomTeams {
 
 		const ruleTable = this.dex.formats.getRuleTable(this.format);
 
+		// Check if the Pokemon has a Z-Move user set
+		let canZMove = false;
+		for (const set of sets) {
+			if (!teamDetails.zMove && set.role === 'Z-Move user') canZMove = true;
+		}
+		for (const set of sets) {
+			// Prevent multiple Z-Move users
+			if (teamDetails.zMove && set.role === 'Z-Move user') continue;
+			// Prevent Setup Sweeper and Bulky Setup if Z-Move user is available
+			if (canZMove && ['Setup Sweeper', 'Bulky Setup'].includes(set.role)) continue;
+			possibleSets.push(set);
+		}
 		for (const set of sets) {
 			// Prevent Fast Bulky Setup on lead Paradox Pokemon, since it generates Booster Energy.
 			const abilities = set.abilities!;
