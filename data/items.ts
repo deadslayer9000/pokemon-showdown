@@ -844,7 +844,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		spritenum: 648,
 		onTakeItem: false,
 		zMove: "Exalted Potion",
-		zMoveFrom: "Bizzare Elixir",
+		zMoveFrom: "Bizarre Elixir",
 		itemUser: ["Brewloom"],
 		num: -20,
 	},

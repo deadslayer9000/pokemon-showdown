@@ -1774,12 +1774,12 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		target: "normal",
 		type: "Ghost",
 	},
-	bizzareelixir: {
+	bizarreelixir: {
 		num: -60,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
-		name: "Bizzare Elixir",
+		name: "Bizarre Elixir",
 		pp: 10,
 		priority: 0,
 		flags: {},
@@ -1814,7 +1814,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 						"-ability",
 						pokemon,
 						"Levitate",
-						"[from] move: Bizzare Elixir"
+						"[from] move: Bizarre Elixir"
 					);
 					break;
 				case "Focus Sash":
@@ -1823,7 +1823,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 						"-ability",
 						pokemon,
 						"Sturdy",
-						"[from] move: Bizzare Elixir"
+						"[from] move: Bizarre Elixir"
 					);
 					break;
 				case "Heavy-Duty Boots":
@@ -1832,7 +1832,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 						"-ability",
 						pokemon,
 						"Magic Guard",
-						"[from] move: Bizzare Elixir"
+						"[from] move: Bizarre Elixir"
 					);
 					break;
 				case "Rocky Helmet":
@@ -1841,7 +1841,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 						"-ability",
 						pokemon,
 						"Rough Skin",
-						"[from] move: Bizzare Elixir"
+						"[from] move: Bizarre Elixir"
 					);
 					break;
 				case "Toxic Orb":
@@ -1850,7 +1850,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 						"-ability",
 						pokemon,
 						"Poison Heal",
-						"[from] move: Bizzare Elixir"
+						"[from] move: Bizarre Elixir"
 					);
 					break;
 				case "Black Sludge":
@@ -1862,7 +1862,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 						"-ability",
 						pokemon,
 						"Monarch",
-						"[from] move: Bizzare Elixir"
+						"[from] move: Bizarre Elixir"
 					);
 					break;
 				case "Flame Orb":
@@ -1871,7 +1871,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 						"-ability",
 						pokemon,
 						"Guts",
-						"[from] move: Bizzare Elixir"
+						"[from] move: Bizarre Elixir"
 					);
 					break;
 				case "Weakness Policy":
@@ -1880,7 +1880,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 						"-ability",
 						pokemon,
 						"Filter",
-						"[from] move; Bizzare Elixi"
+						"[from] move; Bizarre Elixi"
 					);
 					break;
 				case "Eviolite":
