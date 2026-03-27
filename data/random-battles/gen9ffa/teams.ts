@@ -623,8 +623,27 @@ export class RandomFFATeams extends RandomTeams {
 		teraType: string,
 		role: RandomTeamsTypes.Role,
 	) {
+		if (role === 'Z-Move user') {
+			// Specific Z-Crystals
+			if (species.baseSpecies === 'Arceus' && species.requiredItems) return species.requiredItems[1];
+			if (species.name === 'Raichu-Alola') return 'Aloraichium Z';
+			if (species.name === 'Decidueye') return 'Decidium Z';
+			if (species.name === 'Incineroar') return 'Incinium Z';
+			if (species.name === 'Kommo-o') return 'Kommonium Z';
+			if (species.name === 'Lunala') return 'Lunalium Z';
+			if (species.baseSpecies === 'Lycanroc') return 'Lycanium Z';
+			if (species.name === 'Marshadow') return 'Marshadium Z';
+			if (species.name === 'Mew') return 'Mewnium Z';
+			if (species.name === 'Mimikyu') return 'Mimikium Z';
+			if (species.name === 'Brewloom') return 'Brewlium Z';
+			if (species.name === 'Terapagos-ATOM') return 'Galactic Terapagium Z';
+			if (species.name === 'Necrozma-Dusk-Mane' || species.name === 'Necrozma-Dawn-Wings') {
+				if (moves.has('autotomize') && moves.has('sunsteelstrike')) return 'Solganium Z';
+				if (moves.has('autotomize') && moves.has('moongeistbeam')) return 'Lunalium Z';
+				return 'Ultranecrozium Z';
+		}
+	}
 		if (species.requiredItems) {
-			// Z-Crystals aren't available in Gen 9, so require Plates
 			if (species.baseSpecies === 'Arceus') {
 				return species.requiredItems[0];
 			}

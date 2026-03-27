@@ -1180,6 +1180,7 @@ export class RandomTeams {
 			if (species.name === 'Mew') return 'Mewnium Z';
 			if (species.name === 'Mimikyu') return 'Mimikium Z';
 			if (species.name === 'Brewloom') return 'Brewlium Z';
+			if (species.name === 'Terapagos-ATOM') return 'Galactic Terapagium Z';
 			if (species.name === 'Necrozma-Dusk-Mane' || species.name === 'Necrozma-Dawn-Wings') {
 				if (moves.has('autotomize') && moves.has('sunsteelstrike')) return 'Solganium Z';
 				if (moves.has('autotomize') && moves.has('moongeistbeam')) return 'Lunalium Z';
