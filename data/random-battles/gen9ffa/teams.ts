@@ -249,6 +249,8 @@ export class RandomFFATeams extends RandomTeams {
 		if (species.id !== 'blissey') this.incompatibleMoves(moves, movePool, SETUP, HAZARDS);
 		// Band-aid fix to enforce Mortal Spin on Glimmora
 		if (species.id === 'glimmora') this.incompatibleMoves(moves, movePool, 'spikes', 'stealthrock');
+		// Hardcode to ensure Lotad-ATOM always has Piezoshift
+		if (species.name === 'Lotad-ATOM') this.incompatibleMoves(moves, movePool, 'voltswitch', 'icebeam');
 	}
 
 	// Generate random moveset for a given species, role, tera type.
