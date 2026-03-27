@@ -413,8 +413,8 @@ export class RandomTeams {
 			if (moveid === 'lowkick' || (move.basePower && move.basePower <= 60 && moveid !== 'rapidspin')) {
 				counter.add('technician');
 			}
-			// Moves that hit up to 5 times:
-			if (move.multihit && Array.isArray(move.multihit) && move.multihit[1] === 5) counter.add('skilllink');
+			// Moves that hit up to 5 times, 6 is for divine volley hardcode:
+			if (move.multihit && Array.isArray(move.multihit) && move.multihit[1] === 5 || move.multihit === 6) counter.add('skilllink');
 			if (move.recoil || move.hasCrashDamage) counter.add('recoil');
 			if (move.drain) counter.add('drain');
 			// Moves which have a base power:
