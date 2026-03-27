@@ -3450,7 +3450,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		megaStone: {"Zoroark-Hisui": "Zoroark-Hisui-Mega"},
 		itemUser: ["Zoroark-Hisui"],
 		onTakeItem(item, source) {
-			return !item.megaStone?.[source.baseSpecies.baseSpecies];
+			return !item.megaStone?.[source.baseSpecies.name];
 		},
 	},
 	hondewberry: {

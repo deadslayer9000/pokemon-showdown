@@ -413,8 +413,8 @@ export class RandomTeams {
 			if (moveid === 'lowkick' || (move.basePower && move.basePower <= 60 && moveid !== 'rapidspin')) {
 				counter.add('technician');
 			}
-			// Moves that hit up to 5 times:
-			if (move.multihit && Array.isArray(move.multihit) && move.multihit[1] === 5) counter.add('skilllink');
+			// Moves that hit up to 5 times, 6 is for divine volley hardcode:
+			if (move.multihit && Array.isArray(move.multihit) && move.multihit[1] === 5 || move.multihit === 6) counter.add('skilllink');
 			if (move.recoil || move.hasCrashDamage) counter.add('recoil');
 			if (move.drain) counter.add('drain');
 			// Moves which have a base power:
@@ -1706,6 +1706,7 @@ export class RandomTeams {
 		const typeDoubleWeaknesses: { [k: string]: number } = {};
 		const teamDetails: RandomTeamsTypes.TeamDetails = {};
 		let numMaxLevelPokemon = 0;
+		let hasMega = false;
 
 		const pokemonList = isDoubles ? Object.keys(this.randomDoublesSets) : Object.keys(this.randomSets);
 		const [pokemonPool, baseSpeciesPool] = this.getPokemonPool(type, pokemon, isMonotype, pokemonList);
@@ -1713,11 +1714,28 @@ export class RandomTeams {
 		let leadsRemaining = this.format.gameType === 'doubles' ? 2 : 1;
 		while (baseSpeciesPool.length && pokemon.length < this.maxTeamSize) {
 			const baseSpecies = this.sampleNoReplace(baseSpeciesPool);
+			const currentSpeciesPool: Species[] = [];
 			let species = this.dex.species.get(this.sample(pokemonPool[baseSpecies]));
 			if (!species.exists) continue;
 
+			let canMega = false;
+				for (const poke of pokemonPool[baseSpecies]) {
+					const species = this.dex.species.get(poke);
+					if (!hasMega && species.isMega) canMega = true;
+				}
+				for (const poke of pokemonPool[baseSpecies]) {
+					const species = this.dex.species.get(poke);
+					// Prevent multiple megas
+					if (hasMega && species.isMega) continue;
+					// Prevent base forme, if a mega is available
+					if (canMega && !species.isMega) continue;
+					currentSpeciesPool.push(species);
+				}
 			// Limit to one of each species (Species Clause)
 			if (baseFormes[species.baseSpecies]) continue;
+
+			// Limit one Mega per team
+				if (hasMega && species.isMega) continue;
 
 			// Treat Ogerpon formes and Terapagos like the Tera Blast user role; reject if team has one already
 			if (['ogerpon', 'ogerponhearthflame', 'terapagos'].includes(species.id) && teamDetails.teraBlast) continue;
