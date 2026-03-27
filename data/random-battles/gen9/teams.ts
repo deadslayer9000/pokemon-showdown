@@ -1706,6 +1706,7 @@ export class RandomTeams {
 		const typeDoubleWeaknesses: { [k: string]: number } = {};
 		const teamDetails: RandomTeamsTypes.TeamDetails = {};
 		let numMaxLevelPokemon = 0;
+		let hasMega = false;
 
 		const pokemonList = isDoubles ? Object.keys(this.randomDoublesSets) : Object.keys(this.randomSets);
 		const [pokemonPool, baseSpeciesPool] = this.getPokemonPool(type, pokemon, isMonotype, pokemonList);
@@ -1713,11 +1714,28 @@ export class RandomTeams {
 		let leadsRemaining = this.format.gameType === 'doubles' ? 2 : 1;
 		while (baseSpeciesPool.length && pokemon.length < this.maxTeamSize) {
 			const baseSpecies = this.sampleNoReplace(baseSpeciesPool);
+			const currentSpeciesPool: Species[] = [];
 			let species = this.dex.species.get(this.sample(pokemonPool[baseSpecies]));
 			if (!species.exists) continue;
 
+			let canMega = false;
+				for (const poke of pokemonPool[baseSpecies]) {
+					const species = this.dex.species.get(poke);
+					if (!hasMega && species.isMega) canMega = true;
+				}
+				for (const poke of pokemonPool[baseSpecies]) {
+					const species = this.dex.species.get(poke);
+					// Prevent multiple megas
+					if (hasMega && species.isMega) continue;
+					// Prevent base forme, if a mega is available
+					if (canMega && !species.isMega) continue;
+					currentSpeciesPool.push(species);
+				}
 			// Limit to one of each species (Species Clause)
 			if (baseFormes[species.baseSpecies]) continue;
+
+			// Limit one Mega per team
+				if (hasMega && species.isMega) continue;
 
 			// Treat Ogerpon formes and Terapagos like the Tera Blast user role; reject if team has one already
 			if (['ogerpon', 'ogerponhearthflame', 'terapagos'].includes(species.id) && teamDetails.teraBlast) continue;
