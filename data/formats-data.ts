@@ -3831,7 +3831,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	greninjamega: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "Uber",
 	},
 	bunnelby: {
 		isNonstandard: "Past",

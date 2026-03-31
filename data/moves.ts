@@ -494,7 +494,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		priority: 0,
 		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
 		secondary: {
-			chance: 100,
+			chance: 50,
 			volatileStatus: "taunt",
 		},
 		target: "normal",
@@ -19206,7 +19206,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Ride The Wave",
 		pp: 1,
 		priority: 0,
-		onHit(target) {
+		/*onHit(target) {
 			if (target.getTypes().join() === "Water" || !target.setType("Water")) {
 				// Soak should animate even when it fails.
 				// Returning false would suppress the animation.
@@ -19214,7 +19214,8 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				return null;
 			}
 			this.add("-start", target, "typechange", "Water");
-		},
+		},*/
+		ignoreDefensive: true,
 		flags: {},
 		secondary: null,
 		target: "normal",
@@ -25649,7 +25650,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	updraft: {
 		num: -44,
 		accuracy: 95,
-		basePower: 100,
+		basePower: 90,
 		name: "Updraft",
 		category: "Special",
 		pp: 5,
@@ -27893,7 +27894,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		multihit: 2,
 		multiaccuracy: false,
 		secondary: {
-			chance: 20,
+			chance: 10,
 			onHit(target, source) {
 				const result = this.random(2);
 				if (result === 0) {
@@ -28089,13 +28090,17 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		priority: 0,
 		isZ: "atomlopunniumz",
 		flags: { kick: 1, spin: 1},
-		secondary: {
+		onAfterMoveSecondarySelf(pokemon, target, move) {
+			if (!target || target.fainted || target.hp <= 0)
+				this.boost({ atk: 1 }, pokemon, pokemon, move);
+		},
+		/*secondary: {
 			self: {
 				boosts: {
 					atk: 1,
 				},
 			}
-		},
+		}, */ 
 		target: "normal",
 		type: "Fairy",
 	},
