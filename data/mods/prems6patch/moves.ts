@@ -59,5 +59,27 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 			this.hint(`${damage}`);
 			return damage;
 		},
+	},
+	aquaring: {
+		inherit: true,
+		condition: {
+			duration: 255, //basically infinite
+			durationCallback(target, source, effect) {
+				if (effect?.name === 'Stream Shift') {
+					return 255; //streamshift duration
+				}
+				return 255;
+			},
+			onStart(pokemon) {
+				this.add("-start", pokemon, "Aqua Ring");
+			},
+			onResidualOrder: 6,
+			onResidual(pokemon) {
+				this.heal(pokemon.baseMaxhp / 16);
+			},
+			onEnd(pokemon) {
+				this.add("-end", pokemon, "Aqua Ring");
+			},
+		},
 	}
 };
