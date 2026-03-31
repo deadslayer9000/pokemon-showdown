@@ -2062,6 +2062,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 190,
 	},
 	diamondgrove: {
+		//effectiveness defined in sim/pokemon.ts
 		onStart(pokemon) {
 			if (this.field.isTerrain("grassyterrain")) {
 				this.add("-activate", pokemon, "ability: Diamond Grove");
