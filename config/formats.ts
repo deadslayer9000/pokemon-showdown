@@ -281,6 +281,12 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		ruleset: ['Standard NatDex', 'Standard Draft'],
 	},
 	{
+		name: "[Gen 9] [ND] Pre Mid Season 6 Patch Draft",
+		searchShow: false,
+		mod: 'prems6patch',
+		ruleset: ['Standard NatDex', 'Standard Draft'],
+	},
+	{
 		section: "S/V Singles",
 	},
 	{
