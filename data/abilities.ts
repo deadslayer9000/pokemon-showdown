@@ -2062,6 +2062,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 190,
 	},
 	diamondgrove: {
+		//effectiveness defined in sim/pokemon.ts
 		onStart(pokemon) {
 			if (this.field.isTerrain("grassyterrain")) {
 				this.add("-activate", pokemon, "ability: Diamond Grove");
@@ -2072,13 +2073,13 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				this.add("-activate", pokemon, "ability: Diamond Grove");
 			}
 		},
-		onDamage(damage, target, source, effect) {
+		/*onDamage(damage, target, source, effect) {
 			if (this.field.isTerrain("grassyterrain")){
 			if (effect && effect.id === 'stealthrock' || effect.id === 'gmaxsteelsurge' || effect.id === 'spikes') {
 				return false;
 			}
 		}
-		},
+		},*/
 		flags: {},
 		name: "Diamond Grove",
 		rating: 4,
