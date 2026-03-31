@@ -478,8 +478,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	diamondgrove: {
 		name: "Diamond Grove",
-		desc: "If Grassy Terrain is active, Super-effective moves used against this Pokemon deal neutral damage. Additionally, this Pokemon does not take hazard damage from Stealth Rocks, Spikes, or G-Max Steelsurge while Grassy Terrain is active.",
-		shortDesc: "In Grassy Terrain: Super-effective moves become neutral; Hazard damage immune.",
+		desc: "If Grassy Terrain is active, Super-effective moves used against this Pokemon deal neutral damage.",
+		shortDesc: "In Grassy Terrain: Super-effective moves become neutral.",
 
 		activate: " [POKEMON]'s weaknesses were patched up by the grassy terrain!",
 	},
@@ -1549,7 +1549,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	planarcollapse: {
 		name: "Planar Collapse",
-		shortDesc: "On switch-in, this Pokemon summons Gravity.",
+		shortDesc: "When the user is on the field gravity is in effect. Once per battle.",
 	},
 	plus: {
 		name: "Plus",

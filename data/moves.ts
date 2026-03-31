@@ -10186,6 +10186,14 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					);
 					return 7;
 				}
+				if (source?.hasAbility("planarcollapse")) {
+					this.add(
+						"-activate",
+						source,
+						"ability: Planar Collapse",
+					);
+					return 255;
+				}
 				return 5;
 			},
 			onFieldStart(target, source) {
@@ -28148,17 +28156,22 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	collapsingclubpress: {
 		num: -117,
 		accuracy: true,
-		basePower: 0,
+		basePower: 190,
 		category: "Physical",
 		name: "Collapsing Club Press",
 		pp: 1,
 		priority: 0,
 		isZ: "atomwynautiumz",
 		flags: {},
-		damageCallback(pokemon, target) {
-			const damage = pokemon.hp - target.maxhp;
-			this.hint(`${damage}`);
-			return damage;
+		onModifyMove(move, pokemon, target) {
+			if (
+				target.getStat("def", false, true) >
+				target.getStat("spd", false, true)
+			) {
+				move.overrideDefensiveStat = "spd";
+				//move.category = "Special";
+			}
+			//this.hint(`pokemon${pokemon.name} target${target.name} category${move.category} overridedefensiveStat${move.overrideDefensiveStat}`);
 		},
 		secondary: null,
 		target: "normal",
@@ -28444,7 +28457,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	annihilate: {
 		num: -119,
 		accuracy: 90,
-		basePower: 130,
+		basePower: 140,
 		category: "Physical",
 		name: "Annihilate",
 		pp: 5,

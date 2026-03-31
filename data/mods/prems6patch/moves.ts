@@ -52,14 +52,6 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		basePower: 130,
 	},
-	collapsingclubpress: {
-		inherit: true,
-		damageCallback(pokemon, target) {
-			const damage = pokemon.hp - target.maxhp;
-			this.hint(`${damage}`);
-			return damage;
-		},
-	},
 	aquaring: {
 		inherit: true,
 		condition: {
@@ -81,5 +73,106 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 				this.add("-end", pokemon, "Aqua Ring");
 			},
 		},
-	}
+	},
+	gravity: {
+		inherit: true,
+		condition: {
+			duration: 5,
+			durationCallback(source, effect) {
+				if (source?.hasAbility("persistent")) {
+					this.add(
+						"-activate",
+						source,
+						"ability: Persistent",
+						"[move] Gravity"
+					);
+					return 7;
+				}
+				return 5;
+			},
+			onFieldStart(target, source) {
+				if (source?.hasAbility("persistent")) {
+					this.add("-fieldstart", "move: Gravity", "[persistent]");
+				} else {
+					this.add("-fieldstart", "move: Gravity");
+				}
+				for (const pokemon of this.getAllActive()) {
+					let applies = false;
+					if (
+						pokemon.removeVolatile("bounce") ||
+						pokemon.removeVolatile("fly")
+					) {
+						applies = true;
+						this.queue.cancelMove(pokemon);
+						pokemon.removeVolatile("twoturnmove");
+					}
+					if (pokemon.volatiles["skydrop"]) {
+						applies = true;
+						this.queue.cancelMove(pokemon);
+
+						if (pokemon.volatiles["skydrop"].source) {
+							this.add(
+								"-end",
+								pokemon.volatiles["twoturnmove"].source,
+								"Sky Drop",
+								"[interrupt]"
+							);
+						}
+						pokemon.removeVolatile("skydrop");
+						pokemon.removeVolatile("twoturnmove");
+					}
+					if (pokemon.volatiles["magnetrise"]) {
+						applies = true;
+						delete pokemon.volatiles["magnetrise"];
+					}
+					if (pokemon.volatiles["telekinesis"]) {
+						applies = true;
+						delete pokemon.volatiles["telekinesis"];
+					}
+					if (applies) this.add("-activate", pokemon, "move: Gravity");
+				}
+			},
+			onModifyAccuracy(accuracy) {
+				if (typeof accuracy !== "number") return;
+				return this.chainModify([6840, 4096]);
+			},
+			onDisableMove(pokemon) {
+				for (const moveSlot of pokemon.moveSlots) {
+					if (this.dex.moves.get(moveSlot.id).flags["gravity"]) {
+						pokemon.disableMove(moveSlot.id);
+					}
+				}
+			},
+			// groundedness implemented in battle.engine.js:BattlePokemon#isGrounded
+			onBeforeMovePriority: 6,
+			onBeforeMove(pokemon, target, move) {
+				if (move.flags["gravity"] && !move.isZ) {
+					this.add("cant", pokemon, "move: Gravity", move);
+					return false;
+				}
+			},
+			onModifyMove(move, pokemon, target) {
+				if (move.flags["gravity"] && !move.isZ) {
+					this.add("cant", pokemon, "move: Gravity", move);
+					return false;
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 2,
+			onFieldEnd() {
+				this.add("-fieldend", "move: Gravity");
+			},
+		},
+	},
+	collapsingclubpress: {
+		inherit: true,
+		basePower: 0,
+		category: "Physical",
+		damageCallback(pokemon, target) {
+			const damage = pokemon.hp - target.maxhp;
+			this.hint(`${damage}`);
+			return damage;
+		},
+		onModifyMove(move, pokemon, target) {},
+	},
 };

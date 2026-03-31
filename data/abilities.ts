@@ -5653,6 +5653,10 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			this.add('-activate', source, 'ability: Planar Collapse'); //if anyone asks again planar collapse is 5 turns, 4 turns is misinformation from #custom-pokemon
 			this.field.addPseudoWeather("gravity", source);
 		},
+		onEnd(target) {
+			this.field.removePseudoWeather("gravity");
+			this.add('-end', target, 'ability: Planar Collapse');
+		},
 		flags: {},
 		name: "Planar Collapse",
 		rating: 4,
