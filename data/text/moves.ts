@@ -140,7 +140,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	ampserum: {
 		name: "Amp Serum",
-		shortDesc: "Taunts the foe for 3 turns on hit.",
+		shortDesc: "50% chance to Taunt the foe for 3 turns on hit.",
 	},
 	anchorshot: {
 		name: "Anchor Shot",
@@ -1091,8 +1091,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	collapsingclubpress: {
 		name: "Collapsing Club Press",
-		desc: "This move deals damage equal to the difference between the user's current HP and the opponent's maximum HP.",
-		shortDesc: "Damage = User's current HP - opponent's max HP.",
+		desc: "This move deals damage targeting whichever defensive stat of the target is lower.",
+		shortDesc: "Targets the target's lower defensive stat.",
 	},
 	collisioncourse: {
 		name: "Collision Course",
@@ -5712,6 +5712,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 
 		heal: "  [POKEMON] was revived and is ready to fight again!",
 	},
+	ridethewave: {
+		name: "Ride the Wave",
+		shortDesc: "Ignores the target's SpDef stat changes.",
+	},
 	risingvoltage: {
 		name: "Rising Voltage",
 		desc: "If the current terrain is Electric Terrain and the target is grounded, this move's power is doubled.",
@@ -5862,7 +5866,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	roundhouseeclipse: {
 		name: "Roundhouse Eclipse",
-		shortDesc: "Raises user's Attack by one stage.",
+		shortDesc: "On kill, raises user's Attack by one stage.",
 	},
 	rubystorm: {
 		name: "Ruby Storm",
@@ -6928,8 +6932,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	streamshift: {
 		name: "Stream Shift",
-		shortDesc: "User switches out, sets Aqua Ring.",
-		desc: "The user switches out, then the incoming Pokemon receives the effects of Aqua Ring.",
+		shortDesc: "User switches out, sets Aqua Ring for 3 turns.",
+		desc: "The user switches out, incoming Pokemon receives the effects of Aqua Ring for 3 turns",
 	},
 	strength: {
 		name: "Strength",
@@ -7735,8 +7739,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	twincross: {
 		name: "Twin Cross",
-		desc: "Hits twice. Each hit has a 20% chance to either burn or paralyze the target.",
-		shortDesc: "Hits twice. Each hit has 20% chance to brn or para.", 
+		desc: "Hits twice. Each hit has a 10% chance to either burn or paralyze the target.",
+		shortDesc: "Hits twice. Each hit has 10% chance to brn or para.", 
 	},
 	twineedle: {
 		name: "Twineedle",
