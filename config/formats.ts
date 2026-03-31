@@ -190,6 +190,18 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		],
 	},
 	{
+		name: "[Gen 9] [ND] Pre Mid Season 6 Patch",
+		searchShow: false,
+		mod: 'prems6patch',
+		ruleset: ['Standard NatDex', 'Terastal Clause'],
+		banlist: [ 'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock', 'Quick Claw',
+			'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail', 'Dire Claw', 'Rage Fist', 'Blood Moon', 'Darkrai', 'Zamazenta', 'Good as Gold'
+		],
+		unbanlist: [
+			'Solgaleo', 'Sneasler', 'Annihilape', 'Ursaluna-Bloodmoon', 'Espathra', 'Roaring Moon',
+		],
+	},
+	{
 		name: "[Gen 9] Random Battle",
 		desc: `Randomized teams of Pok&eacute;mon with sets that are generated to be competitively viable.`,
 		mod: 'gen9',
@@ -205,6 +217,8 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	},
 	{
 		name: "[Gen 9] [ND] DPL OU",
+		searchShow: false,
+		challengeShow: false,
 		mod: 'gen9',
 		ruleset: ['Standard NatDex', 'Terastal Clause'],
 		banlist: [
@@ -218,6 +232,8 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	},
 	{
 		name: "[Gen 9] [ND] DPL RU",
+		searchShow: false,
+		challengeShow: false,
 		desc: "RU format for the Delta Premier League.",
 		mod: 'gen9',
 		ruleset: ['Standard NatDex', 'Terastal Clause', 'Z-Move Clause'],
@@ -239,6 +255,8 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	},
 	{
 		name: "[Gen 9] [ND] DPL Ubers",
+		searchShow: false,
+		challengeShow: false,
 		desc: "Ubers format for the Delta Premier League.",
 		mod: 'gen9',
 		ruleset: ['Standard Natdex', 'Terastal Clause'],
@@ -248,6 +266,8 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	},
 	{
 		name: "[Gen 9] [ND] DPL Monotype",
+		searchShow: false,
+		challengeShow: false,
 		desc: "Monotype format for the Delta Premier League.",
 		mod: 'gen9', 
 		ruleset: ['[Gen 9] National Dex', 'Same-Type Clause'],
