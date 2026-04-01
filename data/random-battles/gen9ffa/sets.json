@@ -10809,9 +10809,9 @@
             },
               {
                 "role":"Setup Sweeper",
-                "movepool": ["Icicle Flail", "Heal Order", "Astral Barrage", "Ironclad Guard", "Victory Dance"],
-                "abilities": ["Own Tempo"],
-                "teraTypes": ["Ice"]
+                "movepool": ["Expanding Force", "Heal Order", "Boomburst", "Protect", "Collision Course"],
+                "abilities": ["Psychic Surge"],
+                "teraTypes": ["Normal"]
             }
         ]
     }

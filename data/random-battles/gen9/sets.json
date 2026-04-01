@@ -10766,9 +10766,9 @@
             },
               {
                 "role":"Setup Sweeper",
-                "movepool": ["Extreme Speed", "Heal Order", "Nihil Light", "Thousand Arrows"],
-                "abilities": ["Tinted Lens"],
-                "teraTypes": ["Dragon"]
+                "movepool": ["Collision Course", "Heal Order", "Boomburst", "Psystrike"],
+                "abilities": ["Psychic Surge"],
+                "teraTypes": ["Normal"]
             }
         ]
     }
