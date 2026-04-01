@@ -7338,4 +7338,8 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	apextyrant: {
 		tier: "UU",
 	},
+	yuumi: {
+		isNonstandard: "Custom",
+		tier: "Illegal",
+	},
 };

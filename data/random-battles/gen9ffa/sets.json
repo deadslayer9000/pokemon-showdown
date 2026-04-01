@@ -10749,6 +10749,17 @@
                 "teraTypes": ["Steel", "Water"]
             }
         ]
+    },
+    "yuumi": {
+        "level": 100,
+        "sets": [
+            {
+                "role":"Setup Sweeper",
+                "movepool": ["Healing Wish", "Last Resort", "Celebrate", "Hold Hands"],
+                "abilities": ["Supreme Overlord"],
+                "teraTypes": ["Stellar"]
+            }
+        ]
     }
 }
 

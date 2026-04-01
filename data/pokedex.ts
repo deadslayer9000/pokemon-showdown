@@ -26269,4 +26269,16 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		eggGroups: ["Undiscovered"],
 		forme: "ATOM",
 	},
+	yuumi: {
+		num: -6.7,
+		name: "Yuumi",
+		types: ["???"],
+		gender: "F",
+		baseStats: {hp: 500, atk: 500, def: 500, spa: 500, spd: 500, spe: 500 },
+		abilities: { 0: "Wonder Guard"},
+		//heightm:
+		weightkg: 0,
+		color: "Purple",
+		eggGroups: ["Undiscovered"],
+	},
 };
