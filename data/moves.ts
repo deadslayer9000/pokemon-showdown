@@ -5796,7 +5796,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Dual Divide",
 		pp: 10,
 		priority: 0,
-		flags: { contact: 1, protect: 1, slicing: 1, mirror: 1 },
+		flags: { protect: 1, slicing: 1, mirror: 1 },
 		onEffectiveness(typeMod, target, type) {
 			if (type === "Steel") return 1;
 		},
