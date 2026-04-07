@@ -8717,7 +8717,7 @@
             {
                 "role": "Setup Sweeper",
                 "movepool": ["Shell Smash", "Moonblast", "Dragon Pulse", "Ice Beam", "Earth Power"],
-                "abilities": ["Exalted"],
+                "abilities": ["Exalt"],
                 "teraTypes": ["Fairy", "Ice"]
             }
         ]
