@@ -209,9 +209,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		bestOfDefault: true,
 		ruleset: ['PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Illusion Level Mod'],
 	},
-	// S/V Singles
-	///////////////////////////////////////////////////////////////////
-
 	{
 		section: "Tour Formats",
 	},
