@@ -508,6 +508,11 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Draconic",
 		shortDesc: "At 1/3 or less of its max HP, this Pokemon's offensive stat is 1.5x with Dragon attacks.",
 	},
+	dragonize: {
+		name: "Dragonize",
+		desc: "This Pokemon's Normal-type moves become Dragon-type moves and have their power multiplied by 1.2. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
+		shortDesc: "This Pokemon's Normal-type moves become Dragon type and have 1.2x power.",
+	},
 	dragonsmaw: {
 		name: "Dragon's Maw",
 		shortDesc: "This Pokemon's offensive stat is multiplied by 1.5 while using a Dragon-type attack.",
@@ -1223,6 +1228,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "This Pokemon's pulse moves have their power multiplied by 1.5. Heal Pulse restores 3/4 of a target's maximum HP, rounded half down.",
 		shortDesc: "This Pokemon's pulse moves have 1.5x power. Heal Pulse heals 3/4 target's max HP.",
 	},
+	megasol: {
+		name: "Mega Sol",
+		shortDesc: "This Pokemon's moves are used as if the effects of Sunny Day were active.",
+	},
 	merciless: {
 		name: "Merciless",
 		shortDesc: "This Pokemon's attacks are critical hits if the target is poisoned.",
@@ -1537,6 +1546,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		},
 
 		addItem: "#recycle",
+	},
+	piercingdrill: {
+		name: "Piercing Drill",
+		shortDesc: "This Pokemon's contact moves ignore a target's protection and deal 1/4 the usual damage.",
 	},
 	pixilate: {
 		name: "Pixilate",
@@ -2141,6 +2154,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	spinurgy: {
 		name: "Spinurgy",
 		shortDesc: "Spinning moves get stronger with time, after 3 turns all moves are spinning."
+	},
+	spicyspray: {
+		name: "Spicy Spray",
+		shortDesc: "If this Pokemon is hit by an attack, the attacker becomes burned.",
 	},
 	stakeout: {
 		name: "Stakeout",
