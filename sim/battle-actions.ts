@@ -1887,7 +1887,7 @@ export class BattleActions {
 		if (megaEvolution && this.dex.species.get(megaEvolution).gen >= 9) return megaEvolution;
 		// a hacked-in Megazard X can mega evolve into Megazard Y, but not into Megazard X
 		// FIXME: Change to species.name when champions comes
-		megaEvolution = item.megaStone[species.baseSpecies];
+		megaEvolution = item.megaStone[species.name];
 		return megaEvolution && megaEvolution !== species.name ? megaEvolution : null;
 	}
 
