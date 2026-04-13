@@ -23510,7 +23510,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		forme: "Delta",
 		types: ["Dragon", "Fire"],
 		baseStats: { hp: 66, atk: 102, def: 85, spa: 40, spd: 60, spe: 57 },
-		abilities: { 0: "Rivalry", 1: "Battle Armor", H: "Skill Link" },
+		abilities: { 0: "Rivalry", 1: "Battle Armor", H: "Flame Body" },
 		heightm: 1, //no height provided?
 		weightkg: 52.5,
 		color: "Blue",
