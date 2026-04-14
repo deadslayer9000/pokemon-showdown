@@ -123,7 +123,7 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
 	meganium: {
 		inherit: true,
 		learnset: {
-			dazzlinggleam: ["9M"],,
+			dazzlinggleam: ["9M"],
 			earthpower: ["9M"],
 			leafblade: ["9M"],
 			pollenpuff: ["9M"],
