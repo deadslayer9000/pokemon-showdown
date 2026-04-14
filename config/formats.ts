@@ -272,11 +272,18 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		unbanlist: ['Landorus', 'Gholdengo', 'Good as Gold'],
 	},
 	{
+		name: "[Gen 9] [ND] Delta Draft League Season 3",
+		searchShow: false,
+		mod: 'ddls3patch',
+		ruleset: ['Standard NatDex', 'Standard Draft'],
+	},
+	/*
+	{
 		name: "[Gen 9] [ND] Delta Draft League Season 2",
 		searchShow: false,
 		mod: 'pres4patch',
 		ruleset: ['Standard NatDex', 'Standard Draft'],
-	},
+	},*/
 	{
 		name: "[Gen 9] [ND] Pre Mid Season 6 Patch Draft",
 		searchShow: false,

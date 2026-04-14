@@ -9554,7 +9554,7 @@
         "sets": [
             {
                 "role": "Setup Sweeper",
-                "movepool": ["Belly Drum", "Ice Shard", "Play Rough", "Icile Flail", "Brick Break"],
+                "movepool": ["Belly Drum", "Ice Shard", "Play Rough", "Icicle Flail", "Brick Break"],
                 "abilities": ["Thick Fat"],
                 "teraTypes": ["Ice"]
             }
