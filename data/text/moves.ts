@@ -6104,7 +6104,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	sandbarrier: {
 		name: "Sand Barrier",
 		desc: "Protects the user. When a contact move is used, the opponent loses 1/8th of their max HP and Sandstorm is set on the field.",
-		shortDesc: "Protects the user, if hit with contact move, summons Sandstorm.",
+		shortDesc: "Protects. Contact: Sandstorm and 1/8 max HP loss.",
 	},
 	shadowball: {
 		name: "Shadow Ball",
