@@ -3,6 +3,9 @@ inherit: 'gen9',
     gen: 9,
     init() {
       this.modData("Learnsets", "venusaur").learnset.sludgewave = ["9M"];
+	  this.modData("Learnsets", "blastoise").learnset.ironhead = ["9M"];
+	  this.modData("Learnsets", "beedrill").learnset.bugbuzz = ["9M"];
+	  
 	  this.modData("Learnsets", "lopunny").learnset.cottonguard = ["9M"];
 	  this.modData("Learnsets", "lopunny").learnset.drainingkiss = ["9M"];
 	  this.modData("Learnsets", "lopunny").learnset.dynamicpunch = ["9M"];
