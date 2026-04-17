@@ -127,7 +127,7 @@ inherit: 'gen9',
 	  this.modData("Learnsets", "talonflame").learnset.blazekick = ["9M"];
 	  this.modData("Learnsets", "talonflame").learnset.skyattack = ["9M"];
 	  this.modData("Learnsets", "talonflame").learnset.whirlwind = ["9M"];
-	  this.modData("Learnsets", "vivillion").learnset.whirlwind = ["9M"];
+	  this.modData("Learnsets", "vivillon").learnset.whirlwind = ["9M"];
 	  this.modData("Learnsets", "floetteeternal").learnset.alluringvoice = ["9M"];
 	  this.modData("Learnsets", "floetteeternal").learnset.batonpass = ["9M"];
 	  this.modData("Learnsets", "floetteeternal").learnset.drainingkiss = ["9M"];
