@@ -8,9 +8,6 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	victreebelmega: {
 		tier: "OU",
 	},
-	starmiemega: {
-		tier: "OU",
-	},
 	dragonitemega: {
 		tier: "OU",
 	},
