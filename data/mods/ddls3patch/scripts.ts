@@ -30,8 +30,8 @@ inherit: 'gen9',
 	  this.modData("Learnsets", "pinsir").learnset.aerialace = ["9M"];
 	  this.modData("Learnsets", "pinsir").learnset.hardpress = ["9M"];
 	  this.modData("Learnsets", "pinsir").learnset.lunge = ["9M"];
-	  this.modData("Learnsets", "taurospaldea").learnset.irontail = ["9M"];
-	  this.modData("Learnsets", "taurospaldea").learnset.megahorn = ["9M"];
+	  this.modData("Learnsets", "taurospaldeacombat").learnset.irontail = ["9M"];
+	  this.modData("Learnsets", "taurospaldeacombat").learnset.megahorn = ["9M"];
 	  this.modData("Learnsets", "taurospaldeaaqua").learnset.irontail = ["9M"];
 	  this.modData("Learnsets", "taurospaldeaaqua").learnset.megahorn = ["9M"];
 	  this.modData("Learnsets", "taurospaldeablaze").learnset.irontail = ["9M"];
