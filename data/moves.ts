@@ -24277,6 +24277,14 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				move.type = "Fire";
 			} else if (vsIce > vsElectric && vsIce > vsFire) {
 				move.type = "Ice";
+			} else if (vsElectric === vsFire && vsElectric > vsIce) {
+				if (this.field.isWeather("sunnyday") || this.field.isWeather("desolateland")) {
+					move.type = "Fire";
+				} else if (this.field.isTerrain("electricterrain")) {
+					move.type = "Electric";
+				} else {
+					move.type = "Electric";
+				}
 			} else {
 				if (
 					this.field.isWeather("sunnyday") ||
