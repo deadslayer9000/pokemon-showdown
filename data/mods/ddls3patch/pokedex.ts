@@ -35,4 +35,8 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		inherit: true,
 		abilities: { 0: "Stalwart"},
 	},
+	delphoxmega: {
+		inherit: true,
+		abilities: { 0: "Levitate"},
+	}
 };
