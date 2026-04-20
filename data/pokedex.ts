@@ -26292,4 +26292,28 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Purple",
 		eggGroups: ["Undiscovered"],
 	},
+	girashadow: {
+		num: 2124, //placeholder
+		name: "Girashadow",
+    	types: ["Ghost", "Dragon"],
+		gender: "N",
+    	baseStats: { hp: 140, atk: 100, def: 60, spa: 100, spd: 80, spe: 120 },
+    	abilities: { 0: "Shadow Wick" },
+		heightm: 0.7,
+    	weightkg: 33.3,
+		//color: "Grey", no info yet,
+		eggGroups: ["Undiscovered"],
+  	},
+  	silentsting: {
+		num: 2125, //placeholder
+  		name: "Silent Sting",
+    	types: ["Bug", "Dragon"],
+		gender: "N",
+    	baseStats: { hp: 85, atk: 135, def: 87, spa: 97, spd: 87, spe: 99 },
+    	abilities: { 0: "Protosynthesis" },
+		heightm: 1.4,
+    	weightkg: 62.5,
+		//color: "Blue", no info yet,
+		eggGroups: ["Undiscovered"],
+  	},
 };

@@ -9909,6 +9909,20 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 3,
 		num: -107,
 	},
+	shadowwick: {
+		onChargeMove(source, target, move) {
+			if (move.flags["charge"] && source.activeTurns===1) {
+				this.add("-activate", source, "ability: Shadow Wick");
+				this.attrLastMove("[still]");
+				this.addMove("-anim", source, move.name, target);
+				return false;
+			},
+		},
+		flags: {},
+		name: "Shadow Wick",
+		rating: 2,
+		num: -108,
+	},
 	// CAP
 	mountaineer: {
 		onDamage(damage, target, source, effect) {
