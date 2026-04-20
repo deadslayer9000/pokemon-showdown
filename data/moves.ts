@@ -27544,7 +27544,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			if (attacker.removeVolatile(move.id)) {
 				return;
 			}
-			this.add('-prepare', attacker, move.name);
+			//this.add('-prepare', attacker, move.name);
 			if (['sunnyday', 'desolateland'].includes(attacker.effectiveWeather(true))) {
 				this.attrLastMove('[still]');
 				this.addMove('-anim', attacker, move.name, defender);
