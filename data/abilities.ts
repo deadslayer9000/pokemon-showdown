@@ -9916,7 +9916,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				this.attrLastMove("[still]");
 				this.addMove("-anim", source, move.name, target);
 				return false;
-			},
+			}
 		},
 		flags: {},
 		name: "Shadow Wick",
