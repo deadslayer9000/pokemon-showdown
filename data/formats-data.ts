@@ -7350,4 +7350,14 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		isNonstandard: "Custom",
 		tier: "Illegal",
 	},
+	girashadow: {
+		tier: "UU",
+		natDexTier: "UU",
+		doublesTier: "DUU",
+	},
+	silentsting: {
+		tier: "UU",
+		natDexTier: "UU",
+		doublesTier: "DUU",
+	},
 };

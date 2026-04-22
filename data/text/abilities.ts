@@ -1979,6 +1979,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			shortDesc: "Prevents opposing Pokemon from choosing to switch out.",
 		},
 	},
+	shadowwick: {
+		name: "Shadow Wick",
+		shortDesc: "This Pokemon's charge moves don't require charge on first turn on field.",
+	},
 	shapeshift: {
 		name: "Shapeshift",
 		shortDesc: "This Pokemon transforms into the opposing pokemon when using Bitter Malice.",

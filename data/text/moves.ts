@@ -7536,6 +7536,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Lowers the target's Attack and Defense by 1 stage.",
 		shortDesc: "Lowers the target's Attack and Defense by 1.",
 	},
+	titanbuster: {
+		name: "Titan Buster",
+		shortDesc: "Charges turn 1. Hits turn 2. No charge in sunlight.",
+	},
 	titaniumtempest: {
 		name: "Titanium Tempest",
 		desc: "Prevents the target from switching for four or five turns (seven turns if the user is holding Grip Claw). Causes damage to the target equal to 1/8 of its maximum HP (1/6 if the user is holding Binding Band), rounded down, at the end of each turn during effect. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Shed Tail, Teleport, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field, or if the target uses Mortal Spin, Rapid Spin, or Substitute successfully. This effect is not stackable or reset by using this or another binding move.",
