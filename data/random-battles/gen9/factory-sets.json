@@ -2346,6 +2346,18 @@
 				"teraType": ["Water"],
 				"moves": [["Aura Sphere"], ["Surf"], ["Flip Turn"], ["Vacuum Wave"]]
 			}]
+		},
+		"heatrandelta": {
+			"weight": 1,
+			"sets": [{
+				"species": "Heatran-Delta",
+				"weight": 100,
+				"item": ["Flame Orb"],
+				"ability": "Steamforged",
+				"evs": { "hp": 252, "def": 252, "spd": 4 },
+				"nature": ["Bold"],
+				"moves": [["Scald", "Earth Power", "Stealth Rock", "Pressurize"]]
+			}]
 		}
 	}, 
 	"UU": {
