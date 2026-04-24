@@ -210,6 +210,17 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		ruleset: ['PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Illusion Level Mod'],
 	},
 	{
+		name: "[Gen 9] Delta Battle Factory",
+		desc: `Randomized teams of Pok&eacute;mon for a generated Smogon tier with sets that are competitively viable.`,
+		mod: 'gen9delta',
+		team: 'randomFactory',
+		bestOfDefault: true,
+		ruleset: ['Standard NatDex', 'Terastal Clause'],
+		onBegin() {
+			this.add(`raw|<div class="broadcast-blue"><b>Battle Factory Tier: ${this.teamGenerator.factoryTier}</b></div>`);
+		},
+	},
+	{
 		section: "Tour Formats",
 	},
 	{
