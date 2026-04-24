@@ -212,7 +212,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		name: "[Gen 9] Delta Battle Factory",
 		desc: `Randomized teams of Pok&eacute;mon for a generated Smogon tier with sets that are competitively viable.`,
-		mod: 'gen9delta',
+		mod: 'gen9',
 		team: 'randomFactory',
 		bestOfDefault: true,
 		ruleset: ['Standard NatDex', 'Terastal Clause'],
