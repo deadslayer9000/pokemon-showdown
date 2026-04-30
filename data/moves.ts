@@ -21839,8 +21839,8 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	},
 	steelskewer: {
 		num: -9,
-		accuracy: 90,
-		basePower: 70,
+		accuracy: 95,
+		basePower: 75,
 		category: "Physical",
 		name: "Steel Skewer",
 		pp: 10,
@@ -25607,7 +25607,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	wildwire: {
 		num: -46,
 		accuracy: 100,
-		basePower: 75,
+		basePower: 90,
 		category: "Special",
 		name: "Wild Wire",
 		pp: 10,
@@ -27035,7 +27035,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			},
 			onAnyModifyDamage(damage, source, target, move){
 				if (target.volatiles["divineparry"]) {
-					return this.chainModify(0.5);
+					return this.chainModify(3071, 4096);
 				}
 			},
 		},
@@ -27398,7 +27398,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	pulsarspiral: {
 		num: -118,
 		accuracy: 90,
-		basePower: 70,
+		basePower: 80,
 		category: "Physical",
 		name: "Pulsar Spiral",
 		pp: 10,

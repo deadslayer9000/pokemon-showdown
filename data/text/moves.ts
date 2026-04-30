@@ -1602,8 +1602,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	divineparry: {
 		name: "Divine Parry",
-		desc: "On use, this Pokemon enters a focus state. When in the focus state, all damage taken is reduced by 50%. If this Pokemon receives damage during the focus state, it will immediately use Divine Parry. If the Pokemon does not receive damage during the focus state, this attack executes at 3/4 power.",
-		shortDesc: "50% DR; 3/4th power if not attacked.",
+		desc: "On use, this Pokemon enters a focus state. When in the focus state, all damage taken is reduced by 25%. If this Pokemon receives damage during the focus state, it will immediately use Divine Parry. If the Pokemon does not receive damage during the focus state, this attack executes at 3/4 power.",
+		shortDesc: "25% DR; 3/4th power if not attacked.",
 	},
 	divinevolley: {
 		name: "Divine Volley",
