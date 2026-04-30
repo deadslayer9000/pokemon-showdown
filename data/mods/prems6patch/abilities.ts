@@ -17,5 +17,9 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		},
 		onEnd(target) {},
 	},
+	dawnbreak: {
+		inherit: true,
+		flags: {},
+	},
 	
 };
