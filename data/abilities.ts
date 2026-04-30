@@ -1869,7 +1869,8 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		onModifySpA(SpA, pokemon) {
 			for (const ally of pokemon.adjacentAllies()) {
 				if (ally.hasAbility("Moonwake")) {
-					this.add("-ability", pokemon, "Moonwake", "boost");
+//					this.add("-ability", pokemon, "Moonwake", "boost");
+					this.hint(`${pokemon.name}'s Moonwake increased the power of the attack!`);
 					return this.chainModify(1.5);
 				}
 			}
@@ -4803,6 +4804,16 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 					if (pokemon.ability === "gluttony") {
 						pokemon.abilityState.gluttony = false;
 					}
+				}
+			}
+		},
+		onModifySpDPriority: 6,
+		onModifySpD(spd, pokemon) {
+			for (const ally of pokemon.adjacentAllies()) {
+				if (ally.hasAbility("Dawnbreak")) {
+//					this.add("-ability", pokemon, "Moonwake", "boost");
+					this.hint(`${ally.name}'s Dawnbreak decreased the power of the attack!`);
+					return this.chainModify(1.5);
 				}
 			}
 		},
