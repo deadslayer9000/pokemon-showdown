@@ -175,4 +175,42 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		},
 		onModifyMove(move, pokemon, target) {},
 	},
+	divineparry: {
+		inherit: true,
+		condition: {
+			duration: 1,
+			onStart(pokemon) {
+				this.add("-singleturn", pokemon, "move: Divine Parry");
+			},
+			onHit(pokemon, source, move) {
+				if (!pokemon.isAlly(source) && move.category != "Status") {
+					this.effectState.gotHit = true;
+					const action = this.queue.willMove(pokemon);
+					if (action) {
+						this.queue.prioritizeAction(action);
+					}
+				}
+			},
+			onAnyModifyDamage(damage, source, target, move){
+				if (target.volatiles["divineparry"]) {
+					return this.chainModify(0.5);
+				}
+			},
+		},
+		desc: "On use, this Pokemon enters a focus state. When in the focus state, all damage taken is reduced by 50%. If this Pokemon receives damage during the focus state, it will immediately use Divine Parry. If the Pokemon does not receive damage during the focus state, this attack executes at 3/4 power.",
+		shortDesc: "50% DR; 3/4th power if not attacked."
+	},
+	steelskewer: {
+		inherit: true,
+		basePower: 70,
+		accuracy: 90,
+	},
+	pulsarspiral: {
+		inherit: true,
+		basePower: 70,
+	},
+	wildwire: {
+		inherit: true,
+		basePower: 75,
+	},
 };
