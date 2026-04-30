@@ -38,7 +38,7 @@ export const Conditions: import('../sim/dex-conditions').ConditionDataTable = {
 		},
 		onBeforeMovePriority: 1,
 		onBeforeMove(pokemon) {
-			if (this.randomChance(1, 4)) {
+			if (this.randomChance(1, 8)) { //champions change
 				this.add('cant', pokemon, 'par');
 				return false;
 			}
@@ -92,11 +92,15 @@ export const Conditions: import('../sim/dex-conditions').ConditionDataTable = {
 			if (target.species.name === 'Shaymin-Sky' && target.baseSpecies.baseSpecies === 'Shaymin') {
 				target.formeChange('Shaymin', this.effect, true);
 			}
+
+			this.effectState.startTime = 3;
+			this.effectState.time = this.effectState.startTime;
 		},
 		onBeforeMovePriority: 10,
 		onBeforeMove(pokemon, target, move) {
 			if (move.flags['defrost'] && !(move.id === 'burnup' && !pokemon.hasType('Fire'))) return;
-			if (this.randomChance(1, 5)) {
+			pokemon.statusState.time--;
+			if (pokemon.statusState.time <= 0 || this.randomChance(1, 4)) {
 				pokemon.cureStatus();
 				return;
 			}

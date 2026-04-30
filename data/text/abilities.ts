@@ -436,7 +436,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		},
 	},
 	dawnbreak: {
-		name: "Dawnbreak (WIP)",
+		name: "Dawnbreak",
 		shortDesc: "Nullifies items; SpA is 1.5x if a Pokemon with Moonwake is active.",
 	},
 	dazzling: {
@@ -1324,8 +1324,12 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		},
 	},
 	moonwake: {
-		name: "Moonwake (WIP)",
-		shortDesc: "Moves ignore abilities; 1.5x SpD if a Pokemon with Dawnbreak is active.",
+		name: "Moonwake",
+		desc: "While this Pokemon is active, Abilities have no effect. This Ability activates before hazards and other Abilities take effect. Does not affect the As One, Battle Bond, Comatose, Dawnbreak, Disguise, Gulp Missile, Ice Face, Moonwake, Multitype, Neutralizing Gas, Power Construct, RKS System, Schooling, Shields Down, Stance Change, Tera Shift, Zen Mode, or Zero to Hero Abilities. If another Pokemon on this side has Dawnbreak, this Pokemon gets a 1.5x Special Defense Boost.",
+		shortDesc: "Abilities have no effect; 1.5x SpD if a Pokemon with Dawnbreak is active.",
+
+		start: "The moon shines upon the field!",
+		end: "The effects of the moonlight have worn off!",
 	},
 	motordrive: {
 		name: "Motor Drive",
@@ -1396,7 +1400,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	neutralizinggas: {
 		name: "Neutralizing Gas",
-		desc: "While this Pokemon is active, Abilities have no effect. This Ability activates before hazards and other Abilities take effect. Does not affect the As One, Battle Bond, Comatose, Disguise, Gulp Missile, Ice Face, Multitype, Neutralizing Gas, Power Construct, RKS System, Schooling, Shields Down, Stance Change, Tera Shift, Zen Mode, or Zero to Hero Abilities.",
+		desc: "While this Pokemon is active, Abilities have no effect. This Ability activates before hazards and other Abilities take effect. Does not affect the As One, Battle Bond, Comatose, Dawnbreak, Disguise, Gulp Missile, Ice Face, Moonwake, Multitype, Neutralizing Gas, Power Construct, RKS System, Schooling, Shields Down, Stance Change, Tera Shift, Zen Mode, or Zero to Hero Abilities.",
 		shortDesc: "While this Pokemon is active, Abilities have no effect.",
 		gen8: {
 			desc: "While this Pokemon is active, Abilities have no effect. This Ability activates before hazards and other Abilities take effect. Does not affect the As One, Battle Bond, Comatose, Disguise, Gulp Missile, Ice Face, Multitype, Neutralizing Gas, Power Construct, RKS System, Schooling, Shields Down, Stance Change, or Zen Mode Abilities.",
