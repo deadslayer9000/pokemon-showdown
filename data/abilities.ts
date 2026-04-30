@@ -1874,7 +1874,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				}
 			}
 		},
-		flags: {},
+		flags: { cantsuppress: 1 },
 		name: "Dawnbreak",
 		rating: 2,
 		num: -11,
