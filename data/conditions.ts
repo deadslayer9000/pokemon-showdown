@@ -55,8 +55,9 @@ export const Conditions: import('../sim/dex-conditions').ConditionDataTable = {
 			} else {
 				this.add('-status', target, 'slp');
 			}
-			// 1-3 turns
-			this.effectState.startTime = this.random(2, 5);
+
+			// 1/3 chance for a Pokemon to wake up on turn 2
+			this.effectState.startTime = this.sample([2, 3, 3]); //champions change
 			this.effectState.time = this.effectState.startTime;
 
 			if (target.removeVolatile('nightmare')) {
