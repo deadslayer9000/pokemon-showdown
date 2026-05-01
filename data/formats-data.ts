@@ -6235,7 +6235,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "OU",
 	},
 	grimmeon: {
-		tier: "RU",
+		tier: "UU",
 	},
 	scizantrum: {
 		tier: "UU",
@@ -6538,7 +6538,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "LC",
 	},
 	gastrodondelta: {
-		tier: "UU",
+		tier: "RU",
 	},
 	tandemausdelta: {
 		tier: "LC",
@@ -6625,7 +6625,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "NFE",
 	},
 	tinkatondelta: {
-		tier: "UU",
+		tier: "RU",
 	},
 	tinkatinkultra: {
 		tier: "LC",
@@ -6706,7 +6706,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "LC",
 	},
 	brewloom: {
-		tier: "RU",
+		tier: "UU",
 	},
 	broomish: {
 		tier: "LC",
@@ -7247,7 +7247,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		doublesTier: "(DUU)",
 	},
 	tapuhina: {
-		tier: "UU",
+		tier: "RU",
 		doublesTier: "(DUU)",
 	},
 	urshifuflashstrike: {
@@ -7255,7 +7255,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		doublesTier: "(DUU)",
 	},
 	keldeodelta: {
-		tier: "UU",
+		tier: "RU",
 		doublesTier: "(DUU)",
 	},
 	keldeodeltamega: {
@@ -7290,6 +7290,10 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "UU",
 		doublesTier: "DUU",
 	},
+	chimechodelta: {
+		tier: "RU",
+		natDexTier: "RU",
+	},
 	chimechodeltamega: {
 		tier: "UU",
 	},
@@ -7311,7 +7315,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "Uber"
 	},
 	lotadatom: {
-		tier: "UU",
+		tier: "RU",
 	},
 	dustoxatom: {
 		tier: "UU",
@@ -7329,22 +7333,22 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 	},
 	slakothatom: {
-		tier: "UU",
+		tier: "RU",
 	},
 	amoongussatom: {
-		tier: "UU",
+		tier: "RU",
 	},
 	pachirisuatom: {
 		tier: "UU",
 	},
 	wynautatom: {
-		tier: "UU",
+		tier: "RU",
 	},
 	tandemausatom: {
-		tier: "UU",
+		tier: "RU",
 	},
 	spindaatom: {
-		tier: "UU",
+		tier: "RU",
 	},
 	apextyrant: {
 		tier: "UU",
@@ -7363,4 +7367,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "UU",
 		doublesTier: "DUU",
 	},
+	atommew: {
+		tier: "UU",
+		natDexTier: "UU",
+		doublesTier: "DUU",
+	}
 };
