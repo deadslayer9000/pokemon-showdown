@@ -7367,4 +7367,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "UU",
 		doublesTier: "DUU",
 	},
+	atommew: {
+		tier: "UU",
+		natDexTier: "UU",
+		doublesTier: "DUU",
+	}
 };
