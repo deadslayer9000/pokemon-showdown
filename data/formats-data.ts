@@ -339,9 +339,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "LC",
 	},
 	ninetales: {
-		tier: "ZU",
+		tier: "RUBL",
 		doublesTier: "DUU",
-		natDexTier: "RU",
+		natDexTier: "RUBL",
 	},
 	ninetalesalola: {
 		tier: "PU",
@@ -2898,9 +2898,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "Uber",
 	},
 	cresselia: {
-		tier: "NUBL",
+		tier: "RUBL",
 		doublesTier: "DOU",
-		natDexTier: "RU",
+		natDexTier: "RUBL",
 	},
 	phione: {
 		tier: "ZU",
@@ -4245,7 +4245,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	primarina: {
 		tier: "OU",
 		doublesTier: "DUU",
-		natDexTier: "RU",
+		natDexTier: "RUBL",
 	},
 	pikipek: {
 		tier: "LC",
@@ -6459,8 +6459,8 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "UU",
 	},
 	glimmerix: {
-		tier: "RU",
-		natDexTier: "RU",
+		tier: "RUBL",
+		natDexTier: "RUBL",
 	},
 	wisphir: {
 		tier: "RU",
@@ -6575,8 +6575,8 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "RU",
 	},
 	tinkatonomega: {
-		tier: "RU",
-		natDexTier: "RU",
+		tier: "RUBL",
+		natDexTier: "RUBL",
 	},
 	ectarachnid: {
 		tier: "NU",
@@ -6882,8 +6882,8 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "LC",
 	},
 	brewloom: {
-		tier: "UU",
-		natDexTier: "UU",
+		tier: "RUBL",
+		natDexTier: "RUBL",
 	},
 	broomish: {
 		tier: "LC",
@@ -7006,8 +7006,8 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "LC",
 	},
 	quaxolotl: {
-		tier: "RU",
-		natDexTier: "RU",
+		tier: "RUBL",
+		natDexTier: "RUBL",
 	},
 	wooperomega: {
 		tier: "LC",
@@ -7470,133 +7470,167 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	ursasola: {
 		tier: "RU",
 		doublesTier: "(DUU)",
+		natDexTier: "RU",
 	},
 	ursasolasolarflare: {
 		tier: "RU",
 		doublesTier: "(DUU)",
+		natDexTier: "RU",
 	},
 	rawstrunt: {
 		tier: "RU",
 		doublesTier: "(DUU)",
+		natDexTier: "RU",
 	},
 	cherirunt: {
 		tier: "NU",
 		doublesTier: "(DUU)",
+		natDexTier: "NU",
 	},
 	aspearunt: {
 		tier: "UU",
 		doublesTier: "(DUU)",
+		natDexTier: "UU",
 	},
 	chestorunt: {
 		tier: "RU",
 		doublesTier: "(DUU)",
+		natDexTier: "RU",
 	},
 	persimrunt: {
 		tier: "NU",
 		doublesTier: "(DUU)",
+		natDexTier: "NU",
 	},
 	lumrunt: {
 		tier: "UU",
 		doublesTier: "(DUU)",
+		natDexTier: "UU",
 	},
 	litwickdelta: {
 		tier: "LC",
 		doublesTier: "LC",
+		natDexTier: "LC",
 	},
 	lampentdelta: {
 		tier: "NFE",
 		doublesTier: "NFE",
+		natDexTier: "NFE",
 	},
 	chandeluredelta: {
 		tier: "NU",
 		doublesTier: "(DUU)",
+		natDexTier: "NU",
 	},
 	joltikdelta: {
 		tier: "LC",
 		doublesTier: "LC",
+		natDexTier: "LC",
 	},
 	galvantuladelta: {
 		tier: "NU",
 		doublesTier: "(DUU)",
+		natDexTier: "NU",
 	},
 	viriziondelta: {
 		tier: "RU",
 		doublesTier: "(DUU)",
+		natDexTier: "RU",
 	},
 	cobaliondelta: {
 		tier: "RU",
 		doublesTier: "(DUU)",
+		natDexTier: "RU",
 	},
 	terrakiondelta: {
 		tier: "UU",
 		doublesTier: "(DUU)",
+		natDexTier: "UU",
 	},
 	stridingsun: {
 		tier: "RU",
 		doublesTier: "(DUU)",
+		natDexTier: "RU",
 	},
 	ironmoon: {
 		tier: "UU",
 		doublesTier: "(DUU)",
+		natDexTier: "UU",
 	},
 	volcaniondelta: {
 		tier: "RU",
 		doublesTier: "(DUU)",
+		natDexTier: "RU",
 	},
 	magearnadelta: {
 		tier: "UU",
 		doublesTier: "(DUU)",
+		natDexTier: "UU",
 	},
 	magearnaoriginaldelta: {
 		tier: "UU",
 		doublesTier: "(DUU)",
+		natDexTier: "UU",
 	},
 	vrelie: {
 		tier: "RU",
 		doublesTier: "(DUU)",
+		natDexTier: "RU",
 	},
 	vreliedelta: {
 		tier: "UU",
 		doublesTier: "(DUU)",
+		natDexTier: "UU",
 	},
 	tapuhina: {
 		tier: "RU",
 		doublesTier: "(DUU)",
+		natDexTier: "RU",
 	},
 	urshifuflashstrike: {
 		tier: "UU",
 		doublesTier: "(DUU)",
+		natDexTier: "UU",
 	},
 	keldeodelta: {
 		tier: "RU",
 		doublesTier: "(DUU)",
+		natDexTier: "RU",
 	},
 	keldeodeltamega: {
 		tier: "UU",
+		natDexTier: "UU",
+		doublesTier: "(DUU)",
 	},
 	glacierus: {
 		tier: "NU",
 		doublesTier: "(DUU)",
+		natDexTier: "NU",
 	},
 	glacierustherian: {
 		tier: "UU",
 		doublesTier: "(DUU)",
+		natDexTier: "UU",
 	},
 	celebidelta: {
 		tier: "NU",
 		doublesTier: "(DUU)",
+		natDexTier: "NU",
 	},
 	ironblaster: {
 		tier: "OU",
 		doublesTier: "(DUU)",
+		natDexTier: "OU",
 	},
 	necromausermega: {
 		tier: "OU",
 		doublesTier: "(DUU)",
+		natDexTier: "OU",
 	},
 	slaughtermausmega: {
 		tier: "OU",
 		doublesTier: "(DUU)",
+		natDexTier: "OU",
 	},
 	flaringquill: {
 		tier: "UU",
@@ -7609,9 +7643,11 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	chimechodeltamega: {
 		tier: "UU",
+		natDexTier: "UU",
 	},
 	klocktowlmega: {
 		tier: "UU",
+		natDexTier: "UU",
 	},
 	draculedge: {
 		tier: "OU",
@@ -7620,55 +7656,72 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	terapagosatom: {
 		tier: "UU",
+		natDexTier:	"UU",
 	},
 	terapagosatomcosmic: {
 		tier: "UU",
+		natDexTier:	"UU",
 	},
 	terapagosatomgalactic: {
-		tier: "Uber"
+		tier: "Uber",
+		natDexTier:	"Uber",
 	},
 	lotadatom: {
 		tier: "RU",
+		natDexTier: "RU",
 	},
 	dustoxatom: {
 		tier: "UU",
+		natDexTier: "UU",
 	},
 	gardevoiratom: {
 		tier: "UU",
+		natDexTier: "UU",
 	},
 	gardevoiratommega: {
 		tier: "UU",
+		natDexTier: "UU",
 	},
 	galladeatom: {
 		tier: "UU",
+		natDexTier: "UU",
 	},
 	galladeatommega: {
 		tier: "UU",
+		natDexTier: "UU",
 	},
 	slakothatom: {
 		tier: "RU",
+		natDexTier: "RU",
 	},
 	amoongussatom: {
 		tier: "RU",
+		natDexTier: "RU",
 	},
 	pachirisuatom: {
 		tier: "UU",
+		natDexTier: "UU",
 	},
 	wynautatom: {
 		tier: "RU",
+		natDexTier: "RU",
 	},
 	tandemausatom: {
 		tier: "RU",
+		natDexTier: "RU",
 	},
 	spindaatom: {
 		tier: "RU",
+		natDexTier: "RU",
 	},
 	apextyrant: {
 		tier: "UU",
+		natDexTier: "UU",
 	},
 	yuumi: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
+		natDexTier: "Illegal",
 	},
 	girashadow: {
 		tier: "UU",
