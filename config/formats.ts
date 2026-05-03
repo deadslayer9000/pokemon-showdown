@@ -34,10 +34,10 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock',
 			'Quick Claw', 'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail', 'Dire Claw', 'Rage Fist', 'Blood Moon', 'Darkrai', 'Zamazenta', 'Good as Gold',  'Raichunite Y', 'Delphoxite', 'Delphox-Mega', 'Raichu-Mega-Y', 'Walking Wake',
 			'Normalium Z', 'Fightinium Z', 'Flyinium Z', 'Poisonium Z', 'Groundium Z', 'Rockium Z', 'Buginium Z', 'Ghostium Z', 'Steelium Z', 'Firium Z', 'Waterium Z', 'Grassium Z', 'Electrium Z', 'Psychium Z', 'Icium Z', 'Dragonium Z', 'Darkinium Z', 'Fairium Z'
-		],
+		],/*
 		unbanlist: [
-			'Solgaleo', 'Sneasler', 'Annihilape', 'Ursaluna-Bloodmoon', 'Espathra', 'Roaring Moon', 'Dragapult',  'Raichu-Mega-X', 'Absol-Mega-Z',  'Greninja-Mega', 'Chesnaught-Mega', 'Absolite Z', 'Raichunite X', 'Greninjite', 'Chesnaughtite', 'Hawlucha-Mega', 'Hawluchanite', 'Chandelure-Mega', 'Chandelurite', 
-		],
+			'Ursaluna-Bloodmoon', 'Espathra', 'Roaring Moon', 'Dragapult',  'Raichu-Mega-X', 'Absol-Mega-Z', 'Chesnaught-Mega', 'Absolite Z', 'Raichunite X', 'Chesnaughtite', 'Hawlucha-Mega', 'Hawluchanite', 'Chandelure-Mega', 'Chandelurite', 
+		],*/
 	},
 	{
 		name: "[Gen 9] [ND] Delta VGC Reg Beta",
@@ -3039,7 +3039,8 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen9',
 		// searchShow: false,
 		ruleset: ['[Gen 9] National Dex UU'],
-		banlist: ['ND UU', 'ND RUBL', 'Slowbronite'],
+		banlist: ['ND UU', 'ND RUBL'],
+		unbanlist: ["Drought", "Drizzle"],
 	},
 	{
 		name: "[Gen 9] National Dex Ubers UU",

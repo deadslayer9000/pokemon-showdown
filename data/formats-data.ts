@@ -1153,7 +1153,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	aerodactylmega: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "RU",
+		natDexTier: "RUBL",
 	},
 	munchlax: {
 		tier: "LC",
@@ -1241,7 +1241,8 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "NU",
 	},
 	meganiummega: {
-		tier: "NU",
+		tier: "RU",
+		natDexTier: "RUBL",
 	},
 	cyndaquil: {
 		tier: "LC",
@@ -4244,9 +4245,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "NFE",
 	},
 	primarina: {
-		tier: "RU",
+		tier: "RUBL",
 		doublesTier: "DUU",
-		natDexTier: "RU",
+		natDexTier: "RUBL",
 	},
 	pikipek: {
 		tier: "LC",
@@ -5289,12 +5290,12 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	enamorus: {
 		tier: "OU",
 		doublesTier: "DUU",
-		natDexTier: "RU",
+		natDexTier: "RUBL",
 	},
 	enamorustherian: {
 		tier: "RUBL",
 		doublesTier: "(DUU)",
-		natDexTier: "RU",
+		natDexTier: "RUBL",
 	},
 	sprigatito: {
 		tier: "LC",
@@ -6652,8 +6653,8 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "RU",
 	},
 	gorochu: {
-		tier: "RU",
-		natDexTier: "RU",
+		tier: "RUBL",
+		natDexTier: "RUBL",
 	},
 	shellosdelta: {
 		tier: "LC",
@@ -6740,8 +6741,8 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "NU",
 	},
 	lochtrier: {
-		tier: "RU",
-		natDexTier: "RU",
+		tier: "RUBL",
+		natDexTier: "RUBL",
 	},
 	sprigatitodelta: {
 		tier: "LC",
@@ -7412,9 +7413,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "UU",
 	},
 	meloettaomega: {
-		tier: "RU",
+		tier: "RUBL",
 		isNonstandard: "Past",
-		natDexTier: "RU",
+		natDexTier: "RUBL",
 	},
 	meloettaomegaamped: {
 		isNonstandard: "Past",
@@ -7734,9 +7735,14 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "UU",
 		doublesTier: "DUU",
 	},
-	atommew: {
+	mewatom: {
 		tier: "UU",
 		natDexTier: "UU",
 		doublesTier: "DUU",
-	}
+	},
+	lopunnyatom: {
+		tier: "UU",
+		natDexTier: "UU",
+		doublesTier: "DUU",
+	},
 };
