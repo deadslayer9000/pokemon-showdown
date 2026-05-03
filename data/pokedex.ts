@@ -23026,6 +23026,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		otherFormes: ["Gastrodon-Delta-South"],
 		formeOrder: ["Gastrodon-Delta", "Gastrodon-Delta-South"],
 		prevo: "Shellos-Delta",
+		cosmeticFormes: ["Gastrodon-Delta-South"],
 	},
 	gastrodondeltasouth: {
 		num: 423,
@@ -23042,6 +23043,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		otherFormes: ["Gastrodon-Delta"],
 		formeOrder: ["Gastrodon-Delta", "Gastrodon-Delta-South"],
 		prevo: "Shellos-Delta",
+		isCosmeticForme: true,
 	},
 	tandemausdelta: {
 		num: 924,
