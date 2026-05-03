@@ -214,7 +214,7 @@ inherit: 'gen9',
 	  this.modData("Learnsets", "tinkaton").learnset.woodhammer = ["9M"];
 	  //delta changes
 	  this.modData("Learnsets", "grimmsnarldelta").learnset.iciclespear = ["9M"];
-	  this.modData("Learnsets", "keldeodelta").learnset.vacuumwave = undefined;
+	  delete this.modData("Learnsets", "keldeodelta").learnset.vacuumwave;
 	  this.modData("Learnsets", "chansey").learnset.wish = ["9M"];
 	  this.modData("Learnsets", "chansey").learnset.teleport = ["9M"];
 	}
