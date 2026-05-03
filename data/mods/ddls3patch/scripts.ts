@@ -194,8 +194,8 @@ inherit: 'gen9',
 	  this.modData("Learnsets", "keldeodelta").learnset.vacuumwave = undefined;
 	  this.modData("Learnsets", "chansey").learnset.wish = ["9M"];
 	  this.modData("Learnsets", "chansey").learnset.teleport = ["9M"];
-	},
-	pokemon: { //""hardcode"" designed specifically for moonwake because neutralizing gas is hardcoded, e.g. moonwake is now hardcoded e.g. I gotta paste this in to disable that + dawnbreak's immunity to it
+	}
+	/*pokemon: { //""hardcode"" designed specifically for moonwake because neutralizing gas is hardcoded, e.g. moonwake is now hardcoded e.g. I gotta paste this in to disable that + dawnbreak's immunity to it
 		inherit: true,
 		ignoringAbility() {
 		if (this.battle.gen >= 5 && !this.isActive) return true;
@@ -217,5 +217,5 @@ inherit: 'gen9',
 
 		return false;
 	}
-}
+}*/
 };
