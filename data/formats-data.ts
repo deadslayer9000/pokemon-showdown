@@ -6842,6 +6842,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	energeist: {
 		tier: "RU",
+		natDexTier: "RU",
 	},
 	sinisurge: {
 		tier: "LC",
