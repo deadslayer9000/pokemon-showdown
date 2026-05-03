@@ -1225,9 +1225,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "Uber",
 	},
 	mew: {
-		tier: "UU",
+		tier: "RU",
 		doublesTier: "DUU",
-		natDexTier: "UU",
+		natDexTier: "RU",
 	},
 	chikorita: {
 		tier: "LC",
@@ -4783,7 +4783,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	zeraora: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "RU",
+		natDexTier: "RUBL",
 	},
 	zeraoramega: {
 		isNonstandard: "Future",
@@ -5293,7 +5293,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "RUBL",
 	},
 	enamorustherian: {
-		tier: "RUBL",
+		tier: "RU",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
@@ -6473,8 +6473,8 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "RU",
 	},
 	loomingtune: {
-		tier: "RU",
-		natDexTier: "RU",
+		tier: "RUBL",
+		natDexTier: "RUBL",
 	},
 	drifblimp: {
 		tier: "UU",
@@ -7460,8 +7460,8 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	diancierubymega: {
 		isNonstandard: "Past",
-		tier: "UU",
-		natDexTier: "UU",
+		tier: "RU",
+		natDexTier: "RU",
 		doublesTier: "(DUU)",
 	},
 	dianciesapphiremega: {
@@ -7556,9 +7556,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "RU",
 	},
 	ironmoon: {
-		tier: "UU",
+		tier: "RU",
 		doublesTier: "(DUU)",
-		natDexTier: "UU",
+		natDexTier: "RU",
 	},
 	volcaniondelta: {
 		tier: "RU",
