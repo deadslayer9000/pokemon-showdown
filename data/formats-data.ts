@@ -6677,8 +6677,8 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "UU",
 	},
 	ironcoil: {
-		tier: "UU",
-		natDexTier: "UU",
+		tier: "RU",
+		natDexTier: "RU",
 	},
 	spiritombunbound: {
 		tier: "OU",
