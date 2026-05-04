@@ -23057,7 +23057,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		heightm: 0.3,
 		color: "Purple",
 		eggGroups: ["Field", "Fairy"],
-		changesFrom: "Tandemaus",
+		//changesFrom: "Tandemaus",
 		evos: ["Necromauser", "Slaughtermaus"],
 	},
 	necromauser: {
