@@ -2522,6 +2522,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		shortDesc: "Hits 2 turns after use. Hits instantly in Rain.",
 		start: "  [POKEMON] forecast an attack!",
 		activate: "  [TARGET] took the Forecast Warning attack!",
+		end: "  [POKEMON] was hit by Forecast Warning!",
 	},
 	foresight: {
 		name: "Foresight",
