@@ -27571,10 +27571,12 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		onModifyMove(move, pokemon, target) {
 			if (!(this.field.isWeather("heavyrain") || this.field.isWeather("primordialsea"))) {
 				move.flags.futuremove = 1;
+			} else {
+				move.flags.futuremove = undefined;
 			}
 		},
-		onTry(source, target) {
-			if (this.field.isWeather("heavyrain") || this.field.isWeather("primordialsea")) {
+		onTry(source, target, move) {
+			if (!(this.field.isWeather("heavyrain") || this.field.isWeather("primordialsea"))) {
 				if (!target.side.addSlotCondition(target, "futuremove")) return false;
 				Object.assign(
 					target.side.slotConditions[target.position]["futuremove"],
@@ -27583,7 +27585,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 						source,
 						moveData: {
 							id: "forecastwarning",
-							name: "Future Sight",
+							name: "Forecast Warning",
 							accuracy: 100,
 							basePower: 120,
 							category: "Special",
@@ -27597,6 +27599,9 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				);
 				this.add("-start", source, "move: Forecast Warning");
 				return this.NOT_FAIL;
+			} else {
+				this.hint(`The Rain made Forecast Warning hit immediately!`);
+				return;
 			}
 		},
 		type: "Flying",
