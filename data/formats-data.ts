@@ -7746,4 +7746,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "UU",
 		doublesTier: "DUU",
 	},
+	ironsentinel: {
+		tier: "UU",
+		natDexTier: "UU",
+		doublesTier: "DUU",
+	},
 };

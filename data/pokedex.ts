@@ -23057,7 +23057,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		heightm: 0.3,
 		color: "Purple",
 		eggGroups: ["Field", "Fairy"],
-		changesFrom: "Tandemaus",
+		//changesFrom: "Tandemaus",
 		evos: ["Necromauser", "Slaughtermaus"],
 	},
 	necromauser: {
@@ -26318,4 +26318,16 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		//color: "Blue", no info yet,
 		eggGroups: ["Undiscovered"],
   	},
+	ironsentinel: {
+		num: 2126, //placeholder
+		name: "Iron Sentinel",
+		types: ["Water", "Flying"],
+		gender: "N",
+		baseStats: { hp: 86, atk: 90, def: 84, spa: 118, spd: 98, spe: 114 },
+    	abilities: { 0: "Quark Drive" },
+    	weightkg: 4,
+		heightm: 0.4,
+		color: "Blue",
+		eggGroups: ["Undiscovered"],
+	},
 };

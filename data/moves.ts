@@ -27559,4 +27559,45 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		type: "Dragon",
 		target: "normal",
 	},
+	forecastwarning: {
+		num: -123,
+		accuracy: 100,
+		basePower: 120,
+		category: "Special",
+		name: "Forecast Warning",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		onTry(source, target, move) {
+			if (!(this.field.isWeather("raindance") || this.field.isWeather("primordialsea"))) {
+
+				if (!target.side.addSlotCondition(target, "futuremove")) return false;
+				Object.assign(
+					target.side.slotConditions[target.position]["futuremove"],
+					{
+						move: "forecastwarning",
+						source,
+						moveData: {
+							id: "forecastwarning",
+							name: "Forecast Warning",
+							accuracy: 100,
+							basePower: 120,
+							category: "Special",
+							priority: 0,
+							flags: { allyanim: 1, metronome: 1, futuremove: 1 },
+							ignoreImmunity: false,
+							effectType: "Move",
+							type: "Flying",
+						},
+					}
+				);
+				this.add("-start", source, "move: Forecast Warning");
+				return this.NOT_FAIL;
+			} else {
+				this.hint(`The rain made Forecast Warning hit immediately!`);
+			}
+		},
+		type: "Flying",
+		target: "normal",
+	}
 };
