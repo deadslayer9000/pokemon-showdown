@@ -451,7 +451,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		num: -38,
 	},
 	atomterapagiumz: {
-		name: "Atom Terapagium Z",
+		name: "Atom Terapagosium Z",
 		spritenum: 631,
 		onTakeItem: false,
 		zMove: "Astral Burst",
@@ -460,7 +460,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		num: -39,
 	},
 	galacticterapagiumz: {
-		name: "Galactic Terapagium Z",
+		name: "Galactic Terapagosium Z",
 		spritenum: 631,
 		onTakeItem: false,
 		zMove: "Universe Expansion",
