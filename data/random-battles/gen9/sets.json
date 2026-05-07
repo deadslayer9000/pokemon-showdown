@@ -7937,7 +7937,7 @@
             {
                 "role": "Setup Sweeper",
                 "movepool": ["Swords Dance", "Crescent Edge", "Play Rough", "Close Combat", "Ice Punch", "Knock Off", "Fire Punch"],
-                "abilities": ["Transcience"],
+                "abilities": ["Transience"],
                 "teraTypes": ["Steel", "Water"]
             }
         ]
