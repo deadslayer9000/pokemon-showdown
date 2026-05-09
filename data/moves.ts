@@ -27600,16 +27600,4 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		type: "Flying",
 		target: "normal",
 	},
-	testmove: {
-		num: -124,
-		accuracy: 100,
-		basePower: 0,
-		category: "Physical",
-		name: "Test Move",
-		pp: 10,
-		priority: 0,
-		flags: { protect: 1, mirror: 1, metronome: 1 },
-		type: "Normal",
-		target: "normal",
-	}
 };
