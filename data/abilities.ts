@@ -3354,13 +3354,13 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	guardian: {
 		onSetStatus(status, target, source, effect) {
 			if ((effect as Move)?.status) {
-				this.add("-immune", target, "[from] ability: Guarded");
+				this.add("-immune", target, "[from] ability: Guardian");
 			}
 			return false;
 		},
 		onTryAddVolatile(status, target) {
 			if (status.id === "yawn") {
-				this.add("-immune", target, "[from] ability: Guarded");
+				this.add("-immune", target, "[from] ability: Guardian");
 				return null;
 			}
 			if (status.id === "flinch") return null;
