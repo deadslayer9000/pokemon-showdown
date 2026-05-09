@@ -7968,7 +7968,7 @@
             {
                 "role": "Setup Sweeper",
                 "movepool": ["Swords Dance", "Crescent Edge", "Play Rough", "Close Combat", "Ice Punch", "Knock Off", "Fire Punch"],
-                "abilities": ["Transcience"],
+                "abilities": ["Transience"],
                 "teraTypes": ["Steel", "Water"]
             }
         ]
@@ -8753,10 +8753,16 @@
         "level": 79,
         "sets": [
             {
-                "role": "Generalist",
-                "movepool": ["Chilling Silence", "Shadow Ball", "Encore", "Knock Off", "Will-O-Wisp", "Hex", "Trick Room", "Memento", "Thunder Wave", "Nasty Plot", "Calm Mind"],
+                "role": "Bulky Setup",
+                "movepool": ["Shadow Ball", "Encore", "Alluring Voice", "Nasty Plot", "Calm Mind"],
                 "abilities": ["Death Defiance"],
-                "teraTypes": ["Ghost", "Normal"]
+                "teraTypes": ["Normal", "Fairy"]
+            },
+            {
+                "role": "Generalist",
+                "movepool": ["Chilling Silence", "Shadow Ball", "Encore", "Knock Off", "Will-O-Wisp", "Hex", "Memento", "Thunder Wave"],
+                "abilities": ["Death Defiance"],
+                "teraTypes": ["Normal", "Fairy"]
             }
         ]
     },
@@ -9504,9 +9510,21 @@
         "sets": [
             {
                 "role": "Bulky Attacker",
-                "movepool": ["Fake Out", "Ice Shard", "Bulk Up", "Drain Punch", "Icicle Spear", "Knock Off"],
+                "movepool": ["Fake Out", "Ice Shard", "Bulk Up", "Drain Punch", "Ice Hammer", "Knock Off"],
                 "abilities": ["Technician"],
                 "teraTypes": ["Ice", "Fighting"]
+            },
+            {
+                "role": "Bulky Setup",
+                "movepool": ["Ice Shard", "Bulk Up", "Drain Punch", "Ice Hammer"],
+                "abilities": ["Technician"],
+                "teraTypes": ["Ice", "Fighting"]
+            },
+            {
+                "role": "Tera Blast User",
+                "movepool": ["Ice Shard", "Bulk Up", "Drain Punch", "Tera Blast"],
+                "abilities": ["Technician"],
+                "teraTypes": ["Ground"]
             }
         ]
     },
@@ -10252,7 +10270,7 @@
         "sets": [
             {
                 "role": "Setup Sweeper",
-                "movepool": ["Calm Mind", "Secret Sword", "Air Slash", "Megahorn"],
+                "movepool": ["Calm Mind", "Secret Sword", "Air Slash", "Vacuum Wave"],
                 "abilities": ["Redress"],
                 "teraTypes": ["Flying", "Fairy"]
             }
@@ -10527,13 +10545,13 @@
             {
                 "role": "Fast Support",
                 "movepool": ["Beam Roulette", "U-turn", "Will-O-Wisp", "Hex"],
-                "abilities": ["Spinurgy"],
+                "abilities": ["Own Tempo"],
                 "teraTypes": ["Ghost", "Normal"]
             },
             {
                 "role": "Choice Item User",
                 "movepool": ["Double-Edge", "U-turn", "Poltergeist", "Play Rough", "Seed Bomb"],
-                "abilities": ["Spinurgy"],
+                "abilities": ["Hustle"],
                 "teraTypes": ["Ghost", "Normal"]
             }
         ]
@@ -10949,8 +10967,14 @@
         "level": 78,
         "sets": [
             {
-                "role": "Bulky Protect",
-                "movepool": ["Gene Splice", "Protect", "Pain Split", "Earth Power"],
+                "role": "Bulky Setup",
+                "movepool": ["Gene Splice", "Calm Mind", "Pain Split", "Psyshock", "Earth Power"],
+                "abilities": ["Acclimate"],
+                "teraTypes": ["Flying", "Dark"]
+            },
+            {
+                "role": "Bulky Support",
+                "movepool": ["Gene Splice", "Flip Turn", "Spikes", "Stealth Rock", "Earth Power"],
                 "abilities": ["Acclimate"],
                 "teraTypes": ["Flying", "Dark"]
             }
