@@ -153,43 +153,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		],
 	},
 	{
-		name: "[Gen 9] [ND] Pre Mid-Season 3 Patch",
-		searchShow: false,
-		mod: 'prems3patch',
-		ruleset: ['Standard NatDex', 'Terastal Clause'],
-		banlist: [ 'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock', 'Quick Claw',
-			'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail', 'Dire Claw', 'Rage Fist', 'Blood Moon', 'Darkrai', 'Zamazenta', 'Good as Gold'
-		],
-		unbanlist: [
-			'Solgaleo', 'Sneasler', 'Annihilape', 'Ursaluna-Bloodmoon', 'Espathra', 'Roaring Moon',
-		],
-	},
-	
-	{
-		name: "[Gen 9] [ND] Pre Season 4 Patch",
-		searchShow: false,
-		mod: 'pres4patch',
-		ruleset: ['Standard NatDex', 'Terastal Clause'],
-		banlist: [ 'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock', 'Quick Claw',
-			'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail', 'Dire Claw', 'Rage Fist', 'Blood Moon', 'Darkrai', 'Zamazenta', 'Good as Gold'
-		],
-		unbanlist: [
-			'Solgaleo', 'Sneasler', 'Annihilape', 'Ursaluna-Bloodmoon', 'Espathra', 'Roaring Moon',
-		],
-	},
-	{
-		name: "[Gen 9] [ND] Pre Season 6 Patch",
-		searchShow: false,
-		mod: 'pres6patch',
-		ruleset: ['Standard NatDex', 'Terastal Clause'],
-		banlist: [ 'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock', 'Quick Claw',
-			'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail', 'Dire Claw', 'Rage Fist', 'Blood Moon', 'Darkrai', 'Zamazenta', 'Good as Gold'
-		],
-		unbanlist: [
-			'Solgaleo', 'Sneasler', 'Annihilape', 'Ursaluna-Bloodmoon', 'Espathra', 'Roaring Moon',
-		],
-	},
-	{
 		name: "[Gen 9] [ND] Pre Mid Season 6 Patch",
 		searchShow: false,
 		mod: 'prems6patch',
@@ -222,6 +185,31 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	},
 	{
 		section: "Tour Formats",
+	},
+	{
+		name: "[Gen 9] [ND] Delta Draft League Season 3",
+		searchShow: false,
+		mod: 'ddls3patch',
+		ruleset: ['Standard NatDex', 'Standard Draft', 'Terastal Clause'],
+	},
+	{
+		name: "[Gen 9] [ND] Chompy's Delta Battle League",
+		searchShow: false,
+		mod: "gen9",
+		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 1', 'VGC Timer', 'Standard NatDex', 'Best of = 3'],
+	},
+	/*
+	{
+		name: "[Gen 9] [ND] Delta Draft League Season 2",
+		searchShow: false,
+		mod: 'pres4patch',
+		ruleset: ['Standard NatDex', 'Standard Draft'],
+	},*/
+	{
+		name: "[Gen 9] [ND] Pre Mid Season 6 Patch Draft",
+		searchShow: false,
+		mod: 'prems6patch',
+		ruleset: ['Standard NatDex', 'Standard Draft'],
 	},
 	{
 		name: "[Gen 9] [ND] DPL OU",
@@ -283,23 +271,44 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		unbanlist: ['Landorus', 'Gholdengo', 'Good as Gold'],
 	},
 	{
-		name: "[Gen 9] [ND] Delta Draft League Season 3",
-		searchShow: false,
-		mod: 'ddls3patch',
-		ruleset: ['Standard NatDex', 'Standard Draft', 'Terastal Clause'],
+		section: "Previous Patches",
 	},
-	/*
 	{
-		name: "[Gen 9] [ND] Delta Draft League Season 2",
+		name: "[Gen 9] [ND] Pre Mid-Season 3 Patch",
+		searchShow: false,
+		mod: 'prems3patch',
+		ruleset: ['Standard NatDex', 'Terastal Clause'],
+		banlist: [ 'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock', 'Quick Claw',
+			'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail', 'Dire Claw', 'Rage Fist', 'Blood Moon', 'Darkrai', 'Zamazenta', 'Good as Gold'
+		],
+		unbanlist: [
+			'Solgaleo', 'Sneasler', 'Annihilape', 'Ursaluna-Bloodmoon', 'Espathra', 'Roaring Moon',
+		],
+	},
+	
+	{
+		name: "[Gen 9] [ND] Pre Season 4 Patch",
 		searchShow: false,
 		mod: 'pres4patch',
-		ruleset: ['Standard NatDex', 'Standard Draft'],
-	},*/
+		ruleset: ['Standard NatDex', 'Terastal Clause'],
+		banlist: [ 'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock', 'Quick Claw',
+			'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail', 'Dire Claw', 'Rage Fist', 'Blood Moon', 'Darkrai', 'Zamazenta', 'Good as Gold'
+		],
+		unbanlist: [
+			'Solgaleo', 'Sneasler', 'Annihilape', 'Ursaluna-Bloodmoon', 'Espathra', 'Roaring Moon',
+		],
+	},
 	{
-		name: "[Gen 9] [ND] Pre Mid Season 6 Patch Draft",
+		name: "[Gen 9] [ND] Pre Season 6 Patch",
 		searchShow: false,
-		mod: 'prems6patch',
-		ruleset: ['Standard NatDex', 'Standard Draft'],
+		mod: 'pres6patch',
+		ruleset: ['Standard NatDex', 'Terastal Clause'],
+		banlist: [ 'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock', 'Quick Claw',
+			'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail', 'Dire Claw', 'Rage Fist', 'Blood Moon', 'Darkrai', 'Zamazenta', 'Good as Gold'
+		],
+		unbanlist: [
+			'Solgaleo', 'Sneasler', 'Annihilape', 'Ursaluna-Bloodmoon', 'Espathra', 'Roaring Moon',
+		],
 	},
 	{
 		section: "S/V Singles",
