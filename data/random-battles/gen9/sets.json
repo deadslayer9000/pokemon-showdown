@@ -10514,13 +10514,13 @@
             {
                 "role": "Fast Support",
                 "movepool": ["Beam Roulette", "U-turn", "Will-O-Wisp", "Hex"],
-                "abilities": ["Spinurgy"],
+                "abilities": ["Own Tempo"],
                 "teraTypes": ["Ghost", "Normal"]
             },
             {
                 "role": "Choice Item User",
                 "movepool": ["Double-Edge", "U-turn", "Poltergeist", "Play Rough", "Seed Bomb"],
-                "abilities": ["Spinurgy"],
+                "abilities": ["Hustle"],
                 "teraTypes": ["Ghost", "Normal"]
             }
         ]
