@@ -27600,4 +27600,45 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		type: "Flying",
 		target: "normal",
 	},
+	gravvenom: {
+		num: -124,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Grav Venom",
+		pp: 10,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		onBasePower(basePower) {
+			if (this.field.getPseudoWeather("gravity")) {
+				return this.chainModify(1.5);
+			}
+		},
+		secondary: {
+			chance: 100,
+			boosts: {
+				def: -1,
+			},
+		},
+		type: "Poison",
+		target: "normal",
+	},
+	venomslurry: {
+		num: -125,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Venom Slurry",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		secondary: {
+			chance: 100,
+			boosts: {
+				spd: -1,
+			},
+		},
+		type: "Poison",
+		target: "normal",
+	},
 };

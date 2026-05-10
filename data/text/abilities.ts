@@ -2167,6 +2167,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Spicy Spray",
 		shortDesc: "If this Pokemon is hit by an attack, the attacker becomes burned.",
 	},
+	spoiledgoods: {
+		name: "Spoiled Goods",
+		shortDesc: "This Pokemon's Grass-type moves become Poison type and have 1.2x power.",
+	},
 	stakeout: {
 		name: "Stakeout",
 		shortDesc: "This Pokemon's offensive stat is doubled against a target that switched in this turn.",
