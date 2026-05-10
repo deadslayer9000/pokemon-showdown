@@ -2990,6 +2990,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Has a 100% chance to lower the target's Defense by 1 stage. Power is multiplied by 1.5 during Gravity's effect.",
 		shortDesc: "Target: 100% -1 Def. During Gravity: 1.5x power.",
 	},
+	gravvenom: {
+		name: "Grav Venom",
+		shortDesc: "Target: 100% -1 Def. During Gravity: 1.5x power.",
+	},
 	gravity: {
 		name: "Gravity",
 		desc: "For 5 turns, the evasiveness of all active Pokemon is multiplied by 0.6. At the time of use, Bounce, Fly, Magnet Rise, Sky Drop, and Telekinesis end immediately for all active Pokemon. During the effect, Bounce, Fly, Flying Press, High Jump Kick, Jump Kick, Magnet Rise, Sky Drop, Splash, and Telekinesis are prevented from being used by all active Pokemon. Ground-type attacks, Spikes, Toxic Spikes, Sticky Web, and the Arena Trap Ability can affect Flying types or Pokemon with the Levitate Ability. Fails if this move is already in effect.",
@@ -7859,6 +7863,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Venom Drench",
 		desc: "Lowers the target's Attack, Special Attack, and Speed by 1 stage if the target is poisoned. Fails if the target is not poisoned.",
 		shortDesc: "Lowers Atk/Sp. Atk/Speed of poisoned foes by 1.",
+	},
+	venomslurry: {
+		name: "Venom Slurry",
+		shortDesc: "Lowers the target's Special Defense by 1 stage.",
 	},
 	venoshock: {
 		name: "Venoshock",
