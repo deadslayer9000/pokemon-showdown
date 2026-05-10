@@ -10863,6 +10863,8 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Gray",
 		prevo: "Zorua-Hisui",
 		evoLevel: 30,
+		otherFormes: ["Zoroark-Hisui-Mega"],
+		formeOrder: ["Zoroark-Hisui", "Zoroark-Hisui-Mega"],
 		eggGroups: ["Field"],
 	},
 	minccino: {
