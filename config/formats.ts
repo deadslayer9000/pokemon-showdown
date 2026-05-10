@@ -197,7 +197,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		searchShow: false,
 		mod: "gen9",
 		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 1', 'VGC Timer', 'Standard NatDex', 'Best of = 3', 'zmoveclause', '!Sleep Clause Mod', '!OHKO Clause',],
-		unbanlist: ['Restricted Legendary', 'Mythical', 'Greninja-Bond',],
+		unbanlist: ['Restricted Legendary', 'Mythical', 'Greninja-Bond', 'Floette-Mega'],
 		banlist: ['Quick Claw'],
 		gameType: 'doubles',
 		teraPreviewDefault: true,
