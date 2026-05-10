@@ -2517,6 +2517,13 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Has a 30% chance to paralyze the target.",
 		shortDesc: "30% chance to paralyze the target.",
 	},
+	forecastwarning: {
+		name: "Forecast Warning",
+		shortDesc: "Hits 2 turns after use. Hits instantly in Rain.",
+		start: "  [POKEMON] forecast an attack!",
+		activate: "  [TARGET] took the Forecast Warning attack!",
+		end: "  [POKEMON] was hit by Forecast Warning!",
+	},
 	foresight: {
 		name: "Foresight",
 		desc: "As long as the target remains active, its evasiveness stat stage is ignored during accuracy checks against it if it is greater than 0, and Normal- and Fighting-type attacks can hit the target if it is a Ghost type. Fails if the target is already affected, or affected by Miracle Eye or Odor Sleuth.",

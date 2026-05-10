@@ -822,7 +822,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	guardian: {
 		name: "Guardian",
-		shortDesc: "When ally is hit by contact it raises their defense.",
+		shortDesc: "Immune to status effects and flinch.",
 		activate: "  [POKEMON] is raised defense of its ally!",
 	},
 	gulpmissile: {

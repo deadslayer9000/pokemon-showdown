@@ -3352,11 +3352,18 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 275,
 	},
 	guardian: {
-		onAllyHit(target, source, move) {
-			if (target !== this.effectState.target && move.flags["contact"]) {
-				this.boost({ def: 1 }, target, target, null, false, true);
-				this.add("-activate", target, "ability: Guardian");
+		onSetStatus(status, target, source, effect) {
+			if ((effect as Move)?.status) {
+				this.add("-immune", target, "[from] ability: Guardian");
 			}
+			return false;
+		},
+		onTryAddVolatile(status, target) {
+			if (status.id === "yawn") {
+				this.add("-immune", target, "[from] ability: Guardian");
+				return null;
+			}
+			if (status.id === "flinch") return null;
 		},
 		flags: {},
 		name: "Guardian",
