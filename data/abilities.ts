@@ -9410,7 +9410,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			if (!pokemon.tideSigilUsed && !pokemon.tideSigilOneTime) {
 				let activated = false;
 				for (const target of pokemon.adjacentFoes()) {
-					if (!activated && !target.volatiles["substitute"]) {
+					if (!target.volatiles["substitute"]) {
 						this.add(
 							"-activate",
 							pokemon,
@@ -9418,11 +9418,11 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 							"[from] ability: Tide Sigil",
 							"[of] " + pokemon
 						);
-						activated = true;
 						target.addVolatile("encore", pokemon);
-						if (target.volatiles['encore']) {
+						if (!activated && target.volatiles['encore']) {
 							this.boost({ spe: 1 });
 							pokemon.tideSigilUsed = true;
+							activated = true;
 						}
 						pokemon.tideSigilOnetime = true;
 					}
@@ -9442,10 +9442,10 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	grimsigil: {
 		onStart(pokemon) {
-			if (!pokemon.grimSigilUsed && !pokemon.tideSigilOneTime) {
+			if (!pokemon.grimSigilUsed && !pokemon.grimSigilOneTime) {
 				let activated = false;
 				for (const target of pokemon.adjacentFoes()) {
-					if (!activated && !target.volatiles["substitute"]) {
+					if (!target.volatiles["substitute"]) {
 						this.add(
 							"-activate",
 							pokemon,
@@ -9453,11 +9453,11 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 							"[from] ability: Grim Sigil",
 							"[of] " + pokemon
 						);
-						activated = true;
 						target.addVolatile("disable", pokemon);
-						if (target.volatiles['disable']) {
+						if (!activated && target.volatiles['disable']) {
 							this.boost({ atk: 1 });
 							pokemon.grimSigilUsed = true;
+							activated = true;
 						}
 						pokemon.grimSigilOneTime = true;
 					}
