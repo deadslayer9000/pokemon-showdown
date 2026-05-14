@@ -439,7 +439,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	beamroulette: {
 		name: "Beam Roulette",
 		desc: "Random chance to trigger any of the following effects: Doubled Damage, Halved Damage, Random Stat Drop on Target, Random Stat Boost on User, Swap User Out.",
-		shortDesc: "Deals damage, has many random effects."
+		shortDesc: "Activates a random effect."
 	},
 	beastmine: {
 		name: "Beast Mine",
@@ -1320,7 +1320,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	crescentheel: {
 		name: "Crescent Heel",
-		shortDesc: "Deals damage, 30% chance to confuse opponent.",
+		shortDesc: "30% chance to confuse target.",
 	},
 	crimsoncharge: {
 		name: "Crimson Charge",
@@ -2692,7 +2692,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	genesplice: {
 		name: "Gene Splice",
-		shortDesc: "Deals damage and swaps the abilities of user and opponent."
+		shortDesc: "Swaps the abilities of user and target."
 	},
 	geomancy: {
 		name: "Geomancy",
@@ -3586,7 +3586,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	icicleflail: {
 		name: "Icicle Flail",
 		desc: "Targets both opponents, lasts 2-3 turns. Confuses the user afterwards.",
-		shortDesc: "Targets both opponents, lasts 2-3 turns. Confuses the user afterwards.",
+		shortDesc: "Lasts 2-3 turns. Confuses the user afterwards.",
 	},
 	iciclespear: {
 		name: "Icicle Spear",
@@ -5865,10 +5865,6 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Rototiller",
 		desc: "Raises the Attack and Special Attack of all grounded Grass-type Pokemon on the field by 1 stage.",
 		shortDesc: "Raises Atk/Sp. Atk of grounded Grass types by 1.",
-	},
-	roudhouseeclipse: {
-		name: "Roudhouse Eclipse",
-		shortDesc: "Deals damage and raises users Atk by 1.",
 	},
 	round: {
 		name: "Round",
