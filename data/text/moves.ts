@@ -2692,7 +2692,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	genesplice: {
 		name: "Gene Splice",
-		shortDesc: "Deals damage and swaps the abilities of user and opponent."
+		shortDesc: "Swaps the abilities of user and target."
 	},
 	geomancy: {
 		name: "Geomancy",
