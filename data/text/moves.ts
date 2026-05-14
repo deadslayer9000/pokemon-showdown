@@ -1608,7 +1608,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	divinevolley: {
 		name: "Divine Volley",
 		desc: "Hits 6 times, each hit having its own accuracy check. The attack ends early if the target avoids a hit. If this move breaks a substitute, the target will receive the remaining hits. This move will always land 6 hits if used with Loaded Dice or Skill Link.",
-		shortDesc: "Hits 6 times.",
+		shortDesc: "Hits 6 times. Each hit can miss.",
 		
 	},
 	dizzypunch: {
