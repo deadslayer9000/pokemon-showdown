@@ -17095,8 +17095,8 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	},
 	primedcurrent: {
 		num: -55,
-		accuracy: 90,
-		basePower: 80,
+		accuracy: 100,
+		basePower: 90,
 		category: "Special",
 		name: "Primed Current",
 		pp: 15,
