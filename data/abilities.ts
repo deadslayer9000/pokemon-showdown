@@ -6230,12 +6230,14 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			if (pokemon.hp >= pokemon.maxhp / 2) {
 				this.add("-activate", pokemon, "ability: Purranormal");
 				const alliesWithUser = pokemon.side.pokemon;
+				let teamSize = 0;
 				const allTypes: string[] = [];
 				const monoCounter: { [key: string]: number } = {};
 				for (const ally of alliesWithUser) {
 					for (const type of ally.types) {
 						allTypes.push(type);
 					}
+					teamSize += 1;
 				}
 				allTypes.forEach((occurance) => {
 					if (monoCounter[occurance]) {
@@ -6245,8 +6247,9 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 					}
 				});
 				const monoCounterResult = Math.max(...Object.values(monoCounter));
-				this.debug(`monocounter: ${monoCounterResult}`);
-				if (monoCounterResult === 6) {
+//				this.debug(`monocounter: ${monoCounterResult}`);
+//				this.hint(`teamsize: ${teamSize}, monocounterresult:${monoCounterResult}`);
+				if (monoCounterResult === teamSize) {
 					pokemon.abilityState.monotype = true;
 				}
 
