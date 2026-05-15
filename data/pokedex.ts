@@ -26403,5 +26403,16 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		forme: "Ultra",
 		prevo: "Dipplin-Ultra",
 	},
-
+	sevygarde: {
+		num: 2127,
+		name: "Sevygarde",
+		types: ["Poison", "Ground"],
+		baseStats: { hp: 120, atk: 112, def: 100, spa: 100, spd: 80, spe: 88 },
+    	abilities: { 0: "Shed Skin" },
+    	weightkg: 340,
+		weighthg: 5,
+    	gender: "N",
+		//color: "Black",
+		eggGroups: ["Undiscovered"],
+	}
 };

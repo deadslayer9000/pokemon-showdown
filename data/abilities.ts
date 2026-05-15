@@ -6247,8 +6247,8 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 					}
 				});
 				const monoCounterResult = Math.max(...Object.values(monoCounter));
-//				this.debug(`monocounter: ${monoCounterResult}`);
-//				this.hint(`teamsize: ${teamSize}, monocounterresult:${monoCounterResult}`);
+				//this.debug(`monocounter: ${monoCounterResult}`);
+				//this.hint(`teamsize: ${teamSize}, monocounterresult:${monoCounterResult}`);
 				if (monoCounterResult === teamSize) {
 					pokemon.abilityState.monotype = true;
 				}
