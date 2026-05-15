@@ -195,8 +195,8 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		name: "[Gen 9] [ND] Chompy's Delta Battle League",
 		searchShow: false,
-		mod: "gen9",
-		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 1', 'VGC Timer', 'Standard NatDex', 'Best of = 3', 'zmoveclause', '!Sleep Clause Mod', '!OHKO Clause',],
+		mod: "chompyvgc",
+		ruleset: ['Flat Rules', 'Min Source Gen = 1', 'VGC Timer', 'Standard NatDex', 'Best of = 3', 'zmoveclause', '!Sleep Clause Mod', '!OHKO Clause',],
 		unbanlist: ['Restricted Legendary', 'Mythical', 'Greninja-Bond', 'Floette-Mega'],
 		banlist: ['Quick Claw'],
 		gameType: 'doubles',
