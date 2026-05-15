@@ -28,4 +28,15 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		inherit: true,
 		shortDesc: "This Pokemon's contact moves ignore a target's protection and deal 1/4 the usual damage.",
 	},
+	guardian: {
+		onAllyHit(target, source, move) {
+			if (target !== this.effectState.target && move.flags["contact"]) {
+				this.boost({ def: 1 }, target, target, null, false, true);
+				this.add("-activate", target, "ability: Guardian");
+			}
+		},
+		flags: {},
+		name: "Guardian",
+		shortDesc: "When ally is hit by contact it raises their defense.",
+	},
 };
