@@ -26404,7 +26404,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		prevo: "Dipplin-Ultra",
 	},
 	sevygarde: {
-		num: 2127,
+		num: 2127,//placeholder
 		name: "Sevygarde",
 		types: ["Poison", "Ground"],
 		baseStats: { hp: 120, atk: 112, def: 100, spa: 100, spd: 80, spe: 88 },
@@ -26414,5 +26414,19 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
     	gender: "N",
 		//color: "Black",
 		eggGroups: ["Undiscovered"],
+	},
+	trapinchatom: {
+		num: 2128,//placeholder
+		name: "Trapinch-ATOM",
+		baseSpecies: "Trapinch",
+		types: ["Water", "Bug"],
+		baseStats: { hp: 66, atk: 153, def: 78, spa: 45, spd: 120, spe: 66 },
+    	abilities: { 0: "Hyper Cutter", H: "Strong Jaw" },
+    	weightkg: 8,
+		heightm: 0.7,
+		//color: "Blue",
+    	gender: "N",
+		eggGroups: ["Undiscovered"],
+		forme: "ATOM",
 	}
 };
