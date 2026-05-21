@@ -830,6 +830,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		evoType: "useItem",
 		evoItem: "Thunder Stone",
 		eggGroups: ["Field", "Fairy"],
+		evos: ["Gorochu"],
 		otherFormes: ["Raichu-Alola", "Raichu-Mega-X", "Raichu-Mega-Y"],
 		formeOrder: ["Raichu", "Raichu-Alola", "Raichu-Mega-X", "Raichu-Mega-Y"],
 	},
