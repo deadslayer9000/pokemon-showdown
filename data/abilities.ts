@@ -6002,9 +6002,9 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	prospect: {
 		onAfterMove(source, target, move) {
-			if (move.flags['futuremove']) {
+			if (move.flags['futuremove'] && !source.abilityState?.prospect) {
 				source.abilityState.prospect = true;
-				//this.boost({ spd: 1 }, source);
+				this.boost({ spd: 1 }, source);
 			}
 		},
 		onResidual(target, source, effect) {
@@ -6014,7 +6014,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			const foe = this.sample(possibleTargets);
 			if (!foe.side.slotConditions[foe.position]["futuremove"] && target.abilityState?.prospect) {
 				target.abilityState.prospect = false;
-				this.boost({ spd: 1 }, target);
+				//this.boost({ spd: 1 }, target);
 			}
 		},
 		flags: {},
