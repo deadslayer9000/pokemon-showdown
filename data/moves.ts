@@ -27641,4 +27641,16 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		type: "Poison",
 		target: "normal",
 	},
+	tidalflood: {
+		num: -126,
+		accuracy: 100,
+		basePower: 120,
+		category: "Special",
+		name: "Tidal Flood",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1 },
+		target: "allAdjacentFoes",
+		type: "Water",
+	},
 };
