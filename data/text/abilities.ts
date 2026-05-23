@@ -123,6 +123,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "As One (Glastrier)",
 		shortDesc: "Combination of the Unnerve and Chilling Neigh Abilities.",
 	},
+	asonelochtrier: {
+		name: "As One (Lochtrier)",
+		shortDesc: "Combination of the Unnerve and Abyssal Neigh Abilities.",
+	},
 	asonespectrier: {
 		name: "As One (Spectrier)",
 		shortDesc: "Combination of the Unnerve and Grim Neigh Abilities.",

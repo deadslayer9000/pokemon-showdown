@@ -7543,6 +7543,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Lowers the target's Attack and Defense by 1 stage.",
 		shortDesc: "Lowers the target's Attack and Defense by 1.",
 	},
+	tidalflood: {
+		name: "Tidal Flood",
+		desc: "No additional effect.",
+		shortDesc: "No additional effect. Hits adjacent foes.",
+	},
 	titanbuster: {
 		name: "Titan Buster",
 		shortDesc: "Charges turn 1. Hits turn 2. No charge in sunlight.",
