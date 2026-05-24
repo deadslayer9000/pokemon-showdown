@@ -22698,6 +22698,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		name: "Tinkatink-Omega",
 		baseSpecies: "Tinkatink",
 		forme: "Omega",
+		gender: "F",
 		types: ["Fairy", "Bug"],
 		baseStats: { hp: 60, atk: 55, def: 50, spa: 30, spd: 48, spe: 54 },
 		abilities: { 0: "Hyper Cutter", 1: "Own Tempo", H: "Sharpness" },
