@@ -10050,6 +10050,42 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 3.5,
 		num: -109,
 	},
+	asonelochtrier: {
+		onSwitchInPriority: 1,
+		onStart(pokemon) {
+			if (this.effectState.unnerved) return;
+			this.add("-ability", pokemon, "As One");
+			this.add("-ability", pokemon, "Unnerve");
+			this.effectState.unnerved = true;
+		},
+		onEnd() {
+			this.effectState.unnerved = false;
+		},
+		onFoeTryEatItem() {
+			return !this.effectState.unnerved;
+		},
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect && effect.effectType === "Move") {
+				this.boost(
+					{ spd: length },
+					source,
+					source,
+					this.dex.abilities.get("abyssalneigh")
+				);
+			}
+		},
+		flags: {
+			failroleplay: 1,
+			noreceiver: 1,
+			noentrain: 1,
+			notrace: 1,
+			failskillswap: 1,
+			cantsuppress: 1,
+		},
+		name: "As One (Lochtrier)",
+		rating: 3.5,
+		num: -110,
+	},
 	// CAP
 	mountaineer: {
 		onDamage(damage, target, source, effect) {
