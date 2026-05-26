@@ -221,7 +221,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		// searchShow: false,
 		ruleset: ['[Gen 9] National Dex UU'],
 		banlist: ['ND UU', 'ND RUBL'],
-		unbanlist: ["Drought", "Drizzle"],
+		unbanlist: ["Drought", "Drizzle", "Iron Moon", "Striding Sun"],
 	},
 	{
 		name: "[Gen 9] [ND] DPL OU",
