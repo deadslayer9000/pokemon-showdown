@@ -216,6 +216,14 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		ruleset: ['Standard NatDex', 'Standard Draft'],
 	},
 	{
+		name: "[Gen 9] Staff RU",
+		mod: 'prems7patch',
+		// searchShow: false,
+		ruleset: ['[Gen 9] National Dex UU'],
+		banlist: ['ND UU', 'ND RUBL'],
+		unbanlist: ["Drought", "Drizzle", "Iron Moon", "Striding Sun"],
+	},
+	{
 		name: "[Gen 9] [ND] DPL OU",
 		searchShow: false,
 		challengeShow: false,
