@@ -308,5 +308,15 @@ export const Scripts: ModdedBattleScriptsData = {
 	  this.modData("Learnsets", "scovillain").learnset.swagger = ["9M"];
 	  this.modData("Learnsets", "scovillain").learnset.thunderfang = ["9M"];
 	  this.modData("Learnsets", "tinkaton").learnset.woodhammer = ["9M"];
+	  //delta changes
+	  this.modData("Learnsets", "klinklangdelta").learnset.earthpower = ["9M"];
+	  delete this.modData("Learnsets", "klinklangdelta").learnset.trick;
+	  delete this.modData("Learnsets", "apextyrant").learnset.uturn;
+	  delete this.modData("Learnsets", "stridingsun").learnset.heliosstorm;
+	  delete this.modData("Learnsets", "stridingsun").learnset.dragondance;
+	  this.modData("Learnsets", "stridingsun").learnset.outrage = ["9M"];
+	  delete this.modData("Learnsets", "ironmoon").learnset.selenepulse;
+	  delete this.modData("Learnsets", "ironmoon").learnset.focusblast;
+	  this.modData("Learnsets", "ironmoon").learnset.steelbeam = ["9M"];
 	}
 };
