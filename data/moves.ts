@@ -27742,6 +27742,19 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				side.addSideCondition("stickyweb");
 			}
 		},
+		onPrepareHit(target, source, move) {
+			if (source.ability === "spoiledgoods") {
+				move.type = "Poison";
+			}
+		},
+		basePowerCallback(pokemon, target, move) {
+			let bp = move.basePower;
+			if (pokemon.ability === "spoiledgoods") {
+				bp = move.basePower * 1.2;
+				return bp;
+			}
+			return bp;
+		},
 		type: "Grass",
 		target: "normal",
 	},

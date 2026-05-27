@@ -915,6 +915,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	capricioussyrupcannonade: {
 		name: "Capricious Syrup Cannonade",
 		shortDesc: "Sets sticky web on the opponent's side.",
+		desc: "Affected by Spoiled Goods. Sets sticky web on the opponent's side.",
 	},
 	captivate: {
 		name: "Captivate",
