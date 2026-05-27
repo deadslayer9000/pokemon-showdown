@@ -7952,7 +7952,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	vowtowin: {
 		name: "Vow to Win",
-		shortDesc: "Status move. Raises user's ATK, SPATK and SPEED by 1.",
+		shortDesc: "Status move. Raises user's ATK, SPA & SPE by 1.",
 	},
 	wakeupslap: {
 		name: "Wake-Up Slap",
