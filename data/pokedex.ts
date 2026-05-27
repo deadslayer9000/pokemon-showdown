@@ -26433,7 +26433,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	},
 	calyrexwaverider: {
 		num: 898,
-		name: "Calyrex-Waverider",
+		name: "Calyrex-Wave",
 		baseSpecies: "Calyrex",
 		forme: "Wave",
 		types: ["Psychic", "Water"],
