@@ -2155,8 +2155,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	spectreonslaught: {
 		name: "Spectre Onslaught",
-		shortDesc: "Damaging moves strike 4 times. The three strikes after the first do 10% damage.",
-		desc: "This Pokemon's Damaging moves strike 4 times, the three subsequent strikes dealing 10% of the original hit's damage. Secondary effects do not apply, and Night Shade does not activate this ability.",
+		shortDesc: "Damaging moves strike 4 times. The three strikes after the first do 7.5% damage.",
+		desc: "This Pokemon's Damaging moves strike 4 times, the three subsequent strikes dealing 7.5% of the original hit's damage. Secondary effects do not apply, and Night Shade does not activate this ability.",
 	},
 	speedboost: {
 		name: "Speed Boost",

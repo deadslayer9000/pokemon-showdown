@@ -2519,7 +2519,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	forecastwarning: {
 		name: "Forecast Warning",
-		shortDesc: "Hits 2 turns after use. Hits instantly in Rain.",
+		desc: "This move hits 2 turns after it's used. If any weather is active, then this move activates immediately and with 130 Base Power instead of 120."
+		shortDesc: "Hits 2 turns later. Gets stronger in weather.",
 		start: "  [POKEMON] forecast an attack!",
 		activate: "  [TARGET] took the Forecast Warning attack!",
 		end: "  [POKEMON] was hit by Forecast Warning!",
@@ -3290,6 +3291,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		gen6: {
 			desc: "The power of this move depends on (user's weight / target's weight), rounded down. Power is equal to 120 if the result is 5 or more, 100 if 4, 80 if 3, 60 if 2, and 40 if 1 or less.",
 		},
+	},
+	heliosstorm: {
+		name: "Helios Storm",
+		desc: "This move and its effects ignores the Abilities of other Pokemon.",
+		shortDesc: "This move ignores the Abilities of other Pokemon.",
 	},
 	helpinghand: {
 		name: "Helping Hand",
@@ -6081,6 +6087,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			desc: "Deals damage to the target equal to the user's level. This move ignores type immunity.",
 			shortDesc: "Damage = user's level. Can hit Ghost types.",
 		},
+	},
+	selenepulse: {
+		name: "Selene Pulse",
+		desc: "This move and its effects ignores the Abilities of other Pokemon.",
+		shortDesc: "This move ignores the Abilities of other Pokemon.",
 	},
 	selfdestruct: {
 		name: "Self-Destruct",

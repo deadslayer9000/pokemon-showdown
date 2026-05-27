@@ -1745,7 +1745,7 @@ export class BattleActions {
 			this.battle.debug(`Parental Bond modifier: ${bondModifier}`);
 			baseDamage = this.battle.modify(baseDamage, bondModifier);
 		} else if (move.multihitType === 'spectreonslaught' && move.hit > 1) {
-			const spectreModifier = 0.1; 
+			const spectreModifier = 0.075; 
 			this.battle.debug(`Spectre Onslaught modifier: ${spectreModifier}`);
 			baseDamage = this.battle.modify(baseDamage, spectreModifier);
 		}
