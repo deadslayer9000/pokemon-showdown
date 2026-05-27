@@ -20,4 +20,26 @@ moonwake: {
 	desc: "This Pokemon ignores abilities with its moves. This Pokemon gets a 1.5x Special Defense boost if a Pokemon with Dawnbreak is active on this side.",
 	shortDesc: "Moves ignore abilities; 1.5x SpD if a Pokemon with Dawnbreak is active.",
 },
+prospect: {
+		onAfterMove(source, target, move) {
+			if (move.flags['futuremove']) {
+				source.prospect = true;
+				//this.boost({ spd: 1 }, source);
+			}
+		},
+		onResidual(target, source, effect) {
+			const possibleTargets = target.adjacentFoes();
+			if (!possibleTargets.length) return;
+
+			const foe = this.sample(possibleTargets);
+			if (!foe.side.slotConditions[foe.position]["futuremove"] && target.prospect) {
+				target.prospect = false;
+				this.boost({ spd: 1 }, target);
+			}
+		},
+		flags: {},
+		name: "Prospect",
+		rating: 2,
+		num: -52,
+	},
 };

@@ -17761,8 +17761,8 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 		tags: ["Restricted Legendary"],
-		otherFormes: ["Calyrex-Ice", "Calyrex-Shadow"],
-		formeOrder: ["Calyrex", "Calyrex-Ice", "Calyrex-Shadow"],
+		otherFormes: ["Calyrex-Ice", "Calyrex-Shadow", "Calyrex-Waverider"],
+		formeOrder: ["Calyrex", "Calyrex-Ice", "Calyrex-Shadow", "Calyrex-Waverider"],
 	},
 	calyrexice: {
 		num: 898,
@@ -22698,6 +22698,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		name: "Tinkatink-Omega",
 		baseSpecies: "Tinkatink",
 		forme: "Omega",
+		gender: "F",
 		types: ["Fairy", "Bug"],
 		baseStats: { hp: 60, atk: 55, def: 50, spa: 30, spd: 48, spe: 54 },
 		abilities: { 0: "Hyper Cutter", 1: "Own Tempo", H: "Sharpness" },
@@ -26405,7 +26406,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		prevo: "Dipplin-Ultra",
 	},
 	sevygarde: {
-		num: 2127,
+		num: 2127,//placeholder
 		name: "Sevygarde",
 		types: ["Poison", "Ground"],
 		baseStats: { hp: 120, atk: 112, def: 100, spa: 100, spd: 80, spe: 88 },
@@ -26415,5 +26416,34 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
     	gender: "N",
 		//color: "Black",
 		eggGroups: ["Undiscovered"],
-	}
+	},
+	trapinchatom: {
+		num: 2128,//placeholder
+		name: "Trapinch-ATOM",
+		baseSpecies: "Trapinch",
+		types: ["Water", "Bug"],
+		baseStats: { hp: 66, atk: 153, def: 78, spa: 45, spd: 120, spe: 66 },
+    	abilities: { 0: "Hyper Cutter", H: "Strong Jaw" },
+    	weightkg: 8,
+		heightm: 0.7,
+		//color: "Blue",
+    	gender: "N",
+		eggGroups: ["Undiscovered"],
+		forme: "ATOM",
+	},
+	calyrexwaverider: {
+		num: 898,
+		name: "Calyrex-Waverider",
+		baseSpecies: "Calyrex",
+		forme: "Wave",
+		types: ["Psychic", "Water"],
+		gender: "N",
+		baseStats: { hp: 100, atk: 90, def: 85, spa: 150, spd: 165, spe: 90 },
+		abilities: { 0: "As One (Lochtrier)" },
+		heightm: 2.4,
+		weightkg: 264.1, //caly + horse + 1.4 like other calyrex formes
+		//color: "Blue", no page yet
+		eggGroups: ["Undiscovered"],
+		changesFrom: "Calyrex",
+	},
 };

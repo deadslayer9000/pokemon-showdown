@@ -6002,9 +6002,9 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	prospect: {
 		onAfterMove(source, target, move) {
-			if (move.flags['futuremove']) {
+			if (move.flags['futuremove'] && !source.abilityState?.prospect) {
 				source.abilityState.prospect = true;
-				//this.boost({ spd: 1 }, source);
+				this.boost({ spd: 1 }, source);
 			}
 		},
 		onResidual(target, source, effect) {
@@ -6014,7 +6014,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			const foe = this.sample(possibleTargets);
 			if (!foe.side.slotConditions[foe.position]["futuremove"] && target.abilityState?.prospect) {
 				target.abilityState.prospect = false;
-				this.boost({ spd: 1 }, target);
+				//this.boost({ spd: 1 }, target);
 			}
 		},
 		flags: {},
@@ -10049,6 +10049,42 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		name: "Spoiled Goods",
 		rating: 3.5,
 		num: -109,
+	},
+	asonelochtrier: {
+		onSwitchInPriority: 1,
+		onStart(pokemon) {
+			if (this.effectState.unnerved) return;
+			this.add("-ability", pokemon, "As One");
+			this.add("-ability", pokemon, "Unnerve");
+			this.effectState.unnerved = true;
+		},
+		onEnd() {
+			this.effectState.unnerved = false;
+		},
+		onFoeTryEatItem() {
+			return !this.effectState.unnerved;
+		},
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect && effect.effectType === "Move") {
+				this.boost(
+					{ spd: length },
+					source,
+					source,
+					this.dex.abilities.get("abyssalneigh")
+				);
+			}
+		},
+		flags: {
+			failroleplay: 1,
+			noreceiver: 1,
+			noentrain: 1,
+			notrace: 1,
+			failskillswap: 1,
+			cantsuppress: 1,
+		},
+		name: "As One (Lochtrier)",
+		rating: 3.5,
+		num: -110,
 	},
 	// CAP
 	mountaineer: {
