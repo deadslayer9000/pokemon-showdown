@@ -24841,7 +24841,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		accuracy: 95,
 		basePower: 165,
 		category: "Physical",
-		name: "V-ascend",
+		name: "V-Ascend",
 		pp: 5,
 		priority: 0,
 		flags: { contact: 1, protect: 1, mirror: 1 },
@@ -27688,4 +27688,196 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		target: "normal",
 		type: "Steel",
 	},
+	glacialpinion: {
+		num: -129,
+		accuracy: true,
+		basePower: 210,
+		category: "Physical",
+		name: "Glacial Pinion",
+		pp: 1,
+		priority: 0,
+		isZ: "deltaazumarilliumz",
+		flags: {},
+		type: "Ice",
+		target: "normal",
+		onHit(target, source, move) {
+			return target.addVolatile("trapped", source, move, "trapper");
+		},
+	},
+	onewayjourney: {
+		num: -130,
+		accuracy: true,
+		basePower: 175,
+		category: "Special",
+		name: "One-Way Journey",
+		pp: 1,
+		priority: 0,
+		isZ: "drifblimpiumz",
+		flags: {},
+		secondary: {
+			self: {
+				status: "brn",
+			}
+		},
+		type: "Ghost",
+		target: "normal",
+	},
+	capricioussyrupcannonade: {
+		num: -131,
+		accuracy: true,
+		basePower: 175,
+		category: "Special",
+		name: "Capricious Syrup Cannonade",
+		pp: 1,
+		priority: 0,
+		isZ: "ultrahydrappliumz",
+		flags: {},
+		onAfterHit(target, source, move) {
+			for (const side of source.side.foeSidesWithConditions()) {
+				side.addSideCondition("stickyweb");
+			}
+		},
+		onAfterSubDamage(damage, target, source, move) {
+			for (const side of source.side.foeSidesWithConditions()) {
+				side.addSideCondition("stickyweb");
+			}
+		},
+		type: "Grass",
+		target: "normal",
+	},
+	wormholepillar: {
+		num: -132,
+		accuracy: true,
+		basePower: 175,
+		category: "Special",
+		name: "Wormhole Pillar",
+		pp: 1,
+		priority: 0,
+		isZ: "ultraglimmoriumz",
+		flags: {},
+		onAfterHit(target, source, move) {
+			source.setAbility("Adaptability");
+			this.add("-activate", source, "move: Wormhole Pillar", "ability: Adaptability");
+		},
+		type: "Psychic",
+		target: "normal",
+	},
+	crimsonfistblitz: {
+		num: -133,
+		accuracy: true,
+		basePower: 180,
+		category: "Physical",
+		name: "Crimson Fist Blitz",
+		pp: 1,
+		priority: 0,
+		isZ: "deltazeraoriumz",
+		flags: { punch: 1 },
+		onAfterHit(target, source, move) {
+			source.setAbility("Iron Fist");
+			this.add("-activate", source, "move: Crimson Fist Blitz", "ability: Iron Fist");
+		},
+		type: "Fire",
+		target: "normal",
+	},
+	vowtowin: {
+		num: -134,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Vow to Win",
+		pp: 1,
+		priority: 0,
+		isZ: "deltavictiniumz",
+		flags: {},
+		boosts: {
+			atk: 1,
+			spa: 1,
+			spe: 1,
+		},
+		type: "Electric",
+		target: "self",
+	},
+	athousandmoons: {
+		num: -135,
+		accuracy: true,
+		basePower: 185,
+		category: "Special",
+		name: "A Thousand Moons",
+		pp: 1,
+		priority: 0,
+		isZ: "mewrainiumz",
+		flags: {},
+		onAfterSubDamage(damage, target, source, move) {
+			let success = false;
+			const removeAll = [
+				"spikes",
+				"toxicspikes",
+				"stealthrock",
+				"stickyweb",
+				"gmaxsteelsurge",
+			];
+			for (const sideCondition of removeAll) {
+				if (source.side.removeSideCondition(sideCondition)) {
+					this.add(
+						"-sideend",
+						source.side,
+						this.dex.conditions.get(sideCondition).name,
+						"[from] move: A Thousand Moons",
+						`[of] ${source}`
+					);
+					success = true;
+				}
+			}
+			for (const sideCondition of removeAll) {
+				if (target.side.removeSideCondition(sideCondition)) {
+					this.add(
+						"-sideend",
+						target.side,
+						this.dex.conditions.get(sideCondition).name,
+						"[from] move: A Thousand Moons",
+						`[of] ${source}`
+					);
+					success = true;
+				}
+			}
+			return success;
+		},
+		onHit(target, source, move) {
+			let success = false;
+			const removeAll = [
+				"spikes",
+				"toxicspikes",
+				"stealthrock",
+				"stickyweb",
+				"gmaxsteelsurge",
+			];
+			for (const sideCondition of removeAll) {
+				if (source.side.removeSideCondition(sideCondition)) {
+					this.add(
+						"-sideend",
+						source.side,
+						this.dex.conditions.get(sideCondition).name,
+						"[from] move: A Thousand Moons",
+						`[of] ${source}`
+					);
+					success = true;
+				}
+			}
+			for (const sideCondition of removeAll) {
+				if (target.side.removeSideCondition(sideCondition)) {
+					this.add(
+						"-sideend",
+						target.side,
+						this.dex.conditions.get(sideCondition).name,
+						"[from] move: A Thousand Moons",
+						`[of] ${source}`
+					);
+					success = true;
+				}
+			}
+			return success;
+		},
+		type: "Dark",
+		target: "normal",
+	}
 };
