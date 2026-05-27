@@ -34,5 +34,11 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	},
 	glimmoramega: {
 		tier: "OU",
-	}
+	},
+	stridingsun: {
+		tier: "RU",
+	},
+	ironmoon: {
+		tier: "RU",
+	},
 };	
