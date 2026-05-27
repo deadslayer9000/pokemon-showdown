@@ -282,6 +282,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		end: "[POKEMON]'s Astral Binds faded.",
 		cant: "[POKEMON] cannot use [MOVE] due to the Astral Binds!"
 	},
+	athousandmoons: {
+		name: "A Thousand Moons",
+		shortDesc: "Removes hazards from both sides of the field.",
+	},
 	attackorder: {
 		name: "Attack Order",
 		desc: "Has a higher chance for a critical hit.",
@@ -908,6 +912,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			desc: "The user's type changes based on the battle terrain. Normal type on the regular Wi-Fi terrain. Fails if the type is one of the user's current types.",
 		},
 	},
+	capricioussyrupcannonade: {
+		name: "Capricious Syrup Cannonade",
+		shortDesc: "Sets sticky web on the opponent's side.",
+	},
 	captivate: {
 		name: "Captivate",
 		desc: "Lowers the target's Special Attack by 2 stages. The target is unaffected if both the user and the target are the same gender, or if either is genderless. Pokemon with the Oblivious Ability are immune.",
@@ -1325,6 +1333,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	crimsoncharge: {
 		name: "Crimson Charge",
 		shortDesc: "Has a 30% chance to burn the target.",
+	},
+	crimsonfistblitz: {
+		name: "Crimson Fist Blitz",
+		shortDesc: "Changes the user's ability to Iron Fist.",
 	},
 	crimsonstorm: {
 		name: "Crimson Storm",
@@ -2738,6 +2750,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Glacial Lance",
 		desc: "No additional effect.",
 		shortDesc: "No additional effect. Hits adjacent foes.",
+	},
+	glacialpinion: {
+		name: "Glacial Pinion",
+		shortDesc: "Deals damage and traps the target.",
 	},
 	glaciate: {
 		name: "Glaciate",
@@ -4889,6 +4905,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Ominous Wind",
 		desc: "Has a 10% chance to raise the user's Attack, Defense, Special Attack, Special Defense, and Speed by 1 stage.",
 		shortDesc: "10% chance to raise all stats by 1 (not acc/eva).",
+	},
+	onewayjourney: {
+		name: "One-Way Journey",
+		shortDesc: "Deals damage and burns the user.",
 	},
 	orderup: {
 		name: "Order Up",
@@ -7930,6 +7950,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			shortDesc: "Has 1/3 recoil.",
 		},
 	},
+	vowtowin: {
+		name: "Vow to Win",
+		shortDesc: "Status move. Raises user's ATK, SPATK and SPEED by 1.",
+	},
 	wakeupslap: {
 		name: "Wake-Up Slap",
 		desc: "Power doubles if the target is asleep. If the user has not fainted, the target wakes up.",
@@ -8151,6 +8175,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Work Up",
 		desc: "Raises the user's Attack and Special Attack by 1 stage.",
 		shortDesc: "Raises the user's Attack and Sp. Atk by 1.",
+	},
+	wormholepillar: {
+		name: "Wormhole Pillar",
+		shortDesc: "Changes the user's ability to Adaptability.",
 	},
 	wormholerush: {
 		name: "Wormhole Rush",

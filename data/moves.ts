@@ -27807,10 +27807,8 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		priority: 0,
 		isZ: "mewrainiumz",
 		flags: {},
-		onHit(target, source, move) {
+		onAfterSubDamage(damage, target, source, move) {
 			let success = false;
-			if (!target.volatiles["substitute"] || move.infiltrates)
-				success = !!this.boost({ evasion: -1 });
 			const removeAll = [
 				"spikes",
 				"toxicspikes",
@@ -27830,7 +27828,53 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					success = true;
 				}
 			}
-			this.field.clearTerrain();
+			for (const sideCondition of removeAll) {
+				if (target.side.removeSideCondition(sideCondition)) {
+					this.add(
+						"-sideend",
+						target.side,
+						this.dex.conditions.get(sideCondition).name,
+						"[from] move: A Thousand Moons",
+						`[of] ${source}`
+					);
+					success = true;
+				}
+			}
+			return success;
+		},
+		onHit(target, source, move) {
+			let success = false;
+			const removeAll = [
+				"spikes",
+				"toxicspikes",
+				"stealthrock",
+				"stickyweb",
+				"gmaxsteelsurge",
+			];
+			for (const sideCondition of removeAll) {
+				if (source.side.removeSideCondition(sideCondition)) {
+					this.add(
+						"-sideend",
+						source.side,
+						this.dex.conditions.get(sideCondition).name,
+						"[from] move: A Thousand Moons",
+						`[of] ${source}`
+					);
+					success = true;
+				}
+			}
+			for (const sideCondition of removeAll) {
+				if (target.side.removeSideCondition(sideCondition)) {
+					this.add(
+						"-sideend",
+						target.side,
+						this.dex.conditions.get(sideCondition).name,
+						"[from] move: A Thousand Moons",
+						`[of] ${source}`
+					);
+					success = true;
+				}
+			}
 			return success;
 		},
 		type: "Dark",
