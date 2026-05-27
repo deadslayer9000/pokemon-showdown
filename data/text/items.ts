@@ -445,6 +445,18 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		desc: "If held by a Clamperl, its Sp. Atk is doubled. Evolves Clamperl into Huntail when traded.",
 		shortDesc: "If held by a Clamperl, its Sp. Atk is doubled.",
 	},
+	deltaazumarilliumz: {
+		name: "Delta Azumarillium Z",
+		shortDesc: "If Held by Azumarill-Delta with Icicle Flail, it can use Glacial Pinion.",
+	},
+	deltavictiniumz: {
+		name: "Delta Victinium Z",
+		shortDesc: "If Held by Victini-Delta with V-Ascend, it can use Vow To Win.",
+	},
+	deltazeraoriumz: {
+		name: "Delta Zeraorium Z",
+		shortDesc: "If Held by Zeraora-Delta with Flashpoint Fists, it can use Crimson Fist Blitz.",
+	},
 	deltagholdiumz: {
 		name: "Delta Gholdium Z",
 		shortDesc: "If held by Gholdengo-Delta with Pearly Parade, allows it to use Ride The Wave.",
@@ -500,6 +512,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 	diancite: {
 		name: "Diancite",
 		shortDesc: "If held by a Diancie, this item allows it to Mega Evolve in battle.",
+	},
+	drifblimpiumz: {
+		name: "Drifblimpium Z",
+		shortDesc: "If Held by Drifblim with Phantasmal Voyage, it can use One-Way Journey.",
 	},
 	rubydiancite: {
 		name: "Ruby Diancite",
@@ -1376,6 +1392,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 	mewniumz: {
 		name: "Mewnium Z",
 		shortDesc: "If held by a Mew with Psychic, it can use Genesis Supernova.",
+	},
+	mewrainiumz: {
+		name: "Mewrainium Z",
+		shortDesc: "If held by Mewrai with New Moon, lets it use A Thousand Moons.",
 	},
 	mewtwonitex: {
 		name: "Mewtwonite X",
@@ -2533,6 +2553,14 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 	ultraball: {
 		name: "Ultra Ball",
 		shortDesc: "An ultra-performance Ball that provides a higher catch rate than a Great Ball.",
+	},
+	ultraglimmoriumz: {
+		name: "Ultra Glimmorium Z",
+		shortDesc: "If held by Glimmora-Ultra with Hyperspace Hole, lets it use Wormhole Pillar.",
+	},
+	ultrahydrappliumz: {
+		name: "Ultra Hydrapplium Z",
+		shortDesc: "If held by Hydrapple-Ultra with Syrup Bomb, lets it use Capricious Syrup Cannonade.",
 	},
 	ultranecroziumz: {
 		name: "Ultranecrozium Z",
