@@ -26289,7 +26289,9 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 							`[of] ${source}`
 						);
 					}
-					target.addVolatile("leechseed", source);
+					if (!target.addVolatile("leechseed", source)) {
+						target.addVolatile("yawn", source);
+					}
 				}
 			}
 		},
@@ -27562,14 +27564,14 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	forecastwarning: {
 		num: -123,
 		accuracy: 100,
-		basePower: 120,
+		basePower: 130,
 		category: "Special",
 		name: "Forecast Warning",
 		pp: 10,
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
 		onTry(source, target, move) {
-			if (!(this.field.isWeather("raindance") || this.field.isWeather("primordialsea"))) {
+			if (!(this.field.weather !== "")) {
 
 				if (!target.side.addSlotCondition(target, "futuremove")) return false;
 				Object.assign(
@@ -27594,7 +27596,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				this.add("-start", source, "move: Forecast Warning");
 				return this.NOT_FAIL;
 			} else {
-				this.hint(`The rain made Forecast Warning hit immediately!`);
+				this.hint(`The weather strengthened Forecast Warning and made it land immediately!`);
 			}
 		},
 		type: "Flying",
@@ -27652,5 +27654,31 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		flags: { protect: 1, mirror: 1 },
 		target: "allAdjacentFoes",
 		type: "Water",
+	},
+	heliosstorm: {
+		num: -127,
+		accuracy: 100, 
+		basePower: 100,
+		category: "Physical",
+		name: "Helios Storm",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		ignoreAbility: true,
+		target: "normal",
+		type: "Dragon",
+	},
+	selenepulse: {
+		num: -128,
+		accuracy: 100, 
+		basePower: 100,
+		category: "Special",
+		name: "Selene Pulse",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		ignoreAbility: true,
+		target: "normal",
+		type: "Steel",
 	},
 };

@@ -7551,14 +7551,14 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "UU",
 	},
 	stridingsun: {
-		tier: "RU",
+		tier: "Uber",
 		doublesTier: "(DUU)",
-		natDexTier: "RU",
+		natDexTier: "Uber",
 	},
 	ironmoon: {
-		tier: "RU",
+		tier: "Uber",
 		doublesTier: "(DUU)",
-		natDexTier: "RU",
+		natDexTier: "Uber",
 	},
 	volcaniondelta: {
 		tier: "RU",
@@ -7678,19 +7678,19 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "UU",
 	},
 	gardevoiratom: {
-		tier: "UU",
+		tier: "Uber",
 		natDexTier: "UU",
 	},
 	gardevoiratommega: {
-		tier: "UU",
+		tier: "Uber",
 		natDexTier: "UU",
 	},
 	galladeatom: {
-		tier: "UU",
+		tier: "Uber",
 		natDexTier: "UU",
 	},
 	galladeatommega: {
-		tier: "UU",
+		tier: "Uber",
 		natDexTier: "UU",
 	},
 	slakothatom: {
