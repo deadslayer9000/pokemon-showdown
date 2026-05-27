@@ -2519,7 +2519,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	forecastwarning: {
 		name: "Forecast Warning",
-		desc: "This move hits 2 turns after it's used. If any weather is active, then this move activates immediately and with 130 Base Power instead of 120."
+		desc: "This move hits 2 turns after it's used. If any weather is active, then this move activates immediately and with 130 Base Power instead of 120.",
 		shortDesc: "Hits 2 turns later. Gets stronger in weather.",
 		start: "  [POKEMON] forecast an attack!",
 		activate: "  [TARGET] took the Forecast Warning attack!",
