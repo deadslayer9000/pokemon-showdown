@@ -7761,7 +7761,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "UU",
 		doublesTier: "DUU",
 	},
-	calyrexwaverider: {
+	calyrexwave: {
 		tier: "Uber",
 		natDexTier: "Uber",
 		doublesTier: "DUber",
