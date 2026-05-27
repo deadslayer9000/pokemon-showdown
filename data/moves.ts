@@ -27564,7 +27564,14 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	forecastwarning: {
 		num: -123,
 		accuracy: 100,
-		basePower: 130,
+		basePower: 120,
+		basePowerCallback(pokemon, target, move) {
+			if (this.field.weather !== "") {
+				return 130;
+			} else {
+				return move.basePower;
+			}
+		},
 		category: "Special",
 		name: "Forecast Warning",
 		pp: 10,
