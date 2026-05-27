@@ -24841,7 +24841,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		accuracy: 95,
 		basePower: 165,
 		category: "Physical",
-		name: "V-ascend",
+		name: "V-Ascend",
 		pp: 5,
 		priority: 0,
 		flags: { contact: 1, protect: 1, mirror: 1 },
@@ -27700,7 +27700,9 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		flags: {},
 		type: "Ice",
 		target: "normal",
-		volatileStatus: "partiallytrapped",
+		onHit(target, source, move) {
+			return target.addVolatile("trapped", source, move, "trapper");
+		},
 	},
 	onewayjourney: {
 		num: -130,
