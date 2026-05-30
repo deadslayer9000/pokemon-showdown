@@ -22261,6 +22261,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		heightm: 0.3,
 		color: "Yellow",
 		eggGroups: ["Dragon"],
+		evos: ["Goolossal"],
 	},
 	goolossal: {
 		num: 2051,
@@ -22272,6 +22273,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		heightm: 6,
 		color: "Yellow",
 		eggGroups: ["Dragon"],
+		prevo: "Goomy-Epsilon",
 	},
 	budewdelta: {
 		num: 406,
