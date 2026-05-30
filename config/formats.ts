@@ -220,7 +220,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen9',
 		ruleset: ['Standard NatDex', 'Little Cup'],
 		banlist: [
-			'Moody', 'Eevium Z', 'King\'s Rock',
+			'Moody', 'Eevium Z', 'King\'s Rock', 'Pure Power',
 			'Quick Claw', 'Razor Fang', 'Dragon Rage', 'Sonic Boom', 'Light Clay', 'Icy Rock', 'Damp Rock', 'Smooth Rock', 'Heat Rock',
 
 			'Aipom-Delta', 'Aipom-Ultra', 'Basculin-White-Striped', 'Chatot-Delta', 'Corsola-Galar', 'Corsola-Delta', 'Druddigon-Delta', 'Dunsparce', 'Dunsparce-Ultra',
