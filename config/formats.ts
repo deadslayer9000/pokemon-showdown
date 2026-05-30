@@ -216,7 +216,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		ruleset: ['Standard NatDex', 'Standard Draft'],
 	},
 	{
-		name: "[Gen 9] DDL LC",
+		name: "[Gen 9] [ND] DDL LC",
 		mod: 'gen9',
 		ruleset: ['Standard NatDex', 'Little Cup'],
 		banlist: [
