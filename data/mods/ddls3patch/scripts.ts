@@ -338,5 +338,15 @@ inherit: 'gen9',
 	  delete this.modData("Learnsets", "keldeodelta").learnset.vacuumwave;
 	  this.modData("Learnsets", "chansey").learnset.wish = ["9M"];
 	  this.modData("Learnsets", "chansey").learnset.teleport = ["9M"];
+	  this.modData("Learnsets", "klinklangdelta").learnset.earthpower = ["9M"];
+	  delete this.modData("Learnsets", "klinklangdelta").learnset.trick;
+	  delete this.modData("Learnsets", "apextyrant").learnset.uturn;
+	  delete this.modData("Learnsets", "stridingsun").learnset.heliosstorm;
+	  delete this.modData("Learnsets", "stridingsun").learnset.dragondance;
+	  this.modData("Learnsets", "stridingsun").learnset.outrage = ["9M"];
+	  delete this.modData("Learnsets", "ironmoon").learnset.selenepulse;
+	  delete this.modData("Learnsets", "ironmoon").learnset.focusblast;
+	  this.modData("Learnsets", "ironmoon").learnset.steelbeam = ["9M"];
+
 	}
 };

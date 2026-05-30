@@ -26433,9 +26433,9 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		eggGroups: ["Undiscovered"],
 		forme: "ATOM",
 	},
-	calyrexwaverider: {
+	calyrexwave: {
 		num: 898,
-		name: "Calyrex-Waverider",
+		name: "Calyrex-Wave",
 		baseSpecies: "Calyrex",
 		forme: "Wave",
 		types: ["Psychic", "Water"],
