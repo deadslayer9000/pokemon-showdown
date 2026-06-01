@@ -218,6 +218,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		name: "[Gen 9] [ND] DDL LC",
 		mod: 'gen9',
+		searchShow: false,
 		ruleset: ['Standard NatDex', 'Little Cup', 'Item Clause = 2', 'Terastal Clause'],
 		banlist: [
 			'Moody', 'Eevium Z', 'King\'s Rock', 'Pure Power',
@@ -232,7 +233,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		name: "[Gen 9] Staff RU",
 		mod: 'prems7patch',
-		// searchShow: false,
+		searchShow: false,
 		ruleset: ['[Gen 9] National Dex UU'],
 		banlist: ['ND UU', 'ND RUBL'],
 		unbanlist: ["Drought", "Drizzle", "Iron Moon", "Striding Sun"],
