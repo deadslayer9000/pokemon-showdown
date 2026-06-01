@@ -218,7 +218,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		name: "[Gen 9] [ND] DDL LC",
 		mod: 'gen9',
-		ruleset: ['Standard NatDex', 'Little Cup'],
+		ruleset: ['Standard NatDex', 'Little Cup', 'Item Clause = 2', 'Terastal Clause'],
 		banlist: [
 			'Moody', 'Eevium Z', 'King\'s Rock', 'Pure Power',
 			'Quick Claw', 'Razor Fang', 'Dragon Rage', 'Sonic Boom', 'Light Clay', 'Icy Rock', 'Damp Rock', 'Smooth Rock', 'Heat Rock',
