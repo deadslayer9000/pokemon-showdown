@@ -929,6 +929,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Hyper Cutter",
 		shortDesc: "Prevents other Pokemon from lowering this Pokemon's Attack stat stage.",
 	},
+	hypervirulent: {
+		name: "Hypervirulent",
+		shortDesc: "30% chance to inflict Viremic on opponent on contact",
+	},
 	icebody: {
 		name: "Ice Body",
 		desc: "If Snow is active, this Pokemon restores 1/16 of its maximum HP, rounded down, at the end of each turn.",
@@ -2704,6 +2708,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			desc: "If a physical attack hits this Pokemon, its Defense is lowered by 1 stage and its Speed is raised by 1 stage.",
 			shortDesc: "If a physical attack hits this Pokemon, Defense is lowered by 1, Speed is raised by 1.",
 		},
+	},
+	weeding: {
+		name: "Weeding",
+		shortDesc: "Offensive grass moves clear user's hazards",
 	},
 	welkintorch: {
 		name: "Welkin Torch",
