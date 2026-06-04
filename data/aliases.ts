@@ -1276,6 +1276,9 @@ export const Aliases: import('../sim/dex').AliasesTable = {
 	magoo: "Magoodra",
 	roto: "Rotogar",
 	ratom: "Tandemaus-ATOM",
+	ultrapple: "Hydrapple-Ultra",
+	virus: "Reuniclus-Ultra",
+	pathogen: "Reuniclus-Ultra",
 
 	// ultra beast codenames --- ordered by dex number
 	ub01: "Nihilego",

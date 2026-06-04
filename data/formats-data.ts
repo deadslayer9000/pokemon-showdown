@@ -7777,4 +7777,34 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "Uber",
 		doublesTier: "DUber",
 	},
+	gimmighoulomega: {
+		tier: "LC",
+		natDexTier: "LC",
+		doublesTier: "LC",
+	},
+	gimmighoulomegaroaming: {
+		tier: "LC",
+		natDexTier: "LC",
+		doublesTier: "LC",
+	},
+	gholdengoomega: {
+		tier: "UU",
+		natDexTier: "UU",
+		doublesTier: "DUU",
+	},
+	solosisultra: {
+		tier: "LC",
+		natDexTier: "LC",
+		doublesTier: "LC",
+	},
+	duosionultra: {
+		tier: "NFE",
+		natDexTier: "NFE",
+		doublesTier: "NFE",
+	},
+	reuniclusultra: {
+		tier: "UU",
+		natDexTier: "UU",
+		doublesTier: "DUU",
+	},
 };

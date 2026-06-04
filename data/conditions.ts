@@ -412,6 +412,19 @@ export const Conditions: import('../sim/dex-conditions').ConditionDataTable = {
 			this.hint(`${pokemon.name} got hurt by its necrosis!`);
 		},
 	},
+	viremic: {
+		name: 'viremic',
+		onStart(pokemon) {
+			this.add('-start', pokemon, 'Viremic');
+		},
+		onResidual(pokemon) {
+			this.damage(pokemon.baseMaxhp / 8);
+			this.hint(`${pokemon.name} was hurt by the virus!`);
+		},
+		onEnd(pokemon) {
+			this.add('-end', pokemon, 'Viremic');
+		},
+	},
 	futuremove: {
 		// this is a slot condition
 		name: 'futuremove',
