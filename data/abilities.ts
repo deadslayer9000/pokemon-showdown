@@ -10086,6 +10086,69 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 3.5,
 		num: -110,
 	},
+	weeding: {
+		onAfterHit(source, target, move) {
+			if (move.type === "grass"){
+				const sideConditions = [
+					"spikes",
+					"toxicspikes",
+					"stealthrock",
+					"stickyweb",
+					"gmaxsteelsurge",
+				];
+				for (const condition of sideConditions) {
+					if (source.hp && source.side.removeSideCondition(condition)) {
+						this.add(
+							"-sideend",
+							source.side,
+							this.dex.conditions.get(condition).name,
+							"[from] ability: Weeding",
+							`[of] ${source}`
+						);
+					}
+				}
+			}
+		},
+		onAfterSubDamage(damage, target, source, move) {
+			if (move.type === "grass"){
+				const sideConditions = [
+					"spikes",
+					"toxicspikes",
+					"stealthrock",
+					"stickyweb",
+					"gmaxsteelsurge",
+				];
+				for (const condition of sideConditions) {
+					if (source.hp && source.side.removeSideCondition(condition)) {
+						this.add(
+							"-sideend",
+							source.side,
+							this.dex.conditions.get(condition).name,
+							"[from] ability: Weeding",
+							`[of] ${source}`
+						);
+					}
+				}
+			}
+		},
+		flags: {},
+		name: "Weeding",
+		rating: 3,
+		num: -111,
+	},
+	hypervirulent: {
+		onDamagingHit(damage, target, source, move) {
+			if (this.checkMoveMakesContact(move, source, target) && !(source.types.includes("Poison") || source.types.includes("Steel"))) {
+				if (this.randomChance(3, 10)) {
+					source.addVolatile("viremic", target);
+				}
+			}
+		},
+		flags: {},
+		name: "Hypervirulent",
+		rating: 2,
+		num: -112,
+	},
 	// CAP
 	mountaineer: {
 		onDamage(damage, target, source, effect) {
