@@ -10087,30 +10087,33 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -110,
 	},
 	weeding: {
-		onAfterHit(source, target, move) {
-			if (move.type === "grass"){
-				const sideConditions = [
-					"spikes",
-					"toxicspikes",
-					"stealthrock",
-					"stickyweb",
-					"gmaxsteelsurge",
-				];
-				for (const condition of sideConditions) {
-					if (source.hp && source.side.removeSideCondition(condition)) {
-						this.add(
-							"-sideend",
-							source.side,
-							this.dex.conditions.get(condition).name,
-							"[from] ability: Weeding",
-							`[of] ${source}`
-						);
+		onAfterMove(source, target, move) {
+			if(move.category === "Physical" || move.category === "Special"){
+				if (move.type === "Grass"){
+					this.add("-activate", source, "ability: Weeding");
+					const sideConditions = [
+						"spikes",
+						"toxicspikes",
+						"stealthrock",
+						"stickyweb",
+						"gmaxsteelsurge",
+					];
+					for (const condition of sideConditions) {
+						if (source.hp && source.side.removeSideCondition(condition)) {
+							this.add(
+								"-sideend",
+								source.side,
+								this.dex.conditions.get(condition).name,
+								"[from] ability: Weeding",
+								`[of] ${source}`
+							);
+						}
 					}
 				}
 			}
-		},
+		},/*
 		onAfterSubDamage(damage, target, source, move) {
-			if (move.type === "grass"){
+			if (move.type === "Grass"){
 				const sideConditions = [
 					"spikes",
 					"toxicspikes",
@@ -10130,7 +10133,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 					}
 				}
 			}
-		},
+		},*/
 		flags: {},
 		name: "Weeding",
 		rating: 3,
