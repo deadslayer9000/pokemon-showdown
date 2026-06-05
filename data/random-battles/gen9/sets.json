@@ -7908,8 +7908,14 @@
         "sets": [
             {
                 "role": "Bulky Setup",
-                "movepool": ["Calm Mind", "Bulk Up", "Blood Moon", "Shadow Ball", "Moonlight", "Poltergeist", "Double-Edge", "Drain Punch", "Fire Punch", "Moonblast", "Vacuum Wave"],
-                "abilities": ["Mind's Eye", "Prankster", "Analytic"],
+                "movepool": ["Bulk Up", "Moonlight", "Poltergeist", "Double-Edge", "Drain Punch", "Fire Punch"],
+                "abilities": ["Prankster"],
+                "teraTypes": ["Normal", "Fighting"]
+            },
+            {
+                "role": "Setup Sweeper",
+                "movepool": ["Calm Mind", "Blood Moon", "Shadow Ball", "Moonlight", "Moonblast", "Vacuum Wave"],
+                "abilities": ["Prankster"],
                 "teraTypes": ["Normal", "Fighting"]
             },
             {
@@ -9029,7 +9035,7 @@
         "sets": [
             {
                 "role": "Bulky Support",
-                "movepool": ["Toxic", "Wish", "Protect", "Haze", "Venoshock"],
+                "movepool": ["Toxic", "Wish", "Protect", "Venoshock"],
                 "abilities": ["Corrosion"],
                 "teraTypes": ["Steel", "Dark"]
             }
@@ -9063,7 +9069,7 @@
             {
                 "role": "Bulky Setup",
                 "movepool": ["Wish", "Curse", "Iron Head", "Body Press"],
-                "abilities": ["Clear Body"],
+                "abilities": ["Guradian"],
                 "teraTypes": ["Fighting"]
             }
         ]
@@ -10091,7 +10097,7 @@
         ]
     },
     "ironmoon": {
-        "level": 79,
+        "level": 74,
         "sets": [
             {
                 "role": "Bulky Attacker",
@@ -10102,7 +10108,7 @@
         ]
     },
     "stridingsun": {
-        "level": 78,
+        "level": 74,
         "sets": [
             {
                 "role": "Bulky Attacker",
