@@ -399,6 +399,7 @@ const OFFICIAL_AVATARS = new Set([
 	'may-gen3', 'may-gen3rs',
 	'maylene',
 	'medium-gen2jp', 'medium',
+	'minion',
 	'mira',
 	'misty-gen1', 'misty-gen2', 'misty-gen1rb', 'misty-gen3', 'misty',
 	'morty-gen2', 'morty',
