@@ -4009,7 +4009,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "RU",
 	},
 	barbaraclemega: {
-		tier: "UU",
+		tier: "Uber",
 	},
 	skrelp: {
 		tier: "LC",
@@ -5437,8 +5437,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "RU",
 	},
 	scovillainmega: {
-		isNonstandard: "Future",
-		tier: "Illegal",
+		tier: "Uber",
 	},
 	tadbulb: {
 		tier: "LC",
