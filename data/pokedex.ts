@@ -26229,7 +26229,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		baseStats: { hp: 100, atk: 105, def: 100, spa: 115, spd: 100, spe: 80 },
 		abilities: { 0: "Accretion Shell"},
 		heightm: 0.2,
-		weightkg: 6.5,
+		weightkg: 160.5,
 		//color: "Blue", no dsc page,
 		eggGroups: ["Undiscovered"],
 		forme: "Cosmic"
@@ -26242,7 +26242,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		baseStats: { hp: 150, atk: 100, def: 115, spa: 140, spd: 115, spe: 80 },
 		abilities: { 0: "Zodiac Orbit"},
 		heightm: 0.2,
-		weightkg: 6.5,
+		weightkg: 999.9,
 		//color: "Blue", no dsc page,
 		eggGroups: ["Undiscovered"],
 		forme: "Galactic",
