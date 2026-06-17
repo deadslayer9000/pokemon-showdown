@@ -931,7 +931,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	hypervirulent: {
 		name: "Hypervirulent",
-		shortDesc: "30% chance to inflict Viremic on opponent on contact",
+		shortDesc: "30% chance to inflict Viremic on opponent on contact.",
+		desc: "When damaged by a move that makes contact, this Pokemon has a 30% chance to inflict the Viremic conditon on the attacker. Viremic deals damage equal to 1/8th of the target's maximum HP per turn."
 	},
 	icebody: {
 		name: "Ice Body",

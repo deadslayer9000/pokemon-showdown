@@ -27915,12 +27915,17 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		accuracy: 100,
 		basePower: 40,
 		basePowerCallback(pokemon, target, move) {
+			let BP = move.basePower;
 			// You can't get here unless the viral restrain succeeds
-			if ((target.beingCalledBack || target.switchFlag) || target.volatiles["viremic"]) {
-				this.debug("Viral Restrain damage boost");
-				return move.basePower * 2;
+			if ((target.beingCalledBack || target.switchFlag)) {
+				this.debug("Viral Restrain switching damage boost");
+				BP *= 2;
 			}
-			return move.basePower;
+			if (target.volatiles["viremic"]) {
+				this.debug("Viral Restrain viremic damage boost");
+				BP *= 2;
+			}
+			return BP;
 		},
 		category: "Physical",
 		name: "Viral Restrain",
