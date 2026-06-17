@@ -4401,7 +4401,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Decisive Bolt",
 		pp: 15,
 		priority: 2,
-		flags: {},
+		flags: { protect: 1, mirror: 1, metronome: 1 },
 		target: "normal",
 		type: "Electric",
 	},
