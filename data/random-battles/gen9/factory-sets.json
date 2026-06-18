@@ -2,6 +2,7 @@
 	"Uber": {
 		"koraidon": {
 			"weight": 10,
+			"flags": {},
 			"sets": [{
 				"species": "Koraidon",
 				"weight": 50,
@@ -24,6 +25,7 @@
 		},
 		"necrozmaduskmane": {
 			"weight": 10,
+			"flags": {},
 			"sets": [{
 				"species": "Necrozma-Dusk-Mane",
 				"weight": 25,
@@ -83,6 +85,7 @@
 		},
 		"hooh": {
 			"weight": 8,
+			"flags": {},
 			"sets": [{
 				"species": "Ho-Oh",
 				"weight": 10,
@@ -132,6 +135,7 @@
 		},
 		"arceusground": {
 			"weight": 8,
+			"flags": {},
 			"sets": [{
 				"species": "Arceus-Ground",
 				"weight": 50,
@@ -174,6 +178,7 @@
 		},
 		"arceusfairy": {
 			"weight": 8,
+			"flags": {},
 			"sets": [{
 				"species": "Arceus-Fairy",
 				"weight": 100,
@@ -187,6 +192,7 @@
 		},
 		"zacian": {
 			"weight": 8,
+			"flags": {},
 			"sets": [{
 				"species": "Zacian",
 				"weight": 100,
@@ -200,6 +206,7 @@
 		},
 		"kyogre": {
 			"weight": 8,
+			"flags": {},
 			"sets": [{
 				"species": "Kyogre",
 				"weight": 25,
@@ -254,6 +261,7 @@
 		},
 		"arceus": {
 			"weight": 6,
+			"flags": {},
 			"sets": [{
 				"species": "Arceus",
 				"weight": 50,
@@ -285,6 +293,7 @@
 		},
 		"arceuswater": {
 			"weight": 6,
+			"flags": {},
 			"sets": [{
 				"species": "Arceus-Water",
 				"weight": 80,
@@ -308,6 +317,7 @@
 		},
 		"eternatus": {
 			"weight": 6,
+			"flags": {},
 			"sets": [{
 				"species": "Eternatus",
 				"weight": 40,
@@ -342,6 +352,7 @@
 		},
 		"gliscor": {
 			"weight": 4,
+			"flags": {},
 			"sets": [{
 				"species": "Gliscor",
 				"weight": 40,
@@ -382,6 +393,7 @@
 		},
 		"calyrexice": {
 			"weight": 5,
+			"flags": {},
 			"sets": [{
 				"species": "Calyrex-Ice",
 				"wantsTera": true,
@@ -408,6 +420,7 @@
 		},
 		"landorustherian": {
 			"weight": 4,
+			"flags": {},
 			"sets": [{
 				"species": "Landorus-Therian",
 				"weight": 80,
@@ -430,6 +443,7 @@
 		},
 		"tinglu": {
 			"weight": 3,
+			"flags": {},
 			"sets": [{
 				"species": "Ting-Lu",
 				"weight": 80,
@@ -452,6 +466,7 @@
 		},
 		"chienpao": {
 			"weight": 4,
+			"flags": {},
 			"sets": [{
 				"species": "Chien-Pao",
 				"weight": 30,
@@ -483,6 +498,7 @@
 		},
 		"deoxysattack": {
 			"weight": 4,
+			"flags": {},
 			"sets": [{
 				"species": "Deoxys-Attack",
 				"weight": 50,
@@ -506,6 +522,7 @@
 		},
 		"giratinaorigin": {
 			"weight": 6,
+			"flags": {},
 			"sets": [{
 				"species": "Giratina-Origin",
 				"weight": 50,
@@ -529,6 +546,7 @@
 		},
 		"glimmora": {
 			"weight": 3,
+			"flags": {},
 			"sets": [{
 				"species": "Glimmora",
 				"weight": 100,
@@ -542,6 +560,7 @@
 		},
 		"ironbundle": {
 			"weight": 3,
+			"flags": {},
 			"sets": [{
 				"species": "Iron Bundle",
 				"weight": 100,
@@ -556,6 +575,7 @@
 		},
 		"kingambit": {
 			"weight": 2,
+			"flags": {},
 			"sets": [{
 				"species": "Kingambit",
 				"weight": 70,
@@ -578,6 +598,7 @@
 		},
 		"kyuremblack": {
 			"weight": 3,
+			"flags": {},
 			"sets": [{
 				"species": "Kyurem-Black",
 				"weight": 100,
@@ -591,6 +612,7 @@
 		},
 		"fluttermane": {
 			"weight": 3,
+			"flags": {},
 			"sets": [{
 				"species": "Flutter Mane",
 				"weight": 50,
@@ -615,6 +637,7 @@
 		},
 		"skeledirge": {
 			"weight": 1,
+			"flags": {},
 			"sets": [{
 				"species": "Skeledirge",
 				"weight": 100,
@@ -629,6 +652,7 @@
 		},
 		"rayquaza": {
 			"weight": 1,
+			"flags": {},
 			"sets": [{
 				"species": "Rayquaza",
 				"weight": 50,
@@ -653,6 +677,7 @@
 	"OU": {
 		"kingambit": {
 			"weight": 10,
+			"flags": {},
 			"sets": [{
 				"species": "Kingambit",
 				"weight": 20,
@@ -693,6 +718,7 @@
 		},
 		"zamazenta": {
 			"weight": 10,
+			"flags": {},
 			"sets": [{
 				"species": "Zamazenta",
 				"weight": 40,
@@ -733,6 +759,7 @@
 		},
 		"dragapult": {
 			"weight": 8,
+			"flags": {},
 			"sets": [{
 				"species": "Dragapult",
 				"weight": 20,
@@ -773,6 +800,7 @@
 			}]
 		},
 		"gholdengo": {
+			"flags": {},
 			"weight": 9,
 			"sets": [{
 				"species": "Gholdengo",
@@ -857,6 +885,7 @@
 			}]
 		},
 		"greattusk": {
+			"flags": {},
 			"weight": 9,
 			"sets": [{
 				"species": "Great Tusk",
@@ -888,6 +917,7 @@
 			}]
 		},
 		"landorustherian": {
+			"flags": {},
 			"weight": 8,
 			"sets": [{
 				"species": "Landorus-Therian",
@@ -920,6 +950,7 @@
 			}]
 		},
 		"darkrai": {
+			"flags": {},
 			"weight": 8,
 			"sets": [{
 				"species": "Darkrai",
@@ -974,6 +1005,7 @@
 			}]
 		},
 		"dragonite": {
+			"flags": {},
 			"weight": 8,
 			"sets": [{
 				"species": "Dragonite",
@@ -1008,6 +1040,7 @@
 			}]
 		},
 		"gliscor": {
+			"flags": {},
 			"weight": 8,
 			"sets": [{
 				"species": "Gliscor",
@@ -1102,6 +1135,7 @@
 			}]
 		},
 		"ironmoth": {
+			"flags": {},
 			"weight": 8,
 			"sets": [{
 				"species": "Iron Moth",
@@ -1147,6 +1181,7 @@
 			}]
 		},
 		"ironvaliant": {
+			"flags": {},
 			"weight": 8,
 			"sets": [{
 				"species": "Iron Valiant",
@@ -1208,6 +1243,7 @@
 			}]
 		},
 		"kyurem": {
+			"flags": {},
 			"weight": 8,
 			"sets": [{
 				"species": "Kyurem",
@@ -1261,6 +1297,7 @@
 			}]
 		},
 		"ogerponwellspring": {
+			"flags": {},
 			"weight": 8,
 			"sets": [{
 				"species": "Ogerpon-Wellspring",
@@ -1301,6 +1338,7 @@
 			}]
 		},
 		"ragingbolt": {
+			"flags": {},
 			"weight": 8,
 			"sets": [{
 				"species": "Raging Bolt",
@@ -1325,6 +1363,7 @@
 			}]
 		},
 		"samurotthisui": {
+			"flags": {},
 			"weight": 7,
 			"sets": [{
 				"species": "Samurott-Hisui",
@@ -1356,6 +1395,7 @@
 			}]
 		},
 		"slowkinggalar": {
+			"flags": {},
 			"weight": 7,
 			"sets": [{
 				"species": "Slowking-Galar",
@@ -1380,6 +1420,7 @@
 			}]
 		},
 		"tinglu": {
+			"flags": {},
 			"weight": 8,
 			"sets": [{
 				"species": "Ting-Lu",
@@ -1393,6 +1434,7 @@
 			}]
 		},
 		"alomomola": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Alomomola",
@@ -1427,6 +1469,7 @@
 			}]
 		},
 		"cinderace": {
+			"flags": {},
 			"weight": 7,
 			"sets": [{
 				"species": "Cinderace",
@@ -1449,6 +1492,7 @@
 			}]
 		},
 		"deoxysspeed": {
+			"flags": {},
 			"weight": 4,
 			"sets": [{
 				"species": "Deoxys-Speed",
@@ -1491,6 +1535,7 @@
 			}]
 		},
 		"garganacl": {
+			"flags": {},
 			"weight": 7,
 			"sets": [{
 				"species": "Garganacl",
@@ -1513,6 +1558,7 @@
 			}]
 		},
 		"ironcrown": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Iron Crown",
@@ -1537,6 +1583,7 @@
 			}]
 		},
 		"moltres": {
+			"flags": {},
 			"weight": 7,
 			"sets": [{
 				"species": "Moltres",
@@ -1560,6 +1607,7 @@
 			}]
 		},
 		"roaringmoon": {
+			"flags": {},
 			"weight": 6,
 			"sets": [{
 				"species": "Roaring Moon",
@@ -1582,6 +1630,7 @@
 			}]
 		},
 		"enamorus": {
+			"flags": {},
 			"weight": 4,
 			"sets": [{
 				"species": "Enamorus",
@@ -1626,6 +1675,7 @@
 			}]
 		},
 		"hatterene": {
+			"flags": {},
 			"weight": 4,
 			"sets": [{
 				"species": "Hatterene",
@@ -1660,6 +1710,7 @@
 			}]
 		},
 		"ogerpon": {
+			"flags": {},
 			"weight": 3,
 			"sets": [{
 				"species": "Ogerpon",
@@ -1673,6 +1724,7 @@
 			}]
 		},
 		"primarina": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Primarina",
@@ -1716,6 +1768,7 @@
 			}]
 		},
 		"sinistcha": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Sinistcha",
@@ -1730,6 +1783,7 @@
 			}]
 		},
 		"tinkaton": {
+			"flags": {},
 			"weight": 4,
 			"sets": [{
 				"species": "Tinkaton",
@@ -1743,6 +1797,7 @@
 			}]
 		},
 		"weavile": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Weavile",
@@ -1756,6 +1811,7 @@
 			}]
 		},
 		"zapdos": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Zapdos",
@@ -1779,6 +1835,7 @@
 			}]
 		},
 		"clefable": {
+			"flags": {},
 			"weight": 3,
 			"sets": [{
 				"species": "Clefable",
@@ -1811,6 +1868,7 @@
 			}]
 		},
 		"clodsire": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Clodsire",
@@ -1824,6 +1882,7 @@
 			}]
 		},
 		"corviknight": {
+			"flags": {},
 			"weight": 3,
 			"sets": [{
 				"species": "Corviknight",
@@ -1865,6 +1924,7 @@
 			}]
 		},
 		"dondozo": {
+			"flags": {},
 			"weight": 3,
 			"sets": [{
 				"species": "Dondozo",
@@ -1897,6 +1957,7 @@
 			}]
 		},
 		"hydrapple": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Hydrapple",
@@ -1911,6 +1972,7 @@
 			}]
 		},
 		"ogerponcornerstone": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Ogerpon-Cornerstone",
@@ -1924,6 +1986,7 @@
 			}]
 		},
 		"rillaboom": {
+			"flags": {},
 			"weight": 3,
 			"sets": [{
 				"species": "Rillaboom",
@@ -1955,37 +2018,43 @@
 			}]
 		},
 		"scizor": {
+			"flags": {},
 			"weight": 2,
-			"sets": [{
+			"sets": [
+			{
 				"species": "Scizor",
-				"weight": 20,
-				"item": ["Leftovers", "Heavy-Duty Boots", "Metal Coat"],
+				"weight": 70,
+				"item": ["Scizorite"],
 				"ability": ["Technician"],
-				"evs": {"hp": 120, "atk": 252, "spe": 136},
-				"nature": ["Adamant"],
-				"teraType": ["Steel", "Fire"],
-				"moves": [["Swords Dance"], ["Bullet Punch"], ["Close Combat"], ["Knock Off"]]
-			}, {
+				"evs": { "hp": 248, "def": 112, "spd": 128, "spe": 20 },
+				"nature": ["Impish"],
+				"teraType": ["Normal"],
+				"moves": [
+					["Swords Dance"],
+					["Bullet Punch"],
+					["Knock Off"],
+					["Roost"]
+				]
+			},
+			{
 				"species": "Scizor",
-				"weight": 40,
-				"item": ["Choice Band"],
+				"weight": 30,
+				"item": ["Scizorite"],
 				"ability": ["Technician"],
-				"evs": {"hp": 120, "atk": 252, "spe": 136},
+				"evs": { "atk": 252, "spd": 4, "spe": 252 },
 				"nature": ["Adamant"],
-				"teraType": ["Flying"],
-				"moves": [["U-turn"], ["Bullet Punch"], ["Dual Wingbeat"], ["Knock Off"]]
-			}, {
-				"species": "Scizor",
-				"weight": 40,
-				"item": ["Choice Band"],
-				"ability": ["Technician"],
-				"evs": {"hp": 120, "atk": 252, "spe": 136},
-				"nature": ["Adamant"],
-				"teraType": ["Steel"],
-				"moves": [["U-turn"], ["Bullet Punch"], ["Close Combat"], ["Knock Off"]]
-			}]
+				"teraType": ["Normal"],
+				"moves": [
+					["Swords Dance"],
+					["Bullet Punch"],
+					["Close Combat"],
+					["Knock Off"]
+				]
+			}
+		]
 		},
 		"skarmory": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Skarmory",
@@ -2009,6 +2078,7 @@
 			}]
 		},
 		"ursaluna": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Ursaluna",
@@ -2022,6 +2092,7 @@
 			}]
 		},
 		"weezinggalar": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Weezing-Galar",
@@ -2036,6 +2107,7 @@
 			}]
 		},
 		"greninjabond": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Greninja-Bond",
@@ -2050,6 +2122,7 @@
 			}]
 		},
 		"heatran": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Heatran",
@@ -2104,6 +2177,7 @@
 			}]
 		},
 		"hoopaunbound": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Hoopa-Unbound",
@@ -2117,6 +2191,7 @@
 			}]
 		},
 		"latios": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Latios",
@@ -2150,6 +2225,7 @@
 			}]
 		},
 		"lokix": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Lokix",
@@ -2163,30 +2239,28 @@
 			}]
 		},
 		"manaphy": {
+			"flags": {},
 			"weight": 1,
-			"sets": [{
+			"sets": [
+			{
 				"species": "Manaphy",
-				"weight": 50,
-				"item": ["Leftovers"],
+				"weight": 100,
+				"item": ["Manaphite"],
 				"ability": ["Hydration"],
-				"evs": {"spa": 252, "spd": 4, "spe": 252},
-				"ivs": {"atk": 0},
+				"evs": { "spa": 252, "spe": 252, "spd": 4 },
 				"nature": ["Timid"],
-				"teraType": ["Grass"],
-				"moves": [["Tail Glow"], ["Surf", "Scald"], ["Energy Ball"], ["Alluring Voice", "Ice Beam"]]
-			}, {
-				"species": "Manaphy",
-				"weight": 50,
-				"item": ["Leftovers"],
-				"ability": ["Hydration"],
-				"evs": {"spa": 252, "spd": 4, "spe": 252},
-				"ivs": {"atk": 0},
-				"nature": ["Timid"],
-				"teraType": ["Fairy"],
-				"moves": [["Tail Glow"], ["Surf", "Scald"], ["Alluring Voice"], ["Energy Ball", "Ice Beam"]]
-			}]
+				"teraType": ["Normal"],
+				"moves": [
+					["Surf", "Scald"],
+					["Tail Glow"],
+					["Substitute"],
+					["Alluring Voice", "Ice Beam"]
+				]
+			}
+		]
 		},
 		"meowscarada": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Meowscarada",
@@ -2200,6 +2274,7 @@
 			}]
 		},
 		"pecharunt": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Pecharunt",
@@ -2224,6 +2299,7 @@
 			}]
 		},
 		"serperior": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Serperior",
@@ -2238,6 +2314,7 @@
 			}]
 		},
    		"slitherwing": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Slither Wing",
@@ -2251,6 +2328,7 @@
 			}]
 		},
 		"tornadustherian": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Tornadus-Therian",
@@ -2264,6 +2342,7 @@
 			}]
 		},
 		"volcanion": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Volcanion",
@@ -2289,6 +2368,7 @@
 			}]
 		},
 		"okidogi": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Okidogi",
@@ -2311,6 +2391,7 @@
 			}]
 		},
 		"toxapex": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Toxapex",
@@ -2335,33 +2416,1227 @@
 			}]
 		},
 		"keldeo": {
-			"weight": 1,
+			"flags": {},
+			"weight": 3,
 			"sets": [{
 				"species": "Keldeo",
-				"weight": 100,
-				"item": ["Heavy-Duty Boots"],
+				"weight": 50,
+				"item": ["Keldeonite"],
 				"ability": ["Justified"],
 				"evs": {"def": 4, "spa": 252, "spe": 252},
+				"ivs": {"atk": 0},
 				"nature": ["Timid"],
-				"teraType": ["Water"],
-				"moves": [["Aura Sphere"], ["Surf"], ["Flip Turn"], ["Vacuum Wave"]]
+				"teraType": ["Steel"],
+				"moves": [["Secret Sword"], ["Surf"], ["Calm Mind"], ["Substitute", "Taunt"]]
+			},
+			{
+				"species": "Keldeo",
+				"weight": 50,
+				"item": ["Keldeonite"],
+				"ability": ["Justified"],
+				"evs": {"def": 4, "spa": 252, "spe": 252},
+				"ivs": {"atk": 0},
+				"nature": ["Timid"],
+				"teraType": ["Steel"],
+				"moves": [["Secret Sword"], ["Surf"], ["U-turn"], ["Vacuum Wave"]]
 			}]
 		},
 		"heatrandelta": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Heatran-Delta",
 				"weight": 100,
 				"item": ["Flame Orb"],
-				"ability": "Steamforged",
+				"ability": ["Steamforged"],
 				"evs": { "hp": 252, "def": 252, "spd": 4 },
 				"nature": ["Bold"],
-				"moves": [["Scald", "Earth Power", "Stealth Rock", "Pressurize"]]
+				"teraType": ["Normal"],
+				"moves": [["Scald"], ["Earth Power"], ["Stealth Rock"], ["Pressurize"]]
 			}]
-		}
+		},
+    	"slaughtermaus": {
+			"flags": { "megaOnly": 1 },
+      		"weight": 1,
+      		"sets": [
+      		  {
+      		    "species": "Slaughtermaus",
+      		    "weight": 60,
+      		    "item": ["Slaughtermausite"],
+      		    "ability": ["Vorpal"],
+      		    "evs": { "atk": 252, "spe": 252, "spd": 4 },
+      		    "nature": ["Jolly"],
+				"teraType": ["Normal"],
+      		    "moves": [["Barbaric Incision"], ["Cross Poison"], ["Swords Dance"], ["Seed Bomb", "Temper Flare"]]
+      		  },
+			  {
+				"species": "Slaughtermaus",
+				"weight": 40,
+				"item": ["Flame Orb"],
+				"ability": ["Vorpal"],
+				"evs": { "atk": 252, "spe": 252, "def": 4 },
+				"nature": ["Jolly"],
+				"teraType": ["Normal"],
+				"moves": [
+					["Barbaric Incision"],
+					["Gunk Shot"],
+					["Low Kick", "Seed Bomb"],
+					["Swords Dance"]
+				]
+			}
+      		]
+		},
+		"necromauser": {
+    		  "weight": 1,
+			  "flags": {"megaOnly": 1 },
+    		  "sets": [
+    		    {
+    		      "species": "Necromauser",
+    		      "weight": 100,
+    		      "item": ["Necromausite"],
+    		      "ability": ["Unrelenting Stampede"],
+    		      "evs": { "spa": 252, "def": 196, "spd": 60 },
+    		      "nature": ["Quiet"],
+    		      "moves": [["Low Kick"], ["Putrid Grasp"], ["Shadow Sneak"], ["Shadow Ball"]],
+				  "teraType": ["Normal"]
+    		    }
+    		]
+		},
+			"hydrappleultra": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Hydrapple-Ultra",
+						"weight": 100,
+						"item": ["Assault Vest"],
+						"ability": ["Regenerator"],
+						"evs": { "spa": 252, "hp": 252, "def": 4 },
+						"nature": ["Modest"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Sludge Bomb"],
+							["Fickle Beam"],
+							["Earth Power"],
+							["Giga Drain"]
+						]
+					}
+				]
+			},
+			"marshadowdelta": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Marshadow-Delta",
+						"weight": 100,
+						"item": ["Assault Vest"],
+						"ability": ["Regenerator"],
+						"evs": { "atk": 252, "spe": 252, "def": 4 },
+						"nature": ["Adamant"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Spectral Thief"],
+							["Flare Blitz"],
+							["Shadow Sneak"],
+							["Close Combat"]
+						]
+					},
+					{
+						"species": "Marshadow-Delta",
+						"weight": 100,
+						"item": ["Assault Vest"],
+						"ability": ["Regenerator"],
+						"evs": { "atk": 252, "hp": 252, "def": 4 },
+						"nature": ["Adamant"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Spectral Thief"],
+							["Flare Blitz"],
+							["Shadow Sneak"],
+							["Close Combat"]
+						]
+					}
+				]
+			},
+			"tangledtime": {
+				"flags": {},
+				"weight": 100,
+				"sets": [
+					{
+						"species": "Tangled Time",
+						"weight": 1,
+						"item": ["Choice Specs"],
+						"ability": ["Chronocatalyst"],
+						"evs": { "spa": 252, "spe": 252, "spd": 4 },
+						"nature": ["Timid"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Psyshock"],
+							["Flamethrower"],
+							["Draco Meteor"],
+							["Earth Power"]
+						]
+					},
+					{
+						"species": "Tangled Time",
+						"weight": 99,
+						"item": ["Tangledtimium Z"],
+						"ability": ["Chronocatalyst"],
+						"evs": { "spa": 252, "spe": 252, "spd": 4 },
+						"nature": ["Timid"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Psyshock"],
+							["Flamethrower"],
+							["Timeless Torrent"],
+							["Calm Mind"]
+						]
+					}
+				]
+			},
+			"tinkatongamma": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Tinkaton-Gamma",
+						"weight": 100,
+						"item": ["Heavy-Duty Boots"],
+						"ability": ["Parasol Prayer"],
+						"evs": { "hp": 252, "spd": 252, "def": 4 },
+						"nature": ["Calm"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Updraft"],
+							["Moonlight"],
+							["Defog"],
+							["Moonblast"]
+						]
+					}
+				]
+			},
+			"sneasler": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Sneasler",
+						"weight": 30,
+						"item": ["Air Balloon"],
+						"ability": ["Unburden"],
+						"evs": { "atk": 252, "spe": 252, "def": 4 },
+						"nature": ["Adamant"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Poison Jab"],
+							["Close Combat"],
+							["Throat Chop"],
+							["Swords Dance"]
+						]
+					},
+					{
+						"species": "Sneasler",
+						"weight": 70,
+						"item": ["Heavy-Duty Boots"],
+						"ability": ["Poison Touch"],
+						"evs": { "atk": 252, "spe": 252, "def": 4 },
+						"nature": ["Jolly"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Poison Jab"],
+							["Close Combat"],
+							["Fake Out"],
+							["U-turn"]
+						]
+					}
+				]
+			},
+			"solgaleo": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Solgaleo",
+						"weight": 30,
+						"item": ["Choice Band"],
+						"ability": ["Full Metal Body"],
+						"evs": { "atk": 252, "spe": 252, "def": 4 },
+						"nature": ["Jolly"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Sunsteel Strike"],
+							["Earthquake"],
+							["Close Combat"],
+							["Psychic Fangs"]
+						]
+					},
+					{
+						"species": "Solgaleo",
+						"weight": 30,
+						"item": ["Weakness Policy"],
+						"ability": ["Full Metal Body"],
+						"evs": { "atk": 252, "hp": 36, "spe": 220 },
+						"nature": ["Adamant"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Sunsteel Strike"],
+							["Agility"],
+							["Close Combat"],
+							["Psychic Fangs"]
+						]
+					},
+					{
+						"species": "Solgaleo",
+						"weight": 40,
+						"item": ["Leftovers"],
+						"ability": ["Full Metal Body"],
+						"evs": { "spd": 252, "hp": 252, "def": 4 },
+						"nature": ["Sassy"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Sunsteel Strike"],
+							["Teleport"],
+							["Future Sight"],
+							["Morning Sun"]
+						]
+					}
+				]
+			},
+			"terapagos": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Terapagos",
+						"weight": 100,
+						"item": ["Heavy-Duty Boots"],
+						"ability": ["Tera Shift"],
+						"evs": { "spa": 252, "spd": 4, "spe": 252 },
+						"nature": ["Timid"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Tera Starstorm"],
+							["Ice Beam"],
+							["Flamethrower"],
+							["Rapid Spin"]
+						]
+					}
+				]
+			},
+			"medicham": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Medicham",
+						"weight": 100,
+						"item": ["Medichamite"],
+						"ability": ["Pure Power"],
+						"evs": { "atk": 252, "def": 4, "spe": 252 },
+						"nature": ["Jolly"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Fake Out"],
+							["Close Combat"],
+							["Zen Headbutt"],
+							["Ice Punch"]
+						]
+					}
+				]
+			},
+			"latiasdelta": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Latias-Delta",
+						"weight": 100,
+						"item": ["Heavy-Duty Boots"],
+						"ability": ["Pressure"],
+						"evs": { "hp": 248, "def": 252, "spd": 8 },
+						"nature": ["Bold"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Recover"],
+							["Moonblast"],
+							["Defog"],
+							["Earthquake"]
+						]
+					}
+				]
+			},
+			"zapeon": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Zapeon",
+						"weight": 100,
+						"item": ["Choice Band"],
+						"ability": ["Volt Absorb"],
+						"evs": { "atk": 252, "spe": 252, "spd": 4 },
+						"nature": ["Jolly"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Close Combat"],
+							["Amber Assault"],
+							["U-turn"],
+							["Zen Headbutt"]
+						]
+					}
+				]
+			},
+			"infernapedelta": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Infernape-Delta",
+						"weight": 50,
+						"item": ["Delta Infernapeite"],
+						"ability": ["Surge"],
+						"evs": { "atk": 252, "spe": 252, "def": 4 },
+						"nature": ["Naive"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Swords Dance"],
+							["Hidden Power Ice"],
+							["Shocking Blow"],
+							["Close Combat"]
+						]
+					},
+					{
+						"species": "Infernape-Delta",
+						"weight": 50,
+						"item": ["Delta Infernapeite"],
+						"ability": ["Surge"],
+						"evs": { "atk": 252, "spe": 252, "def": 4 },
+						"nature": ["Jolly"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Swords Dance"],
+							["Knock Off"],
+							["Shocking Blow"],
+							["Close Combat"]
+						]
+					}
+				]
+			},
+			"meowscaradadelta": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Meowscarada-Delta",
+						"weight": 100,
+						"item": ["Choice Specs"],
+						"ability": ["Purranormal"],
+						"evs": { "spa": 252, "spe": 252, "def": 4 },
+						"nature": ["Timid"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Shadow Ball"],
+							["Moonblast"],
+							["Mystical Fire"],
+							["U-turn"]
+						]
+					}
+				]
+			},
+			"chesnaught": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Chesnaught",
+						"weight": 50,
+						"item": ["Chesnaughtite"],
+						"ability": ["Bulletproof"],
+						"evs": { "hp": 252, "def": 252, "spd": 4 },
+						"nature": ["Impish"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Spikes"],
+							["Body Press"],
+							["Knock Off"],
+							["Synthesis"]
+						]
+					},
+					{
+						"species": "Chesnaught",
+						"weight": 50,
+						"item": ["Chesnaughtite"],
+						"ability": ["Bulletproof"],
+						"evs": { "hp": 252, "def": 252, "spd": 4 },
+						"nature": ["Impish"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Iron Defense"],
+							["Body Press"],
+							["Knock Off"],
+							["Synthesis"]
+						]
+					}
+				]
+			},
+			"lopunnydelta": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Lopunny-Delta",
+						"weight": 70,
+						"item": ["Delta Lopunnite"],
+						"ability": ["Fatalize"],
+						"evs": { "atk": 252, "spe": 252, "spd": 4 },
+						"nature": ["Adamant"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Fake Out"],
+							["Extreme Speed"],
+							["Close Combat"],
+							["Cold Departure"]
+						]
+					},
+					{
+						"species": "Lopunny-Delta",
+						"weight": 30,
+						"item": ["Delta Lopunnite"],
+						"ability": ["Fatalize"],
+						"evs": { "spa": 252, "spe": 252, "spd": 4 },
+						"nature": ["Timid"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Nasty Plot"],
+							["Hyper Voice"],
+							["Aura Sphere"],
+							["Ice Beam"]
+						]
+					}
+				]
+			},
+			"gholdaton": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Gholdaton",
+						"weight": 100,
+						"item": ["Heavy-Duty Boots"],
+						"ability": ["Own Tempo"],
+						"evs": { "hp": 252, "spd": 252, "atk": 4 },
+						"nature": ["Careful"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Stealth Rock"],
+							["Recover"],
+							["Thunder Wave"],
+							["Gigaton Hammer"]
+						]
+					}
+				]
+			},
+			"flygonultra": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Flygon-Ultra",
+						"weight": 60,
+						"item": ["Leftovers"],
+						"ability": ["Thickfat"],
+						"evs": { "def": 252, "hp": 252, "spd": 4 },
+						"nature": ["Impish"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Steel Skewer"],
+							["Roost"],
+							["Dragon Tail"],
+							["Spikes"]
+						]
+					},
+					{
+						"species": "Flygon-Ultra",
+						"weight": 40,
+						"item": ["Leftovers"],
+						"ability": ["Thickfat"],
+						"evs": { "spd": 252, "hp": 248, "def": 8 },
+						"nature": ["Careful"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Steel Skewer"],
+							["Roost"],
+							["Dragon Tail"],
+							["Toxic"]
+						]
+					}
+				]
+			},
+			"hatteon": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Hatteon",
+						"weight": 100,
+						"item": ["Choice Specs"],
+						"ability": ["Dawnbreak"],
+						"evs": { "spa": 252, "spe": 252, "spd": 4 },
+						"nature": ["Timid"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Alluring Voice"],
+							["Shadow Ball"],
+							["Psyshock"],
+							["Psychic"]
+						]
+					}
+				]
+			},
+			"haxorusdelta": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Haxorus-Delta",
+						"weight": 100,
+						"item": ["Delta Haxorusite"],
+						"ability": ["Flame Body"],
+						"evs": { "atk": 252, "spe": 252, "spd": 4 },
+						"nature": ["Adamant"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Tomahawk Volley"],
+							["Scale Shot"],
+							["Dragon Dance"],
+							["Close Combat"]
+						]
+					}
+				]
+			},
+			"staraptordelta": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Staraptor-Delta",
+						"weight": 40,
+						"item": ["Rocky Helmet"],
+						"ability": ["Welkin Torch"],
+						"evs": { "hp": 252, "def": 252, "atk": 4 },
+						"nature": ["Impish"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Sacred Fire"],
+							["Roost"],
+							["Defog"],
+							["U-turn"]
+						]
+					},
+					{
+						"species": "Staraptor-Delta",
+						"weight": 60,
+						"item": ["Life Orb"],
+						"ability": ["Welkin Torch"],
+						"evs": { "atk": 252, "spe": 252, "def": 4 },
+						"nature": ["Jolly"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Flare Blitz"],
+							["Brave Bird"],
+							["Swords Dance"],
+							["Close Combat"]
+						]
+					}
+				]
+			},
+			"azelfdelta": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Azelf-Delta",
+						"weight": 50,
+						"item": ["Black Sludge"],
+						"ability": ["Levitate"],
+						"evs": { "spe": 252, "spa": 252, "spd": 4 },
+						"nature": ["Timid"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Moonblast"],
+							["Sludge Wave"],
+							["Flamethrower"],
+							["Nasty Plot"]
+						]
+					},
+					{
+						"species": "Azelf-Delta",
+						"weight": 50,
+						"item": ["Choice Specs"],
+						"ability": ["Levitate"],
+						"evs": { "spe": 252, "spa": 252, "def": 4 },
+						"nature": ["Timid"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Moonblast"],
+							["Sludge Wave"],
+							["Flamethrower"],
+							["U-turn"]
+						]
+					}
+				]
+			},
+			"tapukehe": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Tapu Kehe",
+						"weight": 100,
+						"item": ["Black Sludge"],
+						"ability": ["Corrosive Surge"],
+						"evs": { "hp": 252, "def": 252, "spd": 4 },
+						"nature": ["Bold"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Recover"],
+							["Flip Turn"],
+							["Mortal Spin"],
+							["Moonblast"]
+						]
+					}
+				]
+			},
+			"greninjaomega": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Greninja-Omega",
+						"weight": 100,
+						"item": ["Choice Band"],
+						"ability": ["Battle Bond"],
+						"evs": { "atk": 252, "spe": 252, "spd": 4 },
+						"nature": ["Jolly"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Ice Mace"],
+							["Superpower"],
+							["U-turn"],
+							["Ice Shard"]
+						]
+					}
+				]
+			},
+			"radiantmoon": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Radiant Moon",
+						"weight": 30,
+						"item": ["Leftovers"],
+						"ability": ["Brilliance"],
+						"evs": { "hp": 252, "def": 252, "spa": 4 },
+						"nature": ["Bold"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Moongeist Beam"],
+							["Flamethrower"],
+							["Calm Mind"],
+							["Moonlight"]
+						]
+					},
+					{
+						"species": "Radiant Moon",
+						"weight": 70,
+						"item": ["Choice Specs"],
+						"ability": ["Brilliance"],
+						"evs": { "spa": 252, "spe": 252, "spd": 4 },
+						"nature": ["Timid"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Moongeist Beam"],
+							["Flamethrower"],
+							["U-turn", "Trick"],
+							["Draco Meteor"]
+						]
+					}
+				]
+			},
+			"flygon": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Flygon",
+						"weight": 100,
+						"item": ["Flygonite"],
+						"ability": ["Levitate"],
+						"evs": { "spa": 252, "spe": 252, "spd": 4 },
+						"nature": ["Timid"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Flamethrower"],
+							["Earth Power"],
+							["Boomburst", "U-turn"],
+							["Draco Meteor"]
+						]
+					}
+				]
+			},
+			"uxiedelta": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Uxie-Delta",
+						"weight": 50,
+						"item": ["Black Sludge"],
+						"ability": ["Levitate"],
+						"evs": { "hp": 252, "spd": 252, "def": 4 },
+						"nature": ["Calm"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Slack Off"],
+							["Foul Play"],
+							["Toxic", "Stealth Rock"],
+							["Sludge Bomb"]
+						]
+					},
+					{
+						"species": "Uxie-Delta",
+						"weight": 50,
+						"item": ["Black Sludge"],
+						"ability": ["Levitate"],
+						"evs": { "hp": 252, "def": 252, "spd": 4 },
+						"nature": ["Impish"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Slack Off"],
+							["Foul Play"],
+							["Sludge Bomb"],
+							["Stealth Rock", "Toxic"]
+						]
+					}
+				]
+			},
+			"spiritombunbound": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Spiritomb-Unbound",
+						"weight": 100,
+						"item": ["Assault Vest"],
+						"ability": ["Spectre Onslaught"],
+						"evs": { "atk": 252, "hp": 244, "spe": 12 },
+						"nature": ["Adamant"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Poltergeist"],
+							["Sucker Punch", "Shadow Sneak"],
+							["Pursuit"],
+							["Lash Out"]
+						]
+					}
+				]
+			},
+			"ironpilot": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Iron Pilot-Thrash",
+						"weight": 40,
+						"item": ["Thrash Drive"],
+						"ability": ["Quark Drive"],
+						"evs": { "spa": 252, "spe": 252, "def": 4 },
+						"nature": ["Modest"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Techno Beam"],
+							["Thunderbolt"],
+							["Flash Cannon"],
+							["Lift Off"]
+						]
+					},
+					{
+						"species": "Iron Pilot",
+						"weight": 30,
+						"item": ["Life Orb"],
+						"ability": ["Quark Drive"],
+						"evs": { "atk": 252, "spe": 252, "spd": 4 },
+						"nature": ["Adamant"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Iron Head"],
+							["Supercell Slam"],
+							["Close Combat"],
+							["Shift Gear"]
+						]
+					},
+					{
+						"species": "Iron Pilot",
+						"weight": 30,
+						"item": ["Choice Specs"],
+						"ability": ["Quark Drive"],
+						"evs": { "spa": 252, "spe": 252, "spd": 4 },
+						"nature": ["Timid"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Flash Cannon"],
+							["Thunderbolt"],
+							["Flamethrower"],
+							["U-turn"]
+						]
+					}
+				]
+			},
+			"armaledge": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Armaledge",
+						"weight": 20,
+						"item": ["Focus Sash"],
+						"ability": ["Weak Armor"],
+						"evs": { "atk": 252, "spe": 252, "spd": 4 },
+						"nature": ["Adamant"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Poltergeist"],
+							["Bitter Blade"],
+							["Close Combat"],
+							["Swords Dance"]
+						]
+					},
+					{
+						"species": "Armaledge",
+						"weight": 40,
+						"item": ["Choice Band"],
+						"ability": ["Final Verdict"],
+						"evs": { "atk": 252, "spe": 252, "spd": 4 },
+						"nature": ["Jolly"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Poltergeist"],
+							["Bitter Blade"],
+							["Close Combat"],
+							["Flare Blitz"]
+						]
+					},
+					{
+						"species": "Armaledge",
+						"weight": 40,
+						"item": ["Choice Specs"],
+						"ability": ["Final Verdict"],
+						"evs": { "spa": 252, "spe": 252, "spd": 4 },
+						"nature": ["Timid"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Armor Cannon"],
+							["Psychic", "Psyshock"],
+							["Aura Sphere"],
+							["Energy Ball"]
+						]
+					}
+				]
+			},
+			"gholdengodelta": {
+				"flags": {},
+				"weight": 100,
+				"sets": [
+					{
+						"species": "Gholdengo-Delta",
+						"weight": 99,
+						"item": ["Deltagholdium Z"],
+						"ability": ["Magic Bounce"],
+						"evs": { "def": 164, "hp": 252, "spe": 92 },
+						"nature": ["Bold"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Recover"],
+							["Nasty Plot"],
+							["Pearly Parade"],
+							["Energy Ball"]
+						]
+					},
+					{
+						"species": "Gholdengo-Delta",
+						"weight": 1,
+						"item": ["Choice Scarf"],
+						"ability": ["Magic Bounce"],
+						"evs": { "spa": 252, "spe": 252, "spd": 4 },
+						"nature": ["Timid"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Trick"],
+							["Pearly Parade"],
+							["Shadow Ball"],
+							["Focus Blast"]
+						]
+					}
+				]
+			},
+			"diancette": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Diancette",
+						"weight": 50,
+						"item": ["Life Orb"],
+						"ability": ["Diamond Grove"],
+						"evs": { "spa": 252, "spe": 252, "atk": 4 },
+						"nature": ["Hasty"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Light of Ruin"],
+							["Earth Power"],
+							["Diamond Storm"],
+							["Energy Ball"]
+						]
+					},
+					{
+						"species": "Diancette",
+						"weight": 50,
+						"item": ["Power Herb"],
+						"ability": ["Diamond Grove"],
+						"evs": { "spa": 252, "spe": 252, "spd": 4 },
+						"nature": ["Timid"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Light of Ruin"],
+							["Earth Power"],
+							["Meteor Beam"],
+							["Energy Ball"]
+						]
+					}
+				]
+			},
+			"liesler": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Liesler",
+						"weight": 80,
+						"item": ["Heavy-Duty Boots"],
+						"ability": ["Poison Touch"],
+						"evs": { "atk": 252, "spe": 252, "spd": 4 },
+						"nature": ["Jolly"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Gunk Shot"],
+							["Knock Off"],
+							["Close Combat"],
+							["U-turn"]
+						]
+					},
+					{
+						"species": "Liesler",
+						"weight": 20,
+						"item": ["Life Orb"],
+						"ability": ["Limber"],
+						"evs": { "atk": 252, "spe": 252, "spd": 4 },
+						"nature": ["Jolly"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Gunk Shot"],
+							["Knock Off"],
+							["Close Combat"],
+							["Swords Dance"]
+						]
+					}
+				]
+			},
+			"draculedge": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Draculedge",
+						"weight": 50,
+						"item": ["Life Orb"],
+						"ability": ["Conviction"],
+						"evs": { "spe": 252, "atk": 252, "spd": 4 },
+						"nature": ["Jolly"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Twin Cross"],
+							["Close Combat"],
+							["Bitter Blade"],
+							["Swords Dance"]
+						]
+					},
+					{
+						"species": "Draculedge",
+						"weight": 50,
+						"item": ["Choice Band"],
+						"ability": ["Conviction"],
+						"evs": { "spe": 252, "atk": 252, "spd": 4 },
+						"nature": ["Jolly"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Twin Cross"],
+							["Close Combat"],
+							["Bitter Blade"],
+							["Wild Charge"]
+						]
+					}
+				]
+			},
+			"klinklangdelta": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Klinklang-Delta",
+						"weight": 40,
+						"item": ["Choice Scarf"],
+						"ability": ["Chronostasis"],
+						"evs": { "spa": 252, "spe": 252, "spd": 4 },
+						"nature": ["Timid"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Freeze-Dry"],
+							["Trick"],
+							["Flash Cannon"],
+							["Ice Beam"]
+						]
+					},
+					{
+						"species": "Klinklang-Delta",
+						"weight": 40,
+						"item": ["Choice Specs"],
+						"ability": ["Chronostasis"],
+						"evs": { "spa": 252, "spe": 252, "spd": 4 },
+						"nature": ["Timid"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Freeze-Dry"],
+							["Trick"],
+							["Flash Cannon"],
+							["Ice Beam"]
+						]
+					},
+					{
+						"species": "Klinklang-Delta",
+						"weight": 20,
+						"item": ["Deltaklinklangium Z"],
+						"ability": ["Chronostasis"],
+						"evs": { "spa": 252, "spe": 252, "def": 4 },
+						"nature": ["Modest"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Freeze-Dry"],
+							["Ice Beam"],
+							["Flash Cannon"],
+							["Flux Emission"]
+						]
+					}
+				]
+			},
+			"gardevoiratom": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Gardevoir-ATOM",
+						"weight": 100,
+						"item": ["Atom Gardevoirite"],
+						"ability": ["Justified"],
+						"evs": { "atk": 252, "spe": 128, "hp": 128 },
+						"nature": ["Adamant"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Divine Parry"],
+							["Play Rough"],
+							["Sacred Sword"],
+							["Swords Dance"]
+						]
+					}
+				]
+			},
+			"terapagosatom": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Terapagos-ATOM",
+						"weight": 100,
+						"item": ["Heavy-Duty Boots"],
+						"ability": ["Cosmo Shift"],
+						"evs": { "spa": 252, "spe": 252, "spd": 4 },
+						"nature": ["Timid"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Zenith Storm"],
+							["Earth Power"],
+							["Ice Beam"],
+							["Rapid Spin"]
+						]
+					},
+					{
+						"species": "Terapagos-ATOM",
+						"weight": 100,
+						"item": ["Leftovers", "Atom Terapagosium Z"],
+						"ability": ["Cosmo Shift"],
+						"evs": { "spa": 252, "spe": 252, "spd": 4 },
+						"nature": ["Timid"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Zenith Storm"],
+							["Earth Power"],
+							["Calm Mind"],
+							["Rapid Spin"]
+						]
+					}
+				]
+			},
+			"volcarona": {
+				"flags": {},
+				"weight": 1,
+				"sets": [
+					{
+						"species": "Volcarona",
+						"weight": 60,
+						"item": ["Heavy-Duty Boots"],
+						"ability": ["Flame Body"],
+						"evs": { "spa": 252, "spe": 252, "spd": 4 },
+						"nature": ["Timid"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Flamethrower", "Fiery Dance"],
+							["Hidden Power Ground"],
+							["Quiver Dance"],
+							["Bug Buzz", "Giga Drain"]
+						]
+					},
+					{
+						"species": "Volcarona",
+						"weight": 40,
+						"item": ["Heavy-Duty Boots"],
+						"ability": ["Flame Body"],
+						"evs": { "hp": 248, "spe": 60, "def": 200 },
+						"nature": ["Timid"],
+						"teraType": ["Normal"],
+						"moves": [
+							["Flamethrower", "Fiery Dance"],
+							["Hidden Power Ground", "Bug Buzz"],
+							["Quiver Dance"],
+							["Roost"]
+						]
+					}
+				]
+			}
 	}, 
 	"UU": {
 		"tornadustherian": {
+			"flags": {},
 			"weight": 10,
 			"sets": [{
 				"species": "Tornadus-Therian",
@@ -2385,6 +3660,7 @@
 			}]
 		},
 		"excadrill": {
+			"flags": {},
 			"weight": 10,
 			"sets": [{
 				"species": "Excadrill",
@@ -2407,6 +3683,7 @@
 			}]
 		},
 		"cobalion": {
+			"flags": {},
 			"weight": 8,
 			"sets": [{
 				"species": "Cobalion",
@@ -2430,6 +3707,7 @@
 			}]
 		},
 		"lokix": {
+			"flags": {},
 			"weight": 8,
 			"sets": [{
 				"species": "Lokix",
@@ -2452,6 +3730,7 @@
 			}]
 		},
 		"greninja": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Greninja",
@@ -2491,6 +3770,7 @@
 			}]
 		},
 		"heatran": {
+			"flags": {},
 			"weight": 7,
 			"sets": [{
 				"species": "Heatran",
@@ -2515,6 +3795,7 @@
 			}]
 		},
 		"hydrapple": {
+			"flags": {},
 			"weight": 7,
 			"sets": [{
 				"species": "Hydrapple",
@@ -2539,6 +3820,7 @@
 			}]
 		},
 		"rotomwash": {
+			"flags": {},
 			"weight": 7,
 			"sets": [{
 				"species": "Rotom-Wash",
@@ -2563,6 +3845,7 @@
 			}]
 		},
 		"scizor": {
+			"flags": {},
 			"weight": 7,
 			"sets": [{
 				"species": "Scizor",
@@ -2594,6 +3877,7 @@
 			}]
 		},
 		"latios": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Latios",
@@ -2655,6 +3939,7 @@
 			}]
 		},
 		"ogerponcornerstone": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Ogerpon-Cornerstone",
@@ -2677,6 +3962,7 @@
 			}]
 		},
 		"deoxysspeed": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Deoxys-Speed",
@@ -2690,6 +3976,7 @@
 			}]
 		},
 		"quaquaval": {
+			"flags": {},
 			"weight": 7,
 			"sets": [{
 				"species": "Quaquaval",
@@ -2703,6 +3990,7 @@
 			}]
 		},
 		"skeledirge": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Skeledirge",
@@ -2717,6 +4005,7 @@
 			}]
 		},
 		"slowking": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Slowking",
@@ -2741,6 +4030,7 @@
 			}]
 		},
 		"thundurustherian": {
+			"flags": {},
 			"weight": 7,
 			"sets": [{
 				"species": "Thundurus-Therian",
@@ -2755,6 +4045,7 @@
 			}]
 		},
 		"tyranitar": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Tyranitar",
@@ -2777,6 +4068,7 @@
 			}]
 		},
 		"zarude": {
+			"flags": {},
 			"weight": 7,
 			"sets": [{
 				"species": "Zarude",
@@ -2808,6 +4100,7 @@
 			}]
 		},
 		"clodsire": {
+			"flags": {},
 			"weight": 3,
 			"sets": [{
 				"species": "Clodsire",
@@ -2821,6 +4114,7 @@
 			}]
 		},
 		"gastrodon": {
+			"flags": {},
 			"weight": 3,
 			"sets": [{
 				"species": "Gastrodon",
@@ -2835,6 +4129,7 @@
 			}]
 		},
 		"ogerpon": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Ogerpon",
@@ -2849,6 +4144,7 @@
 			}]
 		},
 		"skarmory": {
+			"flags": {},
 			"weight": 4,
 			"sets": [{
 				"species": "Skarmory",
@@ -2872,6 +4168,7 @@
 			}]
 		},
 		"enamorustherian": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Enamorus-Therian",
@@ -2896,6 +4193,7 @@
 			}]
 		},
 		"keldeo": {
+			"flags": {},
 			"weight": 3,
 			"sets": [{
 				"species": "Keldeo",
@@ -2919,6 +4217,7 @@
 			}]
 		},
 		"manaphy": {
+			"flags": {},
 			"weight": 3,
 			"sets": [{
 				"species": "Manaphy",
@@ -2933,6 +4232,7 @@
 			}]
 		},
 		"revavroom": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Revavroom",
@@ -2946,6 +4246,7 @@
 			}]
 		},
 		"sandyshocks": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Sandy Shocks",
@@ -2961,6 +4262,7 @@
 			}]
 		},
 		"serperior": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Serperior",
@@ -2976,6 +4278,7 @@
 			}]
 		},
 		"toxapex": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Toxapex",
@@ -2999,6 +4302,7 @@
 			}]
 		},
 		"fezandipiti": {
+			"flags": {},
 			"weight": 4,
 			"sets": [{
 				"species": "Fezandipiti",
@@ -3012,6 +4316,7 @@
 			}]
 		},
 		"mandibuzz": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Mandibuzz",
@@ -3035,6 +4340,7 @@
 			}]
 		},
 		"metagross": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Metagross",
@@ -3057,6 +4363,7 @@
 			}]
 		},
 		"salamence": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Salamence",
@@ -3089,6 +4396,7 @@
 			}]
 		},
 		"conkeldurr": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Conkeldurr",
@@ -3102,6 +4410,7 @@
 			}]
 		},
 		"slitherwing": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Slither Wing",
@@ -3115,6 +4424,7 @@
 			}]
 		},
 		"hydreigon": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Hydreigon",
@@ -3138,6 +4448,7 @@
 			}]
 		},
 		"zapdosgalar": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Zapdos-Galar",
@@ -3153,6 +4464,7 @@
 	},
 	"RU": {
 		"slowbro": {
+			"flags": {},
 			"weight": 10,
 			"sets": [{
 				"species": "Slowbro",
@@ -3177,6 +4489,7 @@
 			}]
 		},
 		"armarouge": {
+			"flags": {},
 			"weight": 9,
 			"sets": [{
 				"species": "Armarouge",
@@ -3201,6 +4514,7 @@
 			}]
 		},
 		"bisharp": {
+			"flags": {},
 			"weight": 9,
 			"sets": [{
 				"species": "Bisharp",
@@ -3214,6 +4528,7 @@
 			}]
 		},
 		"cyclizar": {
+			"flags": {},
 			"weight": 8,
 			"sets": [{
 				"species": "Cyclizar",
@@ -3245,6 +4560,7 @@
 			}]
 		},
 		"goodrahisui": {
+			"flags": {},
 			"weight": 7,
 			"sets": [{
 				"species": "Goodra-Hisui",
@@ -3277,6 +4593,7 @@
 			}]
 		},
 		"jirachi": {
+			"flags": {},
 			"weight": 9,
 			"sets": [{
 				"species": "Jirachi",
@@ -3319,6 +4636,7 @@
 			}]
 		},
 		"krookodile": {
+			"flags": {},
 			"weight": 9,
 			"sets": [{
 				"species": "Krookodile",
@@ -3368,6 +4686,7 @@
 			}]
 		},
 		"slitherwing": {
+			"flags": {},
 			"weight": 9,
 			"sets": [{
 				"species": "Slither Wing",
@@ -3381,6 +4700,7 @@
 			}]
 		},
 		"mamoswine": {
+			"flags": {},
 			"weight": 9,
 			"sets": [{
 				"species": "Mamoswine",
@@ -3403,6 +4723,7 @@
 			}]
 		},
 		"empoleon": {
+			"flags": {},
 			"weight": 7,
 			"sets": [{
 				"species": "Empoleon",
@@ -3445,6 +4766,7 @@
 			}]
 		},
 		"fezandipiti": {
+			"flags": {},
 			"weight": 7,
 			"sets": [{
 				"species": "Fezandipiti",
@@ -3468,6 +4790,7 @@
 			}]
 		},
 		"hippowdon": {
+			"flags": {},
 			"weight": 7,
 			"sets": [{
 				"species": "Hippowdon",
@@ -3490,6 +4813,7 @@
 			}]
 		},
 		"suicune": {
+			"flags": {},
 			"weight": 7,
 			"sets": [{
 				"species": "Suicune",
@@ -3504,6 +4828,7 @@
 			}]
 		},
 		"rhyperior": {
+			"flags": {},
 			"weight": 7,
 			"sets": [{
 				"species": "Rhyperior",
@@ -3517,6 +4842,7 @@
 			}]
 		},
 		"volcanion": {
+			"flags": {},
 			"weight": 8,
 			"sets": [{
 				"species": "Volcanion",
@@ -3541,6 +4867,7 @@
 			}]
 		},
 		"zapdosgalar": {
+			"flags": {},
 			"weight": 10,
 			"sets": [{
 				"species": "Zapdos-Galar",
@@ -3554,6 +4881,7 @@
 			}]
 		},
 		"basculegionf": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Basculegion-F",
@@ -3586,6 +4914,7 @@
 			}]
 		},
 		"flygon": {
+			"flags": {},
 			"weight": 4,
 			"sets": [{
 				"species": "Flygon",
@@ -3635,6 +4964,7 @@
 			}]
 		},
 		"gardevoir": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Gardevoir",
@@ -3649,6 +4979,7 @@
 			}]
 		},
 		"gengar": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Gengar",
@@ -3693,6 +5024,7 @@
 			}]
 		},
 		"magnezone": {
+			"flags": {},
 			"weight": 3,
 			"sets": [{
 				"species": "Magnezone",
@@ -3740,6 +5072,7 @@
 			}]
 		},
 		"maushold": {
+			"flags": {},
 			"weight": 3,
 			"sets": [{
 				"species": "Maushold",
@@ -3753,6 +5086,7 @@
 			}]
 		},
 		"mimikyu": {
+			"flags": {},
 			"weight": 3,
 			"sets": [{
 				"species": "Mimikyu",
@@ -3766,6 +5100,7 @@
 			}]
 		},
 		"noivern": {
+			"flags": {},
 			"weight": 7,
 			"sets": [{
 				"species": "Noivern",
@@ -3799,6 +5134,7 @@
 			}]
 		},
 		"registeel": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Registeel",
@@ -3812,6 +5148,7 @@
 			}]
 		},
 		"reuniclus": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Reuniclus",
@@ -3845,6 +5182,7 @@
 			}]
 		},
 		"salamence": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Salamence",
@@ -3877,6 +5215,7 @@
 			}]
 		},
 		"terrakion": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Terrakion",
@@ -3926,6 +5265,7 @@
 			}]
 		},
 		"umbreon": {
+			"flags": {},
 			"weight": 3,
 			"sets": [{
 				"species": "Umbreon",
@@ -3950,6 +5290,7 @@
 			}]
 		},
 		"weezinggalar": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Weezing-Galar",
@@ -3964,6 +5305,7 @@
 			}]
 		},
 		"amoonguss": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Amoonguss",
@@ -3978,6 +5320,7 @@
 			}]
 		},
 		"feraligatr": {
+			"flags": {},
 			"weight": 3,
 			"sets": [{
 				"species": "Feraligatr",
@@ -4000,6 +5343,7 @@
 			}]
 		},
 		"gligar": {
+			"flags": {},
 			"weight": 3,
 			"sets": [{
 				"species": "Gligar",
@@ -4013,6 +5357,7 @@
 			}]
 		},
 		"gyarados": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Gyarados",
@@ -4055,6 +5400,7 @@
 			}]
 		},
 		"mienshao": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Mienshao",
@@ -4077,6 +5423,7 @@
 			}]
 		},
 		"necrozma": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Necrozma",
@@ -4109,6 +5456,7 @@
 			}]
 		},
 		"ninetalesalola": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Ninetales-Alola",
@@ -4124,6 +5472,7 @@
 			}]
 		},
 		"slowbrogalar": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Slowbro-Galar",
@@ -4158,6 +5507,7 @@
 			}]
 		},
 		"talonflame": {
+			"flags": {},
 			"weight": 3,
 			"sets": [{
 				"species": "Talonflame",
@@ -4171,6 +5521,7 @@
 			}]
 		},
 		"vaporeon": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Vaporeon",
@@ -4194,6 +5545,7 @@
 			}]
 		},
 		"wochien": {
+			"flags": {},
 			"weight": 4,
 			"sets": [{
 				"species": "Wo-Chien",
@@ -4216,6 +5568,7 @@
 			}]
 		},
 		"chesnaught": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Chesnaught",
@@ -4229,6 +5582,7 @@
 			}]
 		},
 		"cresselia": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Cresselia",
@@ -4243,6 +5597,7 @@
 			}]
 		},
 		"entei": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Entei",
@@ -4256,6 +5611,7 @@
 			}]
 		},
 		"gastrodon": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Gastrodon",
@@ -4269,6 +5625,7 @@
 			}]
 		},
 		"kleavor": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Kleavor",
@@ -4282,6 +5639,7 @@
 			}]
 		},
 		"klefki": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Klefki",
@@ -4305,6 +5663,7 @@
 			}]
 		},
 		"lilliganthisui": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Lilligant-Hisui",
@@ -4328,6 +5687,7 @@
 			}]
 		},
 		"mukalola": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Muk-Alola",
@@ -4341,6 +5701,7 @@
 			}]
 		},
 		"oricoriopompom": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Oricorio-Pom-Pom",
@@ -4355,6 +5716,7 @@
 			}]
 		},
 		"raikou": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Raikou",
@@ -4389,6 +5751,7 @@
 			}]
 		},
 		"golurk": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Golurk",
@@ -4413,6 +5776,7 @@
 	},
 	"NU": {
 		"flygon": {
+			"flags": {},
 			"weight": 10,
 			"sets": [{
 				"species": "Flygon",
@@ -4471,6 +5835,7 @@
 			}]
 		},
 		"bronzong": {
+			"flags": {},
 			"weight": 9,
 			"sets": [{
 				"species": "Bronzong",
@@ -4514,6 +5879,7 @@
 			}]
 		},
 		"incineroar": {
+			"flags": {},
 			"weight": 9,
 			"sets": [{
 				"species": "Incineroar",
@@ -4554,6 +5920,7 @@
 			}]
 		},
 		"kilowattrel": {
+			"flags": {},
 			"weight": 8,
 			"sets": [{
 				"species": "Kilowattrel",
@@ -4577,6 +5944,7 @@
 			}]
 		},
 		"overqwil": {
+			"flags": {},
 			"weight": 8,
 			"sets": [{
 				"species": "Overqwil",
@@ -4608,6 +5976,7 @@
 			}]
 		},
 		"taurospaldeaaqua": {
+			"flags": {},
 			"weight": 8,
 			"sets": [{
 				"species": "Tauros-Paldea-Aqua",
@@ -4648,6 +6017,7 @@
 			}]
 		},
 		"toxicroak": {
+			"flags": {},
 			"weight": 8,
 			"sets": [{
 				"species": "Toxicroak",
@@ -4679,6 +6049,7 @@
 			}]
 		},
 		"basculegion": {
+			"flags": {},
 			"weight": 6,
 			"sets": [{
 				"species": "Basculegion",
@@ -4701,6 +6072,7 @@
 			}]
 		},
 		"breloom": {
+			"flags": {},
 			"weight": 7,
 			"sets": [{
 				"species": "Breloom",
@@ -4750,6 +6122,7 @@
 			}]
 		},
 		"mukalola": {
+			"flags": {},
 			"weight": 7,
 			"sets": [{
 				"species": "Muk-Alola",
@@ -4772,6 +6145,7 @@
 			}]
 		},
 		"munkidori": {
+			"flags": {},
 			"weight": 7,
 			"sets": [{
 				"species": "Munkidori",
@@ -4825,6 +6199,7 @@
 			}]
 		},
 		"vaporeon": {
+			"flags": {},
 			"weight": 7,
 			"sets": [{
 				"species": "Vaporeon",
@@ -4848,6 +6223,7 @@
 			}]
 		},
 		"vileplume": {
+			"flags": {},
 			"weight": 7,
 			"sets": [{
 				"species": "Vileplume",
@@ -4862,6 +6238,7 @@
 			}]
 		},
 		"ninetalesalola": {
+			"flags": {},
 			"weight": 6,
 			"sets": [{
 				"species": "Ninetales-Alola",
@@ -4886,6 +6263,7 @@
 			}]
 		},
 		"amoonguss": {
+			"flags": {},
 			"weight": 6,
 			"sets": [{
 				"species": "Amoonguss",
@@ -4908,6 +6286,7 @@
 			}]
 		},
 		"brambleghast": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Brambleghast",
@@ -4930,6 +6309,7 @@
 			}]
 		},
 		"chandelure": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Chandelure",
@@ -4974,6 +6354,7 @@
 			}]
 		},
 		"cinccino": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Cinccino",
@@ -4987,6 +6368,7 @@
 			}]
 		},
 		"diancie": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Diancie",
@@ -5019,6 +6401,7 @@
 			}]
 		},
 		"gligar": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Gligar",
@@ -5041,6 +6424,7 @@
 			}]
 		},
 		"inteleon": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Inteleon",
@@ -5054,6 +6438,7 @@
 			}]
 		},
 		"milotic": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Milotic",
@@ -5076,6 +6461,7 @@
 			}]
 		},
 		"porygonz": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Porygon-Z",
@@ -5191,6 +6577,7 @@
 			}]
 		},
 		"scyther": {
+			"flags": {},
 			"weight": 4,
 			"sets": [{
 				"species": "Scyther",
@@ -5222,6 +6609,7 @@
 			}]
 		},
 		"slowbrogalar": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Slowbro-Galar",
@@ -5246,6 +6634,7 @@
 			}]
 		},
 		"swampert": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Swampert",
@@ -5268,6 +6657,7 @@
 			}]
 		},
 		"sylveon": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Sylveon",
@@ -5303,6 +6693,7 @@
 			}]
 		},
 		"toxtricity": {
+			"flags": {},
 			"weight": 4,
 			"sets": [{
 				"species": "Toxtricity",
@@ -5328,6 +6719,7 @@
 			}]
 		},
 		"typhlosionhisui": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Typhlosion-Hisui",
@@ -5352,6 +6744,7 @@
 			}]
 		},
 		"articunogalar": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Articuno-Galar",
@@ -5375,6 +6768,7 @@
 			}]
 		},
 		"copperajah": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Copperajah",
@@ -5397,6 +6791,7 @@
 			}]
 		},
 		"decidueye": {
+			"flags": {},
 			"weight": 3,
 			"sets": [{
 				"species": "Decidueye",
@@ -5410,6 +6805,7 @@
 			}]
 		},
 		"gastrodon": {
+			"flags": {},
 			"weight": 3,
 			"sets": [{
 				"species": "Gastrodon",
@@ -5434,6 +6830,7 @@
 			}]
 		},
 		"klefki": {
+			"flags": {},
 			"weight": 3,
 			"sets": [{
 				"species": "Klefki",
@@ -5478,6 +6875,7 @@
 			}]
 		},
 		"taurospaldeablaze": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Tauros-Paldea-Blaze",
@@ -5500,6 +6898,7 @@
 			}]
 		},
 		"tentacruel": {
+			"flags": {},
 			"weight": 3,
 			"sets": [{
 				"species": "Tentacruel",
@@ -5513,6 +6912,7 @@
 			}]
 		},
 		"tornadus": {
+			"flags": {},
 			"weight": 3,
 			"sets": [{
 				"species": "Tornadus",
@@ -5555,6 +6955,7 @@
 			}]
 		},
 		"torterra": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Torterra",
@@ -5578,6 +6979,7 @@
 			}]
 		},
 		"uxie": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Uxie",
@@ -5614,6 +7016,7 @@
 			}]
 		},
 		"avalugg": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Avalugg",
@@ -5627,6 +7030,7 @@
 			}]
 		},
 		"dragalge": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Dragalge",
@@ -5649,6 +7053,7 @@
 			}]
 		},
 		"florges": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Florges",
@@ -5695,6 +7100,7 @@
 			}]
 		},
 		"infernape": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Infernape",
@@ -5718,6 +7124,7 @@
 			}]
 		},
 		"goodra": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Goodra",
@@ -5770,6 +7177,7 @@
 			}]
 		},
 		"heracross": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Heracross",
@@ -5792,6 +7200,7 @@
 			}]
 		},
 		"meloetta": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Meloetta",
@@ -5835,6 +7244,7 @@
 			}]
 		},
 		"orthworm": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Orthworm",
@@ -5857,6 +7267,7 @@
 			}]
 		},
 		"raikou": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Raikou",
@@ -5923,6 +7334,7 @@
 			}]
 		},
 		"rotomheat": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Rotom-Heat",
@@ -5937,6 +7349,7 @@
 			}]
 		},
 		"scrafty": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Scrafty",
@@ -5986,6 +7399,7 @@
 			}]
 		},
 		"screamtail": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Scream Tail",
@@ -6013,6 +7427,7 @@
 	},
 	"PU": {
 		"arcanine": {
+			"flags": {},
 			"weight": 10,
 			"sets": [{
 				"species": "Arcanine",
@@ -6035,6 +7450,7 @@
 			}]
 		},
 		"bombirdier": {
+			"flags": {},
 			"weight": 7,
 			"sets": [{
 				"species": "Bombirdier",
@@ -6048,6 +7464,7 @@
 			}]
 		},
 		"florges": {
+			"flags": {},
 			"weight": 10,
 			"sets": [{
 				"species": "Florges",
@@ -6135,6 +7552,7 @@
 			}]
 		},
 		"taurospaldeablaze": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Tauros-Paldea-Blaze",
@@ -6166,6 +7584,7 @@
 			}]
 		},
 		"zoroark": {
+			"flags": {},
 			"weight": 9,
 			"sets": [{
 				"species": "Zoroark",
@@ -6217,6 +7636,7 @@
 			}]
 		},
 		"bellibolt": {
+			"flags": {},
 			"weight": 9,
 			"sets": [{
 				"species": "Bellibolt",
@@ -6231,6 +7651,7 @@
 			}]
 		},
 		"golurk": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Golurk",
@@ -6253,6 +7674,7 @@
 			}]
 		},
 		"pawmot": {
+			"flags": {},
 			"weight": 7,
 			"sets": [{
 				"species": "Pawmot",
@@ -6284,6 +7706,7 @@
 			}]
 		},
 		"rhydon": {
+			"flags": {},
 			"weight": 8,
 			"sets": [{
 				"species": "Rhydon",
@@ -6297,6 +7720,7 @@
 			}]
 		},
 		"rotomheat": {
+			"flags": {},
 			"weight": 7,
 			"sets": [{
 				"species": "Rotom-Heat",
@@ -6311,6 +7735,7 @@
 			}]
 		},
 		"salazzle": {
+			"flags": {},
 			"weight": 8,
 			"sets": [{
 				"species": "Salazzle",
@@ -6355,6 +7780,7 @@
 			}]
 		},
 		"skuntank": {
+			"flags": {},
 			"weight": 7,
 			"sets": [{
 				"species": "Skuntank",
@@ -6368,6 +7794,7 @@
 			}]
 		},
 		"bruxish": {
+			"flags": {},
 			"weight": 4,
 			"sets": [{
 				"species": "Bruxish",
@@ -6399,6 +7826,7 @@
 			}]
 		},
 		"goodra": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Goodra",
@@ -6432,6 +7860,7 @@
 			}]
 		},
 		"grimmsnarl": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Grimmsnarl",
@@ -6454,6 +7883,7 @@
 			}]
 		},
 		"mudsdale": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Mudsdale",
@@ -6467,6 +7897,7 @@
 			}]
 		},
 		"scrafty": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Scrafty",
@@ -6498,6 +7929,7 @@
 			}]
 		},
 		"tatsugiri": {
+			"flags": {},
 			"weight": 4,
 			"sets": [{
 				"species": "Tatsugiri",
@@ -6511,6 +7943,7 @@
 			}]
 		},
 		"venusaur": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Venusaur",
@@ -6544,6 +7977,7 @@
 			}]
 		},
 		"articunogalar": {
+			"flags": {},
 			"weight": 5,
 			"sets": [{
 				"species": "Articuno-Galar",
@@ -6557,6 +7991,7 @@
 			}]
 		},
 		"coalossal": {
+			"flags": {},
 			"weight": 3,
 			"sets": [{
 				"species": "Coalossal",
@@ -6581,6 +8016,7 @@
 			}]
 		},
 		"cramorant": {
+			"flags": {},
 			"weight": 3,
 			"sets": [{
 				"species": "Cramorant",
@@ -6594,6 +8030,7 @@
 			}]
 		},
 		"decidueyehisui": {
+			"flags": {},
 			"weight": 7,
 			"sets": [{
 				"species": "Decidueye-Hisui",
@@ -6625,6 +8062,7 @@
 			}]
 		},
 		"delphox": {
+			"flags": {},
 			"weight": 3,
 			"sets": [{
 				"species": "Delphox",
@@ -6649,6 +8087,7 @@
 			}]
 		},
 		"dudunsparce": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Dudunsparce",
@@ -6681,6 +8120,7 @@
 			}]
 		},
 		"electrodehisui": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Electrode-Hisui",
@@ -6706,6 +8146,7 @@
 			}]
 		},
 		"frosmoth": {
+			"flags": {},
 			"weight": 4,
 			"sets": [{
 				"species": "Frosmoth",
@@ -6730,6 +8171,7 @@
 			}]
 		},
 		"hariyama": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Hariyama",
@@ -6743,6 +8185,7 @@
 			}]
 		},
 		"hoopa": {
+			"flags": {},
 			"weight": 3,
 			"sets": [{
 				"species": "Hoopa",
@@ -6767,6 +8210,7 @@
 			}]
 		},
 		"sandslashalola": {
+			"flags": {},
 			"weight": 3,
 			"sets": [{
 				"species": "Sandslash-Alola",
@@ -6780,6 +8224,7 @@
 			}]
 		},
 		"uxie": {
+			"flags": {},
 			"weight": 3,
 			"sets": [{
 				"species": "Uxie",
@@ -6813,6 +8258,7 @@
 			}]
 		},
 		"virizion": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Virizion",
@@ -6826,6 +8272,7 @@
 			}]
 		},
 		"wochien": {
+			"flags": {},
 			"weight": 3,
 			"sets": [{
 				"species": "Wo-Chien",
@@ -6839,6 +8286,7 @@
 			}]
 		},
 		"altaria": {
+			"flags": {},
 			"weight": 3,
 			"sets": [{
 				"species": "Altaria",
@@ -6852,6 +8300,7 @@
 			}]
 		},
 		"ambipom": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Ambipom",
@@ -6865,6 +8314,7 @@
 			}]
 		},
 		"glastrier": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Glastrier",
@@ -6878,6 +8328,7 @@
 			}]
 		},
 		"mesprit": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Mesprit",
@@ -6891,6 +8342,7 @@
 			}]
 		},
 		"oricorio": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Oricorio",
@@ -6915,6 +8367,7 @@
 			}]
 		},
 		"palossand": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Palossand",
@@ -6929,6 +8382,7 @@
 			}]
 		},
 		"qwilfish": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Qwilfish",
@@ -6951,6 +8405,7 @@
 			}]
 		},
 		"qwilfishhisui": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Qwilfish-Hisui",
@@ -6973,6 +8428,7 @@
 			}]
 		},
 		"rotommow": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Rotom-Mow",
@@ -6987,6 +8443,7 @@
 			}]
 		},
 		"sandaconda": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Sandaconda",
@@ -7000,6 +8457,7 @@
 			}]
 		},
 		"sneasel": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Sneasel",
@@ -7013,6 +8471,7 @@
 			}]
 		},
 		"sneaselhisui": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Sneasel-Hisui",
@@ -7026,6 +8485,7 @@
 			}]
 		},
 		"whimsicott": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Whimsicott",
@@ -7049,6 +8509,7 @@
 			}]
 		},
 		"braviaryhisui": {
+			"flags": {},
 			"weight": 2,
 			"sets": [{
 				"species": "Braviary-Hisui",
@@ -7063,6 +8524,7 @@
 			}]
 		},
 		"naclstack": {
+			"flags": {},
 			"weight": 1,
 			"sets": [{
 				"species": "Naclstack",

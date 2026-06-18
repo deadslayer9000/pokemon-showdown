@@ -21,6 +21,7 @@ export interface TeamData {
 	gigantamax?: boolean;
 }
 export interface BattleFactorySpecies {
+	flags: { megaOnly?: 1, zmoveOnly?: 1, limEevee?: 1 };
 	sets: BattleFactorySet[];
 	weight: number;
 }
@@ -1062,7 +1063,7 @@ export class RandomTeams {
 	): boolean {
 		switch (ability) {
 		// Abilities which are primarily useful for certain moves or with team support
-		case 'Chlorophyll': case 'Solar Power':
+		case 'Chlorophyll': case 'Solar Power': case 'Chrono Catalyst':
 			return !teamDetails.sun;
 		case 'Defiant':
 			return (species.id === 'thundurus' && !!counter.get('Status'));
@@ -1074,7 +1075,7 @@ export class RandomTeams {
 			return !counter.get('Grass');
 		case 'Prankster':
 			return !counter.get('Status');
-		case 'Sand Force': case 'Sand Rush':
+		case 'Sand Force': case 'Sand Rush': case 'Desert Spirit':
 			return !teamDetails.sand;
 		case 'Slush Rush':
 			return !teamDetails.snow;
@@ -1950,6 +1951,7 @@ export class RandomTeams {
 			if (set.ability === 'Snow Warning' || set.moves.includes('snowscape') || set.moves.includes('chillyreception')) {
 				teamDetails.snow = 1;
 			}
+			//if (set.ability === 'Grassy Surge') teamDetails.grassyTerrain = 1;
 			if (set.moves.includes('healbell')) teamDetails.statusCure = 1;
 			if (set.moves.includes('spikes') || set.moves.includes('ceaselessedge')) {
 				teamDetails.spikes = (teamDetails.spikes || 0) + 1;
@@ -2160,6 +2162,7 @@ export class RandomTeams {
 			if (set.ability === 'Snow Warning' || set.moves.includes('snowscape') || set.moves.includes('chillyreception')) {
 				teamDetails.snow = 1;
 			}
+			//if (set.ability === 'Grassy Surge') teamDetails.grassyTerrain = 1;
 			if (set.moves.includes('healbell')) teamDetails.statusCure = 1;
 			if (set.moves.includes('spikes') || set.moves.includes('ceaselessedge')) {
 				teamDetails.spikes = (teamDetails.spikes || 0) + 1;
@@ -2758,6 +2761,9 @@ export class RandomTeams {
 			const allowedItems: string[] = [];
 			for (const itemString of set.item) {
 				const itemId = toID(itemString);
+				const item = this.dex.items.get(itemString);
+				if (teamData.megaCount && teamData.megaCount > 0 && item.megaStone) continue; // reject 2+ mega stones
+				if (teamData.zCount && teamData.zCount > 0 && item.zMove) continue; // reject 2+ Z stones
 				if (itemsLimited.includes(itemId) && teamData.has[itemId]) continue;
 				allowedItems.push(itemString);
 			}
@@ -2865,6 +2871,9 @@ export class RandomTeams {
 			forceResult,
 			weaknesses: {},
 			resistances: {},
+			megaCount: 0,
+			zCount: 0,
+			eeveeLimCount: 0,
 		};
 		const resistanceAbilities: { [k: string]: string[] } = {
 			dryskin: ['Water'], waterabsorb: ['Water'], stormdrain: ['Water'],
@@ -2915,9 +2924,25 @@ export class RandomTeams {
 			) continue;
 
 			if (this.forceMonotype && !species.types.includes(this.forceMonotype)) continue;
+			
+			const speciesFlags = this.randomFactorySets[this.factoryTier][species.id].flags;
 
 			// Limit to one of each species (Species Clause)
 			if (teamData.baseFormes[species.baseSpecies]) continue;
+			// Limit the number of Megas to one
+			if (!teamData.megaCount) teamData.megaCount = 0;
+			if (teamData.megaCount >= 1 && speciesFlags.megaOnly) continue;
+
+			const set = this.randomFactorySet(species, teamData, this.factoryTier);
+			if (!set) continue;
+
+			const itemData = this.dex.items.get(set.item);
+
+			// Actually limit the number of Megas to one
+			if (teamData.megaCount >= 1 && itemData.megaStone) continue;
+
+			// Limit the number of Z moves to one
+			if (teamData.zCount && teamData.zCount >= 1 && itemData.zMove) continue;
 
 			// Limit 2 of any type (most of the time)
 			const types = species.types;
@@ -2946,7 +2971,7 @@ export class RandomTeams {
 			}
 			if (skip) continue;
 
-			const set = this.randomFactorySet(species, teamData, this.factoryTier);
+			//const set = this.randomFactorySet(species, teamData, this.factoryTier);
 			if (!set) continue;
 
 			// Limit 1 of any type combination
@@ -3168,6 +3193,9 @@ export class RandomTeams {
 			forceResult,
 			weaknesses: {},
 			resistances: {},
+			megaCount: 0,
+			zCount: 0,
+			eeveeLimCount: 0,
 		};
 		const weatherAbilitiesSet: { [k: string]: string } = {
 			drizzle: "raindance",
@@ -3236,6 +3264,14 @@ export class RandomTeams {
 
 			const itemData = this.dex.items.get(set.item);
 			if (teamData.has[itemData.id]) continue; // Item Clause
+/*
+			// Limit Mega and Z-move
+			if (itemData.megaStone) teamData.megaCount++;
+			if (itemData.zMove) {
+				if (!teamData.zCount) teamData.zCount = 0;
+				teamData.zCount++;
+			}
+			teamData.has[itemData.id] = 1;*/
 
 			// Okay, the set passes, add it to our team
 			pokemon.push(set);
