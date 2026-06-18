@@ -1578,7 +1578,7 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 				if (color && species.color !== color) { //fuck ass hardcode time
 					if (color == "Red" || color == "Blue" || color == "Black" && species.color == "RedBlueBlack") {
 						break;
-					} else if (color == "Red" || color == "Blue" && species.color == "RedPurple") {
+					} else if (color == "Red" || color == "Purple" && species.color == "RedPurple") {
 						break;
 					} else {
 					return [`All Pok\u00e9mon must share a color.`];
