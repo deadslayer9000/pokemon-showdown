@@ -1575,8 +1575,17 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 			for (const [i, set] of team.entries()) {
 				let species = this.dex.species.get(set.species);
 				if (!species.color) return [`Invalid Pok\u00e9mon ${set.name || set.species}`];
-				if (color && species.color !== color) {
+				if (color && species.color !== color) { //fuck ass hardcode time
+					if (color == "Red" || color == "Blue" || color == "Black" && species.color == "RedBlueBlack") {
+						break;
+					} else if (color == "Red" || color == "Blue" && species.color == "RedPurple") {
+						break;
+					} else {
 					return [`All Pok\u00e9mon must share a color.`];
+					}
+				}
+				if (species.color == "RedBlueBlack" || species.color == "RedPurple") {
+					return [`A Delta Pokemon with multiple colors cannot be the first Pok\u00e9mon on your team.`];
 				}
 				color = species.color;
 				const item = this.dex.items.get(set.item);
