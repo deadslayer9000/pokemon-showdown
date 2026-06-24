@@ -1063,7 +1063,7 @@ export class RandomTeams {
 	): boolean {
 		switch (ability) {
 		// Abilities which are primarily useful for certain moves or with team support
-		case 'Chlorophyll': case 'Solar Power': case 'Chrono Catalyst':
+		case 'Chlorophyll': case 'Solar Power': case 'Chrono Catalyst': case 'Orichalcum Scale':
 			return !teamDetails.sun;
 		case 'Defiant':
 			return (species.id === 'thundurus' && !!counter.get('Status'));
@@ -1083,7 +1083,7 @@ export class RandomTeams {
 			return !counter.get('Bug');
 		case 'Torrent':
 			return (!counter.get('Water') && !moves.has('flipturn'));
-		}
+		}// remember hardon cell eterrain, disintegrate eterrain
 
 		return false;
 	}
@@ -2847,7 +2847,7 @@ export class RandomTeams {
 
 		if (!this.factoryTier) {
 			// this.factoryTier = this.sample(['Uber', 'OU', 'UU', 'RU', 'NU', 'PU', 'LC']);
-			this.factoryTier = this.sample(['Uber', 'OU', 'UU', 'RU', 'NU', 'PU']);
+			this.factoryTier = this.sample(['Uber', 'OU', 'UU', 'RU']);
 		}
 
 		const tierValues: { [k: string]: number } = {
@@ -2925,13 +2925,15 @@ export class RandomTeams {
 
 			if (this.forceMonotype && !species.types.includes(this.forceMonotype)) continue;
 			
-			const speciesFlags = this.randomFactorySets[this.factoryTier][species.id].flags;
+			const speciesData = this.randomFactorySets[this.factoryTier][species.id];
+			if (!speciesData) continue;
+			const speciesFlags = speciesData.flags;
 
 			// Limit to one of each species (Species Clause)
 			if (teamData.baseFormes[species.baseSpecies]) continue;
 			// Limit the number of Megas to one
 			if (!teamData.megaCount) teamData.megaCount = 0;
-			if (teamData.megaCount >= 1 && speciesFlags.megaOnly) continue;
+			if (teamData.megaCount >= 1 && speciesFlags?.megaOnly) continue;
 
 			const set = this.randomFactorySet(species, teamData, this.factoryTier);
 			if (!set) continue;
@@ -3002,6 +3004,12 @@ export class RandomTeams {
 			teamData.baseFormes[species.baseSpecies] = 1;
 
 			teamData.has[toID(set.item)] = 1;
+
+			// Increment mega count if this Pokemon has a mega stone
+			if (itemData.megaStone) {
+				if (!teamData.megaCount) teamData.megaCount = 0;
+				teamData.megaCount++;
+			}
 
 			if (set.wantsTera) {
 				if (!teamData.wantsTeraCount) teamData.wantsTeraCount = 0;
@@ -3264,14 +3272,16 @@ export class RandomTeams {
 
 			const itemData = this.dex.items.get(set.item);
 			if (teamData.has[itemData.id]) continue; // Item Clause
-/*
+
 			// Limit Mega and Z-move
-			if (itemData.megaStone) teamData.megaCount++;
+			if (itemData.megaStone) {
+				if (!teamData.megaCount) teamData.megaCount = 0;
+				if (teamData.megaCount >= 1) continue;
+			}
 			if (itemData.zMove) {
 				if (!teamData.zCount) teamData.zCount = 0;
-				teamData.zCount++;
+				if (teamData.zCount >= 1) continue;
 			}
-			teamData.has[itemData.id] = 1;*/
 
 			// Okay, the set passes, add it to our team
 			pokemon.push(set);
@@ -3293,6 +3303,16 @@ export class RandomTeams {
 			teamData.baseFormes[species.baseSpecies] = 1;
 
 			teamData.has[itemData.id] = 1;
+
+			// Increment mega/Z-move counts
+			if (itemData.megaStone) {
+				if (!teamData.megaCount) teamData.megaCount = 0;
+				teamData.megaCount++;
+			}
+			if (itemData.zMove) {
+				if (!teamData.zCount) teamData.zCount = 0;
+				teamData.zCount++;
+			}
 
 			if (set.wantsTera) {
 				if (!teamData.wantsTeraCount) teamData.wantsTeraCount = 0;
