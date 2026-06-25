@@ -3421,6 +3421,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			this.add(`raw|<div class="broadcast-blue"><b><a href="https://twitter.com/pokemonpatches">Check out the patch notes!</a></b></div>`);
 		},
 	},
+	/*
 	{
 		name: "[Gen 9] Battle Factory",
 		desc: `Randomized teams of Pok&eacute;mon for a generated Smogon tier with sets that are competitively viable.`,
@@ -3431,7 +3432,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		onBegin() {
 			this.add(`raw|<div class="broadcast-blue"><b>Battle Factory Tier: ${this.teamGenerator.factoryTier}</b></div>`);
 		},
-	},
+	},*/
 	{
 		name: "[Gen 9] 1v1 Factory",
 		desc: `Randomized teams of Pok&eacute;mon for a generated Smogon tier with sets that are competitively viable.`,
