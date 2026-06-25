@@ -8674,6 +8674,302 @@
 					]
 				}
 			]
+		},
+		"kartana": {
+			"flags": {},
+			"weight": 8,
+			"sets": [
+				{
+					"species": "Kartana",
+					"Weight": 70,
+					"item": ["Choice Scarf"],
+					"ability": ["Beast Boost"],
+					"evs": { "atk": 252, "spe": 252, "spd": 4 },
+					"nature": ["Jolly"],
+					"teraType": ["Normal"],
+					"moves": [
+						["Smart Strike"],
+						["Sacred Sword"],
+						["Knock Off"],
+						["Leaf Blade"]
+					]
+				},
+				{
+					"species": "Kartana",
+					"Weight": 30,
+					"item": ["Life Orb", "Leftovers"],
+					"ability": ["Beast Boost"],
+					"evs": { "atk": 252, "spe": 252, "spd": 4 },
+					"nature": ["Jolly"],
+					"teraType": ["Normal"],
+					"moves": [
+						["Swords Dance"],
+						["Sacred Sword"],
+						["Knock Off"],
+						["Leaf Blade"]
+					]
+				}
+			]
+		},
+		"blacephalon": {
+			"flags": {},
+			"weight": 8,
+			"sets": [
+				{
+					"species": "Blacephalon",
+					"Weight": 100,
+					"item": ["Choice Scarf"],
+					"ability": ["Beast Boost"],
+					"evs": { "spa": 252, "spe": 252, "spd": 4 },
+					"nature": ["Timid"],
+					"teraType": ["Normal"],
+					"moves": [
+						["Shadow Ball"],
+						["Fire Blast", "Overheat"],
+						["Flamethrower"],
+						["Trick"]
+					]
+				}
+			]
+		},
+		"mawile": {
+			"flags": {},
+			"weight": 8,
+			"sets": [
+				{
+					"species": "Mawile",
+					"Weight": 50,
+					"item": ["Mawilite"],
+					"ability": ["Intimidate"],
+					"evs": { "atk": 252, "spe": 140, "hp": 116 },
+					"nature": ["Adamant"],
+					"teraType": ["Normal"],
+					"moves": [
+						["Play Rough"],
+						["Knock Off"],
+						["Sucker Punch"],
+						["Swords Dance"]
+					]
+				},
+				{
+					"species": "Mawile",
+					"Weight": 50,
+					"item": ["Mawilite"],
+					"ability": ["Intimidate"],
+					"evs": { "atk": 252, "spe": 204, "hp": 52 },
+					"nature": ["Adamant"],
+					"teraType": ["Normal"],
+					"moves": [
+						["Play Rough"],
+						["Knock Off", "Fire Fang", "Brick Break"],
+						["Thunder Punch"],
+						["Ice Punch"]
+					]
+				}
+			]
+		},
+		"kommo-o": {
+			"flags": {},
+			"weight": 8,
+			"sets": [
+				{
+					"species": "Kommo-o",
+					"weight": 70,
+					"item": ["Kommonium Z"],
+					"ability": ["Bulletproof"],
+					"evs": { "atk": 4, "spa": 252, "spe": 252 },
+					"nature": ["Hasty"],
+					"teraType": ["Normal"],
+					"moves": [
+						["Clanging Scales"],
+						["Close Combat"],
+						["Flamethrower"],
+						["Stealth Rock"]
+					]
+				},
+				{
+					"species": "Kommo-o",
+					"weight": 30,
+					"item": ["Leftovers"],
+					"ability": ["Bulletproof"],
+					"evs": { "hp": 248, "def": 32, "spd": 176, "spe": 52 },
+					"nature": ["Impish"],
+					"teraType": ["Normal"],
+					"moves": [
+						["Body Press"],
+						["Toxic"],
+						["Stealth Rock"],
+						["Earthquake"]
+					]
+				}
+			]
+		},
+		"charizard": {
+			"flags": {},
+			"weight": 8,
+			"sets": [
+				{
+					"species": "Charizard",
+					"weight": 100,
+					"item": ["Charizardite X"],
+					"ability": ["Blaze"],
+					"evs": { "atk": 252, "spd": 4, "spe": 252 },
+					"nature": ["Jolly"],
+					"teraType": ["Normal"],
+					"moves": [
+						["Dragon Dance"],
+						["Flare Blitz"],
+						["Earthquake"],
+						["Dragon Claw", "Roost"]
+					]
+				}
+			]
+		},
+		"torkoal": {
+			"flags": {},
+			"weight": 8,
+			"sets": [
+				{
+					"species": "Torkoal",
+					"weight": 100,
+					"item": ["Heat Rock"],
+					"ability": ["Drought"],
+					"evs": { "hp": 248, "def": 252, "spd": 8 },
+					"nature": ["Bold"],
+					"teraType": ["Normal"],
+					"moves": [
+						["Lava Plume"],
+						["Body Press"],
+						["Stealth Rock"],
+						["Rapid Spin"]
+					]
+				}
+			]
+		},
+		"hippowdon": {
+			"flags": {},
+			"weight": 8,
+			"sets": [{
+					"species": "Hippowdon",
+					"weight": 80,
+					"item": ["Leftovers", "Rocky Helmet"],
+					"ability": ["Sand Stream"],
+					"evs": {"hp": 252, "def": 252, "spd": 4},
+					"nature": ["Impish"],
+					"teraType": ["Dragon", "Ghost", "Poison"],
+					"moves": [["Stealth Rock"], ["Earthquake"], ["Slack Off"], ["Stone Edge", "Whirlwind"]]
+			}, {
+					"species": "Hippowdon",
+					"weight": 20,
+					"item": ["Leftovers", "Rocky Helmet"],
+					"ability": ["Sand Stream"],
+					"evs": {"hp": 252, "def": 252, "spd": 4},
+					"nature": ["Impish"],
+					"teraType": ["Dragon", "Ghost", "Poison"],
+					"moves": [["Stone Edge"], ["Earthquake"], ["Slack Off"], ["Whirlwind"]]
+			}]
+		},
+		"hoopaunbound": {
+			"flags": {},
+			"weight": 8,
+			"sets": [{
+					"species": "Hoopa-Unbound",
+					"weight": 50,
+					"item": ["Assault Vest"],
+					"ability": ["Magician"],
+					"evs": {"hp": 252, "def": 156, "spa": 100},
+					"nature": ["Quiet"],
+					"teraType": ["Poison", "Fairy"],
+					"moves": [["Knock Off"], ["Psychic Noise"], ["Drain Punch"], 	["Thunderbolt"]]
+			},
+			{
+				"species": "Hoopa-Unbound",
+				"weight": 50,
+				"item": ["Choice Band"],
+				"ability": ["Magician"],
+				"evs": { "atk": 252, "spd": 4, "spe": 252 },
+				"nature": ["Jolly"],
+				"teraType": ["Normal"],
+				"moves": [
+					["Hyperspace Fury"],
+					["Drain Punch"],
+					["Zen Headbutt"],
+					["Gunk Shot"]
+				]
+				}
+			]
+		},
+		"victini": {
+			"flags": {},
+			"weight": 8,
+			"sets": [
+				{
+					"species": "Victini",
+					"weight": 30,
+					"item": ["Choice Band"],
+					"ability": ["Victory Star"],
+					"evs": { "atk": 252, "spd": 4, "spe": 252 },
+					"nature": ["Jolly"],
+					"teraType": ["Normal"],
+					"moves": [
+						["V-create"],
+						["U-turn"],
+						["Bolt Strike"],
+						["Zen Headbutt"]
+					]
+				},
+				{
+					"species": "Victini",
+					"weight": 30,
+					"item": ["Choice Band"],
+					"ability": ["Victory Star"],
+					"evs": { "hp": 252, "atk": 4, "spe": 252 },
+					"nature": ["Jolly"],
+					"teraType": ["Normal"],
+					"moves": [
+						["V-create"],
+						["U-turn"],
+						["Final Gambit"],
+						["Trick"]
+					]
+				},
+				{
+					"species": "Victini",
+					"weight": 40,
+					"item": ["Heavy-Duty Boots"],
+					"ability": ["Victory Star"],
+					"evs": { "atk": 252, "spd": 4, "spe": 252 },
+					"nature": ["Jolly"],
+					"teraType": ["Normal"],
+					"moves": [
+						["V-create"],
+						["U-turn"],
+						["Bolt Strike"],
+						["Encore", "Toxic", "Glaciate"]
+					]
+				}
+			]
+		},
+		"barraskewda": {
+			"flags": {},
+			"weight": 8,
+			"sets": [
+				{
+					"species": "Barraskewda",
+					"weight": 100,
+					"item": ["Choice Band"],
+					"ability": ["Swift Swim"],
+					"evs": { "atk": 252, "spd": 4, "spe": 252 },
+					"nature": ["Adamant"],
+					"teraType": ["Normal"],
+					"moves": [
+						["Close Combat"],
+						["Liquidation"],
+						["Flip Turn"],
+						["Aqua Jet"]
+					]
+				}
+			]
 		}
 	},
 	"RU": {
