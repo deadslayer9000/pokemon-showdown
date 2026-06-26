@@ -8681,7 +8681,7 @@
 			"sets": [
 				{
 					"species": "Kartana",
-					"Weight": 70,
+					"weight": 70,
 					"item": ["Choice Scarf"],
 					"ability": ["Beast Boost"],
 					"evs": { "atk": 252, "spe": 252, "spd": 4 },
@@ -8696,7 +8696,7 @@
 				},
 				{
 					"species": "Kartana",
-					"Weight": 30,
+					"weight": 30,
 					"item": ["Life Orb", "Leftovers"],
 					"ability": ["Beast Boost"],
 					"evs": { "atk": 252, "spe": 252, "spd": 4 },
@@ -8717,7 +8717,7 @@
 			"sets": [
 				{
 					"species": "Blacephalon",
-					"Weight": 100,
+					"weight": 100,
 					"item": ["Choice Scarf"],
 					"ability": ["Beast Boost"],
 					"evs": { "spa": 252, "spe": 252, "spd": 4 },
@@ -8738,7 +8738,7 @@
 			"sets": [
 				{
 					"species": "Mawile",
-					"Weight": 50,
+					"weight": 50,
 					"item": ["Mawilite"],
 					"ability": ["Intimidate"],
 					"evs": { "atk": 252, "spe": 140, "hp": 116 },
@@ -8753,7 +8753,7 @@
 				},
 				{
 					"species": "Mawile",
-					"Weight": 50,
+					"weight": 50,
 					"item": ["Mawilite"],
 					"ability": ["Intimidate"],
 					"evs": { "atk": 252, "spe": 204, "hp": 52 },
