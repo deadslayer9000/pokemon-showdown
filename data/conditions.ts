@@ -607,8 +607,7 @@ export const Conditions: import('../sim/dex-conditions').ConditionDataTable = {
 				this.debug('Sunny Day Hydro Steam boost');
 				return this.chainModify(1.5);
 			}
-			// TODO: check interaction between Mega Sol and Utility Umbrella
-			if (defender.effectiveWeather() !== 'sunnyday' && !attacker.hasAbility('megasol')) return;
+			if (defender.effectiveWeather() !== 'sunnyday') return;
 			if (move.type === 'Fire') {
 				this.debug('Sunny Day fire boost');
 				return this.chainModify(1.5);
@@ -689,7 +688,7 @@ export const Conditions: import('../sim/dex-conditions').ConditionDataTable = {
 		// So we give it increased priority.
 		onModifySpDPriority: 10,
 		onModifySpD(spd, pokemon) {
-			if (pokemon.hasType('Rock') && this.field.isWeather('sandstorm')) {
+			if (pokemon.hasType('Rock') && pokemon.effectiveWeather() === 'sandstorm') {
 				return this.modify(spd, 1.5);
 			}
 		},
@@ -755,7 +754,7 @@ export const Conditions: import('../sim/dex-conditions').ConditionDataTable = {
 		},
 		onModifyDefPriority: 10,
 		onModifyDef(def, pokemon) {
-			if (pokemon.hasType('Ice') && this.field.isWeather('snowscape')) {
+			if (pokemon.hasType('Ice') && pokemon.effectiveWeather() === 'snowscape') {
 				return this.modify(def, 1.5);
 			}
 		},

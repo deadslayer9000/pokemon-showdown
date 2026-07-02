@@ -49,7 +49,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	absolitez: {
 		name: "Absolite Z",
-		spritenum: 16,
+		spritenum: 499,
 		megaStone: { "Absol": "Absol-Mega-Z" },
 		itemUser: ["Absol"],
 		onTakeItem(item, source) {
@@ -551,7 +551,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	baxcalibrite: {
 		name: "Baxcalibrite",
-		spritenum: 0,
+		spritenum: 514,
 		megaStone: { "Baxcalibur": "Baxcalibur-Mega" },
 		itemUser: ["Baxcalibur"],
 		onTakeItem(item, source) {
@@ -1141,7 +1141,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	chimechite: {
 		name: "Chimechite",
-		spritenum: 19,
+		spritenum: 498,
 		megaStone: { "Chimecho": "Chimecho-Mega" },
 		itemUser: ["Chimecho"],
 		onTakeItem(item, source) {
@@ -1467,7 +1467,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	crabominite: {
 		name: "Crabominite",
-		spritenum: 0,
+		spritenum: 507,
 		megaStone: { "Crabominable": "Crabominable-Mega" },
 		itemUser: ["Crabominable"],
 		onTakeItem(item, source) {
@@ -1495,7 +1495,8 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 			type: "Ghost",
 		},
 		onFractionalPriorityPriority: -2,
-		onFractionalPriority(priority, pokemon) {
+		onFractionalPriority(priority, pokemon, target, move) {
+			if (move.category === 'Status' && pokemon.hasAbility('myceliummight')) return;
 			if (
 				priority <= 0 &&
 				(pokemon.hp <= pokemon.maxhp / 4 ||
@@ -1573,7 +1574,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	darkranite: {
 		name: "Darkranite",
-		spritenum: 0,
+		spritenum: 504,
 		megaStone: { "Darkrai": "Darkrai-Mega" },
 		itemUser: ["Darkrai"],
 		onTakeItem(item, source) {
@@ -1648,7 +1649,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	deltacharizardite: {
 		name: "Delta Charizardite",
-		spritenum: 8,
+		spritenum: 772,
 		megaStone: { "Charizard-Delta": "Charizard-Delta-Mega" },
 		itemUser: ["Charizard-Delta"],
 		onTakeItem(item, source) {
@@ -1659,7 +1660,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	deltachimechite: {
 		name: "Delta Chimechite",
-		spritenum: 30,
+		spritenum: 776,
 		megaStone: { "Chimecho-Delta": "Chimecho-Delta-Mega" },
 		itemUser: ["Chimecho-Delta"],
 		onTakeItem(item, source) {
@@ -1679,7 +1680,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	deltahaxorusite: {
 		name: "Delta Haxorusite",
-		spritenum: 1,
+		spritenum: 769,
 		megaStone: {"Haxorus-Delta": "Haxorus-Delta-Mega"},
 		itemUser: ["Haxorus-Delta"],
 		onTakeItem(item, source) {
@@ -1690,7 +1691,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	deltainfernapeite: {
 		name: "Delta Infernapeite",
-		spritenum: 11,
+		spritenum: 774,
 		megaStone: { "Infernape-Delta": "Infernape-Delta-Mega" },
 		itemUser: ["Infernape-Delta"],
 		onTakeItem(item, source) {
@@ -1745,7 +1746,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	deltalopunnite: {
 		name: "Delta Lopunnite",
-		spritenum: 9,
+		spritenum: 773,
 		megaStone: { "Lopunny-Delta": "Lopunny-Delta-Mega"},
 		itemUser: ["Lopunny-Delta"],
 		onTakeItem(item, source) {
@@ -1756,7 +1757,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	deltametagrossite: {
 		name: "Delta Metagrossite",
-		spritenum: 33,
+		spritenum: 777,
 		megaStone: {"Metagross-Delta": "Metagross-Delta-Mega"},
 		itemUser: ["Metagross-Delta"],
 		onTakeItem(item, source) {
@@ -1767,7 +1768,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	deltasteelixite: {
 		name: "Delta Steelixite",
-		spritenum: 14,
+		spritenum: 775,
 		megaStone: { "Steelix-Delta": "Steelix-Delta-Mega" },
 		itemUser: ["Steelix-Delta"],
 		onTakeItem(item, source) {
@@ -2753,7 +2754,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	flygonite: {
 		name: "Flygonite",
-		spritenum: 3,
+		spritenum: 770,
 		megaStone: {"Flygon": "Flygon-Mega" },
 		itemUser: ["Flygon"],
 		onTakeItem(item, source) {
@@ -2986,7 +2987,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	garchompitez: {
 		name: "Garchompite Z",
-		spritenum: 573,
+		spritenum: 501,
 		megaStone: { "Garchomp": "Garchomp-Mega-Z" },
 		itemUser: ["Garchomp"],
 		onTakeItem(item, source) {
@@ -3078,7 +3079,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	glimmoranite: {
 		name: "Glimmoranite",
-		spritenum: 0,
+		spritenum: 512,
 		megaStone: { "Glimmora": "Glimmora-Mega" },
 		itemUser: ["Glimmora"],
 		onTakeItem(item, source) {
@@ -3099,7 +3100,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	golisopite: {
 		name: "Golisopite",
-		spritenum: 0,
+		spritenum: 508,
 		megaStone: { "Golisopod": "Golisopod-Mega" },
 		itemUser: ["Golisopod"],
 		onTakeItem(item, source) {
@@ -3111,7 +3112,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	golurkite: {
 		name: "Golurkite",
-		spritenum: 0,
+		spritenum: 505,
 		megaStone: { "Golurk": "Golurk-Mega" },
 		itemUser: ["Golurk"],
 		onTakeItem(item, source) {
@@ -3422,7 +3423,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	heatranite: {
 		name: "Heatranite",
-		spritenum: 0,
+		spritenum: 503,
 		megaStone: { "Heatran": "Heatran-Mega" },
 		itemUser: ["Heatran"],
 		onTakeItem(item, source) {
@@ -3482,7 +3483,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	hisuianzoroarkanite: {
 		name: "Hisuianzoroarkanite",
-		spritenum: 7,
+		spritenum: 771,
 		megaStone: {"Zoroark-Hisui": "Zoroark-Hisui-Mega"},
 		itemUser: ["Zoroark-Hisui"],
 		onTakeItem(item, source) {
@@ -3940,7 +3941,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	klocktowlite: {
 		name: "Klocktowlite",
-		spritenum: 37,
+		spritenum: 778,
 		megaStone: {"Klocktowl": "Klocktowl-Mega"},
 		itemUser: ["Klocktowl"],
 		onTakeItem(item, source) {
@@ -4268,7 +4269,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	lucarionitez: {
 		name: "Lucarionite Z",
-		spritenum: 24,
+		spritenum: 502,
 		megaStone: { "Lucario": "Lucario-Mega-Z" },
 		itemUser: ["Lucario"],
 		onTakeItem(item, source) {
@@ -4432,7 +4433,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	magearnite: {
 		name: "Magearnite",
-		spritenum: 0,
+		spritenum: 509,
 		megaStone: {
 			"Magearna": "Magearna-Mega",
 			"Magearna-Original": "Magearna-Original-Mega",
@@ -4561,7 +4562,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	manaphite: {
 		name: "Manaphite",
-		spritenum: 0,
+		spritenum: 768,
 		megaStone: {"Manaphy": "Manaphy-Mega"},
 		itemUser: ["Manaphy"],
 		onTakeItem(item, source) {
@@ -4756,7 +4757,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	meowsticite: {
 		name: "Meowsticite",
-		spritenum: 0,
+		spritenum: 506,
 		megaStone: {
 			"Meowstic": "Meowstic-M-Mega",
 			"Meowstic-F": "Meowstic-F-Mega",
@@ -5980,8 +5981,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	quickclaw: {
 		onFractionalPriorityPriority: -2,
 		onFractionalPriority(priority, pokemon, target, move) {
-			if (move.category === "Status" && pokemon.hasAbility("myceliummight"))
-				return;
+			if (move.category === 'Status' && pokemon.hasAbility('myceliummight')) return;
 			if (priority <= 0 && this.randomChance(1, 5)) {
 				this.add("-activate", pokemon, "item: Quick Claw");
 				return 0.1;
@@ -6026,7 +6026,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	raichunitex: {
 		name: "Raichunite X",
-		spritenum: 25,
+		spritenum: 496,
 		megaStone: { "Raichu": "Raichu-Mega-X" },
 		itemUser: ["Raichu"],
 		onTakeItem(item, source) {
@@ -6037,7 +6037,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	raichunitey: {
 		name: "Raichunite Y",
-		spritenum: 26,
+		spritenum: 497,
 		megaStone: { "Raichu": "Raichu-Mega-Y" },
 		itemUser: ["Raichu"],
 		onTakeItem(item, source) {
@@ -6630,7 +6630,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	scovillainite: {
 		name: "Scovillainite",
-		spritenum: 0,
+		spritenum: 511,
 		megaStone: { "Scovillain": "Scovillain-Mega" },
 		itemUser: ["Scovillain"],
 		onTakeItem(item, source) {
@@ -7090,7 +7090,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	staraptite: {
 		name: "Staraptite",
-		spritenum: 0,
+		spritenum: 500,
 		megaStone: { "Staraptor": "Staraptor-Mega" },
 		itemUser: ["Staraptor"],
 		onTakeItem(item, source) {
@@ -7430,7 +7430,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	tatsugirinite: {
 		name: "Tatsugirinite",
-		spritenum: 0,
+		spritenum: 513,
 		megaStone: {
 			"Tatsugiri": "Tatsugiri-Curly-Mega",
 			"Tatsugiri-Droopy": "Tatsugiri-Droopy-Mega",
@@ -9096,7 +9096,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 	},
 	zeraorite: {
 		name: "Zeraorite",
-		spritenum: 0,
+		spritenum: 510,
 		megaStone: { "Zeraora": "Zeraora-Mega" },
 		itemUser: ["Zeraora"],
 		onTakeItem(item, source) {
@@ -9160,6 +9160,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		},
 		num: 155,
 		gen: 2,
+		tags: ["True Past"],
 		isNonstandard: "Past",
 	},
 	berserkgene: {
@@ -9175,6 +9176,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		},
 		num: 0,
 		gen: 2,
+		tags: ["True Past"],
 		isNonstandard: "Past",
 	},
 	bitterberry: {
@@ -9195,6 +9197,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		},
 		num: 156,
 		gen: 2,
+		tags: ["True Past"],
 		isNonstandard: "Past",
 	},
 	burntberry: {
@@ -9217,6 +9220,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		},
 		num: 153,
 		gen: 2,
+		tags: ["True Past"],
 		isNonstandard: "Past",
 	},
 	goldberry: {
@@ -9242,6 +9246,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		},
 		num: 158,
 		gen: 2,
+		tags: ["True Past"],
 		isNonstandard: "Past",
 	},
 	iceberry: {
@@ -9264,6 +9269,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		},
 		num: 152,
 		gen: 2,
+		tags: ["True Past"],
 		isNonstandard: "Past",
 	},
 	mintberry: {
@@ -9286,6 +9292,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		},
 		num: 150,
 		gen: 2,
+		tags: ["True Past"],
 		isNonstandard: "Past",
 	},
 	miracleberry: {
@@ -9307,6 +9314,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		},
 		num: 157,
 		gen: 2,
+		tags: ["True Past"],
 		isNonstandard: "Past",
 	},
 	mysteryberry: {
@@ -9347,6 +9355,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		},
 		num: 154,
 		gen: 2,
+		tags: ["True Past"],
 		isNonstandard: "Past",
 	},
 	pinkbow: {
@@ -9359,6 +9368,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		},
 		num: 251,
 		gen: 2,
+		tags: ["True Past"],
 		isNonstandard: "Past",
 	},
 	polkadotbow: {
@@ -9371,6 +9381,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		},
 		num: 251,
 		gen: 2,
+		tags: ["True Past"],
 		isNonstandard: "Past",
 	},
 	przcureberry: {
@@ -9393,6 +9404,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		},
 		num: 149,
 		gen: 2,
+		tags: ["True Past"],
 		isNonstandard: "Past",
 	},
 	psncureberry: {
@@ -9415,6 +9427,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		},
 		num: 151,
 		gen: 2,
+		tags: ["True Past"],
 		isNonstandard: "Past",
 	},
 

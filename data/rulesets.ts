@@ -1834,10 +1834,10 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 			return { ...species, types };
 		},
 		onSwitchIn(pokemon) {
-			this.add('-start', pokemon, 'typechange', (pokemon.illusion || pokemon).getTypes(true).join('/'), '[silent]');
+			this.add('-start', pokemon, 'typechange', (pokemon.illusion || pokemon).getTypes(true).join('/'), '[silent]', '[from] format: Camomons Mod');
 		},
 		onAfterMega(pokemon) {
-			this.add('-start', pokemon, 'typechange', (pokemon.illusion || pokemon).getTypes(true).join('/'), '[silent]');
+			this.add('-start', pokemon, 'typechange', (pokemon.illusion || pokemon).getTypes(true).join('/'), '[silent]', '[from] format: Camomons Mod');
 		},
 	},
 	allowtradeback: {
@@ -2779,7 +2779,7 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 			const obtainableAbilityPool = new Set<string>();
 			const matchingSpecies = this.dex.species.all()
 				.filter(species => (
-					(!species.isNonstandard || this.ruleTable.has(`+pokemontag:${this.toID(species.isNonstandard)}`)) &&
+					(!species.isNonstandard || this.ruleTable.has(`+tag:${this.toID(species.isNonstandard)}`)) &&
 					species.types.every(type => curSpecies.types.includes(type)) &&
 					species.types.length === curSpecies.types.length && !this.ruleTable.isBannedSpecies(species)
 				));
@@ -2796,7 +2796,7 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 		checkCanLearn(move, species, setSources, set) {
 			const matchingSpecies = this.dex.species.all()
 				.filter(s => (
-					(!s.isNonstandard || this.ruleTable.has(`+pokemontag:${this.toID(s.isNonstandard)}`)) &&
+					(!s.isNonstandard || this.ruleTable.has(`+tag:${this.toID(s.isNonstandard)}`)) &&
 					s.types.every(type => species.types.includes(type)) &&
 					s.types.length === species.types.length && !this.ruleTable.isBannedSpecies(s)
 				));
@@ -2903,7 +2903,7 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 					return [`Pok\u00e9mon can't fuse with banned Pok\u00e9mon.`, `(${fusionName} is banned.)`];
 				}
 				if (fusion.isNonstandard &&
-					!(this.ruleTable.has(`+pokemontag:${this.toID(fusion.isNonstandard)}`) ||
+					!(this.ruleTable.has(`+tag:${this.toID(fusion.isNonstandard)}`) ||
 						this.ruleTable.has(`+pokemon:${fusion.id}`) ||
 						this.ruleTable.has(`+basepokemon:${this.toID(fusion.baseSpecies)}`))) {
 					return [`${fusion.name} is marked as ${fusion.isNonstandard}, which is banned.`];
@@ -2952,8 +2952,8 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 			if (num > 9 || num < 3 || num % 2 !== 1) {
 				throw new Error("Series length must be an odd number between three and nine (inclusive).");
 			}
-			if (!['singles', 'doubles'].includes(this.format.gameType)) {
-				throw new Error("Only single and doubles battles can be a Best-of series.");
+			if (this.format.playerCount > 2) {
+				throw new Error("Free For All and Multi Battles cannot be a Best-of series.");
 			}
 			return value;
 		},
@@ -3046,7 +3046,7 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 			}
 			const rt = this.ruleTable;
 			if ((this.toID(set.name) !== species.id && this.toID(set.name) !== impersonation.id) ||
-				(impersonation.isNonstandard && !(rt.has(`+pokemontag:${this.toID(impersonation.isNonstandard)}`) ||
+				(impersonation.isNonstandard && !(rt.has(`+tag:${this.toID(impersonation.isNonstandard)}`) ||
 					rt.has(`+pokemon:${impersonation.id}`) || rt.has(`+basepokemon:${this.toID(impersonation.baseSpecies)}`)))) {
 				return [`All Pok\u00e9mon must either have no nickname or must be nicknamed after a Pok\u00e9mon.`];
 			}

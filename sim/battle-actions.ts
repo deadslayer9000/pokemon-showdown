@@ -1751,7 +1751,7 @@ export class BattleActions {
 		}
 
 		// weather modifier
-		baseDamage = this.battle.runEvent('WeatherModifyDamage', pokemon, target, move, baseDamage);
+		baseDamage = this.battle.priorityEvent('WeatherModifyDamage', pokemon, target, move, baseDamage);
 
 		// crit - not a modifier
 		const isCrit = target.getMoveHitData(move).crit;
@@ -1833,9 +1833,13 @@ export class BattleActions {
 		// Final modifier. Modifiers that modify damage after min damage check, such as Life Orb.
 		baseDamage = this.battle.runEvent('ModifyDamage', pokemon, target, move, baseDamage);
 
-		if (target.getMoveHitData(move).brokeProtect) {
+		const bypassProtect = target.getMoveHitData(move).bypassProtect;
+		if (bypassProtect) {
 			baseDamage = this.battle.modify(baseDamage, 0.25);
-			if (move.isZOrMaxPowered) this.battle.add('-zbroken', target);
+			if (bypassProtect !== true && bypassProtect.effectType === 'Ability') {
+				this.battle.add('-ability', pokemon, bypassProtect.name);
+			}
+			this.battle.add('-zbroken', target);
 		}
 
 		// Generation 6-7 moves the check for minimum 1 damage after the final modifier...
@@ -1875,8 +1879,8 @@ export class BattleActions {
 		const altForme = species.otherFormes && this.dex.species.get(species.otherFormes[0]);
 		const item = pokemon.getItem();
 		// Mega Rayquaza
-		if ((this.battle.gen <= 7 || this.battle.ruleTable.has('+pokemontag:past') ||
-			this.battle.ruleTable.has('+pokemontag:future')) &&
+		if ((this.battle.gen <= 7 || this.battle.ruleTable.has('+tag:past') ||
+			this.battle.ruleTable.has('+tag:future')) &&
 			altForme?.isMega && altForme?.requiredMove &&
 			pokemon.baseMoves.includes(toID(altForme.requiredMove)) && !item.zMove) {
 			return altForme.name;

@@ -604,7 +604,7 @@ export class Battle {
 			this.debug(eventid + ' handler suppressed by Mold Breaker');
 			return relayVar;
 		}
-		if (eventid !== 'Start' && eventid !== 'TakeItem' && effect.effectType === 'Item' &&
+		if (eventid !== 'Start' && eventid !== 'TakeItem' && eventid !== 'SetAbility' && effect.effectType === 'Item' &&
 			(target instanceof Pokemon) && target.ignoringItem()) {
 			this.debug(eventid + ' handler suppressed by Embargo, Klutz or Magic Room');
 			return relayVar;
@@ -1301,13 +1301,13 @@ export class Battle {
 		return !!move.flags['contact'];
 	}
 
-	checkMoveBreaksProtect(move: ActiveMove, attacker: Pokemon, defender: Pokemon, blockStatus = true) {
-		if (move.flags['protect'] && (move.category !== 'Status' || blockStatus)) {
+	checkMoveBypassesProtect(move: ActiveMove, attacker: Pokemon, defender: Pokemon, blockStatus = true) {
+		if ((move.category !== 'Status' || blockStatus) && move.flags['protect'] &&
+			this.runEvent('HitProtect', attacker, defender, move)) {
 			return false;
 		}
-		if ((move.isZOrMaxPowered || attacker.hasAbility('piercingdrill')) &&
-			!['gmaxoneblow', 'gmaxrapidflow'].includes(move.id)) {
-			defender.getMoveHitData(move).brokeProtect = true;
+		if (move.isZOrMaxPowered && !['gmaxoneblow', 'gmaxrapidflow'].includes(move.id)) {
+			defender.getMoveHitData(move).bypassProtect = true;
 		}
 		return true;
 	}
@@ -2677,7 +2677,13 @@ export class Battle {
 		if (!action.pokemon) {
 			action.speed = 1;
 		} else {
-			action.speed = action.pokemon.getActionSpeed();
+			if (this.gen <= 4 && action.choice === 'move' && action.fractionalPriority < 0) {
+				// in Gen 4, Pokemon with decrease fractional priority act in reverse speed order
+				// ignores Trick Room, does not ignore boosts and Simple
+				action.speed = -action.pokemon.getStat('spe', false, false);
+			} else {
+				action.speed = action.pokemon.getActionSpeed();
+			}
 		}
 	}
 
@@ -3211,7 +3217,7 @@ export class Battle {
 					item: set.item,
 					ability: set.ability,
 					moves: set.moves,
-					nature: '',
+					nature: this.format.mod.startsWith('champions') ? set.nature : '',
 					gender: pokemon.gender,
 					evs: null!,
 					ivs: null!,
