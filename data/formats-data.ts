@@ -261,7 +261,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	raichumegax: {
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "Uber	",
 	},
 	raichumegay: {
 		tier: "Illegal",
@@ -2552,7 +2552,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "RU",
 	},
 	staraptormega: {
-		tier: "UU",
+		tier: "Uber",
 	},
 	bidoof: {
 		isNonstandard: "Past",
@@ -7600,7 +7600,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	urshifuflashstrike: {
 		tier: "UU",
 		doublesTier: "(DUU)",
-		natDexTier: "UU",
+		natDexTier: "Uber",
 	},
 	keldeodelta: {
 		tier: "RU",
