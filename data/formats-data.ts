@@ -261,7 +261,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	raichumegax: {
 		tier: "Illegal",
-		natDexTier: "Uber	",
+		natDexTier: "Uber",
 	},
 	raichumegay: {
 		tier: "Illegal",
