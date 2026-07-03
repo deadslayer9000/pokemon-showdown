@@ -5,6 +5,18 @@ import type { Learnset } from "../sim/dex-species";
 // The list of formats is stored in config/formats.js
 export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 	// Delta Rulesets
+		signaturezmoveclause: {
+		effectType: 'ValidatorRule',
+		name: 'Signature Z-Move Clause',
+		desc: "Bans Pok&eacute;mon from holding non signature Z-Crystals",
+		onValidateSet(set) {
+			const item = this.dex.items.get(set.item);
+			if (item.zMove === true) return [`${set.name || set.species}'s item ${item.name} is banned by Signature Z-Move Clause.`];
+		},
+		onBegin() {
+			this.add('rule', 'Signature Z-Move Clause: Non-signature Z-Moves are banned');
+		},
+	},
 	/*samecolorclause: {
 		effectType: 'ValidatorRule',
 		name: 'Same Color Clause',

@@ -1,32 +1,4 @@
 export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable = {
-	emboarmega: {
-		inherit: true,
-		abilities: { 0: "Mold Breaker"},
-	},
-	meganiummega: {
-		inherit: true,
-		abilities: { 0: "Mega Sol"},
-	},
-	chandeluremega: {
-		inherit: true,
-		abilities: { 0: "Infiltrator"},
-	},
-	dragonitemega: {
-		inherit: true,
-		abilities: { 0: "Multiscale"},
-	},
-	feraligatrmega: {
-		inherit: true,
-		abilities: { 0: "Dragonize"},
-	},
-	skarmorymega: {
-		inherit: true,
-		abilities: { 0: "Stalwart"},
-	},
-	delphoxmega: {
-		inherit: true,
-		abilities: { 0: "Levitate"},
-	},
 	sevygarde: {
 		inherit: true,
 		baseStats: { hp: 120, atk: 112, def: 100, spa: 100, spd: 80, spe: 88 },
