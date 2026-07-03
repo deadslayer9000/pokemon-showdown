@@ -242,7 +242,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		],
 		unbanlist: [
 			'Arena Trap', 'Good as Gold', 'Shadow Tag', 'Dire Claw', 'Rage Fist', 'Blood Moon', 
-			'Arceus-Bug', 'Arceus-Poison', 'Arceus-Rock', 'Arceus-Ice', 'Arceus-Grass', 'Arceus-Fighting'
+			'Arceus-Bug', 'Arceus-Poison', 'Arceus-Rock', 'Arceus-Ice', 'Arceus-Grass', 'Arceus-Fighting', 'Deoxys-Speed', 'Deoxys-Defense'
 		],
 	},
 	{
