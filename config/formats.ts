@@ -153,18 +153,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		],
 	},
 	{
-		name: "[Gen 9] [ND] Pre Mid Season 6 Patch",
-		searchShow: false,
-		mod: 'prems6patch',
-		ruleset: ['Standard NatDex', 'Terastal Clause'],
-		banlist: [ 'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock', 'Quick Claw',
-			'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail', 'Dire Claw', 'Rage Fist', 'Blood Moon', 'Darkrai', 'Zamazenta', 'Good as Gold'
-		],
-		unbanlist: [
-			'Solgaleo', 'Sneasler', 'Annihilape', 'Ursaluna-Bloodmoon', 'Espathra', 'Roaring Moon',
-		],
-	},
-	{
 		name: "[Gen 9] Random Battle",
 		desc: `Randomized teams of Pok&eacute;mon with sets that are generated to be competitively viable.`,
 		mod: 'gen9',
@@ -217,7 +205,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	},
 	{
 		name: "[Gen 9] [ND] DDL LC",
-		mod: 'gen9',
+		mod: 'prems7patch',
 		searchShow: false,
 		ruleset: ['Standard NatDex', 'Little Cup', 'Item Clause = 2', 'Terastal Clause'],
 		banlist: [
@@ -237,6 +225,34 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		ruleset: ['[Gen 9] National Dex UU'],
 		banlist: ['ND UU', 'ND RUBL'],
 		unbanlist: ["Drought", "Drizzle", "Iron Moon", "Striding Sun"],
+	},
+	{
+		name: "[Gen 9] [ND] Staff Ubers UU",
+		searchShow: false,
+		mod: 'gen9',
+		ruleset: [ 'Standard NatDex', 'Terastal Clause', 'Signature Z-Move Clause', 'Mega Rayquaza Clause', 'Best of = 3',],
+		banlist: [ 'ND AG', 'Power Construct', 
+			'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Light Clay', 'Ultranecrozium Z', 
+
+			'Smeargle', 'Arceus-Normal', 'Arceus-Dark', 'Arceus-Ground', 'Arceus-Dragon', 'Arceus-Electric', 'Arceus-Fairy', 'Arceus-Fire', 'Arceus-Flying', 'Arceus-Ghost', 'Arceus-Water', 'Arceus-Psychic', 'Arceus-Steel', 'Calyrex-Ice', 'Deoxys-Attack', 'Deoxys', 'Ditto', 'Eternatus', 'Giratina-Origin', 'Groudon-Primal', 'Ho-Oh', 'Kyogre-Primal', 'Lunala', 'Marshadow', 'Mewtwo-Mega-Y', 'Necrozma-Dusk-Mane', 'Necrozma-Ultra', 'Salamence-Mega', 'Yveltal', 'Zacian-Crowned', 'Zacian', 'Zygarde-50%', 'Blaziken-Mega', 'Chien-Pao', 'Flutter Mane', 'Groudon', 'Kyogre', 'Kyurem-Black', 'Rayquaza', 'Zekrom', 'Rising Phoenix', 'Iron Storm', 'Iron Revival', 'Whirling Abyss', 'Xerneas', 'Gengar-Mega', 'Gengarite', 'Mewthree', 'Kyurem-Original',
+
+			'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail',
+
+			'Raichu-Mega-Y + Sing', 'No Guard + Sing'
+		],
+		unbanlist: [
+			'Arena Trap', 'Good as Gold', 'Shadow Tag', 'Dire Claw', 'Rage Fist', 'Blood Moon', 
+			'Arceus-Bug', 'Arceus-Poison', 'Arceus-Rock', 'Arceus-Ice', 'Arceus-Grass', 'Arceus-Fighting'
+		],
+	},
+	{
+		name: "[Gen 9] [ND] Ghosting Tournament",
+		searchShow: false,
+		mod: 'pres8patch',
+		ruleset: ['Standard NatDex', 'Standard Draft', 'Terastal Clause'],
+		banlist: [
+			'Barbaracle-Mega + Shell Smash', 'Raichu-Mega-Y + Sing'
+		]
 	},
 	{
 		name: "[Gen 9] [ND] DPL OU",
@@ -329,6 +345,30 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		name: "[Gen 9] [ND] Pre Season 6 Patch",
 		searchShow: false,
 		mod: 'pres6patch',
+		ruleset: ['Standard NatDex', 'Terastal Clause'],
+		banlist: [ 'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock', 'Quick Claw',
+			'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail', 'Dire Claw', 'Rage Fist', 'Blood Moon', 'Darkrai', 'Zamazenta', 'Good as Gold'
+		],
+		unbanlist: [
+			'Solgaleo', 'Sneasler', 'Annihilape', 'Ursaluna-Bloodmoon', 'Espathra', 'Roaring Moon',
+		],
+	},
+	{
+		name: "[Gen 9] [ND] Pre Mid Season 6 Patch",
+		searchShow: false,
+		mod: 'prems6patch',
+		ruleset: ['Standard NatDex', 'Terastal Clause'],
+		banlist: [ 'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock', 'Quick Claw',
+			'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail', 'Dire Claw', 'Rage Fist', 'Blood Moon', 'Darkrai', 'Zamazenta', 'Good as Gold'
+		],
+		unbanlist: [
+			'Solgaleo', 'Sneasler', 'Annihilape', 'Ursaluna-Bloodmoon', 'Espathra', 'Roaring Moon',
+		],
+	},
+	{
+		name: "[Gen 9] [ND] Pre Season 8 Patch",
+		searchShow: false,
+		mod: 'pres8patch',
 		ruleset: ['Standard NatDex', 'Terastal Clause'],
 		banlist: [ 'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock', 'Quick Claw',
 			'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail', 'Dire Claw', 'Rage Fist', 'Blood Moon', 'Darkrai', 'Zamazenta', 'Good as Gold'
