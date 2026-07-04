@@ -29,11 +29,11 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		name: "[Gen 9] National Dex",
 		mod: 'gen9',
-		ruleset: ['Standard NatDex', 'Terastal Clause',],
+		ruleset: ['Standard NatDex', 'Terastal Clause', 'Signature Z-Move Clause'],
 		banlist: [
 			'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock',
-			'Quick Claw', 'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail', 'Dire Claw', 'Rage Fist', 'Blood Moon', 'Darkrai', 'Zamazenta', 'Good as Gold',  'Raichunite Y', 'Delphoxite', 'Delphox-Mega', 'Raichu-Mega-Y', 'Walking Wake',
-			'Normalium Z', 'Fightinium Z', 'Flyinium Z', 'Poisonium Z', 'Groundium Z', 'Rockium Z', 'Buginium Z', 'Ghostium Z', 'Steelium Z', 'Firium Z', 'Waterium Z', 'Grassium Z', 'Electrium Z', 'Psychium Z', 'Icium Z', 'Dragonium Z', 'Darkinium Z', 'Fairium Z'
+			'Quick Claw', 'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail', 'Dire Claw', 'Rage Fist', 'Blood Moon', 'Darkrai', 'Zamazenta', 'Good as Gold', 'Raichunite X', 'Raichunite Y', 'Delphoxite', 'Delphox-Mega', 'Raichu-Mega-Y', 'Walking Wake',
+			//'Normalium Z', 'Fightinium Z', 'Flyinium Z', 'Poisonium Z', 'Groundium Z', 'Rockium Z', 'Buginium Z', 'Ghostium Z', 'Steelium Z', 'Firium Z', 'Waterium Z', 'Grassium Z', 'Electrium Z', 'Psychium Z', 'Icium Z', 'Dragonium Z', 'Darkinium Z', 'Fairium Z'
 		],/*
 		unbanlist: [
 			'Ursaluna-Bloodmoon', 'Espathra', 'Roaring Moon', 'Dragapult',  'Raichu-Mega-X', 'Absol-Mega-Z', 'Chesnaught-Mega', 'Absolite Z', 'Raichunite X', 'Chesnaughtite', 'Hawlucha-Mega', 'Hawluchanite', 'Chandelure-Mega', 'Chandelurite', 
@@ -234,7 +234,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		banlist: [ 'ND AG', 'Power Construct', 
 			'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Light Clay', 'Ultranecrozium Z', 
 
-			'Smeargle', 'Arceus-Normal', 'Arceus-Dark', 'Arceus-Ground', 'Arceus-Dragon', 'Arceus-Electric', 'Arceus-Fairy', 'Arceus-Fire', 'Arceus-Flying', 'Arceus-Ghost', 'Arceus-Water', 'Arceus-Psychic', 'Arceus-Steel', 'Calyrex-Ice', 'Calyrex-Wave', 'Deoxys-Attack', 'Deoxys', 'Ditto', 'Eternatus', 'Giratina-Origin', 'Groudon-Primal', 'Ho-Oh', 'Kyogre-Primal', 'Lunala', 'Marshadow', 'Mewtwo-Mega-Y', 'Necrozma-Dusk-Mane', 'Necrozma-Ultra', 'Salamence-Mega', 'Yveltal', 'Zacian-Crowned', 'Zacian', 'Zygarde-50%', 'Blaziken-Mega', 'Chien-Pao', 'Flutter Mane', 'Groudon', 'Kyogre', 'Kyurem-Black', 'Rayquaza', 'Zekrom', 'Rising Phoenix', 'Iron Storm', 'Iron Revival', 'Whirling Abyss', 'Xerneas', 'Gengar-Mega', 'Gengarite', 'Mewthree', 'Kyurem-Original', 'Striding Sun', 'Iron Moon',
+			'Smeargle', 'Arceus-Normal', 'Arceus-Dark', 'Arceus-Ground', 'Arceus-Dragon', 'Arceus-Electric', 'Arceus-Fairy', 'Arceus-Fire', 'Arceus-Flying', 'Arceus-Ghost', 'Arceus-Water', 'Arceus-Psychic', 'Arceus-Steel', 'Calyrex-Ice', 'Calyrex-Wave', 'Deoxys-Attack', 'Ditto', 'Eternatus', 'Giratina-Origin', 'Groudon-Primal', 'Ho-Oh', 'Kyogre-Primal', 'Lunala', 'Marshadow', 'Mewtwo-Mega-Y', 'Necrozma-Dusk-Mane', 'Necrozma-Ultra', 'Salamence-Mega', 'Yveltal', 'Zacian-Crowned', 'Zacian', 'Zygarde-50%', 'Blaziken-Mega', 'Chien-Pao', 'Flutter Mane', 'Groudon', 'Kyogre', 'Kyurem-Black', 'Rayquaza', 'Zekrom', 'Rising Phoenix', 'Iron Storm', 'Iron Revival', 'Whirling Abyss', 'Xerneas', 'Gengar-Mega', 'Gengarite', 'Mewthree', 'Kyurem-Original', 'Striding Sun', 'Iron Moon',
 
 			'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail',
 
