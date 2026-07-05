@@ -248,7 +248,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		name: "[Gen 9] [ND] Ghosting Tournament",
 		searchShow: false,
-		mod: 'pres8patch',
+		mod: 'gen9',
 		ruleset: ['Standard NatDex', 'Standard Draft', 'Terastal Clause'],
 		banlist: [
 			'Barbaracle-Mega + Shell Smash', 'Raichu-Mega-Y + Sing',  'Blastoise-Mega + Shell Smash', 'Hidden Power', 'Dire Claw',
