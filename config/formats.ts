@@ -230,7 +230,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		name: "[Gen 9] [ND] Staff Ubers UU",
 		searchShow: false,
 		mod: 'gen9',
-		ruleset: [ 'Standard NatDex', 'Terastal Clause', 'Signature Z-Move Clause', 'Mega Rayquaza Clause', 'Best of = 3',],
+		ruleset: [ 'Standard NatDex', 'Terastal Clause', 'Signature Z-Move Clause', 'Mega Rayquaza Clause'],
 		banlist: [ 'ND AG', 'Power Construct', 
 			'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Light Clay', 'Ultranecrozium Z', 
 
