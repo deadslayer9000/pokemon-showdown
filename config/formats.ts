@@ -34,6 +34,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock',
 			'Quick Claw', 'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail', 'Dire Claw', 'Rage Fist', 'Blood Moon', 'Darkrai', 'Zamazenta', 'Good as Gold', 'Raichunite X', 'Raichunite Y', 'Delphoxite', 'Delphox-Mega', 'Raichu-Mega-Y', 'Walking Wake',
 			//'Normalium Z', 'Fightinium Z', 'Flyinium Z', 'Poisonium Z', 'Groundium Z', 'Rockium Z', 'Buginium Z', 'Ghostium Z', 'Steelium Z', 'Firium Z', 'Waterium Z', 'Grassium Z', 'Electrium Z', 'Psychium Z', 'Icium Z', 'Dragonium Z', 'Darkinium Z', 'Fairium Z'
+			'Floette-Mega', 'Victreebel-Mega', 'Starmie-Mega', 'Pyroar-Mega', 'Glimmora-Mega', 'Clefable-Mega'
 		],/*
 		unbanlist: [
 			'Ursaluna-Bloodmoon', 'Espathra', 'Roaring Moon', 'Dragapult',  'Raichu-Mega-X', 'Absol-Mega-Z', 'Chesnaught-Mega', 'Absolite Z', 'Raichunite X', 'Chesnaughtite', 'Hawlucha-Mega', 'Hawluchanite', 'Chandelure-Mega', 'Chandelurite', 
