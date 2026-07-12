@@ -1279,6 +1279,9 @@ export const Aliases: import('../sim/dex').AliasesTable = {
 	ultrapple: "Hydrapple-Ultra",
 	virus: "Reuniclus-Ultra",
 	pathogen: "Reuniclus-Ultra",
+	pagosgalactic: "Terapagos-ATOM-Galactic",
+	pagoscosmic: "Terapagos-ATOM-Cosmic",
+	pagosatom: "Terapagos-ATOM-Cosmic",
 
 	// ultra beast codenames --- ordered by dex number
 	ub01: "Nihilego",
