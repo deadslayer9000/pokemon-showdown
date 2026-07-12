@@ -26540,7 +26540,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	buizelatom: {
 		num: 418,
 		name: "Buizel-ATOM",
-		baseSpecies: "Buziel",
+		baseSpecies: "Buizel",
 		gender: "N",
 		forme: "ATOM",
 		types: ["Fire", "Water"],
