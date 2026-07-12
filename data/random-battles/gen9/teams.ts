@@ -39,6 +39,7 @@ interface BattleFactorySet {
 	ivs?: Partial<StatsTable>;
 	shiny?: boolean;
 	level?: number;
+	weatherSetter?: boolean;
 }
 interface BSSFactorySet {
 	species: string;
@@ -2756,6 +2757,10 @@ export class RandomTeams {
 			if (set.wantsTera && teamData.wantsTeraCount) {
 				continue;
 			}
+			// limit to 1 weather setter per team
+			if (set.weatherSetter && teamData.has['weather']) {
+				continue;
+			}
 
 			// reject disallowed items, specifically a second of any given choice item
 			const allowedItems: string[] = [];
@@ -2894,7 +2899,19 @@ export class RandomTeams {
 		};
 		const abilitiesLimited: { [k: string]: string } = {
 			toxicdebris: 'toxicSpikes',
+			drizzle: 'weather',
+			drought: 'weather',
+			sandstream: 'weather',
+			snowwarning: 'weather',
 		};
+		//does nothing yet
+		const weatherAbilitiesRequire: { [k: string]: string } = {
+			hydration: 'raindance', swiftswim: 'raindance',
+			leafguard: 'sunnyday', solarpower: 'sunnyday', chlorophyll: 'sunnyday',
+			sandforce: 'sandstorm', sandrush: 'sandstorm', sandveil: 'sandstorm',
+			slushrush: 'hail', snowcloak: 'hail',
+		};
+		const weatherAbilities = ['drizzle', 'drought', 'snowwarning', 'sandstream'];
 		const limitFactor = Math.ceil(this.maxTeamSize / 6);
 		/**
 		 * Weighted random shuffle
@@ -2945,6 +2962,12 @@ export class RandomTeams {
 
 			// Limit the number of Z moves to one
 			if (teamData.zCount && teamData.zCount >= 1 && itemData.zMove) continue;
+			// can prob remove this ill test later
+			// marks a team with weather after adding a mon with weather setting ability
+			const abilityId = toID(set.ability);
+			if (['drizzle', 'drought', 'sandstream', 'snowwarning'].includes(abilityId)) {
+   				teamData.has['weather'] = 1;
+			}
 
 			// Limit 2 of any type (most of the time)
 			const types = species.types;
@@ -3014,6 +3037,10 @@ export class RandomTeams {
 			if (set.wantsTera) {
 				if (!teamData.wantsTeraCount) teamData.wantsTeraCount = 0;
 				teamData.wantsTeraCount++;
+			}
+
+			if (set.weatherSetter){ 
+				teamData.has['weather'] = 1;
 			}
 
 			for (const move of set.moves) {

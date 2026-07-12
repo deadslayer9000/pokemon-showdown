@@ -3496,6 +3496,7 @@
 				{
 					"species": "Pelipper",
 					"weight": 100,
+					"weatherSetter": true,
 					"item": ["Damp Rock"],
 					"ability": ["Drizzle"],
 					"evs": { "hp": 248, "def": 252, "spd": 8 },
@@ -3940,6 +3941,7 @@
 				{
 					"species": "Torkoal",
 					"weight": 100,
+					"weatherSetter": true,
 					"item": ["Heat Rock"],
 					"ability": ["Drought"],
 					"evs": { "hp": 248, "def": 252, "spd": 8 },
@@ -3961,6 +3963,7 @@
 				{
 					"species": "Tyranitar",
 					"weight": 50,
+					"weatherSetter": true,
 					"item": ["Tyranitarite"],
 					"ability": ["Sand Stream"],
 					"evs": { "hp": 92, "atk": 252, "spe": 164 },
@@ -3976,6 +3979,7 @@
 				{
 					"species": "Tyranitar",
 					"weight": 50,
+					"weatherSetter": true,
 					"item": ["Assault Vest"],
 					"ability": ["Sand Stream"],
 					"evs": { "hp": 252, "atk": 252, "spd": 4 },
@@ -3997,6 +4001,7 @@
 				{
 					"species": "Hippowdon",
 					"weight": 100,
+					"weatherSetter": true,
 					"item": ["Smooth Rock", "Rocky Helmet"],
 					"ability": ["Sand Stream"],
 					"evs": {"hp": 252, "def": 252, "spd": 4},
@@ -6015,6 +6020,7 @@
 			"sets": [{
 				"species": "Tyranitar",
 				"weight": 50,
+				"weatherSetter": true,
 				"item": ["Leftovers"],
 				"ability": ["Sand Stream"],
 				"evs": {"hp": 252, "spd": 212, "spe": 44},
@@ -6024,6 +6030,7 @@
 			}, {
 				"species": "Tyranitar",
 				"weight": 50,
+				"weatherSetter": true,
 				"item": ["Choice Band"],
 				"ability": ["Sand Stream"],
 				"evs": {"atk": 252, "spd": 4, "spe": 252},
@@ -8832,6 +8839,7 @@
 				{
 					"species": "Torkoal",
 					"weight": 100,
+					"weatherSetter": true,
 					"item": ["Heat Rock"],
 					"ability": ["Drought"],
 					"evs": { "hp": 248, "def": 252, "spd": 8 },
@@ -8852,6 +8860,7 @@
 			"sets": [{
 					"species": "Hippowdon",
 					"weight": 80,
+					"weatherSetter": true,
 					"item": ["Leftovers", "Rocky Helmet"],
 					"ability": ["Sand Stream"],
 					"evs": {"hp": 252, "def": 252, "spd": 4},
@@ -8861,6 +8870,7 @@
 			}, {
 					"species": "Hippowdon",
 					"weight": 20,
+					"weatherSetter": true,
 					"item": ["Leftovers", "Rocky Helmet"],
 					"ability": ["Sand Stream"],
 					"evs": {"hp": 252, "def": 252, "spd": 4},
@@ -9305,6 +9315,7 @@
 			"sets": [{
 				"species": "Hippowdon",
 				"weight": 80,
+				"weatherSetter": true,
 				"item": ["Leftovers", "Rocky Helmet"],
 				"ability": ["Sand Stream"],
 				"evs": {"hp": 252, "def": 252, "spd": 4},
@@ -9314,6 +9325,7 @@
 			}, {
 				"species": "Hippowdon",
 				"weight": 20,
+				"weatherSetter": true,
 				"item": ["Leftovers", "Rocky Helmet"],
 				"ability": ["Sand Stream"],
 				"evs": {"hp": 252, "def": 252, "spd": 4},
@@ -9939,6 +9951,7 @@
 			"sets": [{
 				"species": "Ninetales-Alola",
 				"wantsTera": true,
+				"weatherSetter": true,
 				"weight": 100,
 				"item": ["Heavy-Duty Boots"],
 				"ability": ["Snow Warning"],
@@ -10328,7 +10341,7 @@
 				{
 					"species": "Dragalge-Mega",
 					"weight": 100,
-					"item": ["Dragalgeite"],
+					"item": ["Dragalgite"],
 					"ability": ["Adaptability"],
 					"evs": { "hp": 252, "def": 252, "spd": 4 },
 					"nature": ["Relaxed"],
