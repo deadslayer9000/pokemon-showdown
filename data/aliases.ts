@@ -1282,6 +1282,7 @@ export const Aliases: import('../sim/dex').AliasesTable = {
 	pagosgalactic: "Terapagos-ATOM-Galactic",
 	pagoscosmic: "Terapagos-ATOM-Cosmic",
 	pagosatom: "Terapagos-ATOM-Cosmic",
+	shayo: "Skaymin-Omega-Sky",
 
 	// ultra beast codenames --- ordered by dex number
 	ub01: "Nihilego",

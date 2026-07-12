@@ -7807,4 +7807,16 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "UU",
 		doublesTier: "DUU",
 	},
+	buizelatom: {
+		tier: "UU",
+		natDexTier: "UU",
+	},
+	shayminomega: {
+		tier: "UU",
+		natDexTier: "UU",
+	},
+	shayminomegasky: {
+		tier: "UU",
+		natDexTier: "UU",
+	}
 };

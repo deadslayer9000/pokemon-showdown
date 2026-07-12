@@ -10190,6 +10190,70 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 2,
 		num: -112,
 	},
+	unchained: {
+		onStart(pokemon) {
+			this.boost({ spe: 1 }, pokemon);
+		},
+		flags: {},
+		name: "Unchained",
+		rating: 3,
+		num: -113,
+	},
+	fulltilt: {
+		onStart(pokemon) {
+			pokemon.abilityState.choiceLock = "";
+		},
+		onBeforeMove(pokemon, target, move) {
+			if (move.isZOrMaxPowered || move.id === "struggle") return;
+			if (
+				pokemon.abilityState.choiceLock &&
+				pokemon.abilityState.choiceLock !== move.id
+			) {
+				// Fails unless ability is being ignored (these events will not run), no PP lost.
+				this.addMove("move", pokemon, move.name);
+				this.attrLastMove("[still]");
+				this.debug("Disabled by Full Tilt");
+				this.add("-fail", pokemon);
+				return false;
+			}
+		},
+		onModifyMove(move, pokemon) {
+			if (
+				pokemon.abilityState.choiceLock ||
+				move.isZOrMaxPowered ||
+				move.id === "struggle"
+			)
+				return;
+			pokemon.abilityState.choiceLock = move.id;
+		},
+		onModifyAtkPriority: 1,
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.volatiles["dynamax"]) return;
+			// PLACEHOLDER
+			this.debug("Full Tilt Atk Boost");
+			return this.chainModify(1.5);
+		},
+		onDisableMove(pokemon) {
+			if (!pokemon.abilityState.choiceLock) return;
+			if (pokemon.volatiles["dynamax"]) return;
+			for (const moveSlot of pokemon.moveSlots) {
+				if (moveSlot.id !== pokemon.abilityState.choiceLock) {
+					pokemon.disableMove(
+						moveSlot.id,
+						false,
+						this.effectState.sourceEffect
+					);
+				}
+			}
+		},
+		onEnd(pokemon) {
+			pokemon.abilityState.choiceLock = "";
+		},
+		flags: {},
+		name: "Full Tilt",
+		rating: 4.5,
+		num: -114,
+	},
 	// CAP
 	mountaineer: {
 		onDamage(damage, target, source, effect) {
