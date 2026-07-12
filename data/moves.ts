@@ -27996,4 +27996,23 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		target: "normal",
 		type: "Poison",
 	},
+	teslablitz: {
+		num: -138,
+		accuracy: 90,
+		basePower: 95,
+		category: "Special",
+		name: "Tesla Blitz",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		onBasePower(basePower, source, target, move) {
+			if (target.runEffectiveness(move) > 0) {
+				// Placeholder
+				this.debug(`tesla blitz super effective buff`);
+				return this.chainModify([4915, 4096]);
+			}
+		},
+		target: "normal",
+		type: "Electric",
+	},
 };

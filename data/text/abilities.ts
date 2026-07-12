@@ -764,6 +764,11 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Full Metal Body",
 		shortDesc: "Prevents other Pokemon from lowering this Pokemon's stat stages.",
 	},
+	fulltilt: {
+		name: "Full Tilt",
+		desc: "This Pokemon's Attack is multiplied by 1.5, but it can only select the first move it executes. These effects are prevented while this Pokemon is Dynamaxed.",
+		shortDesc: "This Pokemon's Attack is 1.5x, but it can only select the first move it executes.",
+	},
 	furcoat: {
 		name: "Fur Coat",
 		shortDesc: "This Pokemon's Defense is doubled.",
@@ -2615,6 +2620,11 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Unburden",
 		desc: "If this Pokemon loses its held item for any reason, its Speed is doubled as long as it remains active, has this Ability, and is not holding an item.",
 		shortDesc: "Speed is doubled on held item loss; boost is lost if it switches, gets new item/Ability.",
+	},
+	unchained: {
+		name: "Unchained",
+		shortDesc: "Speed is increaded by one stage when the user enters the field.",
+		desc: "Speed is increaded by one stage when the user enters the field.",
 	},
 	unnerve: {
 		name: "Unnerve",

@@ -7431,6 +7431,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Power doubles if the user is grounded and a terrain is active, and this move's type changes to match. Electric type during Electric Terrain, Grass type during Grassy Terrain, Fairy type during Misty Terrain, and Psychic type during Psychic Terrain.",
 		shortDesc: "User on terrain: power doubles, type varies.",
 	},
+	teslablitz: {
+		name: "Tesla Blitz",
+		shortDesc: "Deals 1.2x damage with supereffective hits.",
+	},
 	thebelltolls: {
 		name: "The Bell Tolls",
 		desc: "If it is this Pokemon's first turn on the field, then it raises Special Attack by 1.",
