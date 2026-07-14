@@ -215,5 +215,5 @@ inherit: 'gen9',
 	  this.modData("Learnsets", "houndstone").learnset.swagger = ["9M"];
 	  this.modData("Learnsets", "houndstone").learnset.zenheadbutt = ["9M"];
 	  this.modData("Learnsets", "gholdengo").learnset.surf = ["9M"];
-	}
+	},
 };
