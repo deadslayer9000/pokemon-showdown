@@ -6413,7 +6413,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	pyroclastic: {
 		onModifyMovePriority: -1,
 		onModifyMove(move) {
-			if (move.type === "Rock") {
+			if (move.type === "Rock" && move.category != "Status") {
 				if (!move.secondaries) move.secondaries = [];
 				for (const secondary of move.secondaries) {
 					if (secondary.status === "brn") return;
