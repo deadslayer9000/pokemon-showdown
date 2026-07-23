@@ -3491,7 +3491,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Hydroswirl Fury",
 		shortDesc: "Hoopa-O-U: Binds target 2-5 turns; Bypasses Sub.",
 
-		activate: " [POKEMON} was trapped by a swirling vortex!",
+		activate: " [POKEMON] was trapped by a swirling vortex!",
 	},
 	hydroswirlhole: {
 		name: "Hydroswirl Hole",
