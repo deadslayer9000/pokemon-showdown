@@ -10258,10 +10258,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		onResidualOrder: 5,
 		onResidualSubOrder: 3,
 		onResidual(pokemon) {
-			if (
-				pokemon.status &&
-				["raindance", "primordialsea"].includes(pokemon.effectiveWeather())
-			) {
+			if (["raindance", "primordialsea"].includes(pokemon.effectiveWeather())) {
 				this.debug("emperorwake");
 				this.add("-activate", pokemon, "ability: Emperor Wake");
 				this.boost({ atk: 1 }, pokemon);
