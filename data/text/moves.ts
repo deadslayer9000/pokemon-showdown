@@ -3483,6 +3483,14 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Hydro Pump",
 		shortDesc: "No additional effect.",
 	},
+	hydroswirlfury: {
+		name: "Hydroswirl Fury",
+		shortDesc: "Hoopa-Omega-U: Binds target 2-5 turns; Bypasses Substitute.",
+	},
+	hydroswirlhole: {
+		name: "Hydroswirl Hole",
+		shortDesc: "Binds target for 2-5 turns. Bypasses Substitute."
+	},
 	hydrosteam: {
 		name: "Hydro Steam",
 		desc: "If the current weather is Sunny Day and the user is not holding Utility Umbrella, this move's damage is multiplied by 1.5 instead of halved for being Water type.",

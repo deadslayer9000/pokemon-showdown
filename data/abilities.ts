@@ -10254,6 +10254,24 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 4.5,
 		num: -114,
 	},
+	emperorwake: {
+		onResidualOrder: 5,
+		onResidualSubOrder: 3,
+		onResidual(pokemon) {
+			if (
+				pokemon.status &&
+				["raindance", "primordialsea"].includes(pokemon.effectiveWeather())
+			) {
+				this.debug("emperorwake");
+				this.add("-activate", pokemon, "ability: Emperor Wake");
+				this.boost({ atk: 1 }, pokemon);
+			}
+		},
+		flags: {},
+		name: "Emperor Wake",
+		num: -115,
+		rating: 3.5,
+	}
 	// CAP
 	mountaineer: {
 		onDamage(damage, target, source, effect) {

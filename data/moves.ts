@@ -28015,4 +28015,61 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		target: "normal",
 		type: "Electric",
 	},
+	flareup: {
+		num: -139,
+		accuracy: 100,
+		basePower: 70,
+		category: "Special",
+		name: "Flare Up",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		basePowerCallback(pokemon) {
+			return Math.min(210, 70 + 35 * pokemon.timesAttacked);
+		},
+		target: "normal",
+		type: "Fire",
+	},
+	hydroswirlhole: {
+		num: -140,
+		accuracy: 90,
+		basePower: 90,
+		category: "Special",
+		name: "Hydroswirl Hole",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1, bypasssub: 1 },
+		volatileStatus: 'hydroswirltrapped',
+		target: "normal",
+		type: "Water",
+	},
+	hydroswirlfury: {
+		num: -141,
+		accuracy: 90,
+		basePower: 110,
+		category: "Physical",
+		name: "Hydroswirl Fury",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1, bypasssub: 1 },
+		volatileStatus: 'hydroswirltrapped',
+		onTry(source) {
+			if (source.species.name === "Hoopa-Omega-Unbound") {
+				return;
+			}
+			this.hint(
+				"Only a Pokemon whose form is Hoopa Omega Unbound can use this move."
+			);
+			if (source.species.name === "Hoopa-Omega") {
+				this.attrLastMove("[still]");
+				this.add("-fail", source, "move: Hydroswirl Fury", "[forme]");
+				return null;
+			}
+			this.attrLastMove("[still]");
+			this.add("-fail", source, "move: Hydroswirl Fury");
+			return null;
+		},
+		target: "normal",
+		type: "Water",
+	}
 };
