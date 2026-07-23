@@ -10271,7 +10271,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		name: "Emperor Wake",
 		num: -115,
 		rating: 3.5,
-	}
+	},
 	// CAP
 	mountaineer: {
 		onDamage(damage, target, source, effect) {
