@@ -7818,5 +7818,17 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	shayminomegasky: {
 		tier: "UU",
 		natDexTier: "UU",
+	},
+	hoopaomega: {
+		tier: "UU",
+		natDexTier: "UU",
+	},
+	ampharia: {
+		tier: "UU",
+		natDexTier: "UU",
+	},
+	azelfomega: {
+		tier: "UU",
+		natDexTier: "UU",
 	}
 };

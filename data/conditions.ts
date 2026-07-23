@@ -255,6 +255,37 @@ export const Conditions: import('../sim/dex-conditions').ConditionDataTable = {
 			if (this.effectState.source?.isActive || gmaxEffect) pokemon.tryTrap();
 		},
 	},
+	hydroswirltrapped: {
+		name: 'hydroswirltrapped',
+		duration: 5,
+		durationCallback(target, source) {
+			return this.random(3, 6);
+		},
+		onStart(pokemon, source) {
+			this.add('-start', pokemon, 'hydroswirltrapped');
+			this.add('-activate', pokemon, 'move: ' + this.effectState.sourceEffect, `[of] ${source}`);
+			this.effectState.boundDivisor = source.hasItem('bindingband') ? 6 : 8;
+		},
+		onResidualOrder: 13,
+		onResidual(pokemon) {
+			const source = this.effectState.source;
+			// G-Max Centiferno and G-Max Sandblast continue even after the user leaves the field
+			const gmaxEffect = ['gmaxcentiferno', 'gmaxsandblast'].includes(this.effectState.sourceEffect.id);
+			if (source && (!source.isActive || source.hp <= 0 || !source.activeTurns) && !gmaxEffect) {
+				delete pokemon.volatiles['hydroswirltrapped'];
+				this.add('-end', pokemon, this.effectState.sourceEffect, '[hydroswirltrapped]', '[silent]');
+				return;
+			}
+			this.damage(pokemon.baseMaxhp / this.effectState.boundDivisor);
+		},
+		onEnd(pokemon) {
+			this.add('-end', pokemon, this.effectState.sourceEffect, '[hydroswirltrapped]');
+		},
+		onTrapPokemon(pokemon) {
+			const gmaxEffect = ['gmaxcentiferno', 'gmaxsandblast'].includes(this.effectState.sourceEffect.id);
+			if (this.effectState.source?.isActive || gmaxEffect) pokemon.tryTrap();
+		},
+	},
 	lockedmove: {
 		// Outrage, Thrash, Petal Dance...
 		name: 'lockedmove',
