@@ -7830,5 +7830,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	azelfomega: {
 		tier: "UU",
 		natDexTier: "UU",
-	}
+	},
+	hoopaomegaunbound: {
+		tier: "Uber",
+		natDexTier: "Uber",
+	},
 };
