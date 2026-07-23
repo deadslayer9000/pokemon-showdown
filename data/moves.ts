@@ -28024,8 +28024,10 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		pp: 10,
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
-		basePowerCallback(pokemon) {
-			return Math.min(210, 70 + 35 * pokemon.timesAttacked);
+		basePowerCallback(pokemon, target, move) {
+			const bp = Math.min(210, 70 + 35 * pokemon.timesAttacked);
+			this.hint(`${move.name} hit with ${bp}Base Power!`);
+			return bp;
 		},
 		target: "normal",
 		type: "Fire",

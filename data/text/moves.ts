@@ -2365,6 +2365,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			shortDesc: "Has 1/3 recoil. 10% chance to burn. Thaws user.",
 		},
 	},
+	flareup: {
+		name: "Flare Up",
+		shortDesc: "+35 power for each time user was hit. Max 4 hits.",
+	},
 	flash: {
 		name: "Flash",
 		desc: "Lowers the target's accuracy by 1 stage.",
@@ -3485,11 +3489,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	hydroswirlfury: {
 		name: "Hydroswirl Fury",
-		shortDesc: "Hoopa-Omega-U: Binds target 2-5 turns; Bypasses Substitute.",
+		shortDesc: "Hoopa-O-U: Binds target 2-5 turns; Bypasses Sub.",
 	},
 	hydroswirlhole: {
 		name: "Hydroswirl Hole",
-		shortDesc: "Binds target for 2-5 turns. Bypasses Substitute."
+		shortDesc: "Binds target for 2-5 turns. Bypasses Sub."
 	},
 	hydrosteam: {
 		name: "Hydro Steam",
