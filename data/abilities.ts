@@ -10125,7 +10125,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -110,
 	},
 	weeding: {
-		onAfterMoveSecondary(target, source, move) {
+		onAfterMoveSecondarySelf(source, target, move) {
 			if(move.category === "Physical" || move.category === "Special"){
 				if (move.type === "Grass"){
 					this.add("-activate", source, "ability: Weeding");
