@@ -317,7 +317,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	conductor: {
 		name: "Conductor",
-		shortDesc: "Encore, Instruct, and Tailwind gain +1 priority.",
+		shortDesc: "Sound Immunity. Encore, Instruct, and Tailwind gain +1 priority.",
 	},
 	confusionconjurer: {
 		name: "Confusion Conjurer",
