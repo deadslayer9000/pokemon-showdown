@@ -803,7 +803,7 @@
 				{
 					"species": "Terapagos-ATOM",
 					"weight": 50,
-					"item": ["Galactic Terapagium Z"],
+					"item": ["Galactic Terapagosium Z"],
 					"ability": ["Cosmo Shift"],
 					"evs": { "hp": 252, "def": 252, "spd": 4 },
 					"nature": ["Relaxed"],
@@ -818,7 +818,7 @@
 				{
 					"species": "Terapagos-ATOM",
 					"weight": 50,
-					"item": ["Galactic Terapagium Z"],
+					"item": ["Galactic Terapagosium Z"],
 					"ability": ["Cosmo Shift"],
 					"evs": { "spa": 252, "spe": 252, "spd": 4 },
 					"nature": ["Timid"],
