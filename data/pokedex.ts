@@ -26616,7 +26616,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		name: "Hoopa-Omega-Unbound",
 		forme: "Omega-Unbound",
 		baseSpecies: "Hoopa-Unbound",
-		types: ["Water", "Psychic"],
+		types: ["Water", "Dark"],
 		gender: "N",
 		baseStats: { hp: 80, atk: 160, def: 60, spa: 170, spd: 130, spe: 80 },
 		abilities: { 0: "Emperor Wake" },
