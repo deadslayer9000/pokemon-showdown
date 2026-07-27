@@ -450,7 +450,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		itemUser: ["Wynaut-ATOM"],
 		num: -38,
 	},
-	atomterapagiumz: {
+	atomterapagosiumz: {
 		name: "Atom Terapagosium Z",
 		spritenum: 631,
 		onTakeItem: false,
@@ -459,7 +459,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		itemUser: ["Terapagos-ATOM", "Terapagos-ATOM-Cosmic"],
 		num: -39,
 	},
-	galacticterapagiumz: {
+	galacticterapagosiumz: {
 		name: "Galactic Terapagosium Z",
 		spritenum: 631,
 		onTakeItem: false,

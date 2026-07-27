@@ -9943,7 +9943,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			if (pokemon.baseSpecies.baseSpecies !== "Terapagos") return;
 			if (pokemon.species.forme !== "Cosmic") {
 				this.add("-activate", pokemon, "ability: Cosmo Shift");
-				pokemon.formeChange("Terapagos-ATOM-Cosmic", this.effect, true);
+				pokemon.formeChange("Terapagos-ATOM-Galactic", this.effect, true);
 			}
 		},
 		flags: {
@@ -9972,7 +9972,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	zodiacorbit: {
 		onStart(pokemon) {
-			if (pokemon.baseSpecies.name !== "Terapagos-ATOM-Galactic" && !pokemon.zodiac) return;
+			if (pokemon.baseSpecies.name !== "Terapagos-ATOM-Cosmic" && !pokemon.zodiac) return;
 			if (this.field.weather || this.field.terrain) {
 				this.add("-ability", pokemon, "Zodiac Orbit");
 				this.field.clearWeather();
