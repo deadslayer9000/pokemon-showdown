@@ -26247,7 +26247,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "White",
 		eggGroups: ["Undiscovered"],
 		forme: "Galactic",
-		requiredItem: "Galactic Terapagium Z"
+		requiredItem: "Galactic Terapagosium Z"
 	},
 	spindaatom: {
 		num: 327,

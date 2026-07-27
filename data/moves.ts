@@ -27304,7 +27304,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		pp: 1,
 		priority: 0,
 		flags: {},
-		isZ: "atomterapagiumz",
+		isZ: "atomterapagosiumz",
 		condition: {
 			onStart(target) {
 				if (target.activeTurns && !this.queue.willMove(target)) {
@@ -27345,7 +27345,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		pp: 1,
 		priority: 0,
 		flags: {},
-		isZ: "galacticterapagiumz",
+		isZ: "galacticterapagosiumz",
 		onAfterMove(pokemon) {
 			this.hint(pokemon.name);
 			if(pokemon.species.name === "Terapagos-ATOM-Cosmic") {

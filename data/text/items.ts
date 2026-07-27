@@ -122,12 +122,12 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Atom Wynautium Z",
 		shortDesc: "If Held by Wynaut-ATOM with Ice Hammer, it can use Collapsing Club Press.",
 	},
-	atomterapagiumz: {
-		name: "Atom Terapagium Z",
+	atomterapagosiumz: {
+		name: "Atom Terapagosium Z",
 		shortDesc: "If held by Terapagos-ATOM with Zenith Storm, it can use Astral Burst."
 	},
-	galacticterapagiumz: {
-		name: "Galactic Terapagium Z",
+	galacticterapagosiumz: {
+		name: "Galactic Terapagosium Z",
 		shortDesc: "If held by Terapagos-ATOM with Zenith Storm, it can use Universe Expansion.",
 	},
 	atommewniumz: {
