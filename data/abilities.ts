@@ -10192,7 +10192,9 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	unchained: {
 		onStart(pokemon) {
+			if (!pokemon.item) {
 			this.boost({ spe: 1 }, pokemon);
+			}
 		},
 		flags: {},
 		name: "Unchained",
