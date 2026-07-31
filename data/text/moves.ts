@@ -7449,7 +7449,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	teslablitz: {
 		name: "Tesla Blitz",
-		shortDesc: "Deals 1.2x damage with supereffective hits.",
+		shortDesc: "Power doubles if user has no held item.",
 	},
 	thebelltolls: {
 		name: "The Bell Tolls",

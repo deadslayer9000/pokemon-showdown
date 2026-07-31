@@ -2627,7 +2627,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	unchained: {
 		name: "Unchained",
-		shortDesc: "On switch-in, this Pokemon's Speed is raised by one stage. ",
+		shortDesc: "On switch-in, this Pokemon's Speed is raised by one stage if they don't have a held item.",
 	},
 	unnerve: {
 		name: "Unnerve",
