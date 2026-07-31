@@ -26237,7 +26237,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	},
 	terapagosatomgalactic: {
 		num: 1024,
-		name: "Terapagos-ATOM-Cosmic",
+		name: "Terapagos-ATOM-Galactic",
 		baseSpecies: "Terapagos-ATOM",
 		types: ["Normal"],
 		baseStats: { hp: 150, atk: 100, def: 115, spa: 140, spd: 115, spe: 80 },
