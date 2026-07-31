@@ -7835,4 +7835,8 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "Uber",
 		natDexTier: "Uber",
 	},
+	sunkenrealm: {
+		tier: "UU",
+		natDexTier: "UU",
+	},
 };
