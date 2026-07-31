@@ -27350,7 +27350,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			this.hint(pokemon.name);
 			if(pokemon.species.name === "Terapagos-ATOM-Galactic") {
 				this.add('-activate', pokemon, 'move: Universe Expansion');
-				pokemon.formeChange("Terapagos-ATOM-Cosmic", null, true);
+				pokemon.formeChange("Terapagos-ATOM-Galactic", null, true);
 			}
 		}, 
 		target: "normal",
