@@ -7545,14 +7545,14 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	floridpuff: {
 		num: -12,
 		accuracy: 90,
-		basePower: 75,
+		basePower: 90,
 		category: "Special",
 		name: "Florid Puff",
 		pp: 5,
 		priority: 0,
 		flags: { metronome: 1, mirror: 1, protect: 1 },
 		secondary: {
-			chance: 50,
+			chance: 30,
 			self: {
 				boosts: {
 					spd: 1,
@@ -7560,7 +7560,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			},
 		},
 		target: "normal",
-		type: "Fairy",
+		type: "Grass",
 	},
 	flowershield: {
 		num: 579,
@@ -18051,7 +18051,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		isZ: "ancientgeniumz",
 		flags: { heal: 1, nosketch: 1 },
 		onHit(target, source) {
-			const move1name = source.moves[0];
+			/*const move1name = source.moves[0];
 			const move1type = this.dex.moves.get(move1name).type;
 			const move2name = source.moves[1];
 			const move2type = this.dex.moves.get(move2name).type;
@@ -18073,7 +18073,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 						"/"
 					)} type!`
 				);
-			}
+			}*/ //lost type change in ms7
 			let move = "revivalblessing";
 			this.actions.useMove(move, source);
 		},
@@ -24947,14 +24947,14 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	verdantflush: {
 		num: -13,
 		accuracy: 90,
-		basePower: 75,
+		basePower: 90,
 		category: "Physical",
 		name: "Verdant Flush",
 		pp: 5,
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
 		secondary: {
-			chance: 50,
+			chance: 30,
 			self: {
 				boosts: {
 					atk: 1,
@@ -24962,7 +24962,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			},
 		},
 		target: "normal",
-		type: "Fairy",
+		type: "Grass",
 	},
 	victorydance: {
 		num: 837,
@@ -27999,19 +27999,26 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	teslablitz: {
 		num: -138,
 		accuracy: 90,
-		basePower: 95,
+		basePower: 55,
+		basePowerCallback(pokemon, target, move) {
+			if (!pokemon.item) {
+				this.debug("BP doubled for no item");
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		category: "Special",
 		name: "Tesla Blitz",
-		pp: 10,
+		pp: 15,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, metronome: 1 },
-		onBasePower(basePower, source, target, move) {
+		flags: { protect: 1, mirror: 1, metronome: 1, contact: 1 },
+		/*onBasePower(basePower, source, target, move) {
 			if (target.runEffectiveness(move) > 0) {
 				// Placeholder
 				this.debug(`tesla blitz super effective buff`);
 				return this.chainModify([4915, 4096]);
 			}
-		},
+		},*/ //reworked in ms7
 		target: "normal",
 		type: "Electric",
 	},
