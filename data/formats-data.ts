@@ -7838,5 +7838,5 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	sunkenrealm: {
 		tier: "UU",
 		natDexTier: "UU",
-	}
+	},
 };

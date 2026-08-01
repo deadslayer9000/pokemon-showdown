@@ -9943,7 +9943,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			if (pokemon.baseSpecies.baseSpecies !== "Terapagos") return;
 			if (pokemon.species.forme !== "Cosmic") {
 				this.add("-activate", pokemon, "ability: Cosmo Shift");
-				pokemon.formeChange("Terapagos-ATOM-Galactic", this.effect, true);
+				pokemon.formeChange("Terapagos-ATOM-Cosmic", this.effect, true);
 			}
 		},
 		flags: {
@@ -10192,7 +10192,9 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	unchained: {
 		onStart(pokemon) {
+			if (!pokemon.item) {
 			this.boost({ spe: 1 }, pokemon);
+			}
 		},
 		flags: {},
 		name: "Unchained",
