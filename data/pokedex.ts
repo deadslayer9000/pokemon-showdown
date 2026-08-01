@@ -26640,4 +26640,16 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		//color: "Orange", no page yet
 		eggGroups: ["Undiscovered"],
 	},
+	sunkenrealm: {
+		num: 2132,
+		name: "Sunken Realm",
+		types: ["Ghost", "Water"],
+		gender: "N",
+		baseStats: { hp: 87, atk: 101, def: 135, spa: 125, spd: 71, spe: 51 },
+		abilities: { 0: "Protosynthesis" },
+		heightm: 2.1,
+		weightkg: 575,
+		//color: "Blue", no page yet
+		eggGroups: ["Undiscovered"],
+	},
 };
