@@ -361,6 +361,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 
 		damage: "#crash",
 	},
+	azurestorm: {
+		name: "Azure Storm",
+		shortDesc: "Traps and damages the target for 2-5 turns.",
+	},
 	babydolleyes: {
 		name: "Baby-Doll Eyes",
 		desc: "Lowers the target's Attack by 1 stage.",
@@ -2151,6 +2155,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Has a 100% chance to make the target flinch. Fails unless it is the user's first turn on the field.",
 		shortDesc: "Hits first. First turn out only. 100% flinch chance.",
 	},
+	falseremedy: {
+		name: "False Remedy",
+		shortDesc: "Deals damage, 30% chance to confuse."
+	},
 	faketears: {
 		name: "Fake Tears",
 		desc: "Lowers the target's Special Defense by 2 stages.",
@@ -2680,6 +2688,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 
 		start: "  [POKEMON] foresaw an attack!",
 		activate: "  [TARGET] took the Future Sight attack!",
+	},
+	galecocoon: {
+		name: "Gale Cocoon",
+		shortDesc: "User Protects; Heals 1/2 HP if hit with contact.",
 	},
 	gastroacid: {
 		name: "Gastro Acid",
