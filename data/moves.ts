@@ -28142,8 +28142,8 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					}
 				}
 				if (this.checkMoveMakesContact(move, source, target)) {
-					source.heal(source.baseMaxhp / 2, source);
-					this.hint(`${source.name} has healed in its cocoon!`);
+					this.heal(target.baseMaxhp / 2, target);
+					//this.hint(`${target.name} has healed in its cocoon!`);
 				}
 				return this.NOT_FAIL;
 			},
@@ -28166,5 +28166,5 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		target: "normal",
 		type: "Water",
 		contestType: "Beautiful",
-	}
+	},
 };
