@@ -7839,4 +7839,16 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 		natDexTier: "UU",
 	},
+	mespritomega: {
+		tier: "UU",
+		natDexTier: "UU",
+	},
+	uxieomega: {
+		tier: "UU",
+		natDexTier: "UU",
+	},
+	vrelieomega: {
+		tier: "UU",
+		natDexTier: "UU",
+	},
 };
