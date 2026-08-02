@@ -4774,7 +4774,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	poipole: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "NFE",
+		natDexTier: "LC",
 	},
 	naganadel: {
 		isNonstandard: "Past",
@@ -5239,6 +5239,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	kubfu: {
 		tier: "NFE",
+		natDexTier: "LC",
 	},
 	urshifu: {
 		tier: "Uber",
