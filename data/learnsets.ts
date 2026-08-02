@@ -81484,7 +81484,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			{generation: 7, level: 40, shiny: true, nature: "Modest", perfectIVs: 3, moves: ["venomdrench", "nastyplot", "poisonjab", "dragonpulse"], pokeball: "cherishball"},
 			{generation: 8, level: 20, moves: ["helpinghand", "acid", "furyattack", "fellstinger"], pokeball: "beastball"},
 		],
-		eventOnly: true,
 	},
 	naganadel: {
 		learnset: {
@@ -86376,7 +86375,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			{generation: 8, level: 10, perfectIVs: 3, moves: ["rocksmash", "leer", "endure", "focusenergy"]},
 			{generation: 9, level: 30, moves: ["detect", "brickbreak", "headbutt", "scaryface"]},
 		],
-		eventOnly: true,
 	},
 	urshifu: {
 		learnset: {
