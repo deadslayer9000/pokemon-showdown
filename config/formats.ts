@@ -176,10 +176,12 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		section: "Tour Formats",
 	},
 	{
-		name: "[Gen 9] [ND] Delta Draft League Season 3",
+		name: "[Gen 9] [ND] Delta Draft League Season 4",
 		searchShow: false,
-		mod: 'ddls3patch',
-		ruleset: ['Standard NatDex', 'Standard Draft', 'Terastal Clause'],
+		mod: "ddls4patch",
+		ruleset: ['Standard NatDex', 'Standard Draft', 'Terastal Clause', 'Z-Move Clause'],
+		banlist: ["Last Respects", 'Shed Tail', 'Hidden Power', 'Dire Claw', 'Revival Blessing', 'Mega Raichu Y + Sing', 'Mewthree + Dark Decree', 'Kyurem-Original + Dragon Dance',
+			'Kyurem-Original + Scale Shot', 'Xerneas + Geomancy', 'Rising Phoenix + Dragon Dance'],
 	},
 	{
 		name: "[Gen 9] [ND] Chompy's Delta Battle League",
@@ -190,6 +192,16 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		banlist: ['Quick Claw'],
 		gameType: 'doubles',
 		teraPreviewDefault: true,
+	},
+
+	{
+		section: "Legacy Tour Formats",
+	},
+	{
+		name: "[Gen 9] [ND] Delta Draft League Season 3",
+		searchShow: false,
+		mod: 'ddls3patch',
+		ruleset: ['Standard NatDex', 'Standard Draft', 'Terastal Clause'],
 	},
 	/*
 	{
