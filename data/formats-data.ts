@@ -5238,8 +5238,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "Illegal",
 	},
 	kubfu: {
-		tier: "NFE",
-		natDexTier: "LC",
+		tier: "LC",
 	},
 	urshifu: {
 		tier: "Uber",
