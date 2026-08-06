@@ -28080,5 +28080,91 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		},
 		target: "normal",
 		type: "Water",
-	}
+	},
+	falseremedy: {
+		num: -142,
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		name: "False Remedy",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		secondary: {
+			chance: 30,
+			onHit(target, source, move) {
+				target.addVolatile("confusion", source, move);
+			},
+		},
+		target: "normal",
+		type: "Grass",
+	},
+	galecocoon: {
+		num: -143,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Gale Cocoon",
+		pp: 10,
+		priority: 4,
+		flags: { noassist: 1, failcopycat: 1 },
+		stallingMove: true,
+		volatileStatus: "galecocoon",
+		onPrepareHit(pokemon) {
+			return !!this.queue.willAct() && this.runEvent("StallMove", pokemon);
+		},
+		onHit(pokemon) {
+			pokemon.addVolatile("stall");
+		},
+		condition: {
+			duration: 1,
+			onStart(target) {
+				this.add("-singleturn", target, "move: Protect");
+			},
+			onTryHitPriority: 3,
+			onTryHit(target, source, move) {
+				if (!move.flags["protect"]) {
+					if (["gmaxoneblow", "gmaxrapidflow"].includes(move.id)) return;
+					if (move.isZ || move.isMax)
+						target.getMoveHitData(move).zBrokeProtect = true;
+					return;
+				}
+				if (move.smartTarget) {
+					move.smartTarget = false;
+				} else {
+					this.add("-activate", target, "move: Protect");
+				}
+				const lockedmove = source.getVolatile("lockedmove");
+				if (lockedmove) {
+					// Outrage counter is reset
+					if (source.volatiles["lockedmove"].duration === 2) {
+						delete source.volatiles["lockedmove"];
+					}
+				}
+				if (this.checkMoveMakesContact(move, source, target)) {
+					this.heal(target.baseMaxhp / 2, target);
+					//this.hint(`${target.name} has healed in its cocoon!`);
+				}
+				return this.NOT_FAIL;
+			},
+		
+		},
+		target: "self",
+		type: "Flying",
+		zMove: { boost: { def: 1 } },
+	},
+	azurestorm: {
+		num: -144,
+		accuracy: 80,
+		basePower: 120,
+		category: "Special",
+		name: "Azure Storm",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		volatileStatus: 'azurestormtrapped',
+		target: "normal",
+		type: "Water",
+		contestType: "Beautiful",
+	},
 };

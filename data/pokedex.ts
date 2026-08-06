@@ -26633,7 +26633,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		gender: "N",
 		baseStats: { hp: 87, atk: 101, def: 135, spa: 125, spd: 71, spe: 51},
 		abilities: { 0: "Protosynthesis"},
-		//heightm: no dsc page,
+		heightm: 2.1,
 		weightkg: 575.0,
 		//color: "Blue", no dsc page,
 		eggGroups: ["Undiscovered"],
