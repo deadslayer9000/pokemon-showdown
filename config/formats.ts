@@ -180,7 +180,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		searchShow: false,
 		mod: "ddls4patch",
 		ruleset: ['Standard NatDex', 'Standard Draft', 'Terastal Clause', 'Z-Move Clause'],
-		banlist: ["Last Respects", 'Shed Tail', 'Hidden Power', 'Dire Claw', 'Revival Blessing', 'Mega Raichu Y + Sing', 'Mewthree + Dark Decree', 'Kyurem-Original + Dragon Dance',
+		banlist: ["Last Respects", 'Shed Tail', 'Hidden Power', 'Dire Claw', 'Revival Blessing', 'Raichu-Mega-Y + Sing', 'Mewthree + Dark Decree', 'Kyurem-Original + Dragon Dance',
 			'Kyurem-Original + Scale Shot', 'Xerneas + Geomancy', 'Rising Phoenix + Dragon Dance', 'Quick Claw', 'King\'s Rock', 'Razor Fang'],
 	},
 	{
