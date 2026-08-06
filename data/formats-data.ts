@@ -5238,7 +5238,8 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "Illegal",
 	},
 	kubfu: {
-		tier: "LC",
+		tier: "NFE",
+		natDexTier: "LC",
 	},
 	urshifu: {
 		tier: "Uber",
@@ -7836,6 +7837,18 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "Uber",
 	},
 	sunkenrealm: {
+		tier: "UU",
+		natDexTier: "UU",
+	},
+	mespritomega: {
+		tier: "UU",
+		natDexTier: "UU",
+	},
+	uxieomega: {
+		tier: "UU",
+		natDexTier: "UU",
+	},
+	vrelieomega: {
 		tier: "UU",
 		natDexTier: "UU",
 	},
