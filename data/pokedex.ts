@@ -22694,6 +22694,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		heightm: 6.5,
 		color: "Brown",
 		eggGroups: ["Undiscovered"],
+		changesFrom: "Hoopa-Delta",
 	},
 	tinkatinkomega: {
 		num: 957,
@@ -24909,10 +24910,11 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		weightkg: 5.2,
 		color: "White",
 		eggGroups: ["Undiscovered"],
-		forme: "Delta",
-		baseSpecies: "Shaymin-Sky",
+		forme: "Sky",
+		baseSpecies: "Shaymin-Delta",
 		otherFormes: ["Shaymin-Delta-Sky"],
 		formeOrder: ["Shaymin-Delta", "Shaymin-Delta-Sky"],
+		changesFrom: "Shaymin-Delta"
 	},
 	emolgadelta: {
 		num: 587,
