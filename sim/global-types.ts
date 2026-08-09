@@ -347,7 +347,7 @@ interface ModdedBattleQueue extends Partial<BattleQueue> {
 interface ModdedField extends Partial<Field> {
 	inherit?: true;
 	suppressingWeather?: (this: Field) => boolean;
-	suppressingTerrain?; (this: Field) => boolean;
+	suppressingTerrain?: (this: Field) => boolean;
 	addPseudoWeather?: (
 		this: Field, status: string | Condition, source: Pokemon | 'debug' | null, sourceEffect: Effect | null
 	) => boolean;

@@ -39,7 +39,10 @@ interface BattleFactorySet {
 	ivs?: Partial<StatsTable>;
 	shiny?: boolean;
 	level?: number;
-	weatherSetter?: boolean;
+	weatherSetter?: string;
+	sunAbuser?: boolean;
+	rainAbuser?: boolean;
+	sandAbuser?: boolean;
 }
 interface BSSFactorySet {
 	species: string;
@@ -2762,6 +2765,29 @@ export class RandomTeams {
 				continue;
 			}
 
+			
+			if (teamData.has['weather'] && set.weatherSetter === "Sun"){
+				teamData.has['weathersun'] = 1;
+			}
+			if (teamData.has['weather'] && set.weatherSetter === "Rain"){
+				teamData.has['weatherrain'] = 1;
+			}
+			if (teamData.has['weather'] && set.weatherSetter === "Sand"){
+				teamData.has['weathersand'] = 1;
+			}
+			if (teamData.has['weather'] && set.weatherSetter === "Snow"){
+				teamData.has['weathersnow'] = 1;
+			}
+			//after the team is marked with specific weather every mon that isnt that weather abuser is skipped
+			if (teamData.has['sun'] && !set.sunAbuser){
+				continue;
+			}
+			if (teamData.has['rain'] && !set.rainAbuser){
+				continue;
+			}
+			if (teamData.has['sand'] && !set.sandAbuser){
+				continue;
+			}
 			// reject disallowed items, specifically a second of any given choice item
 			const allowedItems: string[] = [];
 			for (const itemString of set.item) {
@@ -2853,6 +2879,8 @@ export class RandomTeams {
 		if (!this.factoryTier) {
 			// this.factoryTier = this.sample(['Uber', 'OU', 'UU', 'RU', 'NU', 'PU', 'LC']);
 			this.factoryTier = this.sample(['Uber', 'OU', 'UU', 'RU']);
+			//this.factoryTier = this.sample(['UU']); 
+			//battlefactorytesting bftesting
 		}
 
 		const tierValues: { [k: string]: number } = {
@@ -2968,6 +2996,16 @@ export class RandomTeams {
 			if (['drizzle', 'drought', 'sandstream', 'snowwarning'].includes(abilityId)) {
    				teamData.has['weather'] = 1;
 			}
+			
+			if (['drought'].includes(abilityId)){
+				teamData.has['sun'] = 1;
+			}
+			if (['drizzle'].includes(abilityId)){
+				teamData.has['rain'] = 1;
+			}
+			if (['sandstream'].includes(abilityId)){
+				teamData.has['sand'] = 1;
+			}
 
 			// Limit 2 of any type (most of the time)
 			const types = species.types;
@@ -3038,10 +3076,10 @@ export class RandomTeams {
 				if (!teamData.wantsTeraCount) teamData.wantsTeraCount = 0;
 				teamData.wantsTeraCount++;
 			}
-
+			/*
 			if (set.weatherSetter){ 
 				teamData.has['weather'] = 1;
-			}
+			}*/
 
 			for (const move of set.moves) {
 				const moveId = toID(move);

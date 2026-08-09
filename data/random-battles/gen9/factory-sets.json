@@ -1084,7 +1084,7 @@
 			"weight": 12,
 			"sets": [{
 				"species": "Raging Bolt",
-				"weight": 80,
+				"weight": 70,
 				"item": ["Leftovers", "Booster Energy"],
 				"ability": ["Protosynthesis"],
 				"evs": {"spa": 252, "spd": 4, "spe": 252},
@@ -1094,7 +1094,7 @@
 				"moves": [["Thunderclap"], ["Calm Mind"], ["Dragon Pulse", "Draco Meteor"], ["Thunderbolt"]]
 			}, {
 				"species": "Raging Bolt",
-				"weight": 20,
+				"weight": 29,
 				"item": ["Heavy-Duty Boots"],
 				"ability": ["Protosynthesis"],
 				"evs": {"spa": 252, "spd": 4, "spe": 252},
@@ -1102,7 +1102,21 @@
 				"nature": ["Modest"],
 				"teraType": ["Fairy"],
 				"moves": [["Thunderclap"], ["Volt Switch"], ["Dragon Pulse"], ["Taunt"]]
-			}]
+			},
+			{
+				"species": "Raging Bolt",
+				"weight": 1,
+				"sunAbuser": true,
+				"rainAbuser": true,
+				"item": ["Leftovers", "Booster Energy"],
+				"ability": ["Protosynthesis"],
+				"evs": {"spa": 252, "spd": 4, "spe": 252},
+				"ivs": {"atk": 20},
+				"nature": ["Modest"],
+				"teraType": ["Fairy", "Flying", "Bug"],
+				"moves": [["Thunderclap"], ["Calm Mind"], ["Dragon Pulse", "Draco Meteor"], ["Weather Ball"]]
+			}
+		]
 		},
 		"samurotthisui": {
 			"flags": {},
@@ -1994,6 +2008,7 @@
 				{
 					"species": "Tangled Time",
 					"weight": 50,
+					"sunAbuser": true,
 					"item": ["Choice Specs"],
 					"ability": ["Chronocatalyst"],
 					"evs": { "spa": 252, "spe": 252, "spd": 4 },
@@ -2009,6 +2024,7 @@
 				{
 					"species": "Tangled Time",
 					"weight": 50,
+					"sunAbuser": true,
 					"item": ["Tangledtimium Z"],
 					"ability": ["Chronocatalyst"],
 					"evs": { "spa": 252, "spe": 252, "spd": 4 },
@@ -2187,9 +2203,9 @@
 					"teraType": ["Normal"],
 					"moves": [
 						["Recover"],
-						["Moonblast"],
+						["Giga Drain"],
 						["Defog"],
-						["Earthquake"]
+						["Mystical Fire"]
 					]
 				}
 			]
@@ -2600,6 +2616,7 @@
 				{
 					"species": "Flygon",
 					"weight": 100,
+					"sandAbuser": true,
 					"item": ["Flygonite"],
 					"ability": ["Levitate"],
 					"evs": { "spa": 252, "spe": 252, "spd": 4 },
@@ -3067,7 +3084,7 @@
 			"sets": [
 				{
 					"species": "Venusaur",
-					"weight": 90,
+					"weight": 99,
 					"item": ["Venusaurite"],
 					"ability": ["Overgrow"],
 					"evs": { "hp": 252, "spa": 156, "spe": 100 },
@@ -3083,7 +3100,8 @@
 				},
 				{
 					"species": "Venusaur",
-					"weight": 10,
+					"weight": 1,
+					"sunAbuser": true,
 					"item": ["Life Orb"],
 					"ability": ["Chlorophyll"],
 					"evs": { "spa": 252, "spd": 4, "spe": 252 },
@@ -3143,6 +3161,7 @@
 				{
 					"species": "Great Tusk",
 					"weight": 40,
+					"sunAbuser": true,
 					"item": ["Heavy-Duty Boots"],
 					"ability": ["Protosynthesis"],
 					"evs": { "atk": 252, "spd": 4, "spe": 252 },
@@ -3150,9 +3169,9 @@
 					"teraType": ["Normal"],
 					"moves": [
 						["Headlong Rush"],
-						["Rapid Spin"],
+						["Rapid Spin", "Stone Edge"],
 						["Ice Spinner"],
-						["Stealth Rock"]
+						["Stealth Rock", "Close Combat"]
 					]
 				},
 				{
@@ -3235,7 +3254,7 @@
 					"evs": { "atk": 252, "spd": 4, "spe": 252 },
 					"nature": ["Jolly"],
 					"teraType": ["Normal"],
-					"moves": [["Ivy Cudgel"], ["Power Whip", "Horn Leech"], ["SwordsDance"], ["Play Rough", "Encore", "Knock Off"]]
+					"moves": [["Ivy Cudgel"], ["Power Whip", "Horn Leech"], ["Swords Dance"], ["Play Rough", "Encore", "Knock Off"]]
 				},
 				{
 					"species": "Ogerpon-Wellspring",
@@ -3438,7 +3457,7 @@
 				},
 				{
 					"species": "Tornadus-Therian",
-					"weight": 30,
+					"weight": 29,
 					"item": ["Heavy-Duty Boots"],
 					"ability": ["Regenerator"],
 					"evs": { "spa": 252, "spd": 4, "spe": 252 },
@@ -3464,6 +3483,22 @@
 						["U-turn"],
 						["Heat Wave"],
 						["Knock Off"]
+					]
+				},
+				{
+					"species": "Tornadus-Therian",
+					"weight": 1,
+					"rainAbuser": true,
+					"item": ["Choice Specs"],
+					"ability": ["Regenerator"],
+					"evs": { "spa": 252, "spd": 4, "spe": 252 },
+					"nature": ["Timid"],
+					"teraType": ["Normal"],
+					"moves": [
+						["Weather Ball"],
+						["Hurricane"],
+						["U-Turn"],
+						["Focus Blast"]
 					]
 				}
 			]
@@ -3496,7 +3531,7 @@
 				{
 					"species": "Pelipper",
 					"weight": 100,
-					"weatherSetter": true,
+					"weatherSetter": "Rain",
 					"item": ["Damp Rock"],
 					"ability": ["Drizzle"],
 					"evs": { "hp": 248, "def": 252, "spd": 8 },
@@ -3739,6 +3774,7 @@
 				{
 					"species": "Swampert",
 					"weight": 100,
+					"rainAbuser": true,
 					"item": ["Swampertite"],
 					"ability": ["Torrent"],
 					"evs": { "atk": 252, "spd": 4, "spe": 252 },
@@ -3812,6 +3848,7 @@
 				{
 					"species": "Ferrothorn",
 					"weight": 100,
+					"rainAbuser": true,
 					"item": ["Leftovers"],
 					"ability": ["Iron Barbs"],
 					"evs": { "hp": 244, "spd": 184, "def": 80 },
@@ -3941,7 +3978,7 @@
 				{
 					"species": "Torkoal",
 					"weight": 100,
-					"weatherSetter": true,
+					"weatherSetter": "Sun",
 					"item": ["Heat Rock"],
 					"ability": ["Drought"],
 					"evs": { "hp": 248, "def": 252, "spd": 8 },
@@ -3950,7 +3987,7 @@
 					"moves": [
 						["Lava Plume"],
 						["Body Press"],
-						["Stealth Rock"],
+						["Stealth Rock", "Yawn"],
 						["Rapid Spin"]
 					]
 				}
@@ -3963,7 +4000,7 @@
 				{
 					"species": "Tyranitar",
 					"weight": 50,
-					"weatherSetter": true,
+					"weatherSetter": "Sand",
 					"item": ["Tyranitarite"],
 					"ability": ["Sand Stream"],
 					"evs": { "hp": 92, "atk": 252, "spe": 164 },
@@ -3979,7 +4016,7 @@
 				{
 					"species": "Tyranitar",
 					"weight": 50,
-					"weatherSetter": true,
+					"weatherSetter": "Sand",
 					"item": ["Assault Vest"],
 					"ability": ["Sand Stream"],
 					"evs": { "hp": 252, "atk": 252, "spd": 4 },
@@ -3996,12 +4033,12 @@
 		},
 		"hippowdon": {
 			"flags": {},
-			"weight": 12,
+			"weight": 8,
 			"sets": [
 				{
 					"species": "Hippowdon",
 					"weight": 100,
-					"weatherSetter": true,
+					"weatherSetter": "Sand",
 					"item": ["Smooth Rock", "Rocky Helmet"],
 					"ability": ["Sand Stream"],
 					"evs": {"hp": 252, "def": 252, "spd": 4},
@@ -4058,7 +4095,7 @@
 			"sets": [
 				{
 					"species": "Zapdos",
-					"weight": 100,
+					"weight": 99,
 					"item": ["Heavy-Duty Boots"],
 					"ability": ["Static"],
 					"evs": { "hp": 248, "def": 188, "spe": 72 },
@@ -4070,6 +4107,22 @@
 						["Hurricane"],
 						["Heat Wave"],
 						["Roost"]
+					]
+				},
+				{
+					"species": "Zapdos",
+					"weight": 1,
+					"item": ["Choice Specs", "Heavy-Duty Boots"],
+					"ability": ["Static"],
+					"evs": { "spa": 252, "def": 4, "spe": 252 },
+					"ivs": { "atk": 0 },
+					"nature": ["Timid"],
+					"teraType": ["Normal"],
+					"moves": [
+						["Volt Switch"],
+						["Hurricane"],
+						["Weather Ball"],
+						["Thunder"]
 					]
 				}
 			]
@@ -4362,7 +4415,7 @@
 					"evs": { "atk": 252, "spd": 4, "spe": 252 },
 					"nature": ["Jolly"],
 					"teraType": ["Normal"],
-					"moves": [["Ivy Cudgel"], ["Power Whip", "Horn Leech"], ["SwordsDance"], ["Play Rough", "Encore", "Knock Off"]]
+					"moves": [["Ivy Cudgel"], ["Power Whip", "Horn Leech"], ["Swords Dance"], ["Play Rough", "Encore", "Knock Off"]]
 				},
 				{
 					"species": "Ogerpon-Stormpeak",
@@ -4376,19 +4429,19 @@
 				}
 			]
 		},
-		"latiosdeltamega": {
+		"latiosdelta": {
 			"weight": 8,
 			"sets": [
 				{
 					"species": "Latios-Delta",
-					"weight": 50,
+					"weight": 30,
 					"item": ["Delta Latiosite"],
 					"ability": ["Pressure"],
 					"evs": { "spa": 252, "spe": 252, "spd": 4 },
 					"nature": ["Timid"],
 					"teraType": ["Normal"],
 					"moves": [
-						["Moonblast"],
+						["Energy Ball"],
 						["Mystical Fire"],
 						["Draco Meteor"],
 						["Calm Mind"]
@@ -4396,7 +4449,7 @@
 				},
 				{
 					"species": "Latios-Delta",
-					"weight": 50,
+					"weight": 70,
 					"item": ["Delta Latiosite"],
 					"ability": ["Pressure"],
 					"evs": { "atk": 252, "spe": 252, "spd": 4 },
@@ -4405,7 +4458,7 @@
 					"moves": [
 						["Verdant Flush"],
 						["Dragon Claw"],
-						["Roost"],
+						["Earthquake"],
 						["Dragon Dance"]
 					]
 				}
@@ -4417,6 +4470,7 @@
 				{
 					"species": "Hoopa-Delta-Unbound",
 					"weight": 40,
+					"sandAbuser": true,
 					"item": ["Choice Band", "Assault Vest"],
 					"ability": ["Mirage"],
 					"evs": { "atk": 252, "spe": 252, "spd": 4 },
@@ -4432,6 +4486,7 @@
 				{
 					"species": "Hoopa-Delta-Unbound",
 					"weight": 20,
+					"sandAbuser": true,
 					"item": ["Leftovers"],
 					"ability": ["Mirage"],
 					"evs": { "atk": 252, "spe": 252, "spd": 4 },
@@ -4447,6 +4502,7 @@
 				{
 					"species": "Hoopa-Delta-Unbound",
 					"weight": 40,
+					"sandAbuser": true,
 					"item": ["Choice Specs", "Assault Vest"],
 					"ability": ["Mirage"],
 					"evs": { "spa": 252, "spe": 252, "spd": 4 },
@@ -4722,6 +4778,7 @@
 				{
 					"species": "Koraiton",
 					"weight": 40,
+					"sunAbuser": true,
 					"item": ["Choice Scarf", "Choice Band"],
 					"ability": ["Orichalcum Scale"],
 					"evs": { "atk": 252, "spe": 252, "spd": 4 },
@@ -4737,6 +4794,7 @@
 				{
 					"species": "Koraiton",
 					"weight": 30,
+					"sunAbuser": true,
 					"item": ["Life Orb"],
 					"ability": ["Orichalcum Scale"],
 					"evs": { "atk": 252, "spe": 252, "spd": 4 },
@@ -5247,7 +5305,7 @@
 			]
 		},
 		"aspearunt": {
-			"weight": 8,
+			"weight": 4,
 			"sets": [
 				{
 					"species": "Aspearunt",
@@ -5322,26 +5380,26 @@
 			]
 		},
 		"ancientgene": {
-			"weight": 1,
+			"weight": 8,
 			"sets": [
 				{
 					"species": "Ancient Gene",
-					"weight": 50,
+					"weight": 90,
 					"item": ["Ancientgenium Z"],
 					"ability": ["Protosynthesis"],
 					"evs": { "spa": 252, "spe": 252, "spd": 4 },
 					"nature": ["Timid"],
 					"teraType": ["Normal"],
 					"moves": [
-						["Recover"],
-						["Shadow Ball"],
+						["Ice Beam"],
+						["Flamethrower", "Thunderbolt"],
 						["Psystrike"],
 						["Nasty Plot"]
 					]
 				},
 				{
 					"species": "Ancient Gene",
-					"weight": 50,
+					"weight": 10,
 					"item": ["Ancientgenium Z"],
 					"ability": ["Protosynthesis"],
 					"evs": { "hp": 252, "spd": 252, "def": 4 },
@@ -5373,12 +5431,13 @@
     		]
 		},
 		"hoopadelta": {
-			"weight": 8,
+			"weight": 1,
 			"sets": [
 				{
 					"species": "Hoopa-Delta",
 					"weight": 40,
-					"item": ["Life Orb"],
+					"sandAbuser": true,
+					"item": ["Life Orb", "Choice Band"],
 					"ability": ["Sand Rush"],
 					"evs": { "atk": 252, "spe": 252, "spd": 4 },
 					"nature": ["Adamant"],
@@ -5388,21 +5447,6 @@
 						["Gunk Shot"],
 						["Ice Punch", "Earthquake"],
 						["Knock Off"]
-					]
-				},
-				{
-					"species": "Hoopa-Delta",
-					"weight": 60,
-					"item": ["Choice Band"],
-					"ability": ["Sand Rush"],
-					"evs": { "atk": 252, "spe": 252, "spd": 4 },
-					"nature": ["Adamant"],
-					"teraType": ["Normal"],
-					"moves": [
-						["Sandstorm Sphere"],
-						["Gunk Shot"],
-						["Knock Off"],
-						["Earthquake", "Ice Punch"]
 					]
 				}
 			]
@@ -5651,6 +5695,135 @@
 					]
 				}
 			]
+		},
+		"roseradedelta": {
+			"flags": {},
+			"weight": 8,
+			"sets": [{
+				"species": "Roserade-Delta",
+				"weight": 99,
+				"item": ["Life Orb", "Leftovers"],
+				"ability": ["Sharpness"],
+				"evs": { "at": 252, "spe": 252, "spd": 4 },
+				"nature": ["Jolly"],
+				"teraType": ["Normal"],
+				"moves": [["Leaf Blade"], ["Sacred Sword"], ["Smart Strike"], ["Swords Dance"]]
+			},
+			{
+				"species": "Roserade-Delta",
+				"weight": 1,
+				"sunAbuser": true,
+				"item": ["Life Orb", "Leftovers"],
+				"ability": ["Swordmaster"],
+				"evs": { "at": 252, "spe": 252, "spd": 4 },
+				"nature": ["Jolly"],
+				"teraType": ["Normal"],
+				"moves": [["Solar Blade"], ["Sacred Sword"], ["Smart Strike"], ["Swords Dance"]]
+			}
+		]
+		},
+		"rogueprince": {
+			"flags": {},
+			"weight": 4,
+			"sets": [{
+				"species": "Rogue Prince",
+				"weight": 1,
+				"sunAbuser": true,
+				"item": ["Life Orb"],
+				"ability": ["Protosynthesis"],
+				"evs": { "spa": 252, "spe": 252, "spd": 4 },
+				"nature": ["Timid"],
+				"teraType": ["Normal"],
+				"moves": [["Depth Decree"], ["Psychic"], ["Ice Beam"], ["Take Heart"]]
+			},
+			{
+				"species": "Rogue Prince",
+				"weight": 99,
+				"item": ["Choice Specs"],
+				"ability": ["Protosynthesis"],
+				"evs": { "spa": 252, "spe": 252, "spd": 4 },
+				"nature": ["Timid"],
+				"teraType": ["Normal"],
+				"moves": [["Scald"], ["Psychic"], ["Ice Beam"], ["Flip Turn"]]
+			}]
+		},
+		"barraskewda": {
+			"flags": {},
+			"weight": 8,
+			"sets": [
+				{
+					"species": "Barraskewda",
+					"weight": 100,
+					"rainAbuser": true,
+					"item": ["Choice Band"],
+					"ability": ["Swift Swim"],
+					"evs": { "atk": 252, "spd": 4, "spe": 252 },
+					"nature": ["Adamant"],
+					"teraType": ["Normal"],
+					"moves": [
+						["Close Combat"],
+						["Liquidation"],
+						["Flip Turn"],
+						["Aqua Jet", "Poison Jab"]
+					]
+				}
+			]
+		},
+		"archaludon": {
+			"flags": {},
+			"weight": 4,
+			"sets": [{
+				"species": "Archaludon",
+				"weight": 100,
+				"rainAbuser": true,
+				"item": ["Assault Vest"],
+				"ability": ["Stamina"],
+				"evs": { "hp": 248, "spa": 252, "spd": 4 },
+				"nature": ["Modest"],
+				"teraType": ["Normal"],
+				"moves": [["Draco Meteor"], ["Electro Shot"], ["Flash Cannon"], ["Body Press", "Aura Sphere"]]
+			}]
+		},
+		"ironsentinel": {
+			"flags": {},
+			"weight": 8,
+			"sets": [{
+				"species": "Iron Sentinel",
+				"weight": 1,
+				"rainAbuser": true,
+				"item": ["Choice Specs"],
+				"ability": ["Quark Drive"],
+				"evs": { "spa": 252, "spe": 252, "spd": 4 },
+				"nature": ["Timid"],
+				"teraType": ["Normal"],
+				"moves": [["Flip Turn"], ["Weather Ball"], ["Forecast Warning"], ["Surf"]]
+			},
+			{
+				"species": "Iron Sentinel",
+				"weight": 99,
+				"item": ["Heavy-Duty Boots"],
+				"ability": ["Quark Drive"],
+				"evs": { "spa": 252, "spe": 252, "spd": 4 },
+				"nature": ["Timid"],
+				"teraType": ["Normal"],
+				"moves": [["Flip Turn"], ["Defog"], ["Forecast Warning"], ["Surf"]]
+			}
+		]
+		},
+		"excadrill": {
+			"flags": {},
+			"weight": 1,
+			"sets": [{
+				"species": "Excadrill",
+				"weight": 100,
+				"sandAbuser": true,
+				"item": ["Leftovers", "Air Balloon"],
+				"ability": ["Sand Rush"],
+				"evs": {"atk": 252, "spd": 4, "spe": 252},
+				"nature": ["Jolly", "Adamant"],
+				"teraType": ["Normal"],
+				"moves": [["Earthquake"], ["Rapid Spin", "Rock Slide"], ["Iron Head"], ["Swords Dance"]]
+			}]
 		}
 	}, 
 	"UU": {
@@ -5668,7 +5841,7 @@
 				"moves": [["Bleakwind Storm"], ["Focus Blast"], ["Knock Off"], ["U-turn"]]
 			}, {
 				"species": "Tornadus-Therian",
-				"weight": 40,
+				"weight": 39,
 				"item": ["Heavy-Duty Boots"],
 				"ability": ["Regenerator"],
 				"evs": {"def": 4, "spa": 252, "spe": 252},
@@ -5676,7 +5849,20 @@
 				"nature": ["Timid"],
 				"teraType": ["Steel"],
 				"moves": [["Bleakwind Storm", "Hurricane"], ["Focus Blast", "Heat Wave"], ["Taunt"], ["Nasty Plot"]]
-			}]
+			},
+			{
+				"species": "Tornadus-Therian",
+				"weight": 1,
+				"rainAbuser": true,
+				"item": ["Choice Specs", "Heavy-Duty Boots"],
+				"ability": ["Regenerator"],
+				"evs": {"def": 4, "spa": 252, "spe": 252},
+				"ivs": {"atk": 0},
+				"nature": ["Timid"],
+				"teraType": ["Normal"],
+				"moves": [["Hurricane"], ["Focus Blast"], ["Weather Ball"], ["U-Turn"]]
+			}
+		]
 		},
 		"excadrill": {
 			"flags": {},
@@ -5699,7 +5885,19 @@
 				"nature": ["Jolly"],
 				"teraType": ["Ghost", "Dragon", "Fairy"],
 				"moves": [["Earthquake"], ["Rapid Spin"], ["Iron Head"], ["Swords Dance"]]
-			}]
+			},
+			{
+				"species": "Excadrill",
+				"weight": 1,
+				"sandAbuser": true,
+				"item": ["Leftovers", "Air Balloon"],
+				"ability": ["Sand Rush"],
+				"evs": {"atk": 252, "spd": 4, "spe": 252},
+				"nature": ["Jolly", "Adamant"],
+				"teraType": ["Normal"],
+				"moves": [["Earthquake"], ["Rapid Spin", "Rock Slide"], ["Iron Head"], ["Swords Dance"]]
+			}
+		]
 		},
 		"cobalion": {
 			"flags": {},
@@ -5826,7 +6024,7 @@
 		},
 		"rotomwash": {
 			"flags": {},
-			"weight": 6,
+			"weight": 3,
 			"sets": [{
 				"species": "Rotom-Wash",
 				"weight": 40,
@@ -6020,7 +6218,7 @@
 			"sets": [{
 				"species": "Tyranitar",
 				"weight": 50,
-				"weatherSetter": true,
+				"weatherSetter": "Sand",
 				"item": ["Leftovers"],
 				"ability": ["Sand Stream"],
 				"evs": {"hp": 252, "spd": 212, "spe": 44},
@@ -6030,7 +6228,7 @@
 			}, {
 				"species": "Tyranitar",
 				"weight": 50,
-				"weatherSetter": true,
+				"weatherSetter": "Sand",
 				"item": ["Choice Band"],
 				"ability": ["Sand Stream"],
 				"evs": {"atk": 252, "spd": 4, "spe": 252},
@@ -6626,7 +6824,7 @@
 					"evs": { "atk": 252, "spd": 4, "spe": 252 },
 					"nature": ["Jolly"],
 					"teraType": ["Normal"],
-					"moves": [["Ivy Cudgel"], ["Power Whip", "Horn Leech"], ["SwordsDance"], ["Play Rough", "Encore", "Knock Off"]]
+					"moves": [["Ivy Cudgel"], ["Power Whip", "Horn Leech"], ["Swords Dance"], ["Play Rough", "Encore", "Knock Off"]]
 				},
 				{
 					"species": "Ogerpon-Stormpeak",
@@ -6640,19 +6838,19 @@
 				}
 			]
 		},
-		"latiosdeltamega": {
+		"latiosdelta": {
 			"weight": 8,
 			"sets": [
 				{
 					"species": "Latios-Delta",
-					"weight": 50,
+					"weight": 30,
 					"item": ["Delta Latiosite"],
 					"ability": ["Pressure"],
 					"evs": { "spa": 252, "spe": 252, "spd": 4 },
 					"nature": ["Timid"],
 					"teraType": ["Normal"],
 					"moves": [
-						["Moonblast"],
+						["Energy Ball"],
 						["Mystical Fire"],
 						["Draco Meteor"],
 						["Calm Mind"]
@@ -6660,7 +6858,7 @@
 				},
 				{
 					"species": "Latios-Delta",
-					"weight": 50,
+					"weight": 70,
 					"item": ["Delta Latiosite"],
 					"ability": ["Pressure"],
 					"evs": { "atk": 252, "spe": 252, "spd": 4 },
@@ -6669,7 +6867,7 @@
 					"moves": [
 						["Verdant Flush"],
 						["Dragon Claw"],
-						["Roost"],
+						["Earthquake"],
 						["Dragon Dance"]
 					]
 				}
@@ -7007,6 +7205,7 @@
 				{
 					"species": "Koraiton",
 					"weight": 40,
+					"sunAbuser": true,
 					"item": ["Choice Scarf", "Choice Band"],
 					"ability": ["Orichalcum Scale"],
 					"evs": { "atk": 252, "spe": 252, "spd": 4 },
@@ -7022,6 +7221,7 @@
 				{
 					"species": "Koraiton",
 					"weight": 30,
+					"sunAbuser": true,
 					"item": ["Life Orb"],
 					"ability": ["Orichalcum Scale"],
 					"evs": { "atk": 252, "spe": 252, "spd": 4 },
@@ -7663,6 +7863,7 @@
 				{
 					"species": "Hoopa-Delta",
 					"weight": 40,
+					"sandAbuser": true,
 					"item": ["Life Orb"],
 					"ability": ["Sand Rush"],
 					"evs": { "atk": 252, "spe": 252, "spd": 4 },
@@ -7678,6 +7879,7 @@
 				{
 					"species": "Hoopa-Delta",
 					"weight": 60,
+					"sandAbuser": true,
 					"item": ["Choice Band"],
 					"ability": ["Sand Rush"],
 					"evs": { "atk": 252, "spe": 252, "spd": 4 },
@@ -7847,41 +8049,6 @@
 				}
 			]
 		},
-		"raichu": {
-			"weight": 6,
-			"sets": [
-				{
-					"species": "Raichu",
-					"weight": 30,
-					"item": ["Raichunite X"],
-					"ability": ["Lightning Rod"],
-					"evs": { "atk": 252, "spe": 252, "spd": 4 },
-					"nature": ["Naive"],
-					"teraType": ["Normal"],
-					"moves": [
-						["Knock Off"],
-						["Volt Tackle"],
-						["Extreme Speed"],
-						["Volt Switch"]
-					]
-				},
-				{
-					"species": "Raichu",
-					"weight": 70,
-					"item": ["Raichunite X"],
-					"ability": ["Lightning Rod"],
-					"evs": { "spa": 252, "spe": 252, "spd": 4 },
-					"nature": ["Timid"],
-					"teraType": ["Normal"],
-					"moves": [
-						["Rising Voltage"],
-						["Surf"],
-						["Alluring Voice"],
-						["Volt Switch", "Nasty Plot"]
-					]
-				}
-			]
-		},
 		"florizim": {
 			"weight": 3,
 			"sets": [
@@ -7927,8 +8094,25 @@
 			"sets": [
 				{
 					"species": "Typhlosion-Delta",
-					"weight": 100,
+					"weight": 70,
+					"weatherSetter": "Rain",
 					"item": ["Choice Specs"],
+					"ability": ["Drizzle"],
+					"evs": { "spa": 252, "spe": 252, "spd": 4 },
+					"nature": ["Timid"],
+					"teraType": ["Normal"],
+					"moves": [
+						["Thunder"],
+						["Weather Ball"],
+						["Hurricane"],
+						["Volt Switch"]
+					]
+				},
+				{
+					"species": "Typhlosion-Delta",
+					"weight": 30,
+					"weatherSetter": "Rain",
+					"item": ["Damp Rock"],
 					"ability": ["Drizzle"],
 					"evs": { "spa": 252, "spe": 252, "spd": 4 },
 					"nature": ["Timid"],
@@ -8834,12 +9018,12 @@
 		},
 		"torkoal": {
 			"flags": {},
-			"weight": 8,
+			"weight": 5,
 			"sets": [
 				{
 					"species": "Torkoal",
 					"weight": 100,
-					"weatherSetter": true,
+					"weatherSetter": "Sun",
 					"item": ["Heat Rock"],
 					"ability": ["Drought"],
 					"evs": { "hp": 248, "def": 252, "spd": 8 },
@@ -8860,7 +9044,7 @@
 			"sets": [{
 					"species": "Hippowdon",
 					"weight": 80,
-					"weatherSetter": true,
+					"weatherSetter": "Sand",
 					"item": ["Leftovers", "Rocky Helmet"],
 					"ability": ["Sand Stream"],
 					"evs": {"hp": 252, "def": 252, "spd": 4},
@@ -8870,7 +9054,7 @@
 			}, {
 					"species": "Hippowdon",
 					"weight": 20,
-					"weatherSetter": true,
+					"weatherSetter": "Sand",
 					"item": ["Leftovers", "Rocky Helmet"],
 					"ability": ["Sand Stream"],
 					"evs": {"hp": 252, "def": 252, "spd": 4},
@@ -8962,11 +9146,12 @@
 		},
 		"barraskewda": {
 			"flags": {},
-			"weight": 8,
+			"weight": 6,
 			"sets": [
 				{
 					"species": "Barraskewda",
 					"weight": 100,
+					"rainAbuser": true,
 					"item": ["Choice Band"],
 					"ability": ["Swift Swim"],
 					"evs": { "atk": 252, "spd": 4, "spe": 252 },
@@ -8976,10 +9161,190 @@
 						["Close Combat"],
 						["Liquidation"],
 						["Flip Turn"],
-						["Aqua Jet"]
+						["Aqua Jet", "Poison Jab"]
 					]
 				}
 			]
+		},
+		"venusaur": {
+			"flags": {},
+			"weight": 1,
+			"sets": [
+				{
+					"species": "Venusaur",
+					"weight": 100,
+					"sunAbuser": true,
+					"item": ["Life Orb"],
+					"ability": ["Chlorophyll"],
+					"evs": { "spa": 252, "spd": 4, "spe": 252 },
+					"ivs": { "atk": 0 },
+					"nature": ["Modest"],
+					"teraType": ["Normal"],
+					"moves": [
+						["Growth"],
+						["Giga Drain", "Earth Power"],
+						["Weather Ball"],
+						["Sludge Bomb"]
+					]
+				}
+			]
+		},
+		"flaringquill": {
+			"flags": {},
+			"weight": 4,
+			"sets": [{
+				"species": "Flaring Quill",
+				"weight": 98,
+				"item": ["Choice Band"],
+				"ability": ["Protosynthesis"],
+				"evs": { "at": 252, "spe": 252, "spd": 4 },
+				"nature": ["Jolly"],
+				"teraType": ["Normal"],
+				"moves": [["Quillstorm"], ["Earthquake"], ["Stone Edge"], ["Crunch"]]
+			},
+			{
+				"species": "Flaring Quill",
+				"weight": 1,
+				"sunAbuser": true,
+				"item": ["Choice Specs"],
+				"ability": ["Protosynthesis"],
+				"evs": { "spa": 112, "spe": 252, "hp": 144 },
+				"nature": ["Timid"],
+				"teraType": ["Normal"],
+				"moves": [["Eruption"], ["Earth Power"], ["Fire Blast"], ["Dragon Pulse"]]
+			},
+			{
+				"species": "Flaring Quill",
+				"weight": 1,
+				"sunAbuser": true,
+				"item": ["Choice Band"],
+				"ability": ["Protosynthesis"],
+				"evs": { "at": 252, "spe": 252, "spd": 4 },
+				"nature": ["Jolly"],
+				"teraType": ["Normal"],
+				"moves": [["Quillstorm"], ["Earthquake"], ["Stone Edge"], ["Crunch"]]
+			}
+		]
+		},
+		"roseradedelta": {
+			"flags": {},
+			"weight": 8,
+			"sets": [{
+				"species": "Roserade-Delta",
+				"weight": 99,
+				"item": ["Life Orb", "Leftovers"],
+				"ability": ["Sharpness"],
+				"evs": { "at": 252, "spe": 252, "spd": 4 },
+				"nature": ["Jolly"],
+				"teraType": ["Normal"],
+				"moves": [["Leaf Blade"], ["Sacred Sword"], ["Smart Strike"], ["Swords Dance"]]
+			},
+			{
+				"species": "Roserade-Delta",
+				"weight": 1,
+				"sunAbuser": true,
+				"item": ["Life Orb", "Leftovers"],
+				"ability": ["Swordmaster"],
+				"evs": { "at": 252, "spe": 252, "spd": 4 },
+				"nature": ["Jolly"],
+				"teraType": ["Normal"],
+				"moves": [["Solar Blade"], ["Sacred Sword"], ["Smart Strike"], ["Swords Dance"]]
+			}
+		]
+		},
+		"electisaur": {
+			"flags": {},
+			"weight": 1,
+			"sets": [{
+				"species": "Electisaur",
+				"weight": 100,
+				"sunAbuser": true,
+				"item": ["Life Orb"],
+				"ability": ["Chlorophyll"],
+				"evs": { "spa": 252, "spe": 252, "spd": 4 },
+				"nature": ["Modest"],
+				"teraType": ["Normal"],
+				"moves": [["Solar Beam"], ["Thunderbolt"], ["Sludge Bomb"], ["Growth"]]
+			}]
+		},
+		"rogueprince": {
+			"flags": {},
+			"weight": 4,
+			"sets": [{
+				"species": "Rogue Prince",
+				"weight": 1,
+				"sunAbuser": true,
+				"item": ["Life Orb"],
+				"ability": ["Protosynthesis"],
+				"evs": { "spa": 252, "spe": 252, "spd": 4 },
+				"nature": ["Timid"],
+				"teraType": ["Normal"],
+				"moves": [["Depth Decree"], ["Psychic"], ["Ice Beam"], ["Take Heart"]]
+			},
+			{
+				"species": "Rogue Prince",
+				"weight": 99,
+				"item": ["Choice Specs"],
+				"ability": ["Protosynthesis"],
+				"evs": { "spa": 252, "spe": 252, "spd": 4 },
+				"nature": ["Timid"],
+				"teraType": ["Normal"],
+				"moves": [["Scald"], ["Psychic"], ["Ice Beam"], ["Flip Turn"]]
+			}]
+		},
+		"archaludon": {
+			"flags": {},
+			"weight": 6,
+			"sets": [{
+				"species": "Archaludon",
+				"weight": 100,
+				"rainAbuser": true,
+				"item": ["Assault Vest"],
+				"ability": ["Stamina"],
+				"evs": { "hp": 248, "spa": 252, "spd": 4 },
+				"nature": ["Modest"],
+				"teraType": ["Normal"],
+				"moves": [["Draco Meteor"], ["Electro Shot"], ["Flash Cannon"], ["Body Press", "Aura Sphere"]]
+			}]
+		},
+		"overqwil": {
+			"flags": {},
+			"weight": 3,
+			"sets": [{
+				"species": "Overqwil",
+				"weight": 99,
+				"item": ["Heavy-Duty Boots", "Leftovers"],
+				"ability": ["Intimidate"],
+				"evs": {"hp": 252, "atk": 4, "spe": 252},
+				"nature": ["Jolly"],
+				"teraType": ["Steel", "Fairy", "Flying"],
+				"moves": [["Barb Barrage"], ["Throat Chop"], ["Spikes"], ["Taunt", "Haze", "Pain Split"]]
+			}, {
+				"species": "Overqwil",
+				"weight": 1,
+				"rainAbuser": true,
+				"item": ["Life Orb"],
+				"ability": ["Swift Swim"],
+				"evs": {"atk": 252, "def": 4, "spe": 252},
+				"nature": ["Adamant"],
+				"teraType": ["Steel", "Fairy", "Flying"],
+				"moves": [["Gunk Shot"], ["Crunch"], ["Liquidation"], ["Swords Dance"]]
+			}]
+		},
+		"garchomp": {
+			"flags": {},
+			"weight": 1,
+			"sets": [{
+				"species": "Garchomp",
+				"weight": 100,
+				"sandAbuser": true,
+				"item": ["Garchompite"],
+				"ability": ["Rough Skin"],
+				"evs": { "atk": 252, "spe": 252, "def": 4 },
+				"nature": ["Jolly"],
+				"teraType": ["Normal"],
+				"moves": [["Earthquake"], ["Stone Edge"], ["Fire Fang", "Outrage"], ["Swords Dance"]]
+			}]
 		}
 	},
 	"RU": {
@@ -9315,7 +9680,7 @@
 			"sets": [{
 				"species": "Hippowdon",
 				"weight": 80,
-				"weatherSetter": true,
+				"weatherSetter": "Sand",
 				"item": ["Leftovers", "Rocky Helmet"],
 				"ability": ["Sand Stream"],
 				"evs": {"hp": 252, "def": 252, "spd": 4},
@@ -9325,7 +9690,7 @@
 			}, {
 				"species": "Hippowdon",
 				"weight": 20,
-				"weatherSetter": true,
+				"weatherSetter": "Sand",
 				"item": ["Leftovers", "Rocky Helmet"],
 				"ability": ["Sand Stream"],
 				"evs": {"hp": 252, "def": 252, "spd": 4},
@@ -9951,7 +10316,7 @@
 			"sets": [{
 				"species": "Ninetales-Alola",
 				"wantsTera": true,
-				"weatherSetter": true,
+				"weatherSetter": "Snow",
 				"weight": 100,
 				"item": ["Heavy-Duty Boots"],
 				"ability": ["Snow Warning"],
@@ -11058,6 +11423,27 @@
 						["Solar Beam"],
 						["Synthesis"],
 						["Hidden Power Ground", "Ancient Power", "Knock Off"]
+					]
+				}
+			]
+		},
+		"dracozolot": {
+			"weight": 1,
+			"sets": [
+				{
+					"species": "Dracozolot",
+					"weight": 100,
+					"sandAbuser": true,
+					"item": ["Life Orb"],
+					"ability": ["Sand Rush"],
+					"evs": { "atk": 252, "spe": 252, "spa": 4 },
+					"nature": ["Naughty"],
+					"teraType": ["Normal"],
+					"moves": [
+						["Bolt Beak"],
+						["Earthquake"],
+						["Fire Blast"],
+						["Dragon Claw"]
 					]
 				}
 			]
