@@ -2389,7 +2389,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	flashfist: {
 		name: "Flash Fist",
-		shortDesc: "Damage is calculated with Speed instead of Attack.",
+		desc: "Usually goes first and always critically hits.",
+		shortDesc: "Usually goes first and always critically hits.",
 	},
 	flashfreezestorm: {
 		name: "Flashfreeze Storm",
