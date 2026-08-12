@@ -146,6 +146,7 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 			'Standard AG', 'NatDex Mod',
 			'Species Clause', 'Nickname Clause', 'OHKO Clause', 'Evasion Clause', 'Sleep Clause Mod',
 		],
+		banlist: ['Goolossal + Rest'],
 	},
 	natdexmod: {
 		effectType: 'ValidatorRule',
