@@ -23,11 +23,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		isNonstandard: null,
 		tier: "Uber",
 	},
-	transistor: {
-		isNonstandard: null,
-		tier: "Uber",
-	},
-	golisopod: {
+	golisopodmega: {
 		isNonstandard: null,
 		tier: "Uber",
 	},
