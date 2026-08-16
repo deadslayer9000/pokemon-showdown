@@ -107911,7 +107911,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			rest: ["9M"],
 			return: ["9M"],
 			rockblast: ["9M"],
-			rockpolish: ["9M"],
 			rockslide: ["9M"],
 			rocksmash: ["9M"],
 			rocktomb: ["9M"],

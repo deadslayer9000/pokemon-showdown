@@ -28225,11 +28225,27 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		priority: -6,
 		forceSwitch: true,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
-		onEffectiveness(typeMod, target, type, move) {
-			let effectiveness = target?.runEffectiveness(move)
-			this.hint(`${target?.name}target ${effectiveness}effectiveness`)
-			if (effectiveness){
-				
+		onPrepareHit(target, source, move) {
+			let effectiveness = Dex.getEffectiveness(move.type, target);
+			switch (effectiveness) {
+				case 0:
+					this.damage(target.baseMaxhp / 8, target, source);
+					break;
+				case -2:
+					this.damage(target.baseMaxhp / 32, target, source);
+					break;
+				case -1:
+					this.damage(target.baseMaxhp / 16, target, source);
+					break;
+				case 1:
+					this.damage(target.baseMaxhp / 4, target, source);
+					break
+				case 2:
+					this.damage(target.baseMaxhp / 4, target, source);
+					break;
+				default:
+					this.damage(target.baseMaxhp / 8, target, source);
+					break;
 			}
 		},
 		target: "normal",

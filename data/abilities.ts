@@ -10323,10 +10323,19 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				});
 			}
 		},
-		onFoeBeforeMove(source, target, move) {
-			this.hint(`${source.name}source ${target.name}target`);
-			if (source.volatiles["confusion"] && move.target === target.name){
-				move.target === "self";
+		//onFoeBeforeMove(source, target, move) {
+			
+		//},
+		onFoeModifyMove(move, pokemon, target) {
+			//const possibleTargets = target.adjacentFoes();
+			//if (!possibleTargets.length) return;
+			const foe = this.activeTarget?.name;
+			
+			//const foe = this.sample(possibleTargets);
+			//this.hint(`${pokemon.name}source ${pokemon.name}target ${foe}foe ${move.target}move`);
+			if (pokemon.volatiles["confusion"] && target?.name === foe){
+				move.target = "self";
+				this.hint(`${foe} made ${pokemon.name} use its move on itself!`);
 			}
 		},
 		flags: {},
