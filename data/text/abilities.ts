@@ -48,6 +48,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "This Pokemon is immune to Fighting-type attacks, and additionally heals 25% HP when hit by one. If the user's ally has no item, the user gives its item to its ally.",
 		shortDesc: "Heals 25% HP from Fighting moves; Fighting immmunity. Gives its item to itemless ally.",
 	},
+	ampedvoice: {
+		name: "Amped Voice",
+		shortDesc: "This Pokemon's sound moves become Electric type.",
+	},
 	analytic: {
 		name: "Analytic",
 		desc: "The power of this Pokemon's move is multiplied by 1.3 if it is the last to move in a turn. Does not affect Doom Desire and Future Sight.",
@@ -105,6 +109,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		shortDesc: "This Pokemon and its allies are protected from opposing priority moves.",
 
 		block: "#damp",
+	},
+	aromatic: {
+		name: "Aromatic",
+		shortDesc: "Using an offensive Fairy-type move sets Misty Terrain on the field."
 	},
 	aromaveil: {
 		name: "Aroma Veil",

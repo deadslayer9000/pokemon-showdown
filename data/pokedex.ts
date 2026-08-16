@@ -26700,5 +26700,89 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		weightkg: 0.3,
 		//color: "Blue", no dsc page
 		eggGroups: ["Undiscovered"],
+	},
+	celesteelurk: {
+		num: 2134,
+		name: "Celesteelurk",
+		types: ["Steel", "Ground"],
+		gender: "N",
+		baseStats: { hp: 72, atk: 120, def: 136, spa: 100, spd: 84, spe: 48 },
+		abilities: { 0: "Levitate" },
+		heightm: 10.5,
+		weightkg: 999.9,
+		//color: "Gray", no dsc page
+		eggGroups: ["Undiscovered"],
+	},
+	chatirisu: {
+		num: 2136,
+		name: "Chatirisu",
+		types: ["Electric", "Flying"],
+		gender: "N",
+		baseStats: { hp: 52, atk: 108, def: 76, spa: 108, spd: 112, spe: 104 },
+		abilities: { 0: "Tangled Feet", 1: "Volt Absorb", H: "Amped Voice" },
+		heightm: 0.6,
+		weightkg: 2.2,
+		//color: "White", no dsc page
+		eggGroups: ["Undiscovered"],
+	},
+	chatoth: {
+		num: 2137,
+		name: "Chatoth",
+		types: ["Normal", "Flying"],
+		gender: "N",
+		baseStats: { hp: 144, atk: 60, def: 60, spa: 60, spd: 60, spe: 60 },
+		abilities: { 0: "Fabled" },
+		heightm: 0.7,
+		weightkg: 26.9,
+		//color: "Blue", no dsc page
+		eggGroups: ["Undiscovered"],
+	},
+	deciraptor: {
+		num: 2138,
+		name: "Deciraptor",
+		types: ["Fighting", "Flying"],
+		gender: "N",
+		baseStats: { hp: 92, atk: 116, def: 116, spa: 80, spd: 88, spe: 68 },
+		abilities: { 0: "Scrappy", 1: "Contrary", H: "Stalwart" },
+		heightm: 1.6,
+		weightkg: 38,
+		//color: "Grey", no dsc page
+		eggGroups: ["Undiscovered"],
+	},
+	draganium: {
+		num: 2141,
+		name: "Draganium",
+		types: ["Fairy", "Dragon"],
+		gender: "N",
+		baseStats: { hp: 92, atk: 80, def: 72, spa: 140, spd: 96, spe: 80 },
+		abilities: { 0: "Multiscale", 1: "Leaf Guard", H: "Aromatic" },
+		heightm: 2.8,
+		weightkg: 206,
+		//color: "White", no dsc page
+		eggGroups: ["Undiscovered"],
+	},
+	basculalie: {
+		num: 2133,
+		name: "Basculalie",
+		types: ["Ice", "Ghost"],
+		gender: "N",
+		baseStats: { hp: 100, atk: 100, def: 100, spa: 80, spd: 100, spe: 80 },
+		abilities: { 0: "Swift Swim", 1: "Ice Body", H: "Mold Breaker" },
+		heightm: 3,
+		weightkg: 108,
+		//color: "White", no dsc page
+		eggGroups: ["Undiscovered"],
+	},
+	gougeon: {
+		num: 2150, //no page in dex
+		name: "Gougeon",
+		types: ["Fire", "Ground"],
+		gender: "N",
+		baseStats: { hp: 84, atk: 132, def: 116, spa: 104, spd: 92, spe: 72 },
+		abilities: { 0: "Mold Breaker" },
+		heightm: 1,
+		weightkg: 32.5,
+		//color: "Red", no page yet
+		eggGroups: ["Undiscovered"],
 	}
 };

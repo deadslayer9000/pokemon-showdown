@@ -28167,4 +28167,52 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		type: "Water",
 		contestType: "Beautiful",
 	},
+	crashlanding: {
+		num: -145,
+		accuracy: 100,
+		basePower: 160,
+		category: "Physical",
+		name: "Crash Landing",
+		pp: 5,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		mindBlownRecoil: true,
+		onAfterMove(pokemon, target, move) {
+			if (move.mindBlownRecoil && !move.multihit) {
+				const hpBeforeRecoil = pokemon.hp;
+				this.damage(
+					Math.round(pokemon.maxhp / 2),
+					pokemon,
+					pokemon,
+					this.dex.conditions.get("Steel Beam"),
+					true
+				);
+				if (
+					pokemon.hp <= pokemon.maxhp / 2 &&
+					hpBeforeRecoil > pokemon.maxhp / 2
+				) {
+					this.runEvent("EmergencyExit", pokemon, pokemon);
+				}
+			}
+		},
+		target: "normal",
+		type: "Ground",
+	},
+	dracobloom: {
+		num: -146,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Draco Bloom",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		onBasePower(relayVar, source, target, move) {
+			if(this.field.terrain === "mistyterrain") {
+				return this.chainModify([12288, 4096]); //should effectively boost damage by 50%
+			}
+		},
+		target: "normal",
+		type: "Dragon",
+	}
 };

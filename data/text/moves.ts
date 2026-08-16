@@ -1326,6 +1326,13 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		start: "  Crafty Shield protected [TEAM]!",
 		block: "  Crafty Shield protected [POKEMON]!",
 	},
+	crashlanding: {
+		name: "Crash Landing",
+		desc: "Whether or not this move is successful and even if it would cause fainting, the user loses 1/2 of its maximum HP, rounded up, unless the user has the Magic Guard Ability.",
+		shortDesc: "User loses 50% max HP.",
+
+		damage: "#mindblown",
+	},
 	crescentedge: {
 		name: "Crescent Edge",
 		desc: "Deals damage to the foe based on their Special Defense instead of their Defense.",

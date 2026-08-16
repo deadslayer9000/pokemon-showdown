@@ -10271,6 +10271,44 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -115,
 		rating: 3.5,
 	},
+	ampedvoice: {
+		onModifyTypePriority: -1,
+		onModifyType(move, pokemon) {
+			const noModifyType = [
+				"judgment",
+				"multiattack",
+				"naturalgift",
+				"revelationdance",
+				"technoblast",
+				"terrainpulse",
+				"weatherball",
+			];
+			if (
+				move.flags["sound"] &&
+				(!noModifyType.includes(move.id) || this.activeMove?.isMax) &&
+				!(move.isZ && move.category !== "Status") &&
+				!(move.name === "Tera Blast" && pokemon.terastallized)
+			) {
+				move.type = "Electric";
+				move.typeChangerBoosted = this.effect;
+			}
+		},
+		flags: {},
+		name: "Amped Voice",
+		num: -116,
+		rating: 3,
+	},
+	aromatic: {
+		onAfterMove(source, target, move) {
+			if (move.type === "Fairy" && move.category !== "Status"){
+				this.field.setTerrain("mistyterrain");
+			}
+		},
+		flags: {},
+		name: "Aromatic",
+		num: -117,
+		rating: 3,
+	},
 	// CAP
 	mountaineer: {
 		onDamage(damage, target, source, effect) {
