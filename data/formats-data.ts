@@ -7879,4 +7879,12 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 		natDexTier: "UU",
 	},
+	meowsette: {
+		tier: "UU",
+		natDexTier: "UU",
+	},
+	mrcrime: {
+		tier: "UU",
+		natDexTier: "UU",
+	},
 };
