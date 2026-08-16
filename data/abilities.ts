@@ -10309,6 +10309,31 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -117,
 		rating: 3,
 	},
+	shadowpuppeteer: {
+		onModifyMove(move, pokemon, target) {
+			if (move.type === "Ghost" && move.category !== "Status"){
+				this.debug("Adding Puppeteer Confusion");
+				if (!move.secondaries) move.secondaries = [];
+				for (const secondary of move.secondaries) {
+					if (secondary.volatileStatus === "confusion") return;
+				}
+				move.secondaries.push({
+					chance: 30,
+					volatileStatus: "confusion",
+				});
+			}
+		},
+		onFoeBeforeMove(source, target, move) {
+			this.hint(`${source.name}source ${target.name}target`);
+			if (source.volatiles["confusion"] && move.target === target.name){
+				move.target === "self";
+			}
+		},
+		flags: {},
+		name: "Shadow Puppeteer",
+		num: -118,
+		rating: 3,
+	},
 	// CAP
 	mountaineer: {
 		onDamage(damage, target, source, effect) {

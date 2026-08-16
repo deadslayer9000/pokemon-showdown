@@ -28214,5 +28214,25 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		},
 		target: "normal",
 		type: "Dragon",
+	},
+	redherring: {
+		num: -147,
+		accuracy: 95,
+		basePower: 0,
+		category: "Status",
+		name: "Red Herring",
+		pp: 10,
+		priority: -6,
+		forceSwitch: true,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		onEffectiveness(typeMod, target, type, move) {
+			let effectiveness = target?.runEffectiveness(move)
+			this.hint(`${target?.name}target ${effectiveness}effectiveness`)
+			if (effectiveness){
+				
+			}
+		},
+		target: "normal",
+		type: "Dark",
 	}
 };

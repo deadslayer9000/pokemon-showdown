@@ -1985,6 +1985,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			desc: "This Pokemon's moves have their secondary effect chance doubled.",
 		},
 	},
+	shadowpuppeteer: {
+		name: "Shadow Puppeteer",
+		shortDesc: "Ghost moves 30% to confuse. Confused targets hit themselves with status.",
+	},
 	shadowshield: {
 		name: "Shadow Shield",
 		shortDesc: "If this Pokemon is at full HP, damage taken from attacks is halved.",

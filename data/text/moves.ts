@@ -1729,6 +1729,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Raises the user's evasiveness by 1 stage.",
 		shortDesc: "Raises the user's evasiveness by 1.",
 	},
+	dracobloom: {
+		name: "Draco Bloom",
+		shortDesc: "In Misty Terrain: 50% more instead of less damage.",
+	},
 	dracometeor: {
 		name: "Draco Meteor",
 		desc: "Lowers the user's Special Attack by 2 stages.",
@@ -5666,6 +5670,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		},
 
 		addItem: "  [POKEMON] found one [ITEM]!",
+	},
+	redherring: {
+		name: "Red Herring",
+		shortDesc: "Deals 12.5% of opp's max HP, affected by type effectiveness. Switches them.",
 	},
 	reflect: {
 		name: "Reflect",

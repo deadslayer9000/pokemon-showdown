@@ -26422,7 +26422,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		baseStats: { hp: 120, atk: 92, def: 100, spa: 120, spd: 80, spe: 88 },
     	abilities: { 0: "Shed Skin" },
     	weightkg: 340,
-		weighthg: 5,
+		heightm: 5,
     	gender: "N",
 		color: "Black",
 		eggGroups: ["Undiscovered"],
@@ -26784,5 +26784,29 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		weightkg: 32.5,
 		//color: "Red", no page yet
 		eggGroups: ["Undiscovered"],
-	}
+	},
+	meowsette: {
+		num: 2140,
+		name: "Meowsette",
+		types: ["Ghost", "Psychic"],
+		gender: "N",
+		baseStats: { hp: 64, atk: 100, def: 56, spa: 116, spd: 96, spe: 128 },
+		abilities: { 0: "Trace", 1: "Insomnia", H: "Shadow Puppeteer" },
+		heightm: 0.8,
+		weightkg: 8.8,
+		//color: "Purple", no page yet
+		eggGroups: ["Undiscovered"],
+	},
+	mrcrime: {
+		num: 2135,
+		name: "Mr. Crime",
+		types: ["Ghost", "Poison"],
+		gender: "N",
+		baseStats: { hp: 60, atk: 96, def: 84, spa: 136, spd: 160, spe: 24 },
+		abilities: { 0: "Screen Cleaner", 1: "Cursed Body", H: "Inner Focus" },
+		heightm: 1.5,
+		weightkg: 8,
+		//color: "Purple", no page yet
+		eggGroups: ["Undiscovered"],
+	},
 };
