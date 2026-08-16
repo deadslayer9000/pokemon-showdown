@@ -7851,4 +7851,40 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 		natDexTier: "UU",
 	},
+	celesteelurk: {
+		tier: "UU",
+		natDexTier: "UU",
+	},
+	chatirisu: {
+		tier: "UU",
+		natDexTier: "UU",
+	},
+	chatoth: {
+		tier: "UU",
+		natDexTier: "UU",
+	},
+	deciraptor: {
+		tier: "UU",
+		natDexTier: "UU",
+	},
+	draganium: {
+		tier: "UU",
+		natDexTier: "UU",
+	},
+	basculalie: {
+		tier: "UU",
+		natDexTier: "UU",
+	},
+	gougeon: {
+		tier: "UU",
+		natDexTier: "UU",
+	},
+	meowsette: {
+		tier: "UU",
+		natDexTier: "UU",
+	},
+	mrcrime: {
+		tier: "UU",
+		natDexTier: "UU",
+	},
 };

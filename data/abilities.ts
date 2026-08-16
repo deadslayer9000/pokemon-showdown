@@ -10271,6 +10271,78 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -115,
 		rating: 3.5,
 	},
+	ampedvoice: {
+		onModifyTypePriority: -1,
+		onModifyType(move, pokemon) {
+			const noModifyType = [
+				"judgment",
+				"multiattack",
+				"naturalgift",
+				"revelationdance",
+				"technoblast",
+				"terrainpulse",
+				"weatherball",
+			];
+			if (
+				move.flags["sound"] &&
+				(!noModifyType.includes(move.id) || this.activeMove?.isMax) &&
+				!(move.isZ && move.category !== "Status") &&
+				!(move.name === "Tera Blast" && pokemon.terastallized)
+			) {
+				move.type = "Electric";
+				move.typeChangerBoosted = this.effect;
+			}
+		},
+		flags: {},
+		name: "Amped Voice",
+		num: -116,
+		rating: 3,
+	},
+	aromatic: {
+		onAfterMove(source, target, move) {
+			if (move.type === "Fairy" && move.category !== "Status"){
+				this.field.setTerrain("mistyterrain");
+			}
+		},
+		flags: {},
+		name: "Aromatic",
+		num: -117,
+		rating: 3,
+	},
+	shadowpuppeteer: {
+		onModifyMove(move, pokemon, target) {
+			if (move.type === "Ghost" && move.category !== "Status"){
+				this.debug("Adding Puppeteer Confusion");
+				if (!move.secondaries) move.secondaries = [];
+				for (const secondary of move.secondaries) {
+					if (secondary.volatileStatus === "confusion") return;
+				}
+				move.secondaries.push({
+					chance: 30,
+					volatileStatus: "confusion",
+				});
+			}
+		},
+		//onFoeBeforeMove(source, target, move) {
+			
+		//},
+		onFoeModifyMove(move, pokemon, target) {
+			//const possibleTargets = target.adjacentFoes();
+			//if (!possibleTargets.length) return;
+			const foe = this.activeTarget?.name;
+			
+			//const foe = this.sample(possibleTargets);
+			//this.hint(`${pokemon.name}source ${pokemon.name}target ${foe}foe ${move.target}move`);
+			if (pokemon.volatiles["confusion"] && target?.name === foe){
+				move.target = "self";
+				this.hint(`${foe} made ${pokemon.name} use its move on itself!`);
+			}
+		},
+		flags: {},
+		name: "Shadow Puppeteer",
+		num: -118,
+		rating: 3,
+	},
 	// CAP
 	mountaineer: {
 		onDamage(damage, target, source, effect) {

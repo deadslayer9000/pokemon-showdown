@@ -28167,4 +28167,88 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		type: "Water",
 		contestType: "Beautiful",
 	},
+	crashlanding: {
+		num: -145,
+		accuracy: 100,
+		basePower: 160,
+		category: "Physical",
+		name: "Crash Landing",
+		pp: 5,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		mindBlownRecoil: true,
+		onAfterMove(pokemon, target, move) {
+			if (move.mindBlownRecoil && !move.multihit) {
+				const hpBeforeRecoil = pokemon.hp;
+				this.damage(
+					Math.round(pokemon.maxhp / 2),
+					pokemon,
+					pokemon,
+					this.dex.conditions.get("Steel Beam"),
+					true
+				);
+				if (
+					pokemon.hp <= pokemon.maxhp / 2 &&
+					hpBeforeRecoil > pokemon.maxhp / 2
+				) {
+					this.runEvent("EmergencyExit", pokemon, pokemon);
+				}
+			}
+		},
+		target: "normal",
+		type: "Ground",
+	},
+	dracobloom: {
+		num: -146,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Draco Bloom",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		onBasePower(relayVar, source, target, move) {
+			if(this.field.terrain === "mistyterrain") {
+				return this.chainModify([12288, 4096]); //should effectively boost damage by 50%
+			}
+		},
+		target: "normal",
+		type: "Dragon",
+	},
+	redherring: {
+		num: -147,
+		accuracy: 95,
+		basePower: 0,
+		category: "Status",
+		name: "Red Herring",
+		pp: 10,
+		priority: -6,
+		forceSwitch: true,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		onPrepareHit(target, source, move) {
+			let effectiveness = Dex.getEffectiveness(move.type, target);
+			switch (effectiveness) {
+				case 0:
+					this.damage(target.baseMaxhp / 8, target, source);
+					break;
+				case -2:
+					this.damage(target.baseMaxhp / 32, target, source);
+					break;
+				case -1:
+					this.damage(target.baseMaxhp / 16, target, source);
+					break;
+				case 1:
+					this.damage(target.baseMaxhp / 4, target, source);
+					break
+				case 2:
+					this.damage(target.baseMaxhp / 4, target, source);
+					break;
+				default:
+					this.damage(target.baseMaxhp / 8, target, source);
+					break;
+			}
+		},
+		target: "normal",
+		type: "Dark",
+	}
 };
