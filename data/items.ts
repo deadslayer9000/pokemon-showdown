@@ -85,7 +85,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		num: -49,
 	},
 	plasmaabsovoiriumz: {
-		name: "Plasma Absovoirum Z",
+		name: "Plasma Absovoirium Z",
 		spritenum: 646,
 		onTakeItem: false,
 		zMove: "Perilous Starfall",
