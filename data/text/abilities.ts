@@ -2787,6 +2787,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			shortDesc: "This Pokemon is only damaged by supereffective moves and indirect damage.",
 		},
 	},
+	wondermist: {
+		name: "Wonder Mist",
+		shortDesc: "A Pokemon making contact with this Pokemon becomes drowsy."
+	},
 	wonderskin: {
 		name: "Wonder Skin",
 		desc: "Non-damaging moves that check accuracy have their accuracy changed to 50% when used against this Pokemon. This effect comes before other effects that modify accuracy.",

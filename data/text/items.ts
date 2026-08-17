@@ -772,6 +772,14 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Flame Plate",
 		shortDesc: "Holder's Fire-type attacks have 1.2x power. Judgment is Fire type.",
 	},
+	flareabsovoiriumz: {
+		name: "Flare Absovoirium Z",
+		shortDesc: "If held by a Flare-Absovoir with Doomcutter, allows it to use Perilous Divider."
+	},
+	plasmaabsovoiriumz: {
+		name: "Plasma Absovoirium Z",
+		shortDesc: "IF held by a Plasma-Absovoir with Doomfall, allows it to use Perilous Starfall."
+	},
 	floatstone: {
 		name: "Float Stone",
 		shortDesc: "Holder's weight is halved.",

@@ -1649,6 +1649,25 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "The user and its ally's Abilities change to match the target's Ability. Does not change Ability if the user's or its ally's is As One, Battle Bond, Comatose, Disguise, Gulp Missile, Ice Face, Multitype, Power Construct, RKS System, Schooling, Shields Down, Stance Change, Tera Shift, Zen Mode, Zero to Hero, or already matches the target. Fails if both the user and its ally's Ability already matches the target, or if the target's Ability is As One, Battle Bond, Comatose, Commander, Disguise, Embody Aspect, Flower Gift, Forecast, Hunger Switch, Ice Face, Illusion, Imposter, Multitype, Neutralizing Gas, Poison Puppeteer, Power Construct, Power of Alchemy, Protosynthesis, Quark Drive, Receiver, RKS System, Schooling, Shields Down, Stance Change, Tera Shell, Tera Shift, Teraform Zero, Trace, Wonder Guard, Zen Mode, or Zero to Hero.",
 		shortDesc: "User and ally's Abilities become target's Ability.",
 	},
+	doomcutter: {
+		name: "Doomcutter",
+		shortDesc: "1/3 chance to inflict Bleed on hit.",
+		desc: "1/3 chance to inflct Bleed on hit. Bleed deals 1/8 of the afflicted Pokemon's max HP. The damage doubles if the afflicted is Grass or Fighting type."
+	},
+	perilousdivider: {
+		name: "Perilous Divider",
+		shortDesc: "High critical hit ratio.",
+		desc: "This move has a higher chance to land a critical hit.",
+	},
+	doomfall: {
+		name: "Doomfall",
+		shortDesc: "30% chance to flinch.",
+	},
+	perilousstarfall: {
+		name: "Perilous Starfall",
+		shortDesc: "User becomes Dark/Flying.",
+		desc: "This Pokemon changes typing to Dark/Flying."
+	},
 	doomdesire: {
 		name: "Doom Desire",
 		desc: "Deals damage two turns after this move is used. At the end of that turn, the damage is calculated at that time and dealt to the Pokemon at the position the target had when the move was used. If the user is no longer active at the time, damage is calculated based on the user's natural Special Attack stat, types, and level, with no boosts from its held item or Ability. Fails if this move or Future Sight is already in effect for the target's position.",

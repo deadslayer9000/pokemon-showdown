@@ -28250,5 +28250,71 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		},
 		target: "normal",
 		type: "Dark",
-	}
+	},
+	doomcutter: {
+		num: -148,
+		accuracy: 90,
+		basePower: 80,
+		category: "Physical",
+		name: "Doomcutter",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1, contact: 1},
+		secondary: { 
+			chance: 30,
+			volatileStatus: "iaislash",
+		},
+		target: "normal",
+		type: "Ghost",
+	},
+	perilousdivider: {
+		num: -149,
+		accuracy: true,
+		basePower: 170,
+		category: "Physical",
+		name: "Perilous Divider",
+		pp: 1,
+		priority: 0,
+		flags: {contact: 1},
+		isZ: 'flareabsovoiriumz',
+		critRatio: 2,
+		target: "normal",
+		type: "Ghost",
+	},
+	doomfall: {
+		num: -150,
+		accuracy: 95, 
+		basePower: 85,
+		category: "Special",
+		name: "Doomfall",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, metronome: 1},
+		secondary: {
+			chance: 30,
+			volatileStatus: "flinch",
+		},
+		target: "normal",
+		type: "Dark",
+	},
+	perilousstarfall: {
+		num: -151,
+		accuracy: true,
+		basePower: 190,
+		category: "Special",
+		name: "Perilous Starfall",
+		pp: 1,
+		priority: 0,
+		flags: {},
+		isZ: 'plasmaabsovoiriumz',
+		onAfterMove(pokemon) {
+			if(pokemon.species.name === "Absovoir-Plasma") {
+				this.add('-activate', pokemon, 'move: Perilous Starfall');
+				pokemon.formeChange("Absovoir-Plasma-Calamity", null, true);
+			}
+		},
+		target: "normal",
+		type: "Dark",
+	},
+
 };
