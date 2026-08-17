@@ -26812,6 +26812,8 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	musharnaunbound: {
 		num: 518,
 		name: "Musharna-Unbound",
+		baseSpecies: "Musharna",
+		forme: "Unbound",
 		types: ["Psychic", "Dark"],
 		baseStats: { hp: 116, atk: 65, def: 100, spa: 147, spd: 110, spe: 29 },
 		abilities: {0: "Wonder Mist"},
