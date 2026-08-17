@@ -7887,4 +7887,24 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 		natDexTier: "UU",
 	},
+	musharnaunbound: {
+		tier: "UU",
+		natDexTier: "UU",
+	},
+	absovoirflare: {
+		tier: "UU",
+		natDexTier: "UU",
+	},
+	bolteon: {
+		tier: "UU",
+		natDexTier: "UU",
+	},
+	absovoirplasma: {
+		tier: "UU",
+		natDexTier: "UU",
+	},
+	wakeon: {
+		tier: "UU",
+		natDexTier: "UU",
+	},
 };

@@ -10343,6 +10343,17 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -118,
 		rating: 3,
 	},
+	wondermist: {
+		onDamagingHit(damage, target, source, move) {
+			if (this.checkMoveMakesContact(move, source, target)) {
+				source.addVolatile('drowsy', target);
+			}
+		},
+		flags: {},
+		name: "Wonder Mist",
+		num: -119,
+		rating: 2.5,
+	},
 	// CAP
 	mountaineer: {
 		onDamage(damage, target, source, effect) {

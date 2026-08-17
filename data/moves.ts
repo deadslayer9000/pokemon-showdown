@@ -28250,5 +28250,71 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		},
 		target: "normal",
 		type: "Dark",
-	}
+	},
+	doomcutter: {
+		num: -148,
+		accuracy: 90,
+		basePower: 80,
+		category: "Physical",
+		name: "Doomcutter",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1, contact: 1},
+		secondary: { 
+			chance: 30,
+			volatileStatus: "bleed",
+		},
+		target: "normal",
+		type: "Ghost",
+	},
+	perilousdivider: {
+		num: -149,
+		accuracy: true,
+		basePower: 170,
+		category: "Physical",
+		name: "Perilous Divider",
+		pp: 1,
+		priority: 0,
+		flags: {contact: 1},
+		isZ: 'absovoirplasmiumz',
+		critRatio: 2,
+		target: "normal",
+		type: "Ghost",
+	},
+	doomfall: {
+		num: -150,
+		accuracy: 95, 
+		basePower: 85,
+		category: "Special",
+		name: "Doomfall",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, metronome: 1},
+		secondary: {
+			chance: 30,
+			volatileStatus: "flinch",
+		},
+		target: "normal",
+		type: "Dark",
+	},
+	perilousstarfall: {
+		num: -151,
+		accuracy: true,
+		basePower: 190,
+		category: "Special",
+		name: "Perilous Starfall",
+		pp: 1,
+		priority: 0,
+		flags: {},
+		isZ: 'absovoirflariumz',
+		onAfterMove(pokemon) {
+			pokemon.setType(['Dark', 'Flying']);
+			const newType = ['Dark', "Flying"];
+			this.add('-start', pokemon, 'typechange', newType.join("/"), "[from] move: Perilous Starfall")
+			pokemon.types = ['Dark', 'Flying'];
+		},
+		target: "normal",
+		type: "Dark",
+	},
+
 };
