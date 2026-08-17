@@ -28308,10 +28308,10 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		flags: {},
 		isZ: 'plasmaabsovoiriumz',
 		onAfterMove(pokemon) {
-			pokemon.setType(['Dark', 'Flying']);
-			const newType = ['Dark', "Flying"];
-			this.add('-start', pokemon, 'typechange', newType.join("/"), "[from] move: Perilous Starfall")
-			pokemon.types = ['Dark', 'Flying'];
+			if(pokemon.species.name === "Absovoir-Plasma") {
+				this.add('-activate', pokemon, 'move: Perilous Starfall');
+				pokemon.formeChange("Absovoir-Plasma-Calamity", null, true);
+			}
 		},
 		target: "normal",
 		type: "Dark",
