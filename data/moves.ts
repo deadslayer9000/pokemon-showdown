@@ -28311,6 +28311,13 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			if(pokemon.species.name === "Absovoir-Plasma") {
 				this.add('-activate', pokemon, 'move: Perilous Starfall');
 				pokemon.formeChange("Absovoir-Plasma-Calamity", null, true);
+				this.add(
+							"-start",
+							pokemon,
+							"typechange",
+							["Dark", "Flying"].join("/"),
+							"[from] move: Perilous Starfall"
+						);
 			}
 		},
 		target: "normal",
