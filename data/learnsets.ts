@@ -54219,7 +54219,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			{generation: 7, level: 15, moves: ["vcreate", "reversal", "storedpower", "celebrate"], pokeball: "cherishball"},
 			{generation: 8, level: 50, nature: "Brave", perfectIVs: 6, moves: ["vcreate", "zenheadbutt", "workup", "flamecharge"], pokeball: "cherishball"},
 		],
-		eventOnly: true,
 	},
 	snivy: {
 		learnset: {
