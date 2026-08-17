@@ -28262,7 +28262,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		flags: { protect: 1, mirror: 1, metronome: 1, contact: 1},
 		secondary: { 
 			chance: 30,
-			volatileStatus: "bleed",
+			volatileStatus: "iaislash",
 		},
 		target: "normal",
 		type: "Ghost",
