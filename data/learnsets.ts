@@ -33403,7 +33403,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 		encounters: [
 			{generation: 2, level: 30},
 		],
-		eventOnly: true,
 	},
 	treecko: {
 		learnset: {
@@ -46641,7 +46640,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			{generation: 8, level: 70, nature: "Timid", moves: ["meteormash", "psychic", "rest", "wish"], pokeball: "cherishball"},
 			{generation: 8, level: 5, moves: ['confusion', 'wish'], pokeball: "pokeball", source: "gen8bdsp"},
 		],
-		eventOnly: true,
 	},
 	deoxys: {
 		learnset: {
@@ -46789,7 +46787,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			{generation: 6, level: 80, moves: ["cosmicpower", "recover", "psychoboost", "hyperbeam"]},
 			{generation: 9, level: 50, nature: "Serious", moves: ["psychic", "gravity", "skillswap", "zenheadbutt"], pokeball: "cherishball"},
 		],
-		eventOnly: true,
 	},
 	deoxysattack: {
 		eventOnly: true,
@@ -54222,7 +54219,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			{generation: 7, level: 15, moves: ["vcreate", "reversal", "storedpower", "celebrate"], pokeball: "cherishball"},
 			{generation: 8, level: 50, nature: "Brave", perfectIVs: 6, moves: ["vcreate", "zenheadbutt", "workup", "flamecharge"], pokeball: "cherishball"},
 		],
-		eventOnly: true,
 	},
 	snivy: {
 		learnset: {
@@ -67446,10 +67442,8 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			{generation: 9, level: 50, nature: "Docile", moves: ["retaliate", "aquatail", "takedown", "sacredsword"], pokeball: "cherishball"},
 			{generation: 9, level: 50, shiny: true, nature: "Modest", moves: ["quickguard", "doublekick", "aquatail", "sacredsword"], ivs: {hp: 31, atk: 20, def: 20, spa: 31, spd: 20, spe: 31}, pokeball: "cherishball"},
 		],
-		eventOnly: true,
 	},
 	keldeoresolute: {
-		eventOnly: true,
 	},
 	meloetta: {
 		learnset: {
@@ -67568,7 +67562,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			{generation: 9, level: 70, moves: ["relicsong", "hypervoice", "sing", "psychic"]},
 			{generation: 9, level: 50, shiny: true, nature: "Modest", ivs: {hp: 20, atk: 20, def: 20, spa: 31, spd: 31, spe: 31}, moves: ["relicsong", "echoedvoice", "psybeam", "sing"], pokeball: "cherishball"},
 		],
-		eventOnly: true,
 	},
 	genesect: {
 		learnset: {
@@ -67662,7 +67655,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			{generation: 6, level: 100, moves: ["technoblast", "magnetbomb", "solarbeam", "signalbeam"], pokeball: "cherishball"},
 			{generation: 8, level: 60, moves: ["technoblast", "xscissor", "metalclaw", "fellstinger"], pokeball: "cherishball"},
 		],
-		eventOnly: true,
 	},
 	genesectburn: {
 		eventOnly: true,
@@ -68619,7 +68611,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 		eventData: [
 			{generation: 7, level: 36, ivs: {hp: 20, atk: 31, def: 20, spa: 31, spd: 20, spe: 31}, moves: ["watershuriken", "aerialace", "doubleteam", "nightslash"], pokeball: "pokeball"},
 		],
-		eventOnly: false,
 	},
 	bunnelby: {
 		learnset: {
@@ -73995,7 +73986,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			{generation: 6, level: 50, shiny: true, moves: ["diamondstorm", "moonblast", "reflect", "return"], pokeball: "cherishball"},
 			{generation: 9, level: 70, moves: ["diamondstorm", "moonblast", "stealthrock", "drainingkiss"], source: "gen9legends"},
 		],
-		eventOnly: true,
 	},
 	hoopa: {
 		learnset: {
@@ -74101,10 +74091,8 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			{generation: 6, level: 50, moves: ["hyperspacehole", "nastyplot", "psychic", "astonish"], pokeball: "cherishball"},
 			{generation: 7, level: 15, moves: ["shadowball", "nastyplot", "psychic", "hyperspacehole"], pokeball: "cherishball"},
 		],
-		eventOnly: true,
 	},
 	hoopaunbound: {
-		eventOnly: true,
 	},
 	volcanion: {
 		learnset: {
@@ -74196,7 +74184,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			{generation: 6, level: 70, moves: ["steameruption", "flamethrower", "hydropump", "explosion"], pokeball: "cherishball"},
 			{generation: 8, level: 60, moves: ["steameruption", "flareblitz", "incinerate", "haze"], pokeball: "cherishball"},
 		],
-		eventOnly: true,
 	},
 	rowlet: {
 		learnset: {
@@ -80304,7 +80291,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			{generation: 7, level: 5, moves: ["splash"]},
 			{generation: 8, level: 5, moves: ["splash", "teleport"], pokeball: "pokeball"},
 		],
-		eventOnly: true,
 	},
 	cosmoem: {
 		learnset: {
@@ -81253,7 +81239,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 		eventData: [
 			{generation: 7, level: 50, moves: ["fleurcannon", "flashcannon", "luckychant", "helpinghand"], pokeball: "cherishball"},
 		],
-		eventOnly: true,
 	},
 	magearnaoriginal: {
 		learnset: {
@@ -81437,7 +81422,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			{generation: 7, level: 50, moves: ["spectralthief", "closecombat", "forcepalm", "shadowball"], pokeball: "cherishball"},
 			{generation: 8, level: 60, moves: ["spectralthief", "drainpunch", "forcepalm", "shadowsneak"], pokeball: "cherishball"},
 		],
-		eventOnly: true,
 	},
 	poipole: {
 		learnset: {
@@ -81806,7 +81790,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			{generation: 7, level: 50, moves: ["plasmafists", "thunderpunch", "closecombat", "thunder"], pokeball: "cherishball"},
 			{generation: 8, level: 100, shiny: true, nature: "Hasty", ivs: {hp: 31, atk: 31, def: 30, spa: 31, spd: 31, spe: 31}, moves: ["plasmafists", "closecombat", "blazekick", "outrage"], pokeball: "cherishball"},
 		],
-		eventOnly: true,
 	},
 	meltan: {
 		learnset: {
@@ -86167,13 +86150,11 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			{generation: 8, level: 70, perfectIVs: 3, moves: ["sacredsword", "swordsdance", "ironhead", "crunch"]},
 			{generation: 8, level: 100, shiny: true, nature: "Adamant", ivs: {hp: 31, atk: 31, def: 31, spa: 30, spd: 31, spe: 31}, moves: ["ironhead", "playrough", "swordsdance", "sacredsword"], pokeball: "cherishball"},
 		],
-		eventOnly: true,
 	},
 	zaciancrowned: {
 		learnset: {
 			behemothblade: ["9R", "8R"],
 		},
-		eventOnly: true,
 	},
 	zamazenta: {
 		learnset: {
@@ -86250,13 +86231,11 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			{generation: 8, level: 70, perfectIVs: 3, moves: ["slash", "crunch", "ironhead", "irondefense"]},
 			{generation: 8, level: 100, shiny: true, nature: "Adamant", ivs: {hp: 31, atk: 31, def: 31, spa: 30, spd: 31, spe: 31}, moves: ["ironhead", "closecombat", "irondefense", "wideguard"], pokeball: "cherishball"},
 		],
-		eventOnly: true,
 	},
 	zamazentacrowned: {
 		learnset: {
 			behemothbash: ["9R", "8R"],
 		},
-		eventOnly: true,
 	},
 	eternatus: {
 		learnset: {
@@ -86318,7 +86297,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			{generation: 8, level: 60, perfectIVs: 3, moves: ["crosspoison", "dragonpulse", "flamethrower", "dynamaxcannon"]},
 			{generation: 8, level: 100, shiny: true, nature: "Timid", perfectIVs: 6, moves: ["eternabeam", "dynamaxcannon", "sludgebomb", "flamethrower"], pokeball: "cherishball"},
 		],
-		eventOnly: true,
 	},
 	kubfu: {
 		learnset: {
@@ -86620,7 +86598,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			{generation: 8, level: 60, nature: "Sassy", moves: ["closecombat", "powerwhip", "swagger", "snarl"], pokeball: "cherishball"},
 			{generation: 9, level: 50, nature: "Quirky", moves: ["scaryface", "grassknot", "bite", "uturn"], pokeball: "cherishball"},
 		],
-		eventOnly: true,
 	},
 	zarudedada: {
 		learnset: {
@@ -86765,7 +86742,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 		eventData: [
 			{generation: 8, level: 70, shiny: 1, moves: ["thundercage", "thrash", "lockon", "zapcannon"]},
 		],
-		eventOnly: true,
 	},
 	regidrago: {
 		learnset: {
@@ -86816,7 +86792,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 		eventData: [
 			{generation: 8, level: 70, shiny: 1, moves: ["dragonenergy", "dragonclaw", "hammerarm", "laserfocus"]},
 		],
-		eventOnly: true,
 	},
 	glastrier: {
 		learnset: {
@@ -86880,7 +86855,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			{generation: 8, level: 75, moves: ["taunt", "doubleedge", "swordsdance", "iciclecrash"]},
 			{generation: 9, level: 70, moves: ["doubleedge", "taunt", "thrash", "irondefense"]},
 		],
-		eventOnly: true,
 	},
 	spectrier: {
 		learnset: {
@@ -86939,7 +86913,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			{generation: 8, level: 75, moves: ["thrash", "doubleedge", "disable", "nastyplot"]},
 			{generation: 9, level: 70, moves: ["doubleedge", "disable", "thrash", "agility"]},
 		],
-		eventOnly: true,
 	},
 	calyrex: {
 		learnset: {
@@ -87016,7 +86989,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 		eventData: [
 			{generation: 8, level: 80, moves: ["psychic", "gigadrain"]},
 		],
-		eventOnly: true,
 	},
 	calyrexice: {
 		learnset: {
@@ -87132,7 +87104,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 		eventData: [
 			{generation: 8, level: 80, moves: ["glaciallance", "psychic", "irondefense", "gigadrain"]},
 		],
-		eventOnly: true,
 	},
 	calyrexshadow: {
 		learnset: {
@@ -87238,7 +87209,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 		eventData: [
 			{generation: 8, level: 80, moves: ["astralbarrage", "psychic", "agility", "gigadrain"]},
 		],
-		eventOnly: true,
 	},
 	enamorus: {
 		learnset: {
@@ -87298,10 +87268,8 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			{generation: 8, level: 70, perfectIVs: 3, moves: ["extrasensory", "crunch", "moonblast", "springtidestorm"], source: "gen8legends"},
 			{generation: 9, level: 50, shiny: true, nature: "Naive", ivs: {hp: 20, atk: 31, def: 20, spa: 31, spd: 20, spe: 31}, moves: ["drainingkiss", "extrasensory", "moonblast"], pokeball: "cherishball"},
 		],
-		eventOnly: true,
 	},
 	enamorustherian: {
-		eventOnly: true,
 	},
 	sprigatito: {
 		learnset: {
@@ -92253,7 +92221,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			{generation: 9, level: 60, moves: ["gigadrain", "ruination", "foulplay", "powerwhip"]},
 			{generation: 9, level: 75, shiny: true, nature: "Calm", ivs: {hp: 31, atk: 20, def: 31, spa: 31, spd: 31, spe: 31}, moves: ["gigadrain", "darkpulse", "snarl", "pollenpuff"], pokeball: "cherishball"},
 		],
-		eventOnly: true,
 	},
 	chiyu: {
 		learnset: {
@@ -92308,7 +92275,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			{generation: 9, level: 60, moves: ["lavaplume", "ruination", "bounce", "swagger"]},
 			{generation: 9, level: 75, shiny: true, nature: "Modest", ivs: {hp: 31, atk: 20, def: 31, spa: 31, spd: 31, spe: 31}, moves: ["heatwave", "darkpulse", "snarl", "flamethrower"], pokeball: "cherishball"},
 		],
-		eventOnly: true,
 	},
 	koraidon: {
 		learnset: {
@@ -92390,7 +92356,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			{generation: 9, level: 72, nature: "Adamant", ivs: {hp: 25, atk: 31, def: 25, spa: 31, spd: 25, spe: 31}, moves: ["gigaimpact", "bulkup", "collisioncourse", "flamethrower"]},
 			{generation: 9, level: 100, shiny: true, nature: "Adamant", ivs: {hp: 31, atk: 31, def: 31, spa: 20, spd: 31, spe: 31}, moves: ["collisioncourse", "closecombat", "flareblitz", "gigaimpact"], pokeball: "cherishball"},
 		],
-		eventOnly: true,
 	},
 	miraidon: {
 		learnset: {
@@ -92456,7 +92421,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			{generation: 9, level: 72, nature: "Modest", ivs: {hp: 25, atk: 31, def: 25, spa: 31, spd: 25, spe: 31}, moves: ["hyperbeam", "charge", "electrodrift", "powergem"]},
 			{generation: 9, level: 100, shiny: true, nature: "Modest", ivs: {hp: 31, atk: 20, def: 31, spa: 31, spd: 31, spe: 31}, moves: ["electrodrift", "thunder", "overheat", "hyperbeam"], pokeball: "cherishball"},
 		],
-		eventOnly: true,
 	},
 	tinkatink: {
 		learnset: {
@@ -92955,7 +92919,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 		eventData: [
 			{generation: 9, level: 75, perfectIVs: 3, moves: ["hydrosteam", "dragonpulse", "nobleroar", "flamethrower"]},
 		],
-		eventOnly: true,
 	},
 	ironleaves: {
 		learnset: {
@@ -93020,7 +92983,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 		eventData: [
 			{generation: 9, level: 75, perfectIVs: 3, moves: ["psyblade", "leafblade", "megahorn", "swordsdance"]},
 		],
-		eventOnly: true,
 	},
 	dipplin: {
 		learnset: {
@@ -93518,16 +93480,12 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			{generation: 9, level: 20, nature: "Lonely", ivs: {hp: 31, atk: 31, def: 20, spa: 20, spd: 20, spe: 31}, moves: ["ivycudgel", "slam", "growth", "vinewhip"]},
 			{generation: 9, level: 70, nature: "Lonely", ivs: {hp: 31, atk: 31, def: 20, spa: 20, spd: 20, spe: 31}, moves: ["ivycudgel", "lowkick", "slam", "grassyterrain"]},
 		],
-		eventOnly: true,
 	},
 	ogerponhearthflame: {
-		eventOnly: true,
 	},
 	ogerponwellspring: {
-		eventOnly: true,
 	},
 	ogerponcornerstone: {
-		eventOnly: true,
 	},
 	archaludon: {
 		learnset: {
@@ -93716,7 +93674,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 		eventData: [
 			{generation: 9, level: 75, ivs: {hp: 20, atk: 20, def: 20, spa: 20, spd: 20, spe: 20}, moves: ["lavaplume", "fireblast", "dragonrush", "burningbulwark"]},
 		],
-		eventOnly: true,
 	},
 	ragingbolt: {
 		learnset: {
@@ -93779,7 +93736,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 		eventData: [
 			{generation: 9, level: 75, ivs: {hp: 20, atk: 20, def: 20, spa: 20, spd: 20, spe: 20}, moves: ["dragonpulse", "risingvoltage", "dragonhammer", "thunderclap"]},
 		],
-		eventOnly: true,
 	},
 	ironboulder: {
 		learnset: {
@@ -93836,7 +93792,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 		eventData: [
 			{generation: 9, level: 75, ivs: {hp: 20, atk: 20, def: 20, spa: 20, spd: 20, spe: 20}, moves: ["megahorn", "swordsdance", "mightycleave", "sacredsword"]},
 		],
-		eventOnly: true,
 	},
 	ironcrown: {
 		learnset: {
@@ -93893,7 +93848,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 		eventData: [
 			{generation: 9, level: 75, ivs: {hp: 20, atk: 20, def: 20, spa: 20, spd: 20, spe: 20}, moves: ["voltswitch", "futuresight", "tachyoncutter", "sacredsword"]},
 		],
-		eventOnly: true,
 	},
 	terapagos: {
 		learnset: {
@@ -93960,7 +93914,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 		eventData: [
 			{generation: 9, level: 85, gender: "M", nature: "Hardy", ivs: {hp: 31, atk: 15, def: 31, spa: 31, spd: 31, spe: 31}, moves: ["terastarstorm", "zenheadbutt", "earthpower", "waterpulse"]},
 		],
-		eventOnly: true,
 	},
 	pecharunt: {
 		learnset: {
@@ -94003,7 +93956,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 		eventData: [
 			{generation: 9, level: 88, nature: "Timid", moves: ["nastyplot", "toxic", "malignantchain", "shadowball"]},
 		],
-		eventOnly: true,
 	},
 	syclar: {
 		learnset: {
