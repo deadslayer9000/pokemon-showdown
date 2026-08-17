@@ -28276,7 +28276,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		pp: 1,
 		priority: 0,
 		flags: {contact: 1},
-		isZ: 'absovoirplasmiumz',
+		isZ: 'flareabsovoiriumz',
 		critRatio: 2,
 		target: "normal",
 		type: "Ghost",
@@ -28306,7 +28306,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		pp: 1,
 		priority: 0,
 		flags: {},
-		isZ: 'absovoirflariumz',
+		isZ: 'plasmaabsovoiriumz',
 		onAfterMove(pokemon) {
 			pokemon.setType(['Dark', 'Flying']);
 			const newType = ['Dark', "Flying"];
