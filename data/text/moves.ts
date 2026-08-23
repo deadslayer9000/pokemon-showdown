@@ -1661,7 +1661,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	doomfall: {
 		name: "Doomfall",
-		shortDesc: "30% chance to flinch.",
+		shortDesc: "20% chance to flinch.",
 	},
 	perilousstarfall: {
 		name: "Perilous Starfall",
