@@ -5693,6 +5693,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	redherring: {
 		name: "Red Herring",
 		shortDesc: "Damage depends on target's type; Switch out target.",
+		desc: "Damage dealt is 12.5%, increased or decreased by the target's resistance to the Dark-type. Forces the target to switch to a random ally Pokemon."
 	},
 	reflect: {
 		name: "Reflect",
