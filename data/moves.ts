@@ -28219,7 +28219,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		num: -147,
 		accuracy: 95,
 		basePower: 0,
-		category: "Status",
+		category: "Special",
 		name: "Red Herring",
 		pp: 10,
 		priority: -6,
@@ -28291,7 +28291,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1, metronome: 1},
 		secondary: {
-			chance: 30,
+			chance: 20,
 			volatileStatus: "flinch",
 		},
 		target: "normal",

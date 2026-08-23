@@ -1661,7 +1661,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	doomfall: {
 		name: "Doomfall",
-		shortDesc: "30% chance to flinch.",
+		shortDesc: "20% chance to flinch.",
 	},
 	perilousstarfall: {
 		name: "Perilous Starfall",
@@ -5692,7 +5692,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	redherring: {
 		name: "Red Herring",
-		shortDesc: "Deals 12.5% of opp's max HP, affected by type effectiveness. Switches them.",
+		shortDesc: "Damage depends on target's type; Switch out target.",
+		desc: "Damage dealt is 12.5%, increased or decreased by the target's resistance to the Dark-type. Forces the target to switch to a random ally Pokemon."
 	},
 	reflect: {
 		name: "Reflect",
