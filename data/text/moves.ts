@@ -5692,7 +5692,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	redherring: {
 		name: "Red Herring",
-		shortDesc: "Deals 12.5% of opp's max HP, affected by type effectiveness. Switches them.",
+		shortDesc: "Damage depends on target's type; Switch out target.",
 	},
 	reflect: {
 		name: "Reflect",
