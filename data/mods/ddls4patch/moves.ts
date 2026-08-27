@@ -539,4 +539,8 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	doubleironbash: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

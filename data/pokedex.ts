@@ -26838,8 +26838,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	absovoirplasma: {
 		num: 2136,
 		name: "Absovoir-Plasma",
-		baseSpecies: "Absovoir-Flare",
-		forme: "Plasma",
+		baseForme: "Plasma",
 		types: ["Psychic", "Dark"],
 		gender: "N",
 		baseStats: { hp: 80, atk: 80, def: 72, spa: 148, spd: 100, spe: 80 },
@@ -26852,7 +26851,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	absovoirplasmacalamity: {
 		num: 2136,
 		name: "Absovoir-Plasma-Calamity",
-		baseSpecies: "Absovoir-Flare",
+		baseSpecies: "Absovoir-Plasma",
 		forme: "Plasma-Calamity",
 		types: ["Dark", "Flying"],
 		gender: "N",
