@@ -1555,7 +1555,7 @@ function runDexsearch(target: string, cmd: string, message: string, isTest: bool
 	let results: Species[] = [];
 	for (const mon of Object.values(dex).sort()) {
 		if (singleTypeSearch !== null && (mon.types.length === 1) !== singleTypeSearch) continue;
-		const isRegionalForm = (["Alola", "Galar", "Hisui"].includes(mon.forme) || mon.forme.startsWith("Paldea")) &&
+		const isRegionalForm = (["Alola", "Galar", "Hisui", "Delta", "Omega", "Gamma", "Epsilon", "Ultra", "ATOM"].includes(mon.forme) || mon.forme.startsWith("Paldea")) &&
 			mon.baseSpecies !== "Pikachu";
 		const maskForm = mon.baseSpecies === "Ogerpon" && !mon.forme.endsWith("Tera");
 		const allowGmax = (gmaxSearch || tierSearch);
