@@ -18074,8 +18074,9 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					)} type!`
 				);
 			}*/ //lost type change in ms7
-			let move = "revivalblessing";
-			this.actions.useMove(move, source);
+			if (["sunnyday", "desolateland"].includes(source.effectiveWeather())) {
+				this.actions.useMove("revivalblessing", source);
+			}
 		},
 		callsMove: true,
 		target: "normal",
@@ -27208,8 +27209,13 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			this.hint(`Beam Roulette rolled a ${dice} and a ${dice2}!`);
 			switch (dice) {
 				case 0:
-					move.basePower = move.basePower * 0.5;
-					this.hint(`Beam Roulette's power was halved!`);
+					if (pokemon.hasItem("loadeddice")) {
+						move.basePower = move.basePower * 2;
+						this.hint(`Beam Roulette's power was doubled!`);
+					} else {
+						move.basePower = move.basePower * 0.5;
+						this.hint(`Beam Roulette's power was halved!`);
+					}
 					break;
 				case 1:
 					move.basePower = move.basePower * 2;
@@ -28083,17 +28089,77 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	},
 	falseremedy: {
 		num: -142,
-		accuracy: 100,
-		basePower: 90,
+		accuracy: 85,
+		basePower: 50,
+		basePowerCallback(pokemon, target, move) {
+			if (target.beingCalledBack || target.switchFlag) {
+				this.debug("False Remedy damage boost");
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		category: "Special",
 		name: "False Remedy",
 		pp: 10,
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
-		secondary: {
-			chance: 30,
-			onHit(target, source, move) {
-				target.addVolatile("confusion", source, move);
+		beforeTurnCallback(pokemon) {
+			for (const target of pokemon.foes()) {
+				target.addVolatile('falseremedy');
+				const data = target.volatiles['falseremedy'];
+				if (!data.sources) {
+					data.sources = [];
+				}
+				data.sources.push(pokemon);
+			}
+		},
+		onModifyMove(move, source, target) {
+			if (target?.beingCalledBack || target?.switchFlag)
+				move.accuracy = true;
+		},
+		onHit(target, source, move) {
+			if (target.beingCalledBack || target.switchFlag) {
+				target.trySetStatus('psn', source, move);
+			}
+		},
+		condition: {
+			duration: 1,
+			onBeforeSwitchOut(pokemon) {
+				this.debug("False Remedy start");
+				let alreadyAdded = false;
+				pokemon.removeVolatile("destinybond");
+				for (const source of this.effectState.sources) {
+					if (
+						!source.isAdjacent(pokemon) ||
+						!this.queue.cancelMove(source) ||
+						!source.hp
+					)
+						continue;
+					if (!alreadyAdded) {
+						this.add("-activate", pokemon, "move: False Remedy");
+						alreadyAdded = true;
+					}
+					if (
+						source.canMegaEvo ||
+						source.canUltraBurst ||
+						source.canTerastallize
+					) {
+						for (const [actionIndex, action] of this.queue.entries()) {
+							if (action.pokemon === source) {
+								if (action.choice === "megaEvo") {
+									this.actions.runMegaEvo(source);
+								} else if (action.choice === "terastallize") {
+									this.actions.terastallize(source);
+								} else {
+									continue;
+								}
+								this.queue.list.splice(actionIndex, 1);
+								break;
+							}
+						}
+					}
+					this.actions.runMove("falseremedy", source, source.getLocOf(pokemon));
+				}
 			},
 		},
 		target: "normal",
@@ -28123,7 +28189,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			},
 			onTryHitPriority: 3,
 			onTryHit(target, source, move) {
-				if (!move.flags["protect"]) {
+				if (move.category === "Status") {
 					if (["gmaxoneblow", "gmaxrapidflow"].includes(move.id)) return;
 					if (move.isZ || move.isMax)
 						target.getMoveHitData(move).zBrokeProtect = true;

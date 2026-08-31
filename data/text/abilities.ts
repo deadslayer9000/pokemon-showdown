@@ -778,8 +778,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	fulltilt: {
 		name: "Full Tilt",
-		desc: "This Pokemon's Attack is multiplied by 1.5, but it can only select the first move it executes. These effects are prevented while this Pokemon is Dynamaxed.",
-		shortDesc: "This Pokemon's Attack is 1.5x, but it can only select the first move it executes.",
+		desc: "This Pokemon's Speed is multiplied by 1.5, but it can only select the first move it executes. The move restriction does not apply while this Pokemon is Dynamaxed.",
+		shortDesc: "This Pokemon's Speed is 1.5x, but it can only select the first move it executes.",
 	},
 	furcoat: {
 		name: "Fur Coat",
@@ -1516,7 +1516,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	paralysisphantom: {
 		name: "Paralysis Phantom",
-		shortDesc: "Supresses oppoenent's item after paralizing them.",
+		shortDesc: "Knocks off the held item of a Pokemon paralyzed by this Pokemon's moves.",
 	},
 	paragon: {
 		name: "Paragon",
