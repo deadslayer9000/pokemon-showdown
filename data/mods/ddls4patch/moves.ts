@@ -543,4 +543,136 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	rebirth: { 
+		inherit: true,
+		onHit(target, source) {
+				this.actions.useMove("revivalblessing", source);
+		},
+	},
+	beamroulette: {
+		inherit: true,
+		basePowerCallback(pokemon, target, move) {
+			let source = pokemon;
+			let dice = this.random(5);
+			let dice2 = this.random(5);
+			this.hint(`Beam Roulette rolled a ${dice} and a ${dice2}!`);
+			switch (dice) {
+				case 0:
+						move.basePower = move.basePower * 0.5;
+						this.hint(`Beam Roulette's power was halved!`);
+					break;
+				case 1:
+					move.basePower = move.basePower * 2;
+					this.hint(`Beam Roulette's power was doubled!`);
+					break;
+				case 2:
+					switch (dice2) {
+						case 0:
+							this.boost({ atk: 1 }, target);
+							this.hint(`Beam Roulette boosted the target's Attack!`);
+							break;
+						case 1:
+							this.boost({ def: 1 }, target);
+							this.hint(`Beam Roulette boosted the target's Defense!`);
+							break;
+						case 2:
+							this.boost({ spa: 1 }, target);
+							this.hint(`Beam Roulette boosted the target's Special Attack!`);
+							break;
+						case 3:
+							this.boost({ spd: 1 }, target);
+							this.hint(`Beam Roulette boosted the target's Special Defense!`);
+							break;
+						case 4:
+							this.boost({ spe: 1 }, target);
+							this.hint(`Beam Roulette boosted the target's Speed!`);
+							break;
+					}
+					break;
+				case 3:
+					switch (dice2) {
+						case 0:
+							this.boost({ atk: 1 }, source);
+							this.hint(`Beam Roulette boosted ${source.name}'s Attack!`);
+							break;
+						case 1:
+							this.boost({ def: 1 }, source);
+							this.hint(`Beam Roulette boosted ${source.name}'s Defense!`);
+							break;
+						case 2:
+							this.boost({ spa: 1 }, source);
+							this.hint(`Beam Roulette boosted ${source.name}'s Special Attack!`);
+							break;
+						case 3:
+							this.boost({ spd: 1 }, source);
+							this.hint(`Beam Roulette boosted ${source.name}'s Special Defense!`);
+							break;
+						case 4:
+							this.boost({ spe: 1 }, source);
+							this.hint(`Beam Roulette boosted ${source.name}'s Speed!`);
+							break;
+					}
+					break;
+				case 4:
+					move.selfSwitch = true;
+					this.hint(`Beam Roulette caused ${source.name} to switch out!`);
+					break;
+			}
+			return move.basePower;
+		},
+	},
+	falseremedy: {
+		inherit: true,
+		accuracy: 100,
+		basePower: 90,
+		basePowerCallback(pokemon, target, move) {
+			return move.basePower;
+		},
+		secondary: {
+			chance: 30,
+			onHit(target, source, move) {
+				target.addVolatile("confusion", source, move); 
+			}
+		},
+		beforeTurnCallback() {},
+		onModifyMove() {},
+		onHit() {},
+		condition: {},
+	},
+	galecocoon: {
+		inherit: true,
+		condition: {
+			duration: 1,
+			onStart(target) {
+				this.add("-singleturn", target, "move: Protect");
+			},
+			onTryHitPriority: 3,
+			onTryHit(target, source, move) {
+				if (!move.flags["protect"]) {
+					if (["gmaxoneblow", "gmaxrapidflow"].includes(move.id)) return;
+					if (move.isZ || move.isMax)
+						target.getMoveHitData(move).zBrokeProtect = true;
+					return;
+				}
+				if (move.smartTarget) {
+					move.smartTarget = false;
+				} else {
+					this.add("-activate", target, "move: Protect");
+				}
+				const lockedmove = source.getVolatile("lockedmove");
+				if (lockedmove) {
+					// Outrage counter is reset
+					if (source.volatiles["lockedmove"].duration === 2) {
+						delete source.volatiles["lockedmove"];
+					}
+				}
+				if (this.checkMoveMakesContact(move, source, target)) {
+					this.heal(target.baseMaxhp / 2, target);
+					//this.hint(`${target.name} has healed in its cocoon!`);
+				}
+				return this.NOT_FAIL;
+			},
+		
+		},
+	}
 };
