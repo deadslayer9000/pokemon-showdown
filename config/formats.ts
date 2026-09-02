@@ -188,7 +188,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		searchShow: false,
 		mod: "jddldraft",
 		ruleset: ['Standard NatDex', 'Standard Draft', 'Terastal Clause', 'Z-Move Clause'],
-		banlist: ["Last Respects", "Shed Tail", "Hidden Power", "Dire Claw", "Bloodmoon", "Blastoise-Mega + Shell Smash", "Power Consruct", "Raichu-Mega-Y + Sing", "Alakazam-Mega + Nasty Plot"],
+		banlist: ["Last Respects", "Shed Tail", "Hidden Power", "Dire Claw", "Bloodmoon", "Blastoise-Mega + Shell Smash", "Power Construct", "Raichu-Mega-Y + Sing", "Alakazam-Mega + Nasty Plot"],
 	},
 	{
 		section: "Legacy Tour Formats",	
