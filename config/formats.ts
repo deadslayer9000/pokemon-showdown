@@ -184,6 +184,16 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'Kyurem-Original + Scale Shot', 'Xerneas + Geomancy', 'Rising Phoenix + Dragon Dance', 'Quick Claw', 'King\'s Rock', 'Razor Fang'],
 	},
 	{
+		name: "[Gen 9] [ND] Juicy's Dual-type Draft League",
+		searchShow: false,
+		mod: "jddldraft",
+		ruleset: ['Standard NatDex', 'Standard Draft', 'Terastal Clause', 'Z-Move Clause'],
+		banlist: ["Last Respects", "Shed Tail", "Hidden Power", "Dire Claw", "Bloodmoon", "Blastoise-Mega + Shell Smash", "Power Consruct", "Raichu-Mega-Y + Sing", "Alakazam-Mega + Nasty Plot"],
+	},
+	{
+		section: "Legacy Tour Formats",	
+	},
+		{
 		name: "[Gen 9] [ND] Chompy's Delta Battle League",
 		searchShow: false,
 		mod: "chompyvgc",
@@ -192,10 +202,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		banlist: ['Quick Claw'],
 		gameType: 'doubles',
 		teraPreviewDefault: true,
-	},
-
-	{
-		section: "Legacy Tour Formats",
 	},
 	{
 		name: "[Gen 9] [ND] Delta Draft League Season 3",
