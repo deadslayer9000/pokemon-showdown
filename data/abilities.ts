@@ -9561,8 +9561,11 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 			)
 				return;
 			if (status.id === "par") {
-				target.addVolatile("embargo");
-				this.add("-activate", source, "ability: Paralysis Phantom");
+				const item = target.takeItem(source);
+				if (item) {
+					this.add("-activate", source, "ability: Paralysis Phantom");
+					this.add("-enditem", target, item.name, "[from] ability: Paralysis Phantom", `[of] ${source}`);
+				}
 			}
 		},
 		flags: {
@@ -10228,11 +10231,8 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				return;
 			pokemon.abilityState.choiceLock = move.id;
 		},
-		onModifyAtkPriority: 1,
-		onModifyAtk(atk, pokemon) {
-			if (pokemon.volatiles["dynamax"]) return;
-			// PLACEHOLDER
-			this.debug("Full Tilt Atk Boost");
+		onModifySpe(spe, pokemon) {
+			this.debug("Full Tilt Spe Boost");
 			return this.chainModify(1.5);
 		},
 		onDisableMove(pokemon) {

@@ -446,7 +446,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	beamroulette: {
 		name: "Beam Roulette",
-		desc: "Random chance to trigger any of the following effects: Doubled Damage, Halved Damage, Random Stat Drop on Target, Random Stat Boost on User, Swap User Out.",
+		desc: "Random chance to trigger any of the following effects: Doubled Damage, Halved Damage, Random Stat Drop on Target, Random Stat Boost on User, Swap User Out. If the user is holding Loaded Dice, the Halved Damage chance is instead added to the Doubled Damage chance.",
 		shortDesc: "Activates a random effect."
 	},
 	beastmine: {
@@ -1661,7 +1661,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	doomfall: {
 		name: "Doomfall",
-		shortDesc: "30% chance to flinch.",
+		shortDesc: "20% chance to flinch.",
 	},
 	perilousstarfall: {
 		name: "Perilous Starfall",
@@ -2187,7 +2187,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	falseremedy: {
 		name: "False Remedy",
-		shortDesc: "Deals damage, 30% chance to confuse."
+		desc: "Deals damage. If the target switches out on the turn this move is used, this move's power is doubled and it poisons the target.",
+		shortDesc: "If target switches out: 2x power, poisons it.",
 	},
 	faketears: {
 		name: "Fake Tears",
@@ -2722,7 +2723,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	galecocoon: {
 		name: "Gale Cocoon",
-		shortDesc: "User Protects; Heals 1/2 HP if hit with contact.",
+		shortDesc: "Protects from damaging attacks; heals 1/2 HP if contact.",
 	},
 	gastroacid: {
 		name: "Gastro Acid",
@@ -5692,7 +5693,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	redherring: {
 		name: "Red Herring",
-		shortDesc: "Deals 12.5% of opp's max HP, affected by type effectiveness. Switches them.",
+		shortDesc: "Damage depends on target's type; Switch out target.",
+		desc: "Damage dealt is 12.5%, increased or decreased by the target's resistance to the Dark-type. Forces the target to switch to a random ally Pokemon."
 	},
 	reflect: {
 		name: "Reflect",
