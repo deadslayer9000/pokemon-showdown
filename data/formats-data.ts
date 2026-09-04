@@ -5625,7 +5625,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	greattusk: {
 		tier: "OU",
 		doublesTier: "(DUU)",
-		natDexTier: "S",
+		natDexTier: "OU",
 	},
 	brutebonnet: {
 		tier: "ZU",
