@@ -225,6 +225,7 @@ inherit: 'gen9',
 	  this.modData("Learnsets", "zorotales").learnset.flamethrower = ["9M"];
 	  this.modData("Learnsets", "zorotales").learnset.fireblast = ["9M"];
 	  this.modData("Learnsets", "mespritomega").learnset.stealthrock = ["9M"];
+	  this.modData("Learnsets", "hoopadeltaunbound").learnset.mysticalfire = ["9M"];
 	  delete this.modData("Learnsets", "shaykarp").learnset.chillingwater;
 	},
 };
