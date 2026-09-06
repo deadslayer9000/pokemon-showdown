@@ -7684,7 +7684,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	terapagosatomcosmic: {
 		tier: "UU",
-		natDexTier:	"UU",
+		natDexTier:	"A",
 	},
 	terapagosatomgalactic: {
 		tier: "Uber",
