@@ -96,7 +96,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	beedrill: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "ZU",
+		natDexTier: "D",
 	},
 	beedrillmega: {
 		isNonstandard: "Past",
@@ -3908,6 +3908,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	floetteeternal: {
 		tier: "NU",
+		natDexTier: "D",
 	},
 	floettemega: {
 		tier: "Uber",
