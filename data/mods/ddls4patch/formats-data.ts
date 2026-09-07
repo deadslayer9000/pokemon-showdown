@@ -39,4 +39,8 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		isNonstandard: null,
 		tier: "Uber",
 	},
+	okidogi: {
+		isNonstandard: null,
+		natDexTier: "OU",
+	}
 };	
