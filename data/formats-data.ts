@@ -5395,7 +5395,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	houndstone: {
 		tier: "NU",
 		doublesTier: "DUU",
-		natDexTier: "Unreleased",
+		natDexTier: "C",
 	},
 	flittle: {
 		tier: "LC",
@@ -7304,7 +7304,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	heatrandelta: {
 		tier: "OU",
-		natDexTier: "D",
+		natDexTier: "S",
 	},
 	jirachidelta: {
 		tier: "RU",
