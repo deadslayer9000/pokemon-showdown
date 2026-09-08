@@ -39,14 +39,6 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		isNonstandard: null,
 		tier: "Uber",
 	},
-	abomasnow: {
-		isNonstandard:null,
-		tier: "OU",
-	},
-	abomasnowmega: {
-		isNonstandard:null,
-		tier: "OU",
-	},
 	audino: {
 		isNonstandard:null,
 		tier: "OU",
@@ -63,15 +55,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		isNonstandard:null,
 		tier: "OU",
 	},
-	burmy: {
-		isNonstandard:null,
-		tier: "OU",
-	},
 	castform: {
-		isNonstandard:null,
-		tier: "OU",
-	},
-	charjabug: {
 		isNonstandard:null,
 		tier: "OU",
 	},
@@ -107,35 +91,11 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		isNonstandard:null,
 		tier: "OU",
 	},
-	grubbin: {
-		isNonstandard:null,
-		tier: "OU",
-	},
 	gulpin: {
 		isNonstandard:null,
 		tier: "OU",
 	},
-	heliolisk: {
-		isNonstandard:null,
-		tier: "OU",
-	},
-	helioptile: {
-		isNonstandard:null,
-		tier: "OU",
-	},
-	houndstone: {
-		isNonstandard:null,
-		tier: "OU",
-	},
 	mandibuzz: {
-		isNonstandard:null,
-		tier: "OU",
-	},
-	minior: {
-		isNonstandard:null,
-		tier: "OU",
-	},
-	mothim: {
 		isNonstandard:null,
 		tier: "OU",
 	},
@@ -187,14 +147,6 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		isNonstandard:null,
 		tier: "OU",
 	},
-	seismitoad: {
-		isNonstandard:null,
-		tier: "OU",
-	},
-	snover: {
-		isNonstandard:null,
-		tier: "OU",
-	},
 	swalot: {
 		isNonstandard:null,
 		tier: "OU",
@@ -203,23 +155,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		isNonstandard:null,
 		tier: "OU",
 	},
-	vikavolt: {
-		isNonstandard:null,
-		tier: "OU",
-	},
 	vrelieomega: {
-		isNonstandard:null,
-		tier: "OU",
-	},
-	wormadam: {
-		isNonstandard:null,
-		tier: "OU",
-	},
-	wormadamtrash: {
-		isNonstandard:null,
-		tier: "OU",
-	},
-	wormadamsandy: {
 		isNonstandard:null,
 		tier: "OU",
 	},
