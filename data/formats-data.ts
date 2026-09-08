@@ -2608,27 +2608,27 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	burmy: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "Unreleased",
+		natDexTier: "LC",
 	},
 	wormadam: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "Unreleased",
+		natDexTier: "D",
 	},
 	wormadamsandy: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "Unreleased",
+		natDexTier: "D",
 	},
 	wormadamtrash: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "Unreleased",
+		natDexTier: "D",
 	},
 	mothim: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "Unreleased",
+		natDexTier: "D",
 	},
 	combee: {
 		tier: "LC",
@@ -2810,17 +2810,17 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	snover: {
 		tier: "LC",
-		natDexTier: "Unreleased",
+		natDexTier: "LC",
 	},
 	abomasnow: {
 		tier: "ZU",
 		doublesTier: "DUU",
-		natDexTier: "Unreleased",
+		natDexTier: "C",
 	},
 	abomasnowmega: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "Unreleased",
+		natDexTier: "B-",
 	},
 	rotom: {
 		tier: "ZU",
@@ -3169,7 +3169,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	seismitoad: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "Unreleased",
+		natDexTier: "D",
 	},
 	throh: {
 		isNonstandard: "Past",
@@ -4045,12 +4045,12 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	helioptile: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "Unreleased",
+		natDexTier: "LC",
 	},
 	heliolisk: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "Unreleased",
+		natDexTier: "D",
 	},
 	tyrunt: {
 		isNonstandard: "Past",
@@ -4293,16 +4293,14 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	grubbin: {
 		tier: "LC",
-		natDexTier: "Unreleased",
 	},
 	charjabug: {
 		tier: "NFE",
-		natDexTier: "Unreleased",
 	},
 	vikavolt: {
 		tier: "ZU",
 		doublesTier: "(DUU)",
-		natDexTier: "Unreleased",
+		natDexTier: "D",
 	},
 	vikavolttotem: {
 		isNonstandard: "Past",
@@ -4605,7 +4603,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	minior: {
 		tier: "ZU",
 		doublesTier: "(DUU)",
-		natDexTier: "Unreleased",
+		natDexTier: "D",
 	},
 	komala: {
 		tier: "ZU",
