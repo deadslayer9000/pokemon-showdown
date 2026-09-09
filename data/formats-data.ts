@@ -1707,7 +1707,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	tyranitarmega: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "A-",
+		natDexTier: "A",
 	},
 	lugia: {
 		tier: "Uber",
@@ -2325,8 +2325,8 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "D",
 	},
 	absolmegaz: {
-		tier: "OU",
-		natDexTier: "A",
+		tier: "Uber",
+		natDexTier: "Uber",
 	},
 	snorunt: {
 		tier: "LC",
@@ -4032,7 +4032,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	dragalgemega: {
 		tier: "UU",
-		natDexTier: "S",
+		natDexTier: "A",
 	},
 	clauncher: {
 		tier: "LC",
@@ -5676,7 +5676,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	ironmoth: {
 		tier: "OU",
 		doublesTier: "(DUU)",
-		natDexTier: "A",
+		natDexTier: "A-",
 	},
 	ironhands: {
 		tier: "UUBL",
@@ -5836,7 +5836,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	archaludon: {
 		tier: "Uber",
 		doublesTier: "DUber",
-		natDexTier: "A-",
+		natDexTier: "A",
 	},
 	hydrapple: {
 		tier: "UU",
@@ -5845,7 +5845,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	hydrappleultra: {
 		tier: "OU",
-		natDexTier: "S",
+		natDexTier: "B",
 	},
 	gougingfire: {
 		tier: "Uber",
@@ -6252,7 +6252,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	valianttime: {
 		tier: "UU",
-		natDexTier: "A-",
+		natDexTier: "A",
 	},
 	shaykarp: {
 		tier: "NU",
@@ -6284,7 +6284,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	grimmeon: {
 		tier: "UU",
-		natDexTier: "B",
+		natDexTier: "A-",
 	},
 	scizantrum: {
 		tier: "UU",
@@ -6364,7 +6364,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	latiasdelta: {
 		tier: "OU",
-		natDexTier: "A",
+		natDexTier: "A-",
 	},
 	latiasdeltamega: {
 		tier: "UU",
@@ -6532,7 +6532,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	tangledtime: {
 		tier: "OU",
-		natDexTier: "S",
+		natDexTier: "A",
 	},
 	froakieomega: {
 		tier: "LC",
@@ -7302,7 +7302,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	heatrandelta: {
 		tier: "OU",
-		natDexTier: "S",
+		natDexTier: "A",
 	},
 	jirachidelta: {
 		tier: "RU",
@@ -7832,15 +7832,15 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	shayminomegasky: {
 		tier: "UU",
-		natDexTier: "S",
+		natDexTier: "A",
 	},
 	hoopaomega: {
 		tier: "UU",
-		natDexTier: "B",
+		natDexTier: "A-",
 	},
 	ampharia: {
 		tier: "UU",
-		natDexTier: "B",
+		natDexTier: "A-",
 	},
 	azelfomega: {
 		tier: "UU",
@@ -7856,11 +7856,11 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	mespritomega: {
 		tier: "UU",
-		natDexTier: "B",
+		natDexTier: "A-",
 	},
 	uxieomega: {
 		tier: "UU",
-		natDexTier: "B",
+		natDexTier: "A-",
 	},
 	vrelieomega: {
 		tier: "UU",
@@ -7868,7 +7868,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	celesteelurk: {
 		tier: "UU",
-		natDexTier: "B",
+		natDexTier: "B-",
 	},
 	chatirisu: {
 		tier: "UU",
@@ -7876,11 +7876,11 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	chatoth: {
 		tier: "UU",
-		natDexTier: "B",
+		natDexTier: "D",
 	},
 	deciraptor: {
 		tier: "UU",
-		natDexTier: "B",
+		natDexTier: "C",
 	},
 	draganium: {
 		tier: "UU",
@@ -7888,11 +7888,11 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	basculalie: {
 		tier: "UU",
-		natDexTier: "B",
+		natDexTier: "C",
 	},
 	gougeon: {
 		tier: "UU",
-		natDexTier: "B",
+		natDexTier: "B-",
 	},
 	meowsette: {
 		tier: "UU",
@@ -7900,15 +7900,15 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	mrcrime: {
 		tier: "UU",
-		natDexTier: "B",
+		natDexTier: "B-",
 	},
 	musharnaunbound: {
 		tier: "UU",
-		natDexTier: "B",
+		natDexTier: "B-",
 	},
 	absovoirflare: {
 		tier: "UU",
-		natDexTier: "B",
+		natDexTier: "A-",
 	},
 	bolteon: {
 		tier: "UU",
