@@ -10354,6 +10354,41 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -119,
 		rating: 2.5,
 	},
+	autonomousblade: {
+		onPrepareHit(source, target, move) {
+			if (
+				move.category === "Status" ||
+				move.multihit ||
+				move.flags["noparentalbond"] ||
+				move.flags["charge"] ||
+				move.flags["futuremove"] ||
+				move.spreadHit ||
+				move.isZ ||
+				move.isMax ||
+				!move.flags["slicing"]
+			)
+				return;
+			move.multihit = 2;
+			move.multihitType = "parentalbond";
+		},
+		// Damage modifier implemented in BattleActions#modifyDamage()
+		onSourceModifySecondaries(secondaries, target, source, move) {
+			if (
+				move.multihitType === "parentalbond" &&
+				move.id === "secretpower" &&
+				move.hit < 2
+			) {
+				// hack to prevent accidentally suppressing King's Rock/Razor Fang
+				return secondaries.filter(
+					(effect) => effect.volatileStatus === "flinch"
+				);
+			}
+		},
+		flags: {},
+		name: "Autonomous Blade",
+		num: -120,
+		rating: 3,
+	},
 	// CAP
 	mountaineer: {
 		onDamage(damage, target, source, effect) {

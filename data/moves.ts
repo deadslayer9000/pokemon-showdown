@@ -28389,5 +28389,20 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		target: "normal",
 		type: "Dark",
 	},
-
+	electroslash: {
+		num: -152,
+		accuracy: 95,
+		basePower: 80,
+		category: "Physical",
+		name: "Electro Slash",
+		pp: 10,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1, slicing: 1 },
+		secondary: {
+			chance: 10,
+			status: "par",
+		},
+		target: "normal",
+		type: "Electric",
+	}
 };
