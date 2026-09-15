@@ -7922,4 +7922,8 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 		natDexTier: "B",
 	},
+	zaciape: {
+		tier: "UU",
+		natDexTier: "A-",
+	},
 };
