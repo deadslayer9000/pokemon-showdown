@@ -7680,7 +7680,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	draculedge: {
 		tier: "OU",
-		natDexTier: "B",
+		natDexTier: "A",
 		doublesTier: "DUU",
 	},
 	terapagosatom: {
