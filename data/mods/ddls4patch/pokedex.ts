@@ -55,4 +55,8 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		inherit: true,
 		baseStats: { hp: 60, atk: 50, def: 80, spa: 110, spd: 70, spe: 130 },
 	},
+	absolmegaz: {
+		inherit: true,
+		abilities: {0: "Pressure"},
+	}
 };	

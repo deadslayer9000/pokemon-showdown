@@ -1090,7 +1090,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	cogniblast: {
 		name: "Cogniblast",
-		shortDesc: "Gains 45 base power each consecutive use.",
+		shortDesc: "+15 BP per use for the rest of the battle.",
 	},
 	coil: {
 		name: "Coil",

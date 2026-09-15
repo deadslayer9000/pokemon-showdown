@@ -1299,7 +1299,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	mirage: {
 		name: "Mirage",
 		desc: "When this Pokemon switches in, if Sandstorm is the current weather, this Pokemon sets up a Substitute and loses 1/4 HP. This ability only activates once per battle.",
-		shortDesc: "On switch-in; If Sandstorm is active, this Pokemon puts in a Substitute.",
+		shortDesc: "On first switch-in; If Sandstorm is active, this Pokemon puts in a Substitute.",
 	},
 	mirrorarmor: {
 		name: "Mirror Armor",
