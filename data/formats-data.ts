@@ -6332,7 +6332,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	uxiedelta: {
 		tier: "UU",
-		natDexTier: "B",
+		natDexTier: "A",
 	},
 	azelfdelta: {
 		tier: "OU",
