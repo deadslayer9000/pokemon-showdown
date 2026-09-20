@@ -191,6 +191,21 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		banlist: ["Last Respects", "Shed Tail", "Hidden Power", "Dire Claw", "Bloodmoon", "Blastoise-Mega + Shell Smash", "Power Construct", "Raichu-Mega-Y + Sing", "Alakazam-Mega + Nasty Plot"],
 	},
 	{
+		name: "[Gen 9] [ND] DDL LC S2",
+		searchShow: false,
+		mod: "gen9",
+		ruleset: ['Standard NatDex', 'Little Cup', 'Terastal Clause', 'Z-Move Clause', 'Item Clause = 2'],
+		banlist: ['Moody', 'King\'s Rock', 'Pure Power',
+			'Quick Claw', 'Razor Fang', 'Dragon Rage', 'Sonic Boom', 'Light Clay', 'Icy Rock', 'Damp Rock', 'Smooth Rock', 'Heat Rock',
+
+			'Aipom-Delta', 'Aipom-Ultra', 'Basculin', 'Chatot-Delta', 'Corsola-Galar', 'Corsola-Delta', 'Druddigon-Delta', 'Dunsparce', 'Dunsparce-Ultra',
+			'Duraludon', 'Girafarig', 'Gligar', 'Glimmet-Ultra', 'Misdreavus', 'Murkrow', 'Qwilfish-Hisui',
+			'Scyther', 'Shuckle-Delta', 'Skiddo-Delta', 'Sneasel', 'Sneasel-Hisui', 'Stantler', 'Tangela',
+			'Torkoal-Delta', 'Type: Null', 'Zigzagoon'],
+			unbanlist: ["Poipole", "Yanma", "Swirlix", "Porygon"],
+		
+	},
+	{
 		section: "Legacy Tour Formats",	
 	},
 		{
