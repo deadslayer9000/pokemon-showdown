@@ -26884,8 +26884,20 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		abilities: {0: "Mold Breaker"},
 		heightm: 1.1,
 		weightkg: 30.5,
-		//colo: "", no dsc page
+		//color: "", no dsc page
 		eggGroups: ["Undiscovered"],
 	},
+	zaciape: {
+		num: 2153,//placeholder
+		name: "Zaciape",
+    	types: ["Electric", "Steel"],
+    	gender: "N",
+    	baseStats: { hp: 72, atk: 116, def: 116, spa: 100, spd: 88, spe: 108 },
+    	abilities: { 0: "Autonomous Blade" },
+    	weightkg: 160,
+		heightm: 2.1,
+		//color: "Yellow", no page yet
+		eggGroups: ["Undiscovered"],
+  	},
 
 };

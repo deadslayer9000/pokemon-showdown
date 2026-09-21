@@ -1978,6 +1978,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 
 		prepare: "[POKEMON] absorbed electricity!",
 	},
+	electroslash: {
+		name: "Electro Slash",
+		shortDesc: "Slicing move. 10% chance to paralyze.",
+	},
 	electroweb: {
 		name: "Electroweb",
 		desc: "Has a 100% chance to lower the target's Speed by 1 stage.",
