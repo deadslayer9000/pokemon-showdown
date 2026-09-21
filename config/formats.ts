@@ -191,10 +191,10 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		banlist: ["Last Respects", "Shed Tail", "Hidden Power", "Dire Claw", "Bloodmoon", "Blastoise-Mega + Shell Smash", "Power Construct", "Raichu-Mega-Y + Sing", "Alakazam-Mega + Nasty Plot"],
 	},
 	{
-		name: "[Gen 9] [ND] DDL LC Season 2",
+		name: "[Gen 9] [ND] Delta Draft League Season 2 LC",
 		searchShow: false,
 		mod: "gen9",
-		ruleset: ['Standard NatDex', 'Little Cup', 'Terastal Clause', 'Z-Move Clause', 'Item Clause = 2'],
+		ruleset: ['[Gen 9] NatDex Draft', 'Little Cup', 'Terastal Clause', 'Z-Move Clause', 'Item Clause = 2'],
 		banlist: ['Moody', 'King\'s Rock', 'Pure Power',
 			'Quick Claw', 'Razor Fang', 'Dragon Rage', 'Sonic Boom', 'Light Clay', 'Icy Rock', 'Damp Rock', 'Smooth Rock', 'Heat Rock',
 
