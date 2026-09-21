@@ -191,7 +191,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		banlist: ["Last Respects", "Shed Tail", "Hidden Power", "Dire Claw", "Bloodmoon", "Blastoise-Mega + Shell Smash", "Power Construct", "Raichu-Mega-Y + Sing", "Alakazam-Mega + Nasty Plot"],
 	},
 	{
-		name: "[Gen 9] [ND] DDL LC S2",
+		name: "[Gen 9] [ND] DDL LC Season 2",
 		searchShow: false,
 		mod: "gen9",
 		ruleset: ['Standard NatDex', 'Little Cup', 'Terastal Clause', 'Z-Move Clause', 'Item Clause = 2'],
