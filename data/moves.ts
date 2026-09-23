@@ -28290,7 +28290,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		pp: 10,
 		priority: -6,
 		forceSwitch: true,
-		flags: { protect: 1, mirror: 1, metronome: 1 },
+		flags: { protect: 1, metronome: 1 },
 		onPrepareHit(target, source, move) {
 			let effectiveness = Dex.getEffectiveness(move.type, target);
 			switch (effectiveness) {
