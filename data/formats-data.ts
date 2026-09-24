@@ -7617,7 +7617,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "B",
 	},
 	urshifuflashstrike: {
-		tier: "UU",
+		tier: "Uber",
 		doublesTier: "(DUU)",
 		natDexTier: "Uber",
 	},
