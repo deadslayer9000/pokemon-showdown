@@ -6562,6 +6562,14 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "OU",
 		natDexTier: "A",
 	},
+	mawiledelta: {
+		tier: "ZU",
+		natDexTier: "D",
+	},
+	mawiledeltamega: {
+		tier: "ZU",
+		natDexTier: "D",
+	},
 	dunsparceultra: {
 		tier: "LC",
 		natDexTier: "LC",

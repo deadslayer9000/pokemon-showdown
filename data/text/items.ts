@@ -489,6 +489,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Delta Lopunnite",
 		shortDesc: "If held by Lopunny-Delta, this item allows it to Mega Evolve in battle.",
 	},
+	deltamawilite: {
+		name: "Delta Mawilite",
+		shortDesc: "If held by Mawile-Delta, this item allows it to Mega Evolve in battle.",
+	},
 	deltametagrossite: {
 		name: "Delta Metagrossite",
 		shortDesc: "If held by Metagross-Delta, this item allows it to Mega Evolve in battle.",
