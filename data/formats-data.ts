@@ -6564,11 +6564,11 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	mawiledelta: {
 		tier: "ZU",
-		natDexTier: "D",
+		natDexTier: "Unreleased",
 	},
 	mawiledeltamega: {
 		tier: "ZU",
-		natDexTier: "D",
+		natDexTier: "Unreleased",
 	},
 	dunsparceultra: {
 		tier: "LC",
