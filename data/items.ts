@@ -1772,6 +1772,17 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		},
 		num: -7,
 	},
+	deltamawilite: {
+		name: "Delta Mawilite",
+		spritenum: 8,
+		megaStone: { "Mawile-Delta": "Mawile-Delta-Mega" },
+		itemUser: ["Mawile-Delta"],
+		onTakeItem(item, source) {
+			return !item.megaStone || (!item.megaStone[source.baseSpecies.name] &&
+				!Object.values(item.megaStone).includes(source.baseSpecies.name));
+		},
+		num: -51,
+	},
 	deltametagrossite: {
 		name: "Delta Metagrossite",
 		spritenum: 33,
