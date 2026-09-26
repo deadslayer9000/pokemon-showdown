@@ -227,5 +227,6 @@ inherit: 'gen9',
 	  this.modData("Learnsets", "mespritomega").learnset.stealthrock = ["9M"];
 	  this.modData("Learnsets", "hoopadeltaunbound").learnset.mysticalfire = ["9M"];
 	  delete this.modData("Learnsets", "shaykarp").learnset.chillingwater;
+	  delete this.modData("Learnsets", "celesteelurk").learnset.heatcrash;
 	},
 };
