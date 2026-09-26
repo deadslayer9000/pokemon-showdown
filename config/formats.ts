@@ -76,7 +76,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		ruleset: ['Standard OMs', 'Sleep Moves Clause', 'Terastal Clause', 'NatDex Mod', 'Z-Move Clause'],
 		banlist: [
 			'Calyrex-Shadow', 'Koraidon', 'Kyogre', 'Miraidon', 'Moody', 'Shadow Tag', 'Beedrillite', 'Blazikenite', 'Gengarite',
-			'Kangaskhanite', 'Lucarionite Z','Mawilite', 'Medichamite', 'Pidgeotite', 'Red Orb', 'Baton Pass',
+			'Kangaskhanite', 'Lucarionite Z', 'Mawilite', 'Delta Mawilite', 'Medichamite', 'Pidgeotite', 'Red Orb', 'Baton Pass',
 			'Shed Tail', 'Kyurem-Original', 'Mewthree', 'Heracronite', 'Klocktowlite', 'Delta Chimechite', 'Necromausite', 'Diancite', 'Sapphire Diancite', 'Ruby Diancite',
 			'Flygonite', 'Raichunite Y', 'Absolite Z', 'Meganiumite', 'Hawluchanite', 'Illusory Sword', 'Delta Steelixite', 'Emboarite',
 			//not in game
