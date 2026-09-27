@@ -209,7 +209,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		name: "[Gen 9] [ND] Delta Doubles VGC",
 		searchShow: false,
 		mod: "gen9",
-		ruleset: ['Flat Rules', 'Min Source Gen = 1', 'VGC Timer', 'Standard NatDex', 'Best of = 3', 'zmoveclause', '!Sleep Clause Mod', '!OHKO Clause',],
+		ruleset: ['Flat Rules', 'Min Source Gen = 1', 'VGC Timer', 'Standard NatDex', 'Best of = 3', '!Sleep Clause Mod', '!OHKO Clause', 'Terastal Clause', '!!Picked Team Size = 4'],
 		unbanlist: ['Restricted Legendary', 'Mythical', 'Greninja-Bond', 'Floette-Mega'],
 		banlist: ['Quick Claw', 'Baton Pass', 'Shed Tail', 'Dark Void', 'Coaching', 
 
@@ -219,13 +219,13 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			
 			'Annihilape', 'Arceus', 'Baxcalibur-Mega', 'Calyrex-Ice', 'Calyrex-Shadow', 'Darkrai', 'Darmanitan-Galar', 'Deoxys-Attack', 'Dialga', 'Eternatus', 'Genesect', 'Gengar-Mega', 'Giratina', 'Groudon', 'Heatran-Mega', 'Ho-Oh', 'Koraidon', 'Kyogre', 'Lugia', 'Lunala', 'Magearna', 'Melmetal', 'Mewtwo', 'Mewtwo-Mega-X', 'Mewtwo-Mega-Y', 'Miraidon', 'Necrozma-Dusk-Mane', 'Necrozma-Dawn-Wings', 'Palkia', 'Rayquaza', 'Reshiram', 'Floette-Mega', 'Solgaleo', 'Stakataka', 'Urshifu', 'Urshifu-Rapid-Strike', 'Xerneas', 'Yveltal', 'Zacian', 'Zamazenta', 'Zekrom', 'Zeraora-Mega', 'Zygarde', 'Zygarde-Complete', 'Scovillain-Mega', 'Raichu-Mega-Y', 'Kyurem-Black', 'Kyurem-White', 'Chien-Pao', 'Chi-Yu', 'Flutter Mane', 'Shedinja'],
 		gameType: 'doubles',
-		teraPreviewDefault: true,
+		bestOfDefault: true,
 	},
 	{
 		name: "[Gen 9] [ND] Delta Doubles 6v6",
 		searchShow: false,
 		mod: "gen9",
-		ruleset: ['Flat Rules', 'Min Source Gen = 1', 'Standard NatDex', 'zmoveclause', '!Sleep Clause Mod', '!OHKO Clause',],
+		ruleset: ['Flat Rules', 'Min Source Gen = 1', 'Standard NatDex', '!Sleep Clause Mod', '!OHKO Clause', 'Terastal Clause', '!!Picked Team Size = 6'],
 		unbanlist: ['Restricted Legendary', 'Mythical', 'Greninja-Bond'],
 		banlist: ['Quick Claw', 'Baton Pass', 'Shed Tail', 'Dark Void', 'Coaching',
 
@@ -235,7 +235,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			
 			'Annihilape', 'Arceus', 'Baxcalibur-Mega', 'Calyrex-Ice', 'Calyrex-Shadow', 'Darkrai', 'Darmanitan-Galar', 'Deoxys-Attack', 'Dialga', 'Eternatus', 'Genesect', 'Gengar-Mega', 'Giratina', 'Groudon', 'Heatran-Mega', 'Ho-Oh', 'Koraidon', 'Kyogre', 'Lugia', 'Lunala', 'Magearna', 'Melmetal', 'Mewtwo', 'Mewtwo-Mega-X', 'Mewtwo-Mega-Y', 'Miraidon', 'Necrozma-Dusk-Mane', 'Necrozma-Dawn-Wings', 'Palkia', 'Rayquaza', 'Reshiram', 'Floette-Mega', 'Solgaleo', 'Stakataka', 'Urshifu', 'Urshifu-Rapid-Strike', 'Xerneas', 'Yveltal', 'Zacian', 'Zamazenta', 'Zekrom', 'Zeraora-Mega', 'Zygarde', 'Zygarde-Complete', 'Scovillain-Mega', 'Raichu-Mega-Y', 'Kyurem-Black', 'Kyurem-White', 'Chien-Pao', 'Chi-Yu', 'Flutter Mane', 'Shedinja'],
 		gameType: 'doubles',
-		teraPreviewDefault: true,
+		//teraPreviewDefault: true,
 		bestOfDefault: true,
 	},
 	{
@@ -249,7 +249,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		unbanlist: ['Restricted Legendary', 'Mythical', 'Greninja-Bond', 'Floette-Mega'],
 		banlist: ['Quick Claw'],
 		gameType: 'doubles',
-		teraPreviewDefault: true,
+		//teraPreviewDefault: true,
 	},
 	{
 		name: "[Gen 9] [ND] Delta Draft League Season 3",
