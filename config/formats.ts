@@ -201,7 +201,11 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'Aipom-Delta', 'Aipom-Ultra', 'Basculin', 'Chatot-Delta', 'Corsola-Galar', 'Corsola-Delta', 'Druddigon-Delta', 'Dunsparce', 'Dunsparce-Ultra',
 			'Duraludon', 'Girafarig', 'Gligar', 'Glimmet-Ultra', 'Misdreavus', 'Murkrow', 'Qwilfish-Hisui',
 			'Scyther', 'Shuckle-Delta', 'Skiddo-Delta', 'Sneasel', 'Sneasel-Hisui', 'Stantler', 'Tangela',
-			'Torkoal-Delta', 'Type: Null', 'Zigzagoon'],
+			'Torkoal-Delta', 'Type: Null', 'Zigzagoon',
+		
+			//DIE LUPSS DIEEEE
+			'Aipom + Tail Slap', 'Yanfern + Sleep Powder', 'Yanma + Hypnosis', 'Cutiefly + Quiver Dance', 'Clamperl-Delta + Simple', 
+			'Clamperl-Delta + Deep Sea Tooth', 'Shellder-Delta + Shell Smash', ],
 			unbanlist: ["Poipole", "Yanma", "Swirlix", "Porygon"],
 		
 	},
