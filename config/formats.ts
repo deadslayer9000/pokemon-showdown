@@ -206,7 +206,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		
 	},
 	{
-		name: "[Gen 9] [ND] Delta Doubles VGC)",
+		name: "[Gen 9] [ND] Delta Doubles VGC",
 		searchShow: false,
 		mod: "gen9",
 		ruleset: ['Flat Rules', 'Min Source Gen = 1', 'VGC Timer', 'Standard NatDex', 'Best of = 3', 'zmoveclause', '!Sleep Clause Mod', '!OHKO Clause',],
