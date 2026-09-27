@@ -215,9 +215,9 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 
 			'Power Construct',
 
-			'Hatteon', 'Tangled Time', 'Grimmeon', 'Drifblimp', 'Ancient Gene', 'Slowhost', 'Mewthree', 'Shuckle-Delta', 'Diancie-Ruby-Mega', 'Diancie-Sapphire-Mega', 'Rising Pheonix', 'Iron Revival', 'Whirling Abyss', 'Iron Storm', 'Striding Sun', 'Iron Moon', 'Urshifu-Flash-Strike', 'Hoopa-Omega-Unbound', 'Musharna-Unbound', 'Kyurem-Origin', 'Maestrot', 'Lopunny-Delta',
+			'Hatteon', 'Tangled Time', 'Grimmeon', 'Drifblimp', 'Ancient Gene', 'Slowhost', 'Mewthree', 'Shuckle-Delta', 'Diancie-Ruby-Mega', 'Diancie-Sapphire-Mega', 'Rising Phoenix', 'Iron Revival', 'Whirling Abyss', 'Iron Storm', 'Striding Sun', 'Iron Moon', 'Urshifu-Flash-Strike', 'Hoopa-Omega-Unbound', 'Musharna-Unbound', 'Kyurem-Origin', 'Maestrot', 'Lopunny-Delta',
 			
-			'Arceus', 'Baxcalibur-Mega', 'Calyrex-Ice', 'Calyrex-Shadow', 'Darkrai', 'Darmanitan-Galar', 'Deoxys-Attack', 'Dialga', 'Eternatus', 'Genesect', 'Gengar-Mega', 'Giratina', 'Groudon', 'Heatran-Mega', 'Ho-Oh', 'Koraidon', 'Kyogre', 'Lugia', 'Lunala', 'Magearna', 'Melmetal', 'Mewtwo-Mega-X', 'Mewtwo-Mega-Y', 'Miraidon', 'Necrozma-Dusk-Mane', 'Necrozma-Dawn-Wings', 'Palkia', 'Rayquaza', 'Reshiram', 'Floette-Mega', 'Solgaleo', 'Stakataka', 'Urshifu', 'Urshifu-Rapid-Strike', 'Xerneas', 'Yveltal', 'Zacian', 'Zamazenta', 'Zekrom', 'Zeraora-Mega', 'Zygarde', 'Zygarde-Complete', 'Scovillain-Mega', 'Raichu-Mega-Y', 'Kyurem-Black', 'Kyurem-White', 'Chien-Pao', 'Chi-Yu', 'Flutter Mane'],
+			'Annihilape', 'Arceus', 'Baxcalibur-Mega', 'Calyrex-Ice', 'Calyrex-Shadow', 'Darkrai', 'Darmanitan-Galar', 'Deoxys-Attack', 'Dialga', 'Eternatus', 'Genesect', 'Gengar-Mega', 'Giratina', 'Groudon', 'Heatran-Mega', 'Ho-Oh', 'Koraidon', 'Kyogre', 'Lugia', 'Lunala', 'Magearna', 'Melmetal', 'Mewtwo-Mega-X', 'Mewtwo-Mega-Y', 'Miraidon', 'Necrozma-Dusk-Mane', 'Necrozma-Dawn-Wings', 'Palkia', 'Rayquaza', 'Reshiram', 'Floette-Mega', 'Solgaleo', 'Stakataka', 'Urshifu', 'Urshifu-Rapid-Strike', 'Xerneas', 'Yveltal', 'Zacian', 'Zamazenta', 'Zekrom', 'Zeraora-Mega', 'Zygarde', 'Zygarde-Complete', 'Scovillain-Mega', 'Raichu-Mega-Y', 'Kyurem-Black', 'Kyurem-White', 'Chien-Pao', 'Chi-Yu', 'Flutter Mane'],
 		gameType: 'doubles',
 		teraPreviewDefault: true,
 	},
@@ -231,9 +231,9 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 
 			'Power Construct',
 
-			'Hatteon', 'Tangled Time', 'Grimmeon', 'Drifblimp', 'Ancient Gene', 'Slowhost', 'Mewthree', 'Shuckle-Delta', 'Diancie-Ruby-Mega', 'Diancie-Sapphire-Mega', 'Rising Pheonix', 'Iron Revival', 'Whirling Abyss', 'Iron Storm', 'Striding Sun', 'Iron Moon', 'Urshifu-Flash-Strike', 'Hoopa-Omega-Unbound', 'Musharna-Unbound', 'Kyurem-Origin', 'Maestrot', 'Lopunny-Delta',
+			'Hatteon', 'Tangled Time', 'Grimmeon', 'Drifblimp', 'Ancient Gene', 'Slowhost', 'Mewthree', 'Shuckle-Delta', 'Diancie-Ruby-Mega', 'Diancie-Sapphire-Mega', 'Rising Phoenix', 'Iron Revival', 'Whirling Abyss', 'Iron Storm', 'Striding Sun', 'Iron Moon', 'Urshifu-Flash-Strike', 'Hoopa-Omega-Unbound', 'Musharna-Unbound', 'Kyurem-Origin', 'Maestrot', 'Lopunny-Delta',
 			
-			'Arceus', 'Baxcalibur-Mega', 'Calyrex-Ice', 'Calyrex-Shadow', 'Darkrai', 'Darmanitan-Galar', 'Deoxys-Attack', 'Dialga', 'Eternatus', 'Genesect', 'Gengar-Mega', 'Giratina', 'Groudon', 'Heatran-Mega', 'Ho-Oh', 'Koraidon', 'Kyogre', 'Lugia', 'Lunala', 'Magearna', 'Melmetal', 'Mewtwo-Mega-X', 'Mewtwo-Mega-Y', 'Miraidon', 'Necrozma-Dusk-Mane', 'Necrozma-Dawn-Wings', 'Palkia', 'Rayquaza', 'Reshiram', 'Floette-Mega', 'Solgaleo', 'Stakataka', 'Urshifu', 'Urshifu-Rapid-Strike', 'Xerneas', 'Yveltal', 'Zacian', 'Zamazenta', 'Zekrom', 'Zeraora-Mega', 'Zygarde', 'Zygarde-Complete', 'Scovillain-Mega', 'Raichu-Mega-Y', 'Kyurem-Black', 'Kyurem-White', 'Chien-Pao', 'Chi-Yu', 'Flutter Mane'],
+			'Annihilape', 'Arceus', 'Baxcalibur-Mega', 'Calyrex-Ice', 'Calyrex-Shadow', 'Darkrai', 'Darmanitan-Galar', 'Deoxys-Attack', 'Dialga', 'Eternatus', 'Genesect', 'Gengar-Mega', 'Giratina', 'Groudon', 'Heatran-Mega', 'Ho-Oh', 'Koraidon', 'Kyogre', 'Lugia', 'Lunala', 'Magearna', 'Melmetal', 'Mewtwo-Mega-X', 'Mewtwo-Mega-Y', 'Miraidon', 'Necrozma-Dusk-Mane', 'Necrozma-Dawn-Wings', 'Palkia', 'Rayquaza', 'Reshiram', 'Floette-Mega', 'Solgaleo', 'Stakataka', 'Urshifu', 'Urshifu-Rapid-Strike', 'Xerneas', 'Yveltal', 'Zacian', 'Zamazenta', 'Zekrom', 'Zeraora-Mega', 'Zygarde', 'Zygarde-Complete', 'Scovillain-Mega', 'Raichu-Mega-Y', 'Kyurem-Black', 'Kyurem-White', 'Chien-Pao', 'Chi-Yu', 'Flutter Mane'],
 		gameType: 'doubles',
 		teraPreviewDefault: true,
 		bestOfDefault: true,
