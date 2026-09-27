@@ -213,7 +213,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		unbanlist: ['Restricted Legendary', 'Mythical', 'Greninja-Bond', 'Floette-Mega'],
 		banlist: ['Quick Claw', 'Baton Pass', 'Shed Tail', 'Dark Void', 'Coaching', 
 
-			'Power Construct', 'Commander',
+			'Power Construct',
 
 			'Hatteon', 'Tangled Time', 'Grimmeon', 'Drifblimp', 'Ancient Gene', 'Slowhost', 'Mewthree', 'Shuckle-Delta', 'Diancie-Ruby-Mega', 'Diancie-Sapphire-Mega', 'Rising Phoenix', 'Iron Revival', 'Whirling Abyss', 'Iron Storm', 'Striding Sun', 'Iron Moon', 'Urshifu-Flash-Strike', 'Hoopa-Omega-Unbound', 'Musharna-Unbound', 'Kyurem-Original', 'Maestrot', 'Lopunny-Delta',
 			
@@ -229,7 +229,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		unbanlist: ['Restricted Legendary', 'Mythical', 'Greninja-Bond'],
 		banlist: ['Quick Claw', 'Baton Pass', 'Shed Tail', 'Dark Void', 'Coaching',
 
-			'Power Construct', 'Commander',
+			'Power Construct',
 
 			'Hatteon', 'Tangled Time', 'Grimmeon', 'Drifblimp', 'Ancient Gene', 'Slowhost', 'Mewthree', 'Shuckle-Delta', 'Diancie-Ruby-Mega', 'Diancie-Sapphire-Mega', 'Rising Phoenix', 'Iron Revival', 'Whirling Abyss', 'Iron Storm', 'Striding Sun', 'Iron Moon', 'Urshifu-Flash-Strike', 'Hoopa-Omega-Unbound', 'Musharna-Unbound', 'Kyurem-Original', 'Maestrot', 'Lopunny-Delta',
 			
