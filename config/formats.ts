@@ -205,7 +205,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		
 			//DIE LUPSS DIEEEE
 			'Aipom + Tail Slap', 'Yanfern + Sleep Powder', 'Yanma + Hypnosis', 'Cutiefly + Quiver Dance', 'Clamperl-Delta + Simple', 
-			'Clamperl + Deep Sea Tooth', 'Shellder-Delta + Shell Smash', ],
+			'Clamperl-Delta + Deep Sea Tooth', 'Shellder-Delta + Shell Smash', ],
 			unbanlist: ["Poipole", "Yanma", "Swirlix", "Porygon"],
 		
 	},
