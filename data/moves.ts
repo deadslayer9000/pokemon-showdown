@@ -28066,7 +28066,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Hydroswirl Fury",
 		pp: 5,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, metronome: 1, bypasssub: 1 },
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1, bypasssub: 1 },
 		volatileStatus: 'hydroswirltrapped',
 		onTry(source) {
 			if (source.species.name === "Hoopa-Omega-Unbound") {
