@@ -1576,15 +1576,15 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	crescentform: {
 		onBasePowerPriority: 7,
-		onBasePower(basePower, attacker, defender, move) {
-			if (move.flags["crescent"]) {
-				this.debug("Crescent form boost");
+		onBasePower(basePower, source, target, move) {
+			if (move.flags["beam"] || move.flags["pulse"]) {
+				this.hint(`${source.name}'s Crescent form increased ${move.name}'s power!`);
 				return this.chainModify([5325, 4096]);
 			}
 		},
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.flags["crescent"]) {
-				this.debug("Crescent form weaken");
+			if (move.flags["beam"] || move.flags["pulse"]) {
+				this.hint(`${target.name}'s Crescent form decreased ${move.name}'s power!`);
 				return this.chainModify(0.5);
 			}
 		},
@@ -10388,6 +10388,122 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		name: "Autonomous Blade",
 		num: -120,
 		rating: 3,
+	},
+	photonomy: {
+		onStart(pokemon) {
+			this.hint(`${pokemon.name}source`);
+			pokemon.abilityState.photonomy = false;
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.flags["beam"]) {
+				target.abilityState.photonomy = true;
+				target.addVolatile("photonomy", source);
+				this.add("-immune", target, "[from] ability: Photonomy");
+				return null;
+			}
+		},
+		onAllyTryHitSide(target, source, move) {
+			if (move.flags["beam"]) {
+				target.abilityState.photonomy = true;
+				target.addVolatile("photonomy", source);
+				this.add(
+					"-immune",
+					this.effectState.target,
+					"[from] ability: Photonomy"
+				);
+			}
+		},
+		onBasePowerPriority: 21,
+		onBasePower(basePower, source, target, move) {
+			if (source.abilityState.photonomy === true){
+				if (
+					(source === this.effectState.target &&
+						typeof basePower === "number") ||
+					(source.isAlly(this.effectState.target) &&
+						typeof basePower === "number")
+				) {
+					return this.chainModify([5324, 4096]);
+				}
+			}
+		},
+		onEnd(pokemon) {
+			pokemon.removeVolatile("photonomy");
+		},
+		flags: { breakable: 1 },
+		name: "Photonomy",
+		num: -121,
+		rating: 4,
+	},
+	checkmate: {
+		onStart(pokemon) {
+			const fallen = Math.min(
+				pokemon.side.foe.pokemon.filter((p) => p.fainted).length,
+				5
+			);
+			if (fallen > 0) {
+				this.add("-start", pokemon, `fallen${fallen}`, "[silent]");
+				this.effectState.fallen = fallen;
+			}
+		},
+		onEnd(pokemon) {
+			if (this.effectState.fallen) {
+				this.add(
+					"-end",
+					pokemon,
+					`fallen${this.effectState.fallen}`,
+					"[silent]"
+				);
+			}
+		},
+		onResidual(pokemon) {
+			const fallen = Math.min(
+				pokemon.side.foe.pokemon.filter((p) => p.fainted).length,
+				5
+			);
+			if (fallen > 0) {
+				this.add(
+					"-end",
+					pokemon,
+					`fallen${this.effectState.fallen}`,
+					"[silent]"
+				);
+				this.add("-start", pokemon, `fallen${fallen}`, "[silent]");
+				this.add("-activate", pokemon, "ability: Checkmate");
+				this.effectState.fallen = fallen;
+			}
+		},
+		onBasePowerPriority: 21,
+		onBasePower(basePower, attacker, defender, move) {
+			if (this.effectState.fallen) {
+				const powMod = [4096, 4506, 4915, 5325, 5734, 6144];
+				this.debug(
+					`Checkmate boost: ${powMod[this.effectState.fallen]}/4096`
+				);
+				return this.chainModify([powMod[this.effectState.fallen], 4096]);
+			}
+		},
+		flags: {},
+		name: "Checkmate",
+		rating: 4,
+		num: -122
+	},
+	beadsofcorruption: {
+		onResidual(pokemon, source, effect) {
+			const possibleTargets = pokemon.adjacentFoes();
+			if (!possibleTargets.length) return;
+
+			const target = this.sample(possibleTargets);
+			if (target && ["psn", "tox"].includes(target.status)){
+				this.damage(target.baseMaxhp / 8, target, pokemon);
+			}
+			if (target && ["brn", "par", "slp", "frz"].includes(target.status)) {
+				this.damage(target.baseMaxhp / 16, target, pokemon);
+			}
+		},
+		flags: {},
+		name: "Beads of Corruption",
+		rating: 4,
+		num: -123,
 	},
 	// CAP
 	mountaineer: {

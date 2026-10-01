@@ -1253,6 +1253,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "For 5 turns, the terrain becomes Corrosive Terrain. During the terrain, Steel-type moves have halved power, and statused pokemon take 1/16 HP damage at the end of every turn. Pokemon with the ability Toxic Boost, Magic Guard, Poison Heal, Immunity, Pastel Veil, or Wonder Guard are immune to Corrosive Terrain damage. Poison Touch and Toxic Chain's activation chance are doubled in this terrain. Merciless and Toxic Boost are always active in this terrain. Poison Heal restores and additional 1/6 of the user's HP. Venoshock's base power is doubled in this terrain. Ingrain damages the user for 1/16 HP instead of healing.",
 		shortDesc: "5 turns. Grounded: -Steel power, +status damage.",
 	},
+	corruption: {
+		name: "Corruption",
+		desc: "The user's non-volatile status condition is transferred to the target, and the user is then cured. Fails if the user has no non-volatile status condition or if the target already has one.",
+		shortDesc: "Transfers the user's status ailment to the target.",
+	},
 	cosmicpower: {
 		name: "Cosmic Power",
 		desc: "Raises the user's Defense and Special Defense by 1 stage.",
@@ -6704,6 +6709,14 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Solar Flare",
 		shortDesc: "Always lands a critical hit.",
 	},
+	solaroculus: {
+		name: "Solar Oculus",
+		desc: "Fails if the target did not select a physical attack, special attack, or Me First for use this turn, or if the target moves before the user.",
+		shortDesc: "Usually goes first. Fails if target is not attacking.",
+		gen4: {
+			desc: "Fails if the target did not select a physical or special attack for use this turn, or if the target moves before the user.",
+		},
+	},
 	sonicboom: {
 		name: "Sonic Boom",
 		desc: "Deals 20 HP of damage to the target.",
@@ -7936,6 +7949,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		upkeep: "  [POKEMON] is making an uproar!",
 		block: "  But the uproar kept [POKEMON] awake!",
 		blockSelf: "  [POKEMON] can't sleep in an uproar!",
+	},
+	usurpingcleave: {
+		name: "Usurping Cleave",
+		shortDesc: "Restores the user's HP by 50% of the damage dealt."
 	},
 	uturn: {
 		name: "U-turn",

@@ -7934,4 +7934,24 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 		natDexTier: "A-",
 	},
+	pawniarddelta: {
+		tier: "LC",
+		natDexTier: "LC",
+	},
+	bisharpdelta: {
+		tier: "NFE",
+		natDexTier: "NFE",
+	},
+	guilloqueen: {
+		tier: "UU",
+		natDexTier: "A-",
+	},
+	darkraiatom: {
+		tier: "UU",
+		natDexTier: "A-",
+	},
+	chiyudelta: {
+		tier: "UU",
+		natDexTier: "A-"
+	},
 };

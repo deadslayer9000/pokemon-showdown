@@ -932,7 +932,6 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			metronome: 1,
 			bullet: 1,
 			pulse: 1,
-			crescent: 1,
 		},
 		target: "any",
 		type: "Fighting",
@@ -984,7 +983,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Aurora Beam",
 		pp: 20,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, metronome: 1, crescent: 1 },
+		flags: { protect: 1, mirror: 1, metronome: 1, beam: 1 },
 		secondary: {
 			chance: 10,
 			boosts: {
@@ -2920,7 +2919,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Charge Beam",
 		pp: 10,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, metronome: 1, crescent: 1 },
+		flags: { protect: 1, mirror: 1, metronome: 1, beam: 1 },
 		secondary: {
 			chance: 70,
 			self: {
@@ -3098,7 +3097,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Chloroblast",
 		pp: 5,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, metronome: 1, crescent: 1 },
+		flags: { protect: 1, mirror: 1, metronome: 1, beam: 1 },
 		// Recoil implemented in battle-actions.ts
 		target: "normal",
 		type: "Grass",
@@ -4341,7 +4340,6 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			distance: 1,
 			metronome: 1,
 			pulse: 1,
-			crescent: 1,
 		},
 		secondary: {
 			chance: 20,
@@ -4388,7 +4386,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Dazzling Gleam",
 		pp: 10,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, metronome: 1, crescent: 1 },
+		flags: { protect: 1, mirror: 1, metronome: 1, beam: 1 },
 		target: "allAdjacentFoes",
 		type: "Fairy",
 		contestType: "Beautiful",
@@ -5423,7 +5421,6 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			distance: 1,
 			metronome: 1,
 			pulse: 1,
-			crescent: 1,
 		},
 		target: "any",
 		type: "Dragon",
@@ -6383,7 +6380,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Eternabeam",
 		pp: 5,
 		priority: 0,
-		flags: { recharge: 1, protect: 1, mirror: 1, crescent: 1 },
+		flags: { recharge: 1, protect: 1, mirror: 1, beam: 1 },
 		self: {
 			volatileStatus: "mustrecharge",
 		},
@@ -7239,7 +7236,6 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			reflectable: 1,
 			mirror: 1,
 			metronome: 1,
-			crescent: 1,
 		},
 		boosts: {
 			accuracy: -1,
@@ -7257,7 +7253,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Flash Cannon",
 		pp: 10,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, metronome: 1 },
+		flags: { protect: 1, mirror: 1, metronome: 1, beam: 1 },
 		secondary: {
 			chance: 10,
 			boosts: {
@@ -11327,7 +11323,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Hyper Beam",
 		pp: 5,
 		priority: 0,
-		flags: { recharge: 1, protect: 1, mirror: 1, metronome: 1, crescent: 1 },
+		flags: { recharge: 1, protect: 1, mirror: 1, metronome: 1, beam: 1 },
 		self: {
 			volatileStatus: "mustrecharge",
 		},
@@ -11595,7 +11591,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Ice Beam",
 		pp: 10,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, metronome: 1, crescent: 1 },
+		flags: { protect: 1, mirror: 1, metronome: 1, beam: 1 },
 		secondary: {
 			chance: 10,
 			status: "frz",
@@ -12912,7 +12908,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Light of Ruin",
 		pp: 5,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, crescent: 1 },
+		flags: { protect: 1, mirror: 1, beam: 1 },
 		recoil: [1, 2],
 		target: "normal",
 		type: "Fairy",
@@ -12973,7 +12969,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Light That Burns the Sky",
 		pp: 1,
 		priority: 0,
-		flags: { crescent: 1 },
+		flags: { beam: 1 },
 		onModifyMove(move, pokemon) {
 			if (
 				pokemon.getStat("atk", false, true) >
@@ -13159,7 +13155,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Lumina Crash",
 		pp: 10,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, metronome: 1, crescent: 1 },
+		flags: { protect: 1, mirror: 1, metronome: 1, beam: 1 },
 		secondary: {
 			chance: 100,
 			boosts: {
@@ -13262,7 +13258,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Luster Purge",
 		pp: 5,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, metronome: 1, crescent: 1 },
+		flags: { protect: 1, mirror: 1, metronome: 1, beam: 1 },
 		secondary: {
 			chance: 50,
 			boosts: {
@@ -14471,7 +14467,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Meteor Beam",
 		pp: 10,
 		priority: 0,
-		flags: { charge: 1, protect: 1, mirror: 1, metronome: 1, crescent: 1 },
+		flags: { charge: 1, protect: 1, mirror: 1, metronome: 1, beam: 1 },
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
 				return;
@@ -14838,7 +14834,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Mirror Shot",
 		pp: 10,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, metronome: 1, crescent: 1 },
+		flags: { protect: 1, mirror: 1, metronome: 1, beam: 1 },
 		secondary: {
 			chance: 30,
 			boosts: {
@@ -15010,7 +15006,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Moonblast",
 		pp: 15,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, metronome: 1, crescent: 1 },
+		flags: { protect: 1, mirror: 1, metronome: 1, beam: 1 },
 		secondary: {
 			chance: 30,
 			boosts: {
@@ -15029,7 +15025,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Moongeist Beam",
 		pp: 5,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, crescent: 1 },
+		flags: { protect: 1, mirror: 1, beam: 1 },
 		ignoreAbility: true,
 		target: "normal",
 		type: "Ghost",
@@ -16045,7 +16041,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Origin Pulse",
 		pp: 10,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, pulse: 1, crescent: 1 },
+		flags: { protect: 1, mirror: 1, pulse: 1 },
 		target: "allAdjacentFoes",
 		type: "Water",
 		contestType: "Beautiful",
@@ -16415,7 +16411,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Photon Geyser",
 		pp: 5,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, crescent: 1 },
+		flags: { protect: 1, mirror: 1, beam: 1 },
 		onModifyMove(move, pokemon) {
 			if (
 				pokemon.getStat("atk", false, true) >
@@ -17114,7 +17110,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Prismatic Laser",
 		pp: 10,
 		priority: 0,
-		flags: { recharge: 1, protect: 1, mirror: 1, metronome: 1, crescent: 1 },
+		flags: { recharge: 1, protect: 1, mirror: 1, metronome: 1, beam: 1 },
 		self: {
 			volatileStatus: "mustrecharge",
 		},
@@ -17175,7 +17171,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Psybeam",
 		pp: 20,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, metronome: 1, crescent: 1 },
+		flags: { protect: 1, mirror: 1, metronome: 1, beam: 1 },
 		secondary: {
 			chance: 10,
 			volatileStatus: "confusion",
@@ -19974,7 +19970,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Signal Beam",
 		pp: 15,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, metronome: 1, crescent: 1 },
+		flags: { protect: 1, mirror: 1, metronome: 1, beam: 1 },
 		secondary: {
 			chance: 10,
 			volatileStatus: "confusion",
@@ -21020,7 +21016,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			metronome: 1,
 			nosleeptalk: 1,
 			failinstruct: 1,
-			crescent: 1,
+			beam: 1
 		},
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
@@ -21072,7 +21068,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			nosleeptalk: 1,
 			failinstruct: 1,
 			slicing: 1,
-			crescent: 1,
+			beam: 1
 		},
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
@@ -21794,7 +21790,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Steel Beam",
 		pp: 5,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, crescent: 1 },
+		flags: { protect: 1, mirror: 1, beam: 1 },
 		mindBlownRecoil: true,
 		onAfterMove(pokemon, target, move) {
 			if (move.mindBlownRecoil && !move.multihit) {
@@ -23432,7 +23428,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Terrain Pulse",
 		pp: 10,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, metronome: 1, pulse: 1, crescent: 1 },
+		flags: { protect: 1, mirror: 1, metronome: 1, pulse: 1 },
 		onModifyType(move, pokemon) {
 			if (!pokemon.isGrounded()) return;
 			switch (this.field.terrain) {
@@ -24632,7 +24628,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Twin Beam",
 		pp: 10,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, crescent: 1 },
+		flags: { protect: 1, mirror: 1, beam: 1 },
 		multihit: 2,
 		target: "normal",
 		type: "Psychic",
@@ -25204,7 +25200,6 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			distance: 1,
 			metronome: 1,
 			pulse: 1,
-			crescent: 1,
 		},
 		secondary: {
 			chance: 20,
@@ -25476,7 +25471,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			attacker.addVolatile("twoturnmove", defender);
 			return null;
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: { protect: 1, mirror: 1, beam: 1, metronome: 1 },
 		target: "normal",
 		type: "Ice",
 	},
@@ -27201,7 +27196,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Beam Roulette",
 		pp: 10,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, metronome: 1 },
+		flags: { protect: 1, mirror: 1, metronome: 1, beam: 1 },
 		basePowerCallback(pokemon, target, move) {
 			let source = pokemon;
 			let dice = this.random(5);
@@ -28066,7 +28061,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Hydroswirl Fury",
 		pp: 5,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, metronome: 1, bypasssub: 1 },
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1, bypasssub: 1 },
 		volatileStatus: 'hydroswirltrapped',
 		onTry(source) {
 			if (source.species.name === "Hoopa-Omega-Unbound") {
@@ -28404,5 +28399,64 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		},
 		target: "normal",
 		type: "Electric",
+	},
+	solaroculus: {
+		num: -153,
+		accuracy: 100,
+		basePower: 70,
+		category: "Special",
+		name: "Solar Oculus",
+		pp: 5,
+		priority: 1,
+		flags: { protect: 1, mirror: 1, metronome: 1, beam: 1 },
+		onTry(source, target) {
+			const action = this.queue.willMove(target);
+			const move = action?.choice === "move" ? action.move : null;
+			if (
+				!move ||
+				(move.category === "Status" && move.id !== "mefirst") ||
+				target.volatiles["mustrecharge"]
+			) {
+				return false;
+			}
+		},
+		target: "normal",
+		type: "Fire",
+		contestType: "Clever",
+	},
+	usurpingcleave: {
+		num: -154,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		name: "Usurping Cleave",
+		pp: 10,
+		priority: 0,
+		flags: { contact: 1, slicing: 1, metronome: 1, mirror: 1, protect: 1 },
+		drain: [1, 2],
+		target: "normal",
+		type: "Normal",
+	},
+	corruption: {
+		num: -155,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Corruption",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		onTryHit(target, source, move) {
+			if (!source.status) return false;
+			move.status = source.status;
+		},
+		self: {
+			onHit(pokemon) {
+				pokemon.cureStatus();
+			},
+		},
+		target: "normal",
+		type: "Dark",
+		zMove: { boost: { spa: 2 } },
 	}
 };
