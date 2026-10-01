@@ -67,6 +67,7 @@ interface MoveFlags {
 	crescent?: 1; //Delta-specific, all moves that are resisted by and boosted by Delta-Volcarona's Crescent Form.
 	kick?: 1; //Delta-specific, all moves that are boosted by Lopunny-ATOM's Torque Step.
 	spin?: 1; //Delta-specific, all moves that are boosted by Spinda-Atom's Spinurgy.
+	beam?: 1; //Delta-specific, all moves that have an interaction with Delta-Volcarona's Crescent Form and Darkrai-ATOM's Photonomy.
 }
 
 export interface HitEffect {

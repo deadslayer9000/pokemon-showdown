@@ -190,6 +190,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		activate: "  [POKEMON] became fully charged due to its bond with its Trainer!",
 		transform: "[POKEMON] became Ash-Greninja!",
 	},
+	beadsofcorruption: {
+		name: "Beads of Corruption",
+		shortDesc: "All adjacent status Pokemon take 1/16 damage at the end of the turn. Double for psn.",
+	},
 	beadsofruin: {
 		name: "Beads of Ruin",
 		shortDesc: "Active Pokemon without this Ability have their Special Defense multiplied by 0.75.",
@@ -246,6 +250,13 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	brilliance: {
 		name: "Brilliance",
 		shortDesc: "On switch-in, this pokemon lowers the Special Attack of opponents by 1.",
+	},
+	checkmate: {
+		name: "Checkmate",
+		desc: "This Pokemon's moves have their power multiplied by 1+(X*0.1), where X is the total number of times any Pokemon has fainted on the user's side when this Ability became active, and X cannot be greater than 5.",
+		shortDesc: "This Pokemon's moves have 10% more power for each fainted opposing Pokemon, up to 5.",
+
+		activate: "  [POKEMON] gained strength from the fallen!",
 	},
 	cheekpouch: {
 		name: "Cheek Pouch",
@@ -1561,6 +1572,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		shortDesc: "Making contact with this Pokemon starts the Perish Song effect for it and the attacker.",
 
 		start: "  Both Pok\u00E9mon will faint in three turns!",
+	},
+	photonomy: {
+		name: "Photonomy",
+		shortDesc: "This Pokemon is immune to Beam moves, if hit by a Beam, recieves 1.3x damage multiplier.",
 	},
 	pickpocket: {
 		name: "Pickpocket",
