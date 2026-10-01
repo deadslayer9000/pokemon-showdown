@@ -1287,6 +1287,8 @@ export const Aliases: import('../sim/dex').AliasesTable = {
 	steelurk: "Celesteelurk",
 	plasmavoir: "Absovoir-Plasma",
 	flarevoir: "Absovoir-Flare",
+	atomrai: "Darkrai-ATOM",
+	queengambit: "Guilloqueen",
 
 	// ultra beast codenames --- ordered by dex number
 	ub01: "Nihilego",
