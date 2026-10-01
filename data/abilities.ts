@@ -1576,15 +1576,15 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	crescentform: {
 		onBasePowerPriority: 7,
-		onBasePower(basePower, attacker, defender, move) {
-			if (move.flags["crescent"]) {
-				this.debug("Crescent form boost");
+		onBasePower(basePower, source, target, move) {
+			if (move.flags["beam"] || move.flags["pulse"]) {
+				this.hint(`${source.name}'s Crescent form increased ${move.name}'s power!`);
 				return this.chainModify([5325, 4096]);
 			}
 		},
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.flags["crescent"]) {
-				this.debug("Crescent form weaken");
+			if (move.flags["beam"] || move.flags["pulse"]) {
+				this.hint(`${target.name}'s Crescent form decreased ${move.name}'s power!`);
 				return this.chainModify(0.5);
 			}
 		},
