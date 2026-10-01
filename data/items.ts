@@ -5009,10 +5009,6 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 			}
 			return true;
 		},
-		onStart(pokemon) {
-			pokemon.driveused = true;
-			//			((this.effect as any).onUpdate as (p: Pokemon) => void).call(this, pokemon);
-		},
 		onUpdate(pokemon) {
 			if ((pokemon.driveused === true)) {
 				return;
@@ -5023,6 +5019,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 					!this.field.isTerrain("electricterrain")
 				) {
 					pokemon.addVolatile("quarkdrive");
+					pokemon.driveused = true;
 				}
 			}
 		},
@@ -5601,10 +5598,6 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 			}
 			return true;
 		},
-		onStart(pokemon) {
-			pokemon.driveused = true;
-			//			((this.effect as any).onUpdate as (p: Pokemon) => void).call(this, pokemon);
-		},
 		onUpdate(pokemon) {
 			if ((pokemon.driveused === true)) {
 				return;
@@ -5615,6 +5608,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 					!this.field.isTerrain("electricterrain")
 				) {
 					pokemon.addVolatile("quarkdrive");
+					pokemon.driveused = true;
 				}
 			}
 		},
@@ -7516,10 +7510,6 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 			}
 			return true;
 		},
-		onStart(pokemon) {
-			pokemon.driveused = true;
-			//			((this.effect as any).onUpdate as (p: Pokemon) => void).call(this, pokemon);
-		},
 		onUpdate(pokemon) {
 			if ((pokemon.driveused === true)) {
 				return;
@@ -7530,6 +7520,7 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 					!this.field.isTerrain("electricterrain")
 				) {
 					pokemon.addVolatile("quarkdrive");
+					pokemon.driveused = true;
 				}
 			}
 		},
