@@ -10391,17 +10391,21 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	photonomy: {
 		onStart(pokemon) {
+			this.hint(`${source.name}source ${target.name}target`);
 			pokemon.abilityState.photonomy = false;
 		},
 		onTryHit(target, source, move) {
 			if (target !== source && move.flags["beam"]) {
-				this.add("-immune", target, "[from] ability: Photonomy");
+				this.hint(`${source.name}source ${target.name}target`);
 				source.abilityState.photonomy = true;
+				this.add("-immune", target, "[from] ability: Photonomy");
 				return null;
 			}
 		},
 		onAllyTryHitSide(target, source, move) {
 			if (move.flags["beam"]) {
+				this.hint(`${source.name}source ${target.name}target`);
+				source.abilityState.photonomy = true;
 				this.add(
 					"-immune",
 					this.effectState.target,
@@ -10411,6 +10415,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		},
 		onBasePowerPriority: 21,
 		onBasePower(basePower, source, target, move) {
+			this.hint(`${source.name}source ${target.name}target`);
 			if (source.abilityState.photonomy === true){
 				if (
 					(source === this.effectState.target &&

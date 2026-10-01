@@ -192,7 +192,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	beadsofcorruption: {
 		name: "Beads of Corruption",
-		shortDesc: "All adjacent status Pokemon take 1/16 damage at the end of the turn. Double for psn.",
+		shortDesc: "All adjacent statused Pokemon take 1/16 damage at the end of the turn. Double for psn.",
 	},
 	beadsofruin: {
 		name: "Beads of Ruin",
@@ -1575,7 +1575,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	photonomy: {
 		name: "Photonomy",
-		shortDesc: "This Pokemon is immune to Beam moves, if hit by a Beam, recieves 1.3x damage multiplier.",
+		shortDesc: "Immunity to Beam moves, if hit by a Beam, recieves 1.3x damage multiplier.",
 	},
 	pickpocket: {
 		name: "Pickpocket",
