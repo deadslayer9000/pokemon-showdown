@@ -28458,5 +28458,69 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		target: "normal",
 		type: "Dark",
 		zMove: { boost: { spa: 2 } },
+	},
+	scarletdance: {
+		num: -156,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Scarlet Dance",
+		flags: { snatch: 1, dance: 1, heal: 1, metronome: 1 },
+		pp: 10,
+		priority: 0,
+		onTryHit(source) {
+			if (!this.canSwitch(source.side)) {
+				this.attrLastMove("[still]");
+				this.add("-fail", source);
+				return this.NOT_FAIL;
+			}
+		},
+		selfdestruct: "ifHit",
+		onHit(target, source) {
+			this.add("-activate", source, "move: Scarlet Blessing");
+			let success = false;
+			const allies = [
+				...target.side.pokemon,
+				...(target.side.allySide?.pokemon || []),
+			];
+			for (const ally of allies) {
+				if (ally !== source && !this.suppressingAbility(ally)) {
+					if (ally.hasAbility("goodasgold")) {
+						this.add("-immune", ally, "[from] ability: Good as Gold");
+						continue;
+					}
+				}
+				if (ally.heal(ally.maxhp / 3)) success = true;
+			}
+			return success;
+		},
+		target: "allyTeam",
+		type: "Dark",
+	},
+	scarletblessing: {
+		num: -157,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Scarlet Blessing",
+		flags: {snatch: 1, metronome: 1,},
+		pp: 10,
+		priority: 0,
+		boosts: {
+			spa: 2,
+		},
+		onHit(target) {
+			if (target.hasType("Fairy")) return false;
+			if (!target.addType("Fairy")) return false;
+			this.add(
+				"-start",
+				target,
+				"typeadd",
+				"Fairy",
+				"[from] move: Forest's Curse"
+			);
+		},
+		target: "self",
+		type: "Fairy",
 	}
 };

@@ -26995,4 +26995,19 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		//color: "Black", no page yet
 		eggGroups: ["Undiscovered"],
 	},
+	cresseliabloodmoon: {
+		num: 488,
+		name: "Cresselia-Bloodmoon",
+		baseSpecies: "Cresselia",
+		forme: "Bloodmoon",
+		types: ["Dark"],
+		gender: "N",
+		baseStats: { hp: 80, atk: 135, def: 70, spa: 160, spd: 95, spe: 65},
+		abilities: { 0: "Levitate"},
+		heightm: 1.5,
+		weightkg: 85.6,
+		//color: "Red", no page yet
+		eggGroups: ["Undiscovered"],
+
+	}
 };

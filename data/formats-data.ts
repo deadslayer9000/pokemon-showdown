@@ -7954,4 +7954,8 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 		natDexTier: "A-"
 	},
+	cresseliabloodmoon: {
+		tier: "UU",
+		natDexTier: "A-",
+	},
 };
