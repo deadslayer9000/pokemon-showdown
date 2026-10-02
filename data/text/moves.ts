@@ -6111,6 +6111,16 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Hits two to five times. Lowers the user's Defense by 1 stage and raises the user's Speed by 1 stage after the last hit. Has a 35% chance to hit two or three times and a 15% chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times. If the user is holding Loaded Dice, this move will hit 4-5 times.",
 		shortDesc: "Hits 2-5 times. User: -1 Def, +1 Spe after last hit.",
 	},
+	scarletblessing: {
+		name: "Scarlet Blessing",
+		desc: "Increases the user's Special Attack by 2 stages, and adds the Fairy-type if it does not already have it.",
+		shortDesc: "+2 SpA; Adds Fairy-type."
+	},
+	scarletdance: {
+		name: "Scarlet Dance",
+		desc: "The user faints, and every Pokemon in the user's party will be healed for 33% of their maximum health. This will not work on Pokemon with Good as Gold.",
+		shortDesc: "User faints, 33% party heal."
+	},
 	scaryface: {
 		name: "Scary Face",
 		desc: "Lowers the target's Speed by 2 stages.",
