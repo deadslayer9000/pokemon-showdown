@@ -2191,8 +2191,12 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	fakeout: {
 		name: "Fake Out",
-		desc: "Has a 100% chance to make the target flinch. Fails unless it is the user's first turn on the field.",
-		shortDesc: "Hits first. First turn out only. 100% flinch chance.",
+		desc: "Has a 100% chance to make the target flinch. Can only be selected before the user has taken a move action since switching in. Fails if the user has already taken a move action.",
+		shortDesc: "Hits first. First action only. 100% flinch chance.",
+		gen8: {
+			desc: "Has a 100% chance to make the target flinch. Fails unless it is the user's first turn on the field.",
+			shortDesc: "Hits first. First turn out only. 100% flinch chance.",
+		},
 	},
 	falseremedy: {
 		name: "False Remedy",
@@ -2341,8 +2345,12 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	firstimpression: {
 		name: "First Impression",
-		desc: "Fails unless it is the user's first turn on the field.",
-		shortDesc: "Nearly always goes first. First turn out only.",
+		desc: "Can only be selected before the user has taken a move action since switching in. Fails if the user has already taken a move action.",
+		shortDesc: "Nearly always goes first. First action only.",
+		gen8: {
+			desc: "Fails unless it is the user's first turn on the field.",
+			shortDesc: "Nearly always goes first. First turn out only.",
+		},
 	},
 	fishiousrend: {
 		name: "Fishious Rend",
