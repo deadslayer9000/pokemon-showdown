@@ -15076,7 +15076,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	},
 	moonriftstorm: {
 		num: -21,
-		accuracy: 90,
+		accuracy: 100,
 		basePower: 100,
 		category: "Special",
 		name: "Moonrift Storm",
