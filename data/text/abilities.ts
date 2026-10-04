@@ -686,7 +686,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	finalverdict: {
 		name: "Final Verdict (WIP)",
-		shortDesc: "STAB on Spc. Psychic and Phys. Ghost moves; Pokemon faint if below 10% HP.",
+		shortDesc: "STAB on Spc. Psychic and Phys. Ghost moves; foes it hits faint if below 10% HP.",
+		desc: "This Pokemon's special Psychic-type and physical Ghost-type moves deal 1.5x damage. Right after this Pokemon uses a damaging move, each foe the move hit that has less than 10% of its maximum HP left faints.",
 	},
 	flamebody: {
 		name: "Flame Body",

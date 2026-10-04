@@ -2715,17 +2715,29 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 				return this.chainModify(1.5);
 			}
 		},
-		onResidual(pokemon, source, effect) {
-			const possibleTargets = pokemon.adjacentFoes();
-			if (!possibleTargets.length) return;
+		onModifyMove(move) {
+			if (move.category === "Status") return;
 
-			const target = this.sample(possibleTargets);
-			if (target.hp < target.maxhp / 10) {
-				target.faint();
-				this.add("-ability", pokemon, "Final Verdict");
-			}
+			const finalVerdict = this.dex.abilities.get("finalverdict");
+			const afterMoveSecondarySelf = move.onAfterMoveSecondarySelf;
+			// The check lives on the move because a fainted holder's ability handlers
+			// no longer run, and the holder can faint during its own move.
+			move.onAfterMoveSecondarySelf = (source, target, activeMove) => {
+				afterMoveSecondarySelf?.call(this, source, target, activeMove);
+				for (const foe of activeMove.finalVerdictTargets ?? []) {
+					if (!foe.isActive || !foe.hp || foe.hp >= foe.maxhp / 10) continue;
+
+					this.add("-activate", source, "ability: Final Verdict");
+					foe.faint(source, finalVerdict);
+				}
+			};
 		},
+		onSourceDamagingHit(damage, target, source, move) {
+			if (target.isAlly(source)) return;
 
+			move.finalVerdictTargets ??= [];
+			if (!move.finalVerdictTargets.includes(target)) move.finalVerdictTargets.push(target);
+		},
 		flags: {},
 		name: "Final Verdict",
 		rating: 3,
