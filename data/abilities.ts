@@ -5789,16 +5789,35 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 182,
 	},
 	planarcollapse: {
-		onStart(source) {
-			if (!source.planarCollapseOneTime) {
-				this.add('-activate', source, 'ability: Planar Collapse'); //if anyone asks again planar collapse is 5 turns, 4 turns is misinformation from #custom-pokemon
-				this.field.addPseudoWeather("gravity", source);
-				source.planarCollapseOneTime = true;
+		onModifyMove(move, source) {
+			if (move.type !== "Ground" || move.category === "Status") return;
+
+			if (move.ignoreImmunity !== true && !(typeof move.ignoreImmunity === "object" && move.ignoreImmunity.Ground)) {
+				move.ignoreImmunity = { ...move.ignoreImmunity, Ground: true };
+				const tryImmunity = move.onTryImmunity;
+				// Only foes lose their Ground immunity.
+				move.onTryImmunity = (target, user, activeMove) => {
+					if (target.isAlly(source) && !target.runImmunity("Ground")) return false;
+					if (typeof tryImmunity !== "function") return tryImmunity;
+
+					return tryImmunity.call(this, target, user, activeMove);
+				};
 			}
+			const effectiveness = move.onEffectiveness;
+			// runEffectiveness sums one call per type, so only the first type
+			// resists to keep the total at 0.5x for dual types.
+			move.onEffectiveness = (typeMod, target, type, activeMove) => {
+				if (target && !target.isAlly(source) && !target.isGrounded()) {
+					return type === target.getTypes()[0] ? -1 : 0;
+				}
+
+				return effectiveness?.call(this, typeMod, target, type, activeMove);
+			};
 		},
-		onEnd(target) {
-			this.field.removePseudoWeather("gravity");
-			this.add('-end', target, 'ability: Planar Collapse');
+		onSourceDamagingHit(damage, target, source, move) {
+			if (move.type !== "Ground" || move.category === "Status" || target.isAlly(source)) return;
+
+			target.addVolatile("smackdown", source, move);
 		},
 		flags: {},
 		name: "Planar Collapse",
