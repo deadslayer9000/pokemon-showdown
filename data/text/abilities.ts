@@ -2364,7 +2364,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	surgedeluge: {
 		name: "Surge Deluge",
-		shortDesc: "In Electric Terrain: Gain +1 SpD, Charge status, and gain ground immunity.",
+		shortDesc: "In Electric Terrain: Gain +1 SpD, Charge status, and become ungrounded.",
 	},
 	surgesurfer: {
 		name: "Surge Surfer",

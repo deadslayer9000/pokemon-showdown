@@ -20702,7 +20702,10 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			noCopy: true,
 			onStart(pokemon) {
 				let applies = false;
-				if (pokemon.hasType("Flying") || pokemon.hasAbility("levitate"))
+				if (
+					pokemon.hasType("Flying") || pokemon.hasAbility(["levitate", "eelevate"]) ||
+					pokemon.abilityState.surgedelugeActive
+				)
 					applies = true;
 				if (
 					pokemon.hasItem("ironball") ||
