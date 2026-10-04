@@ -136,6 +136,7 @@ export class BattleActions {
 		side.active[pos] = pokemon;
 		pokemon.activeTurns = 0;
 		pokemon.activeMoveActions = 0;
+		pokemon.timesAttackedSinceSwitch = 0;
 		for (const moveSlot of pokemon.moveSlots) {
 			moveSlot.used = false;
 		}
@@ -1012,7 +1013,9 @@ export class BattleActions {
 			if (target && pokemon !== target) {
 				target.gotAttacked(move, moveDamage[i] as number | false | undefined, pokemon);
 				if (typeof moveDamage[i] === 'number') {
-					target.timesAttacked += move.smartTarget ? 1 : hit - 1;
+					const hits = move.smartTarget ? 1 : hit - 1;
+					target.timesAttacked += hits;
+					target.timesAttackedSinceSwitch += hits;
 				}
 			}
 		}

@@ -17780,7 +17780,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		accuracy: 100,
 		basePower: 50,
 		basePowerCallback(pokemon) {
-			return Math.min(350, 50 + 50 * pokemon.timesAttacked);
+			return Math.min(350, 50 + 50 * pokemon.timesAttackedSinceSwitch);
 		},
 		category: "Physical",
 		name: "Rage Fist",
