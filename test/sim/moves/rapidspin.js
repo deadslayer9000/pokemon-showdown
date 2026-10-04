@@ -35,7 +35,7 @@ describe('Rapid Spin', () => {
 		assert(!battle.p2.sideConditions['stealthrock']);
 	});
 
-	it(`should not remove hazards if the user faints`, () => {
+	it(`should remove hazards even if the user faints`, () => {
 		battle = common.createBattle([[
 			{ species: 'Mew', item: 'rockyhelmet', moves: ['stealthrock'] },
 		], [
@@ -43,7 +43,8 @@ describe('Rapid Spin', () => {
 			{ species: 'Wynaut', moves: ['sleeptalk'] },
 		]]);
 		battle.makeChoices();
-		assert(battle.p2.sideConditions['stealthrock']);
+		assert.fainted(battle.p2.active[0]);
+		assert.false(battle.p2.sideConditions['stealthrock']);
 	});
 
 	it(`should not remove hazards if the user has Sheer Force`, () => {

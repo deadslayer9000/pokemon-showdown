@@ -1141,7 +1141,7 @@ export class BattleActions {
 			if (this.battle.gen >= 5) {
 				this.battle.runEvent('DamagingHit', damagedTargets, pokemon, move, damagedDamage);
 			}
-			if (moveData.onAfterHit && pokemon.hp) {
+			if (moveData.onAfterHit && (pokemon.hp || (this.battle.gen >= 9 && ['knockoff', 'rapidspin'].includes(move.id)))) {
 				for (const t of damagedTargets) {
 					this.battle.singleEvent('AfterHit', moveData, {}, t, pokemon, move);
 				}

@@ -17921,8 +17921,10 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			}
 		},
 		onAfterSubDamage(damage, target, pokemon, move) {
+			if (this.gen < 9 && !pokemon.hp) return;
+
 			if (!move.hasSheerForce) {
-				if (pokemon.hp && pokemon.removeVolatile("leechseed")) {
+				if (pokemon.removeVolatile("leechseed")) {
 					this.add(
 						"-end",
 						pokemon,
@@ -17939,7 +17941,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					"gmaxsteelsurge",
 				];
 				for (const condition of sideConditions) {
-					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+					if (pokemon.side.removeSideCondition(condition)) {
 						this.add(
 							"-sideend",
 							pokemon.side,
@@ -17949,7 +17951,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 						);
 					}
 				}
-				if (pokemon.hp && pokemon.volatiles["partiallytrapped"]) {
+				if (pokemon.volatiles["partiallytrapped"]) {
 					pokemon.removeVolatile("partiallytrapped");
 				}
 			}
