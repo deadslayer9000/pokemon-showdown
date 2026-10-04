@@ -1061,7 +1061,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	clangoroussoul: {
 		name: "Clangorous Soul",
-		desc: "Raises the user's Attack, Defense, Special Attack, Special Defense, and Speed by 1 stage in exchange for the user losing 33% of its maximum HP, rounded down. Fails if the user would faint or if its Attack, Defense, Special Attack, Special Defense, and Speed stat stages would not change.",
+		desc: "Raises the user's Attack, Defense, Special Attack, Special Defense, and Speed by 1 stage in exchange for the user losing 33% of its maximum HP, rounded down. Fails if the user would faint or if its Attack, Defense, Special Attack, Special Defense, and Speed stat stages would not change. This move does not check accuracy.",
 		shortDesc: "User loses 33% of its max HP. +1 to all stats.",
 	},
 	clangoroussoulblaze: {
@@ -1556,8 +1556,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	direclaw: {
 		name: "Dire Claw",
-		desc: "Has a 50% chance to cause the target to either fall asleep, become poisoned, or become paralyzed.",
-		shortDesc: "50% chance to sleep, poison, or paralyze target.",
+		desc: "Has a 30% chance to cause the target to either fall asleep, become poisoned, or become paralyzed.",
+		shortDesc: "30% chance to sleep, poison, or paralyze target.",
 	},
 	disable: {
 		name: "Disable",
@@ -2619,8 +2619,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	freezedry: {
 		name: "Freeze-Dry",
-		desc: "Has a 10% chance to freeze the target. This move's type effectiveness against Water is changed to be super effective no matter what this move's type is.",
-		shortDesc: "10% chance to freeze. Super effective on Water.",
+		desc: "This move's type effectiveness against Water is changed to be super effective no matter what this move's type is.",
+		shortDesc: "Super effective on Water.",
 	},
 	freezeshock: {
 		name: "Freeze Shock",
@@ -3826,8 +3826,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	ironhead: {
 		name: "Iron Head",
-		desc: "Has a 30% chance to make the target flinch.",
-		shortDesc: "30% chance to make the target flinch.",
+		desc: "Has a 20% chance to make the target flinch.",
+		shortDesc: "20% chance to make the target flinch.",
 	},
 	irontail: {
 		name: "Iron Tail",
@@ -4261,8 +4261,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	makeitrain: {
 		name: "Make It Rain",
-		desc: "Lowers the user's Special Attack by 1 stage.",
-		shortDesc: "Lowers the user's Sp. Atk by 1. Hits foe(s).",
+		desc: "Lowers the user's Special Attack by 2 stages.",
+		shortDesc: "Lowers the user's Sp. Atk by 2. Hits foe(s).",
 
 		activate: "#payday",
 	},
@@ -4544,8 +4544,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	milkdrink: {
 		name: "Milk Drink",
-		desc: "The user restores 1/2 of its maximum HP, rounded half up.",
-		shortDesc: "Heals the user by 50% of its max HP.",
+		desc: "The user or an adjacent ally restores 1/2 of its maximum HP, rounded half up.",
+		shortDesc: "Heals the user or an ally by 50% of its max HP.",
 		gen4: {
 			desc: "The user restores 1/2 of its maximum HP, rounded down.",
 		},
@@ -4716,8 +4716,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	moonblast: {
 		name: "Moonblast",
-		desc: "Has a 30% chance to lower the target's Special Attack by 1 stage.",
-		shortDesc: "30% chance to lower the target's Sp. Atk by 1.",
+		desc: "Has a 10% chance to lower the target's Special Attack by 1 stage.",
+		shortDesc: "10% chance to lower the target's Sp. Atk by 1.",
 	},
 	moongeistbeam: {
 		name: "Moongeist Beam",
@@ -6016,8 +6016,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	saltcure: {
 		name: "Salt Cure",
-		desc: "Causes damage to the target equal to 1/8 of its maximum HP (1/4 if the target is Steel or Water type), rounded down, at the end of each turn during effect. This effect ends when the target is no longer active.",
-		shortDesc: "Deals 1/8 max HP each turn; 1/4 on Steel, Water.",
+		desc: "Causes damage to the target equal to 1/16 of its maximum HP (1/8 if the target is Steel or Water type), rounded down, at the end of each turn during effect. This effect ends when the target is no longer active.",
+		shortDesc: "Deals 1/16 max HP each turn; 1/8 on Steel, Water.",
 
 		start: "  [POKEMON] is being salt cured!",
 		damage: "  [POKEMON] is hurt by Salt Cure!",
@@ -7767,8 +7767,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	toxicthread: {
 		name: "Toxic Thread",
-		desc: "Lowers the target's Speed by 1 stage and poisons it.",
-		shortDesc: "Lowers the target's Speed by 1 and poisons it.",
+		desc: "Lowers the target's Speed by 2 stages and poisons it.",
+		shortDesc: "Lowers the target's Speed by 2 and poisons it.",
 	},
 	trailblaze: {
 		name: "Trailblaze",
