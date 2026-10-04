@@ -1684,6 +1684,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		start: "  [POKEMON] chose Doom Desire as its destiny!",
 		activate: "  [TARGET] took the Doom Desire attack!",
 	},
+	doublebrand: {
+		name: "Double Brand",
+		desc: "Hits twice. Each hit has a 40% chance to lower the target's Defense by 1 stage.",
+		shortDesc: "Hits twice. Each hit: 40% chance to lower Def by 1.",
+	},
 	doubleedge: {
 		name: "Double-Edge",
 		desc: "If the target lost HP, the user takes recoil damage equal to 33% the HP lost by the target, rounded half up, but not less than 1 HP.",

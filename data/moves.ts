@@ -5073,6 +5073,25 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		type: "Steel",
 		contestType: "Beautiful",
 	},
+	doublebrand: {
+		num: -158,
+		accuracy: 100,
+		basePower: 40,
+		category: "Physical",
+		name: "Double Brand",
+		pp: 10,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		multihit: 2,
+		secondary: {
+			chance: 40,
+			boosts: {
+				def: -1,
+			},
+		},
+		target: "normal",
+		type: "Fire",
+	},
 	doubleedge: {
 		num: 38,
 		accuracy: 100,
