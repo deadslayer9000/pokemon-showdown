@@ -5495,38 +5495,14 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 20,
 	},
 	paragon: {
-		onTryBoost(boost, target, source, effect) {
-			if (source && target === source) return;
-			let showMsg = false;
-			let i: BoostID;
-			for (i in boost) {
-				if (boost[i]! < 0) {
-					delete boost[i];
-					showMsg = true;
-				}
-			}
-			if (
-				showMsg &&
-				!(effect as ActiveMove).secondaries &&
-				effect.id !== "octolock"
-			) {
-				this.add(
-					"-fail",
-					target,
-					"unboost",
-					"[from] ability: Paragon",
-					`[of] ${target}`
-				);
-			}
-		},
 		onSourceAfterFaint(length, target, source, effect) {
 			if (effect && effect.effectType === "Move") {
 				this.boost({ spa: length }, source);
 			}
 		},
-		flags: { breakable: 1 },
+		flags: {},
 		name: "Paragon",
-		rating: 2,
+		rating: 3,
 		num: -101,
 	},
 	parasolprayer: {

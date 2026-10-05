@@ -2027,8 +2027,8 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		spritenum: 110,
 		onTakeItem(item, pokemon, source) {
 			if (
-				(source && source.baseSpecies.num === 649) ||
-				pokemon.baseSpecies.num === 649
+				(source && source.baseSpecies.num === 2047) ||
+				pokemon.baseSpecies.num === 2047
 			) {
 				return false;
 			}
@@ -5002,8 +5002,8 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		spritenum: 291,
 		onTakeItem(item, pokemon, source) {
 			if (
-				(source && source.baseSpecies.num === 649) ||
-				pokemon.baseSpecies.num === 649
+				(source && source.baseSpecies.num === 2047) ||
+				pokemon.baseSpecies.num === 2047
 			) {
 				return false;
 			}
@@ -5591,8 +5591,8 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		spritenum: 610,
 		onTakeItem(item, pokemon, source) {
 			if (
-				(source && source.baseSpecies.num === 649) ||
-				pokemon.baseSpecies.num === 649
+				(source && source.baseSpecies.num === 2047) ||
+				pokemon.baseSpecies.num === 2047
 			) {
 				return false;
 			}
@@ -7503,8 +7503,8 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 
 		onTakeItem(item, pokemon, source) {
 			if (
-				(source && source.baseSpecies.num === 649) ||
-				pokemon.baseSpecies.num === 649
+				(source && source.baseSpecies.num === 2047) ||
+				pokemon.baseSpecies.num === 2047
 			) {
 				return false;
 			}
