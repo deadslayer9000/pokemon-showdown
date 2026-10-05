@@ -238,6 +238,8 @@ export class Pokemon {
 	lastDamage: number;
 	attackedBy: Attacker[];
 	timesAttacked: number;
+	/** Number of hits taken since this Pokemon last switched in. */
+	timesAttackedSinceSwitch: number;
 
 	isActive: boolean;
 	activeTurns: number;
@@ -468,6 +470,7 @@ export class Pokemon {
 		this.lastDamage = 0;
 		this.attackedBy = [];
 		this.timesAttacked = 0;
+		this.timesAttackedSinceSwitch = 0;
 
 		this.isActive = false;
 		this.activeTurns = 0;
@@ -1022,7 +1025,10 @@ export class Pokemon {
 				// if each of a Pokemon's base moves are disabled by one of these effects, it will Struggle
 				const canCauseStruggle = ['Encore', 'Disable', 'Taunt', 'Assault Vest', 'Belch', 'Stuff Cheeks'];
 				disabled = this.maxMoveDisabled(moveSlot.id) || disabled && canCauseStruggle.includes(moveSlot.disabledSource!);
-			} else if (moveSlot.pp <= 0) {
+			} else if (
+				moveSlot.pp <= 0 ||
+				(this.battle.gen >= 9 && this.activeMoveActions > 0 && ['fakeout', 'firstimpression'].includes(moveSlot.id))
+			) {
 				disabled = true;
 			}
 
@@ -1310,6 +1316,7 @@ export class Pokemon {
 		this.hpType = (this.battle.gen >= 5 ? this.hpType : pokemon.hpType);
 		this.hpPower = (this.battle.gen >= 5 ? this.hpPower : pokemon.hpPower);
 		this.timesAttacked = pokemon.timesAttacked;
+		this.timesAttackedSinceSwitch = pokemon.timesAttackedSinceSwitch;
 		for (const [i, moveSlot] of pokemon.moveSlots.entries()) {
 			let moveName = moveSlot.move;
 			if (moveSlot.id === 'hiddenpower') {
@@ -1551,6 +1558,7 @@ export class Pokemon {
 
 		this.lastDamage = 0;
 		this.attackedBy = [];
+		this.timesAttackedSinceSwitch = 0;
 		this.hurtThisTurn = null;
 		this.newlySwitched = true;
 		this.beingCalledBack = false;

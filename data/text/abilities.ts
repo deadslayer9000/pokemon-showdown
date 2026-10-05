@@ -686,7 +686,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	finalverdict: {
 		name: "Final Verdict (WIP)",
-		shortDesc: "STAB on Spc. Psychic and Phys. Ghost moves; Pokemon faint if below 10% HP.",
+		shortDesc: "STAB on Spc. Psychic and Phys. Ghost moves; foes it hits faint if below 10% HP.",
+		desc: "This Pokemon's special Psychic-type and physical Ghost-type moves deal 1.5x damage. Right after this Pokemon uses a damaging move, each foe the move hit that has less than 10% of its maximum HP left faints.",
 	},
 	flamebody: {
 		name: "Flame Body",
@@ -1611,7 +1612,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	planarcollapse: {
 		name: "Planar Collapse",
-		shortDesc: "When the user is on the field gravity is in effect. Once per battle.",
+		shortDesc: "Ground moves smack down ungrounded foes and are not very effective on them.",
+		desc: "This Pokemon's damaging Ground-type moves can hit ungrounded foes. Against a foe that is ungrounded before the hit, the move is not very effective whatever the foe's types, and the foe is smacked down so it becomes grounded. Grounded foes use normal type effectiveness. Allies keep their Ground immunity.",
 	},
 	plus: {
 		name: "Plus",
@@ -2364,7 +2366,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	surgedeluge: {
 		name: "Surge Deluge",
-		shortDesc: "In Electric Terrain: Gain +1 SpD, Charge status, and gain ground immunity.",
+		shortDesc: "In Electric Terrain: Gain +1 SpD, Charge status, and become ungrounded.",
 	},
 	surgesurfer: {
 		name: "Surge Surfer",

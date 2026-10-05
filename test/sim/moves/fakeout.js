@@ -20,15 +20,16 @@ describe('Fake Out', () => {
 		assert.equal(battle.p1.active[0].hp, battle.p1.active[0].maxhp);
 	});
 
-	it('should not flinch on the second turn out', () => {
+	it('should be disabled on the second turn out', () => {
 		battle = common.createBattle([[
-			{ species: 'Chansey', ability: 'naturalcure', moves: ['fakeout'] },
+			{ species: 'Chansey', ability: 'naturalcure', moves: ['fakeout', 'sleeptalk'] },
 		], [
 			{ species: 'Venusaur', ability: 'overgrow', moves: ['swift'] },
 		]]);
 		battle.makeChoices('move fakeout', 'move swift');
 		assert.equal(battle.p1.active[0].hp, battle.p1.active[0].maxhp);
-		battle.makeChoices('move fakeout', 'move swift');
+		assert.equal(battle.p1.activeRequest.active[0].moves[0].disabled, true);
+		battle.makeChoices('move sleeptalk', 'move swift');
 		assert.notEqual(battle.p1.active[0].hp, battle.p1.active[0].maxhp);
 	});
 
@@ -46,15 +47,16 @@ describe('Fake Out', () => {
 		assert.equal(battle.p1.active[0].hp, battle.p1.active[0].maxhp);
 	});
 
-	it('should not flinch if the user has already used a Dancer move first', () => {
+	it('should be disabled if the user has already used a Dancer move first', () => {
 		battle = common.createBattle([[
 			{ species: 'Chansey', ability: 'naturalcure', moves: ['fakeout'] },
-			{ species: 'Oricorio', ability: 'dancer', moves: ['fakeout'] },
+			{ species: 'Oricorio', ability: 'dancer', moves: ['fakeout', 'sleeptalk'] },
 		], [
 			{ species: 'Venusaur', ability: 'overgrow', moves: ['swift', 'quiverdance'] },
 		]]);
 		battle.makeChoices('switch 2', 'move quiverdance');
-		battle.makeChoices('move fakeout', 'move swift');
+		assert.equal(battle.p1.activeRequest.active[0].moves[0].disabled, true);
+		battle.makeChoices('move sleeptalk', 'move swift');
 		assert.notEqual(battle.p1.active[0].hp, battle.p1.active[0].maxhp);
 	});
 
