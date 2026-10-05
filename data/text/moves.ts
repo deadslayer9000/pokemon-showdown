@@ -2101,7 +2101,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	eonrift: {
 		name: "Eon Rift",
-		shortDesc: "On KO: Summons Sun or E. Terrain depending if SpAtk or Spe is higher",
+		shortDesc: "On KO: Sets Sun or E. Ter. depending if SpAtk or Spe is higher",
 	},
 	eruption: {
 		name: "Eruption",
