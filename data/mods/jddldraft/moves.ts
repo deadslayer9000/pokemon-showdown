@@ -383,10 +383,6 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	geargrind: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	searingshot: {
 		inherit: true,
 		isNonstandard: null,
@@ -471,19 +467,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	anchorshot: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	purify: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	coreenforcer: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	shelltrap: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -512,26 +496,6 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		isNonstandard: null,
 	},
 	octolock: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	boltbeak: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	fishiousrend: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	snaptrap: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	obstruct: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	meteorassault: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -641,6 +605,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	},
 	galecocoon: {
 		inherit: true,
+		pp: 10,
 		condition: {
 			duration: 1,
 			onStart(target) {
@@ -674,5 +639,343 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 			},
 		
 		},
-	}
+	},
+		smackdown: {
+	inherit: true,
+	condition: {
+			noCopy: true,
+			onStart(pokemon) {
+				let applies = false;
+				if (pokemon.hasType("Flying") || pokemon.hasAbility("levitate"))
+					applies = true;
+				if (
+					pokemon.hasItem("ironball") ||
+					pokemon.volatiles["ingrain"] ||
+					this.field.getPseudoWeather("gravity")
+				)
+					applies = false;
+				if (
+					pokemon.removeVolatile("fly") ||
+					pokemon.removeVolatile("bounce")
+				) {
+					applies = true;
+					this.queue.cancelMove(pokemon);
+					pokemon.removeVolatile("twoturnmove");
+				}
+				if (pokemon.volatiles["magnetrise"]) {
+					applies = true;
+					delete pokemon.volatiles["magnetrise"];
+				}
+				if (pokemon.volatiles["telekinesis"]) {
+					applies = true;
+					delete pokemon.volatiles["telekinesis"];
+				}
+				if (!applies) return false;
+				this.add("-start", pokemon, "Smack Down");
+			},
+			onRestart(pokemon) {
+				if (
+					pokemon.removeVolatile("fly") ||
+					pokemon.removeVolatile("bounce")
+				) {
+					this.queue.cancelMove(pokemon);
+					pokemon.removeVolatile("twoturnmove");
+					this.add("-start", pokemon, "Smack Down");
+				}
+			},
+			// groundedness implemented in battle.engine.js:BattlePokemon#isGrounded
+		},
+	},
+	moonriftstorm: {
+		inherit: true,
+		accuracy: 90,
+	}, 
+//CHAMPION MOVE CHANGE REVERTS START
+	wish: {
+		inherit: true,
+		pp: 10,
+	},
+	strengthsap: {
+		inherit: true,
+		pp: 10,
+	},
+	meteorassault: {
+		inherit: true,
+		basePower: 150,
+		isNonstandard: null,
+	},
+	doubleshock: {
+		inherit: true,
+		flags: { contact: 1, protect: 1, mirror: 1, punch: 1 },
+	},
+	milkdrink: {
+		inherit: true,
+		target: "adjacentAllyOrSelf",
+	},
+	saltcure: {
+		inherit: true,
+		condition: {
+			noCopy: true,
+			onStart(pokemon) {
+				this.add("-start", pokemon, "Salt Cure");
+			},
+			onResidualOrder: 13,
+			onResidual(pokemon) {
+				this.damage(
+					pokemon.baseMaxhp / (pokemon.hasType(["Water", "Steel"]) ? 4 : 8)
+				);
+			},
+			onEnd(pokemon) {
+				this.add("-end", pokemon, "Salt Cure");
+			},
+		},
+	},
+	snaptrap: {
+		inherit: true,
+		type: "Grass",
+		isNonstandard: null,
+	},
+	firstimpression: {
+		inherit: true,
+		basePower: 90,
+	},
+	direclaw: {
+		inherit: true,
+		secondary: {
+			chance: 50,
+			onHit(target, source) {
+				const result = this.random(3);
+				if (result === 0) {
+					target.trySetStatus("psn", source);
+				} else if (result === 1) {
+					target.trySetStatus("par", source);
+				} else {
+					target.trySetStatus("slp", source);
+				}
+			},
+		},
+		desc: "Has a 50% chance to cause the target to either fall asleep, become poisoned, or become paralyzed.",
+		shortDesc: "50% chance to sleep, poison, or paralyze target.",
+	},
+	moonblast: {
+		inherit: true,
+		secondary: {
+			chance: 30,
+			boosts: {
+				spa: -1,
+			},
+		},
+		desc: "Has a 30% chance to lower the target's Special Attack by 1 stage.",
+		shortDesc: "30% chance to lower the target's Sp. Atk by 1.",
+	},
+	dragonclaw: {
+		inherit: true,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1},
+	},
+	shadowclaw: {
+		inherit: true,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1},
+	},
+	ironhead: {
+		inherit: true,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
+		},
+		desc: "Has a 30% chance to make the target flinch.",
+		shortDesc: "30% chance to make the target flinch.",
+	},
+	toxicthread: {
+		inherit: true,
+		boosts: {
+			spe: -1,
+		},
+		desc: "Lowers the target's Speed by 1 stages and poisons it.",
+		shortDesc: "Lowers the target's Speed by 1 and poisons it.",
+	},
+	gravapple: {
+		inherit: true,
+		basePower: 80,
+	},
+	appleacid: {
+		inherit: true,
+		basePower: 80,
+	},
+	bonerush: {
+		inherit: true,
+		basePower: 25,
+	},
+	syrupbomb: {
+		inherit: true,
+		accuracy: 85
+	},
+	tropkick: {
+		inherit: true,
+		basePower: 75,
+	},
+	crabhammer: {
+		inherit: true,
+		accuracy: 90,
+	},
+	beakblast: {
+		inherit: true,
+		basePower: 100,
+	},
+	mountaingale: {
+		inherit: true,
+		basePower: 100,
+	},
+	nightdaze: {
+		inherit: true,
+		basePower: 85,
+	},
+	firelash: {
+		inherit: true,
+		basePower: 80,
+	},
+	spiritshackle: {
+		inherit: true,
+		basePower: 80,
+	},
+	psyshieldbash: {
+		inherit: true,
+		basePower: 70,
+	},
+	infernalparade: {
+		inherit: true,
+		basePower: 60,
+	},
+	growth: {
+		inherit: true,
+		type: "Normal",
+	},
+	geargrind: {
+		inherit: true,
+		basePower: 50,
+		accuracy: 85,
+		isNonstandard: null,
+	},
+	anchorshot: {
+		inherit: true,
+		basePower: 80,
+		isNonstandard: null,
+	},
+	revelationdance: {
+		inherit: true,
+		basePower: 90,
+	},
+	dragonhammer: {
+		inherit: true,
+		basePower: 90,
+	},
+	snipeshot: {
+		inherit: true,
+		basePower: 80,
+	},
+	boltbeak: {
+		inherit: true,
+		basePower: 85,
+	},
+	fishiousrend: {
+		inherit: true,
+		basePower: 85,
+	},
+	astralbarrage: {
+		inherit: true,
+		basePower: 120,
+	},
+	tripledive: {
+		inherit: true,
+		basePower: 30,
+	},
+	hyperdrill: {
+		inherit: true,
+		basePower: 100,
+	},
+	bloodmoon: {
+		inherit: true,
+		basePower: 140,
+	},
+	clangoroussoul: {
+		inherit: true,
+		accuracy: true,
+	},
+	makeitrain: {
+		inherit: true,
+		accuracy: 100,
+		self: {
+			boosts: {
+				spa: -1,
+			},
+		},
+	},
+	protect: {
+		inherit: true,
+		pp: 10,
+	},
+	detect: {
+		inherit: true,
+		pp: 10,
+	},
+	banefulbunker: {
+		inherit: true,
+		pp: 10,
+	},
+	spikyshield: {
+		inherit: true,
+		pp: 10,
+	},
+	kingshield: {
+		inherit: true,
+		pp: 10,
+	},
+	infernalshield: {
+		inherit: true,
+		pp: 10,
+	},
+	obstruct: {
+		inherit: true,
+		pp: 10,
+		isNonstandard: null,
+	},
+	sandbarrier: {
+		inherit: true,
+		pp: 10,
+	},
+	ironcladguard: {
+		inherit: true,
+		pp: 10,
+	},
+	purify: {
+		inherit: true,
+		pp: 10,
+		isNonstandard: null,
+	},
+	shelltrap: {
+		inherit: true,
+		pp: 5,
+		isNonstandard: null,
+	},
+	spinout: {
+		inherit: true,
+		pp: 5,
+	},
+	snowscape: {
+		inherit: true,
+		pp: 10,
+	},
+	sandstorm: {
+		inherit: true,
+		pp: 10,
+	},
+	freezedry: {
+		inherit: true,
+		secondary: {},
+	},
+	ragefist: {
+		inherit: true,
+		basePowerCallback(pokemon) {
+			return Math.min(350, 50 + 50 * pokemon.timesAttacked);
+		},
+	},
 };
