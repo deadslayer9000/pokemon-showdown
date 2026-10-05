@@ -2694,7 +2694,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	lopunnymega: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "A",
+		natDexTier: "Uber",
 	},
 	glameow: {
 		isNonstandard: "Past",
