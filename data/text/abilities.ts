@@ -1536,7 +1536,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	paragon: {
 		name: "Paragon",
-		shortDesc: "Prevents other Pokemon from lowering this Pokemon's stat stages.",
+		shortDesc: "This Pokemon's Sp. Atk is raised by 1 stage if it attacks and KOes another Pokemon.",
 	},
 	parasolprayer: {
 		name: "Parasol Prayer",
