@@ -18,5 +18,17 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 	absolmegaz: {
 		inherit: true,
 		abilities: {0: "Pressure"},
-	}
+	},
+	magearnadelta: {
+		inherit: true,
+		baseStats: { hp: 80, atk: 100, def: 110, spa: 130, spd: 125, spe: 50 },
+	},
+	klocktowlmega: {
+		inherit: true,
+		baseStats: { hp: 122, atk: 144, def: 100, spa: 98, spd: 105, spe: 73 },
+	},
+	tinkatonomega: {
+		inherit: true,
+		baseStats: { hp: 95, atk: 130, def: 86, spa: 50, spd: 60, spe: 85 },
+	},
 };	
