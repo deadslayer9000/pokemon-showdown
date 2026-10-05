@@ -321,6 +321,8 @@ export interface ActiveMove extends MutableMove {
 	hit: number;
 	moveHitData?: MoveHitData;
 	hitTargets?: Pokemon[];
+	/** Foes this move damaged while its user had Final Verdict. */
+	finalVerdictTargets?: Pokemon[];
 	ability?: Ability;
 	allies?: Pokemon[];
 	auraBooster?: Pokemon;

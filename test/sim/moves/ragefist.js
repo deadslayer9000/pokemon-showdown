@@ -26,6 +26,25 @@ describe('Rage Fist', () => {
 		assert.bounded(rageFistDamage, [34, 41], `Rage Fist should be 100 BP`);
 	});
 
+	it(`should reset BP on switching without resetting the total hit count`, () => {
+		battle = common.createBattle([[
+			{ species: 'Primeape', moves: ['sleeptalk', 'ragefist'] },
+			{ species: 'Wynaut', moves: ['sleeptalk'] },
+		], [
+			{ species: 'Umbreon', ability: 'shellarmor', moves: ['tackle', 'sleeptalk'] },
+		]]);
+		const primeape = battle.p1.active[0];
+		battle.makeChoices();
+		assert.equal(primeape.timesAttackedSinceSwitch, 1);
+		battle.makeChoices('switch 2', 'move sleeptalk');
+		battle.makeChoices('switch 2', 'move sleeptalk');
+		assert.equal(primeape.timesAttacked, 1);
+		assert.equal(primeape.timesAttackedSinceSwitch, 0);
+		battle.makeChoices('move ragefist', 'move sleeptalk');
+		const umbreon = battle.p2.active[0];
+		assert.bounded(umbreon.maxhp - umbreon.hp, [17, 21], `Rage Fist should be 50 BP after switching`);
+	});
+
 	it(`should not increase BP after being hit by status moves`, () => {
 		battle = common.createBattle([[
 			{ species: 'Primeape', moves: ['ragefist'] },

@@ -1061,7 +1061,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	clangoroussoul: {
 		name: "Clangorous Soul",
-		desc: "Raises the user's Attack, Defense, Special Attack, Special Defense, and Speed by 1 stage in exchange for the user losing 33% of its maximum HP, rounded down. Fails if the user would faint or if its Attack, Defense, Special Attack, Special Defense, and Speed stat stages would not change.",
+		desc: "Raises the user's Attack, Defense, Special Attack, Special Defense, and Speed by 1 stage in exchange for the user losing 33% of its maximum HP, rounded down. Fails if the user would faint or if its Attack, Defense, Special Attack, Special Defense, and Speed stat stages would not change. This move does not check accuracy.",
 		shortDesc: "User loses 33% of its max HP. +1 to all stats.",
 	},
 	clangoroussoulblaze: {
@@ -1556,8 +1556,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	direclaw: {
 		name: "Dire Claw",
-		desc: "Has a 50% chance to cause the target to either fall asleep, become poisoned, or become paralyzed.",
-		shortDesc: "50% chance to sleep, poison, or paralyze target.",
+		desc: "Has a 30% chance to cause the target to either fall asleep, become poisoned, or become paralyzed.",
+		shortDesc: "30% chance to sleep, poison, or paralyze target.",
 	},
 	disable: {
 		name: "Disable",
@@ -1683,6 +1683,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 
 		start: "  [POKEMON] chose Doom Desire as its destiny!",
 		activate: "  [TARGET] took the Doom Desire attack!",
+	},
+	doublebrand: {
+		name: "Double Brand",
+		desc: "Hits twice. Each hit has a 40% chance to lower the target's Defense by 1 stage.",
+		shortDesc: "Hits twice. Each hit: 40% chance to lower Def by 1.",
 	},
 	doubleedge: {
 		name: "Double-Edge",
@@ -2191,8 +2196,12 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	fakeout: {
 		name: "Fake Out",
-		desc: "Has a 100% chance to make the target flinch. Fails unless it is the user's first turn on the field.",
-		shortDesc: "Hits first. First turn out only. 100% flinch chance.",
+		desc: "Has a 100% chance to make the target flinch. Can only be selected before the user has taken a move action since switching in. Fails if the user has already taken a move action.",
+		shortDesc: "Hits first. First action only. 100% flinch chance.",
+		gen8: {
+			desc: "Has a 100% chance to make the target flinch. Fails unless it is the user's first turn on the field.",
+			shortDesc: "Hits first. First turn out only. 100% flinch chance.",
+		},
 	},
 	falseremedy: {
 		name: "False Remedy",
@@ -2341,8 +2350,12 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	firstimpression: {
 		name: "First Impression",
-		desc: "Fails unless it is the user's first turn on the field.",
-		shortDesc: "Nearly always goes first. First turn out only.",
+		desc: "Can only be selected before the user has taken a move action since switching in. Fails if the user has already taken a move action.",
+		shortDesc: "Nearly always goes first. First action only.",
+		gen8: {
+			desc: "Fails unless it is the user's first turn on the field.",
+			shortDesc: "Nearly always goes first. First turn out only.",
+		},
 	},
 	fishiousrend: {
 		name: "Fishious Rend",
@@ -2619,8 +2632,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	freezedry: {
 		name: "Freeze-Dry",
-		desc: "Has a 10% chance to freeze the target. This move's type effectiveness against Water is changed to be super effective no matter what this move's type is.",
-		shortDesc: "10% chance to freeze. Super effective on Water.",
+		desc: "This move's type effectiveness against Water is changed to be super effective no matter what this move's type is.",
+		shortDesc: "Super effective on Water.",
 	},
 	freezeshock: {
 		name: "Freeze Shock",
@@ -3826,8 +3839,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	ironhead: {
 		name: "Iron Head",
-		desc: "Has a 30% chance to make the target flinch.",
-		shortDesc: "30% chance to make the target flinch.",
+		desc: "Has a 20% chance to make the target flinch.",
+		shortDesc: "20% chance to make the target flinch.",
 	},
 	irontail: {
 		name: "Iron Tail",
@@ -3909,8 +3922,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	knockoff: {
 		name: "Knock Off",
-		desc: "If the target is holding an item that can be removed from it, ignoring the Sticky Hold Ability, this move's power is multiplied by 1.5. If the user has not fainted, the target loses its held item. This move cannot cause Pokemon with the Sticky Hold Ability to lose their held item or cause a Kyogre, a Groudon, a Giratina, an Arceus, a Genesect, a Silvally, a Zacian, or a Zamazenta to lose their Blue Orb, Red Orb, Griseous Orb, Plate, Drive, Memory, Rusted Sword, or Rusted Shield respectively. Items lost to this move cannot be regained with Recycle or the Harvest Ability.",
+		desc: "If the target is holding an item that can be removed from it, ignoring the Sticky Hold Ability, this move's power is multiplied by 1.5. The target loses its held item even if the user faints during the move. This move cannot cause Pokemon with the Sticky Hold Ability to lose their held item or cause a Kyogre, a Groudon, a Giratina, an Arceus, a Genesect, a Silvally, a Zacian, or a Zamazenta to lose their Blue Orb, Red Orb, Griseous Orb, Plate, Drive, Memory, Rusted Sword, or Rusted Shield respectively. Items lost to this move cannot be regained with Recycle or the Harvest Ability.",
 		shortDesc: "1.5x damage if foe holds an item. Removes item.",
+		gen8: {
+			desc: "If the target is holding an item that can be removed from it, ignoring the Sticky Hold Ability, this move's power is multiplied by 1.5. If the user has not fainted, the target loses its held item. This move cannot cause Pokemon with the Sticky Hold Ability to lose their held item or cause a Kyogre, a Groudon, a Giratina, an Arceus, a Genesect, a Silvally, a Zacian, or a Zamazenta to lose their Blue Orb, Red Orb, Griseous Orb, Plate, Drive, Memory, Rusted Sword, or Rusted Shield respectively. Items lost to this move cannot be regained with Recycle or the Harvest Ability.",
+		},
 		gen7: {
 			desc: "If the target is holding an item that can be removed from it, ignoring the Sticky Hold Ability, this move's power is multiplied by 1.5. If the user has not fainted, the target loses its held item. This move cannot remove Z-Crystals, cause Pokemon with the Sticky Hold Ability to lose their held item, cause Pokemon that can Mega Evolve to lose the Mega Stone for their species, or cause a Kyogre, a Groudon, a Giratina, an Arceus, a Genesect, or a Silvally to lose their Blue Orb, Red Orb, Griseous Orb, Plate, Drive, or Memory respectively. Items lost to this move cannot be regained with Recycle or the Harvest Ability.",
 		},
@@ -4261,8 +4277,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	makeitrain: {
 		name: "Make It Rain",
-		desc: "Lowers the user's Special Attack by 1 stage.",
-		shortDesc: "Lowers the user's Sp. Atk by 1. Hits foe(s).",
+		desc: "Lowers the user's Special Attack by 2 stages.",
+		shortDesc: "Lowers the user's Sp. Atk by 2. Hits foe(s).",
 
 		activate: "#payday",
 	},
@@ -4544,8 +4560,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	milkdrink: {
 		name: "Milk Drink",
-		desc: "The user restores 1/2 of its maximum HP, rounded half up.",
-		shortDesc: "Heals the user by 50% of its max HP.",
+		desc: "The user or an adjacent ally restores 1/2 of its maximum HP, rounded half up.",
+		shortDesc: "Heals the user or an ally by 50% of its max HP.",
 		gen4: {
 			desc: "The user restores 1/2 of its maximum HP, rounded down.",
 		},
@@ -4716,8 +4732,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	moonblast: {
 		name: "Moonblast",
-		desc: "Has a 30% chance to lower the target's Special Attack by 1 stage.",
-		shortDesc: "30% chance to lower the target's Sp. Atk by 1.",
+		desc: "Has a 10% chance to lower the target's Special Attack by 1 stage.",
+		shortDesc: "10% chance to lower the target's Sp. Atk by 1.",
 	},
 	moongeistbeam: {
 		name: "Moongeist Beam",
@@ -5580,8 +5596,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	ragefist: {
 		name: "Rage Fist",
-		desc: "Power is equal to 50+(X*50), where X is the total number of times the user has been hit by a damaging attack during the battle, even if the user did not lose HP from the attack. X cannot be greater than 6 and does not reset upon switching out or fainting. Each hit of a multi-hit attack is counted, but confusion damage is not counted.",
-		shortDesc: "+50 power for each time user was hit. Max 6 hits.",
+		desc: "Power is equal to 50+(X*50), where X is the total number of times the user has been hit by a damaging attack since it last switched in, even if the user did not lose HP from the attack. X cannot be greater than 6 and resets when the user switches out. Each hit of a multi-hit attack is counted, but confusion damage is not counted.",
+		shortDesc: "+50 power per hit taken. Max 6 hits; resets on switch.",
 	},
 	ragepowder: {
 		name: "Rage Powder",
@@ -5619,8 +5635,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	rapidspin: {
 		name: "Rapid Spin",
-		desc: "If this move is successful and the user has not fainted, the effects of Leech Seed and binding moves end for the user, and all hazards are removed from the user's side of the field. Has a 100% chance to raise the user's Speed by 1 stage.",
+		desc: "If this move is successful, the effects of Leech Seed and binding moves end for the user, and all hazards are removed from the user's side of the field. Hazards are removed even if the user faints during the move. Has a 100% chance to raise the user's Speed by 1 stage.",
 		shortDesc: "Free user from hazards/bind/Leech Seed; +1 Spe.",
+		gen8: {
+			desc: "If this move is successful and the user has not fainted, the effects of Leech Seed and binding moves end for the user, and all hazards are removed from the user's side of the field. Has a 100% chance to raise the user's Speed by 1 stage.",
+		},
 		gen7: {
 			desc: "If this move is successful and the user has not fainted, the effects of Leech Seed and binding moves end for the user, and all hazards are removed from the user's side of the field.",
 			shortDesc: "Frees user from hazards, binding, Leech Seed.",
@@ -6016,8 +6035,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	saltcure: {
 		name: "Salt Cure",
-		desc: "Causes damage to the target equal to 1/8 of its maximum HP (1/4 if the target is Steel or Water type), rounded down, at the end of each turn during effect. This effect ends when the target is no longer active.",
-		shortDesc: "Deals 1/8 max HP each turn; 1/4 on Steel, Water.",
+		desc: "Causes damage to the target equal to 1/16 of its maximum HP (1/8 if the target is Steel or Water type), rounded down, at the end of each turn during effect. This effect ends when the target is no longer active.",
+		shortDesc: "Deals 1/16 max HP each turn; 1/8 on Steel, Water.",
 
 		start: "  [POKEMON] is being salt cured!",
 		damage: "  [POKEMON] is hurt by Salt Cure!",
@@ -6559,7 +6578,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	smackdown: {
 		name: "Smack Down",
-		desc: "This move can hit a target using Bounce, Fly, or Sky Drop, or is under the effect of Sky Drop. If this move hits a target under the effect of Bounce, Fly, Magnet Rise, or Telekinesis, the effect ends. If the target is a Flying type that has not used Roost this turn or a Pokemon with the Levitate Ability, it loses its immunity to Ground-type attacks and the Arena Trap Ability as long as it remains active. During the effect, Magnet Rise fails for the target and Telekinesis fails against the target.",
+		desc: "This move can hit a target using Bounce, Fly, or Sky Drop, or is under the effect of Sky Drop. If this move hits a target under the effect of Bounce, Fly, Magnet Rise, or Telekinesis, the effect ends. If the target is a Flying type that has not used Roost this turn or a Pokemon with the Levitate or Eelevate Ability or active Surge Deluge, it loses its immunity to Ground-type attacks and the Arena Trap Ability as long as it remains active. During the effect, Magnet Rise fails for the target and Telekinesis fails against the target.",
 		shortDesc: "Removes the target's Ground immunity.",
 
 		start: "  [POKEMON] fell straight down!",
@@ -7767,8 +7786,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	toxicthread: {
 		name: "Toxic Thread",
-		desc: "Lowers the target's Speed by 1 stage and poisons it.",
-		shortDesc: "Lowers the target's Speed by 1 and poisons it.",
+		desc: "Lowers the target's Speed by 2 stages and poisons it.",
+		shortDesc: "Lowers the target's Speed by 2 and poisons it.",
 	},
 	trailblaze: {
 		name: "Trailblaze",

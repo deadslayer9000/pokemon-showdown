@@ -142,6 +142,7 @@ export const Scripts: ModdedBattleScriptsData = {
 			side.active[pos] = pokemon;
 			pokemon.activeTurns = 0;
 			pokemon.activeMoveActions = 0;
+			pokemon.timesAttackedSinceSwitch = 0;
 			for (const moveSlot of pokemon.moveSlots) {
 				moveSlot.used = false;
 			}

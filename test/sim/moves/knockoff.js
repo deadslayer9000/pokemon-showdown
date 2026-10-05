@@ -58,12 +58,13 @@ describe('Knock Off', () => {
 		assert.equal(battle.p2.active[0].item, '');
 	});
 
-	it('should not remove items if the user faints mid-move', () => {
+	it('should remove items even if the user faints mid-move', () => {
 		battle = common.createBattle();
 		battle.setPlayer('p1', { team: [{ species: "Shedinja", ability: 'wonderguard', moves: ['knockoff'] }] });
 		battle.setPlayer('p2', { team: [{ species: "Ferrothorn", ability: 'ironbarbs', item: 'rockyhelmet', moves: ['curse'] }] });
 		battle.makeChoices('move knockoff', 'move curse');
-		assert.equal(battle.p2.active[0].item, 'rockyhelmet');
+		assert.fainted(battle.p1.active[0]);
+		assert.equal(battle.p2.active[0].item, '');
 	});
 });
 
