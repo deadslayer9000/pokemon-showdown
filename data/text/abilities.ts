@@ -2401,6 +2401,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "Combines the effects of Chlorophyll and Sharpness, but offensive moves make the user lose 10% of its max hp.",
 		shortDesc: "Combines the effects of Chlorophyll and Sharpness, but hurts the user on attack.",
 	},
+	swordofcorruption: {
+		name: "Sword of Corruption",
+		shortDesc: "Lowers Defense of paralized foes",
+	},
 	swordofruin: {
 		name: "Sword of Ruin",
 		shortDesc: "Active Pokemon without this Ability have their Defense multiplied by 0.75.",
