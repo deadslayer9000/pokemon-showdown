@@ -4,7 +4,7 @@ inherit: 'gen9',
 	pokemon: {
 		getMoves(lockedMove?: ID | null, restrictData?: boolean): MoveRequestData[] {
 				if (lockedMove) {
-					lockedMove = toID(lockedMove);
+					lockedMove = this.battle.dex.toID(lockedMove);
 					if (lockedMove === 'recharge') {
 						return [{
 							move: 'Recharge',
