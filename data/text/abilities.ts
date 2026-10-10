@@ -2403,7 +2403,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	swordofcorruption: {
 		name: "Sword of Corruption",
-		shortDesc: "Lowers Defense of paralized foes",
+		shortDesc: "Lowers Defense of paralized foes.",
 	},
 	swordofruin: {
 		name: "Sword of Ruin",
