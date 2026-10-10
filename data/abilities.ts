@@ -10512,6 +10512,20 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 4,
 		num: -123,
 	},
+	swordofcorruption: {
+		onResidual(pokemon, source, effect) {
+			const possibleTargets = pokemon.adjacentFoes();
+			if (!possibleTargets.length) return;
+			const target = this.sample(possibleTargets);
+			if (target && ["par"].includes(target.status)){
+				this.boost({ def: -1 }, target);
+			}
+		},
+		flags: {},
+		name: "Sword of Corruption",
+		rating: 4,
+		num: -124,
+	},
 	// CAP
 	mountaineer: {
 		onDamage(damage, target, source, effect) {
