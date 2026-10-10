@@ -6310,7 +6310,6 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Brown",
 		evos: ["Vibrava"],
 		eggGroups: ["Bug", "Dragon"],
-		otherFormes: ["Trapinch-Ultra"],
 	},
 	vibrava: {
 		num: 329,
@@ -6325,7 +6324,6 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		evoLevel: 35,
 		evos: ["Flygon"],
 		eggGroups: ["Bug", "Dragon"],
-		otherFormes: ["Vibrava-Ultra"],
 	},
 	flygon: {
 		num: 330,
@@ -6339,7 +6337,8 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		prevo: "Vibrava",
 		evoLevel: 45,
 		eggGroups: ["Bug", "Dragon"],
-		otherFormes: ["Flygon-Ultra"],
+		otherFormes: ["Flygon-Mega"],
+		formeOrder: ["Flygon", "Flygon-Mega"]
 	},
 	cacnea: {
 		num: 331,
