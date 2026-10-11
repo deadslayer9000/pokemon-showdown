@@ -27007,6 +27007,19 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		weightkg: 85.6,
 		//color: "Red", no page yet
 		eggGroups: ["Undiscovered"],
-
-	}
+	},
+	chienpaodelta: {
+		num: 1002,
+		name: "Chien-Pao-Delta",
+		baseForme: "Chien-Pao",
+		forme: "Delta",
+		types: ["Dark", "Electric"],
+		gender: "N",
+		baseStats: { hp: 80, atk: 120, def: 80, spa: 90, spd: 65, spe: 135 },
+		abilities: { 0: "Sword of Corruption" },
+		heightm: 1.9,
+		weightkg: 122.2,
+		//color: no page yet
+		eggGroups: ["Undiscovered"],
+	},
 };

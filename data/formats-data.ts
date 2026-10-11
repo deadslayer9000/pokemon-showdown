@@ -7958,4 +7958,8 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 		natDexTier: "A-",
 	},
+	chienpaodelta: {
+		tier: "UU",
+		natDexTier: "A-",
+	}
 };
