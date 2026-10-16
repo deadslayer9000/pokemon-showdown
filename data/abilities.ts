@@ -871,6 +871,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: 34,
 	},
 	chromaticscales: {
+		onSwitchInPriority: 32,
 		onStart(pokemon) {
 			if (pokemon.hp >= pokemon.maxhp / 2) {
 				//const regulartype = pokemon.baseTypes;;
