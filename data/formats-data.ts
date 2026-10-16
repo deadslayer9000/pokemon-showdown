@@ -6564,11 +6564,11 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	mawiledelta: {
 		tier: "ZU",
-		natDexTier: "Unreleased",
+		natDexTier: "D",
 	},
 	mawiledeltamega: {
 		tier: "ZU",
-		natDexTier: "Unreleased",
+		natDexTier: "A-",
 	},
 	dunsparceultra: {
 		tier: "LC",
@@ -6600,7 +6600,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	hoopadeltaunbound: {
 		tier: "UU",
-		natDexTier: "B",
+		natDexTier: "A",
 	},
 	tinkatinkomega: {
 		tier: "LC",
@@ -7597,7 +7597,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	volcaniondelta: {
 		tier: "RU",
 		doublesTier: "(DUU)",
-		natDexTier: "B-",
+		natDexTier: "B",
 	},
 	magearnadelta: {
 		tier: "UU",
