@@ -10527,6 +10527,26 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 4,
 		num: -124,
 	},
+	eerieoverture: {
+		onStart(pokemon) {
+			let activated = false;
+			for (const target of pokemon.adjacentFoes()) {
+				if (!activated) {
+					this.add("-ability", pokemon, "Eerie Overture", "boost");
+					activated = true;
+				}
+				if (target.volatiles["substitute"]) {
+					this.add("-immune", target);
+				} else {
+					this.boost({ spe: -1 }, target, pokemon, null, true);
+				}
+			}
+		},
+		flags: {},
+		name: "Eerie Overture",
+		rating: 2.5,
+		num: 22,
+	},
 	// CAP
 	mountaineer: {
 		onDamage(damage, target, source, effect) {

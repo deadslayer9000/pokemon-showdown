@@ -2222,6 +2222,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Leaves the target with at least 1 HP.",
 		shortDesc: "Always leaves the target with at least 1 HP.",
 	},
+	fatalelegy: {
+		name: "Fatal Elegy",
+		shortDesc: "Steals negative stat changes form opponent turning them positive.",
+	},
 	featherdance: {
 		name: "Feather Dance",
 		desc: "Lowers the target's Attack by 2 stages.",
