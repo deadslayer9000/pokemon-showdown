@@ -27022,4 +27022,61 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		//color: no page yet
 		eggGroups: ["Undiscovered"],
 	},
+	kricketotdelta: {
+		num: 401,
+		name: "Kricketot-Delta",
+		baseSpecies: "Kricketot",
+		forme: "Delta",
+		types: ["Bug", "Dark"],
+    	baseStats: { hp: 29, atk: 25, def: 43, spa: 25, spd: 43, spe: 29 },
+    	abilities: { 0: "Swarm", 1: "Rattled" },
+    	weightkg: 2.2,
+		heightm: 0.3,
+		evos: ["Kricketune-Delta"],
+		//color: "White", no page yet
+		eggGroups: ["Bug"],
+	},
+	kricketunedelta: {
+		num: 402,
+		name: "Kricketune-Delta",
+		baseSpecies: "Kricketune",
+		forme: "Delta",
+		types: ["Bug", "Dark"],
+		baseStats: { hp: 61, atk: 57, def: 51, spa: 83, spd: 61, spe: 71 },
+    	abilities: { 0: "Swarm", H: "Soundproof" },
+    	weightkg: 22,
+		heightm: 1.2,
+    	prevo: "Kricketot-Delta",
+		//color: "White", no page yet
+		eggGroups: ["Bug"],
+	},
+	kricketunedeltamega: {
+		num: 402,
+		name: "Kricketune-Delta-Mega",
+		baseSpecies: "Kricketune-Delta",
+		forme: "Mega",
+		types: ["Bug", "Dark"],
+		baseStats: { hp: 61, atk: 62, def: 61, spa: 123, spd: 96, spe: 81 },
+    	abilities: { 0: "Eerie Overture" },
+    	weightkg: 26,
+		heightm: 1.7,
+    	prevo: "Kricketot-Delta",
+		//color: "White", no page yet
+		eggGroups: ["Bug"],
+		requiredItem: "Delta Kricketite",
+	},
+	wochiendelta: {
+		num: 1001,
+		name: "Wo-Chien-Delta",
+		baseForme: "Wo-Chien",
+		forme: "Delta",
+		types: ["Dark", "Water"],
+		gender: "N",
+		baseStats: { hp: 85, atk: 85, def: 100, spa: 95, spd: 135, spe: 70 },
+    	abilities: { 0: "Tablets of Corruption" },
+    	weightkg: 85.5,
+		heightm: 1.5,
+		//color: "Blue", no page yet
+		eggGroups: ["Undiscovered"],
+	}
 };

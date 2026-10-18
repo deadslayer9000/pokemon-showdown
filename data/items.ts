@@ -1737,6 +1737,18 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		itemUser: ["Klinklang-Delta"],
 		num: -15,
 	},
+	deltakricketite: {
+		name: "Delta Kricketite",
+		spritenum: 576,
+		megaStone: { "Kricketune-Delta": "Kricketune-Delta-Mega" },
+		itemUser: ["Kricketune-Delta"],
+		onTakeItem(item, source) {
+			return !item.megaStone || (!item.megaStone[source.baseSpecies.name] &&
+				!Object.values(item.megaStone).includes(source.baseSpecies.name));
+		},
+		gen: 9,
+		num: -52,
+	},
 	deltalatiasite: {
 		name: "Delta Latiasite",
 		spritenum: 629,
