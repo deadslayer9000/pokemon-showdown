@@ -1,3 +1,4 @@
+import { table } from 'console';
 import { Dex, toID } from './dex';
 
 const CHOOSABLE_TARGETS = new Set(['normal', 'any', 'adjacentAlly', 'adjacentAllyOrSelf', 'adjacentFoe']);
@@ -569,6 +570,8 @@ export class BattleActions {
 			// 6. steal positive boosts (Spectral Thief)
 			this.hitStepStealBoosts,
 
+			//6b. steal negative boosts (Fatal Elegy)
+			this.hitStepStealNegativeBoosts,
 			// 7. loop that processes each hit of the move (has its own steps per iteration)
 			this.hitStepMoveHitLoop,
 		];
@@ -799,6 +802,36 @@ export class BattleActions {
 				target.setBoost(boosts);
 				if (move.id === "spectralthief") {
 					this.battle.addMove('-anim', pokemon, "Spectral Thief", target);
+				}
+			}
+		}
+		return undefined;
+	}
+	hitStepStealNegativeBoosts(targets: Pokemon[], pokemon: Pokemon, move: ActiveMove) {
+		const target = targets[0]; // hardcoded
+		if (move.stealsNegativeBoosts) {
+			const boosts: SparseBoostsTable = {};
+			let stolen = false;
+			let statName: BoostID;
+			for (statName in target.boosts) {
+				const stage = target.boosts[statName];
+				if (stage < 0) {
+					boosts[statName] = -stage;
+					stolen = true;
+				}
+			}
+			if (stolen) {
+				this.battle.attrLastMove('[still]');
+				this.battle.add('-clearnegativeboost', target, pokemon, 'move: ' + move.name);
+				this.battle.boost(boosts, pokemon, pokemon);
+
+				let statName2: BoostID;
+				for (statName2 in boosts) {
+					boosts[statName2] = 0;
+				}
+				target.setBoost(boosts);
+				if (move.id === "fatalelegy") {
+					this.battle.addMove('-anim', pokemon, "Fatal Elegy", target);
 				}
 			}
 		}
@@ -1751,8 +1784,11 @@ export class BattleActions {
 			const spectreModifier = 0.075; 
 			this.battle.debug(`Spectre Onslaught modifier: ${spectreModifier}`);
 			baseDamage = this.battle.modify(baseDamage, spectreModifier);
+		} else if (move.multihitType === 'tabletsofcorruption' && move.hit > 1) {
+			const tabletsModifier = 0.5;
+			this.battle.debug(`Tablets of Corruption modifier: ${tabletsModifier}`);
+			baseDamage = this.battle.modify(baseDamage, tabletsModifier);
 		}
-
 		// weather modifier
 		baseDamage = this.battle.runEvent('WeatherModifyDamage', pokemon, target, move, baseDamage);
 
