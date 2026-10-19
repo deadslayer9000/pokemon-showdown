@@ -210,6 +210,7 @@ export interface MoveData extends EffectData, MoveEventMethods, HitEffect {
 	drain?: [number, number];
 	mindBlownRecoil?: boolean;
 	stealsBoosts?: boolean;
+	stealsNegativeBoosts?: boolean;
 	struggleRecoil?: boolean;
 	secondary?: SecondaryEffect;
 	secondaries?: SecondaryEffect[];
@@ -254,7 +255,7 @@ export interface MoveData extends EffectData, MoveEventMethods, HitEffect {
 	ignorePositiveEvasion?: boolean;
 	multiaccuracy?: boolean;
 	multihit?: number | number[];
-	multihitType?: 'parentalbond' | 'spectreonslaught';
+	multihitType?: 'parentalbond' | 'spectreonslaught' | 'tabletsofcorruption';
 	noDamageVariance?: boolean;
 	nonGhostTarget?: MoveTarget;
 	spreadModifier?: number;

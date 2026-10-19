@@ -7961,5 +7961,21 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	chienpaodelta: {
 		tier: "UU",
 		natDexTier: "A-",
-	}
+	},
+	wochiendelta: {
+		tier: "UU",
+		natDexTier: "A-",
+	},
+	kricketotdelta: {
+		tier: "LC",
+		natDexTier: "A-",
+	},
+	kricketunedelta: {
+		tier: "NU",
+		natDexTier: "D",
+	},
+	kricketunedeltamega: {
+		tier: "UU",
+		natDexTier: "A-",
+	},
 };

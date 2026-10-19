@@ -28534,5 +28534,18 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		},
 		target: "self",
 		type: "Fairy",
+	},
+	fatalelegy: {
+		num: -158,
+		accuracy: 100,
+		basePower: 130,
+		category: "Special",
+		name: "Fatal Elegy",
+		flags: {protect: 1, mirror: 1, metronome: 1},
+		pp: 10,
+		priority: 0,
+		stealsNegativeBoosts: true, //hardcoded in battle-actions.ts
+		target: "normal",
+		type: "Dark",
 	}
 };

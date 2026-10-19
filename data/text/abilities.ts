@@ -2436,6 +2436,11 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			desc: "If another Pokemon burns, paralyzes, or poisons this Pokemon, that Pokemon receives the same non-volatile status condition. If another Pokemon badly poisons this Pokemon, that Pokemon becomes poisoned.",
 		},
 	},
+	tabletsofcorruption: {
+		name: "Tablets of Corruption", 
+		shortDesc: "If this Pokemon goes last, its attack hits twice.",
+		desc: "If this Pokemon is last in the turn order, then its damaging move will hit two times, the second hit having 50% power."
+	},
 	tabletsofruin: {
 		name: "Tablets of Ruin",
 		shortDesc: "Active Pokemon without this Ability have their Attack multiplied by 0.75.",

@@ -10547,6 +10547,33 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 2.5,
 		num: 22,
 	},
+	tabletsofcorruption: {
+		onPrepareHit(source, target, move) {
+			if (
+				move.category === "Status" ||
+				move.multihit ||
+				move.flags["noparentalbond"] ||
+				move.flags["charge"] ||
+				move.flags["futuremove"] ||
+				move.spreadHit ||
+				move.isZ ||
+				move.isMax
+			)
+				return;
+			for (const target of this.getAllActive()) {
+				if (target === source) continue;
+				if (this.queue.willMove(target)) {
+					return;
+				}
+			}
+			move.multihit = 2;
+			move.multihitType = "tabletsofcorruption";
+		},
+		flags: {},
+		name: "Tablets of Corruption",
+		rating: 3,
+		num: -39,
+	},
 	// CAP
 	mountaineer: {
 		onDamage(damage, target, source, effect) {
