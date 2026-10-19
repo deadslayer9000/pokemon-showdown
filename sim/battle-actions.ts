@@ -572,6 +572,7 @@ export class BattleActions {
 
 			//6b. steal negative boosts (Fatal Elegy)
 			this.hitStepStealNegativeBoosts,
+			
 			// 7. loop that processes each hit of the move (has its own steps per iteration)
 			this.hitStepMoveHitLoop,
 		];

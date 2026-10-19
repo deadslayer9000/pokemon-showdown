@@ -2224,7 +2224,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	fatalelegy: {
 		name: "Fatal Elegy",
-		shortDesc: "Steals negative stat changes form opponent turning them positive.",
+		shortDesc: "Steals and inverts negative boosts.",
+		desc: "Before dealing damage, this Pokemon steals the negative stat drops of the opposing Pokemon, then inverts the stat drops into positive stat boosts before dealing damage.",
+
+		clearBoost: "[POKEMON] stole the target's dropped stats!"
 	},
 	featherdance: {
 		name: "Feather Dance",

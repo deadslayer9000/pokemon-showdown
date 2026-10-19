@@ -129610,7 +129610,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			payback: ["9M"],
 			perishsong: ["9L50"],
 			protect: ["9M"],
-			punce: ["9M"],
+			pounce: ["9M"],
 			quash: ["9M"],
 			raindance: ["9M"],
 			rest: ["9M"],

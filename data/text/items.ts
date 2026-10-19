@@ -477,6 +477,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Delta Klinklangium Z",
 		shortDesc: "If held by Klinklang-Delta with Flux Emission, allows it to use Absolute Zero.",
 	},
+	deltakricketite: {
+		name: "Delta Kricketite",
+		shortDesc: "If held by Kricketune-Delta, this item allows it to Mega Evolve in battle."
+	},
 	deltalatiasite: {
 		name: "Delta Latiasite",
 		shortDesc: "If held by Latias-Delta, this item allows her to Mega Evolve in battle.",
