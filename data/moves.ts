@@ -6406,7 +6406,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		target: "normal",
 		type: "Dragon",
 	},
-	exaltedbrew: {
+	/*exaltedbrew: {
 		num: -61,
 		accuracy: true,
 		basePower: 0,
@@ -6444,9 +6444,9 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		},
 		target: "normal",
 		type: "Psychic",
-	},
+	},*/
 	exaltedpotion: {
-		//bypasses the targeting check by calling z move instead
+		//similar change to wormhole rush, this notably makes it kinda fucky in doubles, fix eventually
 		num: -83,
 		accuracy: 100,
 		basePower: 0,
@@ -6456,12 +6456,38 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		priority: 0,
 		isZ: "brewliumz",
 		flags: {},
-		onTryHit(target, pokemon) {
-			let move = "exaltedbrew";
-			this.actions.useMove(move, pokemon);
-			return null;
+		onModifyMove(move, pokemon, target) {
+			if (pokemon.species.name === "Brewloom") {
+				move.target = "normal";
+			} 
 		},
-		callsMove: true,
+		onHit(target, source) {
+			if (source.hp) {
+				const item = target.takeItem();
+				if (item) {
+					this.add(
+						"-enditem",
+						target,
+						item.name,
+						"[from] move: Exalted Brew",
+						`[of] ${source}`
+					);
+				}
+			}
+		},
+		self: {
+			onHit(pokemon) {
+				pokemon.setItem("");
+				this.hint("Brewlium Z consumed.");
+			},
+			boosts: {
+				atk: 1,
+				def: 1,
+				spa: 1,
+				spd: 1,
+				spe: 1,
+			},
+		},
 		target: "self",
 		type: "Psychic",
 	},
