@@ -157,7 +157,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	annihilate: {
 		name: "Annihilate",
-		shortDesc: "If it hits but doesnt KO an opponent it has to recharge.",
+		shortDesc: "No recharge on KO.",
 	},
 	amberassault: {
 		name: "Amber Assault",
