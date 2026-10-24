@@ -2407,7 +2407,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	swordofcorruption: {
 		name: "Sword of Corruption",
-		shortDesc: "Lowers Defense of paralized foes.",
+		shortDesc: "End of turn: Paralyzed foe's Defense is lowered by 1.",
+		desc: "At the end of each turn, all paralyzed Pokemon on the opponent's side have their Defense lowered by 1."
 	},
 	swordofruin: {
 		name: "Sword of Ruin",
@@ -2438,7 +2439,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	tabletsofcorruption: {
 		name: "Tablets of Corruption", 
-		shortDesc: "If this Pokemon goes last, its attack hits twice.",
+		shortDesc: "If this Pokemon goes last, its attack hits twice. Second hit has half power.",
 		desc: "If this Pokemon is last in the turn order, then its damaging move will hit two times, the second hit having 50% power."
 	},
 	tabletsofruin: {

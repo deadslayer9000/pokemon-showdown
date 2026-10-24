@@ -3898,7 +3898,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	pyroarmega: {
 		tier: "OU",
-		natDexTier: "A",
+		natDexTier: "Unreleased",
 	},
 	flabebe: {
 		tier: "LC",
