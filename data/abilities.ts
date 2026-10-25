@@ -10578,7 +10578,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		onResidual(target, source, effect) {
 			for (const foe of target.adjacentFoes()) {
 				foe.clearBoosts();
-				this.add("-clearboost", foe, target);
+				this.add("-clearboost", foe, "[from] ability: Vessel of Corruption", `[of] ${target}`);
 			}
 		},
 		flags: {},
