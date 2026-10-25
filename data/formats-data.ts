@@ -7978,4 +7978,8 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 		natDexTier: "A-",
 	},
+	tingludelta: {
+		tier: "UU",
+		natDexTier: "A-",
+	}
 };

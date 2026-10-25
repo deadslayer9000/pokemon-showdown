@@ -24288,7 +24288,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	wooperdelta: {
 		num: 194,
 		name: "Wooper-Delta",
-		baseForme: "Wooper",
+		baseSpecies: "Wooper",
 		forme: "Delta",
 		types: ["Water", "Fairy"],
 		baseStats: { hp: 45, atk: 20, def: 35, spa: 55, spd: 45, spe: 10 },
@@ -24314,7 +24314,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	wooperomega: {
 		num: 194,
 		name: "Wooper-Omega",
-		baseForme: "Wooper",
+		baseSpecies: "Wooper",
 		forme: "Omega",
 		types: ["Poison"],
 		baseStats: { hp: 55, atk: 25, def: 50, spa: 40, spd: 25, spe: 15 },
@@ -27011,7 +27011,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	chienpaodelta: {
 		num: 1002,
 		name: "Chien-Pao-Delta",
-		baseForme: "Chien-Pao",
+		baseSpecies: "Chien-Pao",
 		forme: "Delta",
 		types: ["Dark", "Electric"],
 		gender: "N",
@@ -27068,7 +27068,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 	wochiendelta: {
 		num: 1001,
 		name: "Wo-Chien-Delta",
-		baseForme: "Wo-Chien",
+		baseSpecies: "Wo-Chien",
 		forme: "Delta",
 		types: ["Dark", "Water"],
 		gender: "N",
@@ -27078,5 +27078,19 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		heightm: 1.5,
 		//color: "Blue", no page yet
 		eggGroups: ["Undiscovered"],
-	}
+	},
+	tingludelta: {
+		num: 1003,
+		name: "Ting-Lu-Delta",
+		baseSpecies: "Ting-Lu",
+		forme: "Delta",
+		types: ["Dark", "Steel"],
+		gender: "N",
+		baseStats: { hp: 165, atk: 110, def: 130, spa: 50, spd: 80, spe: 45 },
+		abilities: { 0: "Vessel of Corruption" },
+		weightkg: 599.7,
+		heightm: 2.7,
+		//color: "Gray", no page yet
+		eggGroups: ["Undiscovered"],
+	},
 };
