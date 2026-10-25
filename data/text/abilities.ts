@@ -2708,7 +2708,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	vesselofcorruption: {
 		name: "Vessel of Corruption",
-		shortDesc: "At the end of each turn. reset all opponent's stat changes.",
+		shortDesc: "At the end of each turn, resets all opponent's stat changes.",
 	},
 	vesselofruin: {
 		name: "Vessel of Ruin",
