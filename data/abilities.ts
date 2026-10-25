@@ -10576,10 +10576,9 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 	},
 	vesselofcorruption: {
 		onResidual(target, source, effect) {
-			for (const opponent of target.adjacentFoes()) {
-				opponent.clearBoosts();
-				if (opponent.boosts){
-				}
+			for (const foe of target.adjacentFoes()) {
+				foe.clearBoosts();
+				this.add("-clearboost", foe, target);
 			}
 		},
 		flags: {},
