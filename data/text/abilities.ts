@@ -2706,6 +2706,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Valor Heart",
 		shortDesc: "Base Power of moves used by this Pokemon or its allies is multiplied by 1.2.",
 	},
+	vesselofcorruption: {
+		name: "Vessel of Corruption",
+		shortDesc: "At the end of each turn. reset all opponent's stat changes.",
+	},
 	vesselofruin: {
 		name: "Vessel of Ruin",
 		shortDesc: "Active Pokemon without this Ability have their Special Attack multiplied by 0.75.",
