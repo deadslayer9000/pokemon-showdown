@@ -10574,6 +10574,18 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 3,
 		num: -39,
 	},
+	vesselofcorruption: {
+		onResidual(target, source, effect) {
+			for (const foe of target.adjacentFoes()) {
+				foe.clearBoosts();
+				this.add("-clearboost", foe, "[from] ability: Vessel of Corruption", `[of] ${target}`);
+			}
+		},
+		flags: {},
+		name: "Vessel of Corruption",
+		rating: 4,
+		num: -40,
+	},
 	// CAP
 	mountaineer: {
 		onDamage(damage, target, source, effect) {
