@@ -27485,7 +27485,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		pp: 10,
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1, },
-		onTryHit(target, source) {
+		/*onTryHit(target, source) {
 			const targetAbility = target.getAbility();
 			const sourceAbility = source.getAbility();
 			if (
@@ -27511,9 +27511,9 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 				sourceAbility
 			);
 			if (!targetCanBeSet) return targetCanBeSet;
-		},
+		},*/
 		onHit(target, source, move) {
-			const targetAbility = target.getAbility();
+			/*const targetAbility = target.getAbility();
 			const sourceAbility = source.getAbility();
 			if (target.isAlly(source)) {
 				this.add(
@@ -27549,7 +27549,8 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			source.volatileStaleness = undefined;
 			if (!target.isAlly(source)) target.volatileStaleness = "external";
 			this.singleEvent("Start", targetAbility, source.abilityState, source);
-			this.singleEvent("Start", sourceAbility, target.abilityState, target);
+			this.singleEvent("Start", sourceAbility, target.abilityState, target);*/
+			return this.skillSwap(source, target); //can you believe they consolidated all this bullshit into one single function
 		},
 		type: "Poison",
 		target: "normal",
