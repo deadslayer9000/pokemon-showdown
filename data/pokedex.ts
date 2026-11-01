@@ -27129,7 +27129,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		forme: "Delta",
 		types: ["Dark", "Steel"],
 		baseStats: { hp: 90, atk: 112, def: 91, spa: 81, spd: 74, spe: 82 },
-		abilities: { 0: "Malice", 1: "Royale Proxy" },
+		abilities: { 0: "Malice", 1: "Royal Proxy" },
 		heightm: 1.8,
 		weightkg: 95.3,
 		//color: "Black", no page yet
