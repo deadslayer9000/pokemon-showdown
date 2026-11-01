@@ -1261,6 +1261,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			shortDesc: "Prevents Steel-type Pokemon from choosing to switch out, other than this Pokemon.",
 		},
 	},
+	malice: {
+		name: "Malice",
+		shortDesc: "If this Pokemon has 1/3rd or less HP, Dark-type moves have 1.5x power.",
+	},
 	marvel: {
 		name: "Marvel (WIP)",
 		shortDesc: "This Pokemon will always critically hit on it's first turn sent out.",
@@ -1929,6 +1933,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		},
 
 		damage: "  [POKEMON] was hurt!",
+	},
+	royalproxy: {
+		name: "Royal Proxy",
+		shortDesc: "Substitute is created on held item loss.",
 	},
 	runaway: {
 		name: "Run Away",

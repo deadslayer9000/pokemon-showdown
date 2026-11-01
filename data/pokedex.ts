@@ -27093,4 +27093,47 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		//color: "Gray", no page yet
 		eggGroups: ["Undiscovered"],
 	},
+	piplupdelta: {
+		num: 393,
+		name: "Piplup-Delta",
+		baseSpecies: "Piplup",
+		forme: "Delta",
+		types: ["Dark"],
+		baseStats: { hp: 55, atk: 64, def: 51, spa: 51, spd: 46, spe: 47 },
+		abilities: { 0: "Malice", H: "Defiant" },
+		heightm: 0.4,
+		weightkg: 6.2,
+		//color: "Black", no page yet
+		eggGroups: ["Water 1", "Field"],
+		evos: ["Prinplup-Delta"],
+	},
+	prinplupdelta: {
+		num: 394,
+		name: "Prinplup-Delta",
+		baseSpecies: "Prinplup",
+		forme: "Delta",
+		types: ["Dark"],
+		baseStats: { hp: 68, atk: 75, def: 73, spa: 66, spd: 64, spe: 59 },
+		abilities: { 0: "Malice", H: "Defiant" },
+		heightm: 0.8,
+		weightkg: 28,
+		//color: "Black", no page yet
+		eggGroups: ["Water 1", "Field"],
+		prevo: "Piplup-Delta",
+		evos: ["Empoleon-Delta"],
+	},
+	empoleondelta: {
+		num: 395,
+		name: "Empoleon-Delta",
+		baseSpecies: "Empoleon",
+		forme: "Delta",
+		types: ["Dark", "Steel"],
+		baseStats: { hp: 90, atk: 112, def: 91, spa: 81, spd: 74, spe: 82 },
+		abilities: { 0: "Malice", 1: "Royal Proxy" },
+		heightm: 1.8,
+		weightkg: 95.3,
+		//color: "Black", no page yet
+		eggGroups: ["Water 1", "Field"],
+		prevo: "Prinplup-Delta",
+	},
 };

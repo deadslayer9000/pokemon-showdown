@@ -28574,5 +28574,23 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		stealsNegativeBoosts: true, //hardcoded in battle-actions.ts
 		target: "normal",
 		type: "Dark",
+	},
+	ambush: {
+		num: -159,
+		accuracy: 100,
+		basePower: 85,
+		category: "Physical",
+		name: "Ambush",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, metronome: 1},
+		onBasePower(basePower, source, target, move) {
+			if (source.volatiles["substitute"]) {
+				return this.chainModify(1.5);
+			}
+			return;
+		},
+		target: "normal",
+		type: "Dark",
 	}
 };
