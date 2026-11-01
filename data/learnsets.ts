@@ -129891,6 +129891,15 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			tripleaxel: ["9M"],
 			waterfall: ["9M"],
 			weatherball: ["9M"],
+			aquaring: ["9M"],
+			powertrip: ["9M"],
+			roost: ["9M"],
+			snore: ["9M"],
+			supersonic: ["9M"],
+			doublehit: ["9M"],
+			flail: ["9M"],
+			bide: ["9M"],
+			switcheroo: ["9M"],
 		}
 	},
 	pokestarsmeargle: {
