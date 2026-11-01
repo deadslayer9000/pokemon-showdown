@@ -7981,5 +7981,17 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	tingludelta: {
 		tier: "UU",
 		natDexTier: "A-",
-	}
+	},
+	piplupdelta: {
+		tier: "UU",
+		natDexTier: "A-",
+	},
+	prinplupdelta: {
+		tier: "UU",
+		natDexTier: "A-",
+	},
+	empoleondelta: {
+		tier: "UU",
+		natDexTier: "A-",
+	},
 };

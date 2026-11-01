@@ -10586,6 +10586,42 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 4,
 		num: -40,
 	},
+	malice: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === "Dark" && attacker.hp <= attacker.maxhp / 3) {
+				this.debug("Malice boost");
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === "Dark" && attacker.hp <= attacker.maxhp / 3) {
+				this.debug("Malice boost");
+				return this.chainModify(1.5);
+			}
+		},
+		flags: {},
+		name: "Malice",
+		rating: 2,
+		num: -41,
+	},
+	royalproxy: {
+		onAfterUseItem(item, pokemon) {
+			if (pokemon !== this.effectState.target) return;
+			pokemon.addVolatile("substitute");
+		},
+		onTakeItem(item, pokemon) {
+			pokemon.addVolatile("substitute");
+		},
+		onEnd(pokemon) {
+			pokemon.removeVolatile("substitute");
+		},
+		flags: {},
+		name: "Royal Proxy",
+		rating: 4,
+		num: -42,
+	},
 	// CAP
 	mountaineer: {
 		onDamage(damage, target, source, effect) {

@@ -129,6 +129,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			shortDesc: "Switches position with the ally on the far side.",
 		},
 	},
+	ambush: {
+		name: "Ambush",
+		shortDesc: "50% more damage if used from behind substitute.",
+	},
 	amnesia: {
 		name: "Amnesia",
 		desc: "Raises the user's Special Defense by 2 stages.",
