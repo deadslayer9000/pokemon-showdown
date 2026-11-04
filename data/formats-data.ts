@@ -7712,20 +7712,20 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "B",
 	},
 	gardevoiratom: {
-		tier: "Uber",
-		natDexTier: "Unreleased",
+		tier: "UU",
+		natDexTier: "A-",
 	},
 	gardevoiratommega: {
-		tier: "Uber",
-		natDexTier: "Unreleased",
+		tier: "UU",
+		natDexTier: "A-",
 	},
 	galladeatom: {
-		tier: "Uber",
-		natDexTier: "Unreleased",
+		tier: "UU",
+		natDexTier: "A-",
 	},
 	galladeatommega: {
-		tier: "Uber",
-		natDexTier: "Unreleased",
+		tier: "UU",
+		natDexTier: "A-",
 	},
 	slakothatom: {
 		tier: "RU",
