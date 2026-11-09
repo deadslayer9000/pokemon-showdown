@@ -2756,7 +2756,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	galecocoon: {
 		name: "Gale Cocoon",
-		shortDesc: "Protects from damaging attacks; heals 1/2 HP if contact.",
+		shortDesc: "Protects from damaging attacks; heals 1/2 HP if the move is non-contact.",
 	},
 	gastroacid: {
 		name: "Gastro Acid",

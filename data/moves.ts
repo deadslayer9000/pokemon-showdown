@@ -28241,7 +28241,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 						delete source.volatiles["lockedmove"];
 					}
 				}
-				if (this.checkMoveMakesContact(move, source, target)) {
+				if (!this.checkMoveMakesContact(move, source, target)) {
 					this.heal(target.baseMaxhp / 2, target);
 					//this.hint(`${target.name} has healed in its cocoon!`);
 				}
