@@ -10398,44 +10398,20 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 3,
 	},
 	photonomy: {
-		onStart(pokemon) {
-			this.hint(`${pokemon.name}source`);
-			pokemon.abilityState.photonomy = false;
-		},
 		onTryHit(target, source, move) {
 			if (target !== source && move.flags["beam"]) {
-				target.abilityState.photonomy = true;
-				target.addVolatile("photonomy", source);
 				this.add("-immune", target, "[from] ability: Photonomy");
 				return null;
 			}
 		},
 		onAllyTryHitSide(target, source, move) {
 			if (move.flags["beam"]) {
-				target.abilityState.photonomy = true;
-				target.addVolatile("photonomy", source);
 				this.add(
 					"-immune",
 					this.effectState.target,
 					"[from] ability: Photonomy"
 				);
 			}
-		},
-		onBasePowerPriority: 21,
-		onBasePower(basePower, source, target, move) {
-			if (source.abilityState.photonomy === true){
-				if (
-					(source === this.effectState.target &&
-						typeof basePower === "number") ||
-					(source.isAlly(this.effectState.target) &&
-						typeof basePower === "number")
-				) {
-					return this.chainModify([5324, 4096]);
-				}
-			}
-		},
-		onEnd(pokemon) {
-			pokemon.removeVolatile("photonomy");
 		},
 		flags: { breakable: 1 },
 		name: "Photonomy",
@@ -10496,17 +10472,15 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		num: -122
 	},
 	beadsofcorruption: {
-		onResidual(pokemon, source, effect) {
-			const possibleTargets = pokemon.adjacentFoes();
-			if (!possibleTargets.length) return;
-
-			const target = this.sample(possibleTargets);
-			if (target && ["psn", "tox"].includes(target.status)){
-				this.damage(target.baseMaxhp / 8, target, pokemon);
+		onAfterMove(source, target, move) {
+			if (move.category !== "Status" && move.type === "Poison") {
+				this.effectState.poisonUsed = true;
 			}
-			if (target && ["brn", "par", "slp", "frz"].includes(target.status)) {
-				this.damage(target.baseMaxhp / 16, target, pokemon);
-			}
+		},
+		onResidual(pokemon) {
+			if (!this.effectState.poisonUsed) return;
+			this.effectState.poisonUsed = false;
+			pokemon.side.foe.addSideCondition("toxicspikes", pokemon);
 		},
 		flags: {},
 		name: "Beads of Corruption",
@@ -10693,5 +10667,75 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		name: "Persistent",
 		rating: 3,
 		num: -3,
+	},
+	intercept: {
+		onBasePowerPriority: 21,
+		onBasePower(basePower, source, target, move) {
+			if (move.category !== "Status" && !target.activeTurns) {
+				this.debug("Intercept boost");
+				return this.chainModify([5325, 4096]);
+			}
+		},
+		flags: {},
+		name: "Intercept",
+		rating: 3,
+		num: -125,
+	},
+	afterburner: {
+		onBasePowerPriority: 21,
+		onBasePower(basePower, source, target, move) {
+			if (
+				move.category !== "Status" &&
+				!source.isGrounded() &&
+				target.isGrounded() &&
+				source.hasType(move.type)
+			) {
+				this.debug("Afterburner boost");
+				return this.chainModify([5325, 4096]);
+			}
+		},
+		flags: {},
+		name: "Afterburner",
+		rating: 3,
+		num: -126,
+	},
+	skyward: {
+		onSourceAccuracy(accuracy, target, source) {
+			const weather = source.effectiveWeather();
+			if (
+				[
+					"raindance",
+					"primordialsea",
+					"sunnyday",
+					"desolateland",
+					"snowscape",
+					"hail",
+					"sandstorm",
+				].includes(weather)
+			) {
+				return true;
+			}
+			return accuracy;
+		},
+		flags: {},
+		name: "Sky Ward",
+		rating: 3.5,
+		num: -127,
+	},
+	progenitor: {
+		onPrepareHit(source, target, move) {
+			if (this.effectState.progenitor) return;
+			if (move.hasBounced || move.flags["futuremove"] || move.sourceEffect === "snatch" || move.callsMove) return;
+			const type = move.type;
+			if (type && type !== "???" && source.getTypes().join() !== type) {
+				if (!source.setType(type)) return;
+				this.effectState.progenitor = true;
+				this.add("-start", source, "typechange", type, "[from] ability: Progenitor");
+			}
+		},
+		flags: {},
+		name: "Progenitor",
+		rating: 4,
+		num: -128,
 	},
 };

@@ -115129,7 +115129,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			energyball: ["9M"],
 			expandingforce: ["9M"],
 			facade: ["9M"],
-			flipturn: ["9M"],
 			futuresight: ["9M"],
 			gastroacid: ["9L1"],
 			grassknot: ["9M"],
@@ -125124,7 +125123,6 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			terablast: ["9M"],
 			toxic: ["9M","9M"],
 			upperhand: ["9M"],
-			vacuumwave: ["9M"],
 			workup: ["9L1","9M"],
 			xscissor: ["9M"],
 		}

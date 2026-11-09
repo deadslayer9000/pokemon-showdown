@@ -2775,5 +2775,21 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 	necromausite: {
 		name: "Necromausite",
 		shortDesc: "If held by a Necromauser, this item allows it to Mega Evolve in battle.",
-	}
+	},
+	metalstinger: {
+		name: "Metal Stinger",
+		shortDesc: "If held by a Silent Sting, its Titan Buster is Steel type.",
+	},
+	rockystinger: {
+		name: "Rocky Stinger",
+		shortDesc: "If held by a Silent Sting, its Titan Buster is Rock type.",
+	},
+	venomousstinger: {
+		name: "Venomous Stinger",
+		shortDesc: "If held by a Silent Sting, its Titan Buster is Poison type.",
+	},
+	grassystinger: {
+		name: "Grassy Stinger",
+		shortDesc: "If held by a Silent Sting, its Titan Buster is Grass type.",
+	},
 };

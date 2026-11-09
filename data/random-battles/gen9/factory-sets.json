@@ -2696,7 +2696,7 @@
 					"species": "Iron Pilot-Thrash",
 					"weight": 40,
 					"item": ["Thrash Drive"],
-					"ability": ["Quark Drive"],
+					"ability": ["Afterburner"],
 					"evs": { "spa": 252, "spe": 252, "def": 4 },
 					"nature": ["Modest"],
 					"teraType": ["Normal"],
@@ -2711,7 +2711,7 @@
 					"species": "Iron Pilot",
 					"weight": 30,
 					"item": ["Life Orb"],
-					"ability": ["Quark Drive"],
+					"ability": ["Afterburner"],
 					"evs": { "atk": 252, "spe": 252, "spd": 4 },
 					"nature": ["Adamant"],
 					"teraType": ["Normal"],
@@ -2726,7 +2726,7 @@
 					"species": "Iron Pilot",
 					"weight": 30,
 					"item": ["Choice Specs"],
-					"ability": ["Quark Drive"],
+					"ability": ["Afterburner"],
 					"evs": { "spa": 252, "spe": 252, "spd": 4 },
 					"nature": ["Timid"],
 					"teraType": ["Normal"],
@@ -4893,7 +4893,7 @@
 					"moves": [
 						["Hurricane"],
 						["Secret Sword"],
-						["Substitute", "Vacuum Wave"],
+						["Substitute"],
 						["Calm Mind"]
 					]
 				}
@@ -5386,7 +5386,7 @@
 					"species": "Ancient Gene",
 					"weight": 90,
 					"item": ["Ancientgenium Z"],
-					"ability": ["Protosynthesis"],
+					"ability": ["Progenitor"],
 					"evs": { "spa": 252, "spe": 252, "spd": 4 },
 					"nature": ["Timid"],
 					"teraType": ["Normal"],
@@ -5401,7 +5401,7 @@
 					"species": "Ancient Gene",
 					"weight": 10,
 					"item": ["Ancientgenium Z"],
-					"ability": ["Protosynthesis"],
+					"ability": ["Progenitor"],
 					"evs": { "hp": 252, "spd": 252, "def": 4 },
 					"nature": ["Calm"],
 					"teraType": ["Normal"],
@@ -5573,7 +5573,7 @@
 					"species": "Silent Sting",
 					"weight": 100,
 					"item": ["Choice Band"],
-					"ability": ["Protosynthesis"],
+					"ability": ["Intercept"],
 					"evs": { "atk": 252, "spe": 252, "spd": 4 },
 					"nature": ["Jolly"],
 					"teraType": ["Normal"],
@@ -5728,9 +5728,8 @@
 			"sets": [{
 				"species": "Rogue Prince",
 				"weight": 1,
-				"sunAbuser": true,
 				"item": ["Life Orb"],
-				"ability": ["Protosynthesis"],
+				"ability": ["Drizzle"],
 				"evs": { "spa": 252, "spe": 252, "spd": 4 },
 				"nature": ["Timid"],
 				"teraType": ["Normal"],
@@ -5740,11 +5739,11 @@
 				"species": "Rogue Prince",
 				"weight": 99,
 				"item": ["Choice Specs"],
-				"ability": ["Protosynthesis"],
+				"ability": ["Drizzle"],
 				"evs": { "spa": 252, "spe": 252, "spd": 4 },
 				"nature": ["Timid"],
 				"teraType": ["Normal"],
-				"moves": [["Scald"], ["Psychic"], ["Ice Beam"], ["Flip Turn"]]
+				"moves": [["Scald"], ["Psychic"], ["Ice Beam"], ["Depth Decree"]]
 			}]
 		},
 		"barraskewda": {
@@ -5792,7 +5791,7 @@
 				"weight": 1,
 				"rainAbuser": true,
 				"item": ["Choice Specs"],
-				"ability": ["Quark Drive"],
+				"ability": ["Sky Ward"],
 				"evs": { "spa": 252, "spe": 252, "spd": 4 },
 				"nature": ["Timid"],
 				"teraType": ["Normal"],
@@ -5802,7 +5801,7 @@
 				"species": "Iron Sentinel",
 				"weight": 99,
 				"item": ["Heavy-Duty Boots"],
-				"ability": ["Quark Drive"],
+				"ability": ["Sky Ward"],
 				"evs": { "spa": 252, "spe": 252, "spd": 4 },
 				"nature": ["Timid"],
 				"teraType": ["Normal"],
@@ -7320,7 +7319,7 @@
 					"moves": [
 						["Hurricane"],
 						["Secret Sword"],
-						["Substitute", "Vacuum Wave"],
+						["Substitute"],
 						["Calm Mind"]
 					]
 				}
@@ -7813,7 +7812,7 @@
 					"species": "Ancient Gene",
 					"weight": 50,
 					"item": ["Ancientgenium Z"],
-					"ability": ["Protosynthesis"],
+					"ability": ["Progenitor"],
 					"evs": { "spa": 252, "spe": 252, "spd": 4 },
 					"nature": ["Timid"],
 					"teraType": ["Normal"],
@@ -7828,7 +7827,7 @@
 					"species": "Ancient Gene",
 					"weight": 50,
 					"item": ["Ancientgenium Z"],
-					"ability": ["Protosynthesis"],
+					"ability": ["Progenitor"],
 					"evs": { "hp": 252, "spd": 252, "def": 4 },
 					"nature": ["Calm"],
 					"teraType": ["Normal"],
@@ -8016,7 +8015,7 @@
 					"species": "Silent Sting",
 					"weight": 100,
 					"item": ["Choice Band"],
-					"ability": ["Protosynthesis"],
+					"ability": ["Intercept"],
 					"evs": { "atk": 252, "spe": 252, "spd": 4 },
 					"nature": ["Jolly"],
 					"teraType": ["Normal"],
@@ -9273,9 +9272,8 @@
 			"sets": [{
 				"species": "Rogue Prince",
 				"weight": 1,
-				"sunAbuser": true,
 				"item": ["Life Orb"],
-				"ability": ["Protosynthesis"],
+				"ability": ["Drizzle"],
 				"evs": { "spa": 252, "spe": 252, "spd": 4 },
 				"nature": ["Timid"],
 				"teraType": ["Normal"],
@@ -9285,11 +9283,11 @@
 				"species": "Rogue Prince",
 				"weight": 99,
 				"item": ["Choice Specs"],
-				"ability": ["Protosynthesis"],
+				"ability": ["Drizzle"],
 				"evs": { "spa": 252, "spe": 252, "spd": 4 },
 				"nature": ["Timid"],
 				"teraType": ["Normal"],
-				"moves": [["Scald"], ["Psychic"], ["Ice Beam"], ["Flip Turn"]]
+				"moves": [["Scald"], ["Psychic"], ["Ice Beam"], ["Depth Decree"]]
 			}]
 		},
 		"archaludon": {

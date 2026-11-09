@@ -1483,8 +1483,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	depthdecree: {
 		name: "Depth Decree",
-		shortDesc: "In Sun: Ability = Sheer Force and sun is removed.",
-		desc: "When used, this pokemon's ability becomes Sheer Force, and sun is removed.",
+		shortDesc: "Torments the target for 3 turns if it isn't already tormented.",
 	},
 	destinybond: {
 		name: "Destiny Bond",
@@ -7712,7 +7711,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	titanbuster: {
 		name: "Titan Buster",
-		shortDesc: "Charges turn 1. Hits turn 2. No charge in sunlight.",
+		shortDesc: "More power the heavier the target. Type depends on the held Stinger.",
 	},
 	titaniumtempest: {
 		name: "Titanium Tempest",
