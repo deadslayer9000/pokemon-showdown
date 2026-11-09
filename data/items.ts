@@ -9488,4 +9488,64 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		gen: 8,
 		isNonstandard: "CAP",
 	},
+	metalstinger: {
+		name: "Metal Stinger",
+		spritenum: 286,
+		onTakeItem(item, pokemon, source) {
+			if (
+				(source && source.baseSpecies.num === 2125) ||
+				pokemon.baseSpecies.num === 2125
+			) {
+				return false;
+			}
+			return true;
+		},
+		itemUser: ["Silent Sting"],
+		num: -53,
+	},
+	rockystinger: {
+		name: "Rocky Stinger",
+		spritenum: 187,
+		onTakeItem(item, pokemon, source) {
+			if (
+				(source && source.baseSpecies.num === 2125) ||
+				pokemon.baseSpecies.num === 2125
+			) {
+				return false;
+			}
+			return true;
+		},
+		itemUser: ["Silent Sting"],
+		num: -54,
+	},
+	venomousstinger: {
+		name: "Venomous Stinger",
+		spritenum: 343,
+		onTakeItem(item, pokemon, source) {
+			if (
+				(source && source.baseSpecies.num === 2125) ||
+				pokemon.baseSpecies.num === 2125
+			) {
+				return false;
+			}
+			return true;
+		},
+		itemUser: ["Silent Sting"],
+		num: -55,
+	},
+	grassystinger: {
+		name: "Grassy Stinger",
+		spritenum: 292,
+		onTakeItem(item, pokemon, source) {
+			if (
+				(source && source.baseSpecies.num === 2125) ||
+				pokemon.baseSpecies.num === 2125
+			) {
+				return false;
+			}
+			return true;
+		},
+		itemUser: ["Silent Sting"],
+		num: -56,
+	},
 };

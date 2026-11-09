@@ -192,7 +192,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	beadsofcorruption: {
 		name: "Beads of Corruption",
-		shortDesc: "All adjacent statused Pokemon take 1/16 damage at the end of the turn. Double for psn.",
+		shortDesc: "End of turn: sets 1 layer of Toxic Spikes on the foe's side if the user used a damaging Poison move.",
 	},
 	beadsofruin: {
 		name: "Beads of Ruin",
@@ -1584,7 +1584,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	photonomy: {
 		name: "Photonomy",
-		shortDesc: "Immunity to Beam moves, if hit by a Beam, recieves 1.3x damage multiplier.",
+		shortDesc: "This Pokemon is immune to Beam moves.",
 	},
 	pickpocket: {
 		name: "Pickpocket",
@@ -2885,5 +2885,22 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		shortDesc: "When used, Gravity/Heal Block/Safeguard/Tailwind/Room effects last 2 more turns.",
 
 		activate: "  [POKEMON] extends [MOVE] by 2 turns!",
+	},
+	intercept: {
+		name: "Intercept",
+		shortDesc: "This Pokemon's attacks deal 1.3x damage to Pokemon that switched in this turn.",
+	},
+	afterburner: {
+		name: "Afterburner",
+		shortDesc: "Ungrounded: STAB attacks deal 1.3x damage to grounded targets.",
+	},
+	skyward: {
+		name: "Sky Ward",
+		shortDesc: "In rain, sun, snow, hail, or sand, this Pokemon's moves never miss.",
+	},
+	progenitor: {
+		name: "Progenitor",
+		desc: "This Pokemon's type changes to the type of the move it is about to use. This effect comes after all effects that change a move's type. Once per switch-in.",
+		shortDesc: "This Pokemon's type changes to the type of the move it is using. Once per switch-in.",
 	},
 };

@@ -4528,42 +4528,17 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	},
 	depthdecree: {
 		num: -58,
-		accuracy: 100,
-		basePower: 80,
+		accuracy: 95,
+		basePower: 90,
 		category: "Special",
 		name: "Depth Decree",
-		pp: 10,
+		pp: 5,
 		priority: 0,
 		flags: { protect: 1, mirror: 1, metronome: 1 },
-		onTryMove(source, target, move) {
-			if (
-				["sunnyday", "desolateland"].includes(source.effectiveWeather())
-			) {
-				this.add("-activate", source, "Depth Decree");
-				if(source.ability === "sheerforce" || source.getAbility().flags["cantsuppress"]){
-					return false;
-				}
-				//const bestStat = source.getBestStat(true, true);
-				//this.boost({ [bestStat]: 3 }, source);
-				const oldAbility = source.setAbility("sheerforce");
-				this.field.clearWeather();
-				/*
-				if (oldAbility) {
-					this.add(
-						"-ability",
-						source,
-						"Sheer Force",
-						"[from] move: Depth Decree"
-					); 
-					return;
-				}*/
-				//return oldAbility as false | null;
-			}
+		onHit(target, source, move) {
+			target.addVolatile("torment", source, move);
 		},
-		secondary: {
-			chance: 10,
-			volatileStatus: "confusion",
-		},
+		secondary: null,
 		target: "normal",
 		type: "Water",
 	},
@@ -13188,7 +13163,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Lumina Crash",
 		pp: 10,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, metronome: 1, beam: 1 },
+		flags: { protect: 1, mirror: 1, metronome: 1 },
 		secondary: {
 			chance: 100,
 			boosts: {
@@ -15039,7 +15014,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		name: "Moonblast",
 		pp: 15,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, metronome: 1, beam: 1 },
+		flags: { protect: 1, mirror: 1, metronome: 1 },
 		secondary: {
 			chance: 10,
 			boosts: {
@@ -24121,7 +24096,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 					delete pokemon.volatiles["torment"];
 					return false;
 				}
-				if (effect?.id === "gmaxmeltdown") this.effectState.duration = 3;
+				if (effect?.id === "gmaxmeltdown" || effect?.id === "depthdecree") this.effectState.duration = 3;
 				this.add("-start", pokemon, "Torment");
 			},
 			onEnd(pokemon) {
@@ -25509,7 +25484,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			attacker.addVolatile("twoturnmove", defender);
 			return null;
 		},
-		flags: { protect: 1, mirror: 1, beam: 1, metronome: 1 },
+		flags: { protect: 1, mirror: 1, metronome: 1 },
 		target: "normal",
 		type: "Ice",
 	},
@@ -27577,28 +27552,48 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		num: -122,
 		accuracy: 100,
 		basePower: 120,
+		basePowerCallback(pokemon, target) {
+			const targetWeight = target.getWeight();
+			let bp;
+			if (targetWeight >= 2000) {
+				bp = 120;
+			} else if (targetWeight >= 1000) {
+				bp = 100;
+			} else if (targetWeight >= 500) {
+				bp = 80;
+			} else if (targetWeight >= 250) {
+				bp = 60;
+			} else if (targetWeight >= 100) {
+				bp = 40;
+			} else {
+				bp = 20;
+			}
+			this.debug(`BP: ${bp}`);
+			return bp;
+		},
 		category: "Physical",
 		name: "Titan Buster",
-		pp: 5,
+		pp: 20,
 		priority: 0,
-		flags: { charge: 1, protect: 1, mirror: 1, contact: 1, failinstruct: 1, nosleeptalk: 1, metronome: 1 },
-		onTryMove(attacker, defender, move) {
-			if (attacker.removeVolatile(move.id)) {
-				return;
+		flags: { protect: 1, mirror: 1, contact: 1, metronome: 1 },
+		onModifyType(move, pokemon) {
+			if (pokemon.ignoringItem()) return;
+			switch (pokemon.item) {
+			case "metalstinger":
+				move.type = "Steel";
+				break;
+			case "rockystinger":
+				move.type = "Rock";
+				break;
+			case "venomousstinger":
+				move.type = "Poison";
+				break;
+			case "grassystinger":
+				move.type = "Grass";
+				break;
 			}
-			//this.add('-prepare', attacker, move.name);
-			if (['sunnyday', 'desolateland'].includes(attacker.effectiveWeather(true))) {
-				this.attrLastMove('[still]');
-				this.addMove('-anim', attacker, move.name, defender);
-				return;
-			}
-			if (!this.runEvent("ChargeMove", attacker, defender, move)) {
-				return;
-			}
-			attacker.addVolatile("twoturnmove", defender);
-			return null;
 		},
-		type: "Dragon",
+		type: "Normal",
 		target: "normal",
 	},
 	forecastwarning: {
@@ -28241,7 +28236,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 						delete source.volatiles["lockedmove"];
 					}
 				}
-				if (this.checkMoveMakesContact(move, source, target)) {
+				if (!this.checkMoveMakesContact(move, source, target)) {
 					this.heal(target.baseMaxhp / 2, target);
 					//this.hint(`${target.name} has healed in its cocoon!`);
 				}
