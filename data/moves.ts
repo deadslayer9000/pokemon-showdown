@@ -28587,5 +28587,19 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 		},
 		target: "normal",
 		type: "Dark",
-	}
+	},
+	causticflurry: {
+		num: -160,
+		accuracy: 95,
+		basePower: 25,
+		category: "Physical",
+		name: "Caustic Flurry",
+		pp: 10,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, slicing: 1 },
+		multihit: 4,
+		multiaccuracy: true,
+		target: "normal",
+		type: "Poison",
+	},
 };

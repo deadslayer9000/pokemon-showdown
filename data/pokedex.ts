@@ -27136,4 +27136,16 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		eggGroups: ["Water 1", "Field"],
 		prevo: "Prinplup-Delta",
 	},
+	ironhelix: {
+		num: 2144,
+		name: "Iron Helix",
+		types: ["Psychic", "Poison"],
+		gender: "N",
+		baseStats: { hp: 30, atk: 140, def: 70, spa: 140, spd: 70, spe: 140 },
+    	abilities: { 0: "Effluence" },
+		heightm: 1.7,
+    	weightkg: 70.8,
+		//color: "White", no page yet
+		eggGroups: ["Undiscovered"],
+	},
 };

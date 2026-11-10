@@ -10738,4 +10738,30 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		rating: 4,
 		num: -128,
 	},
+	effluence: {
+		onSwitchOut(pokemon) {
+			if (!pokemon.status) return;
+
+			// if pokemon.showCure is undefined, it was skipped because its ability
+			// is known
+			if (pokemon.showCure === undefined) pokemon.showCure = true;
+
+			if (pokemon.showCure)
+				this.add(
+					"-curestatus",
+					pokemon,
+					pokemon.status,
+					"[from] ability: Effluence"
+				);
+			pokemon.clearStatus();
+
+			// only reset .showCure if it's false
+			// (once you know a Pokemon has Natural Cure, its cures are always known)
+			if (!pokemon.showCure) pokemon.showCure = undefined;
+		},
+		flags: {},
+		name: "Effluence",
+		rating: 2,
+		num: -129,
+	}
 };
