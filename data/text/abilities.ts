@@ -587,6 +587,12 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			shortDesc: "10% chance of poison/paralysis/sleep on others making contact with this Pokemon.",
 		},
 	},
+	effluence: {
+		name: "Effluence",
+		shortDesc: "This Pokemon has its non-volatile status condition cured when it switches out.",
+
+		activate: "  ([POKEMON] is cured by its Effluence!)",
+	},
 	electricsurge: {
 		name: "Electric Surge",
 		shortDesc: "On switch-in, this Pokemon summons Electric Terrain.",

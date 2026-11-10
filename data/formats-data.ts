@@ -7993,4 +7993,8 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 		natDexTier: "A-",
 	},
+	ironhelix: {
+		tier: "UU",
+		natDexTier: "A-",
+	},
 };

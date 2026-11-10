@@ -942,6 +942,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Catastropika",
 		shortDesc: "No additional effect.",
 	},
+	causticflurry: {
+		name: "Caustic Flurry",
+		desc: "Hits four times. This move checks accuracy for each hit, and the attack ends if the target avoids a hit. If one of the hits breaks the target's substitute, it will take damage for the remaining hits.",
+		shortDesc: "Hits 4 times. Each hit can miss.",
+	},
 	ceaselessedge: {
 		name: "Ceaseless Edge",
 		desc: "If this move is successful, it sets up a hazard on the opposing side of the field, damaging each opposing Pokemon that switches in, unless it is a Flying-type Pokemon or has the Levitate Ability. A maximum of three layers may be set, and opponents lose 1/8 of their maximum HP with one layer, 1/6 of their maximum HP with two layers, and 1/4 of their maximum HP with three layers, all rounded down. Can be removed from the opposing side if any Pokemon uses Tidy Up, or if any opposing Pokemon uses Mortal Spin, Rapid Spin, or Defog successfully, or is hit by Defog.",
