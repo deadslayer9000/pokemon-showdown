@@ -26194,11 +26194,14 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 			bypasssub: 1,
 			metronome: 1,
 		},
-		onHit(target, source) {
-			if(!source.boostused){
-				source.boostused = true;
+		onHit(target, source, move) {
+			if(!source.volatiles['thebelltolls']){
+				source.addVolatile('thebelltolls', source);
 				this.boost({spa: 1}, source);
 			}
+		},
+		self: {
+			volatileStatus: 'thebelltolls',
 		},
 		target: "allAdjacent",
 		type: "Dark",
