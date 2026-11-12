@@ -978,4 +978,26 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 			return Math.min(350, 50 + 50 * pokemon.timesAttacked);
 		},
 	},
+	titanbuster: {
+		inherit: true,
+		pp: 5,
+		flags: { charge: 1, protect: 1, mirror: 1, contact: 1, failinstruct: 1, nosleeptalk: 1, metronome: 1 },
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			//this.add('-prepare', attacker, move.name);
+			if (['sunnyday', 'desolateland'].includes(attacker.effectiveWeather(true))) {
+				this.attrLastMove('[still]');
+				this.addMove('-anim', attacker, move.name, defender);
+				return;
+			}
+			if (!this.runEvent("ChargeMove", attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile("twoturnmove", defender);
+			return null;
+		},
+		onModifyMove() {},
+	},
 };

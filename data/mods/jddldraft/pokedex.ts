@@ -31,4 +31,16 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		inherit: true,
 		baseStats: { hp: 95, atk: 130, def: 86, spa: 50, spd: 60, spe: 85 },
 	},
+	ancientgene: {
+		inherit: true,
+		abilities: {0: "Protosynthesis"},
+	},
+	ironpilot: {
+		inherit: true,
+		abilities: {0: "Quark Drive"},
+	},
+	silentsting: {
+		inherit: true,
+		abilities: {0: "Protosynthesis"},
+	},
 };	
