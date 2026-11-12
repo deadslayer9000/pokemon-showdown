@@ -9343,6 +9343,41 @@
 				"teraType": ["Normal"],
 				"moves": [["Earthquake"], ["Stone Edge"], ["Fire Fang", "Outrage"], ["Swords Dance"]]
 			}]
+		},
+		"niveon": {
+			"weight": 2,
+			"sets": [
+				{
+					"species": "Niveon",
+					"weight": 100,
+					"item": ["Razor Claw"],
+					"ability": ["Super Luck"],
+					"evs": { "spe": 252, "spa": 252, "spd": 4 },
+					"nature": ["Timid"],
+					"teraType": ["Normal"],
+					"moves": [
+						["Aeroblast"],
+						["Heat Wave"],
+						["Volt Switch"],
+						["Calm Mind"]
+					]
+				},
+				{
+					"species": "Niveon",
+					"weight": 100,
+					"item": ["Choice Specs"],
+					"ability": ["Super Luck"],
+					"evs": { "spe": 252, "spa": 252, "spd": 4 },
+					"nature": ["Timid"],
+					"teraType": ["Normal"],
+					"moves": [
+						["Aeroblast"],
+						["Heat Wave"],
+						["Volt Switch"],
+						["Alluring Voice"]
+					]
+				}
+			]
 		}
 	},
 	"RU": {
@@ -11346,41 +11381,6 @@
 						["U-turn"],
 						["Hurricane"],
 						["Heat Wave"]
-					]
-				}
-			]
-		},
-		"niveon": {
-			"weight": 2,
-			"sets": [
-				{
-					"species": "Niveon",
-					"weight": 100,
-					"item": ["Razor Claw"],
-					"ability": ["Super Luck"],
-					"evs": { "spe": 252, "spa": 252, "spd": 4 },
-					"nature": ["Timid"],
-					"teraType": ["Normal"],
-					"moves": [
-						["Aeroblast"],
-						["Heat Wave"],
-						["Volt Switch"],
-						["Calm Mind"]
-					]
-				},
-				{
-					"species": "Niveon",
-					"weight": 100,
-					"item": ["Choice Specs"],
-					"ability": ["Super Luck"],
-					"evs": { "spe": 252, "spa": 252, "spd": 4 },
-					"nature": ["Timid"],
-					"teraType": ["Normal"],
-					"moves": [
-						["Aeroblast"],
-						["Heat Wave"],
-						["Volt Switch"],
-						["Alluring Voice"]
 					]
 				}
 			]

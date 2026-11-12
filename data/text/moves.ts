@@ -7564,7 +7564,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	thebelltolls: {
 		name: "The Bell Tolls",
 		desc: "If it is this Pokemon's first turn on the field, then it raises Special Attack by 1.",
-		shortDesc: "Once per match: raise SpA by 1.",
+		shortDesc: "Once per switch-in: raise SpA by 1.",
 	},
 	thicketoutgrowth: {
 		name: "Thicket Outgrowth",
@@ -7699,10 +7699,6 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Thunder Wave",
 		desc: "Paralyzes the target. This move does not ignore type immunity.",
 		shortDesc: "Paralyzes the target.",
-	},
-	ticketoutgrowth: {
-		name: "Ticket Outgrowth",
-		shortDesc: "Removes hazards, puts up leechseed if it does.",
 	},
 	tickle: {
 		name: "Tickle",

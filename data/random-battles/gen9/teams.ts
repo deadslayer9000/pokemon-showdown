@@ -43,6 +43,7 @@ interface BattleFactorySet {
 	sunAbuser?: boolean;
 	rainAbuser?: boolean;
 	sandAbuser?: boolean;
+	removal?: boolean;
 }
 interface BSSFactorySet {
 	species: string;
@@ -119,6 +120,10 @@ const NO_STAB = [
 const HAZARDS = [
 	'spikes', 'stealthrock', 'stickyweb', 'toxicspikes',
 ];
+// removal moves
+const removalMoves = ['defog', 'rapidspin', 'mortalspin', 'foamfrenzy', 'thicketoutgrowth', 'courtchange', 'tidyup']
+//removal abilities
+const removalAbilities = ['breach', 'weeding'];
 // Protect and its variants
 const PROTECT_MOVES = [
 	'banefulbunker', 'burningbulwark', 'protect', 'silktrap', 'spikyshield',
@@ -2982,7 +2987,10 @@ export class RandomTeams {
 
 			const set = this.randomFactorySet(species, teamData, this.factoryTier);
 			if (!set) continue;
-
+			//force removal on first slot
+			const hasRemoval = set.moves.some(move => removalMoves.includes(toID(move))) || 
+				removalAbilities.includes(toID(set.ability));
+			if (!teamData.has['removal'] && !hasRemoval) continue;
 			const itemData = this.dex.items.get(set.item);
 
 			// Actually limit the number of Megas to one
@@ -2996,7 +3004,7 @@ export class RandomTeams {
 			if (['drizzle', 'drought', 'sandstream', 'snowwarning'].includes(abilityId)) {
    				teamData.has['weather'] = 1;
 			}
-			
+			// weather support
 			if (['drought'].includes(abilityId)){
 				teamData.has['sun'] = 1;
 			}
@@ -3006,7 +3014,6 @@ export class RandomTeams {
 			if (['sandstream'].includes(abilityId)){
 				teamData.has['sand'] = 1;
 			}
-
 			// Limit 2 of any type (most of the time)
 			const types = species.types;
 			let skip = false;
@@ -3080,6 +3087,7 @@ export class RandomTeams {
 			if (set.weatherSetter){ 
 				teamData.has['weather'] = 1;
 			}*/
+			if (hasRemoval) teamData.has['removal'] = 1;
 
 			for (const move of set.moves) {
 				const moveId = toID(move);
