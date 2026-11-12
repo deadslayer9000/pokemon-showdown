@@ -177,6 +177,42 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		section: "Tour Formats",
 	},
 	{
+		name: "[Gen 9] [ND] DPL II OU Draft",
+		searchShow: false,
+		mod: "gen9",
+		ruleset: ['Standard NatDex', 'Standard Draft', 'Terastal Clause', 'Z-Move Clause'],
+		banlist: ["Last Respects", 'Shed Tail', 'Hidden Power', 'Dire Claw', 'Raichu-Mega-Y + Sing', 'Blastoise-Mega + Shell Smash', 'Barbaracle-Mega + Shell Smash', 'Power Construct', 'Quick Claw', 'King\'s Rock', 'Razor Fang', 'Attract', 'Confuse Ray', 'Swagger'],
+	},
+	{
+		name: "[Gen 9] [ND] DPL II Ubers UU Draft",
+		searchShow: false,
+		mod: "gen9",
+		ruleset: ['Standard NatDex', 'Standard Draft', 'Terastal Clause', 'Z-Move Clause'],
+		banlist: ["Last Respects", 'Shed Tail', 'Hidden Power', 'Dire Claw', 'Raichu-Mega-Y + Sing', 'Mewthree + Dark Decree', 'Power Construct', 'Quick Claw', 'King\'s Rock', 'Razor Fang', 'Attract', 'Confuse Ray', 'Swagger'],
+	},
+	{
+		name: "[Gen 9] [ND] DPL II RU Draft",
+		searchShow: false,
+		mod: "gen9",
+		ruleset: ['Standard NatDex', 'Standard Draft', 'Terastal Clause', 'Z-Move Clause'],
+		banlist: ["Last Respects", 'Shed Tail', 'Hidden Power', 'Dire Claw', 'Blastoise-Mega + Shell Smash', 'Power Construct', 'Quick Claw', 'King\'s Rock', 'Razor Fang', 'Attract', 'Confuse Ray', 'Swagger', 'Heat Rock', 'Damp Rock', 'Smooth Rock', 'Icy Rock', 'Light Clay', 'Revival Blessing', 'Arena Trap', 'Shadow Tag', 'Magnet Pull', 'Merciless', 'Dragetsu + Dragon Energy', 'Battle Bond'],
+	},
+	{
+		name: "[Gen 9] [ND] DPL II LC Draft",
+		mod: 'gen9',
+		searchShow: false,
+		ruleset: ['[Gen 9] NatDex Draft', 'Little Cup', 'Item Clause = 2', 'Terastal Clause'],
+		banlist: [
+			'Moody', 'Eevium Z', 'King\'s Rock', 'Pure Power',
+			'Quick Claw', 'Razor Fang', 'Dragon Rage', 'Sonic Boom', 'Light Clay', 'Icy Rock', 'Damp Rock', 'Smooth Rock', 'Heat Rock', 'Hidden Power', 'Attract', 'Confuse Ray', 'Swagger',
+
+			'Aipom-Delta', 'Aipom-Ultra', 'Basculin-White-Striped', 'Chatot-Delta', 'Corsola-Galar', 'Corsola-Delta', 'Druddigon-Delta', 'Dunsparce', 'Dunsparce-Ultra',
+			'Duraludon', 'Gastly-Ultra', 'Girafarig', 'Gligar', 'Glimmet-Delta', 'Glimmet-Ultra', 'Mienfoo', 'Misdreavus', 'Munchlax-Delta', 'Murkrow', 'Porygon', 'Qwilfish-Hisui',
+			'Rufflet', 'Sandygast-Delta', 'Scyther', 'Shuckle-Delta', 'Skiddo-Delta', 'Slowpoke-Delta', 'Sneasel', 'Sneasel-Hisui', 'Stantler', 'Swirlix', 'Tangela',
+			'Tentacool-Delta', 'Torkoal-Delta', 'Trapinch-Ultra', 'Type: Null', ' Vullaby', 'Yanfern', 'Yanma',
+		],
+	},
+	{
 		name: "[Gen 9] [ND] Delta Draft League Season 4",
 		searchShow: false,
 		mod: "ddls4patch",
@@ -325,65 +361,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		banlist: [
 			'Barbaracle-Mega + Shell Smash', 'Raichu-Mega-Y + Sing',  'Blastoise-Mega + Shell Smash', 'Hidden Power', 'Dire Claw',
 		]
-	},
-	{
-		name: "[Gen 9] [ND] DPL OU",
-		searchShow: false,
-		challengeShow: false,
-		mod: 'gen9',
-		ruleset: ['Standard NatDex', 'Terastal Clause'],
-		banlist: [
-			'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock',
-			'Quick Claw', 'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail', 'Dire Claw', 'Rage Fist', 'Blood Moon', 'Darkrai', 'Zamazenta',
-			'Normalium Z', 'Fightinium Z', 'Flyinium Z', 'Poisonium Z', 'Groundium Z', 'Rockium Z', 'Buginium Z', 'Ghostium Z', 'Steelium Z', 'Firium Z', 'Waterium Z', 'Grassium Z', 'Electrium Z', 'Psychium Z', 'Icium Z', 'Dragonium Z', 'Darkinium Z', 'Fairium Z',
-		],
-		unbanlist: [
-			'Solgaleo', 'Sneasler', 'Annihilape', 'Ursaluna-Bloodmoon', 'Espathra', 'Roaring Moon', 'Dragapult', 'Gholdengo'
-		],
-	},
-	{
-		name: "[Gen 9] [ND] DPL RU",
-		searchShow: false,
-		challengeShow: false,
-		desc: "RU format for the Delta Premier League.",
-		mod: 'gen9',
-		ruleset: ['Standard NatDex', 'Terastal Clause', 'Z-Move Clause'],
-		banlist: [ 'ND OU', 'ND Uber', 'ND AG', 'Power Construct', 'Arena Trap', 'Shadow Tag', 'ismagearnadelta', 'Baton Pass', 'Dire Claw', 'Last Respects', 'Light Clay', 'King\'s Rock', 'Quick Claw', 'Rage Fist', 'Razor Fang', 'Shed Tail',
-			'Serperior', 'Greninja', 'Kartana', 'Clefable', 'Hawlucha', 'Hippowdon', 'Toxapex', 'Clodsire', 'Excadrill', 'Hoopa-Unbound', 'Skarmory', 'Cinderace', 'Garganacl', 'Iron Crown', 'Ting-Lu', 
-			'Amoonguss', 'Grimmsnarl', 'Archapult', 'Iron Pilot', 'Klocktowl', 'Kommo-o', 'Mawile-Mega', 'Iron Boulder', 'Armaledge', 'Dunsparath', 'Dragapult-Ultra', 'Latios-Delta', 
-			'Drifblimp', 'Luxray-Delta', 'Latios-Delta-Mega', 'Eruptois', 'Hoopa-Delta-Unbound', 'Tapu Kehe', 'Lumrunt', 'Urshifu-Flash-Strike', 'Serperior-Ultra', 'Koraiton', 'Zeraora-Delta', 
-			'Zorotales', 'Spiritomb-Unbound', 'Meloetta-Omega', 'Spectreon', 'Scizantrum', 'Ambipom-Ultra', 'Zeraora', 'Tapu Fini', 'Tapu Hina', 'Latios', 
-			'Secret Armor', 'Victini', 'Ursaluna-Bloodmoon', 'Gyarados-Mega', 'Savage Scar', 'Vrelie-Delta', 'Rotom-Wash', 'Lochtrier', 'Aspearunt', 'Steelix-Delta-Mega', 'Diancette', 'Aerodactylite', 'Aerodactyl-Mega',
-			'Weezing-Galar', 'Slowbro', 'Glacierus-Therian', 'Tinkaton-Delta', 'Blaziken', 'Victini-Delta', 'Volcarona-Delta', 'Malevorus', 'Pinsir-Mega', 'Terrakion-Delta', 'Hover Pollen', 'Gallade-Mega',
-			'Gastrodon-Delta', 'Gastrodon-Delta-South', 'Pecharunt', 'Roserade-Delta', 'Turnizone', 'Slaughtermaus-Mega', 'Liesler', 'Latias-Mega', 'Latiosite', 'Magirigus', 'Gholdengo-Delta', 'Cosmachi', 'Malevorus-Therian', 'Zoroark-Hisui-Mega', 'Barraskewda', 'Dondozo',
-			'Ogerpon-Cornerstone', 'Manaphy', 'Zapdos-Galar', 'Charizard-Mega-X', 'Dragonite', 'Slowhost', 'Ogerpon-Stormpeak', 'Klinklang-Delta', 'Shrookle', 'Electisaur', 'Grimmsnarl-Delta', 'Celesteela', 'Iron World',
-			'Tyranitar', 'Blacephalon', 'Magnezone', 'Mandibuzz', 'Glimmerix', 'Feraligatr-Mega', 'Chimecho-Delta-Mega', 'Meganium-Mega', 'Emboar-Mega', 'Skarmory-Mega', 'Dragalge-Mega',
-			'Metagross-Delta-Mega', 'Klocktowl-Mega', 'Flaring Quill', 'Keldeo', 'Slaughtermaus', 'Keldeo-Delta-Mega', 'Medicham-Mega', 'Archaludon', 'Molteon', 'Raichu-Mega-Y', 'Raichu-Mega-X',
-			'Delphox-Mega', 'Valiant Time', 'Radiant Moon', 'Gengar-Ultra', 'Diancie-Sapphire-Mega', 'Necromauser-Mega', 'Magearna-Original-Delta', 'Chesnaught-Mega', 'Battle Bond',
-			'Enamorus', 'Gardevoir-Mega', 'Gorochu', 'Iron Hands', 'Lokix', 'Draculedge', 'Iron Shades', 'Dragascue', 'Magoodra', 'Garchomp-Delta', 'Uxie-Delta', 'Clefgar', 'Flygon-Delta', 'Goolossal', 'Latias-Delta'
-		],	
-		unbanlist: ['Keldeo-Delta'],
-	},
-	{
-		name: "[Gen 9] [ND] DPL Ubers",
-		searchShow: false,
-		challengeShow: false,
-		desc: "Ubers format for the Delta Premier League.",
-		mod: 'gen9',
-		ruleset: ['Standard Natdex', 'Terastal Clause'],
-		banlist: [ 'ND AG', 'Baton Pass', 'Dire Claw', 'Last Respects', 'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Shed Tail', 'Mewthree', 'Kyurem-Original',
-			'Normalium Z', 'Fightinium Z', 'Flyinium Z', 'Poisonium Z', 'Groundium Z', 'Rockium Z', 'Buginium Z', 'Ghostium Z', 'Steelium Z', 'Firium Z', 'Waterium Z', 'Grassium Z', 'Electrium Z', 'Psychium Z', 'Icium Z', 'Dragonium Z', 'Darkinium Z', 'Fairium Z'
-		],
-	},
-	{
-		name: "[Gen 9] [ND] DPL Monotype",
-		searchShow: false,
-		challengeShow: false,
-		desc: "Monotype format for the Delta Premier League.",
-		mod: 'gen9', 
-		ruleset: ['[Gen 9] National Dex', 'Same-Type Clause'],
-		banlist: ['Espathra', 'Flygon-Delta', 'Meowscarada-Delta', 'Kingambit'],
-		unbanlist: ['Landorus', 'Gholdengo', 'Good as Gold'],
 	},
 	{
 		section: "Previous Patches",
