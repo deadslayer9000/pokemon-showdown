@@ -27148,4 +27148,18 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		//color: "White", no page yet
 		eggGroups: ["Undiscovered"],
 	},
+	dragetsumega: {
+		num: 2007,
+		name: "Dragetsu-Mega",
+		baseSpecies: "Dragetsu",
+		forme: "Mega",
+		types: ["Dragon"],
+		baseStats: { hp: 93, atk: 90, def: 88, spa: 156, spd: 155, spe: 118 },
+		abilities: { 0: "Pure Guise" },
+		heightm: 5,
+		weightkg: 33,
+		color: "Blue",
+		eggGroups: ["Water 1", "Dragon"],
+		requiredItem: "Dragetsunite",
+	}
 };

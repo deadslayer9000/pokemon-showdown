@@ -1954,6 +1954,17 @@ export const Items: import("../sim/dex-items").ItemDataTable = {
 		gen: 9,
 		
 	},
+	dragetsunite: {
+		name: "Dragetsunite",
+		spritenum: 547,
+		megaStone: { "Dragetsu": "Dragetsu-Mega" },
+		itemUser: ["Dragetsu"],
+		onTakeItem(item, source) {
+			return !item.megaStone?.[source.baseSpecies.baseSpecies];
+		},
+		num: -56,
+		gen: 9,
+	},
 	dragonfang: {
 		name: "Dragon Fang",
 		spritenum: 106,
