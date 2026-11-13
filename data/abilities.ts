@@ -6222,7 +6222,7 @@ export const Abilities: import("../sim/dex-abilities").AbilityDataTable = {
 		onModifyDamage(damage, pokemon, target, move) {
 			if (pokemon.hp >= pokemon.maxhp) {
 				this.debug("Pure Guise boost");
-				return this.chainModify(1.5);
+				return this.chainModify(1.3);
 			}
 		},
 		name: "Pure Guise",
