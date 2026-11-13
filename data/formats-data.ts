@@ -7997,4 +7997,8 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "UU",
 		natDexTier: "A-",
 	},
+	dragetsumega: {
+		tier: "UU",
+		natDexTier: "A-",
+	},
 };

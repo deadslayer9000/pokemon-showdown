@@ -521,6 +521,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Diancite",
 		shortDesc: "If held by a Diancie, this item allows it to Mega Evolve in battle.",
 	},
+	dragetsunite: {
+		name: "Dragetsunite",
+		shortDesc: "If held by a Dragetsu, this item allows it to Mega Evolve in battle."
+	},
 	drifblimpiumz: {
 		name: "Drifblimpium Z",
 		shortDesc: "If Held by Drifblim with Phantasmal Voyage, it can use One-Way Journey.",
