@@ -23931,7 +23931,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		num: 2007,
 		name: "Dragetsu",
 		types: ["Dragon"],
-		baseStats: { hp: 93, atk: 70, def: 88, spa: 123, spd: 127, spe: 99 },
+		baseStats: { hp: 93, atk: 60, def: 88, spa: 126, spd: 127, spe: 106 },
 		abilities: { 0: "Shed Skin", H: "Pure Guise" },
 		heightm: 4.5,
 		weightkg: 20,
