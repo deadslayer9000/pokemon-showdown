@@ -114155,6 +114155,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			steelbeam: ["9M","9M"],
 			steelroller: ["9M"],
 			substitute: ["9M"],
+			spikes: ["9M"],
 			swagger: ["9M"],
 			terablast: ["9M"],
 			toxic: ["9M"],
