@@ -179,27 +179,27 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		name: "[Gen 9] [ND] DPL II OU Draft",
 		searchShow: false,
-		mod: "gen9",
+		mod: "dpl2",
 		ruleset: ['Standard NatDex', 'Standard Draft', 'Terastal Clause', 'Z-Move Clause'],
 		banlist: ["Last Respects", 'Shed Tail', 'Hidden Power', 'Dire Claw', 'Raichu-Mega-Y + Sing', 'Blastoise-Mega + Shell Smash', 'Barbaracle-Mega + Shell Smash', 'Power Construct', 'Quick Claw', 'King\'s Rock', 'Razor Fang', 'Attract', 'Confuse Ray', 'Swagger'],
 	},
 	{
 		name: "[Gen 9] [ND] DPL II Ubers UU Draft",
 		searchShow: false,
-		mod: "gen9",
+		mod: "dpl2",
 		ruleset: ['Standard NatDex', 'Standard Draft', 'Terastal Clause', 'Z-Move Clause'],
 		banlist: ["Last Respects", 'Shed Tail', 'Hidden Power', 'Dire Claw', 'Raichu-Mega-Y + Sing', 'Mewthree + Dark Decree', 'Power Construct', 'Quick Claw', 'King\'s Rock', 'Razor Fang', 'Attract', 'Confuse Ray', 'Swagger'],
 	},
 	{
 		name: "[Gen 9] [ND] DPL II RU Draft",
 		searchShow: false,
-		mod: "gen9",
+		mod: "dpl2",
 		ruleset: ['Standard NatDex', 'Standard Draft', 'Terastal Clause', 'Z-Move Clause'],
 		banlist: ["Last Respects", 'Shed Tail', 'Hidden Power', 'Dire Claw', 'Blastoise-Mega + Shell Smash', 'Power Construct', 'Quick Claw', 'King\'s Rock', 'Razor Fang', 'Attract', 'Confuse Ray', 'Swagger', 'Heat Rock', 'Damp Rock', 'Smooth Rock', 'Icy Rock', 'Light Clay', 'Revival Blessing', 'Arena Trap', 'Shadow Tag', 'Magnet Pull', 'Merciless', 'Dragetsu + Dragon Energy', 'Battle Bond'],
 	},
 	{
 		name: "[Gen 9] [ND] DPL II LC Draft",
-		mod: 'gen9',
+		mod: 'dpl2',
 		searchShow: false,
 		ruleset: ['[Gen 9] NatDex Draft', 'Little Cup', 'Item Clause = 2', 'Terastal Clause'],
 		banlist: [
