@@ -207,7 +207,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'Quick Claw', 'Razor Fang', 'Dragon Rage', 'Sonic Boom', 'Light Clay', 'Icy Rock', 'Damp Rock', 'Smooth Rock', 'Heat Rock', 'Hidden Power', 'Attract', 'Confuse Ray', 'Swagger',
 
 			'Aipom-Delta', 'Aipom-Ultra', 'Basculin-White-Striped', 'Chatot-Delta', 'Corsola-Galar', 'Corsola-Delta', 'Druddigon-Delta', 'Dunsparce', 'Dunsparce-Ultra',
-			'Duraludon', 'Gastly-Ultra', 'Girafarig', 'Gligar', 'Glimmet-Delta', 'Glimmet-Ultra', 'Mienfoo', 'Misdreavus', 'Munchlax-Delta', 'Murkrow', 'Porygon', 'Qwilfish-Hisui',
+			'Duraludon', 'Gastly-Ultra', 'Girafarig', 'Gligar', 'Glimmet-Delta', 'Glimmet-Ultra', 'Mienfoo', 'Misdreavus', 'Murkrow', 'Porygon', 'Qwilfish-Hisui',
 			'Rufflet', 'Sandygast-Delta', 'Scyther', 'Shuckle-Delta', 'Skiddo-Delta', 'Slowpoke-Delta', 'Sneasel', 'Sneasel-Hisui', 'Stantler', 'Swirlix', 'Tangela',
 			'Tentacool-Delta', 'Torkoal-Delta', 'Trapinch-Ultra', 'Type: Null', ' Vullaby', 'Yanfern', 'Yanma',
 		],
