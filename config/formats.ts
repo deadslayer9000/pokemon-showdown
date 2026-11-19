@@ -96,7 +96,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		'Quick Wit + Weather Ball', 
 		'Quick Wit + Terrain Pulse',
 	],
-	restricted: ['Acupressure', 'Belly Drum', 'Bite of Winter', 'Bolt Beak', 'Boomburst', 'Botanize', 'Ceaseless Edge', 'Chatter', 'Clangorous Soul', 'Coffee Splatter', 'Dire Claw', 'Divine Volley',
+	restricted: ['Acupressure', 'Beak Blast', 'Belly Drum', 'Bite of Winter', 'Bolt Beak', 'Boomburst', 'Botanize', 'Ceaseless Edge', 'Chatter', 'Clangorous Soul', 'Coffee Splatter', 'Dire Claw', 'Divine Volley',
 		'Double Iron Bash', 'Dragon Energy', 'Electrify', 'Electro Shot', 'Enflame', 'Esper Wing', 'Extreme Speed', 'Fatal Elegy', 'Fillet Away', 'Final Gambit', 'Fishious Rend', 'Flash Fist',
 		'Flux Emission', 'Foam Frenzy', 'Geomancy', 'Gigaton Anchor', 'Gigaton Hammer', 'Glacial Chain', 'Heat Siphon', 'Hydroswirl Hole', 'Icicle Flail', 'New Moon', 'No Retreat', 'Peculiar Candy',
 		'Pollen Bloom', 'Primed Current', 'Putrid Grasp', 'Rage Fist', 'Red Herring', 'Remedial Chain', 'Revival Blessing', 'Ruination', 'Sandstorm Fury', 'Scarlet Dance', 'Seasonal Blessing', 'Shell Smash',
