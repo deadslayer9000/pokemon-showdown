@@ -27953,7 +27953,7 @@ export const Moves: import("../sim/dex-moves").MoveDataTable = {
 	},
 	teslablitz: {
 		num: -138,
-		accuracy: 90,
+		accuracy: 100,
 		basePower: 55,
 		basePowerCallback(pokemon, target, move) {
 			if (!pokemon.item) {
