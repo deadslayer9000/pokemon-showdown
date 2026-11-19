@@ -112230,7 +112230,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			faketears: ["9M"],
 			feint: ["9M"],
 			fling: ["9M"],
-			flipturn: ["9L47"],
+			flipturn: ["9L5"],
 			foulplay: ["9M"],
 			helpinghand: ["9M"],
 			icebeam: ["9M"],
