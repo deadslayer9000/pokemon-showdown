@@ -25507,7 +25507,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Red",
 		eggGroups: ["Undiscovered"],
 		baseSpecies: "Diancie-Ruby",
-		forme: "Ruby-Mega",
+		forme: "Mega",
 		requiredItem: "Ruby Diancite",
 	},
 	dianciesapphiremega: {
@@ -25522,7 +25522,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		color: "Blue",
 		eggGroups: ["Undiscovered"],
 		baseSpecies: "Diancie-Sapphire",
-		forme: "Sapphire-Mega",
+		forme: "Mega",
 		requiredItem: "Sapphire Diancite",
 	},
 	ursasola: {
@@ -27085,7 +27085,7 @@ export const Pokedex: import("../sim/dex-species").SpeciesDataTable = {
 		forme: "Delta",
 		types: ["Dark", "Steel"],
 		gender: "N",
-		baseStats: { hp: 165, atk: 110, def: 130, spa: 50, spd: 80, spe: 45 },
+		baseStats: { hp: 155, atk: 110, def: 125, spa: 55, spd: 80, spe: 45 },
 		abilities: { 0: "Vessel of Corruption" },
 		weightkg: 599.7,
 		heightm: 2.7,
